@@ -6,7 +6,6 @@
 
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
-const config = require('./gatsby-config');
 const urlResolve = require('url').resolve;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -106,6 +105,7 @@ exports.createPages = ({ graphql, actions }) => {
 const fs = require('fs');
 const pify = require('pify');
 const mkdirp = require('mkdirp');
+const config = require('./gatsby-config');
 
 const writeFile = pify(fs.writeFile)
 const runQuery = (handler, query) =>
