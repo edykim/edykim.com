@@ -15,6 +15,7 @@ I'm an open web developer who loves focusing problems and creating quick prototy
 
 - Looking for the new team to join
 - Love to talk about ECMAScript, microservices, serverless architecture
+- Comfortable with Python, PHP, HTML/CSS, and C#
 - Passionated about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
