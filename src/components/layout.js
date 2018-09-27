@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 import "prismjs/themes/prism-solarizedlight.css"
 import "../styles/highlight.css"
 import '../styles/fonts.css'
@@ -17,6 +18,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             description
+            author
             keywords
           }
         }
@@ -50,6 +52,7 @@ const Layout = ({ children }) => (
         >
           {children}
         </div>
+        <Footer author={data.site.siteMetadata.author} />
       </>
     )}
   />
