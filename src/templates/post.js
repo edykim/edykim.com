@@ -1,11 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import FromHistory from '../components/FromHistory';
 import DateTime from '../components/DateTime';
 import Headline from '../components/Headline';
 import AuthorBox from '../components/AuthorBox';
 import Card from '../components/Card';
+
+import typography from '../utils/typography';
 
 const PostHeaderStyle = {
   marginBottom: '1.4rem',
@@ -27,6 +29,17 @@ export default ({ data }) => {
       <FromHistory history={post.frontmatter.history}></FromHistory>
 
       <AuthorBox lang={post.frontmatter.lang}></AuthorBox>
+
+      <div style={{padding: '4rem 0', textAlign: 'center'}}>
+        <Link style={{
+          fontFamily: typography.options.headerFontFamily,
+          boxShadow: 'none',
+          padding: '0.6rem 1.3rem',
+          borderRadius: '3px',
+          fontSize: '0.8rem',
+          border: '4px solid #9ecbe8',
+        }} to={"/ko/archives/"}>목록으로</Link>
+      </div>
     </Layout>
   );
 }

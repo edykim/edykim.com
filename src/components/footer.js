@@ -5,7 +5,7 @@ const Footer = ({ author }) => (
   <div
     style={{
       background: '#fafafa',
-      marginBottom: '1.45rem',
+      paddingBottom: '1.45rem',
     }}
   >
     <div
