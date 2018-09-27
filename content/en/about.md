@@ -30,8 +30,7 @@ More details are [here](https://www.linkedin.com/in/edwardykim/).
 
 ### On Regional Geographic Eyes
 
-- Relocated to US west coast recently
-  - Hot!
+- Relocated to US west coast recently 🇺🇸
 - Lived in Melbourne, Australia 🐨🇦🇺
   - Four season in one day, but can't complain.
   - ☕️ is the best!
