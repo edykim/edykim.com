@@ -58,5 +58,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-catch-links',
+
+    // generate sitemap file for google webmaster tool
+    'gatsby-plugin-sitemap',
   ],
 }
