@@ -29,12 +29,12 @@ JSX는 `React.createElement(component, props, ...children)`의 편의 문법이�
 ```jsx
 const MyComponents = {
   DatePicker: function DatePicker(props) {
-    return &lt;div&gt;Imagine a {props.color} datepicker here.&lt;/div&gt;;
+    return <div>Imagine a {props.color} datepicker here.</div>;
   }
 }
 
 function BlueDatePicker() {
-  return &lt;MyComponents.DatePicker color="blue" /&gt;;
+  return <MyComponents.DatePicker color="blue" />;
 }
 ```
 
@@ -48,11 +48,11 @@ const components = {
 
 function Story(Props) {
   // Wrong
-  return &lt;components[props.storyType] story={props.story} /&gt;;
+  return <components[props.storyType] story={props.story} />;
 
   // Correct
   const SpecificStory = components[props.storyType];
-  return &lt;SpecificStory story={props.story} /&gt;;
+  return <SpecificStory story={props.story} />;
 }
 ```
 
@@ -62,29 +62,29 @@ function Story(Props) {
 
 ```jsx
 // 문자열 리터럴
-&lt;MyComponent message="hello world" /&gt;
-&lt;MyComponent message={'hello world'} /&gt;
+<MyComponent message="hello world" />
+<MyComponent message={'hello world'} />
 
 // 문자열 리터럴은 HTML-unescaped로 처리됨
-&lt;MyComponent message="&lt;3" /&gt;
-&lt;MyComponent message={'&lt;3'} /&gt;
+<MyComponent message="<3" />
+<MyComponent message={'<3'} />
 
 // Prop의 기본 값은 `True`
-&lt;MyComponent autocomplete /&gt;
-&lt;MyComponent autocomplete={true} /&gt;
+<MyComponent autocomplete />
+<MyComponent autocomplete={true} />
 ```
 
 Spread Attribute로 간편하게 표현할 수 있다.
 
 ```jsx
-&lt;Greeting firstName="John" lastName="Dorian" nickName="Bambi" /&gt;
+<Greeting firstName="John" lastName="Dorian" nickName="Bambi" />
 
 const props = {firstName: 'John', lastName: 'Dorian', nickName: 'Bambi'};
-&lt;Greeting {...props} /&gt;
+<Greeting {...props} />
 
 const { nickName, ...other } = props;
 const nick = nickName === 'Bambi' ? 'Newbie' : 'Scooter';
-&lt;button nickName={nick} {...other} /&gt;
+<button nickName={nick} {...other} />
 ```
 
 ### 자식 노드
@@ -96,9 +96,9 @@ const nick = nickName === 'Bambi' ? 'Newbie' : 'Scooter';
 JS 표현식도 자식 노드에 사용할 수 있다. 배열도 렌더링 하기 때문에 다음처럼 쓸 수 있다.
 
 ```jsx
-&lt;ul&gt;
-  {todos.map((message) => &lt;Item key={message} message={message} /&gt;)}
-&lt;/ul&gt;
+<ul>
+  {todos.map((message) => <Item key={message} message={message} />)}
+</ul>
 ```
 
 `children`에 함수도 전달할 수 있다. Lifting state up이랑 비슷한 느낌이다. 세부 구현을 사용자에게 위임할 수 있을 것 같다.
@@ -106,18 +106,18 @@ JS 표현식도 자식 노드에 사용할 수 있다. 배열도 렌더링 하�
 ```jsx
 function Repeat(props) {
   let items = [];
-  for (let i = 0; i &lt; props.numTimes; i++) {
+  for (let i = 0; i < props.numTimes; i++) {
     items.push(props.children(i));
   }
-  return &lt;div&gt;{items}&lt;/div&gt;;
+  return <div>{items}</div>;
 }
 
 function TodoList() {
   const todos = ['finish doc', 'submit pr', 'review'];
   return (
-  &lt;Repeat numTimes={10}&gt;
-    {(index) => &lt;div key={index}&gt;This is item {index} in the list&lt;/div&gt;}
-  &lt;/Repeat&gt;
+  <Repeat numTimes={10}>
+    {(index) => <div key={index}>This is item {index} in the list</div>}
+  </Repeat>
   );
 }
 ```
@@ -126,10 +126,10 @@ Boolean, `null`, `undefined`는 화면에 렌더링하지 않는다.
 
 ```jsx
 // 조건부 표현
-{showHeader && &lt;Header /&gt;}
+{showHeader && <Header />}
 
 // false가 아닌 falsy한 값을 반환하는 경우에는 렌더링되는 점을 주의, 명확하게 boolean으로 반환할 것
-{props.messages.length &gt; 0 && &lt;MessageList messages={props.messages} /&gt;}
+{props.messages.length > 0 && <MessageList messages={props.messages} />}
 ```
 
 Boolean, `null`, `undefined`를 표시하려면 `{String(value)}` 식으로 작성한다.
@@ -188,8 +188,8 @@ class AutoFocusTextInput extends React.Component {
   }
 
   render() {
-    return &lt;CustomTextInput
-      ref={(input) => { this.textInput = input; }}/&gt;;
+    return <CustomTextInput
+      ref={(input) => { this.textInput = input; }}/>;
   }
 }
 ```
@@ -198,20 +198,20 @@ class AutoFocusTextInput extends React.Component {
 
 ```jsx
 function CustomTextInput(props) {
-  return &lt;div&gt;&lt;input ref={props.inputRef} /&gt;&lt;/div&gt;;
+  return <div><input ref={props.inputRef} /></div>;
 }
 
 function FormLayout(props) {
   return (
-    &lt;div&gt;
-      Name: &lt;CustomTextInput inputRef={props.inputRef} /&gt;
-    &lt;/div&gt;
+    <div>
+      Name: <CustomTextInput inputRef={props.inputRef} />
+    </div>
   );
 }
 
 class AwesomePage extends React.Component {
   render() {
-    return &lt;FormLayout inputRef={el => this.inputElement = el} /&gt;;
+    return <FormLayout inputRef={el => this.inputElement = el} />;
   }
 }
 ```
@@ -227,7 +227,7 @@ class AwesomePage extends React.Component {
 DOM 엘리먼트를 사용하면 내장된 동작을 그대로 사용할 수 있는 특징이 있다. [Controlled and uncontrolled form inputs in React don&#8217;t have to be complicated][7] 글에서 비교 도표를 볼 수 있다.
 
 ```jsx
-&lt;input defaultValue="Bob" type="text" ref={(input) => this.input = input} /&gt;
+<input defaultValue="Bob" type="text" ref={(input) => this.input = input} />
 // checkbox, radio는 defaultChecked, 그 외는 defaultValue
 ```
 
