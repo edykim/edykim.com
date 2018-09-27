@@ -25,6 +25,7 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
+    "typography-breakpoint-constants": "^0.15.10",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "keywords": [
