@@ -37,34 +37,34 @@ React는 선언형 API를 사용하고 있어서 변경에 대해 일일이 신�
 
 ```html
 // 1.
-&lt;ul&gt;
-  &lt;li&gt;Edward&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Edward</li>
+</ul>
 
 // 2. 뒤로 추가되는 경우에는 기존 엘리먼트가 유지됨
-&lt;ul&gt;
-  &lt;li&gt;Edward&lt;/li&gt;
-  &lt;li&gt;Mindy&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Edward</li>
+  <li>Mindy</li>
+</ul>
 
 // 3. 앞으로 추가되는 경우에는 노드 전체를 다시 그림
 //    당연히 성능 하락 발생하며 컴포넌트 엘리먼트 경우
 //    언마운트 마운트하게 된다
-&lt;ul&gt;
-  &lt;li&gt;Mindy&lt;/li&gt;
-  &lt;li&gt;Edward&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Mindy</li>
+  <li>Edward</li>
+</ul>
 
 // 4. 앞서의 가정 2에 따라서 `key`를 제공하면
 //    새로 그리지 않고 반영할 수 있게 됨
-&lt;ul&gt;
-  &lt;li key="1029"&gt;Edward&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li key="1029">Edward</li>
+</ul>
 
-&lt;ul&gt;
-  &lt;li key="2012"&gt;Mindy&lt;/li&gt;
-  &lt;li key="1029"&gt;Edward&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li key="2012">Mindy</li>
+  <li key="1029">Edward</li>
+</ul>
 ```
 
 id가 없다면 적당히 hash를 생성해서 쓴다. 동일 계층에서만 유일값을 가지면 된다. 최후의 수단은 배열의 index인데 배열 순서가 바뀌지 않는다는 가정이 있어야 한다. 순서가 바뀌면 key를 써도 느리다. 별로 권장하지 않는다.
@@ -86,10 +86,10 @@ props로 일일이 내려주기 번거로울 때 `contextTypes`로 지정하면 
 class Columns extends React.Component {
   render() {
     return (
-      &lt;React.Fragment&gt;
-        &lt;td&gt;Hello&lt;/td&gt;
-        &lt;td&gt;World&lt;/td&gt;
-      &lt;/React.Fragment&gt;
+      <React.Fragment>
+        <td>Hello</td>
+        <td>World</td>
+      </React.Fragment>
     );
   }
 }
@@ -102,14 +102,14 @@ class Columns extends React.Component {
 ```jsx
 function TodoList(props) {
   return (
-    &lt;dl&gt;
+    <dl>
     {props.items.map(item => (
-      &lt;React.Fragment key={item.id}&gt;
-        &lt;dt&gt;{item.thing}&lt;/dt&gt;
-        &lt;dd&gt;{item.done}&lt;/dd&gt;
-      &lt;/React.Fragment&gt;
+      <React.Fragment key={item.id}>
+        <dt>{item.thing}</dt>
+        <dd>{item.done}</dd>
+      </React.Fragment>
     ))}
-    &lt;/dl&gt;
+    </dl>
   );
 }
 ```
@@ -144,7 +144,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+      return <h1>Something went wrong.</h1>;
     }
     return this.props.children;
   }
@@ -152,9 +152,9 @@ class ErrorBoundary extends React.Component {
 ```
 
 ```xml
-&lt;ErrorBoundary&gt;
-  &lt;MyWidget /&gt;
-&lt;/ErrorBoundary&gt;
+<ErrorBoundary>
+  <MyWidget />
+</ErrorBoundary>
 ```
 
 에러 바운더리는 다음처럼 컨텍스트 바깥에서 발생하는 오류는 잡지 못한다.
@@ -198,10 +198,10 @@ render() {
   const { extraProp, ...passThroughProps } = this.props;
   const injectedProp = someStateOrinstanceMethod;
   return (
-    &lt;WrappedComponent
+    <WrappedComponent
       injectedProp={injectedProp}
       {...passThroughProps}
-    /&gt;
+    />
   );
 }
 ```
@@ -233,9 +233,9 @@ function getDisplayName(WrappedComponent) {
 Render props은 prop에 엘리먼트를 반환하는 함수를 전달해서 재사용성을 높이는 방법이다. [React Router][11]와 [downshift][12]에서 사용하는 방식이라고 한다.
 
 ```jsx
-&lt;Mouse render={mouse => (
-  &lt;Cat mouse={mouse} /&gt;
-)}/&gt;
+<Mouse render={mouse => (
+  <Cat mouse={mouse} />
+)}/>
 ```
 
 구체적으로 구현하는 방식보다 동작을 사용자에게 위임하는 방식으로 구현하는 접근법으로 `Mouse` 커서 위치를 전달하는 예를 들었다.
@@ -251,10 +251,10 @@ constructor(props) {
 }
 // ...
 renderTheCat(mouse) {
-  return &lt;Cat mouse={mouse} /&gt;;
+  return <Cat mouse={mouse} />;
 }
 // ...
-return &lt;Mouse render={this.renderTheCat} /&gt;;
+return <Mouse render={this.renderTheCat} />;
 ```
 
 ## 다른 라이브러리와 함께 사용하기
@@ -271,7 +271,7 @@ componentWillUnmount() {
   this.$el.chosen('destroy');
 }
 render() {
-  return (&lt;select ref={el => this.el = el}&gt;{this.props.children}&lt;/select&gt;);
+  return (<select ref={el => this.el = el}>{this.props.children}</select>);
 }
 ```
 
@@ -289,8 +289,8 @@ WAI-ARIA 적용, 시멘틱 HTML, 폼 접근성, 포커스 컨트롤 등 접근�
 
 ```jsx
 // for 대신 htmlFor를 사용
-&lt;label htmlFor="namedInput"&gt;Name:&lt;/label&gt;
-&lt;input id="namedInput" type="text" name="name"/&gt;
+<label htmlFor="namedInput">Name:</label>
+<input id="namedInput" type="text" name="name"/>
 ```
 
 포커스 제어는 `ref`로 직접 DOM을 받아서 처리한다.
