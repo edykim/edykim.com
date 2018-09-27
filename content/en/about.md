@@ -7,6 +7,4 @@ url: /about
 
 ---
 
-This page is dedicated about me.
-
-I will put some notes for your curiosity. Thanks!
+I will put a some note later soon. Thanks!
