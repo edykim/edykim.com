@@ -7,4 +7,31 @@ url: /about
 
 ---
 
-I will put a some note later soon. Thanks!
+I'm an open web developer who loves focusing problems and creating quick prototypes. I tend to get excited about web technology, software architecture and community.
+
+## Me Previously
+
+### Work-wise
+
+- Software engineer at Swinburne
+- Web/Integration developer at Kobe Creations
+- Web developer at Nine Communications
+
+More details are [here](https://www.linkedin.com/in/edwardykim/).
+
+### On Regional Geographic Eyes
+
+- Relocated to US west coast recently
+  - Hot!
+- Lived in Melbourne, Australia 🐨🇦🇺
+  - Four season in one day, but can't complain.
+  - ☕️ is the best!
+  - Lived 6 yrs, work and foodie life.
+
+- My hometown is Jeju, South Korea 🇰🇷
+  - Honeymoon island, small and beautiful city
+  - Studied and grown up as geek
+
+## My Name
+
+My korean name is Yong Gyun Kim (김용균) and [Google speaks right way](https://translate.google.com/translate_tts?ie=UTF-8&q=%EA%B9%80%EC%9A%A9%EA%B7%A0&tl=ko&total=1&idx=0&textlen=3&tk=799460.701964&client=t&prev=input). I know my name is quite hard to speak for some people so you can call me Edward if you want to go easy.
