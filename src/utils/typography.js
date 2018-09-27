@@ -1,5 +1,6 @@
 import Typography from 'typography'
 import theme from 'typography-theme-wordpress-2016'
+import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 theme.baseFontSize = '18px';
 theme.scaleRatio = 1.50;
@@ -9,6 +10,8 @@ theme.bodyFontFamily.splice(theme.bodyFontFamily.length - 1, 0, 'Jeju Myeongjo')
 const proxy = theme.overrideStyles;
 theme.overrideStyles = (data, rhythm) => {
   const result = proxy(data, rhythm);
+  result[MOBILE_MEDIA_QUERY]['ul,ol'] = {};
+
   return {
     ...result,
     ul: {
