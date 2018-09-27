@@ -1,0 +1,43 @@
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+    background-color: #f6f9fd;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    padding: 1em;
+    overflow: auto;
+    box-shadow: inset 0 0 0 1px #e5e9fa;
+}
+
+/**
+ * Remove the default PrismJS theme background-color, border-radius, margin,
+ * padding and overflow.
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .gatsby-highlight.
+ */
+.gatsby-highlight > pre {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    float: left; /* 1 */
+    min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.gatsby-highlight::-webkit-scrollbar-track {
+    background: #f6f9fd;
+    border-radius: 0 0 4px 4px;
+}
+.gatsby-highlight::-webkit-scrollbar-thumb {
+    background: #c6def4;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background-color: #f6f9fd;
+}
