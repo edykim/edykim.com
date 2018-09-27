@@ -7,6 +7,8 @@ url: /about
 
 ---
 
+<img src="https://avatars3.githubusercontent.com/u/1009457?s=400&v=4" style="width: 92px; border-radius: 50%; box-shadow: 0px 3px 12px rgba(80, 37, 214, 0.37); margin-bottom: 1rem; float: right; margin-left: 1rem;">
+
 I'm an open web developer who loves focusing problems and creating quick prototypes. I tend to get excited about web technology, software architecture and community.
 
 ## Me Previously
