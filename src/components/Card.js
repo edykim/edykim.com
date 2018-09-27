@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 export default ({ info }) => {
   const excerpt = info.html.replace(/(<([^>]+)>)/ig, '').replace("\n", '').substr(0, 300) + '...';
   // how to inject this?
-  const url = 'https://www.edykim.com' + info.fields.url;
+  const url = 'https://edykim.com' + (info.fields.url.substr(0, 1) !== '/' ? '/' : '') + info.fields.url;
 
   const imageRegex = /<img[^>]+src="(https:\/\/[^">]+)"/g;
   const images = imageRegex.exec(info.html);
