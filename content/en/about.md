@@ -2,7 +2,7 @@
 title: About Me
 author: haruair
 type: page
-date: 2010-10-07T05:28:41+00:00
+date: 2010-10-27T05:28:41+00:00
 url: /about
 
 ---
@@ -10,6 +10,13 @@ url: /about
 <img src="https://avatars3.githubusercontent.com/u/1009457?s=400&v=4" style="width: 92px; border-radius: 50%; box-shadow: 0px 3px 12px rgba(80, 37, 214, 0.37); margin-bottom: 1rem; float: right; margin-left: 1rem;">
 
 I'm an open web developer who loves focusing problems and creating quick prototypes. I tend to get excited about web technology, software architecture and community.
+
+## Me Now
+
+- Looking for the new team to join
+- Love with ECMAScript, microservices, serverless architecture
+- Passionated about solving complexities and problems
+- Community Manager at [weirdx.io](http://weirdx.io)
 
 ## Me Previously
 
