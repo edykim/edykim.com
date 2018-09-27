@@ -14,7 +14,7 @@ I'm an open web developer who loves focusing problems and creating quick prototy
 ## Me Now
 
 - Looking for the new team to join
-- Love with ECMAScript, microservices, serverless architecture
+- Love to talk about ECMAScript, microservices, serverless architecture
 - Passionated about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
