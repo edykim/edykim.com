@@ -15,8 +15,13 @@ url: /
 제 이야기는 [about 페이지](/ko/about/)와 [포스트 목록](/ko/archives/)에서 찾을 수 있습니다. 이 곳에 없는 이야기는 주로 [트위터](https://twitter.com/haruair)에서 하고 있습니다.
 
 - [포스트 목록](/ko/archives/)
-  - [번역 목록](/ko/category/translate/)
-  - [PHP](/ko/tag/php/)
-  - [JS](/ko/tag/js/)
-  - [Python](/ko/tag/python/)
-  - [호주 사는 이야기](/ko/category/life-in-australia/)
+- [번역 목록](/ko/category/translate/)
+
+### 프로그래밍
+- [PHP](/ko/tag/php/)
+- [JS](/ko/tag/js/)
+- [Python](/ko/tag/python/)
+
+### 이야기
+- [호주 사는 이야기](/ko/category/life-in-australia/)
+- [내 이야기](/ko/category/my-stories/)
