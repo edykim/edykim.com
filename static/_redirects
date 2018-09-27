@@ -1,2 +1,4 @@
-//edykim.netlify.com/* https://edykim.com/:splat 301!
+# Redirect default Netlify subdomain to primary domain
+http://edykim.netlify.com/* https://edykim.com/:splat 301!
+https://edykim.netlify.com/* https://edykim.com/:splat 301!
 
