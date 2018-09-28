@@ -33,7 +33,7 @@ More details are [here](https://www.linkedin.com/in/edwardykim/).
 - Relocated to west coast of the US recently 🇺🇸
 - Lived in Melbourne, Australia 🐨🇦🇺
   - Four seasons in one day, but can't complain.
-  - ☕️ is the best!
+  - Best ☕️ in the world!
   - Spent 6 yrs, working and enjoying foodie life.
 
 - My hometown is Jeju, South Korea 🇰🇷
