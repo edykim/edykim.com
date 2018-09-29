@@ -61,5 +61,18 @@ module.exports = {
 
     // generate sitemap file for google webmaster tool
     'gatsby-plugin-sitemap',
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-126646768-1",
+        head: false,
+        respectDNT: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "edykim.com",
+      },
+    },
+
   ],
 }
