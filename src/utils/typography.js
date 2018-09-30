@@ -8,9 +8,13 @@ theme.headerFontFamily.splice(theme.headerFontFamily.length - 1, 0, 'Nanum Barun
 theme.bodyFontFamily.splice(theme.bodyFontFamily.length - 1, 0, 'Jeju Myeongjo');
 
 const proxy = theme.overrideStyles;
-theme.overrideStyles = (data, rhythm) => {
-  const result = proxy(data, rhythm);
+theme.overrideStyles = (data, options) => {
+  const result = proxy(data, options);
+
   result[MOBILE_MEDIA_QUERY]['ul,ol'] = {};
+  result[MOBILE_MEDIA_QUERY]['ol'] = {
+    marginLeft: data.rhythm(1),
+  };
 
   return {
     ...result,
@@ -31,7 +35,8 @@ theme.overrideStyles = (data, rhythm) => {
     'h1 + h2, h2 + h3, h3 + h4, h4 + h5': {
       marginTop: '1rem',
     }
-  }
+  };
+
 }
 
 const typography = new Typography(theme);
