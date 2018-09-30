@@ -1,0 +1,2 @@
+# Don't foget Asimov's Three Laws of Robotics.
+Sitemap: https://edykim.com/sitemap.xml
