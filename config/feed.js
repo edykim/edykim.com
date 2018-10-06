@@ -45,6 +45,7 @@ module.exports = {
           }
         `,
         output: "/ko/feed.xml",
+        title: "edykim.com 블로그 RSS 피드",
       },
       {
         query: `
@@ -77,6 +78,7 @@ module.exports = {
           }
         `,
         output: "/feed.xml",
+        title: "edykim.com RSS Feed",
       },
     ],
   },
