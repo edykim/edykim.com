@@ -1,6 +1,6 @@
 // Create url from the node. It uses strongly coupled frontmatter in edykim.com
-exports.generateUrl = node => {
-  var url = node.fields.slug
+exports.generateUrl = ({ node, slugFieldName }) => {
+  var url = node.fields[slugFieldName]
 
   if (node.frontmatter) {
     if (node.frontmatter.url) {
@@ -26,6 +26,8 @@ exports.generateUrl = node => {
 
 // Default plugin options
 exports.defaultOptions = {
+  slugFieldName: `slug`,
+  urlFieldName: `url`,
   targetTypes: [
     `MarkdownRemark`,
   ],
