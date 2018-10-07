@@ -5,47 +5,7 @@
  */
 
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
 const urlResolve = require('url').resolve;
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
-
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug
-    })
-
-    var url = node.fields.slug;
-
-    if (node.frontmatter.url) {
-      url = node.frontmatter.url;
-    }
-
-    else if (node.frontmatter.slug) {
-      const typePrefix = node.frontmatter.type !== 'page' ? node.frontmatter.type + '/' : '';
-      url = typePrefix + node.frontmatter.slug;
-    }
-
-    // put the language in url
-    if (node.frontmatter.lang && node.frontmatter.lang !== 'en') {
-      url = node.frontmatter.lang + '/' + url;
-    }
-
-    // double slash slashed
-    url = url.replace(/\/\//g, '/');
-    if (url.substr(-1) !== '/') url += '/';
-
-    createNodeField({
-      node,
-      name: 'url',
-      value: url
-    })
-  }
-};
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions

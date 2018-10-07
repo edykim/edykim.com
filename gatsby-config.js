@@ -74,5 +74,6 @@ module.exports = {
       },
     },
 
+    `edykim-url`,
   ],
 }
