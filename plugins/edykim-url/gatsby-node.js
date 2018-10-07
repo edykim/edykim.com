@@ -20,7 +20,7 @@ const createSlugField = ({ node, getNode, createNodeField }, { slugFieldName }) 
 // Create url based on generating rules of the website
 const createUrlField = ({ node, createNodeField }, options) => {
   const { urlHandler, urlFieldName } = options
-  const url = urlHandler({ node, ...options })
+  const url = urlHandler({ node }, { ...options })
 
   createNodeField({
     node,
