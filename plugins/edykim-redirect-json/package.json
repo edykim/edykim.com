@@ -11,5 +11,5 @@
     "pify": "^4.0.0"
   },
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
-  "license": "ISC"
+  "license": "MIT"
 }

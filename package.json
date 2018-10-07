@@ -2,7 +2,7 @@
   "name": "edykim.com",
   "description": "edykim.com static web",
   "version": "1.0.0",
-  "author": "Yong Gyun Kim <ed@edykim.com>",
+  "author": "Edward Yong Gyun Kim <ed@edykim.com>",
   "dependencies": {
     "gatsby": "^2.0.19",
     "gatsby-plugin-catch-links": "^2.0.4",
