@@ -75,5 +75,6 @@ module.exports = {
     },
 
     `edykim-url`,
+    `edykim-redirect-json`,
   ],
 }
