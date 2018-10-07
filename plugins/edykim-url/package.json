@@ -1,0 +1,11 @@
+{
+  "name": "edykim-url",
+  "version": "1.0.0",
+  "description": "Handling urls for edykim website via gatsby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
