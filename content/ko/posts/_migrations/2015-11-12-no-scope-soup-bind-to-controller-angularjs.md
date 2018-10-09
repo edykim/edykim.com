@@ -7,10 +7,10 @@ lang: ko
 slug: no-scope-soup-bind-to-controller-angularjs
 categories:
   - 개발 이야기
-	- 번역
+  - 번역
 tags:
-	- angularjs
-	- js
+  - angularjs
+  - js
 ---
 
 이 글은 Todd Motto의 글 [No $scope soup, bindToController in AngularJS](http://toddmotto.com/no-scope-soup-bind-to-controller-angularjs/)를 번역한 글이다.
