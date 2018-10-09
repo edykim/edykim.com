@@ -11,6 +11,10 @@ categories:
 tags:
   - js
   - angularjs
+history:
+  -
+    from: https://www.haruair.com/blog/3186
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 Todd Motto의 글 [Digging into Angular’s “Controller as” syntax](http://toddmotto.com/digging-into-angulars-controller-as-syntax/)를 번역했다. Angular의 Controller As 문법에 대해 설명하고 있는 글이다. `$scope`를 분리하는 것으로 더 사용성 높은 컨트롤러를 만들 수 있고 최근 ES6에서 클래스를 만드는데 좋은 호환성을 보장하고 있다는 얘기를 듣고 번역하게 되었다.

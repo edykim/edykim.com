@@ -11,6 +11,10 @@ categories:
 tags:
   - angularjs
   - js
+history:
+  -
+    from: https://www.haruair.com/blog/3190
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 이 글은 Todd Motto의 글 [A better way to $scope, angular.extend, no more “vm = this”](http://toddmotto.com/a-better-way-to-scope-angular-extend-no-more-vm-this/)를 번역한 글이다.
