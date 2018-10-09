@@ -11,6 +11,10 @@ categories:
 tags:
   - paper
   - 논문
+history:
+  -
+    from: https://www.haruair.com/blog/3157
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 전공 종사자는 물론 비전공으로 이 분야에 일하게 된 사람이라면 논문을 읽어야 하는가에 대한 고민을 해봤을 것이다. 이 포스트는 [Michael Robert Bernstein](https://twitter.com/mrb_bk)의 [Should I read papers?](http://michaelrbernste.in/2014/10/21/should-i-read-papers.html)를 번역한 글이다. 짧은 글이지만 논문을 읽어야 하는가에 대한 고민을 하고 있다면 조금이나마 자극이 되지 않을까 싶어 번역했다.

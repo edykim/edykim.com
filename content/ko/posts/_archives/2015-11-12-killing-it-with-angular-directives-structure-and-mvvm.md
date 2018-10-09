@@ -11,6 +11,10 @@ categories:
 tags:
   - angularjs
   - js
+history:
+  -
+    from: https://www.haruair.com/blog/3198
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 이 글은 Todd Motto의 글 [Killing it with Angular Directives; Structure and MVVM](http://toddmotto.com/killing-it-with-angular-directives-structure-and-mvvm/)를 번역한 글이다.

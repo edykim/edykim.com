@@ -11,6 +11,10 @@ categories:
 tags:
   - js
   - angularjs
+history:
+  -
+    from: https://www.haruair.com/blog/3184
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 Johnpapa의 [Do You Like Your Angular Controllers with or without Sugar?](http://www.johnpapa.net/do-you-like-your-angular-controllers-with-or-without-sugar/)를 번역한 글이다. 원본 포스트는 [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/) 라이센스로 작성되어 있다.

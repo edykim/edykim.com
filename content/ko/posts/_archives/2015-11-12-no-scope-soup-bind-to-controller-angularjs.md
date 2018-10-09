@@ -11,6 +11,10 @@ categories:
 tags:
   - angularjs
   - js
+history:
+  -
+    from: https://www.haruair.com/blog/3201
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 이 글은 Todd Motto의 글 [No $scope soup, bindToController in AngularJS](http://toddmotto.com/no-scope-soup-bind-to-controller-angularjs/)를 번역한 글이다.

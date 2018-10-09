@@ -11,6 +11,10 @@ categories:
 tags:
   - paper
   - 논문
+history:
+  -
+    from: https://www.haruair.com/blog/3138
+    movedAt: 2018-09-13T22:02:42+00:00
 ---
 
 이 글은 [Peter G. Klein](https://en.wikipedia.org/wiki/Peter_G._Klein)가 작성한 [How to Read an Academic Article](http://organizationsandmarkets.com/2010/08/31/how-to-read-an-academic-article/)을 번역한 포스트로, 학술 논문을 어떻게 읽어야 하는가에 대한 전략을 제시하고 있다. 내용에서 언급되는 것처럼 당연한 이야기를 적은 목록이라고 느껴질 수 있지만, 학술 논문을 읽는 것 이외에도 정보를 수용하고 생산하는 데 있어 좋은 관점을 갖고 있어 번역하게 되었다.
