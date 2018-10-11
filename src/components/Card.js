@@ -9,11 +9,12 @@ export default ({ info }) => {
   const imageRegex = /<img[^>]+src="(https:\/\/[^">]+)"/g;
   const images = imageRegex.exec(info.html);
   const firstImage = images && images.length > 2 ? images[1] : null;
+  const lang = info.frontmatter.lang
 
   return <Helmet title={info.frontmatter.title}>
-    <html lang={info.frontmatter.lang} />
+    <html lang={lang} />
     <link rel="canonical" href={url} />
-    <meta property="og:locale" content={info.frontmatter.lang === 'ko' ? 'ko_KR' : 'en_US'} />
+    <meta property="og:locale" content={lang === 'ko' ? 'ko_KR' : 'en_US'} />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={info.frontmatter.title} />
     <meta property="og:description" content={excerpt} />
@@ -28,8 +29,8 @@ export default ({ info }) => {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content={excerpt} />
     <meta name="twitter:title" content={info.frontmatter.title} />
-    <meta name="twitter:site" content="@haruair" />
-    <meta name="twitter:creator" content="@haruair" />
+    <meta name="twitter:site" content={lang === `ko` ? `@haruair` : `@heyedykim`} />
+    <meta name="twitter:creator" content={lang === `ko` ? `@haruair` : `@heyedykim`} />
 
     {firstImage ? <meta name="twitter:image" content={firstImage} /> : ''}
     {firstImage ? <meta name="og:image" content={firstImage} /> : ''}
