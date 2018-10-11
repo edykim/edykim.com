@@ -1,0 +1,11 @@
+{
+  "name": "edykim-taxonomy",
+  "version": "1.0.0",
+  "description": "Generate taxonomy pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edward Yong Gyun Kim <ed@edykim.com>",
+  "license": "MIT"
+}

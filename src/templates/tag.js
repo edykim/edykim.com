@@ -1,43 +1,33 @@
-import ArchiveComponent from './archive';
-import { graphql } from 'gatsby';
+import TaxonomyTemplate from './taxonomy'
+import { graphql } from 'gatsby'
 
-export default ArchiveComponent;
+export default TaxonomyTemplate
 
 export const query = graphql`
-query TagQuery($slug: String!, $taxonomy: [String]!) {
-  markdownRemark: markdownRemark(fields: {slug: {eq: $slug}}) {
-    html
-    frontmatter {
-      title
-    }
-    fields {
-        url
-    }
-  }
-  allMarkdownRemark: allMarkdownRemark(
+query TagTaxonomyQuery($lang: String!, $taxonomy: [String]!) {
+  articles: allMarkdownRemark(
     filter: {
       frontmatter: {
         private: {ne: true},
         draft: {ne: true},
         type: {eq: "post"},
-        tags: {in: $taxonomy}
-      }
-    },
-    sort: {
-      fields: [frontmatter___date],
-      order: DESC
-    }) {
-    edges {
-      node {
-        frontmatter {
-          title
-          date
-        }
-        fields {
-          url
+        lang: {eq: $lang},
+        tags: {in: $taxonomy},
+      },
+    }
+    sort: {fields: [frontmatter___date], order: DESC}
+    ) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+              title
+              date
+          }
+          fields {
+              url
+          }
         }
       }
     }
-  }
-}
-`;
+}`
