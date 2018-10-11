@@ -26,7 +26,7 @@ export default ({ data }) => {
         <Headline line={post.frontmatter.headline}></Headline>
         <DateTime at={post.frontmatter.date}></DateTime>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <TaxonomyLine post={post}></TaxonomyLine>
 

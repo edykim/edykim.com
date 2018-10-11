@@ -9,7 +9,7 @@ export default ({ data }) => {
     <Layout>
       <Card info={post}></Card>
       <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   );
 }
@@ -20,6 +20,10 @@ query PageQuery($slug: String!) {
     html
     frontmatter {
       title
+      lang
+      tags
+      categories
+      date
     }
     fields {
       url
