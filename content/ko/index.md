@@ -36,7 +36,6 @@ url: /
 ### 🚀 주제별
 
 - [멜번 사는 이야기 🇦🇺](/ko/category/life-in-australia)
-- [제주 사는 이야기 🏝](/ko/category/life-in-jeju)
 - [나의 이야기](/ko/category/my-stories)
 - [공부 ✏️](/ko/category/study)
 - [책 📚](/ko/category/book)
