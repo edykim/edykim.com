@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import DateTime from '../components/DateTime'
 import Layout from '../components/layout'
+import Helmet from 'react-helmet'
 
 class TaxonomyTemplate extends React.Component {
   render() {
@@ -10,6 +11,10 @@ class TaxonomyTemplate extends React.Component {
     const lang = this.props.pageContext.lang
     return (
       <Layout>
+        <Helmet title={`Archives: ${taxonomy}`}>
+          <meta name="robots" content="noindex" />
+        </Helmet>
+
         <h1>{taxonomy}</h1>
         {
           lang === 'ko' ? <p>총 {articles.totalCount || 0}편의 글이 있습니다.</p> : null
