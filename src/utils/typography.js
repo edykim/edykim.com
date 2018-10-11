@@ -16,14 +16,20 @@ theme.overrideStyles = (data, options) => {
     marginLeft: data.rhythm(1),
   };
 
+  delete result[`ul,ol`]
+
   return {
     ...result,
     ul: {
       listStyle: 'square',
       paddingLeft: '1.5rem',
+      marginLeft: 0,
     },
     li: {
       marginBottom: 'initial',
+    },
+    'ol': {
+      marginLeft: data.rhythm(1),
     },
     'li p': {
       margin: '0',
