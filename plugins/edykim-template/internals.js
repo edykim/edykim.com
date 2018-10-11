@@ -1,17 +1,5 @@
-const componentNameResolver = ({ node }, context) => {
-  var componentName = `post`
-
-  if (node.frontmatter.type === `archive`) {
-    componentName = `archive`
-  } else if (node.frontmatter.type === `page`) {
-    componentName = `page`
-  } else if (node.frontmatter.type === `category`
-    || node.frontmatter.type === `tag`) {
-    componentName = node.frontmatter.type
-    context[`taxonomy`] = node.frontmatter.taxonomy
-  }
-
-  return componentName
+const componentNameResolver = ({ node }) => {
+  return node.frontmatter.type
 }
 
 const isPublic = ({ node }) => {
@@ -28,7 +16,6 @@ exports.defaultOptions = {
         node {
           frontmatter {
             type
-            taxonomy
             private
             draft
           }
