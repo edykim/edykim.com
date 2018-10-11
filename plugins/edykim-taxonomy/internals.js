@@ -65,4 +65,31 @@ exports.defaultOptions = {
   sanitizeUrl,
   languagePrefix,
   createTaxonomyPage,
+  query: `
+  {
+    posts: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          private: {ne: true},
+          draft: {ne: true},
+          type: {eq: "post"},
+        },
+      }
+      sort: {fields: [frontmatter___date], order: DESC}
+      ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            lang
+            tags
+            categories
+          }
+        }
+      }
+    }
+  }`
 }
