@@ -1,0 +1,29 @@
+.sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 2.5rem 0;
+}
+
+.sections .section {
+    width: 33%;
+}
+
+.sections .section :nth-of-type(1) {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    .sections .section {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .sections {
+        display: block;
+    }
+    .sections .section {
+        width: auto;
+    }
+}
