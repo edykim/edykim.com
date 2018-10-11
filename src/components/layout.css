@@ -35,3 +35,25 @@ html[lang="en"] .content {
 html[lang="ko"] .content {
     line-height: 1.86;
 }
+
+.aligncenter {
+  display: block;
+  margin: 3rem auto;
+}
+
+.giphy {
+  margin: 3rem auto;
+}
+
+.giphy img {
+  margin: 0 auto;
+  display: block;
+}
+
+.giphy figcaption {
+  text-align: center;
+  font-family: sans-serif;
+  color: #666;
+  font-size: 0.8em;
+  margin-top: 1rem;
+}
