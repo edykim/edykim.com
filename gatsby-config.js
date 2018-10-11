@@ -77,5 +77,9 @@ module.exports = {
     `edykim-url`,
     `edykim-redirect-json`,
     `edykim-template`,
+    {
+      resolve: `edykim-taxonomy`,
+      options: require(`./config/taxonomy`)
+    }
   ],
 }

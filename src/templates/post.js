@@ -6,6 +6,7 @@ import DateTime from '../components/DateTime';
 import Headline from '../components/Headline';
 import AuthorBox from '../components/AuthorBox';
 import Card from '../components/Card';
+import TaxonomyLine from '../components/TaxonomyLine';
 
 import typography from '../utils/typography';
 
@@ -26,8 +27,10 @@ export default ({ data }) => {
         <DateTime at={post.frontmatter.date}></DateTime>
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <FromHistory history={post.frontmatter.history}></FromHistory>
 
+      <TaxonomyLine post={post}></TaxonomyLine>
+
+      <FromHistory history={post.frontmatter.history}></FromHistory>
       <AuthorBox lang={post.frontmatter.lang}></AuthorBox>
 
       <div style={{padding: '4rem 0', textAlign: 'center'}}>
@@ -53,6 +56,8 @@ query BlogPostQuery($slug: String!) {
       date
       lang
       headline
+      categories
+      tags
       history {
         from
         movedAt
