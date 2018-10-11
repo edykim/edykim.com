@@ -15,14 +15,14 @@ export default ({ post }) => {
   if (post.frontmatter.categories) {
     links = links.concat(post.frontmatter.categories.map(category => {
       const path = `${languagePrefix(lang)}/category/${sanitizeUrl(category, options)}/`
-      return <Link className={`taxonomy`} to={path}>#{category}</Link>
+      return <Link key={category} className={`taxonomy`} to={path}>#{category}</Link>
     }))
   }
 
   if (post.frontmatter.tags) {
     links = links.concat(post.frontmatter.tags.map(tag => {
       const path = `${languagePrefix(lang)}/tag/${sanitizeUrl(tag, options)}/`
-      return <Link className={`taxonomy`} to={path}>#{tag}</Link>
+      return <Link key={tag} className={`taxonomy`} to={path}>#{tag}</Link>
     }))
   }
 
