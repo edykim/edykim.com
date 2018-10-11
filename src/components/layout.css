@@ -27,3 +27,11 @@
         width: auto;
     }
 }
+
+html[lang="en"] .content {
+    line-height: 1.7;
+}
+
+html[lang="ko"] .content {
+    line-height: 1.86;
+}
