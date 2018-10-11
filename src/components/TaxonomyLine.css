@@ -1,0 +1,21 @@
+.taxonomies {
+  padding: 1rem 0;
+}
+
+.taxonomy {
+  font-size: 0.8em;
+  box-shadow: none;
+  background: #5400da;
+  color: #f0f0f0;
+  font-family: serif;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+}
+.taxonomy:hover,
+.taxonomy:focus {
+  color: #fff;
+}
+
+.taxonomy + .taxonomy {
+  margin-left: 0.5rem;
+}
