@@ -8,7 +8,7 @@ class TaxonomyTemplate extends React.Component {
   render() {
     const { articles } = this.props.data
     const taxonomy = this.props.pageContext.taxonomy
-    const path = this.props.pageResources.page.path
+    const path = this.props.location.pathname
     const lang = this.props.pageContext.lang
 
     const title = `Archives: ${taxonomy}`
