@@ -38,7 +38,7 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-query ArchivesQuery($slug: String!) {
+query ArchivesQuery($lang: String!, $slug: String!) {
   markdownRemark: markdownRemark(fields: {slug: {eq: $slug}}) {
     html
     frontmatter {
@@ -50,7 +50,12 @@ query ArchivesQuery($slug: String!) {
   }
   allMarkdownRemark: allMarkdownRemark( 
     filter: {
-      frontmatter: { private: { ne: true }, draft: { ne: true }, type: { eq: "post"} }
+      frontmatter: {
+        private: { ne: true },
+        draft: { ne: true },
+        type: { eq: "post"},
+        lang: {eq: $lang},
+        }
       },
     sort: {fields: [frontmatter___date], order: DESC},
     ) {
