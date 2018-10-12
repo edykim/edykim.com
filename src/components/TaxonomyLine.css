@@ -10,6 +10,7 @@
   font-family: sans-serif;
   padding: 0.3rem 0.6rem;
   border-radius: 2px;
+  display: inline-block;
 }
 .taxonomy:hover,
 .taxonomy:focus {
@@ -18,4 +19,11 @@
 
 .taxonomy + .taxonomy {
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 460px) {
+  .taxonomy {
+    display: block;
+    margin: .5rem;
+  }
 }
