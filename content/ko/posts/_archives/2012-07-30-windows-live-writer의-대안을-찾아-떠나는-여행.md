@@ -17,7 +17,7 @@ categories:
 
 유능한 목공은 연장탓을 하지 않는다고 하지만 나는 유능하지 않으므로(&#8230;) 글쓰기 위해서는 왠지 블로그 스킨도 고쳐야 하고, 글쓰는데 환경을 꾸미는 것에 더 치중하는 스타일, 전형적인 연장탓하는 스타일이다. 그래도 그 사이에 뭔가 멋진 녀석이 나오지 않았을까 검색해봤는데 역시나 돈이 안되는 구석이라 그런지 여전히 MarsEdit이랑 ecto만 우선 순위로 검색이 되고 있었다. MacJornal을 추천하는 글도 많았지만 글이 많아지면 느려지는 부분이나 블로그로 싱크하거나 이런 부분이 문제가 되지 않을까 생각도 들고&#8230; 일단 모두 유료이기 때문에 한번 사면 쭉 써야하므로 계속 리뷰만 찾아보게 되는게 현실이다.
 
-<img style="display: block; margin-left: auto; margin-right: auto;" title="Screen Shot 2012-07-30 at 9.09.24 PM.png" src="https://haruair.com/wp-content/uploads/2012/07/MarsEdit-ScreenshotScreen-Shot-2012-07-30-at-9.09.24-PM1.png?resize=450%2C329" alt="Screen Shot 2012 07 30 at 9 09 24 PM" width="450" height="329" border="0" data-recalc-dims="1" />
+<img style="display: block; margin-left: auto; margin-right: auto;" title="Screen Shot 2012-07-30 at 9.09.24 PM.png" src="https://edykim.com/wp-content/uploads/2012/07/MarsEdit-ScreenshotScreen-Shot-2012-07-30-at-9.09.24-PM1.png?resize=450%2C329" alt="Screen Shot 2012 07 30 at 9 09 24 PM" width="450" height="329" border="0" data-recalc-dims="1" />
 
 느린 인터넷 사정으로 리뷰도 잘 검색이 안되서 오늘 출근해서 한번 검색해봤더니 MarsEdit도 30 day trial이 있길래 바로 설치해봤는데 결국 MarsEdit을 구입할 것 같다.  ;ㅅ; 너무 괜찮네.
 

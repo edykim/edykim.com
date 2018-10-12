@@ -71,7 +71,7 @@ tags:
 
 참고로 <kbd>Ctrl + &#96;</kbd>를 누르면 콘솔이 열리는데 코드 내에서 `print()` 한 내용도 확인할 수 있다.
 
-<img src="https://www.haruair.com/wp-content/uploads/2018/01/untitled-header-removed-1.png?w=660" />
+<img src="https://edykim.com/wp-content/uploads/2018/01/untitled-header-removed-1.png?w=660" />
 
  [1]: https://stackoverflow.com/questions/43781845/how-to-enable-sublime-text-to-take-first-line-as-file-name-while-saving/43782072
  [2]: https://packagecontrol.io/packages/PackageResourceViewer

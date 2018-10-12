@@ -21,7 +21,7 @@ tags:
 
 앵그리버드에서 악당으로 나오는 돼지가 주인공으로 나온다. 무차별로 학살 당하던 돼지들이 생존을 위해 새들을 공격하는 시나리오였다면 솔직히 별 관심 없었을텐데 그런 과격한 요소 없이 돼지들이 나온다는게 좋았다.
 
-[<img title="Screenshot_2012-12-04-10-58-35.png" class="alignnone" alt="image" src="https://haruair.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-58-35.png?w=660" data-recalc-dims="1" />][1]
+[<img title="Screenshot_2012-12-04-10-58-35.png" class="alignnone" alt="image" src="https://edykim.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-58-35.png?w=660" data-recalc-dims="1" />][1]
 
 새들처럼 날아갈 수 없으니 여러 장비를 이용해서 맵 상에 있는 지도를 먹는 것이 목표. 각 스테이지마다 별상자를 먹거나 특정 시간 안에 미션을 완료하거나 특정 아이템을 사용하지 않고 완수하거나 하면 더 높은 달성 점수를 획득할 수 있다. 기존 앵그리버드에서는 스테이지마다 새로운 새를 넣어 레벨링을 한 것과 같이 여기서는 사용할 수 있는 장비를 늘림으로 난이도를 조절했다. 몇개의 스테이지를 진행하면 동굴에 떨어뜨린 모자를 찾는 스테이지가 열린다.
 
@@ -33,7 +33,7 @@ tags:
 
 앵그리버드의 흥행은 새를 쏘고 상황을 지켜보는 단순성으로 흥행했다고 생각하는데 긍정적으로 보면 Bad Piggies는 앵그리버드와 다른 복잡성을 가지고 그 앵그리버드가 수용하지 못했던 대상까지 품을 수 있는 게임이다.
 
-[<img title="Screenshot_2012-12-04-10-59-34.png" class="alignnone" alt="image" src="https://haruair.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-59-34.png?w=660" data-recalc-dims="1" />][2]
+[<img title="Screenshot_2012-12-04-10-59-34.png" class="alignnone" alt="image" src="https://edykim.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-59-34.png?w=660" data-recalc-dims="1" />][2]
 
- [1]: https://haruair.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-58-35.png
- [2]: https://haruair.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-59-34.png
+ [1]: https://edykim.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-58-35.png
+ [2]: https://edykim.com/wp-content/uploads/2012/12/wpid-Screenshot_2012-12-04-10-59-34.png
