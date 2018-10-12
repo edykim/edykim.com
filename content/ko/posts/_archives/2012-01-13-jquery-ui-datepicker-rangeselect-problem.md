@@ -21,4 +21,4 @@ categories:
 
 [datepicker][1]
 
- [1]: http://haruair.com/wp-content/uploads/2012/01/datepicker.zip
+ [1]: https://edykim.com/wp-content/uploads/2012/01/datepicker.zip

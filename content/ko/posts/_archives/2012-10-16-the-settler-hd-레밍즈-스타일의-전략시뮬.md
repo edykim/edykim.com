@@ -33,8 +33,8 @@ tags:
 
 지출이 살짝 아쉽긴 하지만 과거 한 시대의 명작이기도 하고 얘기로만 들어온 궁금증이 해소되어 아깝진 않다.<figure style="width: 300px" class="wp-caption aligncenter">
 
-[<img class="size-full " src="https://haruair.com/wp-content/uploads/2012/10/20121017-001532.jpg?resize=300%2C225" alt="세틀러 캡쳐" width="300" height="225" data-recalc-dims="1" />][1]<figcaption class="wp-caption-text">결국 물량 많으면 이기는 RTS. 생각처럼 물량이 잘 안뽑아지는게 문제.</figcaption></figure> 
+[<img class="size-full " src="https://edykim.com/wp-content/uploads/2012/10/20121017-001532.jpg?resize=300%2C225" alt="세틀러 캡쳐" width="300" height="225" data-recalc-dims="1" />][1]<figcaption class="wp-caption-text">결국 물량 많으면 이기는 RTS. 생각처럼 물량이 잘 안뽑아지는게 문제.</figcaption></figure> 
 
 요즘 오가며 게임만 하고 있어서 어째 게임 리뷰 블로그가 되가는 기분;
 
- [1]: https://haruair.com/wp-content/uploads/2012/10/20121017-001532.jpg
+ [1]: https://edykim.com/wp-content/uploads/2012/10/20121017-001532.jpg
