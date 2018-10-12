@@ -1,4 +1,5 @@
-const componentNameResolver = ({ node }) => {
+const componentNameResolver = ({ node }, context) => {
+  context.lang = node.frontmatter.lang
   return node.frontmatter.type
 }
 
@@ -18,6 +19,7 @@ exports.defaultOptions = {
             type
             private
             draft
+            lang
           }
           fields {
             slug

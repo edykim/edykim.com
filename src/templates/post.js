@@ -41,7 +41,8 @@ export default ({ data }) => {
           borderRadius: '3px',
           fontSize: '0.8rem',
           border: '4px solid #9ecbe8',
-        }} to={"/ko/archives/"}>목록으로</Link>
+        }} to={post.frontmatter.lang === 'en' ? '/archives/' : `/${post.frontmatter.lang}/archives/`}>
+          {post.frontmatter.lang === 'ko' ? '목록으로' : 'Back to list'}</Link>
       </div>
     </Layout>
   );
