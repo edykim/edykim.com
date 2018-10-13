@@ -27,12 +27,11 @@ class TaxonomyTemplate extends React.Component {
           <meta name="twitter:site" content={lang === `ko` ? `@haruair` : `@heyedykim`} />
         </Helmet>
 
-        <h1>{taxonomy}</h1>
         {
-          lang === 'ko' ? <p>총 {articles.totalCount || 0}편의 글이 있습니다.</p> : null
+          lang === 'ko' ? <h1>"{taxonomy}"가 태그된 글 ({articles.totalCount || 0})</h1> : null
         }
         {
-          lang === 'en' ? <p>Total {articles.totalCount || 0} article{articles.totalCount === 1 ? `` : `s`} found.</p> : null
+          lang === 'en' ? <h1>{articles.totalCount || 0} post{articles.totalCount === 1 ? `` : `s`} tagged with "{taxonomy}"</h1> : null
         }
         <ul>
         {articles.edges.map(({node}, index) =>
