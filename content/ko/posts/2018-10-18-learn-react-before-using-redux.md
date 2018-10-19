@@ -157,11 +157,11 @@ Before relying on a sophisticated state management library, you should have pass
 
 수준 높은 상태 관리 라이브러리를 사용하기 전에 컴포넌트 트리를 따라 프로퍼티를 보내본 적이 있어야 합니다. 가장 끝에 있는 자식 컴포넌트에서 특정 값을 사용하려고 중간 컴포넌트에서는 전혀 쓰지 않는, 수많은 프로퍼티를 전달하는 코드를 작성하면서 *"분명 이보다 더 나은 방법이 있을 거야"* 생각해본 적이 었어야 합니다.
 
-## React 상태 들어 올리기
+## React 상태 옮기기
 
 Do you lift your local state layer already? That's the most important strategy to scale your local state management in plain React. The state layer can be lifted up and down.
 
-이미 지역 상태 계층(local state layer)을 들어 올렸나요? 이 방식은 일반 React에서 지역 상태 관리를 확장하는데 가장 중요한 전략입니다. 상태 계층은 올릴 수도, 내릴 수도 있습니다.
+이미 지역 상태 계층(local state layer)을 옮겼나요? 이 방식은 일반 React에서 지역 상태 관리를 확장하는데 가장 중요한 전략입니다. 상태 계층은 올릴 수도, 내릴 수도 있습니다.
 
 You can **lift your local state down** to make it less accessible for other components. Imagine you have a component A as parent component of components B and C. B and C are child components of A and they are siblings. Component A is the only component that manages local state but passes it down to its child components as props. In addition, it passes down the necessary functions to enable B and C to alter its own state in A.
 
@@ -276,6 +276,8 @@ In addition the state in component A gets decluttered. It only manages the neces
 
 The state lifting in React can go the other way too: **lifting state up**. Imagine you have again component A as parent component and component B and C as its child components. It doesn't matter how many components are between A and B and A and C. However, this time C already manages its own state.
 
+React에서 상태 옮기기는 다른 방향, 즉 **상태 위로 옮기기**도 가능합니다. 부모 컴포넌트인 컴포넌트 A와 자식 컴포넌트인 컴포넌트 B, C로 다시 돌아와서 살펴봅니다. A, B, C 사이에 얼마나 많은 컴포넌트가 있는지 상관 없습니다. 하지만 이번에는 컴포넌트 C가 이미 자신의 상태를 관리하고 있습니다.
+
 ```js
           +----------------+
           |                |
@@ -306,6 +308,8 @@ The state lifting in React can go the other way too: **lifting state up**. Imagi
 ```
 
 What if component B needs state that is managed in C? It cannot be shared, because state can only be passed down as props. That's why you would lift the state up now. You can lift the state up from component C until you have a common parent component for B and C (which is A). If all state that is managed in C is needed in B, C becomes even a stateless component. The state can be managed in A but is shared across B and C.
+
+만약 컴포넌트 B가 C에서 관리하는 상태가 필요하다면 어떻게 해야 할까요? 이 상황에서는 공유할 수 없습니다. 상태는 프로퍼티 형태로 아래로만 넘겨줄 수 있기 때문인데요. 이런 이유에서 상태 계층을 위로 이동시킬 필요가 있습니다. 컴포넌트 C의 상태를 컴포넌트 B와 C가 공통으로 갖는 부모 컴포넌트의 위치로 올릴 수 있습니다. (여기서는 A가 해당되겠군요.) 만약 C가 관리하는 상태를 B에서 필요로 한다면 C는 상태 없는 컴포넌트가 됩니다. 상태는 A에서 관리되며 B와 C에 공유됩니다.
 
 ```js
           +----------------+
@@ -338,27 +342,46 @@ What if component B needs state that is managed in C? It cannot be shared, becau
 
 Lifting state up and down enables you to scale your state management with plain React. When more components are interested in particular state, you can lift the state up until you reach a common parent component for the components that need access to the state. In addition, the local state management stays maintainable, because a component only manages as much state as needed. If the state is not used in the component itself or its child components, it can be lifted down to its respective components where it is needed.
 
-You can read more about lifting React's state in the {{% a_blank"official documentation" "https://facebook.github.io/react/docs/lifting-state-up.html" %}}.
+상태를 위로, 또는 아래로 옮기는 전략에서 단순 React를 사용할 때는 어떻게 상태 관리를 확장하는지 배울 수 있습니다. 더 많은 컴포넌트가 특정 상태에 관심을 가져야 하는 경우에은 상태에 접근해야 하는 컴포넌트 간의 공통 부모 컴포넌트까지 거슬러 올라가 상태를 둬야 합니다. 덧붙여 지역 상태 관리에서 충분히 관리할 수 있다면 컴포넌트는 필요한 만큼 상태를 관리하고 있기 때문입니다. 만약 컴포넌트 자체나 자식 컴포넌트에서 사용하지 않는 상태가 있다면 그 상태는  상태가 필요한 컴포넌트의 위치로 이동해야 합니다.
 
-{{% chapter_header "React's Higher Order Components" "react-higher-order-components" %}}
+React의 상태 들어 올리기는 [공식 문서](https://facebook.github.io/react/docs/lifting-state-up.html)에서 더 자세히 살펴볼 수 있습니다.
+
+
+## React의 고차 컴포넌트
 
 Higher order components (HOCs) are an advanced pattern in React. You can use them to abstract functionality away but reuse it as opt-in functionality for multiple components. A higher order component takes a component and optional configuration as input and returns an enhanced version of the component. It builds up on the principle of higher order functions in JavaScript: A function that returns a function.
 
+고차 컴포넌트 (Higher order components, HOCs)는 React의 고급 패턴입니다. 이 패턴은 추상적인 기능이 필요할 때 사용할 수 있으며 여러 컴포넌트에서 선택적으로 기능이 필요할 때 활용할 수 있습니다. 고차 컴포넌트는 컴포넌트를 받아서 선택적 설정을 입력으로 받아 강화된 버전의 컴포넌트를 반환합니다. 이 기능은 JavaScript의 고차 함수 원칙인 함수를 반환하는 함수처럼 구현되었습니다.
+
 If you are not familiar with higher order components, I can recommend you to read [the gentle Introduction to React's Higher Order Components](https://www.robinwieruch.de/gentle-introduction-higher-order-components/). It teaches React's higher order components with the use case of [React's conditional renderings](https://www.robinwieruch.de/conditional-rendering-react/).
+
+만약 고차 컴포넌트가 익숙하지 않다면 [React의 고차 컴포넌트 안내](https://www.robinwieruch.de/gentle-introduction-higher-order-components/)를 읽어보길 추천합니다. 이 글은 React의 고차 컴포넌트를 [React의 조건부 렌더링](https://www.robinwieruch.de/conditional-rendering-react/)의 용례와 함께 설명합니다.
 
 Higher order components are important later on, because you will be confronted with them when using a library like Redux. When a library such as Redux "connects" its state managements layer with React's view layer, you will often run into a higher order component that takes care of it (connect HOC in {{% a_blank "react-redux" "https://github.com/reactjs/react-redux" %}}).
 
+고차 컴포넌트는 뒤에서 더 중요해지는데 Redux와 같은 라이브러리를 사용하게 되면 마주하게 되기 때문입니다. Redux 같은 라이브러리는 React의 뷰 계층(view layer)와 라이브러리의 상태 관리 계층과 "연결"하게 되며 이 과정에서 고차 컴포넌트를 사용해 처리하게 됩니다. (고차 컴포넌트로 이뤄지는 연결은 [react-redux](https://github.com/reactjs/react-redux)를 사용합니다.)
+
 The same applies for other state management libraries such as MobX. Higher order components are used in these libraries to glue the state management layer to the view layer.
 
-{{% chapter_header "React's Context API" "react-context-api" %}}
+MobX와 같은 다른 상태 관리 라이브러리도 동일한 방식으로 적용합니다. 고차 컴포넌트는 라이브러리에서 제공하는 상태 관리 계층과 React의 뷰 계층을 붙이는데 사용합니다.
+
+## React의 Context API
 
 React's {{% a_blank "context" "https://facebook.github.io/react/docs/context.html" %}} API is rarely used. I wouldn't give the advice to use it, because its API is not stable and it adds implicit complexity to your application. However, it makes sense to understand its functionality.
 
+React의 [context](https://facebook.github.io/react/docs/context.html) API는 드물게 사용됩니다. 이 API를 사용하라 충고하지 않는 편인데 이 API는 안정적이지 않고 애플리케이션의 묵시적 복잡도(implicit complexity)를 높이기 때문입니다. 하지만 어떤 기능을 하는지 들어보면 왜 이런 기능이 있는지 충분히 이해할 수 있을 겁니다.
+
 So why should you bother about this? The context in React is used to pass down properties implicitly the component tree. You can declare properties as context somewhere up in a parent component and pick it up again in a child component somewhere down the component tree. Yet everything without the need to pass the props explicitly down each component that sits between the context producing parent component and the context consuming child component. It is an invisible container that you can reach down your component tree. It avoids the so called "props drilling" in React, because you don't need to reach your props through all components which are not interested in them. So again, why should you care?
+
+왜 이 기능을 알아야 할까요? React의 context는 컴포넌트 트리에서 속성을 묵시적으로 전달할 때 사용됩니다. 부모 컴포넌트에서 속성을 context로 선언하면 컴포넌트 트리 아래에 있는 자식 컴포넌트에서 활용할 수 있습니다. 명시적으로 각각의 컴포넌트 계층에 일일이 전달할 필요 없이 단순히 부모-자식 관계라면 부모 컴포넌트가 생성한 context를 자식 컴포넌트가 집어 사용할 수 있습니다. 모든 컴포넌트 트리에 걸쳐 언제든 꺼내서 쓸 수 있는, 보이지 않는 컨테이너가 존재합니다. 이 컨테이너 덕분에 컴포넌트에서 필요하지 않는 프로퍼티는 접근할 일이 없어지기 때문에 React에서 "프로퍼티 구멍내기(props drilling)"라고 하는 일을 피할 수 있게 됩니다. 다시 원래 주제로 돌아와서 왜 이런 API를 알아야 할까요?
 
 Often when using a sophisticated state management library, such as Redux or MobX, you glue the state management layer at some point to the React view layer. That's why you have the mentioned higher order components in React. The glueing should allow you to access the state and to modify the state. The state itself is often managed in some kind of state container.
 
+Redux나 MobX와 같은 세련된 상태 관리 라이브러리를 사용하다보면 어떤 시점에서 상태 관리 계층을 React 뷰 계층에 붙여야 하는 상황이 생깁니다. React의 고차 컴포넌트를 언급한 이유가 여기에 있습니다. 이 붙이는 과정을 통해 상태에 접근하고 수정할 수 있게 됩니다. 상태 자체는 일종의 상태 컨테이너 안에서 관리됩니다.
+
 But how would you make this state container accessible to all the React components that need to be glued to the state? It would be done by using React's context. In your top level component, basically your React root component, you would declare the state container in the React context so that it is implicitly accessible for each component down the component tree. The whole thing is accomplished by [React's Provider Pattern](https://www.robinwieruch.de/react-provider-pattern-context/).
+
+상태 컨테이너에 모든 
 
 After all, that doesn't mean that you need to deal with React's context yourself when using a library such as Redux. Such libraries already come with solutions for you to make the state container accessible in all components. But the underlying mechanics, why this works, are a good to know fact when making your state accessible in various components without worrying where the state container comes from.
 
