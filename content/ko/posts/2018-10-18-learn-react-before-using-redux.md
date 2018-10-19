@@ -50,6 +50,16 @@ However, now you decided to jump on the Redux train. So here comes my list of wh
 
 하지만 당신은 지금 Redux 열차에 올라타기로 결정했습니다. 그래서 이 글에서는 Redux를 쓰기 전에 React에서 알아야 할 내용을 살펴봅니다.
 
+- React에서의 지역 상태는 자연스럽다
+- React 함수형 지역 상태
+- React의 상태와 프로퍼티
+- React 상태 옮기기
+- React의 고차 컴포넌트
+- React의 Context API
+- React의 상태 컴포넌트
+- 컨테이너와 프레젠터 패턴
+- MobX 아니면 Redux?
+
 ## React에서의 지역 상태는 자연스럽다
 
 The already mentioned most important advice is to learn React first. Thus you cannot avoid to breathe life into your components by using local state with `this.setState()` and `this.state`. You should feel comfortable using it.
@@ -381,13 +391,17 @@ Redux나 MobX와 같은 세련된 상태 관리 라이브러리를 사용하다�
 
 But how would you make this state container accessible to all the React components that need to be glued to the state? It would be done by using React's context. In your top level component, basically your React root component, you would declare the state container in the React context so that it is implicitly accessible for each component down the component tree. The whole thing is accomplished by [React's Provider Pattern](https://www.robinwieruch.de/react-provider-pattern-context/).
 
-상태 컨테이너에 모든 
+하지만 어떻게 모든 컴포넌트에서 이 상태 컨테이너에 접근할 수 있도록 붙일 수 있을까요? 이런 상황에서 React의 context를 사용할 수 있습니다. 최상위 컴포넌트 즉, React의 루트 컴포넌트(root component)에서 상태 컨테이너를 context로 지정합니다. 그래서 컴포넌트 트리에 있는 모든 컴포넌트에 명시적으로 전달하지 않으면서도 모두 접근할 수 있게 됩니다. 이 모든 과정은 [React의 프로바이더 패턴](https://www.robinwieruch.de/react-provider-pattern-context/)으로 적용할 수 있습니다.
 
 After all, that doesn't mean that you need to deal with React's context yourself when using a library such as Redux. Such libraries already come with solutions for you to make the state container accessible in all components. But the underlying mechanics, why this works, are a good to know fact when making your state accessible in various components without worrying where the state container comes from.
 
-{{% chapter_header "React's Stateful Components" "react-stateful-components" %}}
+물론 이런 방식을 사용한다는 게 Redux 같은 라이브러리를 사용할 때마다 React의 context를 직접 제어해야 할 필요가 있다는 의미는 아닙니다. 이런 라이브러리는 이미 모든 컴포넌트에서 상태 컨테이너에 접근 가능하도록 모든 기능이 함께 제공되고 있습니다. 하지만 이 기능이 보이지 않는 곳에서 어떤 방식으로 동작하고 있는지 이해하게 된다면 여러 컴포넌트에서 상태를 제어하면서 도대체 이 상태 컨테이너는 어디서 오는 것일까 걱정할 필요도 없어지게 됩니다.
+
+## React의 상태 컴포넌트
 
 React comes with two versions of component declarations: ES6 class components and functional stateless components. A functional stateless component is only a function that receives props and outputs JSX. It doesn't hold any state nor does it have access to React's lifecycle methods. It is stateless as the name implies.
+
+React는 두 종류의 컴포넌트 선언이 존재합니다. ES6 클래스 컴포넌트와 함수형 상태 없는 컴포넌트(functional stateless component)입니다. 함수형 상태 없는 컴포넌트는 props를 인자로 받고 JSX를 반환하는 단순한 함수입니다. 이 함수는 어떤 상태도 갖지 않으며 React의 생애주기(lifecycle) 메소드에도 접근하지 않습니다. 이 컴포넌트는 이름 붙여진 그대로 상태가 없습니다.
 
 ```js
 function Counter({ counter }) {
@@ -400,6 +414,8 @@ function Counter({ counter }) {
 ```
 
 React's ES6 class components, on the other hand, can have local state and lifecycle methods. These components have access to `this.state` and the `this.setState()` method. This means that ES6 class components can be stateful components. But they don't need to use the local state, so they can be stateless too. Usually ES6 class component that are stateless make use of lifecycle methods to justify that they are classes.
+
+반면, ES6 클래스 컴포넌트는 지역 상태와 생애주기 메소드를 사용할 수 있습니다. 이 컴포넌트는 `this.state`와 `this.setState()` 메소드에 접근 가능합니다. ES6 클래스 컴포넌트는 상태 컴포넌트로 사용할 수 있다는 의미입니다. 물론 이 컴포넌트가 꼭 지역 상태를 사용해야 한다는 뜻은 아니며 상태 없는 컴포넌트로도 작성할 수 있습니다. 일반적으로 상태가 없는 ES6 클래스 컴포넌트라면 생애주기 메소드를 사용하기 위해 클래스 형태로 작성한 경우입니다.
 
 ```js
 class FocusedInputField extends React.Component {
@@ -426,7 +442,11 @@ class FocusedInputField extends React.Component {
 
 The conclusion is that only ES6 class components can be stateful, but they can be stateless too. Functional stateless components alone are always stateless.
 
+결론적으로 ES6 클래스 컴포넌트만 상태를 가질 수도 가지지 않을 수도 있습니다. 함수형 상태 없는 컴포넌트는 항상 상태가 없습니다.
+
 In addition, higher order components can be used to add state to React components too. You can write your own higher order component that manages state or use a library such as {{% a_blank "recompose" "https://github.com/acdlite/recompose" %}} with its higher order component `withState`.
+
+덧붙여 고차 컴포넌트도 React 컴포넌트에 상태를 덧붙일 수 있습니다. 상태를 관리하기 위해 직접 고차 컴포넌트를 만들거나 [recompose](https://github.com/acdlite/recompose)와 같은 라이브러리에서 제공하는 `withState` 고차 컴포넌트를 사용하는 것도 가능합니다.
 
 ```js
 import { withState } from `recompose`;
@@ -442,22 +462,32 @@ const Counter = enhance(({ counter, setCounter }) =>
 );
 ```
 
-When using React's higher order components, you can opt-in local state to any component in React.
+고차 컴포넌트를 사용하면 어떤 컴포넌트에든 지역 상태를 추가할 수 있습니다.
 
 {{% chapter_header "Container and Presenter Pattern" "container-presenter-react" %}}
 
+## 컨테이너와 프레젠터 패턴
+
 The container and presenter pattern got popular in a {{% a_blank "blog post" "https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0" %}} by Dan Abramov. If you are not familiar with it, now is your chance to dig into it. Basically it divides components into two types: container and presenter. A container component describes *how things work* and a presenter component describes *how things look*. Often it implies that a container component is a ES6 class component, for instance because it manages local state, and a presenter component is a functional stateless component, for instance because it only displays its props and uses a couple of functions that were passed down from the parent component.
+
+컨테이너와 프레젠터 패턴은 Dan Abramov의 [블로그 포스트](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) 이후 유명해졌습니다. 이 패턴에 익숙하지 않다면 지금이 살펴 볼 차례입니다. 컴포넌트를 컨테이너와 프레젠터로 구분합니다. 컨테이너 컴포넌트는 *어떻게 동작하는가*를, 프레젠터 컴포넌트는 *어떻게 보이는가*를 정의합니다. 컨테이너 컴포넌트는 ES6 클래스 컴포넌트로 구현되어 지역 상태를 관리합니다. 프레젠터 컴포넌트는 함수형 상태 없는 컴포넌트로 작성하여 프로퍼티로 받은 내용을 표현하고 부모 컴포넌트로부터 받은 함수 몇 가지를 실행하는 역할을 합니다.
 
 Before diving into Redux, it makes sense to understand the principle behind this pattern. With a state management library you will "connect" components to your state. These component don't care *how things look*, but more about *how things work*. Thus these components are container components. To be more specific, you will often hear the term **connected component** when a component gets connected to the state management layer.
 
-{{% chapter_header "MobX or Redux?" "mobx-redux" %}}
+Redux로 뛰어들기 전에 이 패턴 뒤에 있는 원칙을 이해할 필요가 있습니다. 상태 관리 라이브러리는 컴포넌트를 상태와 "연결"해줍니다. 상태 관리 계층과 연결된 컴포넌트를 **연결된 컴포넌트(connected component)**라는 용어로 부르기도 합니다. 이 컴포넌트는 *어떻게 보이는가*는 신경쓰지 않지만 *어떻게 동작하는가*에 집중하게 됩니다. 이런 컴포넌트가 바로 컨테이너 컴포넌트의 역할을 합니다.
+
+## MobX 아니면 Redux?
 
 Among all state management libraries, Redux is the most popular one yet MobX is a valuable alternative to it. Both libraries follow different philosophies and programming paradigms.
 
+모든 상태 관리 라이브러리를 통틀어 Redux가 가장 유명하고 MobX는 살펴 볼 가치 있는 대안입니다. 두 라이브러리는 다른 철학과 프로그래밍 패러다임을 따라가고 있습니다.
+
 Before you decide to use one of them, make sure that you know the things about React that were explained in the article. You should feel comfortable with the local state management, yet know enough about React to apply different concepts to scale your state management in plain React. In addition, be sure that you need to scale your state management solution because your application becomes larger in the future. Perhaps lifting your state or using React's context once with the React's provider pattern would already solve your problem.
+
+둘 라이브러리 중 하나로 고르기 전에 이 글에서 설명한 내용에 대해 이해하고 있어야 합니다. 기본 React의 상태 관리를 확장하기 위해 다른 개념을 적용할 정도로 지역 상태 관리에 익숙해야 합니다. 미래에 규모가 커질 애플리케이션을 염두해서 상태 관리도 확장해야 한다는 점을 기억합시다. 상태 관리 위치를 변경하거나 React의 프로바이더 패턴을 활용해 context를 사용하는 것으로 이미 어느 정도 문제를 해결할 수 있어야 합니다.
 
 So if you decide to make the step towards Redux or MobX, you can read up the following article to make a more elaborated decision: [Redux or MobX: An attempt to dissolve the Confusion](https://www.robinwieruch.de/redux-mobx-confusion/). It gives a useful comparison between both libraries and comes with a couple of recommendations to learn and apply them. Otherwise checkout the [Tips to learn React + Redux](https://www.robinwieruch.de/tips-to-learn-react-redux/) article to get started in Redux.
 
-<hr class="section-divider">
+Redux나 MobX를 사용하기로 결정했다면 [Redux 또는 MobX: 혼란을 해결하려는 시도](https://www.robinwieruch.de/redux-mobx-confusion/)에서 더 심층적으로 다루고 있으니 읽어보기 바랍니다. 두 라이브러리를 비교하고 어떻게 적용할지 설명하고 있습니다. 아니면 [React + Redux 학습 팁](https://www.robinwieruch.de/tips-to-learn-react-redux/)으로 바로 Redux를 시작할 수 있습니다.
 
-Hopefully this article gave you clarification about what you should learn and know before using a state management library like Redux. If you are curious about more Redux and MobX, checkout the ebook/course called Taming the State in React.
+이 글이 상태 관리 라이브러리를 사용하기 전에 어떤 역할을 하는지 이해하는데 도움이 되었으면 좋겠습니다. Redux와 MobX에 대해 더 궁금하다면 전자책/코스인 [Taming the State in React](https://roadtoreact.com/course-details?courseId=TAMING_THE_STATE)를 확인해보세요.
