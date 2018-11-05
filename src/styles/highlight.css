@@ -41,3 +41,8 @@
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
     background-color: #f6f9fd;
 }
+
+code[class*=language-], pre[class*=language-] {
+    font-family: monospace;
+}
+
