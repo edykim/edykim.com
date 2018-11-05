@@ -76,7 +76,7 @@ archlinux iso를 받아서 usb에 설치한다. [Etcher][2]를 사용하면 손�
 설정한 디스크 설정을 호스트 드라이브에 저장한다.
 
 ```bash
-# genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+# genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 chroot로 호스트에 접속한다.
@@ -107,15 +107,15 @@ chroot로 호스트에 접속한다.
 
 ```bash
 # locale-gen
-# echo LANG=en_AU.UTF-8 &gt; /etc/locale.conf
+# echo LANG=en_AU.UTF-8 > /etc/locale.conf
 # export LANG=en_AU.UTF-8
 ```
 
 hostname 설정과 host를 설정한다.
 
 ```bash
-# echo "ed-dell" &gt; /etc/hostname
-# echo "127.0.0.1 ed-dell" &gt;&gt; /etc/hosts
+# echo "ed-dell" > /etc/hostname
+# echo "127.0.0.1 ed-dell" >> /etc/hosts
 ```
 
 Grub 설치한다. bootable로 지정한 첫 파티션에 grub을 설치하면 된다.
@@ -165,13 +165,13 @@ root 대신 사용할 계정을 생성한다.
 ```bash
 # useradd -d /home/edward edward
 # passwd edward
-# echo "edward   ALL=(ALL) ALL" &gt;&gt; /etc/sudoers
+# echo "edward   ALL=(ALL) ALL" >> /etc/sudoers
 ```
 
 sddm을 설정한다.
 
 ```bash
-# sddm --example-config &gt; /etc/sddm.conf
+# sddm --example-config > /etc/sddm.conf
 ```
 
 `/etc/sddm.conf`을 열어서 autologin을 설정한다.
