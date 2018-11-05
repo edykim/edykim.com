@@ -30,7 +30,7 @@ ES5 표준은 2009년에 표준화되어 점진적으로 반영되고 있지만 
 TypeScript, CoffeeScript는 JavaScript 문법이 아닌 각각의 문법으로 작성된 코드를 JavaScript에서 동작 가능한 코드로 변환한다. 이와 같은 원리로 ECMAScript 6 문법으로 작성된 파일을 변환-컴파일하는 구현이 존재한다. 이 포스트에서 소개하려는 라이브러리, [babel][2]이 바로 그 transcompiler 중 하나다.
 
 <div style="text-align: center;">
-  <img style="background:#f5da55; padding:20px; max-width:200px;" src="http://babeljs.io/images/logo.svg" />
+  <img style="background:#f5da55; padding:20px; max-width:200px;" src="//babeljs.io/images/logo.svg" />
 </div>
 
 ## Babel 사용하기
