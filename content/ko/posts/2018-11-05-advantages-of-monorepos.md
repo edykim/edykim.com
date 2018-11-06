@@ -40,11 +40,15 @@ draft: true
 
 With multiple repos, you typically either have one project per repo, or an umbrella of related projects per repo, but that forces you to define what a “project” is for your particular team or company, and it sometimes forces you to split and merge repos for reasons that are pure overhead. For example, having to split a project because it's too big or has too much history for your VCS is not optimal.
 
-다중 리포지터리를 사용한다면 일반적으로 프로젝트 당 리포지터리가 있거나 연관된 프로젝트를 기준으로 리포지터리가 있을 겁니다. 하지만 "프로젝트"가 무엇인가에 대한 정의는 어떤 팀 또는 회사에 있는가에 따라 달라질 겁니다. 이런 이유로 리포지터리를 합치거나 분리하게 되는데 이런 작업은 순수하게 간접 비용이 됩니다.
+다중 리포지터리를 사용한다면 일반적으로 프로젝트 당 리포지터리가 있거나 연관된 프로젝트를 기준으로 리포지터리가 있을 겁니다. 하지만 "프로젝트"가 무엇인가에 대한 정의는 어떤 팀 또는 회사에 있는가에 따라 달라질 겁니다. 이런 이유로 리포지터리를 합치거나 분리하게 되는데 이런 작업은 순수하게 부가적인 비용이 됩니다. 어떤 경우에 프로젝트를 분리하게 되는지 예를 들면 프로젝트가 너무 큰 경우, 또는 버전 관리 도구의 히스토리가 너무 많아 최적화가 필요한 경우에 프로젝트를 분리하게 됩니다.
 
 With a monorepo, projects can be organized and grouped together in whatever way you find to be most logically consistent, and not just because your version control system forces you to organize things in a particular way. Using a single repo also reduces overhead from managing dependencies.
 
+단일 리포지터리를 사용하면 논리적으로 일관성을 지키기 위한 어떤 방법을 사용하더라도 프로젝트를 조직화하고 함께 묶을 수 있습니다. 그 이유는 버전 관리 도구가 특정 방식으로 구성하도록 강제하지 않기 때문입니다. 또한 단일 리포지터리를 사용하면 의존성을 관리하는 부하를 줄일 수 있습니다.
+
 A side effect of the simplified organization is that it's easier to navigate projects. The monorepos I've used let you essentially navigate as if everything is on a networked file system, re-using the idiom that's used to navigate within projects. Multi repo setups usually have two separate levels of navigation -- the filesystem idiom that's used inside projects, and then a meta-level for navigating between projects.
+
+조직 단순화의 부수 효과는 프로젝트 간 탐색을 더 쉽게 할 수 있다는 점입니다. 제가 그동안 사용한 단일 리포지터리는 파일 시스템 위에서 
 
 A side effect of that side effect is that, with monorepos, it's often the case that it's very easy to get a dev environment set up to run builds and tests. If you expect to be able to navigate between projects with the equivalent of `cd`, you also expect to be able to do `cd; make`. Since it seems weird for that to not work, it usually works, and whatever tooling effort is necessary to make it work gets done[^1]. While it's technically possible to get that kind of ease in multiple repos, it's not as natural, which means that the necessary work isn't done as often.
 
