@@ -1,12 +1,12 @@
 ---
-title: 단일 리포지터리의 장점
+title: 단일 리포지터리의 좋은 점
 author: haruair
 type: post
 date: 2018-11-05T20:52:00-07:00
 lang: ko
 slug: advantages-of-monorepos
 headline:
-  - 단일 리포지터리(monorepos)를 적용하려면 블라블라
+  - 여러 리포지터리를 운영하는 방법 대신에 단일 리포지터리를 운영할 때 좋은 점, 번역
 categories:
   - 개발 이야기
   - 번역
@@ -20,7 +20,7 @@ draft: true
 
 ---
 
-# 단일 리포지터리의 장점
+# 단일 리포지터리의 좋은 점
 
 다음 같은 대화를 자주 합니다.
 
@@ -36,75 +36,76 @@ draft: true
 
 "\[이유\]"는 생각보다 꽤 깁니다. 그러니 같은 대화를 계속 반복하는 것보다 글로 작성해서 이유를 설명하려고 합니다.
 
-## 조직 단순화하기
-
-With multiple repos, you typically either have one project per repo, or an umbrella of related projects per repo, but that forces you to define what a “project” is for your particular team or company, and it sometimes forces you to split and merge repos for reasons that are pure overhead. For example, having to split a project because it's too big or has too much history for your VCS is not optimal.
+## 단순화된 편성
 
 다중 리포지터리를 사용한다면 일반적으로 프로젝트 당 리포지터리가 있거나 연관된 프로젝트를 기준으로 리포지터리가 있을 겁니다. 하지만 "프로젝트"가 무엇인가에 대한 정의는 어떤 팀 또는 회사에 있는가에 따라 달라질 겁니다. 이런 이유로 리포지터리를 합치거나 분리하게 되는데 이런 작업은 순수하게 부가적인 비용이 됩니다. 어떤 경우에 프로젝트를 분리하게 되는지 예를 들면 프로젝트가 너무 큰 경우, 또는 버전 관리 도구의 히스토리가 너무 많아 최적화가 필요한 경우에 프로젝트를 분리하게 됩니다.
 
-With a monorepo, projects can be organized and grouped together in whatever way you find to be most logically consistent, and not just because your version control system forces you to organize things in a particular way. Using a single repo also reduces overhead from managing dependencies.
+단일 리포지터리를 사용하면 버전 관리 도구가 특정 방식으로 구조를 구성하도록 하는 것이 아니라 논리적으로 가장 일관적인 방법으로 프로젝트를 편성하고 묶을 수 있습니다. 또한 단일 리포지터리를 사용하면 의존성을 관리하는 부하를 줄일 수 있습니다.
 
-단일 리포지터리를 사용하면 논리적으로 일관성을 지키기 위한 어떤 방법을 사용하더라도 프로젝트를 조직화하고 함께 묶을 수 있습니다. 그 이유는 버전 관리 도구가 특정 방식으로 구성하도록 강제하지 않기 때문입니다. 또한 단일 리포지터리를 사용하면 의존성을 관리하는 부하를 줄일 수 있습니다.
+편성 단순화의 부수 효과는 프로젝트 간 탐색을 더 쉽게 할 수 있다는 점입니다. 단일 리포지터리를 사용하면 기본적으로 파일 시스템에서 파일을 탐색한다고 말하는 것과 동일하게 모든 프로젝트를 탐색할 수 있습니다. 다중 리포지터리로 구성하면 대부분 두 계층으로 분리된 탐색이 필요합니다. 먼저 프로젝트 안을 탐색할 때는 파일 시스템에서 말하는 탐색이 필요하고, 메타 계층으로서 프로젝트 사이를 찾는 탐색도 필요합니다.
 
-A side effect of the simplified organization is that it's easier to navigate projects. The monorepos I've used let you essentially navigate as if everything is on a networked file system, re-using the idiom that's used to navigate within projects. Multi repo setups usually have two separate levels of navigation -- the filesystem idiom that's used inside projects, and then a meta-level for navigating between projects.
+단일 리포지터리를 사용하면 나타나는 이 부수 효과에는 또 부수 효과가 있는데 아주 쉽게 개발 환경을 꾸리고 빌드, 테스트까지 구동할 수 있다는 점입니다. 다른 프로젝트를 탐색하기 위해서 `cd`를 사용할 수 있고 `cd; make`로도 당연히 가능하게 됩니다. 이런 구조가 동작하지 않는 것은 당연히 이상하게 보일 정도로 제대로 동작합니다. 동작하기 위해 필요한 어떤 툴링 작업이든 문제 없이 완료됩니다.[^1] 물론 기술적으로 다중 리포지터리를 사용하더라도 동일한 작업을 할 수 있지만 자연스럽지는 않습니다. 즉, 생각처럼 동작하지 않을 때가 종종 있다는 의미입니다.
 
-조직 단순화의 부수 효과는 프로젝트 간 탐색을 더 쉽게 할 수 있다는 점입니다. 제가 그동안 사용한 단일 리포지터리는 파일 시스템 위에서 
+## 단순화된 의존성
 
-A side effect of that side effect is that, with monorepos, it's often the case that it's very easy to get a dev environment set up to run builds and tests. If you expect to be able to navigate between projects with the equivalent of `cd`, you also expect to be able to do `cd; make`. Since it seems weird for that to not work, it usually works, and whatever tooling effort is necessary to make it work gets done[^1]. While it's technically possible to get that kind of ease in multiple repos, it's not as natural, which means that the necessary work isn't done as often.
+아마 이 사실은 말할 필요도 없겠지만 다중 리포지터리를 사용하면 서로 어떤 버전에 의존하고 있는지 정의하는 방법이 필요할 것입니다. 듣기에는 복잡하지 않은 문제라고 느낄 지 몰라도 실무에서는 대부분의 해결책이 성가신 데다 많은 부하가 따릅니다.
 
-## Simplified dependencies
+단일 리포지터리를 사용하면 모든 프로젝트를 위한 단일 버전을 쉽게 만들 수 있습니다. 여러 프로젝트에 걸쳐서 원자적인 커밋(atomic cross-project commit)이 가능하기 때문에 리포지터리는 언제난 일관적인 상태를 유지할 수 있습니다. #X 커밋에 모든 프로젝트 빌드가 동작해야 하는 것이죠. 빌드 시스템에서는 여전히 의존성을 지정할 필요가 있지만 Makefile이나 bazel BUILD 파일을 사용할 때는 다른 것과 같이 버전 관리 내에서 확인할 수 있습니다. 그리고 단 하나의 버전 번호를 갖게 되는 것으로 Makefile이나 BUILD 파일, 또는 어떤 빌드 방법을 사용하더라도 특정 버전 번호를 지정할 필요가 없게 됩니다.
 
-This probably goes without saying, but with multiple repos, you need to have some way of specifying and versioning dependencies between them. That sounds like it ought to be straightforward, but in practice, most solutions are cumbersome and involve a lot of overhead.
+## 툴링(Tooling)
 
-With a monorepo, it's easy to have one universal version number for all projects. Since atomic cross-project commits are possible, the repository can always be in a consistent state -- at commit #X, all project builds should work. Dependencies still need to be specified in the build system, but whether that's a make Makefiles or bazel BUILD files, those can be checked into version control like everything else. And since there's just one version number, the Makefiles or BUILD files or whatever you choose don't need to specify version numbers.
+탐색과 의존성을 단순하게 하면 도구를 만드는 일도 훨씬 쉬워집니다. 도구를 만들며 각 리포지터리의 관계를 이해하도록 하는 방법 대신에 모든 파일이 리포지터리 내에 들어 있기 때문에 이런 도구는 (리포지터리 내에 의존성을 정의한 몇 파일을 포함해서) 그저 파일을 읽는 일만 하면 됩니다.
 
-## Tooling
+이 부분은 사소한 것처럼 느껴질 수 있겠지만 [Christopher Van Arsdale의 예](https://github.com/chrisvana/repobuild/wiki/Motivation)에서 빌드가 얼마나 단순하게 가능한지 볼 수 있습니다.
 
-The simplification of navigation and dependencies makes it much easier to write tools. Instead of having tools that must understand relationships between repositories, as well as the nature of files within repositories, tools basically just need to be able to read files (including some file format that specifies dependencies between units within the repo).
+> [구글 내부의 빌드 시스템](https://bazel.build/)은 대형 모듈러 블럭 코드를 사용해서 빌드를 환상적으로 쉽게 수행합니다. 크롤러가 필요해요? 여기에 몇 줄 추가합니다. RSS 파서가 필요해요? 몇 줄을 더 추가합니다. 대형 분산, 장애 허용 데이터 저장소? 물론 몇 줄을 더 추가합니다. 이렇게 만들어진 블러과 서비스는 여러 프로젝트에서 공유되며 쉽게 통합할 수 있습니다. … 이처럼 레고(LEGO)처럼 조립 가능한 개발 프로세스는 오픈소스 세계에서 자주 일어나지 않습니다. … 이런 다양한 상태의 결과로 (추측하건데) 오픈소스에 복잡한 장벽이 생겨나고 지난 몇 년 간 큰 변화가 없었습니다. 이런 이유에서 구글과 같이 쉽게 관리하는 경우와 그러지 못한 여러 오픈소스 프로젝트의 차이를 만들게 되었습니다.
 
-This sounds like a trivial thing but, [take this example by Christopher Van Arsdale](https://github.com/chrisvana/repobuild/wiki/Motivation) on how easy builds can become:
+Arsdale이 편하다고 말한 이 시스템은 오픈소스가 되기 전에 전 구글 엔지니어가 [페이스북](https://facebook.github.io/buck/), [트위터](https://pantsbuild.github.io/)에서도 동일한 혜택을 누리기 위해서 bazel의 자체 버전을 작성했습니다.
 
-> [The build system inside of Google](http://bazel.io/) makes it incredibly easy to build software using large modular blocks of code. You want a crawler? Add a few lines here. You need an RSS parser? Add a few more lines. A large distributed, fault tolerant datastore? Sure, add a few more lines. These are building blocks and services that are shared by many projects, and easy to integrate. … This sort of Lego-like development process does not happen as cleanly in the open source world. … As a result of this state of affairs (more speculation), there is a complexity barrier in open source that has not changed significantly in the last few years. This creates a gap between what is easily obtainable at a company like Google versus a\[n\] open sourced project.
+이론적으로는 단순히 단일 리포지터리 없이도 모든 의존성을 해결하고 빌드를 수행하는 빌드 시스템을 만들어 낼 수 있습니다. 하지만 더 많은 노력이 필요한 데다 이런 노력에도 불구하고 문제 없이 돌아가는 시스템을 본 적이 없습니다. Maven과 sbt는 그런 점에서 꽤나 잘 만들어지긴 했지만 버전 의존성 문제를 추적하고 고치는데 많은 시간을 들이는 것 또한 일반적으로 많이 겪게 됩니다. rbenv나 virtualenv와 같은 시스템은 문제를 우회하려는 노력이지만 개발 환경을 급증하게 하는 결과를 만들었습니다. 단일 리포지터리에서 HEAD는 항상 일관적이고 유효한 버전을 가리키고 있으며 다중 리포지터리의 버전을 추적하는 노력을 완전히 제거하게 됩니다[^2].
 
-The system that Arsdale is referring to is so convenient that, before it was open sourced, ex-Google engineers at [Facebook](https://facebook.github.io/buck/) and [Twitter](https://pantsbuild.github.io/) wrote their own versions of bazel in order to get the same benefits.
+단일 리포를 운영하면서 빌드 시스템에만 이득이 있는 것이 아닙니다. 더 예를 들자면 프로젝트 경계를 넘어서 정적 분석을 수행하는 일에도 추가적인 노력이 필요하지 않습니다. 프로젝트 간의 통합 테스트나 [코드 검색](https://github.com/google/codesearch)과 같이 많은 부분에서도 훨씬 단순해집니다.
 
-It's theoretically possible to create a build system that makes building anything, with any dependencies, simple without having a monorepo, but it's more effort, enough effort that I've never seen a system that does it seamlessly. Maven and sbt are pretty nice, in a way, but it's not uncommon to lose a lot of time tracking down and fixing version dependency issues. Systems like rbenv and virtualenv try to sidestep the problem, but they result in a proliferation of development environments. Using a monorepo where HEAD always points to a consistent and valid version removes the problem of tracking multiple repo versions entirely[^2].
+## 프로젝트 간 변경
 
-Build systems aren't the only thing that benefit from running on a mono repo. Just for example, static analysis can run across project boundaries without any extra work. Many other things, like cross-project integration testing and [code search](https://github.com/google/codesearch) are also greatly simplified.
+많은 리포지터리를 갖고 있다면 프로젝트 간 변경은 고통스럽습니다. 일반적으로 각각의 리포를 걸쳐 정합성을 맞추기 위해 어마어마한 양의 수작업이 따르거나 또는 핵과 같은 스크립트를 작성해서 돌려야 합니다. 스크립트가 동작하더라도 프로젝트 간 버전 의존성을 올바르게 고치기 위한 부하도 발생합니다. 10개의 내부 프로젝트에 걸쳐 사용하고 있는 API를 리팩토링 한다면 아마 하루 종일 시간쓰기 좋은 분량일 것입니다. 수천 개의 내부 프로젝트에서 사용하고 있는 API를 리팩토링 하는 경우라면 꿈도 희망도 없습니다.
 
-## Cross-project changes
+단일 리포지터리라면 [API와 모든 호출자의 리팩토링](http://research.google.com/pubs/pub41342.html)은 커밋 하나로 해결할 수 있습니다. 항상 이런 사소한 작업이 있는 것은 아니지만 수많은 작은 리포지터리를 수정하는 방법보다 훨씬 쉽습니다.
 
-With lots of repos, making cross-repo changes is painful. It typically involves tedious manual coordination across each repo or hack-y scripts. And even if the scripts work, there's the overhead of correctly updating cross-repo version dependencies. Refactoring an API that's used across tens of active internal projects will probably a good chunk of a day. Refactoring an API that's used across thousands of active internal projects is hopeless.
+대부분은 CVS, RCS, ClearCase와 같은 버전 관리 도구를 사용하는 일이 불합리하다고 생각하고 있습니다. 이런 버전 관리 도구는 여러 파일에 걸친 원자적 커밋을 할 수 없기 때문인데 사람들로 하여금 커밋의 타임 스탬프와 커밋 메시지, 또는 "진짜" 원자적으로 커밋된 파일이 어떤 것인지 확인할 수 있는 메타 정보를 확인해야 하기 때문입니다. SVN, hg, git 등과 같은 도구는 원자적인 여러 파일 변경 문제를 해결하는데 단일 리포지터리는 동일한 문제를 여러 프로젝트에 걸쳐 해결합니다.
 
-With a monorepo, you just [refactor the API and all of its callers](http://research.google.com/pubs/pub41342.html) in one commit. That's not always trivial, but it's much easier than it would be with lots of small repos. I've seen APIs with thousands of usages across hundreds of projects get refactored and with a monorepo setup it's so easy that it's no one even thinks twice.
+이 접근 방법의 유용성은 단순히 대규모의 API 리펙토링에만 국한되지 않습니다. David Turner는 트위터에서 여러 리포지터리를 단일 리포지터리로 옮기는 작업을 했습니다. 이 작업은 작지만 여러 프로젝트에 걸친 변경과 이 변경을 배포하는데 있어 들어가는 부하를 이야기합니다.
 
-Most people now consider it absurd to use a version control system like CVS, RCS, or ClearCase, where it's impossible to do a single atomic commit across multiple files, forcing people to either manually look at timestamps and commit messages or keep meta information around to determine if some particular set of cross-file changes are “really” atomic. SVN, hg, git, etc solve the problem of atomic cross-file changes; monorepos solve the same problem across projects.
+> \[프로젝트 A\]를 갱신해야 합니다. 하지만 이 작업을 위해서는 내 동료가 이 프로젝트의 의존성인 \[프로젝트 B\]에서 고친 코드가 필요합니다. 이 동료는 \[프로젝트 C\]에서 변경된 내용이 필요합니다. 만약 A를 고쳐서 배포하려 한다고 해도 C의 배포를 기다려야 하고 B 배포도 기다려야 하는 상황입니다. 하지만 모든 것이 하나의 리포지터리에 있다면 내 동료가 코드를 변경해서 커밋 하자마자 내 코드 변경도 즉시 가능합니다.
+>
+> 물론 git 버전에 의해 모든 것이 연결되어 있다면 다중 리포지터리에서도 가능할겁니다. 하지만 내 동료는 두 개의 커밋이 필요할 지도 모릅니다. 이런 작업에는 버전을 하나 집어서 "안정화" (더이상 움직이지 않도록) 하고 싶은 욕망이 항상 생깁니다. 하나의 프로젝트라면 문제가 없겠지만 상호의존적인 복잡한 프로젝트에서는 이 조차도 그닥 쉽지 않은 방법입니다.
+>
+> \[다른 방향에서 본다면\] _의존하는 부분_ 이 강제로 갱신되야 하는 상황인데 이 또한 단일 리포지터리의 장점이라고 할 수 있습니다.
 
-This isn't just useful for large-scale API refactorings. David Turner, who worked on twitter's migration from many repos to a monorepo gives this example of a small cross-cutting change and the overhead of having to do releases for those:
+이 접근 방법은 단순히 프로젝트 간 변경을 쉽게 수행할 수 있는 것만 아니라 변경을 추적하는 일도 쉽게 만듭니다. `git bisect`을 여러 리포지터리에서 수행한다면 분명 다른 도구를 이용해서 메타 정보를 읽는 방법을 배워야 할 것이고 대부분의 프로젝트에서는 그냥 간단하게 이런 작업을 안해버리고 맙니다. 만약 이런 일을 한다고 해도 하나의 도구만 써도 충분한 작업을 여러 도구에 걸쳐 하게 될겁니다.
 
-> I needed to update \[Project A\], but to do that, I needed my colleague to fix one of its dependencies, \[Project B\]. The colleague, in turn, needed to fix \[Project C\]. If I had had to wait for C to do a release, and then B, before I could fix and deploy A, I might still be waiting. But since everything's in one repo, my colleague could make his change and commit, and then I could immediately make my change.
-> 
-> I guess I could do that if everything were linked by git versions, but my colleague would still have had to do two commits. And there's always the temptation to just pick a version and "stabilize" (meaning, stagnate). That's fine if you just have one project, but when you have a web of projects with interdependencies, it's not so good.
-> 
-> \[In the other direction,\] Forcing _dependees_ to update is actually another benefit of a monorepo.
+## Mercurial과 git은 멋집니다! 실화입니다
 
-It's not just that making cross-project changes is easier, tracking them is easier, too. To do the equivalent of `git bisect` across multiple repos, you must be disciplined about using another tool to track meta information, and most projects simply don't do that. Even if they do, you now have two really different tools where one would have sufficed.
+CVS 또는 SVN에서 git 또는 hg로 변경한 경우에 가장 일반적으로 들을 수 있는 이야기는 엄청나게 생산성이 좋아졌다는 얘기입니다. 이 점은 사실입니다. 하지만 대부분 이런 응답의 관점은 git과 hg가 더 발달한 여러 측면(예를 들면 더 나은 코드 머지를 지원한다던가)이 그 이유였지 작은 리포지터리가 더 낫기 때문인 것은 아니였습니다.
 
-## Mercurial and git are awesome; it's true
+사실 트위터는 git을, [페이스북은 Mercurial](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/)을 대형 단일 리포지터리를 지원하기 위해 패치해서 사용하고 있습니다.
 
-The most common response I've gotten to these points is that switching to either git or hg from either CVS or SVN is a huge productivity win. That's true. But a lot of that is because git and hg are superior in multiple respects (e.g., better merging), not because having small repos is better per se.
+## 단점
 
-In fact, Twitter has been patching git and [Facebook has been patching Mercurial](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/) in order to support giant monorepos.
+물론 단일 리포지터리에도 단점이 있습니다. 여기서는 단점을 적지 않을 생각인데 이미 충분히 많은 논의가 있었기 때문입니다. 단일 리포지터리는 다중 리포지터리에 비해 엄격하게 우월한 지위를 갖는 것은 아닙니다. 그렇다고 엄격하게 나쁜 것도 아닙니다. 제 관점에서는 누구든 꼭 단일 리포지터리로 옮겨야 한다고 얘기하지 않습니다. 단지 단일 리포지터리를 쓰는 일이 완전 부당하지 않다는 얘기를 하고 싶었습니다. 구글, 페이스북, 트위터, 디지털오션과 엣시(Etsy)에서 수백, 수천, 수만 개의 작은 리포지터리를 운영하는 대신 단일 리포지터리 사용을 선호하는 점에는 분명 좋은 이유가 있어서 그럴 겁니다.
 
-## Downsides
+## 다른 논의
 
-Of course, there are downsides to using a monorepo. I'm not going to discuss them because the downsides are already widely discussed. Monorepos aren't strictly superior to manyrepos. They're not strictly worse, either. My point isn't that you should definitely switch to a monorepo; it's merely that using a monorepo isn't totally unreasonable, that folks at places like Google, Facebook, Twitter, Digital Ocean, and Etsy might have good reasons for preferring a monorepo over hundreds or thousands or tens of thousands of smaller repos.
+- [Gregory](http://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/) [Szorc](http://gregoryszorc.com/blog/2015/02/17/lost-productivity-due-to-non-unified-repositories/)
+- [페이스](https://developers.facebooklive.com/videos/561/big-code-developer-infrastructure-at-facebook-s-scale)[북](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/)
+- [Benjamin Pollack](http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/) (Kiln을 만든 사람 중 하나). [Benjamin Eberlei](https://qafoo.com/resources/presentations/froscon_2015/monorepos.html) [Simon Stewart](http://blog.rocketpoweredjetpants.com/2015/04/monorepo-one-source-code-repository-to.html)
+- [디지털오션](https://www.digitalocean.com/company/blog/taming-your-go-dependencies/)
+- [Goo](http://www.infoq.com/presentations/Development-at-Google)[gle](https://www.youtube.com/watch?v=W71BTkUbdqE)
+- [트위터](http://git-merge.com/videos/scaling-git-at-twitter-wilhelm-bierbaum.html)
+- [thedufer](http://www.reddit.com/r/programming/comments/1unehr/scaling_mercurial_at_facebook/cek9nkq)
+- [Paul Hammant](http://paulhammant.com/categories.html#trunk_based_development).
 
-## Other discussion
+광범위한 토론에 함께 한 Kamal Marhubi, David Turner와 Leah Hanson에게 감사 말씀 전합니다. 이 토론에서 적어도 절반 이상의 아이디어가 나왔습니다. 또한 이 글에서 오타와 실수를 찾아 준 Leah Hanson, Mindy Preston, Chris Ball, Daniel Espeset, Joe Wilder, Nicolas Grilly, Giovanni Gherdovich, Paul Hammant, Simon Thulbourn에게 감사드립니다.
 
-[Gregory](http://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/) [Szorc](http://gregoryszorc.com/blog/2015/02/17/lost-productivity-due-to-non-unified-repositories/). [Face](https://developers.facebooklive.com/videos/561/big-code-developer-infrastructure-at-facebook-s-scale)[book](https://code.facebook.com/posts/218678814984400/scaling-mercurial-at-facebook/). [Benjamin Pollack](http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/) (one of the co-creators of Kiln). [Benjamin Eberlei](https://qafoo.com/resources/presentations/froscon_2015/monorepos.html). [Simon Stewart](http://blog.rocketpoweredjetpants.com/2015/04/monorepo-one-source-code-repository-to.html). [Digital Ocean](https://www.digitalocean.com/company/blog/taming-your-go-dependencies/). [Goo](http://www.infoq.com/presentations/Development-at-Google)[gle](https://www.youtube.com/watch?v=W71BTkUbdqE). [Twitter](http://git-merge.com/videos/scaling-git-at-twitter-wilhelm-bierbaum.html). [thedufer](http://www.reddit.com/r/programming/comments/1unehr/scaling_mercurial_at_facebook/cek9nkq). [Paul Hammant](http://paulhammant.com/categories.html#trunk_based_development).
-
-Thanks to Kamal Marhubi, David Turner, and Leah Hanson for extensive discussion on this topic. At least half of the ideas here come from them. Also, thanks to Leah Hanson, Mindy Preston, Chris Ball, Daniel Espeset, Joe Wilder, Nicolas Grilly, Giovanni Gherdovich, Paul Hammant, and Simon Thulbourn for finding typos and other mistakes in this post.
-
-[^1]: This was even true at a hardware company I worked at which created a monorepo by versioning things in RCS over NFS. Of course you can't let people live edit files in the central repository so someone wrote a number of scripts that basically turned this into perforce. I don't recommend this system, but even with an incredibly hacktastic monorepo, you still get a lot of the upsides of a monorepo.
-[^2]:  At least as long as you have some mechanism for [vendoring upstream dependencies](https://news.ycombinator.com/item?id=10604168). While this works great for Google because Google writes a large fraction of the code it relies on, and has enough employees that tossing all external dependencies into the monorepo has a low cost amortized across all employees, I could imagine this advantage being too expensive to take advantage of for smaller companies.
+[^1]: 이 부분은 제가 일했던 하드웨어 회사에서도 맞는 말입니다. 저는 이 회사에서 NFS에서 동작하는 RCS를 버저닝하는 단일 리포지터리를 만들어서 사용했습니다. 물론 사람들이 중앙 리포지터리에서 파일을 수정할 수 있게 할 수 없으니 억지로 이 작업을 가능하게 누군가가 여러 스크립트를 작성했습니다. 이런 시스템을 추천하진 않습니다만 엄청나게 단일 리포지터리처럼 해킹해서 쓰더라도 단일 리포지터리의 장점을 누릴 수 있습니다.
+[^2]: 적어도 [상위 의존성을 관리하는](https://news.ycombinator.com/item?id=10604168) 메커니즘이 있어야 할 것입니다. 물론 이런 작업은 구글에서 문제가 없는데 구글은 코드를 작성해도 많은 수의 직원이 그 코드에 의존하기 때문에 모든 외부 의존성을 단일 리포지터리에 넣어도 전체 직원 규모에서 보면 오히려 비용이 절감되기 때문입니다. 제가 보기에 작은 회사에서 이런 접근 방법에 이득을 얻기에는 너무 비용이 크다고 생각합니다.
