@@ -2,7 +2,7 @@
 title: 단일 리포지터리의 좋은 점
 author: haruair
 type: post
-date: 2018-11-05T20:52:00-07:00
+date: 2018-11-06T14:52:00-07:00
 lang: ko
 slug: advantages-of-monorepos
 headline:
@@ -11,10 +11,11 @@ categories:
   - 개발 이야기
   - 번역
 tags:
-  - monorepos
-draft: true
+  - monorepo
 
 ---
+
+지난 달에 있던 [Hacktoberfest](https://hacktoberfest.digitalocean.com)에 참여하면서 Gatsby에 기여를 하게 되었습니다. 단일 리포지터리로 된 프로젝트는 처음 경험해서 코드가 반영되고 갱신되는 과정이 흥미로웠습니다. 단일 리포지터리를 사용하면 다중 리포지터리에 비해 어떤 장점이 있는지 여러 글을 읽어보게 되었는데 그 중 하나를 번역하게 되었습니다.
 
 이 글은 [Dan Luu](https://twitter.com/danluu)의 [Advantages of monorepos](http://danluu.com/monorepo/) 번역입니다.
 
