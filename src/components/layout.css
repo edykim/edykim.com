@@ -41,16 +41,16 @@ html[lang="ko"] .content {
   margin: 3rem auto;
 }
 
-.giphy {
+figure[class^="image-"] {
   margin: 3rem auto;
 }
 
-.giphy img {
+figure[class^="image-"] img {
   margin: 0 auto;
   display: block;
 }
 
-.giphy figcaption {
+figure[class^="image-"] figcaption {
   text-align: center;
   font-family: sans-serif;
   color: #666;
