@@ -4,7 +4,7 @@ author: haruair
 type: page
 date: 2018-03-24T03:12:17+00:00
 lang: ko
-slug: programming-language-theory
+url: programming-language-theory
 
 ---
 A collection of Programming Language Theory related articles/pages.
