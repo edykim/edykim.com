@@ -3,8 +3,8 @@ title: Programming Language Theory
 author: haruair
 type: page
 date: 2018-03-24T03:12:17+00:00
-lang: ko
-url: programming-language-theory
+lang: en
+url: plt 
 
 ---
 A collection of Programming Language Theory related articles/pages.
