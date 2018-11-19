@@ -1,6 +1,8 @@
 const path = require(`path`)
 const urlResolve = require(`url`).resolve
 
+const { createRedirect } = require(`gatsby-plugin-netlify`)
+
 const fs = require(`fs`)
 const pify = require(`pify`)
 const mkdirp = require(`mkdirp`)
@@ -65,6 +67,15 @@ exports.onPostBuild = async ({ graphql }) => {
 
   await writeFile(outputPath, JSON.stringify(redirects, null, 2))
 
+  redirects.forEach(redirect => {
+    createRedirect({
+      fromPath: redirect.from,
+      toPath: redirect.to,
+      isPermanent: true,
+    })
+  })
+
   console.log(`${redirects.length} of redirections generated. (${outputPath})`)
+
   return Promise.resolve()
 }

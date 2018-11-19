@@ -80,6 +80,7 @@ module.exports = {
     {
       resolve: `edykim-taxonomy`,
       options: require(`./config/taxonomy`)
-    }
+    },
+    `gatsby-plugin-netlify`,
   ],
 }
