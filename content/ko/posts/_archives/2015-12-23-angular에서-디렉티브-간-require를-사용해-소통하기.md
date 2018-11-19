@@ -15,7 +15,7 @@ categories:
   - 개발 이야기
   - 번역
 tags:
-  - angularJS
+  - angularjs
   - directive
 
 ---
