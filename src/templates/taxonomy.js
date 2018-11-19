@@ -28,7 +28,7 @@ class TaxonomyTemplate extends React.Component {
         </Helmet>
 
         {
-          lang === 'ko' ? <h1>"{taxonomy}"가 태그된 글 ({articles.totalCount || 0})</h1> : null
+          lang === 'ko' ? <h1>"{taxonomy}" 태그된 글 ({articles.totalCount || 0})</h1> : null
         }
         {
           lang === 'en' ? <h1>{articles.totalCount || 0} post{articles.totalCount === 1 ? `` : `s`} tagged with "{taxonomy}"</h1> : null
