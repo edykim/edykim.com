@@ -730,3 +730,311 @@ Handled by the compositor, doesn't have to wait for rendering.
 @jaffathecake
 
 https://www.youtube.com/watch?v=ipNW6lJHVEs&index=7&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF
+
+A showcase of [squoosh.app](https://squoosh.app)
+
+In Firefox, webp doens't support yet. Squoosh support webp it via wasm.
+
+MozJPEG, OptiPNG, WebP -> emscripten -> wasm
+
+It's better than inbuilt browser encoder.
+
+[Emscripting a C library to Wasm](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library)
+
+Preact + webpack
+
+Generate 2 workers, so that the intensive work doens't freeze UI.
+
+When the work need to be changed, just terminate the worker and start it.
+
+
+worker doesn't give good API so it wrapped via comlink. [comlink](https://github.com/GoogleChromeLabs/comlink) gives all bookkeeping chore work.
+
+
+```js
+// In the worker
+import { expose } from 'comlink';
+
+async function webpEncode(data, options) {
+    const { encode } = await import('./webp/encoder');
+    return encode(data, options);
+}
+
+// In the page
+import { proxy } from 'comlink';
+
+const leftWorker = new Worker('processor.7a100.js');
+const workerApi = proxy(leftWorker);
+
+workerApi.webpEncode(data, options).then(() => {
+    // ...
+});
+```
+
+Code spliting via `import()`
+
+emerging market...
+
+Preact + <web-components>
+
+- [file-drop](https://github.com/GoogleChromeLabs/file-drop)
+- [pinch-zoom](https://github.com/GoogleChromeLabs/pinch-zoom)
+- [two-up](https://github.com/GoogleChromeLabs/two-up)
+
+[custom-elements-everywhere.com](https://custom-elements-everywhere.com/)
+
+- [pointer tracker](https://github.com/GoogleChromeLabs/pointer-tracker)
+- [critters](https://github.com/GoogleChromeLabs/critters)
+
+[squoosh.app](https://github.com/GoogleChromeLabs/squoosh)
+
+
+----
+
+# Building Modern Web Media Experiences: Picture-in-Picture and AV1
+
+https://plus.google.com/+FrancoisBeaufort
+
+Angie Chiang
+
+- Picture-in-Picture
+- AV1 video codec
+- Codec Switching
+- Media Capabilities
+
+## Why Media on the Web matters
+
+- 40,000 years of video watched daily in Chrome
+- 30% of all time spent watching video on Chrome Desktop
+
+## Picture-in-Picture
+
+Perfect for:
+
+- Multi-tasking
+- Record desktop with camera
+- Always on top media center
+
+```js
+button.addEventListener('click', async (event) => {
+    if (video !== document.pictureInPictureElement)
+        await video.requestPictureInPicture()
+    else
+        await document.exitPictureInPicture()
+})
+
+video.addEventListener('enterpictureinpicture', (event) => {
+    pipWindow = event.pictureInPictureWindow
+    console.log(`Window size is ${pipWindow.width} x ${pipWindow.height}`)
+    pipWindow.addEventListener('resize', onPipWindowResize)
+})
+
+video.addEventListener('leavepictureinpicture', (event) => {
+    pipWindow = event.pictureInPictureWindow
+    pipWindow.removeEventListener('resize', onPipWindowResize)
+})
+
+// check the window size and change the resolution of video
+function onPipWindowResize(event) {
+    pipWindow = event.pictureInPictureWindow
+    console.log(`Window size changed to ${pipWindow.width} x ${pipWindow.height}`)
+}
+
+if ('pictureInPictureEnabled' in document) {
+    // Set button ability depending on whether Picture-in-Picture can be used.
+    setPipButton()
+    video.addEventListener('loadedmetadata', setPipButton)
+    video.addEventListener('emptied', setPipButton)
+} else {
+    // Hide if the feature is not support
+    togglePipButton.hidden = true
+}
+
+function setPipButton() {
+    togglePipButton.disabled = !document.pictureInPictureEnabled ||
+    video.disablePictureInPicture ||
+    (video.readyState === 0)
+}
+
+video.srcObject = await navigator.mediaDevices.getUserMedia({ video: true })
+
+await video.requestPictureInPicture()
+
+const screenVideoStream = await navigator.mediaDevices.getDisplayMedia({ video: true })
+const voiceAudioStream = await navigator.mediaDevices.getUserMedia({ audio: true })
+
+const stream = new MediaStream([
+    ...screenVideoStream.getTracks(),
+    ...voiceAudioStream.getTracks(),
+])
+```
+
+[cds-pip.glitch.me](https://cds-pip.glitch.me)
+
+Window Media Controls
+
+- seekbackward
+- seekforward
+- previoustrack
+- nexttrack
+
+## AV1
+
+- Video codec for the web
+  - better than VP9
+- Open source & royalty-free
+  - Alliance For Open Media 
+- Deploy widely & openly
+
+```js
+if (MediaSource.isTypeSupported('video/mp4; codecs=av01.0.05M.08')) {
+    // play AV1 video
+}
+```
+
+- [bit.ly/av1decoder](bit.ly/av1decoder)
+- [bit.ly/changetype](bit.ly/changetype)
+
+## Media Capabilities
+
+- Smooth Playback
+- Power Efficient
+
+[cds-media-capabilities](https://bit.ly/cds-media-capabilities)
+
+
+
+----
+
+# Modern Websites for E-commerce in the Real World
+
+@cheneytsai @ramyaaraghavan
+
+Toolbox for Modern E-commerce
+
+- PWA
+- Web Authentication
+- Autofill (credit)
+- AMP and Lighthouse
+- Sign in with Google
+- Google Pay
+
+How is the Solution Improving the User's Journey?
+
+Saatva
+
+AMP -> PDP -> Cart
+AMP -> Cart (Inside AMP)
+
+- 50% Conversions Uplift
+- 3X First step of checkout
+
+Expedia: Users Value **Consistent** Journeys
+
+Actually Reduce Friction
+
+Challenges:
+
+- Organizational Alignment
+  - Cross-functional Buy-in is Key to the Success of Performance Initiatives
+  - Performance is Not Just an Engineering Priority
+- Technical Approach
+  - Balance Long-term Visions With Achievable Short-term Goals
+  - Have a Long-term Vision, Plan for Short-term Goals, Align Goals Against the Long-term Vision
+- Measurement
+  - Create a Measurement Strategy that is Shared, Automated, and Actionable
+
+https://developers.google.com/web/progressive-web-apps/checklist
+
+- Define a Vision then Iterate, And Don't be Afraid to Explore New Paths (Walmart)
+- Predictive Prefetching of Listing Pages (eBay)
+  - Prefetch first 5 items of Search Results for a likely future navigation (postMessage to Service Worker)
+- Moving to Client-Side Routing (7-8x speed improvement, 88% search result loads are client side rendered) (AirBnB)
+
+Measurement Strategy
+
+- Shared Metrics
+- Automated Tools
+- Actionable Next Steps
+
+Common Goals Tied to Specific Metrics e.g. More pageviews -> SpeedIndex < 3s, Seamless checkout -> Time to checkout < 30s
+
+Performance budget
+
+Bundle Size check in CI process
+
+Performance budget indicators: Socialize the budget first, so everyone can see the changes. (wayfair)
+
+
+----
+
+# Progressive Content Management Systems
+
+@iAlbMedina @WestonRuter
+
+https://www.youtube.com/watch?v=s1WrBaAyzAI&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF&index=10
+
+Pillars of a delightful UX:
+
+- Performance and Reliability
+- Trust and Safety
+- Accessibility and Integration
+- Great Content Quality
+
+## Progressive Web Development
+
+Developing user-first experiences using:
+
+- Modern Workflows and Web APIs
+- Coding and Performance Best Practices
+- Effective Incentives and Validation Structures
+
+The CMS Space, small subset
+
+## CMS Ecosystem Challenges
+
+On advancing along the progressive road:
+
+- High Complexity
+- Architectural Choices
+- High levels of Fragmentation
+- Lack of effective incentives
+
+## CMS Ecosystem
+
+- Core
+- Extensions (Plugin, Themes, etc.)
+- Developers
+- Users
+
+Work with Wordpress..
+
+- AMP: a well-lit path to modern web development
+- PWA in WordPress (PoC): Progressive WordPress, the WordPress Way
+  - Service Workers
+  - Offline Capabilities
+  - Background Sync
+  - Smooth Transitions
+
+## PWA in WordPress
+
+POC Challenges to Success
+
+- No Unified Access to SW API (e.g. single SW)
+- High Complexity (e.g. working with SW is hard)
+- Lack of Constraints (e.g. no sandboxing)
+
+Service Worker API Core Integration
+
+- Service Worker API
+- Abstraction Library (Workbox)
+- WordPress Core (Actions and Filters)
+- PHP Developers
+
+App Shell Model: A way to build a Progressive Web App that reliably and instantly loads, similar to what you see in native applications.
+
+It is hard because the plugins and themes will affect the content so it uses the way that AMP plugin applies.
+
+https://www.youtube.com/watch?v=s1WrBaAyzAI&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF&index=10
+
+https://youtu.be/s1WrBaAyzAI?t=1009
