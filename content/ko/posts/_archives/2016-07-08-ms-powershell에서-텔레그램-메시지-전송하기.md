@@ -54,7 +54,7 @@ Microsoft PowerShell은 Windows XP 이후로 꾸준히 탑재된 명령행 쉘�
 앞에서 생성한 토큰을 사용해서 텔레그램 봇에 정상적으로 접근할 수 있는지 확인하려 한다. 파워쉘은 `ps1`이라는 확장자를 사용한다. `status.ps1`라는 파일을 다음 내용으로 작성한 후에 저장한다.
 
 ```powershell
-$response = Invoke-WebRequest -Uri "https://api.telegram.org/bot&lt;API 토큰&gt;/getMe"
+$response = Invoke-WebRequest -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 echo $response.RawContent
 pause
 ```
@@ -92,7 +92,7 @@ pause
 응답 헤더와 json 형식의 응답 내용을 확인할 수 있다. `pause`로 인해 창이 닫히지 않고 엔터를 입력하면 그제서야 닫힌다.
 
 ```powershell
-$info = Invoke-RestMethod -Uri "https://api.telegram.org/bot&lt;API 토큰&gt;/getMe"
+$info = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 echo $info.ok
 ```
 
@@ -103,7 +103,7 @@ echo $info.ok
 앞 응답 내용에서 first_name, username처럼 `result` 내에 있는 데이터는 어떻게 확인할 수 있을까? 다음과 같은 코드를 추가하면 쉽게 확인할 수 있다.
 
 ```powershell
-$info = Invoke-RestMethod -Uri "https://api.telegram.org/bot&lt;API 토큰&gt;/getMe"
+$info = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 
 if ($info.ok) {
     echo $info.result | Format-List
@@ -122,7 +122,7 @@ if ($info.ok) {
 지금까지 텔레그램에 등록한 봇을 API로 접근할 수 있다는 점을 확인했다. 이제 텔레그램에 메시지를 전송하기 전에 사용자의 chatId를 알아내야 한다. 이 chatId를 알아내려면 어떻게 해야 할까? 봇이 받은 메시지를 확인하면 그 메시지를 보낸 사용자의 chatId를 찾을 수 있다. 받은 메시지는 [getUpdates 메서드][8]를 사용해서 확인 가능하다. 다음 코드를 추가해보자.
 
 ```powershell
-$updates = Invoke-RestMethod -Uri "https://api.telegram.org/bot&lt;API 토큰&gt;/getUpdates"
+$updates = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getUpdates"
 
 if ($updates.ok) {
     $updates.result | Select-Object -expandProperty message | Select-Object -expandProperty from text | Format-Table
@@ -167,8 +167,8 @@ Bot API를 호출할 때 사용하는 토큰과 chatId는 별도의 설정 파�
 
 ```json
 {
-    "token": "&lt;API 토큰&gt;",
-    "chatId": "&lt;메시지를 받을 chat_id&gt;" 
+    "token": "<API 토큰>",
+    "chatId": "<메시지를 받을 chat_id>" 
 }
 ```
 

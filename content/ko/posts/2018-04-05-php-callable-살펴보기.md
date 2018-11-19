@@ -97,12 +97,12 @@ class Person
 
     public function __construct(string $name)
     {
-        $this-&gt;name = $name;
+        $this->name = $name;
     }
 
     public function getName(): string
     {
-        return $this-&gt;name;
+        return $this->name;
     }
 }
 
@@ -151,12 +151,12 @@ class PersonSay
 
     public function __construct(string $name)
     {
-        $this-&gt;name = $name;
+        $this->name = $name;
     }
 
     public function __invoke()
     {
-        echo "Hello, {$this-&gt;name} said.";
+        echo "Hello, {$this->name} said.";
     }
 }
 
@@ -199,7 +199,7 @@ interface NamedInterface
 }
 
 function sayHello(NamedInterface $named): void {
-    echo "Hello! {$named-&gt;getName()} said.";
+    echo "Hello! {$named->getName()} said.";
 }
 
 sayHello(new class implements NamedInterface {

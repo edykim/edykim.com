@@ -35,7 +35,7 @@ type Shape = Squre of side
 그리고 크기를 구하는 area 함수를 다음처럼 하나 작성할 수 있다:
 
 ```haskell
-define area = fun x -&gt; case x of
+define area = fun x -> case x of
   Squre of side => (side * side)
 | Circle of radius => (3.14 * radius * radius)
 ```
