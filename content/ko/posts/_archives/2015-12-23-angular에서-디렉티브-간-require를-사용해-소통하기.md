@@ -30,17 +30,17 @@ Todd Motto의 글 [Directive to Directive communication with &#8220;require&#822
 HTML을 먼저 정의한다:
 
 ```html
-&lt;tabs&gt;
-  &lt;tab label="Tab 1"&gt;
+<tabs>
+  <tab label="Tab 1">
     Tab 1 contents!
-   &lt;/tab&gt;
-   &lt;tab label="Tab 2"&gt;
+   </tab>
+   <tab label="Tab 2">
     Tab 2 contents!
-   &lt;/tab&gt;
-   &lt;tab label="Tab 3"&gt;
+   </tab>
+   <tab label="Tab 3">
     Tab 3 contents!
-   &lt;/tab&gt;
-&lt;/tabs&gt;
+   </tab>
+</tabs>
 ```
 
 이 시점에서 `tabs`와 `tab` 두 디렉티브를 만들 것을 예상할 수 있다. `tabs`를 먼저 만들면:
@@ -56,10 +56,10 @@ function tabs() {
     },
     controllerAs: 'tabs',
     template: `
-      &lt;div class="tabs"&gt;
-        &lt;ul class="tabs__list"&gt;&lt;/ul&gt;
-        &lt;div class="tabs__content" ng-transclude&gt;&lt;/div&gt;
-      &lt;/div&gt;
+      <div class="tabs">
+        <ul class="tabs__list"></ul>
+        <div class="tabs__content" ng-transclude></div>
+      </div>
     `
   };
 }
@@ -104,9 +104,9 @@ function tab() {
     require: '^tabs',
     transclude: true,
     template: `
-      &lt;div class="tabs__content" ng-if="tab.selected"&gt;
-        &lt;div ng-transclude&gt;&lt;/div&gt;
-      &lt;/div&gt;
+      <div class="tabs__content" ng-if="tab.selected">
+        <div ng-transclude></div>
+      </div>
     `,
     link: function ($scope, $element, $attrs) {
 
@@ -175,7 +175,7 @@ function tabs() {
         this.tabs.push(tab);
       };
       this.selectTab = function selectTab(index) {
-        for (var i = 0; i &lt; this.tabs.length; i++) {
+        for (var i = 0; i < this.tabs.length; i++) {
           this.tabs[i].selected = false;
         }
         this.tabs[index].selected = true;
@@ -183,14 +183,14 @@ function tabs() {
     },
     controllerAs: 'tabs',
     template: `
-      &lt;div class="tabs"&gt;
-        &lt;ul class="tabs__list"&gt;
-          &lt;li ng-repeat="tab in tabs.tabs"&gt;
-            &lt;a href="" ng-bind="tab.label" ng-click="tabs.selectTab($index);"&gt;&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;div class="tabs__content" ng-transclude&gt;&lt;/div&gt;
-      &lt;/div&gt;
+      <div class="tabs">
+        <ul class="tabs__list">
+          <li ng-repeat="tab in tabs.tabs">
+            <a href="" ng-bind="tab.label" ng-click="tabs.selectTab($index);"></a>
+          </li>
+        </ul>
+        <div class="tabs__content" ng-transclude></div>
+      </div>
     `
   };
 }
@@ -215,11 +215,11 @@ function tabs() {
 하지만 다음처럼 어트리뷰트로 초기 탭을 지정할 수 있다면, 개발자에게 더 많은 선택권을 제공할 수 있다:
 
 ```html
-&lt;tabs active="2"&gt;
-  &lt;tab&gt;...&lt;/tab&gt;
-  &lt;tab&gt;...&lt;/tab&gt;
-  &lt;tab&gt;...&lt;/tab&gt;
-&lt;/tabs&gt;
+<tabs active="2">
+  <tab>...</tab>
+  <tab>...</tab>
+  <tab>...</tab>
+</tabs>
 ```
 
 이 코드는 배열 인덱스를 동적으로 `2`로 지정하며 배열에서 `3`번째 엘리먼트를 보여주게 된다. `link` 함수에서는 어트리뷰트의 존재를 `$attrs`가 포함하고 있는데 이 인덱스를 바로 지정하거나 `$attrs.active`가 존재하지 않거나 잘못된 값일 경우 (`false`는 ``으로 평가되니 어쨌든 ``이므로 안전하겠지만) 초기 인덱스를 다음처럼 폴백(fallback)으로 지정할 수 있다.

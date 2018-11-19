@@ -68,13 +68,13 @@ $ composer require 'react/react=*'
 `server.php` 파일을 다음처럼 생성한다.
 
 ```php
-&lt;?php
+<?php
 require_once(__DIR__. '/vendor/autoload.php');
 
 $i = 0;
 $app = function ($request, $response) use ($i) {
-    $response-&gt;writeHead(200, array('Content-Type' => 'text/plain'));
-    $response-&gt;end("Hello World $i\n");
+    $response->writeHead(200, array('Content-Type' => 'text/plain'));
+    $response->end("Hello World $i\n");
     $i++;
 };
 
@@ -83,11 +83,11 @@ $loop = React\EventLoop\Factory::create();
 $socket = new React\Socket\Server($loop);
 $http = new React\Http\Server($socket, $loop);
 
-$http-&gt;on('request', $app);
+$http->on('request', $app);
 echo "Server running at http://127.0.0.1:1337\n";
 
-$socket-&gt;listen(1337);
-$loop-&gt;run();
+$socket->listen(1337);
+$loop->run();
 ```
 
 이제 PHP 서버를 `php server.php`로 실행한다. 이제 `http://127.0.0.1:1337`로 접속하면 &#8220;Hello World&#8221; 문구를 볼 수 있을 것이다. `$app`은 &#8220;main&#8221; 함수로 서버에 들어오는 각 요청을 받는 엔트리 포인트 역할을 한다.

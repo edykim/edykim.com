@@ -36,7 +36,7 @@ PHP 애플리케이션에서 전형적인 `User`와 `Group` 객체가 있다고 
 
 ```php
 $user = find(42); // id가 42인 사용자를 찾는다
-echo $user-&gt;groups[3]-&gt;users[2]-&gt;groups[4]-&gt;name;
+echo $user->groups[3]->users[2]->groups[4]->name;
 ```
 
 객체 그래프를 무한으로 탐색할 수 있는 경우는 좋은 관례가 아니다. 하지만 종종 다대다 관계에서는 이런 탐색이 필요한 경우가 있으며 단순한 API인데도 자원을 과도하게 사용하게 되는 접근법 중 하나다. 왜 자원을 과도하게 사용하는지 뒤에서 설명한다.
@@ -68,12 +68,12 @@ class Group_SomeOrmToolNameProxy
 
     private function _load()
     {
-        $this-&gt;loader-&gt;load($this, $id);
+        $this->loader->load($this, $id);
     }
 
     public function sendMessageToAllUsers($text)
     {
-        $this-&gt;_load();
+        $this->_load();
         parent::sendMessageToAllUsers($text);
     }
 }
@@ -88,8 +88,8 @@ class Group_SomeOrmToolNameProxy
 첫 단계의 객체는 완전히 불러오지만 두 번째 단계는 해당 객체를 불러올 수 있는 정보만 포함하는 플레이스홀더만 존재한다. 실제로 접근했을 때만 해당 필드를 데이터베이스에서 가져와 처리하게 된다.
 
 ```php
-$user = $em-&gt;find(42); // user 테이블에서 호출함
-echo $user-&gt;groups[3]-&gt;name; // groups와 user_groups 테이블에서 호출함
+$user = $em->find(42); // user 테이블에서 호출함
+echo $user->groups[3]->name; // groups와 user_groups 테이블에서 호출함
 ```
 
 이 패턴을 원하는 만큼 더 복잡한 환경에서도 적용할 수 있다.

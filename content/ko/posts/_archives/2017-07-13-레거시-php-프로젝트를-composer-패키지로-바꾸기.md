@@ -86,7 +86,7 @@ autoload 규칙을 갱신한다.
 `test` 폴더에 `HelloWorldTest.php`를 생성하고 예제를 위한 테스트를 작성한다.
 
 ```php
-&lt;?php
+<?php
 namespace MyProject\Test;
 
 use PHPUnit\Framework\TestCase;
@@ -99,9 +99,9 @@ class HelloWorldTest extends TestCase
         $expected = 'Hello world';
 
         $world = new HelloWorld;
-        $actual = $world-&gt;saySomething();
+        $actual = $world->saySomething();
 
-        $this-&gt;assertEquals($expected, $actual);
+        $this->assertEquals($expected, $actual);
     }
 }
 ```
@@ -128,7 +128,7 @@ class HelloWorldTest extends TestCase
 에러 메시지에 따라서 `MyProject\HelloWorld` 클래스를 만들어야 한다. `src`에 `HelloWorld.php`를 추가한다.
 
 ```php
-&lt;?php
+<?php
 namespace MyProject;
 
 class HelloWorld
@@ -149,7 +149,7 @@ class HelloWorld
 이번에는 정의되지 않은 `saySomething()` 메소드를 호출했다. 메소드를 작성한다.
 
 ```php
-&lt;?php
+<?php
 namespace MyProject;
 
 class HelloWorld
@@ -171,7 +171,7 @@ class HelloWorld
 이제 오류는 없어진 대신 실패가 발생했다. 이제 반환값을 지정한다.
 
 ```php
-&lt;?php
+<?php
 namespace MyProject;
 
 class HelloWorld

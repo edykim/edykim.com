@@ -42,7 +42,7 @@ tags:
 현재 구동하고 있는 파워쉘의 버전은 `$PSVersionTable`에서 확인할 수 있다.
 
 ```powershell
-PS&gt; $PSVersionTable.PSVersion
+PS> $PSVersionTable.PSVersion
 
 Major  Minor  Build  Revision
 -----  -----  -----  --------

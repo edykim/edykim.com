@@ -259,9 +259,9 @@ d1dcaee5ec4a: Download complete
 ```bash
 $ docker ps
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                            NAMES
-bacdc4de6660        dockerhello_web             "docker-php-entrypoi…"   6 minutes ago       Up 5 minutes        0.0.0.0:80-&gt;80/tcp               dockerhello_web_1
-408909957ec4        phpmyadmin/phpmyadmin:4.7   "/run.sh phpmyadmin"     6 minutes ago       Up 5 minutes        9000/tcp, 0.0.0.0:8000-&gt;80/tcp   dockerhello_phpmyadmin_1
-4949e0a2d10f        mariadb:5.5                 "docker-entrypoint.s…"   6 minutes ago       Up 5 minutes        0.0.0.0:3306-&gt;3306/tcp           dockerhello_db_1
+bacdc4de6660        dockerhello_web             "docker-php-entrypoi…"   6 minutes ago       Up 5 minutes        0.0.0.0:80->80/tcp               dockerhello_web_1
+408909957ec4        phpmyadmin/phpmyadmin:4.7   "/run.sh phpmyadmin"     6 minutes ago       Up 5 minutes        9000/tcp, 0.0.0.0:8000->80/tcp   dockerhello_phpmyadmin_1
+4949e0a2d10f        mariadb:5.5                 "docker-entrypoint.s…"   6 minutes ago       Up 5 minutes        0.0.0.0:3306->3306/tcp           dockerhello_db_1
 ```
 
 그 외에도 다양한 docker 명령어를 직접 사용해서 컨테이너를 제어할 수 있다. 다음 명령으로 컨테이너에 쉘을 실행하고 접속할 수 있다.

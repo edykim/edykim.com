@@ -55,7 +55,7 @@ import { Http } from '@angular/http';
 
 @Component({
   selector: 'example-component',
-  template: '&lt;div&gt;I am a component&lt;/div&gt;'
+  template: '<div>I am a component</div>'
 })
 class ExampleComponent {
   constructor(private http: Http) {
@@ -85,7 +85,7 @@ var ExampleComponent = (function () {
 ExampleComponent = __decorate([
   Component({
     selector: 'example-component',
-    template: '&lt;div&gt;I am a component&lt;/div&gt;'
+    template: '<div>I am a component</div>'
   }),
   __metadata('design:paramtypes', [Http])
 ], ExampleComponent);
@@ -119,7 +119,7 @@ import { Http } from '@angular/http';
 
 @Component({
   selector: 'example-component',
-  template: '&lt;div&gt;I am a component&lt;/div&gt;'
+  template: '<div>I am a component</div>'
 })
 class ExampleComponent {
   constructor(@Inject(Http) private http) {
@@ -189,7 +189,7 @@ import { Http } from '@angular/http';
 
 export class UserService {
   constructor(private http: Http) {}
-  isAuthenticated(): Observable&lt;boolean&gt; {
+  isAuthenticated(): Observable<boolean> {
     return this.http.get('/api/user').map((res) => res.json());
   }
 }
@@ -206,7 +206,7 @@ import { Http } from '@angular/http';
 @Injectable()
 export class UserService {
   constructor(private http: Http) {}
-  isAuthenticated(): Observable&lt;boolean&gt; {
+  isAuthenticated(): Observable<boolean> {
     return this.http.get('/api/user').map((res) => res.json());
   }
 }
@@ -270,12 +270,12 @@ export class AuthService {
 
   constructor(private http: Http) {}
 
-  authenticateUser(username: string, password: string): Observable&lt;boolean&gt; {
+  authenticateUser(username: string, password: string): Observable<boolean> {
     // returns true or false
     return this.http.post('/api/auth', { username, password });
   }
 
-  getUsername(): Observable&lt;string&gt; {
+  getUsername(): Observable<string> {
     return this.http.post('/api/user');
   }
 
@@ -291,9 +291,9 @@ import { AuthService } from './auth.service';
 @Component({
   selector: 'auth-login',
   template: `
-    &lt;button (click)="login()"&gt;
+    <button (click)="login()">
       Login
-    &lt;/button&gt;
+    </button>
   `
 })
 export class LoginComponent {
@@ -317,9 +317,9 @@ export class LoginComponent {
 @Component({
   selector: 'user-info',
   template: `
-    &lt;div&gt;
+    <div>
       You are {% raw %}{{ username }}{% endraw %}!
-    &lt;/div&gt;
+    </div>
   `
 })
 class UserInfoComponent implements OnInit {
@@ -465,7 +465,7 @@ import { ErrorHandler } from '@angular/core/src/error_handler';
 import { AppModule } from './app.module';
 import { AppComponentNgFactory } from './app.component.ngfactory';
 
-class AppModuleInjector extends NgModuleInjector&lt;AppModule&gt; {
+class AppModuleInjector extends NgModuleInjector<AppModule> {
   _CommonModule_0: CommonModule;
   _ApplicationModule_1: ApplicationModule;
   _BrowserModule_2: BrowserModule;
@@ -577,7 +577,7 @@ import * as import6 from '@angular/http/src/http_module';
 
 ```js
 // ...
-class AppModuleInjector extends NgModuleInjector&lt;AppModule&gt; {
+class AppModuleInjector extends NgModuleInjector<AppModule> {
   _CommonModule_0: CommonModule;
   _ApplicationModule_1: ApplicationModule;
   _BrowserModule_2: BrowserModule;
@@ -626,7 +626,7 @@ import * as import5 from '@angular/common/src/common_module';
 다음은 `BrowserModule`과 `HttpModule`을 사용하는 경우다. 모듈을 사용하면 다음같은 코드가 생성된다.
 
 ```js
-class AppModuleInjector extends NgModuleInjector&lt;AppModule&gt; {
+class AppModuleInjector extends NgModuleInjector<AppModule> {
   _CommonModule_0: CommonModule;
   _ApplicationModule_1: ApplicationModule;
   _BrowserModule_2: BrowserModule;
@@ -656,7 +656,7 @@ Angular가 의존성을 확인할 때(예를 들면 `constructor`를 통해 주�
 `constructor`에 타입 정의를 사용하면 Angular는 이 타입(여기서는 클래스)을 토큰으로 사용해 의존성을 찾는다. 그런 후에 이 토큰은 `getInternal`로 전달되는데 의존성이 존재한다면 해당 의존성의 인스턴스를 반환하게 된다. 소스 코드를 확인하자.
 
 ```js
-class AppModuleInjector extends NgModuleInjector&lt;AppModule&gt; {
+class AppModuleInjector extends NgModuleInjector<AppModule> {
 
   // new BrowserModule(this.parent.get(BrowserModule, (null as any)));
   _BrowserModule_2: BrowserModule;

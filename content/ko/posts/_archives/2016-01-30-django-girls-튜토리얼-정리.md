@@ -185,7 +185,7 @@ WSGI 프로토콜도 사용할 수 있는데 Web > Code 섹션을 보면 WSGI �
 import os
 import sys
 
-path = '/home/&lt;your-username&gt;/my-first-blog'
+path = '/home/<your-username>/my-first-blog'
 if path not in sys.path:
     sys.path.append(path)
 
@@ -306,16 +306,16 @@ def post_list(request):
 `blog/templates/blog/post_list.html`을 수정한다.
 
 ```html
-&lt;div&gt;
-    &lt;h1&gt;&lt;a href="/"&gt;Django Girls Blog&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
 {% for post in posts %}
-    &lt;div&gt;
-        &lt;p&gt;published: {{ post.published_date }}&lt;/p&gt;
-        &lt;h1&gt;&lt;a href=""&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
-        &lt;p&gt;{{ post.text|linebreaks }}&lt;/p&gt;
-    &lt;/div&gt;
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
 {% endfor %}
 ```
 
@@ -333,27 +333,27 @@ h1 a {
 
 ```html
 {% load staticfiles %}
-&lt;!doctype html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Django Girls Blog&lt;/title&gt;
-    &lt;link rel="stylesheet" href="{% static 'css/blog.css' %}"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Django Girls Blog&lt;/a&gt;&lt;/h1&gt;
-  &lt;/div&gt;
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Django Girls Blog</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+  <div>
+      <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
 
   {% for post in posts %}
-      &lt;div&gt;
-          &lt;p&gt;published: {{ post.published_date }}&lt;/p&gt;
-          &lt;h1&gt;&lt;a href=""&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
-          &lt;p&gt;{{ post.text|linebreaks }}&lt;/p&gt;
-      &lt;/div&gt;
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaks }}</p>
+      </div>
   {% endfor %}
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
 ```
 
 ### 템플릿 확장하기
@@ -362,29 +362,29 @@ h1 a {
 
 ```html
 {% load staticfiles %}
-&lt;!doctype html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Django Girls Blog&lt;/title&gt;
-    &lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
-    &lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"&gt;
-    &lt;link rel="stylesheet" href="{% static 'css/blog.css' %}"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="page-header"&gt;
-        &lt;h1&gt;&lt;a href="/"&gt;Django Girls Blog&lt;/a&gt;&lt;/h1&gt;
-    &lt;/div&gt;
-    &lt;div class="content container"&gt;
-        &lt;div class="row"&gt;
-            &lt;div class="col-md-8"&gt;
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Django Girls Blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
             {% block content %}
             {% endblock %}
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 
 이제 `post_list.html`에서는 위 base 파일을 불러오고 `content` 블럭 안에 내용을 넣을 수 있다.
@@ -394,13 +394,13 @@ h1 a {
 
 {% block content %}
     {% for post in posts %}
-        &lt;div class="post"&gt;
-            &lt;div class="date"&gt;
+        <div class="post">
+            <div class="date">
                 {{ post.published_date }}
-            &lt;/div&gt;
-            &lt;h1&gt;&lt;a href=""&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
-            &lt;p&gt;{{ post.text|linebreaks }}&lt;/p&gt;
-        &lt;/div&gt;
+            </div>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
     {% endfor %}
 {% endblock content %}
 ```
@@ -410,7 +410,7 @@ h1 a {
 이제 블로그 포스트를 볼 수 있는 페이지를 만든다. `blog/templates/blog/post_list.html`의 링크를 수정한다.
 
 ```html
-&lt;h1&gt;&lt;a href="{% url 'post_detail' pk=post.pk %}"&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
+<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 ```
 
 `blog/urls.py`에 post_detail을 추가한다. 뒤에 입력하는 내용을 모두 pk 변수에 저장한다는 의미다. pk는 `primary key`를 뜻한다.
@@ -421,7 +421,7 @@ from . import views
 
 urlpatterns = [
   url(r'^$', views.post_list, name='post_list'),
-  url(r'^post/(?P&lt;pk&gt;[0-9]+)/$', views.post_detail, name='post_detail'),
+  url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
 ]
 ```
 
@@ -443,15 +443,15 @@ def post_detail(request, pk):
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    &lt;div class="post"&gt;
+    <div class="post">
         {% if post.published_date %}
-            &lt;div class="date"&gt;
+            <div class="date">
                 {{ post.published_date }}
-            &lt;/div&gt;
+            </div>
         {% endif %}
-        &lt;h1&gt;{{ post.title }}&lt;/h1&gt;
-        &lt;p&gt;{{ post.text|linebreaks }}&lt;/p&gt;
-    &lt;/div&gt;
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
 {% endblock %}
 ```
 
@@ -474,7 +474,7 @@ class PostForm(forms.ModelForm):
 `blog/templates/blog/base.html`에 이 폼에 접근하기 위한 링크를 추가한다.
 
 ```html
-&lt;a href="{% url 'post_new' %}" class="top-menu"&gt;&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt;&lt;/a&gt;
+<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 ```
 
 `blog/urls.py`에 규칙을 추가한다.
@@ -512,11 +512,11 @@ def post_new(request):
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    &lt;h1&gt;New post&lt;/h1&gt;
-    &lt;form method="POST" class="post-form"&gt;{% csrf_token %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        &lt;button type="submit" class="save btn btn-default"&gt;Save&lt;/button&gt;
-    &lt;/form&gt;
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
 {% endblock %}
 ```
 
@@ -525,13 +525,13 @@ def post_new(request):
 `blog/templates/blog/post_detail.html`에 다음 링크를 추가한다.
 
 ```html
-&lt;a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"&gt;&lt;span class="glyphicon glyphicon-pencil"&gt;&lt;/span&gt;&lt;/a&gt;
+<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 ```
 
 `blog/urls.py`에 다음 코드를 추가한다.
 
 ```python
-    url(r'^post/(?P&lt;pk&gt;[0-9]+)/edit/$', views.post_edit, name='post_edit'),
+    url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
 ```
 
 `blog/views.py`에 post_edit 뷰를 추가한다.
@@ -560,7 +560,7 @@ def post_edit(request, pk):
 
 ```html
 {% if user.is_authenticated %}
-    &lt;a href="{% url 'post_new' %}" class="top-menu"&gt;&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt;&lt;/a&gt;
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 {% endif %}
 ```
 

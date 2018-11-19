@@ -37,7 +37,7 @@ Koa는 ES2015의 문법 중 하나인 제너레이터를 적극적으로 활용�
 
 ```js
 function* nTimesTable(n) {
-  for(var i = 1; i &lt;= 9; i++) yield n * i;
+  for(var i = 1; i <= 9; i++) yield n * i;
 }
 ```
 
@@ -91,7 +91,7 @@ console.log(result); // 27
 
 ```js
 function * nTimesTable(n) {
-  for(var i = 1; i &lt;= 9; i++) yield { n: n, i: i, result: n * i };
+  for(var i = 1; i <= 9; i++) yield { n: n, i: i, result: n * i };
 }
 
 function caller(iter, func) {

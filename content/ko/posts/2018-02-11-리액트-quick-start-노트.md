@@ -44,7 +44,7 @@ $ yarn start
 리액트 엘리먼트는 `ReactDOM.render()`로 렌더링한다. root DOM 노드를 지정하면 그 내부의 모든 노드를 리액트가 관리한다.
 
 ```js
-const element = &lt;h1&gt;Hello, world&lt;/h1&gt;;
+const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 ```
 
@@ -52,20 +52,20 @@ ReactDOM.render(element, document.getElementById('root'));
 function formatName(user) { /* ... * /}
 
 const element = (
-  &lt;h1&gt;
+  <h1>
     Hello, {formatName(user)}!
-  &lt;/h1&gt;
+  </h1>
 );
 
 // 함수형 컴포넌트
 function HelloBlock() {
-  return &lt;div&gt;Hello&lt;/div&gt;;
+  return <div>Hello</div>;
 }
 
 // 클래스 컴포넌트
 class GoodbyeBlock extends React.Component {
   render() {
-    return &lt;div&gt;Good bye&lt;/div&gt;;
+    return <div>Good bye</div>;
   }
 }
 ```
@@ -77,17 +77,17 @@ class GoodbyeBlock extends React.Component {
 컴포넌트는 자바스크립트 함수와 같아서 인자 입력(props)을 받고 리액트 엘리먼트를 반환한다.
 
 ```jsx
-const Greeting = (props) => &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+const Greeting = (props) => <h1>Hello, {props.name}!</h1>;
 
 function Greeting(props) {
   return (
-    &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;
+    <h1>Hello, {props.name}!</h1>
   );
 }
 
 class Greeting extends React.Component {
   render () {
-    return &lt;h1&gt;Hello, {this.props.name}!&lt;/h1&gt;
+    return <h1>Hello, {this.props.name}!</h1>
   }
 }
 ```
@@ -95,7 +95,7 @@ class Greeting extends React.Component {
 props는 엘리먼트의 어트리뷰트로 전달한다. expression은 `{}`로, 문자열은 `""`로 보낸다.
 
 ```jsx
-const element = &lt;Comment user={user} text="string value blarblar" /&gt;;
+const element = <Comment user={user} text="string value blarblar" />;
 ```
 
 모든 리액트 컴포넌트는 props를 변경하지 않는 순수 함수처럼 동작해야 한다. 이 규칙을 깨지 않고 출력값을 변경하기 위해 state라는 개념이 있다.
@@ -125,7 +125,7 @@ state는 컴포넌트에 속했기 때문에 외부에서는 어떻게 정의되
 ## 이벤트 제어
 
 ```jsx
-return &lt;a href="#" onClick={handleClick}&gt;Click Me&lt;/a&gt;;
+return <a href="#" onClick={handleClick}>Click Me</a>;
 ```
 
 (이제는 시멘틱웹 얘기 부질 없는 것입니까. 나 너무 오래된 사람인듯.)
@@ -162,7 +162,7 @@ class Button extends React.Component {
 // 2. arrow funtion as callback
 class Button extends React.Component {
   render () {
-    return &lt;button onClick={(e) => this.handleClick(e)}&gt;Click me&lt;/button&gt;;
+    return <button onClick={(e) => this.handleClick(e)}>Click me</button>;
   }
 }
 ```
@@ -178,26 +178,26 @@ class Button extends React.Component {
 ```jsx
 const faces = ['?', '?', '?', '?', '?', '?', '?', '?'];
 const listItems = faces.map((face, index) => (
-  &lt;li key={index}&gt;
+  <li key={index}>
     {face}
-  &lt;/li&gt;
+  </li>
 ));
 
 // 안정적인 id를 key로 사용하고 없으면 최후의 수단으로
 // 배열 자체의 인덱스를 사용한다. 여기는 예시니까 그냥
 // 인덱스를 사용했다.
 
-const FaceList = () => &lt;ul&gt;{listItems}&lt;/ul&gt;;
+const FaceList = () => <ul>{listItems}</ul>;
 
 // or inline format
 const FaceList = () => (
-  &lt;ul&gt;
+  <ul>
   {faces.map((face, index) => (
-    &lt;li key={index}&gt;
+    <li key={index}>
       {face}
-    &lt;/li&gt;
+    </li>
   ))}
-  &lt;/ul&gt;
+  </ul>
 )
 ```
 
@@ -227,7 +227,7 @@ handleChange(event) {
 }
 // ...
 render() {
-  return &lt;input name="address" type="text" value={this.state.value} onChange={this.handleChange} /&gt;
+  return <input name="address" type="text" value={this.state.value} onChange={this.handleChange} />
 }
 ```
 
@@ -248,9 +248,9 @@ class NameInput extends React.Component {
   }
   render() {
     return (
-      &lt;input type="text"
+      <input type="text"
         value={this.props.name}
-        onChange={this.handleChange.bind(this)} /&gt;
+        onChange={this.handleChange.bind(this)} />
     )
   }
 }
@@ -269,12 +269,12 @@ class WelcomeBoard extends React.Component {
 
   render() {
     return (
-      &lt;div&gt;
-        &lt;p&gt;Hello, {this.state.name}!&lt;/p&gt;
-        &lt;NameInput
+      <div>
+        <p>Hello, {this.state.name}!</p>
+        <NameInput
           name={this.state.name}
-          onNameChange={this.handleNameChange.bind(this)} /&gt;
-      &lt;/div&gt;
+          onNameChange={this.handleNameChange.bind(this)} />
+      </div>
     )
   }
 }
@@ -286,18 +286,18 @@ class WelcomeBoard extends React.Component {
 
 ```js
 function Box() {
-  return &lt;div&gt;{props.children}&lt;/div&gt;;
+  return <div>{props.children}</div>;
 }
 ```
 
 이제 다음과 같이 사용하면 알아서 내부 노드로 처리한다.
 
 ```xml
-&lt;Box&gt;
-  &lt;NameInput /&gt;
-  &lt;NameInput /&gt;
-  &lt;NameInput /&gt;
-&lt;/Box&gt;
+<Box>
+  <NameInput />
+  <NameInput />
+  <NameInput />
+</Box>
 ```
 
 Containment의 예시로 SplitPane를 작성했다.

@@ -20,12 +20,12 @@ tags:
 
 ```php
 function curry($fn) {
-    $arity = (new ReflectionFunction($fn))-&gt;getNumberOfParameters();
+    $arity = (new ReflectionFunction($fn))->getNumberOfParameters();
 
     return ($resolver = function (...$memory) use ($fn, $arity, &$resolver) {
         return function (...$args) use ($fn, $arity, $resolver, $memory) {
             $local = array_merge($memory, $args);
-            $next = count($local) &gt;= $arity ? $fn : $resolver;
+            $next = count($local) >= $arity ? $fn : $resolver;
             return $next(...$local);
         };
     })();
