@@ -1,8 +1,6 @@
 const path = require(`path`)
 const urlResolve = require(`url`).resolve
 
-const { createRedirect } = require(`gatsby-plugin-netlify`)
-
 const fs = require(`fs`)
 const pify = require(`pify`)
 const mkdirp = require(`mkdirp`)
@@ -19,7 +17,7 @@ const runQuery = (handler, query) =>
     return r.data
   })
 
-exports.onPostBuild = async ({ graphql }) => {
+exports.onPostBuild = async ({ graphql, actions }) => {
   const query = `
   {
     redirects: allMarkdownRemark {
@@ -42,6 +40,7 @@ exports.onPostBuild = async ({ graphql }) => {
 
   const filename = `redirect.json`
   const publicPath = `./public`
+  const { createRedirect } = actions
 
   const result = await runQuery(graphql, query)
 
