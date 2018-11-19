@@ -13,7 +13,7 @@ categories:
   - 개발 이야기
   - 번역
 tags:
-  - angular
+  - angularjs
   - js
   - dependency injection
   - di

@@ -12,7 +12,7 @@ slug: avoid-angularjs-markup-collision
 categories:
   - 개발 이야기
 tags:
-  - angularJS
+  - angularjs
   - front
 
 ---

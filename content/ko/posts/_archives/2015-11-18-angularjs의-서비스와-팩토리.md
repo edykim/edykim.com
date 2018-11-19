@@ -14,7 +14,7 @@ headline:
 categories:
   - 개발 이야기
 tags:
-  - angularJS
+  - angularjs
 
 ---
 AngularJS의 **서비스 Services**는 여러 코드에서 반복적으로 사용되는 코드를 분리할 때 사용하는 기능으로, 해당 서비스가 필요한 곳에 의존성을 주입해 활용할 수 있다. 서비스는 다음과 같은 특성이 있다.
