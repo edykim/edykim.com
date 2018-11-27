@@ -1,3 +1,9 @@
+---
+title: Serverless web app in Azure
+type: note
+date: 2018-11-27T13:17:00-08:00
+---
+
 # Serverless web app in Azure
 
 This is a note about Azure serverless web app. I followed [the tutorial on MSDN](https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database) and wrote some comments and breadcrumbs here.
@@ -7,6 +13,21 @@ This is a note about Azure serverless web app. I followed [the tutorial on MSDN]
 1. Cosmos DB: storing metadata of contents
 1. Logic Apps: for Computer Vision API
 1. Azure AD: auth
+
+## What I've Learned
+
+- Creating API with Azure Functions are super easy.
+- Blob Storage, Cosmos DB, Logic Apps are easy to integrate with functions.
+- Platform fetures are also powerful. Most of feature supports via the portal by one click.
+- Azure CLI is awesome, easily create new resources via command line. CAUTION: Some of parts are out of date.
+- Function CLI is working perfactly.
+
+## Follow Ups
+
+- I can setup the local testing environment for unit testing, but how to test all integrated parts?
+- How much cost for all this simple services?
+- Check other authentications e.g. twitter, google.
+- Is it slow generally? Sometimes it spent few seconds for the loading.
 
 ----
 
@@ -174,6 +195,12 @@ $ az functionapp config appsettings set -n <function app name> \
     -g first-serverless-app \
     --settings AZURE_STORAGE_CONNECTION_STRING=$STORAGE_CONNECTION_STRING \
     --output table
+```
+
+Open the logstream via func cli.
+
+```bash
+$ func azure functionapp logstream <function app name>
 ```
 
 Endpoint of the API is now available.
@@ -358,6 +385,8 @@ $ az storage blob delete-batch -s thumbnails --account-name <storage account nam
 
 ## Store image metadata with Azure Cosmos DB
 
+Note: Azure CLI is unreliable on Cosmos DB right now so you should do all process via the portal rather than these commands.
+
 Create DB account first.
 
 ```bash
@@ -373,4 +402,161 @@ Create a new database named **imagesdb** and a new collection named **images**.
 $ az cosmosdb database create -g first-serverless-app \
     -n <cosmos db account name> \
     --db-name imagesdb
+$ az cosmosdb collection create -g first-serverless-app \
+    -n <cosmos db account name> \
+    --db-name imagesdb \
+    --collection-name images \
+    --throughput 400
+```
+
+Get connection string from cosmos db and add into function app.
+
+```bash
+$ export COSMOSDB_ACCOUNT_ENDPOINT=$(az cosmosdb show \
+    --name <cosmos db account name> \
+    --resource-group first-serverless-app \
+    --query documentEndpoint \
+    --output tsv)
+$ export COSMOSDB_PRIMARY_KEY=$(az cosmosdb list-keys \
+    --name <cosmos db account name> \
+    --resource-group first-serverless-app \
+    --query primaryMasterKey \
+    --output tsv)
+$ export COSMOSDB_CONNECTION_STRING="AccountEndpoint=$COSMOSDB_ACCOUNT_ENDPOINT;AccountKey=$COSMOSDB_PRIMARY_KEY;"
+$ az functionapp config appsettings set --name <function app name> \
+    --resource-group first-serverless-app \
+    --settings <cosmos db account name>_DOCUMENTDB=$COSMOSDB_CONNECTION_STRING
+```
+
+Update `function.json` in `ResizeImage`.
+
+```json
+{
+    //...
+    "bindings": [
+        //...
+        {
+            "type": "cosmosDB",
+            "name": "$return",
+            "databaseName": "imagesdb",
+            "collectionName": "images",
+            "createIfNotExists": false,
+            "connectionStringSetting": "<cosmos db account name>_DOCUMENTDB",
+            "direction": "out"
+        }
+        //...
+    ]
+}
+```
+
+Check `ResizeImage/index.js`. The example file already cares return value with a image path.
+
+Create new function called `GetImages`.
+
+```bash
+$ cd first-func-app
+$ func new --name GetImages \
+    --language JavaScript \
+    --template "HTTP trigger"
+$ cd GetImages
+```
+
+Change `authLevel` as `anonymous` from `function` in `function.json` file.
+
+Add a new input in `function.json`.
+
+```json
+{
+    //...
+    "bindings": [
+        //...
+        {
+        "type": "cosmosDB",
+        "name": "documents",
+        "databaseName": "imagesdb",
+        "collectionName": "images",
+        "connectionStringSetting": "<cosmos db account name>_DOCUMENTDB",
+        "sqlQuery": "select * from c order by c._ts desc",
+        "direction": "in"
+        }
+        //...
+    ]
+}
+```
+
+Update `GetImages/index.js` file like the code below:
+
+```js
+module.exports = function (context, _, documents) {
+    context.res = {
+        body: documents
+    };
+    context.done();
+};
+```
+
+Run extension install for cosmosdb and publish it.
+
+```bash
+$ cd first-func-app
+$ func extensions install
+$ func azure functionapp publish <function app name>
+```
+
+Check the web app, and upload new images. Also, check the data from Cosmos DB Data Explorer in the portal.
+
+## Computer Vision for image captions
+
+Note: Computer Vision API has a free tier that provides up to 5k API calls per month. `F0` means the free tier.
+
+```bash
+$ az cognitiveservices account create -g first-serverless-app \
+    -n <computer vision account name> \
+    --kind ComputerVision \
+    --sku F0 \
+    -l westcentralus
+```
+
+Fetch the key and the URL, then set as variables in function app.
+
+```bash
+$ export COMP_VISION_KEY=$(az cognitiveservices account keys list \
+    -g first-serverless-app \
+    -n <computer vision account name> \
+    --query key1 \
+    --output tsv)
+$ export COMP_VISION_URL=$(az cognitiveservices account show \
+    -g first-serverless-app \
+    -n <computer vision account name> \
+    --query endpoint \
+    --output tsv)
+$ az functionapp config appsettings set \
+    -n <function app name> \
+    -g first-serverless-app \
+    --settings \
+        COMP_VISION_KEY=$COMP_VISION_KEY \
+        COMP_VISION_URL=$COMP_VISION_URL \
+    -o table
+```
+
+Update `ResizeImage` for Computer Vision API. It requires `axios`.
+
+```bash
+$ cd first-func-app/ResizeImage
+$ npm install --save axios
+```
+
+Update `ResizeImage/index.js` file based on [this file](https://raw.githubusercontent.com/Azure-Samples/functions-first-serverless-web-application/master/javascript/ResizeImage/index-module5.js). Note: API url is slightly incorrect. It should start with `/vision/v2.0/analyze`.
+
+Publish funcs and test it.
+
+## Add authentication
+
+The tutorial comes with AD Authentication code. Set the platform features from the portal. [Steps are here](https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database?tutorial-step=6).
+
+
+## Clean Up All Testings
+
+```bash
+$ az group delete --name first-serverless-app
 ```
