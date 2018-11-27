@@ -555,7 +555,7 @@ Publish funcs and test it.
 The tutorial comes with AD Authentication code. Set the platform features from the portal. [Steps are here](https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database?tutorial-step=6).
 
 
-## Clean Up All Testings
+## Clean Up Resources
 
 ```bash
 $ az group delete --name first-serverless-app
