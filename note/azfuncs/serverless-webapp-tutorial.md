@@ -27,6 +27,7 @@ This is a note about Azure serverless web app. I followed [the tutorial on MSDN]
 - I can setup the local testing environment for unit testing, but how to test all integrated parts?
 - How much cost for all this simple services?
 - Check other authentications e.g. twitter, google.
+  - It called [Azure App Service Authentication a.k.a. EasyAuth](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)
 - Is it slow generally? Sometimes it spent few seconds for the loading.
 
 ----
