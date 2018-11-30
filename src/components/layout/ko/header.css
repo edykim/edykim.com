@@ -2,6 +2,13 @@
     margin: 0 auto;
     max-width: 760px;
     padding: 3rem 1rem 1rem;
+    transition: padding-top 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 830px) {
+    .head {
+        padding-top: 1rem;
+    }
 }
 
 .head a {
