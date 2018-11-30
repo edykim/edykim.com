@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Head from '../head'
 
 import Header from './header'
-import Footer from '../footer'
+import Footer from './footer'
 
 import '../layout.css'
 

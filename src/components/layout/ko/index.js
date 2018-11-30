@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Head from '../head'
 
 import Header from './header'
-import Footer from '../footer'
+import Footer from './footer'
 
 import '../layout.css'
 
@@ -16,7 +16,7 @@ const Layout = ({ site, lang, children }) => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 760,
+        maxWidth: 640,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
