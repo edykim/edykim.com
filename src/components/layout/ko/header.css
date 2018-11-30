@@ -11,6 +11,8 @@
 
 .head .lang-selector {
     float: right;
+    position: relative;
+    top: -3px;
 }
 
 .head .lang-selector a {
