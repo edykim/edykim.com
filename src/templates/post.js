@@ -14,7 +14,7 @@ export default ({ data }) => {
     <Layout lang={post.frontmatter.lang}>
       <Card info={post} />
 
-      <Frontispiece frontmatter={post.frontmatter} />
+      <Frontispiece frontmatter={post.frontmatter} url={post.fields.url} />
 
       <div
         className="content"
