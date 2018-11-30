@@ -4,6 +4,7 @@ author: haruair
 type: page
 date: 2018-11-11T05:28:41+00:00
 url: /donation
+lang: en
 
 ---
 

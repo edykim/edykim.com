@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
           About
         </Link>
         <Link to={`/ko/`} style={{marginLeft: '0.5rem', ...navStyle}}>
-          안녕하세요
+          한국어
         </Link>
       </div>
     </div>

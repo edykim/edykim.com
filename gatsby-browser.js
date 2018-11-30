@@ -4,5 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-require("prismjs/themes/prism-solarizedlight.css")
 require("./src/styles/highlight.css")

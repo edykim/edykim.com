@@ -5,6 +5,13 @@ module.exports = {
     description: 'A blog talking about web and life.',
     keywords: 'web lover, software developer, translator',
     siteUrl: "https://edykim.com",
+    prefetchedDomains: [
+      '//www.haruair.com',
+      '//edykim.com',
+      '//secure.gravatar.com',
+      '//fonts.googleapis.com',
+      '//s.w.org',
+    ],
   },
   plugins: [
     {
@@ -49,12 +56,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
       },
     },
     'gatsby-plugin-catch-links',

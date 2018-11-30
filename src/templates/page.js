@@ -6,7 +6,7 @@ import Card from '../components/Card';
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout lang={post.frontmatter.lang}>
       <Card info={post}></Card>
       <h1>{post.frontmatter.title}</h1>
       <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />

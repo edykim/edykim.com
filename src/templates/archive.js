@@ -5,6 +5,7 @@ import DateTime from '../components/DateTime';
 import Layout from '../components/layout';
 import Card from '../components/Card';
 
+import './PostList.css';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -12,7 +13,7 @@ export default ({ data }) => {
   const merged = _.groupBy(list, ({node}) => node.frontmatter.date.substring(0, 4));
   const years = _.reverse(Object.keys(merged));
   return (
-    <Layout>
+    <Layout lang={post.frontmatter.lang}>
       <Card info={post}></Card>
       <h1>{post.frontmatter.title}</h1>
       <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -20,7 +21,7 @@ export default ({ data }) => {
         return (
           <div key={yearIndex}>
             <h2>{year}</h2>
-            <ul>
+            <ul className={`post-list`}>
             {merged[year].map(({node}, index) =>
               <li key={index}>
                 <Link to={`/${node.fields.url}`}>
@@ -43,6 +44,7 @@ query ArchivesQuery($lang: String!, $slug: String!) {
     html
     frontmatter {
       title
+      lang
     }
     fields {
         url

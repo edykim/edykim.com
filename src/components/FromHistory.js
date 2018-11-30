@@ -1,10 +1,10 @@
 import React from 'react';
 
 const historyStyle = {
-  background: '#fff9f5',
-  margin: '3rem auto',
-  padding: '1rem',
+  margin: '1rem auto',
+  padding: '0rem',
   fontSize: '0.8em',
+  color: '#666',
 }
 
 export default ({ history }) => {

@@ -1,0 +1,19 @@
+.head {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 3rem 1rem 1rem;
+}
+
+.head a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.head .lang-selector {
+    float: right;
+}
+
+.head .lang-selector a {
+    font-size: 0.8rem;
+    line-height: 2rem;
+}
