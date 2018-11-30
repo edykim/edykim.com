@@ -4,6 +4,7 @@ author: haruair
 type: page
 date: 2010-10-07T05:28:41+00:00
 url: /
+lang: en
 
 ---
 

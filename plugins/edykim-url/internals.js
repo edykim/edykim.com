@@ -35,9 +35,7 @@ exports.defaultOptions = {
   urlFieldName: `url`,
 
   // Target Types of additional url handling.
-  targetTypes: [
-    `MarkdownRemark`,
-  ],
+  targetTypes: [`MarkdownRemark`],
 
   // node and options will pass to this function and
   // will create a value of the url field.

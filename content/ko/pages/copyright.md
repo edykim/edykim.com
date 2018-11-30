@@ -4,7 +4,7 @@ author: haruair
 type: page
 date: 2016-06-10T05:49:12+00:00
 lang: ko
-slug: copyright
+url: copyright
 
 ---
 이 글에서는 edykim.com에 게시된 모든 저작물에 대한 저작권에 대해 설명합니다. 오랜 기간 동안 이 블로그에는 제 이름 아래 광의적인 저작권을 적용하고 있었는데 좀 더 세부적으로 구분하기 위해 이 글을 작성했습니다. 아래 각 항목을 참조해주시기 바랍니다.

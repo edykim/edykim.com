@@ -4,8 +4,7 @@ const componentNameResolver = ({ node }, context) => {
 }
 
 const isPublic = ({ node }) => {
-  return node.frontmatter.private
-    || node.frontmatter.draft
+  return node.frontmatter.private || node.frontmatter.draft
 }
 
 // Default options

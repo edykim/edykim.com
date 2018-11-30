@@ -39,6 +39,6 @@ module.exports = {
     {
       key: `리뷰`,
       url: `review`,
-    }
-  ]
+    },
+  ],
 }

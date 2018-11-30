@@ -19,28 +19,29 @@ exports.createPages = ({ graphql, actions }, pluginOptions) => {
   } = options
 
   return new Promise((resolve, reject) => {
-    graphql(query)
-      .then(({ data }) => {
-        if (!data || !data.pages) {
-          return reject()
+    graphql(query).then(({ data }) => {
+      if (!data || !data.pages) {
+        return reject()
+      }
+
+      data.pages.edges.forEach(({ node }) => {
+        if (isPublic({ node })) return
+
+        var context = {
+          [contextField]: node.fields[contextField],
         }
+        const componentName = componentNameResolver({ node }, context)
 
-        data.pages.edges.forEach(({ node }) => {
-          if (isPublic({ node })) return;
-
-          var context = {
-            [contextField]: node.fields[contextField],
-          }
-          const componentName = componentNameResolver({ node }, context)
-
-          createPage({
-            path: node.fields[pathFieldName],
-            component: path.resolve(`${baseTemplatePath}${componentName}.${templateExtension}`),
-            context,
-          })
+        createPage({
+          path: node.fields[pathFieldName],
+          component: path.resolve(
+            `${baseTemplatePath}${componentName}.${templateExtension}`
+          ),
+          context,
         })
+      })
 
-        resolve()
+      resolve()
     })
   })
 }

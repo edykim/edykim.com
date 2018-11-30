@@ -47,14 +47,15 @@ exports.onPostBuild = async ({ graphql, actions }) => {
   var redirects = []
   result.redirects.edges.forEach(({ node }) => {
     if (node.frontmatter.private || node.frontmatter.draft) return
-    if (!node.frontmatter.history || node.frontmatter.history.length === 0) return
+    if (!node.frontmatter.history || node.frontmatter.history.length === 0)
+      return
 
     const to = urlResolve(config.siteMetadata.siteUrl, node.fields.url)
     const result = node.frontmatter.history.map(v => ({
       from: v.from,
-      to
+      to,
     }))
-    
+
     redirects = redirects.concat(result)
   })
 

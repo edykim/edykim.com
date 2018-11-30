@@ -1,0 +1,16 @@
+.list-btn {
+    text-decoration: none;
+    display: inline-block;
+    background: #fafafa;
+    border: 1px solid #dddddd;
+    color: #333333;
+    padding: 0.7rem 1.2rem;
+    font-size:0.8rem;
+    font-weight: 600;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.list-btn:hover {
+    color: #333333;
+    border-color: #bbb;
+}
