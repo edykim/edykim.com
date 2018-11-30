@@ -51,9 +51,6 @@ pre[class*="language-"] {
 
 	font-size: 0.88em;
 }
-pre[class*="language-"] > code[class*="language-"] {
-	font-size: 0.88rem;
-}
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -174,6 +171,11 @@ pre[class*="language-"] {
     overflow: initial;
     float: left; /* 1 */
     min-width: 100%; /* 2 */
+}
+
+.gatsby-highlight code[class*="language-"],
+.gatsby-highlight pre[class*="language-"] {
+	font-size: 0.88rem;
 }
 
 .gatsby-highlight::-webkit-scrollbar {
