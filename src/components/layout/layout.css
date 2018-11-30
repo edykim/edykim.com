@@ -119,6 +119,7 @@ hr {
 .content h4,
 .content h5 {
     margin: 2em 0 0.5em;
+    line-height: normal;
 }
 
 .content h1 + *,
