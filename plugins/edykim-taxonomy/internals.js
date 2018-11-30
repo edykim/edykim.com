@@ -21,7 +21,10 @@ exports.languagePrefix = languagePrefix
 
 const createTaxonomyPage = (taxonomy, name, options) => {
   const { createPage, lang, sanitizeUrl, languagePrefix } = options
-  const taxonomyPath = `${languagePrefix(lang)}/${name}/${sanitizeUrl(taxonomy, options)}/`
+  const taxonomyPath = `${languagePrefix(lang)}/${name}/${sanitizeUrl(
+    taxonomy,
+    options
+  )}/`
 
   createPage({
     path: taxonomyPath,
@@ -38,7 +41,7 @@ exports.createTaxonomyPages = (data, { createPage }, options) => {
 
   const grouped = groupBy(data, v => v.node.frontmatter.lang || `en`)
 
-  Object.keys(grouped).forEach((lang) => {
+  Object.keys(grouped).forEach(lang => {
     const posts = grouped[lang]
 
     options.keys.forEach(({ key, singular }) => {
@@ -91,5 +94,5 @@ exports.defaultOptions = {
         }
       }
     }
-  }`
+  }`,
 }

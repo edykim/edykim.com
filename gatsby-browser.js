@@ -4,4 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-require("./src/styles/highlight.css")
+require('./src/styles/highlight.css')

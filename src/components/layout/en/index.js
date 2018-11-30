@@ -10,7 +10,7 @@ import '../layout.css'
 
 const Layout = ({ site, lang, children }) => (
   <>
-    <Head site={ site } lang={ lang } />
+    <Head site={site} lang={lang} />
 
     <Header siteTitle={`${site.siteMetadata.title}`} />
     <div

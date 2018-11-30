@@ -7,7 +7,7 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => {
     ...pluginOptions,
   }
 
-  return graphql(options.query).then(({errors, data}) => {
+  return graphql(options.query).then(({ errors, data }) => {
     if (errors) {
       errors.forEach(e => console.error(e.toString()))
       return Promise.reject(errors)

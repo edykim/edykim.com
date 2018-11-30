@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Here, Edward 👨🏻‍💻",
+    title: 'Here, Edward 👨🏻‍💻',
     author: 'Edward Kim',
     description: 'A blog talking about web and life.',
     keywords: 'web lover, software developer, translator',
-    siteUrl: "https://edykim.com",
+    siteUrl: 'https://edykim.com',
     prefetchedDomains: [
       '//www.haruair.com',
       '//edykim.com',
@@ -50,7 +50,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
             },
@@ -66,12 +66,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-126646768-1",
+        trackingId: 'UA-126646768-1',
         head: false,
         respectDNT: true,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "edykim.com",
+        cookieDomain: 'edykim.com',
       },
     },
 
@@ -80,7 +80,7 @@ module.exports = {
     `edykim-template`,
     {
       resolve: `edykim-taxonomy`,
-      options: require(`./config/taxonomy`)
+      options: require(`./config/taxonomy`),
     },
     `gatsby-plugin-netlify`,
   ],

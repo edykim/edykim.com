@@ -23,11 +23,15 @@ const Layout = ({ lang, children }) => (
     `}
     render={({ site }) => (
       <>
-        {
-          lang === 'ko'
-            ? <LayoutKo site={site} lang={lang}>{children}</LayoutKo>
-            : <LayoutEn site={site} lang={lang}>{children}</LayoutEn>
-        }
+        {lang === 'ko' ? (
+          <LayoutKo site={site} lang={lang}>
+            {children}
+          </LayoutKo>
+        ) : (
+          <LayoutEn site={site} lang={lang}>
+            {children}
+          </LayoutEn>
+        )}
       </>
     )}
   />

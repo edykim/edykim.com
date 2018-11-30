@@ -14,7 +14,7 @@ const Colophon = ({ content }) => (
     <DateTime at={content.frontmatter.date} />
     <TaxonomyLine post={content} />
 
-    <div style={{marginTop: '3rem'}}>
+    <div style={{ marginTop: '3rem' }}>
       <ListButton post={content} />
     </div>
   </div>

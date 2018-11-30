@@ -10,8 +10,8 @@ import '../layout.css'
 
 const Layout = ({ site, lang, children }) => (
   <>
-    <Head site={ site } lang={ lang } />
-    <Header site={ site } />
+    <Head site={site} lang={lang} />
+    <Header site={site} />
 
     <div
       style={{
@@ -21,9 +21,7 @@ const Layout = ({ site, lang, children }) => (
         paddingTop: 0,
       }}
     >
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
     <Footer author={site.siteMetadata.author} />
   </>
