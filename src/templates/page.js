@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Frontispiece from '../components/Frontispiece'
 import Card from '../components/Card'
 
 export default ({ data }) => {
@@ -8,7 +9,8 @@ export default ({ data }) => {
   return (
     <Layout lang={post.frontmatter.lang}>
       <Card info={post} />
-      <h1>{post.frontmatter.title}</h1>
+      <Frontispiece frontmatter={post.frontmatter} />
+
       <div
         className="content"
         dangerouslySetInnerHTML={{ __html: post.html }}
