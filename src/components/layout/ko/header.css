@@ -14,6 +14,9 @@
 }
 
 .head .lang-selector a {
-    font-size: 0.8rem;
+    font-size: .7rem;
     line-height: 2rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
 }
