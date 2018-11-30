@@ -4,6 +4,7 @@ author: haruair
 type: page
 date: 2010-10-27T05:28:41+00:00
 url: /about
+lang: en
 
 ---
 
@@ -35,7 +36,6 @@ More details are [here](https://www.linkedin.com/in/edwardykim/).
   - Four seasons in one day, but can't complain.
   - Best ☕️ in the world!
   - Spent 6 yrs, working and enjoying foodie life.
-
 - My hometown is Jeju, South Korea 🇰🇷
   - Honeymoon island, small and beautiful city
   - Studied and grew up as a geek

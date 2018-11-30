@@ -7,13 +7,16 @@ const isInTargetResources = (node, { targetTypes }) => {
 
 // Create slug based on file path so that posts keep path based route and
 // also maintains configurable urls.
-const createSlugField = ({ node, getNode, createNodeField }, { slugFieldName }) => {
+const createSlugField = (
+  { node, getNode, createNodeField },
+  { slugFieldName }
+) => {
   const slug = createFilePath({ node, getNode, basePath: `pages` })
 
   createNodeField({
     node,
     name: slugFieldName,
-    value: slug
+    value: slug,
   })
 }
 
@@ -38,7 +41,7 @@ exports.onCreateNode = ({ node, getNode, actions }, pluginOptions) => {
   }
 
   if (isInTargetResources(node, options)) {
-    createSlugField({node, getNode, createNodeField}, options)
-    createUrlField({node, createNodeField}, options)
+    createSlugField({ node, getNode, createNodeField }, options)
+    createUrlField({ node, createNodeField }, options)
   }
-};
+}

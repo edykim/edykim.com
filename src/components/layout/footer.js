@@ -18,7 +18,9 @@ const Footer = ({ author }) => (
       }}
     >
       &copy; 2011-{new Date().getFullYear()} {author} Some Rights Reserved.
-      <Link style={{boxShadow: 'none'}} to={'/ko/copyright'}>?</Link>
+      <Link style={{ boxShadow: 'none' }} to={'/ko/copyright'}>
+        ?
+      </Link>
     </div>
   </div>
 )

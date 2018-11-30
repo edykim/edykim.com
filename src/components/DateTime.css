@@ -1,9 +1,4 @@
 .DateTime {
-  font-size: 0.8em;
   color: #666;
   margin: 0.5rem auto 1rem;
-}
-
-a + .DateTime {
-  margin-left: 0.5rem;
 }

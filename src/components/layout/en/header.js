@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const navStyle = {
   color: '#e7d7ff',
   boxShadow: 'none',
-};
+}
 
 const Header = ({ siteTitle }) => (
   <div
@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: 'white',
             textDecoration: 'none',
-            boxShadow: 'none'
+            boxShadow: 'none',
           }}
         >
           {siteTitle}
@@ -36,8 +36,8 @@ const Header = ({ siteTitle }) => (
         <Link to={`/about/`} style={navStyle}>
           About
         </Link>
-        <Link to={`/ko/`} style={{marginLeft: '0.5rem', ...navStyle}}>
-          안녕하세요
+        <Link to={`/ko/`} style={{ marginLeft: '0.5rem', ...navStyle }}>
+          한국어
         </Link>
       </div>
     </div>
