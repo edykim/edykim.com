@@ -9,6 +9,10 @@
     margin-bottom: 0;
 }
 
+.frontispiece h1 a {
+    text-decoration: none;
+}
+
 .frontispiece .headline {
     font-size: 1.2rem;
     margin-top: 1rem;
