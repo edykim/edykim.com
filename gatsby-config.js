@@ -42,7 +42,8 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    // Due to an issue from iOS safari, it is temporary disabled.
+    // 'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
