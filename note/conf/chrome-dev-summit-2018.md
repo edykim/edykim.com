@@ -1035,6 +1035,171 @@ App Shell Model: A way to build a Progressive Web App that reliably and instantl
 
 It is hard because the plugins and themes will affect the content so it uses the way that AMP plugin applies.
 
-https://www.youtube.com/watch?v=s1WrBaAyzAI&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF&index=10
+- https://github.com/Automattic/amp-wp
+- https://github.com/xwp/pwa-wp
+- https://bit.ly/amp-drupal
+- https://bit.ly/pwa-drupal
+- https://pwastudio.io - Magento
+- https://bit.ly/aem-spa - Adobe Experience Manager
+- https://en.ec-cube.net - EC-CUBE
 
-https://youtu.be/s1WrBaAyzAI?t=1009
+
+# Making Modern Web Content Discoverable for Search
+
+- @tcmg
+- @g33konaut
+
+https://twitter.com/g33konaut/status/991609951574519808
+
+> The rendering of JavaScript-powered websites in Google Search is **deferred** until Googlebot has resources available to process that content.
+
+## Dynamic Rendering
+
+Identify Crawler user agent and parse through dynamic renderer.
+
+- Rapidly changing sites
+- Modern (>Chrome 41) Javascript features
+- Sites with a strong social media presence
+
+Tools are,
+
+- https://github.com/GoogleChrome/puppeteer
+- https://github.com/GoogleChrome/rendertron
+
+```js
+const express = require('express')
+const app = express()
+const rendertron = require('rendertron-middleware')
+
+const BOTS = rendertron.botUserAgents.concat('googlebot').join('|')
+
+app.use(rendertron.makeMiddleware({
+  proxyUrl: 'https://your.rendertron.example/render',
+  userAgentPattern: new RegExp(BOTS, 'i'),
+}))
+
+app.listen(process.env.PORT || 8080)
+```
+
+## Testing
+
+- [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
+  - Page loading info (this test includes rendering steps)
+- [Rich Results Test](https://search.google.com/test/rich-results)
+- Lighthouse
+  - SEO Audits
+- https://developers.google.com/search
+
+GoogleBot supports,
+
+- ES5 & ES6
+- Stateless (no index db, session storage, local storage, cookie...)
+
+- https://polyfill.io
+- https://caniuse.com/#compare=chrome+41
+
+## Future Enhancesments
+
+- Crawling & rendering integrated (matched js engine in GoogleBot and chrome)
+- Modern Chrome
+- More sustainable update process
+
+
+# Day 2 Keynote
+
+- @stubbornella
+- @cramforce
+
+## Web frameworks
+
+> You can't not use a framework. The only real choice is to either:
+>
+> a) use one that is open source, documented, tested, supported,
+> maintained, mature, proven and has a community or
+>
+> b) use one you cobble together yourself that's probably unusable,
+> unmaintainable garbage.
+>
+> -- Yevgeniy Brikman @brikis98
+
+## The web stack
+
+- Web primitives
+- Built-in modules
+- Frameworks
+- Web Components
+
+## Framework Improvements
+
+- React
+- Angular
+- Vue
+- Polymer
+- Svelte
+- AMP
+- Ember
+
+Frameworks + integrated best practices = great outcomes for everyone
+
+- Include frameworks in the Chrome Intent to Implement process
+- $200,000 of funding for improving performance best practices in frameworks.
+  (https://bit.ly/framework-perf)
+- Increased collaboration with frameworks from the Chrome team
+
+## Features
+
+- Display Locking: Don't want to update the DOM inadvertently? You can lock it!
+- Page Transitions with Portals
+  - Modern Navigations
+  - CORS issue resolved via this feature.
+  - Web pages are the new SPAs
+- Feature Policies
+  - Report-only, Enforce mode
+  - Types
+    - Sync XHR
+    - Unoptimized images
+    - Oversized images
+    - Unsized media
+- Web Packaging for Instant Loading
+  - Document author signs the content with their certificate.
+  - Anyone can deliver it.
+  - Browser treats it as coming from their domain.
+  - Web Packaging can bring back cell tower edge caching into a HTTPS world
+  - https://bit.ly/try-sxg (Signed Exchange Origin Trial)
+- Scheduling API
+  - Grand Central Dispatch
+- Animation Worklet
+  - CSS and Animation API is working well with time based animation.
+- Virtual Scroller
+  - Just like UITableView
+
+
+# Feature Policy & the Well-Lit Path for Web Development
+
+- @jasonpchase
+
+https://www.youtube.com/watch?v=igHvSUrLqXc&index=16&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
