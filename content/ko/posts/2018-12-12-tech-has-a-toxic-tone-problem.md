@@ -99,7 +99,7 @@ tags:
 
 말할 필요도 없이 궁극적으로 디즈레일리가 선거에서 승리했습니다. 어떤 타입의 사람이 되고 싶은가요? 거들먹거리며 당신의 우월함을 자랑하는 사람이 되고 싶은가요? 아니면 다른 사람들의 가능성을 일깨우는 데 도움을 주는 사람이 되고 싶은가요? 단순하게, _당신은_ 어떤 타입의 사람과 일을 하고 싶은가요?
 
-이 주제에 대해 더 알고 싶다면 책 [The No A**hole Rule]((http://www.worldcat.org/title/no-asshole-rule-building-a-civilized-workplace-and-surviving-one-that-isnt/oclc/70176901))([또라이 제로 조직](https://book.naver.com/bookdb/book_detail.nhn?bid=2916694))을 확인해보세요.
+이 주제에 대해 더 알고 싶다면 책 [The No A**hole Rule](http://www.worldcat.org/title/no-asshole-rule-building-a-civilized-workplace-and-surviving-one-that-isnt/oclc/70176901)([또라이 직](https://book.naver.com/bookdb/book_detail.nhn?bid=2916694))을 확인해보세요.
 
 ## 기계적 말투
 
@@ -215,7 +215,7 @@ _Sidenote: 흥미롭게도 이런 엔지니어는 의외로 낙천적인 경향�
 
 ## 미래
 
-> "컴퓨터 프로그래밍은 인간 활동입니다. ... 하지만 아직도 ... 많은 사람들(많은 프로그래머들)은 프로그래밍을 그렇게 여기지 않았습니다."
+> "컴퓨터 프로그래밍은 인간 활동입니다. ... 하지만 아직도 ... 많은 사람들(많은 프로그래머들)은 프로그래밍을 인간 활동으로 전혀 고려하고 있지 않습니다."
 
 제럴드 와인버그는 1971년에 [이 글을 썼지만,](http://www.worldcat.org/title/psychology-of-computer-programming/oclc/216809) 여전히 이런 인식이 존재합니다. 제 생각에는 엔지니어링에서의 커뮤니케이션이 주목받을 가치가 있습니다.
 
@@ -234,3 +234,5 @@ _Sidenote: 흥미롭게도 이런 엔지니어는 의외로 낙천적인 경향�
 
 - 2018-12-12: *직진적*을 *직선적*으로 변경했습니다. 버블쓰님 피드백 감사드립니다.
 - 2018-12-12: *현명이라고 생각했습니다*를 *가장 현명한 사람이라는 생각이 들었습니다*으로 변경했습니다. [minieetea](https://twitter.com/minieetea)님 피드백 감사드립니다.
+- 2018-12-13: 잘못 걸린 링크를 수정했습니다. [정겨울](https://twitter.com/res_tin)님 피드백 감사드립니다.
+- 2018-12-13: 제럴드 와인버그의 인용을 수정했습니다. [chiyodad](https://twitter.com/chiyodad)님, [lazygyu](https://lazygyu.net)님, [jinhoyim](https://github.com/jinhoyim)님 피드백 감사드립니다.
