@@ -166,8 +166,17 @@ a {
 
 iframe.instagram-media {
     min-width: 100% !important;
+    border: none !important;
+    box-shadow: 0 0 5px #dedede !important;
 }
 
-blockquote.instagram-media {
-    border: none !important;
+blockquote.instagram-media a,
+blockquote.instagram-media-registered a {
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.twitter-tweet {
+    margin-left: auto;
+    margin-right: auto;
 }
