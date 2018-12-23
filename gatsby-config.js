@@ -83,5 +83,7 @@ module.exports = {
       options: require(`./config/taxonomy`),
     },
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-twitter`,
+    `edykim-plugin-instagram`,
   ],
 }
