@@ -163,3 +163,11 @@ a {
     transition: 0.3s color ease-in-out;
     color: blue;
 }
+
+iframe.instagram-media {
+    min-width: 100% !important;
+}
+
+blockquote.instagram-media {
+    border: none !important;
+}
