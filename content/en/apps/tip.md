@@ -12,8 +12,10 @@ lang: en
 
 A simple tool to calculate gratuity on the fly with a simple design to solve your everyday math question.
 
-If you have any questions, please contact me via [email (tip@edykim.com)](mailto:tip@edykim.com).
+If you have any questions, please contact me via [email (tip@edykim.com)](mailto:tip@edykim.com)
 
 Will be available in Apple App Store.
+
+- [Privacy Policy](/app/tip-calculator/privacy-policy)
 
 <small>(c) 2019 Yong Gyun Kim</small>
