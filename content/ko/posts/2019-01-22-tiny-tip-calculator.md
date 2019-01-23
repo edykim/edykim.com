@@ -245,7 +245,11 @@ module.exports = async function () {
 
 빌드와 배포 과정에서 문제가 되었던 부분이 몇 있었는데 검색으로 쉽게 해소했다.
 
-- Xcode의 모던 빌드 시스템을 사용하면 문제가 생긴다. `ionic cordova build ios -- --buildFlag="-UseModernBuildSystem=0"`로 플래그를 추가해서 빌드를 생성한다. 그리고 Xcode에서 **File > Project Settings...**에 들어가서 Build System을 **Legacy Build System**으로 변경한다.
+- Xcode의 모던 빌드 시스템을 사용하면 문제가 생긴다. 빌드를 생성할 때 다음 플래그를 추가한다.
+  ```
+  $ ionic cordova build ios -- --buildFlag="-UseModernBuildSystem=0"
+  ```
+- Xcode에서 **File > Project Settings...**에 들어가서 Build System을 **Legacy Build System**으로 변경한다.
 - Signing에 문제가 있다고 나오면 `Automatically manage signing`의 체크 박스를 해제하고 Xcode를 다시 실행해서 다시 체크한다.
 - 일반적인 암호화 외의 기능을 사용하면 앱 배포에 추가적인 절차가 필요하다. 하지만 단순히 API 호출에 HTTPS를 사용하거나 인증 절차에 사용하는 경우에는 예외에 해당한다. `info.plist`에 `ITSAppUsesNonExemptEncryption`를 `NO`로 설정한다.
 
