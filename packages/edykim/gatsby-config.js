@@ -18,7 +18,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/content/`,
+        path: process.env.EDYKIM_CONTENT_PATH || `${__dirname}/content/`,
       },
     },
     {
