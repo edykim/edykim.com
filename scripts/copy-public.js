@@ -93,7 +93,9 @@ exports.copyPublic = (
           }
         })
 
-        if (!_targetDirPackages[publicDirName]) {
+        if (
+          !_targetDirPackages[path.join(currentWorkingDirectory, publicDirName)]
+        ) {
           console.warn(
             `Warning: Cannot find any packages for the path "${publicDirName}".`
           )
