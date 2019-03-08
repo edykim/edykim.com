@@ -1,6 +1,7 @@
 {
   "name": "@edykim/gatsby-plugin-template",
   "version": "1.0.0",
+  "private": true,
   "description": "Generate pages with template via gatsby",
   "main": "index.js",
   "scripts": {

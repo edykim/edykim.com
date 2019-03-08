@@ -2,6 +2,7 @@
   "name": "edykim.com",
   "description": "edykim.com static web",
   "version": "1.0.0",
+  "private": true,
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
   "dependencies": {
     "@edykim/gatsby-plugin-instagram": "^1.0.0",

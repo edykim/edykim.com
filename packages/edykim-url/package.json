@@ -1,6 +1,7 @@
 {
   "name": "@edykim/gatsby-plugin-url",
   "version": "1.0.0",
+  "private": true,
   "description": "Handling urls for edykim website via gatsby",
   "main": "index.js",
   "scripts": {

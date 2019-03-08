@@ -1,6 +1,7 @@
 {
   "name": "@edykim/gatsby-plugin-instagram",
   "version": "1.0.0",
+  "private": true,
   "description": "Loads the Instagram JavaScript for embedding instagram posts.",
   "main": "index.js",
   "scripts": {
