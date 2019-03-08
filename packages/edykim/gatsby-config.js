@@ -75,15 +75,15 @@ module.exports = {
       },
     },
 
-    `edykim-url`,
-    `edykim-redirect-json`,
-    `edykim-template`,
+    `@edykim/gatsby-plugin-url`,
+    `@edykim/gatsby-plugin-redirect-json`,
+    `@edykim/gatsby-plugin-template`,
     {
-      resolve: `edykim-taxonomy`,
+      resolve: `@edykim/gatsby-plugin-taxonomy`,
       options: require(`./config/taxonomy`),
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-twitter`,
-    `edykim-plugin-instagram`,
+    `@edykim/gatsby-plugin-instagram`,
   ],
 }

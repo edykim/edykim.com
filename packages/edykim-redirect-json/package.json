@@ -1,5 +1,5 @@
 {
-  "name": "edykim-redirect-json",
+  "name": "@edykim/gatsby-plugin-redirect-json",
   "version": "1.0.0",
   "description": "Generate redirect.json file via gatsby",
   "main": "index.js",

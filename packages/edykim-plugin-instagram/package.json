@@ -1,5 +1,5 @@
 {
-  "name": "edykim-plugin-instagram",
+  "name": "@edykim/gatsby-plugin-instagram",
   "version": "1.0.0",
   "description": "Loads the Instagram JavaScript for embedding instagram posts.",
   "main": "index.js",

@@ -4,7 +4,6 @@ const urlResolve = require(`url`).resolve
 const fs = require(`fs`)
 const pify = require(`pify`)
 const mkdirp = require(`mkdirp`)
-const config = require(`./../../gatsby-config`)
 
 const writeFile = pify(fs.writeFile)
 
@@ -20,6 +19,11 @@ const runQuery = (handler, query) =>
 exports.onPostBuild = async ({ graphql, actions }) => {
   const query = `
   {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     redirects: allMarkdownRemark {
       edges {
         node {
@@ -50,13 +54,13 @@ exports.onPostBuild = async ({ graphql, actions }) => {
     if (!node.frontmatter.history || node.frontmatter.history.length === 0)
       return
 
-    const to = urlResolve(config.siteMetadata.siteUrl, node.fields.url)
-    const result = node.frontmatter.history.map(v => ({
+    const to = urlResolve(result.site.siteMetadata.siteUrl, node.fields.url)
+    const newRedirects = node.frontmatter.history.map(v => ({
       from: v.from,
       to,
     }))
 
-    redirects = redirects.concat(result)
+    redirects = redirects.concat(newRedirects)
   })
 
   const outputPath = path.join(publicPath, filename)
