@@ -6,7 +6,8 @@
     "prepare": "npm run bootstrap",
     "build-packages": "lerna run build",
     "post-build": "node ./scripts/post-build.js",
-    "build": "npm run build-packages && npm run post-build"
+    "build": "npm run build-packages",
+    "netlify:build": "npm run build-packages && npm run post-build"
   },
   "devDependencies": {
     "fs-extra": "^7.0.1",
