@@ -1,11 +1,15 @@
 {
-  "name": "edykim-url",
+  "name": "@edykim/gatsby-plugin-url",
   "version": "1.0.0",
+  "private": true,
   "description": "Handling urls for edykim website via gatsby",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gatsby-source-filesystem": "^2.0.23"
+  }
 }

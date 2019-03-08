@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import options from '../../config/taxonomy'
-import {
-  sanitizeUrl,
-  languagePrefix,
-} from '../../plugins/edykim-taxonomy/internals'
+import { sanitizeUrl, languagePrefix } from '@edykim/gatsby-plugin-taxonomy'
 
 import './TaxonomyLine.css'
 

@@ -1,7 +1,8 @@
 {
-  "name": "edykim-plugin-instagram",
+  "name": "@edykim/gatsby-plugin-template",
   "version": "1.0.0",
-  "description": "Loads the Instagram JavaScript for embedding instagram posts.",
+  "private": true,
+  "description": "Generate pages with template via gatsby",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

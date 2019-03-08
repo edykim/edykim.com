@@ -1,6 +1,7 @@
 {
-  "name": "edykim-taxonomy",
+  "name": "@edykim/gatsby-plugin-taxonomy",
   "version": "1.0.0",
+  "private": true,
   "description": "Generate taxonomy pages",
   "main": "index.js",
   "scripts": {
