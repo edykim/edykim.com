@@ -1,15 +1,25 @@
 const fs = require('fs-extra')
 const path = require('path')
 
-const staticDir = path.join(process.cwd(), 'static')
+exports.copyStatic = (
+  currentWorkingDirectory = process.cwd(),
+  staticDirectoryName = 'static',
+  publicDirectoryName = 'public'
+) => {
+  const staticDir = path.join(currentWorkingDirectory, staticDirectoryName)
 
-if (fs.existsSync(staticDir)) {
-  try {
-    fs.copySync(staticDir, path.join(process.cwd(), 'public'), {
-      overwrite: false,
-    })
-    console.log(`Files copied to public from static.`)
-  } catch (err) {
-    console.error(err)
+  if (fs.existsSync(staticDir)) {
+    try {
+      fs.copySync(
+        staticDir,
+        path.join(currentWorkingDirectory, publicDirectoryName),
+        {
+          overwrite: false,
+        }
+      )
+      console.log(`Files copied to public from static.`)
+    } catch (err) {
+      console.error(err)
+    }
   }
 }

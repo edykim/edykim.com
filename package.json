@@ -5,9 +5,8 @@
     "bootstrap": "lerna bootstrap",
     "prepare": "npm run bootstrap",
     "build-packages": "lerna run build",
-    "copy-public": "node scripts/copy-public.js",
-    "copy-static": "node scripts/copy-static.js",
-    "build": "npm run build-packages && npm run copy-public && npm run copy-static"
+    "post-build": "node ./scripts/post-build.js",
+    "build": "npm run build-packages && npm run post-build"
   },
   "devDependencies": {
     "fs-extra": "^7.0.1",
