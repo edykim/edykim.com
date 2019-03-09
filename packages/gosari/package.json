@@ -1,0 +1,55 @@
+{
+  "name": "@edykim/gosari",
+  "private": true,
+  "description": "edykim.com/ko static web",
+  "version": "1.0.0",
+  "author": "Edward Kim <ed@edykim.com>",
+  "bugs": {
+    "url": "https://github.com/edykim/edykim.com/issues"
+  },
+  "dependencies": {
+    "@edykim/gatsby-plugin-instagram": "*",
+    "@edykim/gatsby-plugin-redirect-json": "*",
+    "@edykim/gatsby-plugin-taxonomy": "*",
+    "@edykim/gatsby-plugin-template": "*",
+    "@edykim/gatsby-plugin-url": "*",
+    "gatsby": "^2.1.27",
+    "gatsby-image": "^2.0.31",
+    "gatsby-plugin-feed": "^2.0.14",
+    "gatsby-plugin-google-analytics": "^2.0.16",
+    "gatsby-plugin-manifest": "^2.0.22",
+    "gatsby-plugin-offline": "^2.0.24",
+    "gatsby-plugin-react-helmet": "^3.0.8",
+    "gatsby-plugin-sharp": "^2.0.25",
+    "gatsby-remark-copy-linked-files": "^2.0.9",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.2.4",
+    "gatsby-remark-responsive-iframe": "^2.0.9",
+    "gatsby-remark-smartypants": "^2.0.8",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-remark": "^2.3.1",
+    "gatsby-transformer-sharp": "^2.1.15",
+    "prismjs": "^1.15.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.54"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edykim/edykim.com.git"
+  },
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  }
+}
