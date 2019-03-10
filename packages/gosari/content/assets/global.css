@@ -4,6 +4,16 @@ html, body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   word-break: keep-all;
 }
