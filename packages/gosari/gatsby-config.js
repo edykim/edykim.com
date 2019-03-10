@@ -6,6 +6,7 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     profile: `문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다. 웹의 자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처, 커뮤니티에 관심이 많습니다.`,
     siteUrl: `https://edykim.com/ko/`,
+    siteUrlForSitemap: `https://edykim.com`,
     social: {
       github: `edykim`,
       twitter: `haruair`,
@@ -111,5 +112,25 @@ module.exports = {
       options: require(`./config/taxonomy`),
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: siteUrlForSitemap
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+      },
+    },
   ],
 }
