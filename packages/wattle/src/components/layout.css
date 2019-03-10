@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900');
+
+html {
+  font-family: 'Merriweather', serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+}
+
+a {
+  color: #6700ee;
+}
+
+footer {
+  color: #545454;
+  font-size: 0.8em;
+}
