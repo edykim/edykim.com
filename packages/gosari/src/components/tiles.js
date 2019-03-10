@@ -6,7 +6,7 @@ export const Tiles = styled.div`
   margin-left: -10px;
   margin-right: -10px;
   @media (max-width: 800px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     margin-left: 0;
     margin-right: 0;
   }

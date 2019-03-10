@@ -28,6 +28,7 @@ export const BoxArticle = ({ style, article }) => {
       <p
         style={{
           color: "#545454",
+          hyphens: "auto",
         }}
       >
         {excerpt}

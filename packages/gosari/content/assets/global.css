@@ -16,4 +16,6 @@ body {
 
 * {
   word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }

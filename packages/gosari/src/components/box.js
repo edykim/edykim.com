@@ -11,6 +11,7 @@ const boxStyle = css`
   padding: 30px;
   margin: 10px;
   box-sizing: border-box;
+  max-width: 100%;
   transition: background 0.2s ease-in;
   background-color: ${props => props.color || "#ffffff"};
   &:hover {
