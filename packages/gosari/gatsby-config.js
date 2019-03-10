@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/ko`,
   siteMetadata: {
-    title: `edykim.com blog`,
+    title: `매일성장하기`,
     author: `김용균`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://edykim.com/ko/`,

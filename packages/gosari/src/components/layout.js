@@ -5,29 +5,9 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    let header = null
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            marginBottom: 100,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
+    if (location.pathname !== rootPath) {
       header = (
         <h3
           style={{
@@ -53,12 +33,19 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: `760px`,
+          maxWidth: `1024px`,
         }}
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
+        <footer
+          style={{
+            textAlign: "center",
+            margin: 100,
+            fontSize: 14,
+            color: "#545454",
+          }}
+        >
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
