@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -62,13 +62,13 @@ class BlogIndex extends React.Component {
             color={`#6700ee`}
             title={`프로필 👨🏻‍💻`}
             subtext={`저에 대해 더 알고 싶다면`}
-            link={`${__PATH_PREFIX__}/about`}
+            link={`/about`}
           />
           <BulkyButton
             color={`#e91e63`}
             title={`연락하기 📫`}
             subtext={`질의, 제언, 무엇이든 환영합니다`}
-            link={`${__PATH_PREFIX__}/contact`}
+            link={`/contact`}
           />
 
           {posts.map(({ node }, index) => {
@@ -79,7 +79,7 @@ class BlogIndex extends React.Component {
             color={`#6700ee`}
             title={`포스트 전체 목록 보기`}
             subtext={`개발, 일상 등 다양한 주제를 다룹니다. 총 ${totalCount}건의 포스트가 있습니다.`}
-            link={`${__PATH_PREFIX__}/archives`}
+            link={`/archives`}
           />
         </Tiles>
       </Layout>

@@ -25,7 +25,7 @@ class Layout extends React.Component {
             return (
               <HeaderDiv>
                 <Link
-                  to={rootPath}
+                  to={`/`}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <Logo
@@ -63,7 +63,7 @@ class Layout extends React.Component {
             color: "#545454",
           }}
         >
-          <Link to={rootPath}>
+          <Link to={`/`}>
             <Logo
               style={{ display: "block", margin: "0 auto 30px" }}
               size={30}

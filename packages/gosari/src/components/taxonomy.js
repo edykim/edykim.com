@@ -9,10 +9,7 @@ export const Taxonomy = ({ post, style, linkStyle }) => {
   if (post.frontmatter.categories) {
     links = links.concat(
       post.frontmatter.categories.map(category => {
-        const path = `${__PATH_PREFIX__}/category/${sanitizeUrl(
-          category,
-          options
-        )}/`
+        const path = `/category/${sanitizeUrl(category, options)}/`
         return (
           <InBoxLink
             style={linkStyle}
@@ -30,7 +27,7 @@ export const Taxonomy = ({ post, style, linkStyle }) => {
   if (post.frontmatter.tags) {
     links = links.concat(
       post.frontmatter.tags.map(tag => {
-        const path = `${__PATH_PREFIX__}/tag/${sanitizeUrl(tag, options)}/`
+        const path = `/tag/${sanitizeUrl(tag, options)}/`
         return (
           <InBoxLink
             style={linkStyle}
@@ -49,7 +46,7 @@ export const Taxonomy = ({ post, style, linkStyle }) => {
     <div className={`taxonomies`} style={style}>
       {links}
       <InBoxLink
-        to={`${__PATH_PREFIX__}/archives`}
+        to={`/archives`}
         style={{ backgroundColor: "rgba(0,0,0,0.1)", color: "#ffffff" }}
       >
         전체보기
