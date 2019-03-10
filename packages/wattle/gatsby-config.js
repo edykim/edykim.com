@@ -21,10 +21,10 @@ module.exports = {
         name: `edykim.com`,
         short_name: `edykim.com`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#6700ee`,
+        theme_color: `#6700ee`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/edykim-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-remove-serviceworker`,
