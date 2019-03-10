@@ -11,6 +11,7 @@ exports.createPages = ({ graphql, actions }, pluginOptions) => {
   const {
     query,
     componentNameResolver,
+    contextDispatcher,
     isPublic,
     contextField,
     pathFieldName,
@@ -24,20 +25,39 @@ exports.createPages = ({ graphql, actions }, pluginOptions) => {
         return reject()
       }
 
-      data.pages.edges.forEach(({ node }) => {
-        if (isPublic({ node })) return
+      const pagesGrouped = data.pages.edges.reduce((carry, page) => {
+        const componentName = componentNameResolver(page)
+        carry[componentName] = carry[componentName] || []
+        carry[componentName].push(page)
+        return carry
+      }, {})
 
-        var context = {
-          [contextField]: node.fields[contextField],
-        }
-        const componentName = componentNameResolver({ node }, context)
+      const componentNames = Object.keys(pagesGrouped)
 
-        createPage({
-          path: node.fields[pathFieldName],
-          component: path.resolve(
-            `${baseTemplatePath}${componentName}.${templateExtension}`
-          ),
-          context,
+      componentNames.forEach(componentName => {
+        const pages = pagesGrouped[componentName]
+
+        pages.forEach(({ node }, index) => {
+          if (isPublic({ node })) return
+          const previous =
+            index === pages.length - 1 ? null : pages[index + 1].node
+          const next = index === 0 ? null : pages[index - 1].node
+
+          var context = {
+            [contextField]: node.fields[contextField],
+            previous,
+            next,
+          }
+
+          context = contextDispatcher({ node }, context)
+
+          createPage({
+            path: node.fields[pathFieldName],
+            component: path.resolve(
+              `${baseTemplatePath}${componentName}.${templateExtension}`
+            ),
+            context,
+          })
         })
       })
 

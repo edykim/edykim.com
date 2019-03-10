@@ -1,6 +1,12 @@
-const componentNameResolver = ({ node }, context) => {
-  context.lang = node.frontmatter.lang
+const componentNameResolver = ({ node }) => {
   return node.frontmatter.type
+}
+
+const contextDispatcher = ({ node }, context) => {
+  return {
+    ...context,
+    lang: node.frontmatter.lang,
+  }
 }
 
 const isPublic = ({ node }) => {
@@ -11,14 +17,20 @@ const isPublic = ({ node }) => {
 exports.defaultOptions = {
   // Default target contents. It requires alias `pages` in query.
   query: `{
-    pages: allMarkdownRemark {
+    pages: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: { draft: { ne: true }, private: {ne: true} }}
+    ) {
       edges {
         node {
+          excerpt(format: PLAIN, truncate: true)
           frontmatter {
             type
             private
             draft
             lang
+            title
+            date(formatString: "MMMM DD, YYYY")
           }
           fields {
             slug
@@ -45,6 +57,8 @@ exports.defaultOptions = {
   isPublic,
 
   // Resolver for find a matched component name.
-  // Context also passes as a param so it can be editable.
   componentNameResolver,
+
+  // Context passes as a param so it can be editable.
+  contextDispatcher,
 }
