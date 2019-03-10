@@ -6,35 +6,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { BulkyButton } from "../components/bulkyButton"
 import { BoxArticle } from "../components/boxArticle"
+import { Logo } from "../components/logo"
+import { Tiles } from "../components/tiles"
 
-const Tiles = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
-  & > * {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 40%;
-    flex-grow: 1;
-  }
+const HeroDiv = styled.div`
+  margin-bottom: 60px;
+  margin-top: 80px;
   @media (max-width: 800px) {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    & > * {
-      width: 100%;
-      display: block;
-      margin-left: 0;
-      mragin-right: 0;
-    }
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 `
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    const { siteTitle, profile } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
 
     return (
@@ -43,7 +30,8 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div style={{ marginBottom: 60, marginTop: 80 }}>
+        <HeroDiv>
+          <Logo size={50} leftColor={"#6700ee"} rightColor={"#e91e63"} />
           <div
             style={{
               color: "#222222",
@@ -64,22 +52,20 @@ class BlogIndex extends React.Component {
               lineHeight: 1.6,
             }}
           >
-            문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다. 웹의
-            자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처,
-            커뮤니티에 관심이 많습니다.
+            {profile}
           </div>
-        </div>
+        </HeroDiv>
         <Tiles>
           <BulkyButton
             color={`#6700ee`}
-            title={`프로필`}
+            title={`프로필 👨🏻‍💻`}
             subtext={`저에 대해 더 알고 싶다면`}
             link={`${__PATH_PREFIX__}/about-me`}
           />
           <BulkyButton
             color={`#e91e63`}
-            title={`연락하기`}
-            subtext={`질의와 제언 모두 환영합니다`}
+            title={`연락하기 📫`}
+            subtext={`질의, 제언, 무엇이든 환영합니다`}
             link={`${__PATH_PREFIX__}/contact`}
           />
 
@@ -91,7 +77,7 @@ class BlogIndex extends React.Component {
             color={`#6700ee`}
             title={`포스트 전체 목록 보기`}
             subtext={`개발, 일상 등 다양한 주제`}
-            link={`${__PATH_PREFIX__}/archive`}
+            link={`${__PATH_PREFIX__}/archives`}
           />
         </Tiles>
       </Layout>
@@ -106,6 +92,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        profile
       }
     }
     allMarkdownRemark(

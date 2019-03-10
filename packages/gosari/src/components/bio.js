@@ -1,48 +1,89 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from "styled-components"
+import { InBoxLink } from "./inBoxLink"
 
-function Bio() {
+const BioWrapper = styled.div`
+  margin-top: 100px;
+  margin-bottom: 50px;
+`
+
+const StyledImage = styled(Image)`
+  display: block;
+  margin: 0 auto;
+  min-width: 100px;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-bottom: 30px;
+  border: 8px solid #e91e63;
+  transition: transform 0.5s ease-in-out;
+  cursor: help;
+  &:hover {
+    transform: rotateZ(10deg);
+  }
+`
+
+export const Bio = () => {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author, social, profile } = data.site.siteMetadata
         return (
-          <div
-            style={{
-              display: `flex`,
-            }}
-          >
-            <Image
+          <BioWrapper>
+            <StyledImage
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
-                marginRight: 100,
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
+                display: "block",
+                margin: "0 auto",
               }}
               imgStyle={{
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
-            </p>
-          </div>
+            <div
+              style={{ textAlign: "center", maxWidth: 600, margin: "0 auto" }}
+            >
+              <div style={{ color: "#545454", fontSize: 16 }}>
+                <p>
+                  <strong
+                    style={{
+                      display: "block",
+                      color: "#000000",
+                      marginBottom: 10,
+                      fontWeight: 600,
+                    }}
+                  >
+                    안녕하세요, {author}입니다.
+                  </strong>
+                  {` `}
+                  {profile}
+                </p>
+                <div>
+                  <InBoxLink
+                    href={`https://github.com/${social.github}`}
+                    style={{ color: `#ffffff`, backgroundColor: `#24292e` }}
+                  >
+                    {`Github @${social.github}`}
+                  </InBoxLink>
+                  <InBoxLink
+                    href={`https://twitter.com/${social.twitter}`}
+                    style={{ color: `#ffffff`, backgroundColor: `#1da1f2` }}
+                  >
+                    {`트위터 @${social.twitter}`}
+                  </InBoxLink>
+                  <InBoxLink
+                    href={`https://www.linkedin.com/${social.linkedin}`}
+                    style={{ color: `#ffffff`, backgroundColor: `#0073b1` }}
+                  >
+                    {`링크드인 @${social.linkedin}`}
+                  </InBoxLink>
+                </div>
+              </div>
+            </div>
+          </BioWrapper>
         )
       }}
     />
@@ -53,7 +94,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -61,12 +102,13 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
+        profile
         social {
+          github
           twitter
+          linkedin
         }
       }
     }
   }
 `
-
-export default Bio

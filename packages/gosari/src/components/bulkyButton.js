@@ -7,7 +7,7 @@ export const BulkyButton = ({ style, link, title, subtext, color }) => {
       <span
         style={{
           fontSize: 30,
-          fontWeight: 900,
+          fontWeight: 700,
           color: "#ffffff",
           lineHeight: 1,
         }}

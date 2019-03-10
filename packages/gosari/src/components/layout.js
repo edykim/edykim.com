@@ -1,5 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import { Logo } from "./logo"
+
+const HeaderDiv = styled.div`
+  min-height: 50px;
+  margin-top: 40px;
+  @media (max-width: 800px) {
+    margin-top: 20px;
+  }
+`
 
 class Layout extends React.Component {
   render() {
@@ -9,23 +19,22 @@ class Layout extends React.Component {
 
     if (location.pathname !== rootPath) {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <HeaderDiv>
           <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
+            to={rootPath}
+            style={{ textDecoration: "none", color: "inherit" }}
           >
-            {title}
+            <Logo
+              style={{ verticalAlign: "middle" }}
+              size={50}
+              leftColor={"#6700ee"}
+              rightColor={"#e91e63"}
+            />{" "}
+            <span style={{ verticalAlign: "middle", visibility: "none" }}>
+              {title}
+            </span>
           </Link>
-        </h3>
+        </HeaderDiv>
       )
     }
     return (
@@ -34,6 +43,7 @@ class Layout extends React.Component {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: `1024px`,
+          padding: `0 10px`,
         }}
       >
         <header>{header}</header>
@@ -41,7 +51,7 @@ class Layout extends React.Component {
         <footer
           style={{
             textAlign: "center",
-            margin: 100,
+            margin: "100px 0 70px",
             fontSize: 14,
             color: "#545454",
           }}

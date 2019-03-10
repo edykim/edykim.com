@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Box } from "./box"
+import { InBoxLink } from "./inBoxLink"
 
 export const BoxArticle = ({ style, article }) => {
   const { frontmatter, fields, excerpt } = article
   return (
-    <Box style={style}>
+    <Box style={style} color="#ffffff">
       <span style={{ color: "#545454", textTransform: "uppercase" }}>
         {frontmatter.date}
       </span>
@@ -13,12 +14,16 @@ export const BoxArticle = ({ style, article }) => {
         style={{
           lineHeight: 1.6,
           fontWeight: 900,
-          fontFamily: "Noto Sans KR",
           fontSize: 24,
           marginTop: 0,
         }}
       >
-        {frontmatter.title}
+        <Link
+          style={{ color: "inherit", textDecoration: "none" }}
+          to={fields.url}
+        >
+          {frontmatter.title}
+        </Link>
       </h1>
       <p
         style={{
@@ -28,28 +33,10 @@ export const BoxArticle = ({ style, article }) => {
         {excerpt}
       </p>
       <div style={{ textAlign: "right" }}>
-        <ReadMoreButton style={{ display: "inline-block" }} link={fields.url} />
+        <InBoxLink style={{ display: "inline-block" }} to={fields.url}>
+          더 읽기
+        </InBoxLink>
       </div>
     </Box>
-  )
-}
-
-const ReadMoreButton = ({ style, link }) => {
-  return (
-    <Link
-      style={{
-        textDecoration: "none",
-        backgroundColor: "#eeeeee",
-        borderRadius: 50,
-        color: "#6700ee",
-        fontSize: 14,
-        fontWeight: 900,
-        padding: "5px 20px",
-        ...style,
-      }}
-      to={link}
-    >
-      더 읽기
-    </Link>
   )
 }

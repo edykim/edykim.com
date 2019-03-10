@@ -9,12 +9,19 @@ const boxStyle = css`
   border-radius: 15px;
   text-decoration: none;
   padding: 30px;
-  margin: 10px 0;
+  margin: 10px;
   box-sizing: border-box;
-  transition: background 0.3s ease-in;
+  transition: background 0.2s ease-in;
   background-color: ${props => props.color || "#ffffff"};
   &:hover {
-    background-color: ${props => darken(0.02, props.color || "#ffffff")};
+    background-color: ${props =>
+      darken(
+        !props.color || props.color === "#ffffff" ? 0.02 : 0.1,
+        props.color || "#ffffff"
+      )};
+  }
+  @media (max-width: 800px) {
+    margin: 10px 0;
   }
 `
 

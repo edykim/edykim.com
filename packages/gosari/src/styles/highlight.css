@@ -1,0 +1,169 @@
+:root {
+  --highlight-base03    : #000000;
+--highlight-base02    : #606060;
+--highlight-base01    : #606060;
+--highlight-base00    : #393649;
+--highlight-base0     : #d0d0d0;
+--highlight-base1     : #505050;
+--highlight-base2     : #d2e1ee;
+--highlight-base3     : #fafafa;
+--highlight-base4     : #dddddd;
+--highlight-yellow    : #0061b5;
+--highlight-orange    : #5216cb;
+--highlight-red       : #dc322f;
+--highlight-magenta   : #d33682;
+--highlight-violet    : #393945;
+--highlight-blue      : #485487;
+--highlight-cyan      : #5e3e8a;
+--highlight-green     : #001f99;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+color: var(--highlight-base00);
+
+font-family: 'SF Mono','Roboto Mono',Monaco,'Andale Mono','Ubuntu Mono',Menlo,monospace;
+text-align: left;
+white-space: pre;
+word-spacing: normal;
+word-break: normal;
+word-wrap: normal;
+
+line-height: 1.5;
+
+-moz-tab-size: 4;
+-o-tab-size: 4;
+tab-size: 4;
+
+-webkit-hyphens: none;
+-moz-hyphens: none;
+-ms-hyphens: none;
+hyphens: none;
+
+font-size: 0.88em;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+background: var(--highlight-base2);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+background: var(--highlight-base2);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+padding: 1em;
+margin: .5em 0;
+overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+background-color: var(--highlight-base3);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+padding: .1em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+color: var(--highlight-base1);
+}
+
+.token.punctuation {
+color: var(--highlight-base01);
+}
+
+.namespace {
+opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+color: var(--highlight-blue);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+color: var(--highlight-cyan);
+}
+
+.token.entity {
+color: var(--highlight-base00);
+background: var(--highlight-base2);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+color: var(--highlight-green);
+}
+
+.token.function,
+.token.class-name {
+color: var(--highlight-yellow);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+color: var(--highlight-orange);
+}
+
+.token.important,
+.token.bold {
+font-weight: bold;
+}
+.token.italic {
+font-style: italic;
+}
+
+.token.entity {
+cursor: help;
+}
+
+.gatsby-highlight {
+  background-color: var(--highlight-base3);
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight > pre {
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  min-width: 100%;
+}
+
+.gatsby-highlight code[class*="language-"],
+.gatsby-highlight pre[class*="language-"] {
+font-size: 0.88rem;
+}
+
+.gatsby-highlight::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.gatsby-highlight::-webkit-scrollbar-track {
+  background: var(--highlight-base3);
+}
+.gatsby-highlight::-webkit-scrollbar-thumb {
+  background: var(--highlight-base4);
+}
