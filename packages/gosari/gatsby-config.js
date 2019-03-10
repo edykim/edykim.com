@@ -110,5 +110,6 @@ module.exports = {
       resolve: `@edykim/gatsby-plugin-taxonomy`,
       options: require(`./config/taxonomy`),
     },
+    `gatsby-plugin-styled-components`,
   ],
 }
