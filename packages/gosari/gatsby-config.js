@@ -54,15 +54,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: "UA-126646768-1",
+        head: false,
+        respectDNT: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "edykim.com",
       },
     },
-    `gatsby-plugin-feed`,
+    require("./config/feed"),
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `매일성장하기`,
+        short_name: `매일성장하기`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

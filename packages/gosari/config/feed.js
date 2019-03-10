@@ -1,4 +1,4 @@
-const url = require('url')
+const url = require("url")
 
 const serialize = ({ query: { site, allMarkdownRemark } }) => {
   return allMarkdownRemark.edges.map(edge => {
@@ -13,7 +13,7 @@ const serialize = ({ query: { site, allMarkdownRemark } }) => {
         site.siteMetadata.siteUrl,
         edge.node.fields.url || edge.node.fields.slug
       ),
-      custom_elements: [{ 'content:encoded': edge.node.html }],
+      custom_elements: [{ "content:encoded": edge.node.html }],
     })
   })
 }
@@ -68,45 +68,8 @@ module.exports = {
             }
           }
         `,
-        output: '/ko/feed.xml',
-        title: 'edykim.com 블로그 RSS 피드',
-      },
-      {
-        serialize,
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-            allMarkdownRemark(
-              limit: 5,
-              sort: { order: DESC, fields: [frontmatter___date] },
-              filter: {frontmatter: { draft: { ne: true }, private: {ne: true}, type: {eq: "post"}, lang: {eq: "en"} }}
-            ) {
-              edges {
-                node {
-                  excerpt
-                  html
-                  fields {
-                    slug
-                    url
-                  }
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }
-          }
-        `,
-        output: '/feed.xml',
-        title: 'edykim.com RSS Feed',
+        output: "feed.xml",
+        title: "edykim.com 블로그 RSS 피드",
       },
     ],
   },

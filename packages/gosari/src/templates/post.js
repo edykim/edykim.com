@@ -40,7 +40,7 @@ export default ({ data, location, pageContext }) => {
       <Bio />
 
       <Tiles style={{ marginTop: 50 }}>
-        <BoxShare article={post} />
+        <BoxShare article={post} location={location} />
         <BoxTaxonomy
           article={post}
           color={`#6700ee`}
