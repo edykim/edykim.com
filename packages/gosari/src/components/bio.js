@@ -7,20 +7,23 @@ import { InBoxLink } from "./inBoxLink"
 const BioWrapper = styled.div`
   margin-top: 100px;
   margin-bottom: 50px;
+  text-align: center;
+  @media (max-width: 800px) {
+    text-align: left;
+  }
 `
 
 const StyledImage = styled(Image)`
   display: block;
-  margin: 0 auto;
   min-width: 100px;
   border-radius: 100%;
   vertical-align: middle;
-  margin-bottom: 30px;
-  border: 8px solid #e91e63;
+  margin-bottom: 10px;
+  border: 8px solid #eeeeee;
   transition: transform 0.5s ease-in-out;
   cursor: help;
   &:hover {
-    transform: rotateZ(10deg);
+    transform: rotateZ(180deg);
   }
 `
 
@@ -36,16 +39,13 @@ export const Bio = () => {
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
               style={{
-                display: "block",
-                margin: "0 auto",
+                display: "inline-block",
               }}
               imgStyle={{
                 borderRadius: `50%`,
               }}
             />
-            <div
-              style={{ textAlign: "center", maxWidth: 600, margin: "0 auto" }}
-            >
+            <div style={{ maxWidth: 600, margin: "0 auto" }}>
               <div style={{ color: "#545454", fontSize: 16 }}>
                 <p>
                   <strong
@@ -75,7 +75,7 @@ export const Bio = () => {
                     {`트위터 @${social.twitter}`}
                   </InBoxLink>
                   <InBoxLink
-                    href={`https://www.linkedin.com/${social.linkedin}`}
+                    href={`https://www.linkedin.com/in/${social.linkedin}`}
                     style={{ color: `#ffffff`, backgroundColor: `#0073b1` }}
                   >
                     {`링크드인 @${social.linkedin}`}

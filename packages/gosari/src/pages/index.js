@@ -23,6 +23,7 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const { siteTitle, profile } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
+    const totalCount = data.allMarkdownRemark.totalCount
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -60,7 +61,7 @@ class BlogIndex extends React.Component {
             color={`#6700ee`}
             title={`프로필 👨🏻‍💻`}
             subtext={`저에 대해 더 알고 싶다면`}
-            link={`${__PATH_PREFIX__}/about-me`}
+            link={`${__PATH_PREFIX__}/about`}
           />
           <BulkyButton
             color={`#e91e63`}
@@ -76,7 +77,7 @@ class BlogIndex extends React.Component {
           <BulkyButton
             color={`#6700ee`}
             title={`포스트 전체 목록 보기`}
-            subtext={`개발, 일상 등 다양한 주제`}
+            subtext={`개발, 일상 등 다양한 주제를 다룹니다. 총 ${totalCount}건의 포스트가 있습니다.`}
             link={`${__PATH_PREFIX__}/archives`}
           />
         </Tiles>
@@ -106,6 +107,7 @@ export const pageQuery = graphql`
       }
       limit: 5
     ) {
+      totalCount
       edges {
         node {
           excerpt(format: PLAIN, truncate: true)
