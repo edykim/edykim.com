@@ -20,7 +20,7 @@ export const BoxArticle = ({ style, article }) => {
       >
         <Link
           style={{ color: "inherit", textDecoration: "none" }}
-          to={fields.url}
+          to={`${__PATH_PREFIX__}/${fields.url}`}
         >
           {frontmatter.title}
         </Link>
@@ -33,7 +33,10 @@ export const BoxArticle = ({ style, article }) => {
         {excerpt}
       </p>
       <div style={{ textAlign: "right" }}>
-        <InBoxLink style={{ display: "inline-block" }} to={fields.url}>
+        <InBoxLink
+          style={{ display: "inline-block" }}
+          to={`${__PATH_PREFIX__}/${fields.url}`}
+        >
           더 읽기
         </InBoxLink>
       </div>

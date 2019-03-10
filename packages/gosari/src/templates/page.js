@@ -1,22 +1,34 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-export default ({ data }) => {
-  const post = data.markdownRemark
+import { Title, Content } from "../components/article"
+
+export default ({ data, location }) => {
+  const page = data.page
   return (
-    <div>
-      afwf
-      <div
+    <Layout location={location}>
+      <SEO title={page.frontmatter.title} />
+      <Title>
+        <Link
+          to={page.fields.url}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          {page.frontmatter.title}
+        </Link>
+      </Title>
+      <Content
         className="content"
-        dangerouslySetInnerHTML={{ __html: post.html }}
+        dangerouslySetInnerHTML={{ __html: page.html }}
       />
-    </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query PageQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

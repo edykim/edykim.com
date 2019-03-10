@@ -1,10 +1,7 @@
-import React from "react"
 import { graphql } from "gatsby"
+import TaxonomyTemplate from "./tag"
 
-export default ({ data }) => {
-  const post = data.markdownRemark
-  return <div>CATEGORY</div>
-}
+export default TaxonomyTemplate
 
 export const query = graphql`
   query CategoryTaxonomyQuery($taxonomy: [String]!) {
@@ -22,12 +19,15 @@ export const query = graphql`
       totalCount
       edges {
         node {
-          frontmatter {
-            title
-            date
-          }
+          excerpt(format: PLAIN, truncate: true)
           fields {
+            slug
             url
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            dateSort: date(formatString: "MMMM YYYY")
+            title
           }
         }
       }

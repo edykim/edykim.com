@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery } from "gatsby"
 import styled from "styled-components"
 import { Logo } from "./logo"
 
@@ -19,22 +19,29 @@ class Layout extends React.Component {
 
     if (location.pathname !== rootPath) {
       header = (
-        <HeaderDiv>
-          <Link
-            to={rootPath}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <Logo
-              style={{ verticalAlign: "middle" }}
-              size={50}
-              leftColor={"#6700ee"}
-              rightColor={"#e91e63"}
-            />{" "}
-            <span style={{ verticalAlign: "middle", visibility: "none" }}>
-              {title}
-            </span>
-          </Link>
-        </HeaderDiv>
+        <StaticQuery
+          query={layoutQuery}
+          render={data => {
+            return (
+              <HeaderDiv>
+                <Link
+                  to={rootPath}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Logo
+                    style={{ verticalAlign: "middle" }}
+                    size={50}
+                    leftColor={"#6700ee"}
+                    rightColor={"#e91e63"}
+                  />{" "}
+                  <span style={{ verticalAlign: "middle", visibility: "none" }}>
+                    {data.site.siteMetadata.title}
+                  </span>
+                </Link>
+              </HeaderDiv>
+            )
+          }}
+        />
       )
     }
     return (
@@ -56,9 +63,16 @@ class Layout extends React.Component {
             color: "#545454",
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Link to={rootPath}>
+            <Logo
+              style={{ display: "block", margin: "0 auto 30px" }}
+              size={30}
+              leftColor={"#6700ee"}
+              rightColor={"#e91e63"}
+            />
+          </Link>
+          © 2011-{new Date().getFullYear()},{" "}
+          <a href="https://github.com/edykim/edykim.com/issues/new">Feedback</a>
         </footer>
       </div>
     )
@@ -66,3 +80,14 @@ class Layout extends React.Component {
 }
 
 export default Layout
+
+const layoutQuery = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }
+`

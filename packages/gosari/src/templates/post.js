@@ -1,20 +1,22 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import { Title, Tagline, Content, Date } from "../components/article"
-import { Bio } from "../components/bio"
+import SEO from "../components/seo"
 import { Tiles } from "../components/tiles"
-import { BoxArticle } from "../components/boxArticle"
-import { BoxTaxonomy } from "../components/boxTaxonomy"
-import { BoxShare } from "../components/boxShare"
+import { Title, Tagline, Content, Date } from "../components/article"
+import { BoxArticle, BoxTaxonomy, BoxShare } from "../components/boxes"
+import { Bio } from "../components/bio"
 
 export default ({ data, location, pageContext }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <Title>
         <Link
           to={post.fields.url}
@@ -53,12 +55,6 @@ export default ({ data, location, pageContext }) => {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

@@ -21,16 +21,17 @@ const HeroDiv = styled.div`
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const { siteTitle, profile } = data.site.siteMetadata
+    const { profile } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
     const totalCount = data.allMarkdownRemark.totalCount
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="안녕하세요, 김용균입니다"
+          keywords={[`블로그`, `프로그래밍`, `소프트웨어 아키텍처`, `커뮤니티`]}
         />
+
         <HeroDiv>
           <Logo size={50} leftColor={"#6700ee"} rightColor={"#e91e63"} />
           <div
