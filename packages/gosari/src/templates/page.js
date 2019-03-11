@@ -9,7 +9,7 @@ export default ({ data, location }) => {
   const page = data.page
   return (
     <Layout location={location}>
-      <SEO title={page.frontmatter.title} />
+      <SEO title={page.frontmatter.title} description={page.excerpt} />
       <Title>
         <Link
           to={page.fields.url}
@@ -30,6 +30,7 @@ export const query = graphql`
   query PageQuery($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(format: PLAIN, truncate: true)
       frontmatter {
         title
         lang
