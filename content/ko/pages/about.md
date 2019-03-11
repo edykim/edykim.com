@@ -5,8 +5,6 @@ type: page
 date: 2010-10-07T05:28:41+00:00
 lang: ko
 url: about
-ampforwp-amp-on-off:
-  - default
 
 ---
 
@@ -26,10 +24,12 @@ C#도 즐겁게 사용할 수 있습니다. 멋진 Python 코드를 마주하면
 
 무엇이든 마주한 문제를 목록부터 작성하고 순서대로 하는 편입니다. 그리고 글쓰기를 좋아해서 무엇이든 적습니다. 이 웹페이지에는 그렇게 무작정 적어낸 할 일 목록과 글이 담겨 있습니다. 공개하기 창피한 글도 있지만 부끄러움은 제 성장 발판으로 삼으려고 노력합니다.
 
+커뮤니티 [이상한모임](https://weirdx.io/)에서 활동하고 있습니다. 무슨 모임인지 궁금하다면 [슬랙에 가입해서](http://bit.ly/WeirdxSlack) 살펴보세요.
+
 오랜 시간을 제주에서 보내다가 커피가 맛있는 [호주 멜버른에서 6년간 거주](https://edykim.com/ko/category/life-in-australia/)했습니다. 현재는 미국 리버사이드로 자리를 옮겨 정착 중입니다.
 
 제 이력은 [링크드인 @edwardykim](https://linkedin.com/in/edwardykim/)에서 확인할 수 있습니다. 영어 이름으로 Edward를 씁니다. 이 웹페이지 이외에는 [트위터 @haruair](https://twitter.com/haruair/)에서 제 소식을 볼 수 있습니다. 저에게 연락하려면 [연락하기](https://edykim.com/ko/contact/) 페이지에서 마음에 드는 방법을 선택하세요.
 
-이 웹페이지는 2011년 5월에 [haruair.com](https://haruair.com)에서 블로그로 시작했습니다. 2018년에 [edykim.com](https://edykim.com/ko)로 옮겼습니다. 블로그의 시작부터 현재까지 이 공간을 관통하는 주제는 **지속 성장**입니다. 앞으로도 바른 방향성을 갖고 매일 지속해서 성장하는 데 집중하고 싶습니다.
+이 웹페이지는 2011년 5월에 [haruair.com](https://haruair.com)에서 블로그로 시작했습니다. 2018년에 [edykim.com](https://edykim.com/ko)로 옮겼습니다. 블로그의 시작부터 현재까지 이 공간을 관통하는 주제는 **지속 성장**입니다. 그래서 이 웹페이지에 접속하게 되면 매일 성장하기 문구를 가장 먼저 만나게 됩니다. 앞으로도 바른 방향성을 갖고 매일, 지속해서 성장하는 데 집중하고 싶습니다.
 
 -- 김용균
