@@ -3,7 +3,7 @@ const profile = `문제를 해결하기 위해 작고 단단한 코드를 작성
 module.exports = {
   pathPrefix: `/ko`,
   siteMetadata: {
-    title: `매일성장하기`,
+    title: `매일 성장하기`,
     author: `김용균`,
     description: profile,
     profile,
@@ -69,8 +69,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `매일성장하기`,
-        short_name: `매일성장하기`,
+        name: `매일 성장하기`,
+        short_name: `매일 성장하기`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#6700ee`,
