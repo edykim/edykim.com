@@ -57,6 +57,7 @@ export const query = graphql`
   query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(format: PLAIN, truncate: true)
       frontmatter {
         title
         lang
