@@ -38,7 +38,7 @@ exports.collectRedirects = (
             .split(`\n`)
             .filter(v => v)
         ),
-      ].map(v => v.replace(/\/kohttps\:\//, 'https://'))
+      ].map(v => v.replace(/\/kohttps\:\//, 'https:/'))
 
       fs.writeFileSync(
         path.join(currentWorkingDirectory, publicDirName, redirectsFileName),
