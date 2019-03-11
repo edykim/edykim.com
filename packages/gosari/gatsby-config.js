@@ -114,6 +114,7 @@ module.exports = {
       options: require(`./config/taxonomy`),
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
