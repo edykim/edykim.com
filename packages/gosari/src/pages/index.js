@@ -37,7 +37,6 @@ class BlogIndex extends React.Component {
           <div
             style={{
               color: "#222222",
-              fontFamily: "Noto Sans KR",
               fontWeight: 900,
               fontSize: 50,
               lineHeight: 1.3,
@@ -49,7 +48,6 @@ class BlogIndex extends React.Component {
           <div
             style={{
               color: "#545454",
-              fontFamily: "Noto Sans KR",
               fontSize: 20,
               lineHeight: 1.6,
             }}
@@ -60,8 +58,8 @@ class BlogIndex extends React.Component {
         <Tiles>
           <BulkyButton
             color={`#6700ee`}
-            title={`프로필 👨🏻‍💻`}
-            subtext={`저에 대해 더 알고 싶다면`}
+            title={`제 소개 👨🏻‍💻`}
+            subtext={`제가 어떤 사람인지 알고 싶다면!`}
             link={`/about`}
           />
           <BulkyButton
