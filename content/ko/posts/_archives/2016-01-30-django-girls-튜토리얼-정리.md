@@ -143,7 +143,7 @@ admin.site.register(Post)
 
 ### Git 설정하기
 
-리포지터리를 초기화하고 커밋한다. 튜토리얼은 Github 사용하는 방법이 설명되어 있다. `.gitignore`은 아래처럼 작성할 수 있다.
+리포지터리를 초기화하고 커밋한다. 튜토리얼은 GitHub 사용하는 방법이 설명되어 있다. `.gitignore`은 아래처럼 작성할 수 있다.
 
     *.pyc
     __pycache__
@@ -156,7 +156,7 @@ admin.site.register(Post)
 
 [PythonAnywhere][4]는 Python을 올려 사용할 수 있는 PaaS 서비스로 개발에 필요한 다양한 서비스를 제공한다.
 
-먼저 서비스에 가입해서 콘솔에 접속한다. Github에 올린 코드를 clone한 다음 가상환경을 설치하고 진행한다.
+먼저 서비스에 가입해서 콘솔에 접속한다. GitHub에 올린 코드를 clone한 다음 가상환경을 설치하고 진행한다.
 
     $ git clone https://github.com/<your-github-username>/my-first-blog.git
     $ cd my-first-blog
