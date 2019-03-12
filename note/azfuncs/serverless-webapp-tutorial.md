@@ -87,7 +87,7 @@ $ az storage blog service-properties update \
 
 This configuration will create a blob container named `$web`.
 
-Clone the example web project from Github. This project is written by vue.
+Clone the example web project from GitHub. This project is written by vue.
 
 ```bash
 $ git clone https://github.com/Azure-Samples/functions-first-serverless-web-application

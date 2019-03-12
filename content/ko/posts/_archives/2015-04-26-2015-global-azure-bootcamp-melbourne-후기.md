@@ -33,7 +33,7 @@ tags:
 
 깔끔한 새 [azure portal][3]과 함께 진행된 세션으로 Web App과 Azure Mobile App을 만들었다. 이전에는 훨씬 이상한 명칭이었는데 이제는 Web + Mobile 카테고리에서 쉽게 찾을 수 있다. 이 두 서비스는 PaaS로 ASP.Net MVC 프로젝트를 쉽게 올릴 수 있도록 돕는다. Azure Mobile App은 iOS, Android, Windows Mobile 등에서 백엔드로 사용할 수 있는 API를 쉽게 구성할 수 있도록 ASP.Net Web API로 만들어진 기본적인 코드를 제공한다.
 
-Standard 이상의 요금 티어를 선택하면 Deployment Slots, Traffic Routing 등의 기능을 추가적으로 제공한다. 전자는 디플로이 할 수 있는 슬롯을 여러개 제공해 Staging과 Production 환경 구성을 돕는다. 후자는 이 PaaS 접근했을 때 어느 지역으로 연결해야 하는지 설정할 수 있다. 그 외에도 Github이나 Bitbucket도 지원하고 여러가지 세세한 설정이 많아져서 많이 편리해졌음을 알 수 있었다. 이 세션을 진행할 때 wifi 사정이 많이 안좋아 실습은 물론 진행까지 더뎌 아쉬웠다.
+Standard 이상의 요금 티어를 선택하면 Deployment Slots, Traffic Routing 등의 기능을 추가적으로 제공한다. 전자는 디플로이 할 수 있는 슬롯을 여러개 제공해 Staging과 Production 환경 구성을 돕는다. 후자는 이 PaaS 접근했을 때 어느 지역으로 연결해야 하는지 설정할 수 있다. 그 외에도 GitHub이나 Bitbucket도 지원하고 여러가지 세세한 설정이 많아져서 많이 편리해졌음을 알 수 있었다. 이 세션을 진행할 때 wifi 사정이 많이 안좋아 실습은 물론 진행까지 더뎌 아쉬웠다.
 
 ## Getting started with Azure Operational Insights
 
