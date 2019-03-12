@@ -1,5 +1,5 @@
 ---
-title: "Setup Hugo blog on Github Pages with Travis CI"
+title: "Setup Hugo blog on GitHub Pages with Travis CI"
 author: haruair
 date: "2017-02-04T11:10:12+11:00"
 type: post
@@ -7,7 +7,7 @@ lang: en
 slug: setup-hugo-blog-on-github-pages-with-travis-ci
 tags:
   - Hugo
-  - Github
+  - GitHub
   - Travis CI
 ---
 
@@ -18,8 +18,8 @@ single binary file. Other tools require a lot of small settings, installing
 language, setting envrionment, handling a package manager, for example. It still
 requires some config file, but no worries, it's not that big.
 
-This blog serves on Github Pages. If the blog is using Jekyll, Github is the
-best place to serve the blog because Github provides built-in Jekyll serving as
+This blog serves on GitHub Pages. If the blog is using Jekyll, GitHub is the
+best place to serve the blog because GitHub provides built-in Jekyll serving as
 a first citizen. Otherwise, Hugo is in the wild. After writing something new,
 it need to render new static pages, then push that files on the repository.
 When you publish every single time by hand, it is a huge chore and I will never
@@ -63,14 +63,14 @@ $ hugo server -w -D # same as the above
 
 The strength of static blog is that it don't need any program specific
 environment. There are several options, Amazon S3, Dropbox, etc. Even it's
-possible to use some abandoned old geocity-ish service. Github provides Github
+possible to use some abandoned old geocity-ish service. GitHub provides GitHub
 Pages for this case and it's free to use.
 
-Create a [Github](https://github.com) account if you don't have one. Then,
+Create a [GitHub](https://github.com) account if you don't have one. Then,
 Create a repository using `<username>.github.io` as a name.
 
 Go to the your hugo directory, and make it as a git repository, then push
-it to Github.
+it to GitHub.
 
 ```bash
 $ git init
@@ -154,22 +154,22 @@ first.
 
 After then, travis add encrypt file and set the environment variable for the
 encrypt file. Make sure all files are included in git repository and push it
-to Github. Also, do not commit the "unencrypt key" into your repository.
+to GitHub. Also, do not commit the "unencrypt key" into your repository.
 
-### Register the new key in Github
+### Register the new key in GitHub
 
-In Github setting page, go to the ssh section and add `travis_key.pub` for the
+In GitHub setting page, go to the ssh section and add `travis_key.pub` for the
 deploy. [More informations here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 
 ### Enable a repository on Travis CI
 
 Go to [the profile page of Travis CI](https://travis-ci.org/profile), Find out
 the repository, then turn on the switch. It will do the build and will push back
-to Github `master` branch.
+to GitHub `master` branch.
 
 ----
 
-All done. Just add new post using Hugo, push to Github, Travis will handle all
+All done. Just add new post using Hugo, push to GitHub, Travis will handle all
 build problem.
 
 The quickest and the easiest way is here. Clone my repository

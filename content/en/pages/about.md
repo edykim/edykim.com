@@ -48,5 +48,5 @@ My name is Yong Gyun Kim (김용균) and [Google speaks right way](https://trans
 
 - [edward@edykim.com](mailto:edward@edykim.com?subject=Hello)
 - [twitter (@heyedykim)](https://twitter.com/heyedykim)
-- [github (@edykim)](https://github.com/edykim)
+- [GitHub (@edykim)](https://github.com/edykim)
 - [Linkedin](https://www.linkedin.com/in/edwardykim/)

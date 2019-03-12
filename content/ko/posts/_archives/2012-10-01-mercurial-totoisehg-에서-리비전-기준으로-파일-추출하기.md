@@ -32,6 +32,6 @@ tags:
 
 맥에서는 <a href="www.sourcetreeapp.com" target="_blank">Atlassian SourceTree</a>를 사용하면 mercurial, git을 동일한 UI에서 사용할 수 있어 둘 다 별 차이 없는 기분으로 쓸 수 있지만 윈도우에서는 그렇게 멋진 도구를 아직 보질 못했다. 그래서 그나마 간편한 TortoiseHg 설치하고 사용하는 중이고 만족하는 편. 그렇게 복잡한 기능을 사용하고 있지 않아서 어떤 Version Control이든 크게 차이를 느끼지 못하고 있다.
 
-Mercurial을 위한 서비스는 bitbucket에서 제공하고 있으며 소규모 개발을 위한 private 리포지터리도 무료로 준다. 로컬 작업용으로 많이 쓰고 있어서 bitbucket을 사용해본 적이 거의 없지만 github를 조금이라도 본 적 있다면 상당히 비슷한 느낌으로 사용할 수 있다.
+Mercurial을 위한 서비스는 bitbucket에서 제공하고 있으며 소규모 개발을 위한 private 리포지터리도 무료로 준다. 로컬 작업용으로 많이 쓰고 있어서 bitbucket을 사용해본 적이 거의 없지만 GitHub를 조금이라도 본 적 있다면 상당히 비슷한 느낌으로 사용할 수 있다.
 
  [1]: https://edykim.com/wp-content/uploads/2012/10/archive.png

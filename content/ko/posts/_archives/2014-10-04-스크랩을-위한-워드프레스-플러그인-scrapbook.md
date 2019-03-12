@@ -25,7 +25,7 @@ tags:
 
 <del datetime="2014-10-07T06:27:36+00:00">플러그인은 <a href="https://gist.github.com/haruair/0ef8f46922e845b00f27/download" target="_blank">gist</a> 에서 받을 수 있으며 <a href="https://gist.github.com/haruair/0ef8f46922e845b00f27">소스코드도 확인</a> 할 수 있다.</del>
 
-<span id="post-update-2014-10-07">2014년 10월 7일 업데이트</span>: 플러그인을 Github 리포지터리로 옮기고 [bookmarklet][2]을 활용할 수 있도록 `Scrap this`를 추가했다. [다운로드는 여기에서][3], 코드는 [github][4]에서 확인할 수 있다.
+<span id="post-update-2014-10-07">2014년 10월 7일 업데이트</span>: 플러그인을 GitHub 리포지터리로 옮기고 [bookmarklet][2]을 활용할 수 있도록 `Scrap this`를 추가했다. [다운로드는 여기에서][3], 코드는 [github][4]에서 확인할 수 있다.
 
 * * *
 

@@ -482,5 +482,5 @@ _노트, 이 코드는 실제로 동작하지 않으며, 효과적으로 디렉�
 ### 정리, MVVM (Model-View-ViewModel)
 이 접근은 컨트롤러를 뷰 모델로 사용하는 방식이며 `link` 함수를 DOM 조작에 활용함과 동시에 컨트롤러에 간단한 일을 전달하는 역할을 하도록 처리하는 역할을 한다. 이 접근은 함수 내부에 객체를 제공하는 등의 방법으로 중첩된 여러 계층의 코드를 작성하는 것과 같이 복잡한 방법을 사용하지 않고, 마치 코드 자체가 별도로 구성된 것 같이, 함수를 분리하고 다시 할당하는 방식으로 서로 의존적인 관계를 분리하는 데 더 적합하다.
 
-의견이나 개선점은 [Github 이슈](https://github.com/toddmotto/toddmotto.github.io)로 남겨주기 바란다. Enjoy!
+의견이나 개선점은 [GitHub 이슈](https://github.com/toddmotto/toddmotto.github.io)로 남겨주기 바란다. Enjoy!
 

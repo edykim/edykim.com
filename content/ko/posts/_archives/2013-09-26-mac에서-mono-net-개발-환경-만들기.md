@@ -44,7 +44,7 @@ Mac에서 사용하고자 하면 이전엔 CLI를 이용해 설치하는 방법�
 
   1. `Xamarin Studio > Add-in Manager`로 들어간다.
   2. `Gallery` 탭에서 Repository를 선택해 `Manage Repositories`에 들어간다.
-  3. Add를 누른 후 자신의 Xamarin Studio 버전에 맞는 `NuGet Add-in`을 [NuGet Github 페이지][4]에서 찾아 추가한다.
+  3. Add를 누른 후 자신의 Xamarin Studio 버전에 맞는 `NuGet Add-in`을 [NuGet GitHub 페이지][4]에서 찾아 추가한다.
   4. Refresh 버튼을 눌러 갱신한 후 `Nuget Package Management`를 검색해 설치한다.
   5. 이제 각 Project에서 오른쪽 클릭하면 `Manage NuGet Packages`를 볼 수 있으며 눌러 설정할 수 있다.
 

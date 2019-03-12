@@ -53,7 +53,7 @@ tags:
         IdentityFile ~/.ssh/edward.company
     
 
-내 경우엔 Github용 키를 별도로 생성해서 등록했는데 다음과 같이 쓸 수 있다.
+내 경우엔 GitHub용 키를 별도로 생성해서 등록했는데 다음과 같이 쓸 수 있다.
 
     Host github.com
         User git
