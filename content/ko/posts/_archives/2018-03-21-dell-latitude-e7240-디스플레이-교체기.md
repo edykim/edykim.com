@@ -2,7 +2,7 @@
 title: Dell Latitude E7240 디스플레이 교체기
 author: haruair
 type: post
-date: 2018-03-21T07:47:39+00:00
+date: "2018-03-21T07:47:39"
 history:
   - 
     from: https://www.haruair.com/blog/4382

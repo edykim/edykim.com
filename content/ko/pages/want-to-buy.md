@@ -2,7 +2,7 @@
 title: Want to buy it
 author: haruair
 type: page
-date: 2014-10-14T23:32:55+00:00
+date: "2014-10-14T23:32:55"
 lang: ko
 slug: want-to-buy
 ampforwp-amp-on-off:

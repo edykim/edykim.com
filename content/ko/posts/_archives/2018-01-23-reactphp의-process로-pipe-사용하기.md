@@ -2,7 +2,7 @@
 title: ReactPHP의 Process로 pipe 사용하기
 author: haruair
 type: post
-date: 2018-01-23T10:47:14+00:00
+date: "2018-01-23T10:47:14"
 history:
   - 
     from: https://www.haruair.com/blog/4146

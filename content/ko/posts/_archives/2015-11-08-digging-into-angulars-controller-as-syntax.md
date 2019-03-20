@@ -2,7 +2,7 @@
 title: "Angular의 Controller As 문법 살펴보기"
 author: haruair
 type: post
-date: 2015-11-08T08:14:00-07:00
+date: "2015-11-08T08:14:00"
 lang: ko
 slug: digging-into-angulars-controller-as-syntax
 categories:

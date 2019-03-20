@@ -2,7 +2,7 @@
 title: ssh config로 ssh 접속 간편하게 하기
 author: haruair
 type: post
-date: 2014-06-30T23:52:36+00:00
+date: "2014-06-30T23:52:36"
 history:
   - 
     from: https://www.haruair.com/blog/2219

@@ -2,7 +2,7 @@
 title: Startup Engineering 수강 시작
 author: haruair
 type: post
-date: 2013-06-24T15:47:51+00:00
+date: "2013-06-24T15:47:51"
 history:
   - 
     from: https://www.haruair.com/blog/1670

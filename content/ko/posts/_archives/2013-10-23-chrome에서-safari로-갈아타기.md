@@ -2,7 +2,7 @@
 title: Chrome에서 Safari로 갈아타기
 author: haruair
 type: post
-date: 2013-10-23T14:45:28+00:00
+date: "2013-10-23T14:45:28"
 history:
   - 
     from: https://www.haruair.com/blog/1853

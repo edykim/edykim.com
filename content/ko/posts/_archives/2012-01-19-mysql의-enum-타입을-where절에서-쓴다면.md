@@ -2,7 +2,7 @@
 title: mysql의 enum 타입을 where절에서 사용하기
 author: haruair
 type: post
-date: 2012-01-19T03:36:44+00:00
+date: "2012-01-19T03:36:44"
 history:
   - 
     from: https://www.haruair.com/blog/1079

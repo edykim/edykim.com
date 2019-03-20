@@ -2,7 +2,7 @@
 title: 'Private: resume'
 author: haruair
 type: page
-date: 2012-02-13T04:28:06+00:00
+date: "2012-02-13T04:28:06"
 draft: true
 private: true
 lang: ko

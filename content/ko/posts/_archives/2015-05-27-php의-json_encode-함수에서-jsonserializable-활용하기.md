@@ -2,7 +2,7 @@
 title: PHP의 json_encode() 함수에서 JsonSerializable 활용하기
 author: haruair
 type: post
-date: 2015-05-27T03:33:46+00:00
+date: "2015-05-27T03:33:46"
 history:
   - 
     from: https://www.haruair.com/blog/2894

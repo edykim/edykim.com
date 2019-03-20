@@ -2,7 +2,7 @@
 title: php callable 살펴보기
 author: haruair
 type: post
-date: 2018-04-05T02:59:00+00:00
+date: "2018-04-05T02:59:00"
 history:
   - 
     from: https://www.haruair.com/blog/4431

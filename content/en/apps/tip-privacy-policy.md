@@ -2,7 +2,7 @@
 title: Privacy Policy - Tiny Tip Calculator
 author: haruair
 type: page
-date: 2019-01-02T05:28:41-08:00
+date: "2019-01-02T05:28:41"
 url: /app/tip-calculator/privacy-policy
 lang: en
 

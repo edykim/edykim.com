@@ -2,7 +2,7 @@
 title: 기술 업계의 독성 말투 문제, 고칩시다!
 author: haruair
 type: post
-date: 2018-12-12T14:52:00-07:00
+date: "2018-12-12T14:52:00"
 lang: ko
 slug: tech-has-a-toxic-tone-problem-lets-fix-it
 headline:

@@ -2,7 +2,7 @@
 title: Gradle로 Java 프로젝트 시작하기 요약
 author: haruair
 type: post
-date: 2016-04-02T13:44:20+00:00
+date: "2016-04-02T13:44:20"
 history:
   - 
     from: https://www.haruair.com/blog/3535

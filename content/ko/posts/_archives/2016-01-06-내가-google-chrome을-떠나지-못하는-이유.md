@@ -2,7 +2,7 @@
 title: 내가 Google Chrome을 떠나지 못하는 이유
 author: haruair
 type: post
-date: 2016-01-05T23:54:40+00:00
+date: "2016-01-05T23:54:40"
 history:
   - 
     from: https://www.haruair.com/blog/3332

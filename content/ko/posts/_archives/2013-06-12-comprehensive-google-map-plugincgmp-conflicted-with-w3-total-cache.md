@@ -2,7 +2,7 @@
 title: Comprehensive Google Map Plugin(CGMP) conflicted with W3 Total Cache
 author: haruair
 type: post
-date: 2013-06-12T08:09:21+00:00
+date: "2013-06-12T08:09:21"
 history:
   - 
     from: https://www.haruair.com/blog/1661

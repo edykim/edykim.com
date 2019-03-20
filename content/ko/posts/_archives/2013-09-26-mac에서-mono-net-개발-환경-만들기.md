@@ -2,7 +2,7 @@
 title: mac에서 Mono (.Net) 개발 환경 만들기
 author: haruair
 type: post
-date: 2013-09-25T23:30:08+00:00
+date: "2013-09-25T23:30:08"
 history:
   - 
     from: https://www.haruair.com/blog/1817

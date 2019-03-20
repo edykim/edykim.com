@@ -2,7 +2,7 @@
 title: MAMP에서 Sublime Text로 Xdebug 사용하기
 author: haruair
 type: post
-date: 2014-07-15T02:42:03+00:00
+date: "2014-07-15T02:42:03"
 history:
   - 
     from: https://www.haruair.com/blog/2270

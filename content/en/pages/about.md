@@ -2,7 +2,7 @@
 title: About Me
 author: haruair
 type: page
-date: 2010-10-27T05:28:41+00:00
+date: "2010-10-27T05:28:41"
 url: /about
 lang: en
 

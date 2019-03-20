@@ -2,7 +2,7 @@
 title: Programming Language Theory
 author: haruair
 type: page
-date: 2018-03-24T03:12:17+00:00
+date: "2018-03-24T03:12:17"
 lang: en
 url: plt
 

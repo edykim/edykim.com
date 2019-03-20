@@ -2,7 +2,7 @@
 title: python과 django 스터디 시작
 author: haruair
 type: post
-date: 2012-09-25T00:49:58+00:00
+date: "2012-09-25T00:49:58"
 history:
   - 
     from: https://www.haruair.com/blog/1337

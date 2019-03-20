@@ -2,7 +2,7 @@
 title: 'TypeScript에서 <reference> 없이 쓰기'
 author: haruair
 type: post
-date: 2015-11-30T00:00:08+00:00
+date: "2015-11-30T00:00:08"
 history:
   - 
     from: https://www.haruair.com/blog/3256

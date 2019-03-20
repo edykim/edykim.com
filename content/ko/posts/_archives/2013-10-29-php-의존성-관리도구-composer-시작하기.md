@@ -2,7 +2,7 @@
 title: PHP 의존성 관리도구 – Composer 시작하기
 author: haruair
 type: post
-date: 2013-10-29T06:14:30+00:00
+date: "2013-10-29T06:14:30"
 history:
   - 
     from: https://www.haruair.com/blog/1860

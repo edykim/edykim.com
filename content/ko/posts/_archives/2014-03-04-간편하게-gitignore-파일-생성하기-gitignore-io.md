@@ -2,7 +2,7 @@
 title: 간편하게 .gitignore 파일 생성하기 – gitignore.io
 author: haruair
 type: post
-date: 2014-03-04T01:15:41+00:00
+date: "2014-03-04T01:15:41"
 history:
   - 
     from: https://www.haruair.com/blog/2017

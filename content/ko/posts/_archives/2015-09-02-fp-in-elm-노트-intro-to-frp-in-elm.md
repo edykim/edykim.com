@@ -2,7 +2,7 @@
 title: FP in Elm 노트 – Intro to FRP in Elm
 author: haruair
 type: post
-date: 2015-09-01T23:14:56+00:00
+date: "2015-09-01T23:14:56"
 history:
   - 
     from: https://www.haruair.com/blog/3039

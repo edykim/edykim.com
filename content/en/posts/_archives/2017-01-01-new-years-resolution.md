@@ -1,7 +1,7 @@
 ---
 title: "New Year's Resolution"
 author: haruair
-date: "2017-01-02T04:11:00+11:00"
+date: "2017-01-02T04:11:00"
 type: post
 lang: en
 slug: new-years-resolution

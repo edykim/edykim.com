@@ -2,7 +2,7 @@
 title: iOS SpriteKit 관련 문서 모음
 author: haruair
 type: post
-date: 2014-02-04T00:41:57+00:00
+date: "2014-02-04T00:41:57"
 history:
   - 
     from: https://www.haruair.com/blog/1959

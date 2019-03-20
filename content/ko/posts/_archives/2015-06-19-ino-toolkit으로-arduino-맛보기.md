@@ -2,7 +2,7 @@
 title: ino toolkit으로 Arduino 맛보기
 author: haruair
 type: post
-date: 2015-06-19T11:57:37+00:00
+date: "2015-06-19T11:57:37"
 history:
   - 
     from: https://www.haruair.com/blog/2932

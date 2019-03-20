@@ -2,7 +2,7 @@
 title: JavaScript의 Generator와 Koa.js 소개
 author: haruair
 type: post
-date: 2016-02-22T07:05:11+00:00
+date: "2016-02-22T07:05:11"
 history:
   - 
     from: https://www.haruair.com/blog/3425

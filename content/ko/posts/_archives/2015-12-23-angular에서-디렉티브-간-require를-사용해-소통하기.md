@@ -2,7 +2,7 @@
 title: Angular에서 디렉티브 간 `require`를 사용해 소통하기
 author: haruair
 type: post
-date: 2015-12-23T00:00:15+00:00
+date: "2015-12-23T00:00:15"
 history:
   - 
     from: https://www.haruair.com/blog/3315

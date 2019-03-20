@@ -2,7 +2,7 @@
 title: 맥을 위한, Windows Live Writer의 대안을 찾아 떠나는 여행
 author: haruair
 type: post
-date: 2012-07-30T11:20:15+00:00
+date: "2012-07-30T11:20:15"
 history:
   - 
     from: https://www.haruair.com/blog/1254

@@ -2,7 +2,7 @@
 title: 리액트 quick start 노트
 author: haruair
 type: post
-date: 2018-02-11T11:49:07+00:00
+date: "2018-02-11T11:49:07"
 history:
   - 
     from: https://www.haruair.com/blog/4303

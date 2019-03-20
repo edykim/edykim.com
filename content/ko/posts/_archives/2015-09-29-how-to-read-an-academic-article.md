@@ -2,7 +2,7 @@
 title: 어떻게 학술 논문을 읽어야 하는가
 author: haruair
 type: post
-date: 2015-09-29T08:14:00-07:00
+date: "2015-09-29T08:14:00"
 lang: ko
 slug: how-to-read-an-academic-article
 categories:

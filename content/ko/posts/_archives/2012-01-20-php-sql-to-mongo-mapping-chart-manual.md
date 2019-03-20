@@ -2,7 +2,7 @@
 title: 'PHP: SQL to Mongo Mapping Chart – Manual'
 author: haruair
 type: post
-date: 2012-01-20T05:18:03+00:00
+date: "2012-01-20T05:18:03"
 history:
   - 
     from: https://www.haruair.com/blog/1100

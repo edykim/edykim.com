@@ -2,7 +2,7 @@
 title: 세금 정정 신청 Amendment requests 후기
 author: haruair
 type: post
-date: 2014-12-10T00:40:37+00:00
+date: "2014-12-10T00:40:37"
 history:
   - 
     from: https://www.haruair.com/blog/2573

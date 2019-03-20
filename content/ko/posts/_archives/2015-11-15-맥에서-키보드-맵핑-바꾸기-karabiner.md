@@ -2,7 +2,7 @@
 title: 맥에서 키보드 맵핑 바꾸기, Karabiner
 author: haruair
 type: post
-date: 2015-11-15T10:44:48+00:00
+date: "2015-11-15T10:44:48"
 history:
   - 
     from: https://www.haruair.com/blog/3213

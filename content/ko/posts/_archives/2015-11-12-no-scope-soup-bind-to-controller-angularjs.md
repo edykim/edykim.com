@@ -2,7 +2,7 @@
 title: "$scope은 이제 그만, Angular에서 bindToController 활용하기"
 author: haruair
 type: post
-date: 2015-11-12T08:14:00-07:00
+date: "2015-11-12T08:14:00"
 lang: ko
 slug: no-scope-soup-bind-to-controller-angularjs
 categories:

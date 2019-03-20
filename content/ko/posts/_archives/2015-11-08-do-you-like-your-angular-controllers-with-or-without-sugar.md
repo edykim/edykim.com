@@ -2,7 +2,7 @@
 title: Angular 컨트롤러를 작성하는 두가지 방법
 author: haruair
 type: post
-date: 2015-11-08T08:14:00-07:00
+date: "2015-11-08T08:14:00"
 lang: ko
 slug: do-you-like-your-angular-controllers-with-or-without-sugar
 categories:

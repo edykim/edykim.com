@@ -2,7 +2,7 @@
 title: 터미널에서 GitHub 이슈 관리하기 ghi
 author: haruair
 type: post
-date: 2016-04-04T00:00:55+00:00
+date: "2016-04-04T00:00:55"
 history:
   - 
     from: https://www.haruair.com/blog/3513

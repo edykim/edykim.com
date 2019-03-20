@@ -2,7 +2,7 @@
 title: Terminal에서 MAMP의 php 사용하기
 author: haruair
 type: post
-date: 2015-01-02T01:33:14+00:00
+date: "2015-01-02T01:33:14"
 history:
   - 
     from: https://www.haruair.com/blog/2604
