@@ -2,7 +2,7 @@
 title: Scrapbook – 스크랩을 위한 워드프레스 플러그인
 author: haruair
 type: post
-date: 2014-10-04T14:41:56+00:00
+date: "2014-10-04T14:41:56"
 history:
   - 
     from: https://www.haruair.com/blog/2431

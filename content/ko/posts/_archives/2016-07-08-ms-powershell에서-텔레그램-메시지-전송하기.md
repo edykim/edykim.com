@@ -2,7 +2,7 @@
 title: MS PowerShell에서 텔레그램 메시지 전송하기
 author: haruair
 type: post
-date: 2016-07-08T13:46:50+00:00
+date: "2016-07-08T13:46:50"
 history:
   - 
     from: https://www.haruair.com/blog/3664

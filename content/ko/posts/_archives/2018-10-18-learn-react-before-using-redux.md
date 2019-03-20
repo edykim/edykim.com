@@ -2,7 +2,7 @@
 title: React에서 Redux 전에 배워야 할 8가지
 author: haruair
 type: post
-date: 2018-11-04T20:52:00-07:00
+date: "2018-11-04T20:52:00"
 lang: ko
 slug: learn-react-before-using-redux
 headline:

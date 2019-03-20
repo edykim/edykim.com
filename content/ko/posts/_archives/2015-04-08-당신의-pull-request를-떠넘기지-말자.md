@@ -2,7 +2,7 @@
 title: 당신의 Pull Request를 “떠넘기지” 말라
 author: haruair
 type: post
-date: 2015-04-07T23:30:28+00:00
+date: "2015-04-07T23:30:28"
 history:
   - 
     from: https://www.haruair.com/blog/2721

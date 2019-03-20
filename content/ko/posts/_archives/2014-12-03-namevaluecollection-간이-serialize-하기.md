@@ -2,7 +2,7 @@
 title: NameValueCollection을 JSON으로 Serialize 하기
 author: haruair
 type: post
-date: 2014-12-03T04:04:11+00:00
+date: "2014-12-03T04:04:11"
 history:
   - 
     from: https://www.haruair.com/blog/2543

@@ -2,7 +2,7 @@
 title: JavaScript로 Arduino 제어하기 Johnny-Five
 author: haruair
 type: post
-date: 2015-06-26T14:50:52+00:00
+date: "2015-06-26T14:50:52"
 history:
   - 
     from: https://www.haruair.com/blog/2956

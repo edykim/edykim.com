@@ -2,7 +2,7 @@
 title: FP in Elm 노트 – Intro to ML in Elm
 author: haruair
 type: post
-date: 2015-08-25T14:36:23+00:00
+date: "2015-08-25T14:36:23"
 history:
   - 
     from: https://www.haruair.com/blog/3034

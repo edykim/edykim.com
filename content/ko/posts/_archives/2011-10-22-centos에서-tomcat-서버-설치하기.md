@@ -2,7 +2,7 @@
 title: centOS에서 tomcat 서버 설치하기
 author: haruair
 type: post
-date: 2011-10-22T05:52:16+00:00
+date: "2011-10-22T05:52:16"
 history:
   - 
     from: https://www.haruair.com/blog/887

@@ -2,7 +2,7 @@
 title: PHP에서 Codeigniter 옮겨타기 1
 author: haruair
 type: post
-date: 2012-08-08T13:35:58+00:00
+date: "2012-08-08T13:35:58"
 history:
   - 
     from: https://www.haruair.com/blog/1293

@@ -2,7 +2,7 @@
 title: 내가 보고 싶은 글 번역하기
 author: haruair
 type: post
-date: 2019-01-11T11:52:00-07:00
+date: "2019-01-11T11:52:00"
 lang: ko
 slug: talk-translate-what-i-want
 categories:

@@ -2,7 +2,7 @@
 title: 커피 세 잔으로 BDD하기 – CoffeeScript, Mocha, Chai
 author: haruair
 type: post
-date: 2015-01-18T13:28:53+00:00
+date: "2015-01-18T13:28:53"
 history:
   - 
     from: https://www.haruair.com/blog/2621

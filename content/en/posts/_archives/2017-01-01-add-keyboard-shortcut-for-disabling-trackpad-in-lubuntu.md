@@ -1,7 +1,7 @@
 ---
 title: "Add keyboard shortcut for disabling trackpad in Lubuntu"
 author: haruair
-date: "2017-01-31T15:11:45+11:00"
+date: "2017-01-31T15:11:45"
 type: post
 lang: en
 slug: add-keyboard-shortcut-for-disabling-trackpad-in-lubuntu

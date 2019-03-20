@@ -2,7 +2,7 @@
 title: 'Private: music'
 author: haruair
 type: page
-date: 2011-11-19T04:21:53+00:00
+date: "2011-11-19T04:21:53"
 draft: true
 private: true
 lang: ko

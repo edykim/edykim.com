@@ -2,7 +2,7 @@
 title: PHP에서 DateTime Class 사용하기
 author: haruair
 type: post
-date: 2013-11-02T12:07:22+00:00
+date: "2013-11-02T12:07:22"
 history:
   - 
     from: https://www.haruair.com/blog/1871

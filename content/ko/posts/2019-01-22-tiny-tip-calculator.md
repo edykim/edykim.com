@@ -2,7 +2,7 @@
 title: Tiny Tip Calculator 개발기
 author: haruair
 type: post
-date: 2019-01-22T11:52:00-07:00
+date: "2019-01-22T11:52:00"
 lang: ko
 slug: postmortem-tiny-tip-calculator
 categories:

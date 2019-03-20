@@ -2,7 +2,7 @@
 title: Lenovo X1 Carbon 6세대 구입
 author: haruair
 type: post
-date: 2018-08-16T21:42:33+00:00
+date: "2018-08-16T21:42:33"
 history:
   - 
     from: https://www.haruair.com/blog/4587

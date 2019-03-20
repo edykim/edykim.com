@@ -2,7 +2,7 @@
 title: Hacktoberfest 2018 후기
 author: haruair
 type: post
-date: 2018-11-14T17:02:00-07:00
+date: "2018-11-14T17:02:00"
 lang: ko
 slug: hacktoberfest-2018
 categories:

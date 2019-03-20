@@ -2,7 +2,7 @@
 title: JavaScript 부분 어플리케이션
 author: haruair
 type: post
-date: 2015-07-13T13:50:05+00:00
+date: "2015-07-13T13:50:05"
 history:
   - 
     from: https://www.haruair.com/blog/2975

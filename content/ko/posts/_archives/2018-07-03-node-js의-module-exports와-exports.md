@@ -2,7 +2,7 @@
 title: node.js의 module.exports와 exports
 author: haruair
 type: post
-date: 2018-07-02T22:35:48+00:00
+date: "2018-07-02T22:35:48"
 history:
   - 
     from: https://www.haruair.com/blog/4542

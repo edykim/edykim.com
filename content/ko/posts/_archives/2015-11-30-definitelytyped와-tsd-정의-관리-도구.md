@@ -2,7 +2,7 @@
 title: DefinitelyTyped와 `tsd` 정의 관리 도구
 author: haruair
 type: post
-date: 2015-11-29T22:27:10+00:00
+date: "2015-11-29T22:27:10"
 history:
   - 
     from: https://www.haruair.com/blog/3268

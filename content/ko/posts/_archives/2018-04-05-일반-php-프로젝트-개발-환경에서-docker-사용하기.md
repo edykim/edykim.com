@@ -2,7 +2,7 @@
 title: 일반 PHP 프로젝트 개발 환경에서 docker 사용하기
 author: haruair
 type: post
-date: 2018-04-05T09:54:21+00:00
+date: "2018-04-05T09:54:21"
 history:
   - 
     from: https://www.haruair.com/blog/4430

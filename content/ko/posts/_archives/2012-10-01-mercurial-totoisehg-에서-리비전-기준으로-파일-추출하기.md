@@ -2,7 +2,7 @@
 title: Mercurial, totoiseHg 에서 리비전 기준으로 파일 추출하기
 author: haruair
 type: post
-date: 2012-10-01T05:34:57+00:00
+date: "2012-10-01T05:34:57"
 history:
   - 
     from: https://www.haruair.com/blog/1346

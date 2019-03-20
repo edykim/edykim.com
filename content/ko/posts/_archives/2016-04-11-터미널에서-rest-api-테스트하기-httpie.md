@@ -2,7 +2,7 @@
 title: 터미널에서 REST API 테스트하기 HTTPie
 author: haruair
 type: post
-date: 2016-04-11T00:00:41+00:00
+date: "2016-04-11T00:00:41"
 history:
   - 
     from: https://www.haruair.com/blog/3516

@@ -2,7 +2,7 @@
 title: simpson Tapped Out – 심슨을 게임에서 만나다
 author: haruair
 type: post
-date: 2012-10-05T23:10:22+00:00
+date: "2012-10-05T23:10:22"
 history:
   - 
     from: https://www.haruair.com/blog/1358

@@ -2,7 +2,7 @@
 title: 리액트 Advanced guides 전반부 노트
 author: haruair
 type: post
-date: 2018-02-14T10:54:58+00:00
+date: "2018-02-14T10:54:58"
 history:
   - 
     from: https://www.haruair.com/blog/4313

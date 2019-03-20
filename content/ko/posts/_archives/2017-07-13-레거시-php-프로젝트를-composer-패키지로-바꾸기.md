@@ -2,7 +2,7 @@
 title: 레거시 php 프로젝트를 composer 패키지로 바꾸기
 author: haruair
 type: post
-date: 2017-07-13T08:41:27+00:00
+date: "2017-07-13T08:41:27"
 history:
   - 
     from: https://www.haruair.com/blog/3968

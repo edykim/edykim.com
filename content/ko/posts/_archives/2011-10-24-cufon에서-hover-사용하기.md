@@ -2,7 +2,7 @@
 title: Cufon에서 hover 사용하기
 author: haruair
 type: post
-date: 2011-10-24T00:08:31+00:00
+date: "2011-10-24T00:08:31"
 history:
   - 
     from: https://www.haruair.com/blog/894

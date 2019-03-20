@@ -2,7 +2,7 @@
 title: History
 author: haruair
 type: page
-date: 2012-01-12T23:52:32+00:00
+date: "2012-01-12T23:52:32"
 lang: ko
 slug: history
 ampforwp-amp-on-off:

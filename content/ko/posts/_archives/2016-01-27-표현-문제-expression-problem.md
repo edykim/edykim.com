@@ -2,7 +2,7 @@
 title: 표현 문제 (Expression problem)
 author: haruair
 type: post
-date: 2016-01-26T23:06:00+00:00
+date: "2016-01-26T23:06:00"
 history:
   - 
     from: https://www.haruair.com/blog/3338

@@ -2,7 +2,7 @@
 title: Dell Latitude E7240 Archlinux 설치하기
 author: haruair
 type: post
-date: 2018-01-27T10:50:51+00:00
+date: "2018-01-27T10:50:51"
 history:
   - 
     from: https://www.haruair.com/blog/4153

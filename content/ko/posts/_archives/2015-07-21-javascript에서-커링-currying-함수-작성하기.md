@@ -2,7 +2,7 @@
 title: JavaScript에서 커링 currying 함수 작성하기
 author: haruair
 type: post
-date: 2015-07-21T04:37:25+00:00
+date: "2015-07-21T04:37:25"
 history:
   - 
     from: https://www.haruair.com/blog/2993

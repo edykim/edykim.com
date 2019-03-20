@@ -2,7 +2,7 @@
 title: JavaScript 라이브러리 모음
 author: haruair
 type: page
-date: 2014-05-27T12:37:21+00:00
+date: "2014-05-27T12:37:21"
 lang: ko
 slug: javascript-libraries
 ampforwp-amp-on-off:

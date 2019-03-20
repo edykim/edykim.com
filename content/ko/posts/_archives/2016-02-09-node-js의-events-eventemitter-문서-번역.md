@@ -2,7 +2,7 @@
 title: Node.js의 Events `EventEmitter` 번역
 author: haruair
 type: post
-date: 2016-02-09T05:00:57+00:00
+date: "2016-02-09T05:00:57"
 history:
   - 
     from: https://www.haruair.com/blog/3396

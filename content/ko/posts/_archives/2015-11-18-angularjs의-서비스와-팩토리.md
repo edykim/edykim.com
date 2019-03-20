@@ -2,7 +2,7 @@
 title: AngularJS의 서비스와 팩토리
 author: haruair
 type: post
-date: 2015-11-17T23:00:58+00:00
+date: "2015-11-17T23:00:58"
 history:
   - 
     from: https://www.haruair.com/blog/3223

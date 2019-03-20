@@ -2,7 +2,7 @@
 title: wordpress plugin 개발 후기
 author: haruair
 type: post
-date: 2012-08-20T13:33:17+00:00
+date: "2012-08-20T13:33:17"
 history:
   - 
     from: https://www.haruair.com/blog/1301

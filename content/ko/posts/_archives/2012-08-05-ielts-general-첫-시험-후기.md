@@ -2,7 +2,7 @@
 title: ielts general 첫 시험 후기
 author: haruair
 type: post
-date: 2012-08-05T13:11:09+00:00
+date: "2012-08-05T13:11:09"
 history:
   - 
     from: https://www.haruair.com/blog/1285

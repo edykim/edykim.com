@@ -2,7 +2,7 @@
 title: SQLAlchemy 시작하기 – Part 2
 author: haruair
 type: post
-date: 2013-08-14T01:00:00+00:00
+date: "2013-08-14T01:00:00"
 history:
   - 
     from: https://www.haruair.com/blog/1695

@@ -2,7 +2,7 @@
 title: 부트캠프로 thunderbolt 외장 하드에 Windows 8 설치하기
 author: haruair
 type: post
-date: 2013-12-19T00:33:51+00:00
+date: "2013-12-19T00:33:51"
 history:
   - 
     from: https://www.haruair.com/blog/1938

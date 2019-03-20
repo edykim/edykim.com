@@ -2,7 +2,7 @@
 title: Slack에서 Hubot 사용하기
 author: haruair
 type: post
-date: 2015-01-16T14:00:00+00:00
+date: "2015-01-16T14:00:00"
 history:
   - 
     from: https://www.haruair.com/blog/2617

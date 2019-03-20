@@ -2,7 +2,7 @@
 title: PHP에서 커링 currying 함수 작성하기
 author: haruair
 type: post
-date: 2018-01-27T01:55:11+00:00
+date: "2018-01-27T01:55:11"
 history:
   - 
     from: https://www.haruair.com/blog/4149

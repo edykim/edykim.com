@@ -2,7 +2,7 @@
 title: 제가 논문을 읽어야 하나요?
 author: haruair
 type: post
-date: 2015-11-02T08:14:00-07:00
+date: "2015-11-02T08:14:00"
 lang: ko
 slug: should-i-read-papers
 categories:

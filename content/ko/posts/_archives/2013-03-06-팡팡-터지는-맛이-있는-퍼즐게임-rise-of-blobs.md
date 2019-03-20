@@ -2,7 +2,7 @@
 title: 팡팡 터지는 맛이 있는 퍼즐게임 – Rise of Blobs
 author: haruair
 type: post
-date: 2013-03-06T03:11:59+00:00
+date: "2013-03-06T03:11:59"
 history:
   - 
     from: https://www.haruair.com/blog/1567

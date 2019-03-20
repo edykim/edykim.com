@@ -2,7 +2,7 @@
 title: jQuery UI datepicker rangeSelect problem
 author: haruair
 type: post
-date: 2012-01-13T05:50:05+00:00
+date: "2012-01-13T05:50:05"
 history:
   - 
     from: https://www.haruair.com/blog/1035

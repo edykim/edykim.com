@@ -2,7 +2,7 @@
 title: Fuji Xerox 레이저 프린터 구입기
 author: haruair
 type: post
-date: 2016-01-30T04:45:45+00:00
+date: "2016-01-30T04:45:45"
 history:
   - 
     from: https://www.haruair.com/blog/3356

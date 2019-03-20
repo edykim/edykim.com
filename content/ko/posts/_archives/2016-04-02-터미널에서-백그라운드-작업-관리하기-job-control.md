@@ -2,7 +2,7 @@
 title: 터미널에서 백그라운드 작업 관리하기 job-control
 author: haruair
 type: post
-date: 2016-04-02T12:26:13+00:00
+date: "2016-04-02T12:26:13"
 history:
   - 
     from: https://www.haruair.com/blog/3530
