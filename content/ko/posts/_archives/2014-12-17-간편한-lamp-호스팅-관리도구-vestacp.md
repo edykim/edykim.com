@@ -2,7 +2,7 @@
 title: 간편한 LAMP 호스팅 관리도구 VestaCP
 author: haruair
 type: post
-date: 2014-12-17T02:46:06+00:00
+date: "2014-12-17T02:46:06"
 history:
   - 
     from: https://www.haruair.com/blog/2586

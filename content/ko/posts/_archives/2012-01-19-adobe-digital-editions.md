@@ -2,7 +2,7 @@
 title: Adobe Digital Editions
 author: haruair
 type: post
-date: 2012-01-19T00:25:44+00:00
+date: "2012-01-19T00:25:44"
 history:
   - 
     from: https://www.haruair.com/blog/1086

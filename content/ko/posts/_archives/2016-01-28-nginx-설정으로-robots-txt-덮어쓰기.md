@@ -2,7 +2,7 @@
 title: Nginx 설정으로 robots.txt 덮어쓰기
 author: haruair
 type: post
-date: 2016-01-28T06:25:47+00:00
+date: "2016-01-28T06:25:47"
 history:
   - 
     from: https://www.haruair.com/blog/3349

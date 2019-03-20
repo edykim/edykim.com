@@ -2,7 +2,7 @@
 title: Backbone.js가 underscore를 활용하는 방법
 author: haruair
 type: post
-date: 2015-08-10T11:12:15+00:00
+date: "2015-08-10T11:12:15"
 history:
   - 
     from: https://www.haruair.com/blog/3014

@@ -2,7 +2,7 @@
 title: 새로운 테마로 변경 Twenty Twelve
 author: haruair
 type: post
-date: 2012-11-14T23:20:31+00:00
+date: "2012-11-14T23:20:31"
 history:
   - 
     from: https://www.haruair.com/blog/1397

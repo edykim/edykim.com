@@ -2,7 +2,7 @@
 title: Logitech Wireless Solar Keyboard K760 사용기
 author: haruair
 type: post
-date: 2014-01-31T11:15:22+00:00
+date: "2014-01-31T11:15:22"
 history:
   - 
     from: https://www.haruair.com/blog/1965

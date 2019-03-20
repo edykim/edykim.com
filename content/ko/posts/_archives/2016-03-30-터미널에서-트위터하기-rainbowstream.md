@@ -2,7 +2,7 @@
 title: 터미널에서 트위터하기 rainbowstream
 author: haruair
 type: post
-date: 2016-03-30T03:00:55+00:00
+date: "2016-03-30T03:00:55"
 history:
   - 
     from: https://www.haruair.com/blog/3505

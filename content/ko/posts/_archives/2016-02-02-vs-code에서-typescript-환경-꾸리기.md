@@ -2,7 +2,7 @@
 title: VS Code에서 TypeScript 환경 꾸리기
 author: haruair
 type: post
-date: 2016-02-02T04:00:59+00:00
+date: "2016-02-02T04:00:59"
 history:
   - 
     from: https://www.haruair.com/blog/3379

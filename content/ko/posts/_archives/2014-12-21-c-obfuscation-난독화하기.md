@@ -2,7 +2,7 @@
 title: 'C# Obfuscation 난독화하기'
 author: haruair
 type: post
-date: 2014-12-21T06:33:21+00:00
+date: "2014-12-21T06:33:21"
 history:
   - 
     from: https://www.haruair.com/blog/2572

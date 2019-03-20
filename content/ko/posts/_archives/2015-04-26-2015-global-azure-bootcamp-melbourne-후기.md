@@ -2,7 +2,7 @@
 title: 2015 Global Azure Bootcamp Melbourne 후기
 author: haruair
 type: post
-date: 2015-04-25T23:09:44+00:00
+date: "2015-04-25T23:09:44"
 history:
   - 
     from: https://www.haruair.com/blog/2875

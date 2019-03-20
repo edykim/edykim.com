@@ -2,7 +2,7 @@
 title: Koala Hates Rain 개발후기
 author: haruair
 type: post
-date: 2014-03-27T03:00:53+00:00
+date: "2014-03-27T03:00:53"
 history:
   - 
     from: https://www.haruair.com/blog/2100

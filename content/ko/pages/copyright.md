@@ -2,7 +2,7 @@
 title: 저작권에 관해
 author: haruair
 type: page
-date: 2016-06-10T05:49:12+00:00
+date: "2016-06-10T05:49:12"
 lang: ko
 url: copyright
 

@@ -2,7 +2,7 @@
 title: Ubuntu에 Redis 설치하기
 author: haruair
 type: post
-date: 2015-09-01T12:10:04+00:00
+date: "2015-09-01T12:10:04"
 history:
   - 
     from: https://www.haruair.com/blog/3037

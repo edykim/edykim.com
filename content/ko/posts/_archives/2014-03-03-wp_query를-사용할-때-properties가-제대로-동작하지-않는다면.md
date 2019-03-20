@@ -2,7 +2,7 @@
 title: WP_Query를 사용할 때 Properties가 제대로 동작하지 않는다면
 author: haruair
 type: post
-date: 2014-03-03T10:48:37+00:00
+date: "2014-03-03T10:48:37"
 history:
   - 
     from: https://www.haruair.com/blog/2012

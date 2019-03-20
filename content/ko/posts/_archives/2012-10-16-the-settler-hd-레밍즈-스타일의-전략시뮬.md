@@ -2,7 +2,7 @@
 title: The settler HD – 레밍즈 스타일의 전략시뮬
 author: haruair
 type: post
-date: 2012-10-16T13:15:16+00:00
+date: "2012-10-16T13:15:16"
 history:
   - 
     from: https://www.haruair.com/blog/1382

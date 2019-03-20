@@ -2,7 +2,7 @@
 title: Django Girls 튜토리얼 정리
 author: haruair
 type: post
-date: 2016-01-30T02:09:59+00:00
+date: "2016-01-30T02:09:59"
 history:
   - 
     from: https://www.haruair.com/blog/3352

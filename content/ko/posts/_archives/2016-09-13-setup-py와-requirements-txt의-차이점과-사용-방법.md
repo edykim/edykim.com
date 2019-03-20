@@ -2,7 +2,7 @@
 title: setup.py와 requirements.txt의 차이점과 사용 방법
 author: haruair
 type: post
-date: 2016-09-13T01:21:02+00:00
+date: "2016-09-13T01:21:02"
 history:
   - 
     from: https://www.haruair.com/blog/3719

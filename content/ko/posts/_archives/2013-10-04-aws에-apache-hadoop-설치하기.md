@@ -2,7 +2,7 @@
 title: AWS에 Apache Hadoop 설치하기
 author: haruair
 type: post
-date: 2013-10-03T20:00:32+00:00
+date: "2013-10-03T20:00:32"
 history:
   - 
     from: https://www.haruair.com/blog/1827

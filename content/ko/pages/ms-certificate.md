@@ -2,7 +2,7 @@
 title: MS Certificate
 author: haruair
 type: page
-date: 2017-06-01T00:07:28+00:00
+date: "2017-06-01T00:07:28"
 lang: ko
 slug: microsoft-certificate-notes
 ampforwp-amp-on-off:

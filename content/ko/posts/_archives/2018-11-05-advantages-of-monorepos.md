@@ -2,7 +2,7 @@
 title: 단일 리포지터리의 좋은 점
 author: haruair
 type: post
-date: 2018-11-06T14:52:00-07:00
+date: "2018-11-06T14:52:00"
 lang: ko
 slug: advantages-of-monorepos
 headline:

@@ -2,7 +2,7 @@
 title: MS PowerShell 버전과 확장자 ps1
 author: haruair
 type: post
-date: 2016-07-17T12:30:52+00:00
+date: "2016-07-17T12:30:52"
 history:
   - 
     from: https://www.haruair.com/blog/3681

@@ -2,7 +2,7 @@
 title: "$scope를 사용하는 더 나은 방법, angular.extend()"
 author: haruair
 type: post
-date: 2015-11-08T08:14:00-07:00
+date: "2015-11-08T08:14:00"
 lang: ko
 slug: a-better-way-to-scope-angular-extend-no-more-vm-this
 categories:

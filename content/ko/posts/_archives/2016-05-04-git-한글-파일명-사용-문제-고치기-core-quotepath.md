@@ -2,7 +2,7 @@
 title: git 한글 파일명 사용 문제 고치기 core.quotepath
 author: haruair
 type: post
-date: 2016-05-04T09:43:50+00:00
+date: "2016-05-04T09:43:50"
 history:
   - 
     from: https://www.haruair.com/blog/3582

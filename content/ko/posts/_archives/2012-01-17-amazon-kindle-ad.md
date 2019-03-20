@@ -2,7 +2,7 @@
 title: Amazon Kindle의 광고
 author: haruair
 type: post
-date: 2012-01-17T05:40:20+00:00
+date: "2012-01-17T05:40:20"
 history:
   - 
     from: https://www.haruair.com/blog/1028

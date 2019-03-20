@@ -2,7 +2,7 @@
 title: Privacy Policy - Onepage
 author: haruair
 type: page
-date: 2019-02-05T05:28:41-08:00
+date: "2019-02-05T05:28:41"
 url: /app/onepage/privacy-policy
 lang: en
 

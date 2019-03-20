@@ -2,7 +2,7 @@
 title: PHP 클래스 자동으로 불러오기 (Autoloading)
 author: haruair
 type: post
-date: 2014-09-15T22:51:33+00:00
+date: "2014-09-15T22:51:33"
 history:
   - 
     from: https://www.haruair.com/blog/2323

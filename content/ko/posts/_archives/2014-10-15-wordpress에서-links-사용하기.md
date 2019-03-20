@@ -2,7 +2,7 @@
 title: WordPress에서 Links 사용하기
 author: haruair
 type: post
-date: 2014-10-14T22:23:57+00:00
+date: "2014-10-14T22:23:57"
 history:
   - 
     from: https://www.haruair.com/blog/2499

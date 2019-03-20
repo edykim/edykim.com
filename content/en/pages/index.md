@@ -2,7 +2,7 @@
 title: Hello!
 author: haruair
 type: page
-date: 2010-10-07T05:28:41+00:00
+date: "2010-10-07T05:28:41"
 url: /
 lang: en
 

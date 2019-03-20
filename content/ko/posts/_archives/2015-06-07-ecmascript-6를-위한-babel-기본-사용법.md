@@ -2,7 +2,7 @@
 title: ECMAScript 6를 위한 Babel 기본 사용법
 author: haruair
 type: post
-date: 2015-06-07T10:59:59+00:00
+date: "2015-06-07T10:59:59"
 history:
   - 
     from: https://www.haruair.com/blog/2917

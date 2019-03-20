@@ -2,7 +2,7 @@
 title: 크로스플랫폼에서 ASP.NET Core 애플리케이션 개발하기 발표 자료
 author: haruair
 type: post
-date: 2016-04-14T03:47:18+00:00
+date: "2016-04-14T03:47:18"
 history:
   - 
     from: https://www.haruair.com/blog/3556

@@ -2,7 +2,7 @@
 title: 이벤트 소싱 event-sourcing 패턴 정리
 author: haruair
 type: post
-date: 2017-10-17T04:35:55+00:00
+date: "2017-10-17T04:35:55"
 history:
   - 
     from: https://www.haruair.com/blog/4008

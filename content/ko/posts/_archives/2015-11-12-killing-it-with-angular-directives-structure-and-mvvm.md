@@ -2,7 +2,7 @@
 title: "Angular 디렉티브 때려잡기: 구조와 MVVM"
 author: haruair
 type: post
-date: 2015-11-12T08:14:00-07:00
+date: "2015-11-12T08:14:00"
 lang: ko
 slug: killing-it-with-angular-directives-structure-and-mvvm
 categories:

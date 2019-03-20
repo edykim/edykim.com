@@ -2,7 +2,7 @@
 title: 노출식 모듈 패턴 Revealing Module Pattern
 author: haruair
 type: post
-date: 2015-11-17T07:59:55+00:00
+date: "2015-11-17T07:59:55"
 history:
   - 
     from: https://www.haruair.com/blog/3219

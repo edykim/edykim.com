@@ -2,7 +2,7 @@
 title: naver smart editor에서 jindo 네임스페이스 사용하기
 author: haruair
 type: post
-date: 2011-11-08T09:44:32+00:00
+date: "2011-11-08T09:44:32"
 history:
   - 
     from: https://www.haruair.com/blog/911

@@ -2,7 +2,7 @@
 title: Thinking Fast and Slow
 author: haruair
 type: post
-date: 2015-12-02T15:00:21+00:00
+date: "2015-12-02T15:00:21"
 history:
   - 
     from: https://www.haruair.com/blog/3276

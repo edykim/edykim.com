@@ -2,7 +2,7 @@
 title: '테스트 주도 개발 : Test-Driven Development by Example'
 author: haruair
 type: post
-date: 2017-06-13T00:00:21+00:00
+date: "2017-06-13T00:00:21"
 history:
   - 
     from: https://www.haruair.com/blog/3940

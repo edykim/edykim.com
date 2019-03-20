@@ -2,7 +2,7 @@
 title: Mac에서 OpenCV 설치 및 예제 구동하기
 author: haruair
 type: post
-date: 2014-05-06T05:58:49+00:00
+date: "2014-05-06T05:58:49"
 history:
   - 
     from: https://www.haruair.com/blog/2177
