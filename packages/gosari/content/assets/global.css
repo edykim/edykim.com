@@ -19,3 +19,19 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+
+.translation-note {
+  background: #f4f3ff;
+  border-left: 10px solid #6700ee;
+  margin: 0;
+  padding: 1px 20px;
+}
+
+.translation-note p:nth-of-type(1):before {
+  content: '📝';
+}
+
+.translation-note p + p {
+  margin-top: 0;
+}
