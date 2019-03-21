@@ -62,7 +62,7 @@ export {getState, setState}
 
 ## 컨텍스트 Context
 
-리액트의 새 컨텍스트 API는 정말 멋집니다. 아직 이 기능을 모르신다면 [리액트⚛️ 의 새 컨텍스트 API](https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b)를 확인해보세요.
+리액트의 새 컨텍스트 API는 정말 멋집니다. 아직 이 기능을 모르신다면 [리액트⚛️ 의 새 컨텍스트 API](https://kentcdodds.com/blog/reacts-new-context-api)를 확인해보세요.
 
 리액트 컨텍스트를 사용하면 프로퍼티 내리꽂기 문제와 싱글톤을 갱신하는 문제를 간단한 내장 API로 극복할 수 있게 됩니다. 이 API는 간단히 `<ContextInstance.Provider />`와 `<ContextInstnace.Consumer />` 컴포넌트를 사용해서 어디서든지 상태에 접근할 수 있도록 구성할 수 있게 됩니다.
 
