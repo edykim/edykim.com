@@ -1,7 +1,7 @@
 ---
 title: 애플리케이션 상태 관리
 type: post
-date: "2019-03-20T11:52:00"
+date: "2019-03-20T20:52:00"
 lang: ko
 slug: application-state-management
 headline:
@@ -212,17 +212,34 @@ alternatives**.
 Try other solutions first. And **limit the amount of state in you store in redux
 to only the state that _needs_ to be at that level of the tree** (probably the
 root if you're a typical redux user).
+
+다른 해결책을 먼저 사용해보세요. 그리고 **상태를 _필요로 하는_ 트리를 기준으로 redux에 보관하는 상태의 분량을 제한하세요.** (일반적인 redux 사용자라면 최상위에 위치하고 있을 겁니다.)
+
 [Here](https://twitter.com/housecor/status/962754389533429760) are some wise
 words from [Cory House](https://medium.com/u/e986f7cdb458) about using redux
 prematurely/for everything:
 
-https://twitter.com/housecor/status/962754389533429760
+[코리 하우스](https://medium.com/u/e986f7cdb458)가 이른 redux 적용에 대해 다음과 같은 트윗을 남겼습니다.
 
-### Conclusion
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Realization: Putting Redux in our company framework by default was a mistake.<br><br>Result:<br>1 People connect *every* component.<br>2 People embed Redux in &quot;reusable&quot; components.<br>3 Everyone uses Redux. Even when they don&#39;t need it.<br>4 People don&#39;t know how to build an app with just React.</p>&mdash; Cory House 🏠 (@housecor) <a href="https://twitter.com/housecor/status/962754389533429760?ref_src=twsrc%5Etfw">February 11, 2018</a></blockquote>
+
+> 깨달음: Redux를 회사 프레임워크에 기본으로 넣은 것은 실수였다.
+>
+> 결과:
+> 1. 사람들이 *모든* 컴포넌트를 연결함.
+> 2. 사람들이 재사용 가능한 컴포넌트에도 Redux를 포함함.
+> 3. 모두가 Redux를 사용함. 심지어 필요가 없는 경우에도.
+> 4. 사람들이 React만 갖고 앱을 만들 줄 모름.
+>
+> — [코리 하우스](https://twitter.com/housecor/status/962754389533429760?ref_src=twsrc%5Etfw)
+
+## 결론
 
 There are SO many other abstractions and
 [patterns](http://kcd.im/advanced-react) you could implement, but it's getting
 late and I don't have all _year_ to write about them all 😉
+
+이 문제를 해결하기 위해 구현할 수 있는 수많은 추상과 [패턴](http://kcd.im/advanced-react)이 있지만 제가 이걸 다 적으려면 올해 내내 적어도 시간이 모자랄 겁니다. 😉
 
 I should emphasize that **state should exist and be stored as close to where
 it's needed as possible.** In practical terms, this means that you do NOT need
@@ -232,3 +249,4 @@ be using component state in your application. You _may_ want to use context or
 singletons somewhere within your application. Even in a small sub-section of the
 tree this could be useful. Good luck! 👍
 
+그래서 제가 강조하고 싶은 부분은 **상태가 존재한다면 필요한 곳에 최대한 가까이 보관하라**는 점입니다. 실무적인 용어로 설명하면 폼 입력창의 오류 상태를 전역 스토어에 보관하지 말라는 뜻입니다. 정말로 필요한 경우가 아니라면 말이죠. (그런 경우는 분명 드물껍니다.) 대신에 애플리케이션에서 컴포넌트 상태를 사용할 가능성이 _매우 높다_ 는 뜻이고 이런 경우에 컨텍스트나 싱글톤을 애플리케이션 어딘가에서 _아마도_ 사용하고 싶어질 겁니다. 컴포넌트 트리의 작은 일부 영역이라도 이 접근 방법은 매우 유용합니다.
