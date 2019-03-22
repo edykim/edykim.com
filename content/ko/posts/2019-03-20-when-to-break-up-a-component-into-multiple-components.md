@@ -40,7 +40,7 @@ tags:
 
 > [중복은 잘못된 추상보다 훨씬 저렴합니다.](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction) — [Sandi Metz](https://twitter.com/sandimetz)
 
-저는 제 컴포넌트의 `render` 메소드가 정말 길어져도 크게 개의치 않습니다. JSX는 JavaScript 표현식의 모음이고 컴포넌트를 위해 선언적 API를 사용한다는 점을 기억하세요. 컴포넌트를 작은 크기로 나눠 이곳저곳에 [프로퍼티 내리꽂기](http://kcd.im/prop-drilling)를 하지 않고 `render` 메소드를 그대로 유지한다고 해서 그렇게 코드가 엄청 잘못되거나 하는 것은 아니라는 의미입니다.
+저는 제 컴포넌트의 `render` 메소드가 정말 길어져도 크게 개의치 않습니다. JSX는 JavaScript 표현식의 모음이고 컴포넌트를 위해 선언적 API를 사용한다는 점을 기억하세요. 컴포넌트를 작은 크기로 나눠 이곳저곳에 [프로퍼티 내리꽂기](http://kcd.im/prop-drilling) (역자 주: [번역](https://edykim.com/ko/post/prop-drilling/))를 하지 않고 `render` 메소드를 그대로 유지한다고 해서 그렇게 코드가 엄청 잘못되거나 하는 것은 아니라는 의미입니다.
 
 ## 결론
 
