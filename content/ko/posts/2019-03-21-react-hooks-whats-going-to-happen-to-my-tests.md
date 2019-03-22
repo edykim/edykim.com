@@ -211,7 +211,7 @@ export default Counter
 
 다른 두 컴포넌트를 문제 없이 테스트가 가능한 이유는 [`react-dom/test-utils`](https://reactjs.org/docs/test-utils.html)에서 제공하는 새 [`act`](https://reactjs.org/docs/test-utils.html#act) 유틸리티 덕분입니다. `react-testing-library`는 이 유틸리티와 통합되어 있습니다. 그 덕분에 위 테스트가 문제 없이 통과할 수 있는 것입니다. 그래서 구현 상세에 의존하지 않는 테스트를 계속 작성할 수 있으며 소프트웨어를 기존에 개발하던 방식과 큰 차이 없이 개발을 계속 할 수 있게 되었습니다.
 
-### 프로퍼티를 렌더링하는 컴포넌트는 어떻게 하나요?
+### 프로퍼티 렌더링 컴포넌트는 어떻게 테스트하죠?
 
 이 부분이 제가 좋아하는 부분입니다. 프로퍼티를 렌더링하는 간단한 카운터 컴포넌트를 확인합니다.
 
