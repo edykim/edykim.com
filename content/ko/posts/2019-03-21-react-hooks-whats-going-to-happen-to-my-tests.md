@@ -6,7 +6,7 @@ date: "2019-03-21T16:52:00"
 lang: ko
 slug: react-hooks-whats-going-to-happen-to-my-tests
 headline:
-  - 새로 나온 기능 훅(hook)에 대비해서 테스트는 어떻게 준비할 지 알아봅니다
+  - 새로 나온 기능 훅(hook)에 대비해서 테스트는 어떻게 준비할지 알아봅니다
 categories:
   - 개발 이야기
   - 번역
