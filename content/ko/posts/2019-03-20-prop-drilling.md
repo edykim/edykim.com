@@ -122,11 +122,11 @@ function SwitchButton({onToggle}) {
 
 > 재미있는 사실은 단 하나의 리액트 컴포넌트에 애플리케이션 전체를 작성한다고 한들 기술적으로 제약된 부분이 전혀 없습니다. 전체 애플리케이션의 상태를 관리하고 하나의 거대한 render 메소드를 사용하는 것도 가능합니다. 물론 이 방법을 권장하는 것은 아니지만요. 한번 생각해볼 만한 부분이라고 봅니다. :)
 
-_노트: 이 개념을 [컴포넌트를 여러 컴포넌트로 나눠야 할 때](https://blog.kentcdodds.com/when-to-break-up-a-component-into-multiple-components-4ee75ab53bbc)에서 작성했습니다. 관심있다면 확인해보세요._
+_노트: 이 개념을 [컴포넌트를 여러 컴포넌트로 나눠야 할 때](https://blog.kentcdodds.com/when-to-break-up-a-component-into-multiple-components-4ee75ab53bbc) (역자 주: [번역](https://edykim.com/ko/post/when-to-break-up-a-component-into-multiple-components/))에서 작성했습니다. 관심있다면 확인해보세요._
 
 프로퍼티 내리꽂기로 나타나는 문제를 완화하는 또 다른 방법은 `defaultProps`를 필수 프로퍼티에 사용하지 않는 방법입니다. `defaultProps`를 사용하면 컴포넌트가 제대로 동작하기 위해 실제로 필요한 프로퍼티를 전달받지 못한 상황인데도 중요한 오류가 숨겨지고 소리없이 실패하게 됩니다. 그렇기 때문에 `defaultProps`는 컴포넌트에 필수적이지 않은 부분에만 사용하기 바랍니다.
 
-관련있는 상태는 될 수 있으면 가까이에 보관하기 바랍니다. 애플리케이션의 특정 부분에만 상태가 필요하다면 그 상태는 애플리케이션의 가장 높은 계층에 저장할 것이 아니라 최소 공통 부모 컴포넌트에서 관리해야 합니다. 상태 관리에 관해서는 [애플리케이션 상태 관리](https://blog.kentcdodds.com/application-state-management-66de608ccb24)를 참고하기 바랍니다.
+관련있는 상태는 될 수 있으면 가까이에 보관하기 바랍니다. 애플리케이션의 특정 부분에만 상태가 필요하다면 그 상태는 애플리케이션의 가장 높은 계층에 저장할 것이 아니라 최소 공통 부모 컴포넌트에서 관리해야 합니다. 상태 관리에 관해서는 [애플리케이션 상태 관리](https://blog.kentcdodds.com/application-state-management-66de608ccb24) (역자 주: [번역](https://edykim.com/ko/post/application-state-management/))를 참고하기 바랍니다.
 
 상태가 리액트 계층에서 정말로 깊숙이 위치한 경우라면 [리액트의 새 컨텍스트 API](https://blog.kentcdodds.com/migrating-to-reacts-new-context-api-b15dc7a31ea0)를 사용하세요. 상태라고 애플리케이션 내 어디서나 다 접근할 필요는 없기 때문입니다. (컨텍스트 제공자는 어디서나 렌더링 할 수 있습니다.) 이 API는 프로퍼티 내리꽂기로 나타나는 몇 문제를 피하는 데 도움이 됩니다. 물론 이 컨텍스트는 전역 변수로 문제를 해결하는 방식과 유사성이 있습니다. 하지만 API가 디자인된 방식이 다르기 때문에 여전히 컨텍스트의 원천도 정적으로 찾을 수 있으며 어떻게 사용하든 상대적으로 손쉽게 사용 가능합니다.
 
