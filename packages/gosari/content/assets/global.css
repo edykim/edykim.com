@@ -57,3 +57,7 @@ body {
 .content table tr:nth-of-type(2n) td {
   background: #fafafa;
 }
+
+.gatsby-highlight + .gatsby-highlight {
+  margin-top: 2rem;
+}
