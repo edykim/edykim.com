@@ -275,7 +275,7 @@ function Counter(props) {
 }
 ```
 
-좋습니다. 앞서 작성한 테스트를 문제 없이 통과합니다. 하지만 [리액트 훅: 렌더링 프로퍼티은 어떻게 되나요?](https://blog.kentcdodds.com/8ade1f00f159)에서 배운 것처럼 커스텀 훅(custom hook)은 리액트에서 코드 공유에 더 나은 자료 형식(primitive)입니다. 위 코드를 커스텀 훅으로 다시 작성해보도록 하겠습니다.
+좋습니다. 앞서 작성한 테스트를 문제 없이 통과합니다. 하지만 [리액트 훅: 렌더링 프로퍼티는 어떻게 되나요?](https://blog.kentcdodds.com/8ade1f00f159) (역자 주: [번역](https://edykim.com/ko/post/react-hooks-whats-going-to-happen-to-render-props/))에서 배운 것처럼 커스텀 훅(custom hook)은 리액트에서 코드 공유에 더 나은 자료 형식(primitive)입니다. 위 코드를 커스텀 훅으로 다시 작성해보도록 하겠습니다.
 
 ```js
 function useCounter() {
