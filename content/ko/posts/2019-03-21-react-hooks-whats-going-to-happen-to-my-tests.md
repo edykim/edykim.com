@@ -14,6 +14,7 @@ tags:
   - react
   - js
   - testing
+  - hooks
 ---
 
 <div class="translation-note">
