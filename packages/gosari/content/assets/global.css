@@ -35,3 +35,25 @@ body {
 .translation-note p + p {
   margin-top: 0;
 }
+
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 50%;
+  margin: 3rem auto;
+  border: 1px solid #ddd;
+}
+
+.content table th {
+  background: #f0f0f0;
+}
+
+.content table th,
+.content table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.content table tr:nth-of-type(2n) td {
+  background: #fafafa;
+}
