@@ -1,12 +1,12 @@
 ---
-title: "리액트 훅(hook): 렌더링 프로퍼티는 어떻게 되나요?"
+title: "리액트 훅(Hooks): 렌더링 프로퍼티는 어떻게 되나요?"
 author: haruair
 type: post
 date: "2019-03-21T17:38:00"
 lang: ko
 slug: react-hooks-whats-going-to-happen-to-render-props
 headline:
-  - 훅 기능이 렌더링 프로퍼티 컴포넌트와 비교했을 때 얼마나 코드 재사용성을 해결하는지 확인합니다.
+  - 훅 기능이 렌더링 프로퍼티 컴포넌트와 비교했을 때 얼마나 코드 재사용성을 해결하는지 확인합니다
 categories:
   - 개발 이야기
   - 번역
