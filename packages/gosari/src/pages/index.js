@@ -76,7 +76,7 @@ class BlogIndex extends React.Component {
           <BulkyButton
             color={`#6700ee`}
             title={`포스트 전체 목록 보기`}
-            subtext={`개발, 일상 등 다양한 주제를 다룹니다. 총 ${totalCount}건의 포스트가 있습니다.`}
+            subtext={`개발, 일상 등 다양한 주제를 다룹니다.`}
             link={`/archives`}
           />
         </Tiles>
@@ -106,7 +106,6 @@ export const pageQuery = graphql`
       }
       limit: 5
     ) {
-      totalCount
       edges {
         node {
           excerpt(format: PLAIN, truncate: true)
