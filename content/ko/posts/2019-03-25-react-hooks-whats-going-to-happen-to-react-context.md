@@ -4,7 +4,7 @@ author: haruair
 type: post
 date: "2019-03-25T09:58:00"
 lang: ko
-slug: react-hooks-whats-going-to-happen-to-render-props
+slug: react-hooks-whats-going-to-happen-to-react-context
 headline:
   - 리액트의 새로운 기능(Hooks/Suspense)이 추가되면 컨텍스트 API에는 어떤 영향이 있는지 확인합니다.
 categories:
