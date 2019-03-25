@@ -20,6 +20,10 @@ body {
   word-wrap: break-word;
 }
 
+.gatsby-highlight * {
+  overflow-wrap: normal;
+  word-wrap: normal;
+}
 
 .translation-note {
   background: #f4f3ff;
