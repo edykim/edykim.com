@@ -1,5 +1,5 @@
 ---
-title: "리액트 훅(Hooks): 컨텍스트(context) 어떻게 되나요?"
+title: "리액트 훅(Hooks): 컨텍스트(context) API는 어떻게 되나요?"
 author: haruair
 type: post
 date: "2019-03-25T09:58:00"
