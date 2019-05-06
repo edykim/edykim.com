@@ -112,6 +112,12 @@ export const Tagline = styled.p`
   margin: -20px 0 40px;
 `
 
-export const Date = styled.p`
+export const Time = ({ className, datetime, children }) => (
+  <time datetime={datetime} className={className}>
+    {children}
+  </time>
+)
+
+export const Date = styled(Time)`
   color: #757575;
 `

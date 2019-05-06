@@ -35,7 +35,7 @@ export default ({ data, location, pageContext }) => {
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
 
-      <Date>{post.frontmatter.date}</Date>
+      <Date datetime={post.frontmatter.rawDate}>{post.frontmatter.date}</Date>
 
       <Bio />
 
@@ -64,6 +64,7 @@ export const query = graphql`
         tags
         categories
         date(formatString: "MMMM DD, YYYY")
+        rawDate: date
         headline
       }
       fields {
