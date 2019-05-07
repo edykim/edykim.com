@@ -5,6 +5,8 @@
   "version": "1.0.0",
   "author": "Edward Kim <ed@edykim.com>",
   "dependencies": {
+    "@edykim/gatsby-plugin-template": "*",
+    "@edykim/gatsby-plugin-url": "*",
     "gatsby": "^2.2.2",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-manifest": "^2.0.24",
@@ -16,7 +18,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-prismjs": "^3.2.6",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-transformer-remark": "^2.3.7",
+    "prismjs": "^1.15.0"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
