@@ -1,5 +1,5 @@
 ---
-title: Visual Timer
+title: Visual Timer by Y
 author: haruair
 type: page
 date: "2019-05-17T05:28:41"
@@ -12,7 +12,7 @@ lang: en
 
 This app provides a simple visual timer which has a straightforward design, and fully customizable options! Try all colors, sounds, reminders, and image sets!
 
-If you have any questions, please contact me via [email (edward@edykim.com)](mailto:edward@edykim.com)
+If you have any questions, please contact me via [email (visualtimer@edykim.com)](mailto:visualtimer@edykim.com)
 
 - [Privacy Policy](/app/visual-timer/privacy-policy)
 
