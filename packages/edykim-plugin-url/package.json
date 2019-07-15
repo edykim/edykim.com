@@ -10,7 +10,6 @@
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
   "license": "MIT",
   "dependencies": {
-    "gatsby": "^2.13.21",
     "gatsby-source-filesystem": "^2.1.5"
   }
 }
