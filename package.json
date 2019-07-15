@@ -12,6 +12,6 @@
   "devDependencies": {
     "fs-extra": "^7.0.1",
     "glob": "^7.1.4",
-    "lerna": "^3.14.1"
+    "lerna": "^3.15.0"
   }
 }
