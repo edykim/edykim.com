@@ -1,3 +1,5 @@
+const path = require("path")
+
 const profile = `문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다. 웹의 자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처, 커뮤니티에 관심이 많습니다.`
 
 module.exports = {
@@ -16,6 +18,12 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        root: path.join(__dirname, "src"),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,6 +54,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `title-anchor`,
+            },
+          },
+          `gatsby-remark-attr`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
