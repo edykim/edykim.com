@@ -136,6 +136,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        exclude: [`/archives/*`, `/category/*`, `/tag/*`],
         query: `
           {
             site {
