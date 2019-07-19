@@ -1,13 +1,14 @@
 const path = require("path")
 
-const profile = `문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다. 웹의 자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처, 커뮤니티에 관심이 많습니다.`
+const desc = `문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다.`
+const profile = `${desc} 웹의 자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처, 커뮤니티에 관심이 많습니다.`
 
 module.exports = {
   pathPrefix: `/ko`,
   siteMetadata: {
     title: `매일 성장하기`,
     author: `김용균`,
-    description: profile,
+    description: desc,
     profile,
     siteUrl: `https://edykim.com/ko/`,
     siteUrlForSitemap: `https://edykim.com`,
@@ -21,7 +22,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-root-import`,
       options: {
-        root: path.join(__dirname, "src"),
+        components: path.join(__dirname, "src/components"),
+        styles: path.join(__dirname, "src/styles"),
+        config: path.join(__dirname, "config"),
       },
     },
     {

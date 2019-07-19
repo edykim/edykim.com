@@ -1,112 +1,102 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import styled from "styled-components"
-import { InBoxLink } from "./inBoxLink"
+import { graphql, StaticQuery, Link } from "gatsby"
+import Image from "gatsby-image"
+import { layout, color } from "styles/schema"
 
-const BioWrapper = styled.div`
-  margin-top: 100px;
-  margin-bottom: 50px;
-  text-align: center;
-  @media (max-width: 800px) {
-    text-align: left;
+const Wrapper = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+`
+
+const InnerWrapper = styled.div`
+  box-sizing: border-box;
+  max-width: ${layout.medium};
+  margin: 0 auto;
+  padding: 0 ${layout.sidePadding};
+`
+
+const Name = styled.div`
+  font-size: 0.8rem;
+  font-weight: 700;
+  a {
+    text-decoration: none;
+    color: ${color.primary};
   }
+`
+const Description = styled.div`
+  font-size: 0.7rem;
+  letter-spacing: -0.01rem;
+  line-height: 1.6;
+  color: ${color.plain};
+`
+
+const StyledImageWrapper = styled.div`
+  width: 64px;
+  height: 64px;
+  margin-right: 1rem;
 `
 
 const StyledImage = styled(Image)`
   display: block;
-  min-width: 100px;
   border-radius: 100%;
   vertical-align: middle;
-  margin-bottom: 10px;
-  border: 8px solid #eeeeee;
-  transition: transform 0.5s ease-in-out;
-  cursor: help;
-  &:hover {
-    transform: rotateZ(180deg);
-  }
+  margin-right: ${layout.sidePadding};
 `
 
-export const Bio = () => {
-  return (
-    <StaticQuery
-      query={bioQuery}
-      render={data => {
-        const { author, social, profile } = data.site.siteMetadata
-        return (
-          <BioWrapper>
-            <StyledImage
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                display: "inline-block",
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-            <div style={{ maxWidth: 600, margin: "0 auto" }}>
-              <div style={{ color: "#545454", fontSize: 16 }}>
-                <p>
-                  <strong
-                    style={{
-                      display: "block",
-                      color: "#000000",
-                      marginBottom: 10,
-                      fontWeight: 600,
-                    }}
-                  >
-                    안녕하세요, {author}입니다.
-                  </strong>
-                  {` `}
-                  {profile}
-                </p>
-                <div>
-                  <InBoxLink
-                    href={`https://github.com/${social.github}`}
-                    style={{ color: `#ffffff`, backgroundColor: `#24292e` }}
-                  >
-                    {`Github @${social.github}`}
-                  </InBoxLink>
-                  <InBoxLink
-                    href={`https://twitter.com/${social.twitter}`}
-                    style={{ color: `#ffffff`, backgroundColor: `#1da1f2` }}
-                  >
-                    {`트위터 @${social.twitter}`}
-                  </InBoxLink>
-                  <InBoxLink
-                    href={`https://www.linkedin.com/in/${social.linkedin}`}
-                    style={{ color: `#ffffff`, backgroundColor: `#0073b1` }}
-                  >
-                    {`링크드인 @${social.linkedin}`}
-                  </InBoxLink>
-                </div>
-              </div>
-            </div>
-          </BioWrapper>
-        )
-      }}
-    />
-  )
-}
+const NameTag = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
 
-const bioQuery = graphql`
-  query BioQuery {
+export const Bio = () => (
+  <StaticQuery
+    query={query}
+    render={({
+      site: {
+        siteMetadata: { author, description },
+      },
+      avatar: {
+        image: { fixed },
+      },
+    }) => (
+      <Wrapper>
+        <InnerWrapper>
+          <NameTag className={"byline"}>
+            <StyledImageWrapper>
+              <StyledImage fixed={fixed} />
+            </StyledImageWrapper>
+            <div>
+              <Name>
+                <Link to={`/about`}>{author}</Link>
+              </Name>
+              <Description>{description}</Description>
+            </div>
+          </NameTag>
+        </InnerWrapper>
+      </Wrapper>
+    )}
+  />
+)
+
+const query = graphql`
+  query BioCardQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
+      image: childImageSharp {
+        fixed(width: 64, height: 64) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     site {
       siteMetadata {
+        title
         author
-        profile
+        description
         social {
           github
           twitter
-          linkedin
         }
       }
     }

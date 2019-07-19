@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-require("./content/assets/global.css")
+require("./content/assets/_global.css")
 require("./src/styles/highlight.css")

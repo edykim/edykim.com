@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Meta } from "components"
+import { Site } from "components/layout"
 
 class NotFoundPage extends React.Component {
   render() {
@@ -10,8 +9,8 @@ class NotFoundPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="404: Not Found" />
+      <Site location={this.props.location} title={siteTitle}>
+        <Meta title="404: Not Found" />
         <h1>404 Not Found</h1>
         <p>요청한 페이지가 웹사이트에 존재하지 않습니다.</p>
 
@@ -23,7 +22,7 @@ class NotFoundPage extends React.Component {
             <Link to={`/`}>글 전체 목록으로 이동</Link>
           </li>
         </ul>
-      </Layout>
+      </Site>
     )
   }
 }

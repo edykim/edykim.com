@@ -8,6 +8,7 @@
 --highlight-base2     : #d2e1ee;
 --highlight-base3     : #fafafa;
 --highlight-base4     : #dddddd;
+--highlight-base5     : #f3f3f3;
 --highlight-yellow    : #0061b5;
 --highlight-orange    : #5216cb;
 --highlight-red       : #dc322f;
@@ -39,8 +40,6 @@ tab-size: 4;
 -moz-hyphens: none;
 -ms-hyphens: none;
 hyphens: none;
-
-font-size: 0.88em;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
@@ -62,7 +61,7 @@ overflow: auto;
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-background-color: var(--highlight-base3);
+background-color: var(--highlight-base5);
 }
 
 /* Inline code */
@@ -140,7 +139,7 @@ cursor: help;
 }
 
 .gatsby-highlight {
-  background-color: var(--highlight-base3);
+  background-color: var(--highlight-base5);
   padding: 1em;
   overflow: auto;
 }
@@ -154,12 +153,12 @@ cursor: help;
 
 .gatsby-highlight code[class*="language-"],
 .gatsby-highlight pre[class*="language-"] {
-font-size: 0.88rem;
+  font-size: 0.95em;
 }
 
 .gatsby-highlight::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
+  height: 12px;
 }
 .gatsby-highlight::-webkit-scrollbar-track {
   background: var(--highlight-base3);

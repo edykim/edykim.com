@@ -1,10 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import { Title, Content } from "../components/article"
-import { Tiles } from "../components/tiles"
-import { BoxArticle } from "../components/boxArticle"
-import { Hr } from "../components/hr"
+
+import { Header, Content, PostList } from "components"
+import { Site } from "components/layout"
 
 export default ({ data, location }) => {
   const { archive, articles } = data
@@ -13,36 +11,22 @@ export default ({ data, location }) => {
     carry[node.frontmatter.dateSort].push(node)
     return carry
   }, {})
+  const years = Object.keys(sorted).sort((a, b) => b - a)
   return (
-    <Layout location={location}>
-      <Title>{archive.frontmatter.title}</Title>
-      <Content
-        className="content"
-        dangerouslySetInnerHTML={{ __html: archive.html }}
-      />
+    <Site location={location}>
+      <Header
+        title={archive.frontmatter.title}
+        linkTo={archive.fields.url}
+      ></Header>
 
-      {Object.keys(sorted).map(date => {
+      <Content html={archive.html} />
+
+      {years.map(date => {
         const nodes = sorted[date]
 
-        return (
-          <div key={date}>
-            <Hr />
-            <h1>{date}</h1>
-            <p>{nodes.length}건의 포스트가 있습니다.</p>
-            <Tiles>
-              {nodes.length > 0 &&
-                nodes.map((node, index) => (
-                  <BoxArticle
-                    article={node}
-                    key={index}
-                    style={{ flexGrow: 1 }}
-                  />
-                ))}
-            </Tiles>
-          </div>
-        )
+        return <PostList key={date} nodes={nodes} />
       })}
-    </Layout>
+    </Site>
   )
 }
 
@@ -80,8 +64,8 @@ export const query = graphql`
             url
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            dateSort: date(formatString: "MMMM YYYY")
+            date(formatString: "MMMM D")
+            dateSort: date(formatString: "YYYY")
             title
           }
         }

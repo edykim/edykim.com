@@ -1,55 +1,35 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { Tiles } from "../components/tiles"
-import { Title, Tagline, Content, Date } from "../components/article"
-import { BoxArticle, BoxTaxonomy, BoxShare } from "../components/boxes"
-import { Bio } from "../components/bio"
+import { graphql } from "gatsby"
+
+import { Header, Content, Bio, ColophonLinks, Tags, Meta } from "components"
+import { Site } from "components/layout"
 
 export default ({ data, location, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
+  const { date, title, headline } = post.frontmatter
+  const { url } = post.fields
 
   return (
-    <Layout location={location}>
-      <SEO
+    <Site location={location}>
+      <Meta
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Title>
-        <Link
-          to={post.fields.url}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          {post.frontmatter.title}
-        </Link>
-      </Title>
 
-      {post.frontmatter.headline && (
-        <Tagline>{post.frontmatter.headline}</Tagline>
-      )}
-
-      <Content
-        className="content"
-        dangerouslySetInnerHTML={{ __html: post.html }}
+      <Header
+        publishedAt={date}
+        title={title}
+        headline={headline}
+        linkTo={url}
       />
 
-      <Date datetime={post.frontmatter.rawDate}>{post.frontmatter.date}</Date>
-
+      <Content html={post.html} />
       <Bio />
 
-      <Tiles style={{ marginTop: 50 }}>
-        <BoxShare article={post} location={location} />
-        <BoxTaxonomy
-          article={post}
-          color={`#6700ee`}
-          linkStyle={{ color: `#444444`, backgroundColor: `#ffffff` }}
-        />
-        {next && <BoxArticle article={next} />}
-        {previous && <BoxArticle article={previous} />}
-      </Tiles>
-    </Layout>
+      <Tags post={post} />
+      <ColophonLinks links={[next, previous]} />
+    </Site>
   )
 }
 
@@ -63,7 +43,7 @@ export const query = graphql`
         lang
         tags
         categories
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM D, YYYY")
         rawDate: date
         headline
       }
