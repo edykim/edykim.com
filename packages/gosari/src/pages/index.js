@@ -57,7 +57,7 @@ class BlogIndex extends React.Component {
 
         <Hero>
           <div>
-            <h1>안녕하세요!</h1>
+            <h1>안녕하세요, 김용균입니다.</h1>
             <p>{profile}</p>
           </div>
         </Hero>
