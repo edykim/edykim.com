@@ -52,15 +52,15 @@ class BlogIndex extends React.Component {
 
         <Hero>
           <div>
-            <h1>안녕하세요, 김용균입니다.</h1>
+            <h1>안녕하세요!</h1>
             <p>{profile}</p>
           </div>
         </Hero>
 
         <Section>
           <ButtonTypeLink
-            title={`소개 👨🏻‍💻`}
-            subtext={`질의, 제안, 무엇이든 환영합니다`}
+            title={`내 소개 👨🏻‍💻`}
+            subtext={`김용균을 소개합니다. 질의, 제안, 무엇이든 환영합니다!`}
             linkTo={`/about`}
           />
         </Section>
