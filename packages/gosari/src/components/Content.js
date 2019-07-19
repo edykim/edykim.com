@@ -15,7 +15,13 @@ const StyledContent = styled.div`
   li > a,
   em > a,
   i > a,
-  p > a {
+  p > a,
+  h1 > a:not(.title-anchor),
+  h2 > a:not(.title-anchor),
+  h3 > a:not(.title-anchor),
+  h4 > a:not(.title-anchor),
+  h5 > a:not(.title-anchor),
+  h6 > a:not(.title-anchor) {
     color: ${color.primary};
     text-decoration: none;
     border-bottom: 2px solid ${color.underline};
