@@ -10,6 +10,8 @@ url: about
 
 ![김용균과 빨간 트위터 풍선 사진](/assets/ko/profile-with-twit.png){style="border-radius: 100%; max-width: 130px; float: right; margin-left: 30px; margin-bottom: 30px;"}
 
+안녕하세요, 김용균입니다.
+
 오랜 시간을 제주에서 보내다가 커피가 맛있는 [호주 멜버른에서 6년간 거주](https://edykim.com/ko/category/life-in-australia/)했습니다. 현재는 미국 리버사이드로 자리를 옮겨 정착 중입니다.
 
 커뮤니티 [이상한모임](https://weirdx.io/)에서 활동하고 있습니다. 무슨 모임인지 궁금하다면 [슬랙에 가입해서](http://bit.ly/WeirdxSlack) 살펴보세요.
