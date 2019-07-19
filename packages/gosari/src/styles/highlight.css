@@ -25,7 +25,6 @@ color: var(--highlight-base00);
 
 font-family: 'SF Mono','Roboto Mono',Monaco,'Andale Mono','Ubuntu Mono',Menlo,monospace;
 text-align: left;
-white-space: pre;
 word-spacing: normal;
 word-break: normal;
 word-wrap: normal;
@@ -149,6 +148,7 @@ cursor: help;
   padding: 0;
   overflow: initial;
   min-width: 100%;
+  white-space: pre;
 }
 
 .gatsby-highlight code[class*="language-"],
