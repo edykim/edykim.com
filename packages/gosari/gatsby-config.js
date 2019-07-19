@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-root-import`,
       options: {
-        components: path.join(__dirname, "src/components"),
-        styles: path.join(__dirname, "src/styles"),
+        components: path.join(__dirname, "src", "components"),
+        styles: path.join(__dirname, "src", "styles"),
         config: path.join(__dirname, "config"),
       },
     },
