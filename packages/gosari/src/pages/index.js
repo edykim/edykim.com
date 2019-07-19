@@ -65,7 +65,7 @@ class BlogIndex extends React.Component {
         <Section>
           <ButtonTypeLink
             title={`제 소개 👨🏻‍💻`}
-            subtext={"김용균을 소개합니다"}
+            subtext={"제가 어떤 사람인지 알고 싶다면!"}
             linkTo={`/about`}
           />
         </Section>
