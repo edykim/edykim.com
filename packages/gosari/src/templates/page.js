@@ -1,28 +1,20 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
-import { Title, Content } from "../components/article"
+import { Header, Content, Meta } from "components"
+import { Site } from "components/layout"
 
-export default ({ data, location }) => {
-  const page = data.page
+export default ({ data: { page }, location }) => {
+  const { title } = page.frontmatter
+  const { url } = page.fields
+
   return (
-    <Layout location={location}>
-      <SEO title={page.frontmatter.title} description={page.excerpt} />
-      <Title>
-        <Link
-          to={page.fields.url}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          {page.frontmatter.title}
-        </Link>
-      </Title>
-      <Content
-        className="content"
-        dangerouslySetInnerHTML={{ __html: page.html }}
-      />
-    </Layout>
+    <Site location={location}>
+      <Meta title={page.frontmatter.title} description={page.excerpt} />
+      <Header title={title} linkTo={url} />
+
+      <Content html={page.html} />
+    </Site>
   )
 }
 
