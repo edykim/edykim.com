@@ -35,6 +35,7 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-remark": "^2.6.5",
     "gatsby-transformer-sharp": "^2.2.3",
+    "gatsby-plugin-root-import": "^2.0.5",
     "polished": "^3.4.1",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
@@ -45,7 +46,6 @@
     "typeface-montserrat": "0.0.54"
   },
   "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.18.2"
   },
   "license": "MIT",
