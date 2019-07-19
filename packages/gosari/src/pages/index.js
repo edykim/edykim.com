@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 
 import { Site } from "components/layout"
-import { ButtonTypeLink, PostItem, Meta } from "components"
+import { ButtonTypeLink, PostItem, Meta, TagLink as Link } from "components"
 import { layout, color } from "styles/schema"
 
 const Hero = styled.div`
@@ -37,6 +37,11 @@ const Title = styled.div`
   margin-bottom: 0.8rem;
 `
 
+const Links = styled.div`
+  margin-top: 2rem;
+  text-align: center;
+`
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -59,8 +64,8 @@ class BlogIndex extends React.Component {
 
         <Section>
           <ButtonTypeLink
-            title={`내 소개 👨🏻‍💻`}
-            subtext={`김용균을 소개합니다. 질의, 제안, 무엇이든 환영합니다!`}
+            title={`제 소개 👨🏻‍💻`}
+            subtext={"김용균을 소개합니다"}
             linkTo={`/about`}
           />
         </Section>
@@ -72,6 +77,10 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }, index) => {
               return <PostItem key={index} post={node} />
             })}
+
+            <Links>
+              <Link to={`/archives`}>전체 포스트 보기</Link>
+            </Links>
           </SectionInner>
         </Section>
       </Site>

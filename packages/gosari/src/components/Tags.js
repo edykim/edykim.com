@@ -5,7 +5,7 @@ import { sanitizeUrl } from "@edykim/gatsby-plugin-taxonomy"
 import options from "config/taxonomy"
 import { layout, color } from "styles/schema"
 
-const TagLink = styled(Link)`
+export const TagLink = styled(Link)`
   display: inline-block;
   border-radius: 10px;
   background-color: ${color.white};
