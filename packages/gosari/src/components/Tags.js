@@ -40,35 +40,39 @@ const Inner = styled.div`
 export class Tags extends Component {
   render() {
     const { post } = this.props
-    const { categories, tags } = post.frontmatter
+    const { categories = [], tags = [] } = post.frontmatter
 
     return (
       <Section>
         <Inner>
-          {categories.map((category, index) => {
-            const path = `/category/${sanitizeUrl(category, options)}/`
-            return (
-              <TagLink
-                className={`taxonomy-category`}
-                key={`category-${index}`}
-                to={path}
-              >
-                {category}
-              </TagLink>
-            )
-          })}
-          {tags.map((tag, index) => {
-            const path = `/tag/${sanitizeUrl(tag, options)}/`
-            return (
-              <TagLink
-                className={`taxonomy-tag`}
-                key={`tag-${index}`}
-                to={path}
-              >
-                {tag}
-              </TagLink>
-            )
-          })}
+          {categories &&
+            categories.length &&
+            categories.map((category, index) => {
+              const path = `/category/${sanitizeUrl(category, options)}/`
+              return (
+                <TagLink
+                  className={`taxonomy-category`}
+                  key={`category-${index}`}
+                  to={path}
+                >
+                  {category}
+                </TagLink>
+              )
+            })}
+          {tags &&
+            tags.length &&
+            tags.map((tag, index) => {
+              const path = `/tag/${sanitizeUrl(tag, options)}/`
+              return (
+                <TagLink
+                  className={`taxonomy-tag`}
+                  key={`tag-${index}`}
+                  to={path}
+                >
+                  {tag}
+                </TagLink>
+              )
+            })}
         </Inner>
       </Section>
     )
