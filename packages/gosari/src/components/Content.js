@@ -33,6 +33,14 @@ const StyledContent = styled.div`
     }
   }
 
+  > iframe {
+    padding: 0;
+    max-width: ${layout.wide};
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
   > * {
     padding-left: ${layout.sidePadding};
     padding-right: ${layout.sidePadding};
@@ -42,6 +50,10 @@ const StyledContent = styled.div`
   > ol {
     padding-left: 3rem;
     padding-right: 2rem;
+  }
+
+  ul p {
+    margin: 0;
   }
 
   img {
