@@ -12,7 +12,7 @@ categories:
   - 번역
 tags:
   - culture
-
+featured: true
 ---
 
 이 글은 [April Wensel](https://twitter.com/aprilwensel)의 [Tech has a Toxic Tone Problem — Let’s Fix It!](https://compassionatecoding.com/blog/2016/8/25/tech-has-a-toxic-tone-problemlets-fix-it/) 번역입니다.
