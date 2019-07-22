@@ -13,6 +13,7 @@ categories:
 tags:
   - react
   - js
+featured: true
 
 ---
 
