@@ -9,3 +9,4 @@ lang: en
 ---
 
 - [Programming Language Theory](/plt)
+- [Notes](/note)
