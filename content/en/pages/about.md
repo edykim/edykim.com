@@ -10,12 +10,13 @@ lang: en
 
 <img src="https://avatars3.githubusercontent.com/u/1009457?s=400&v=4" style="width: 92px; border-radius: 50%; box-shadow: 0px 3px 12px rgba(80, 37, 214, 0.37); margin-bottom: 1rem; float: right; margin-left: 1rem;">
 
-I'm an open web developer who loves focusing on problems and creating quick prototypes. I'm excited about web technology, software architecture and community.
+I'm an open web developer who loves focusing on problems and creating quick
+prototypes. I'm excited about web technology, software architecture and community.
 
 ## Me Now
 
 - Love to talk about ECMAScript, microservices, serverless architecture
-- Comfortable with Python, PHP, HTML/CSS, and C#
+- Comfortable with JS, Python, PHP, HTML/CSS, and C#
 - Passionate about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
@@ -23,9 +24,9 @@ I'm an open web developer who loves focusing on problems and creating quick prot
 
 ### Work-wise
 
-- Software engineer at Swinburne
-- Web/Integration developer at Kobe Creations
-- Web developer at Nine Communications
+- Software Engineer at Swinburne
+- Web/Integration Developer at Kobe Creations
+- Web Developer at Nine Communications
 
 More details are [here](https://www.linkedin.com/in/edwardykim/).
 
@@ -42,7 +43,7 @@ More details are [here](https://www.linkedin.com/in/edwardykim/).
 
 ## My Name
 
-My name is Yong Gyun Kim (김용균) and [Google speaks right way](https://translate.google.com/translate_tts?ie=UTF-8&q=%EA%B9%80%EC%9A%A9%EA%B7%A0&tl=ko&total=1&idx=0&textlen=3&tk=799460.701964&client=t&prev=input). You can call me Edward.
+My name is Yong Gyun Kim (김용균) and [Google speaks right way](https://translate.google.com/translate_tts?ie=UTF-8&q=%EA%B9%80%EC%9A%A9%EA%B7%A0&tl=ko&total=1&idx=0&textlen=3&tk=799460.701964&client=t&prev=input).
 
 ## Contact
 
