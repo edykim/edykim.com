@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `edykim.com`,
@@ -5,6 +7,12 @@ module.exports = {
     author: `@edykim`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        components: path.join(__dirname, "src", "components"),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,13 +46,20 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `title-anchor`,
+            },
+          },
+          `gatsby-remark-attr`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
       },
     },
-
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
