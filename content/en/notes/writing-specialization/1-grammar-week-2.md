@@ -8,7 +8,9 @@ url: /note/english-writing/grammar-and-punctuation/week-2
 
 ---
 
-# Learning Objectives
+# Verb Tenses
+
+## Learning Objectives
 
 - list the verb tenses
 - identify the verb tenses
@@ -17,9 +19,9 @@ url: /note/english-writing/grammar-and-punctuation/week-2
 - punctuate sentences with these conjunctions correctly
 - identify simple and compound sentences
 
-# 12 Verb Tenses
+## 12 Verb Tenses
 
-## Simple Tenses
+### Simple Tenses
 
 - Simple Present Tense
   - Jerry palys tennis everyday.
@@ -28,7 +30,7 @@ url: /note/english-writing/grammar-and-punctuation/week-2
 - Simple Future Tense
   - Jerry will play tennis next weekend.
 
-## Progressive Tenses
+### Progressive Tenses
 
 be verb + ing
 
@@ -39,7 +41,7 @@ be verb + ing
 - Future Progressive
   - Jennifer will be walking to class.
 
-## Perfect Tenses
+### Perfect Tenses
 
 - Present Perfect (Something happened before now)
   - have/has + p.p.
@@ -53,7 +55,7 @@ be verb + ing
   - will have + p.p.
   - By next weekend, I will have seen the new movie six times.
 
-## Perfect Progressive Tenses
+### Perfect Progressive Tenses
 
 Combine Perfect and Progressive.
 
@@ -68,7 +70,7 @@ Combine Perfect and Progressive.
   - Emphasize the continuous action for some period of time.
   - We will have been studying for a month.
 
-# Present Perfect vs. Present Perfect Progressive
+## Present Perfect vs. Present Perfect Progressive
 
 - Julie has studied French for two years.
 - Julie has been studying Frech for two years.
@@ -101,7 +103,7 @@ These signals are usually matching each tenses.
 - Present Perfect: one time, two times, once, twice, before
 - Present Perfect Progressive: for one hour, for a day, for a year, all day, all week
 
-# Present Perfect vs. Simple Past
+## Present Perfect vs. Simple Past
 
 - I have already finished my homework. (now - finished)
 - We saw that movie on Friday. (Specific time in the past)
@@ -122,6 +124,12 @@ Keywords for tenses.
 - I have lived in this house since I got married.
 
 # Conjunctions and Commas
+
+## Learning Objectives
+
+- identify some common coordinate conjunctions
+- punctuate sentences with these conjunctions correctly
+- identify simple and compound sentences
 
 ## Sentence Types
 
