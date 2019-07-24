@@ -6,7 +6,12 @@ import Image from "../components/image"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`edykim`]} />
-    <h1>Howdy 👋</h1>
+    <h1>
+      Howdy{" "}
+      <span role="img" aria-label="wave hand">
+        👋
+      </span>
+    </h1>
     <p>
       Hey! I'm Edward. I'm passionate about solving complexities and problems
       through development with a strong background in communication and software
