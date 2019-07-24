@@ -1,8 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
+const Wrapper = styled.div`
+  font-size: 2.4vw;
+  @media all and (min-width: 1000px) {
+    font-size: 24px;
+  }
+  @media all and (max-width: 750px) {
+    font-size: 18px;
+  }
+`
+
 const Section = styled.div`
-  font-size: 18px;
+  font-size: 0.8em;
   line-height: 1.7;
   font-weight: 400;
 
@@ -101,5 +111,7 @@ const Section = styled.div`
 `
 
 export const Content = ({ html }) => (
-  <Section dangerouslySetInnerHTML={{ __html: html }} />
+  <Wrapper>
+    <Section dangerouslySetInnerHTML={{ __html: html }} />
+  </Wrapper>
 )
