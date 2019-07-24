@@ -7,3 +7,11 @@ lang: en
 url: /note/english-writing/grammar-and-punctuation/week-3
 
 ---
+
+# Learning Objectives
+
+- identify compound sentences
+- punctuate compound sentences correctly
+- identify adverb clauses in complex sentences
+- distinguish between compound and complex sentences
+
