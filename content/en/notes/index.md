@@ -8,4 +8,10 @@ url: /note
 
 ---
 
+## Note taking
+
 - [Academic English: Writing Specialization](/note/english-writing)
+
+## Resources
+
+- [Purdue Online Writing Lab](https://owl.purdue.edu/owl/purdue_owl.html)
