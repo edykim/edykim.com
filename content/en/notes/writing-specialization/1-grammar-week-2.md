@@ -130,19 +130,19 @@ Keywords for tenses.
 - *Compound*: 2 independent clauses, conjunction and comma
   - Sam washed his face, and he combed his hair.
 - *Complex*: independent clause + dependent clause, with connector
-  - Same got dressed because it was time for school.
+  - Sam got dressed because it was time for school.
 
 Coordinate conjuctions: and, but, or, nor, yet, so, for.
 
 - Sam and Pete washed their faces.
-- Same washed his face but not his hair.
+- Sam washed his face but not his hair.
 - The computer is old and broken.
 - We will go to the park or the market.
-- She bought apples, pears, and grapes. (three or more, uses comma)
+- She bought apples, pears, and grapes. (three or more, use comma)
 
 ## Compound Sentences
 
-- Ben washed his face, and he combed his hair. (uses comma)
+- Ben washed his face, and he combed his hair. (use comma)
 - Jeff ate an apple, but Alex ate a pizza.
 - The bank is closed, so we can't cash the check.
 - There was no air conditioning, yet we were cool.
