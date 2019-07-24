@@ -115,7 +115,7 @@ These signals are usually matching each tenses.
 Keywords for tenses.
 
 - Present Perfect: already, ever, never, yet, since, so far
-- Simple Past: last night, last week, last Monday, in 1979, at noon, tow days ago, yesterday
+- Simple Past: last night, last week, last Monday, in 1979, at noon, two days ago, yesterday
 
 - Max fed the dog an hour ago.
 - We haven't decided what to name our new baby yet.
