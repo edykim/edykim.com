@@ -25,6 +25,11 @@ const Section = styled.div`
     margin-left: 5px;
     vertical-align: super;
   }
+  blockquote {
+    padding: 1em;
+    margin: 0;
+    background-color: #eeeeee;
+  }
 
   ul p {
     margin: 0;
