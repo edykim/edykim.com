@@ -123,6 +123,19 @@ Keywords for tenses.
 - We haven't decided what to name our new baby yet.
 - I have lived in this house since I got married.
 
+## Simple future vs. Future Perfect
+
+> - Linda will leave before you get there.
+> - Linda will have left before you get there.
+>
+> Sometimes, those two tenses are interchangeable. But without prepositions such as before or by the time that make the sequence of events clear, you need to use the future perfect to show what happened first.
+>
+> - At eight o’clock Linda will leave. (This means that Linda will wait until 8 o’clock to leave.)
+> - At eight o’clock Linda will have left. (This means Linda will leave before 8 o’clock.)
+>
+> -- [Future Perfect - grammarly](https://www.grammarly.com/blog/future-perfect/)
+
+
 # Conjunctions and Commas
 
 ## Learning Objectives
