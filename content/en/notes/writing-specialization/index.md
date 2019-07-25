@@ -19,3 +19,11 @@ This course gives quick review about English grammar and punctuation. [link](htt
 - [Week 3: Compound and Complex Sentences](/note/english-writing/grammar-and-punctuation/week-3)
 - [Week 4: More Commas, Parallel Structure, and Sentence Variety](/note/english-writing/grammar-and-punctuation/week-4)
 
+## Getting Started with Essay Writing
+
+Start writing essays! [link](https://www.coursera.org/learn/getting-started-with-essay-writing)
+
+- Week 1: Course Introduction and Essay Writing
+- Week 2: Writing Compare/Contrast Essays
+- Week 3: Writing Cause/Effect Essays
+- Week 4: Writing Argument Essays
