@@ -23,7 +23,7 @@ This course gives quick review about English grammar and punctuation. [link](htt
 
 Start writing essays! [link](https://www.coursera.org/learn/getting-started-with-essay-writing)
 
-- Week 1: Course Introduction and Essay Writing
-- Week 2: Writing Compare/Contrast Essays
-- Week 3: Writing Cause/Effect Essays
-- Week 4: Writing Argument Essays
+- [Week 1: Course Introduction and Essay Writing](/note/english-writing/getting-started-with-essay-writing/week-1)
+- [Week 2: Writing Compare/Contrast Essays](/note/english-writing/getting-started-with-essay-writing/week-2)
+- [Week 3: Writing Cause/Effect Essays](/note/english-writing/getting-started-with-essay-writing/week-3)
+- [Week 4: Writing Argument Essays](/note/english-writing/getting-started-with-essay-writing/week-4)
