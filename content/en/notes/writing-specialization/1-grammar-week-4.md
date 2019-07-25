@@ -120,4 +120,27 @@ Transition words can be punctuated in several different ways.
 - write sentences that have good parallel structure
 - correct sentences that have faulty parallel structure
 
+Parallel means balanced.
+
+- He loves to __swim__ and __sleep__.
+- __Cake__ and __cookies__ are both fattening.
+- We were __hot__, __tired__, and __thirsty__.
+
+Parallel Structure: A and B, A but B, both A and B, not only A but also B
+
+I was looking for an apartment that was both __close to my work__ and __easy to afford__.
+
+- I want to find a gym that is not only close to my apartment but also I want to find a cheap one. (x)
+- I want to find a gym that is not only close to my apartment but also affordable.
+
+- He is afraid of being alone but not to die. (x, gerund, infinitive)
+- He is afraid of being alone but not dying.
+
+# Sentence Variety
+
+## Learning Objectives
+
+- define sentence variety and explain why it's important
+- identify ways to create sentence variety
+- use sentence variety in your writing
 
