@@ -73,7 +73,7 @@ Combine Perfect and Progressive.
 ## Present Perfect vs. Present Perfect Progressive
 
 - Julie has studied French for two years.
-- Julie has been studying Frech for two years.
+- Julie has been studying French for two years.
 
 - Bart has lived in Ireland for two years.
 - Bart has been living in Ireland for two years.
