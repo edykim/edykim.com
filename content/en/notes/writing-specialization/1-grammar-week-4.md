@@ -144,3 +144,66 @@ I was looking for an apartment that was both __close to my work__ and __easy to 
 - identify ways to create sentence variety
 - use sentence variety in your writing
 
+## By the type of sentences
+
+- Simple
+  - The grass grows in spring.
+- Compound
+  - Grass grows in spring, but it dies in winter.
+- Complex
+  - Because it is too cold, grass doesn't grow in winter.
+- Compound-Complex (2 independent cluases and dependent clause)
+  - Because grass needs warm weather, it doesn't grow in winter, but it grows in the summer.
+
+FANBOYS conjunction: For, And, Nor, But, Or, Yet
+
+## Way to start sentences
+
+- Adverbs
+  - Quietly, Every day, Frequently
+- Prepositional Phrases
+  - In the morning, Due to stree, After work
+- Other transitions
+  - The last reason..., Another cause of ...is ..., For Example, Furthermore
+
+## By length of the sentences
+
+- Short sentences
+  - Use effectively
+  - Avoid choppy sentences
+- Medium sentences
+  - 10-15 words
+- Long sentences
+  - 20-40 words
+
+## By using synonyms
+
+- Repeat key nouns
+  - The employee ... the employee ... employees ...
+  - use too many times, that can get kind of boring
+- Use synonyms for variety
+  - The employee ... workers ... a worker ... the staff ... employees ...
+- Say things in different ways
+  - The employee ... the worker ... the person working in an office ... a hired person ... someone employed ...
+
+## Summary
+
+- Uses different sentence tyles
+- Starts sentences differently
+- Uses different sentence lengths
+- Uses synonyms effectively
+
+## Writing an eassay
+
+- Pick a topic
+- Do some pre-writing
+- Write a thesis statement
+- Make an outline
+- Begin writing
+- Revise and edit: important think about sentence variety here
+
+# Resources
+
+- [Parallel structure](https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html)
+- [Parallel structure](https://webapps.towson.edu/ows/parallelism.htm)
+- [Sentance Variety](https://owl.purdue.edu/owl/general_writing/academic_writing/sentence_variety/index.html)
