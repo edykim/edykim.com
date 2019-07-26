@@ -10,6 +10,8 @@ url: /note/english-writing
 
 [Coursera link](https://www.coursera.org/specializations/academic-english)
 
+# Courses
+
 ## Grammar and Punctuation
 
 This course gives quick review about English grammar and punctuation. [link](https://www.coursera.org/learn/grammar-punctuation)
@@ -27,3 +29,7 @@ Start writing essays! [link](https://www.coursera.org/learn/getting-started-with
 - [Week 2: Writing Compare/Contrast Essays](/note/english-writing/getting-started-with-essay-writing/week-2)
 - [Week 3: Writing Cause/Effect Essays](/note/english-writing/getting-started-with-essay-writing/week-3)
 - [Week 4: Writing Argument Essays](/note/english-writing/getting-started-with-essay-writing/week-4)
+
+# Resources
+
+- [Purdue Online Writing Lab](https://owl.purdue.edu/owl/purdue_owl.html)
