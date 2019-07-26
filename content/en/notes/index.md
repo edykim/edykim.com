@@ -11,9 +11,12 @@ url: /note
 ## Note taking
 {class="no-number"}
 
-- [Academic English: Writing Specialization](/note/english-writing)
-
-## Resources
+### English
 {class="no-number"}
 
-- [Purdue Online Writing Lab](https://owl.purdue.edu/owl/purdue_owl.html)
+- [Academic English: Writing Specialization](/note/english-writing)
+
+### Mathematics
+{class="no-number"}
+
+- [Introduction to Calculus](/note/introduction-to-calculus)
