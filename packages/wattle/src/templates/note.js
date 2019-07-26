@@ -4,6 +4,8 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import { Content } from "components/note"
 
+import "katex/dist/katex.min.css"
+
 export default ({ data, location }) => {
   const page = data.page
   return (

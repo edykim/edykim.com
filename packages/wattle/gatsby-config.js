@@ -52,6 +52,12 @@ module.exports = {
               className: `title-anchor`,
             },
           },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
           `gatsby-remark-attr`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
