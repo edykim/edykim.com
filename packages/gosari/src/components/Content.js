@@ -303,6 +303,10 @@ const StyledContent = styled.div`
     background: #fafafa;
   }
 
+  .twitter-tweet {
+    margin-left: auto;
+    margin-right: auto;
+  }
   figure {
     margin: 3rem 0;
     text-align: center;
