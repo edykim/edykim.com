@@ -308,9 +308,12 @@ const StyledContent = styled.div`
     margin-right: auto;
   }
   figure {
-    margin: 3rem 0;
+    margin: 3rem auto;
     text-align: center;
     text-indent: 0;
+    &.wide {
+      max-width: ${layout.full};
+    }
     * {
       text-indent: 0;
     }
