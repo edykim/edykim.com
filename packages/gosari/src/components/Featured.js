@@ -41,7 +41,9 @@ export const Featured = ({ posts: { edges } }) => {
         {edges.map(({ node }, index) => {
           return (
             <div key={`featured-${index}`}>
-              <Link to={`/${node.fields.url}`}>{node.frontmatter.title}</Link>
+              <Link to={`/${node.fields.url}`} rel={`nofollow`}>
+                {node.frontmatter.title}
+              </Link>
             </div>
           )
         })}

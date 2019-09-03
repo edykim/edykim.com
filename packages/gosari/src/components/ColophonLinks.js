@@ -48,7 +48,7 @@ export class ColophonLinks extends Component {
             post =>
               post && (
                 <Section key={post.fields.url}>
-                  <Link to={post.fields.url}>
+                  <Link to={post.fields.url} rel={`nofollow`}>
                     <PublishedAt>{post.frontmatter.date}</PublishedAt>
                     {post.frontmatter.title}
                   </Link>
