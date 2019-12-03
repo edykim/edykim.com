@@ -22,7 +22,7 @@ lang: ko
 문의 사항은 [이메일 (visualtimer@edykim.com)](mailto:visualtimer@edykim.com)을 통해 알려주세요.
 
 
-<a href="https://apps.apple.com/kr/app/id1458639178"><img src="/assets/ko/apps/ko-download.svg" alt="Download App" style="max-width: 100px; margin: 0 auto; display: block;"></a>
+<a href="https://apps.apple.com/kr/app/id1458639178"><img src="/assets/ko/apps/ko-download.svg" alt="Download App" style="width: 200px; margin: 0 auto; display: block;"></a>
 
 - [애플 앱스토어에서 받기](https://apps.apple.com/kr/app/id1458639178)
 - [개인정보 처리방침 (영문)](/app/visual-timer/privacy-policy)

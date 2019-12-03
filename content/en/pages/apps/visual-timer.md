@@ -22,7 +22,7 @@ This app provides a simple visual timer which has a straightforward design, and 
 
 If you have any questions, please contact me via [email (visualtimer@edykim.com)](mailto:visualtimer@edykim.com)
 
-<a href="https://apps.apple.com/app/id1458639178"><img src="/assets/en/apps/en-download.svg" alt="Download App" style="max-width: 100px; margin: 0 auto; display: block;"></a>
+<a href="https://apps.apple.com/app/id1458639178"><img src="/assets/en/apps/en-download.svg" alt="Download App" style="width: 200px; margin: 0 auto; display: block;"></a>
 
 - [Download from Apple App Store](https://apps.apple.com/app/id1458639178)
 - [Privacy Policy](/app/visual-timer/privacy-policy)
