@@ -1,5 +1,6 @@
 const path = require(`path`)
 const puppeteer = require('puppeteer')
+const mkdirp = require('mkdirp')
 const template = require('./template')
 
 const opts = {
@@ -75,8 +76,10 @@ exports.createPages = async ({ actions, graphql }, pluginOptions) => {
       },
       { title, headline }
     )
+    const _path = './' + path.join('public', url, 'social.png')
+    await mkdirp(path.dirname(_path))
     await section.screenshot({
-      path: './' + path.join('public', url, 'social.png'),
+      path: _path,
     })
   }
   await browser.close()
