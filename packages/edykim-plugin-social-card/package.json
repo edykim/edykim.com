@@ -1,0 +1,15 @@
+{
+  "name": "@edykim/gatsby-plugin-social-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edward Yong Gyun Kim <ed@edykim.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
+}
