@@ -24,6 +24,7 @@ export default ({ data, location, pageContext }) => {
       <Meta
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        url={url}
       />
 
       <Header
