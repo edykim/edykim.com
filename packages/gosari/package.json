@@ -13,6 +13,7 @@
     "@edykim/gatsby-plugin-taxonomy": "*",
     "@edykim/gatsby-plugin-template": "*",
     "@edykim/gatsby-plugin-url": "*",
+    "@edykim/gatsby-plugin-social-card": "*",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.21",
     "gatsby-image": "^2.2.6",

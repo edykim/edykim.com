@@ -125,6 +125,7 @@ module.exports = {
         },
       },
     },
+    `@edykim/gatsby-plugin-social-card`,
     `@edykim/gatsby-plugin-redirect-json`,
     `@edykim/gatsby-plugin-template`,
     {
