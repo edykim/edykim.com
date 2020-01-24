@@ -85,7 +85,7 @@ chroot로 호스트에 접속한다.
 # arch-chroot /mnt
 ```
 
-일단 사용에 필수적인 패키지를 설치한다. vim은 필수고, wifi_menu는 [dialog에 의존성이 있고][4] WPA를 사용하면 wpa_supplicant도 설치해야 한다.
+일단 사용에 필수적인 패키지를 설치한다. vim은 필수고, wifi\_menu는 [dialog에 의존성이 있고][4] WPA를 사용하면 wpa\_supplicant도 설치해야 한다.
 
 ```bash
 # pacman -S vim wpa_supplicant dialog
@@ -203,7 +203,7 @@ fcitx로 설치하고 싶은데 제대로 동작을 안해서 일단 ibus를 설
 # pacman -S ibus ibus-hangul
 ```
 
-`/etc/locale.gen`에 ko_KR을 추가한다.
+`/etc/locale.gen`에 ko\_KR을 추가한다.
 
     ko_KR.UTF-8 UTF-8
     
