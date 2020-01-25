@@ -3,13 +3,22 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const Meta = ({ description, lang, meta, keywords, title, url }) => {
+export const Meta = ({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  url,
+  socialCardUrl,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             siteUrl
+            siteUrlForSitemap
             title
             description
             author
@@ -65,7 +74,7 @@ export const Meta = ({ description, lang, meta, keywords, title, url }) => {
     .concat(meta)
 
   if (url) {
-    const imagePath = `${site.siteMetadata.siteUrl}${url}social.png`
+    const imagePath = `${site.siteMetadata.siteUrlForSitemap}${socialCardUrl}`
     _meta.push({ name: `twitter:image:src`, content: imagePath })
     _meta.push({ name: `og:image`, content: imagePath })
   }

@@ -17,7 +17,10 @@ export default ({ data, location, pageContext }) => {
   const { featuredArticles } = data
   const { previous, next } = pageContext
   const { date, title, headline } = post.frontmatter
-  const { url } = post.fields
+  const {
+    url,
+    socialCard: { publicURL },
+  } = post.fields
 
   return (
     <Site location={location}>
@@ -25,6 +28,7 @@ export default ({ data, location, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         url={url}
+        socialCardUrl={publicURL}
       />
 
       <Header
@@ -60,6 +64,9 @@ export const query = graphql`
       }
       fields {
         url
+        socialCard {
+          publicURL
+        }
       }
     }
     featuredArticles: allMarkdownRemark(
