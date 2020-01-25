@@ -72,6 +72,9 @@ const createSocialCardField = async (
     fileNode = await getNode(cacheData.fileNodeID)
   } else {
     const page = await openPage()
+    await page.reload({
+      waitUntil: 'networkidle0',
+    })
     await page.setViewport(viewport)
     await page.setContent(createCardHtml(node), {
       waitUntil: 'networkidle0',
