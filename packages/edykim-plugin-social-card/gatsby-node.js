@@ -38,8 +38,11 @@ const closeBrowsers = () => {
 
 const openPage = async () => {
   const page = _pages.shift()
-  _pages.push(page)
   return page
+}
+
+const returnPage = async page => {
+  _pages.push(page)
 }
 
 const isInTargetNode = (node, { targetNodeFilter }) => {
@@ -73,7 +76,7 @@ const createSocialCardField = async (
   } else {
     const page = await openPage()
     await page.reload({
-      waitUntil: 'networkidle0',
+      waitUntil: 'domcontentloaded',
     })
     await page.setViewport(viewport)
     await page.setContent(createCardHtml(node), {
@@ -81,7 +84,9 @@ const createSocialCardField = async (
     })
     await page.waitFor(targetElement)
     const section = await page.$(targetElement)
+
     const buffer = await section.screenshot()
+    await returnPage(page)
 
     fileNode = await createFileNodeFromBuffer({
       buffer,
