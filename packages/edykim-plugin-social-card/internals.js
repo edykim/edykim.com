@@ -29,9 +29,9 @@ class QueueProcess extends EventEmitter {
     this.current++
     const [func, resolve] = this.que.shift()
     await func()
-    this.current--
     resolve && resolve()
 
+    this.current--
     if (this.current < this.max && this.que.length > 0) {
       this.emit('run')
     }
