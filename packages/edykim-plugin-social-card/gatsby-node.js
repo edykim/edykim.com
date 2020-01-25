@@ -59,7 +59,7 @@ const createSocialCardField = async (
     cache,
     createNodeId,
   },
-  { viewport, createCardHtml }
+  { viewport, createCardHtml, targetElement }
 ) => {
   const digest = createContentDigest(node)
   const key = `social-card-${digest}`
@@ -76,8 +76,8 @@ const createSocialCardField = async (
     await page.setContent(createCardHtml(node), {
       waitUntil: 'networkidle0',
     })
-    await page.waitFor('body')
-    const section = await page.$('body')
+    await page.waitFor(targetElement)
+    const section = await page.$(targetElement)
     const buffer = await section.screenshot()
 
     fileNode = await createFileNodeFromBuffer({

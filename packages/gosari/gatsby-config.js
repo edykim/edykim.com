@@ -142,6 +142,7 @@ module.exports = {
             node.frontmatter.private !== true
           )
         },
+        targetElement: "body > div",
         createCardHtml: createSocialCardTemplate(siteMetadata),
         puppeteerQueueSize: 8,
       },

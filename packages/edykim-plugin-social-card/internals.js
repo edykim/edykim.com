@@ -53,6 +53,7 @@ exports.defaultOptions = {
     height: 628,
     deviceScaleFactor: 2,
   },
+  targetElement: 'body',
   createCardHtml: node => {
     return `<!doctype html><body>${node.frontmatter.title}</body>`
   },
