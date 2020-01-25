@@ -1,23 +1,26 @@
 const path = require("path")
+const createSocialCardTemplate = require("./config/socialCardTemplate")
 
 const desc = `문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다.`
 const profile = `${desc} 웹의 자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처, 커뮤니티에 관심이 많습니다.`
 
+const siteMetadata = {
+  title: `매일 성장하기`,
+  author: `김용균`,
+  description: desc,
+  profile,
+  siteUrl: `https://edykim.com/ko/`,
+  siteUrlForSitemap: `https://edykim.com`,
+  social: {
+    github: `edykim`,
+    twitter: `haruair`,
+    linkedin: `edwardykim`,
+  },
+}
+
 module.exports = {
   pathPrefix: `/ko`,
-  siteMetadata: {
-    title: `매일 성장하기`,
-    author: `김용균`,
-    description: desc,
-    profile,
-    siteUrl: `https://edykim.com/ko/`,
-    siteUrlForSitemap: `https://edykim.com`,
-    social: {
-      github: `edykim`,
-      twitter: `haruair`,
-      linkedin: `edwardykim`,
-    },
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: `gatsby-plugin-root-import`,
@@ -125,7 +128,25 @@ module.exports = {
         },
       },
     },
-    `@edykim/gatsby-plugin-social-card`,
+    {
+      resolve: `@edykim/gatsby-plugin-social-card`,
+      options: {
+        targetNodeFilter: node => {
+          return (
+            node &&
+            node.internal &&
+            node.internal.type === `MarkdownRemark` &&
+            node.frontmatter &&
+            node.frontmatter.type === "post" &&
+            node.frontmatter.draft !== true &&
+            node.frontmatter.private !== true
+          )
+        },
+        targetElement: "body > div",
+        createCardHtml: createSocialCardTemplate(siteMetadata),
+        puppeteerQueueSize: 8,
+      },
+    },
     `@edykim/gatsby-plugin-redirect-json`,
     `@edykim/gatsby-plugin-template`,
     {
@@ -155,5 +176,6 @@ module.exports = {
         }`,
       },
     },
+    `gatsby-plugin-netlify-cache`,
   ],
 }

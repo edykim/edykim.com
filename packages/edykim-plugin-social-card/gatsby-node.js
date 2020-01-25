@@ -1,86 +1,194 @@
 const path = require(`path`)
 const puppeteer = require('puppeteer')
-const mkdirp = require('mkdirp')
-const template = require('./template')
+const { createFileNodeFromBuffer } = require(`gatsby-source-filesystem`)
+const { defaultOptions, QueueProcess } = require(`./internals`)
 
-const opts = {
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  headless: true,
-}
+let queueProcess = null
+let browserPromise = null
+let _browsers = null
+let _pages = null
 
-const resolution = {
-  width: 1200,
-  height: 628,
-}
+const initBrowsers = async (size, options) => {
+  if (_pages) {
+    return
+  }
 
-exports.createPages = async ({ actions, graphql }, pluginOptions) => {
-  const browser = await puppeteer.launch(opts)
+  if (browserPromise) {
+    return browserPromise
+  }
 
-  const query = `
-  {
-    site {
-      siteMetadata {
-        siteUrl
-        title
-        author
-      }
-    }
-    posts: allMarkdownRemark(filter: {
-      frontmatter: {
-        private: { ne: true }
-        draft: { ne: true }
-        type: { eq: "post" }
-      }
-    }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            headline
-          }
-          fields {
-            slug
-            url
-          }
-        }
-      }
-    }
-  }`
-
-  const {
-    data: {
-      site: { siteMetadata },
-      posts: { edges },
-    },
-  } = await graphql(query)
-
-  const page = await browser.newPage()
-  await page.setViewport({ ...resolution, deviceScaleFactor: 2 })
-  await page.setContent(template({ ...siteMetadata }), {
-    waitUntil: 'networkidle0',
-  })
-  await page.waitFor('body > div')
-  const section = await page.$('body > div')
-
-  for (let i = 0; i < edges.length; i++) {
-    const {
-      node: {
-        frontmatter: { title, headline },
-        fields: { url },
-      },
-    } = edges[i]
-
-    await page.evaluate(
-      ({ title, headline }) => {
-        setCard(title, headline)
-      },
-      { title, headline }
+  browserPromise = new Promise(async (resolve, reject) => {
+    _browsers = await Promise.all(
+      [...Array(size).keys()].map(() => puppeteer.launch(options))
     )
-    const _path = './' + path.join('public', url, 'social.png')
-    await mkdirp(path.dirname(_path))
-    await section.screenshot({
-      path: _path,
+    const pages = await Promise.all(_browsers.map(browser => browser.newPage()))
+    resolve(pages)
+  }).then(pages => {
+    _pages = pages
+  })
+
+  return browserPromise
+}
+
+const closeBrowsers = () => {
+  return _browsers
+    ? Promise.all(_browsers.map(browser => browser.close()))
+    : true
+}
+
+const openPage = async () => {
+  const page = _pages.shift()
+  return page
+}
+
+const returnPage = async page => {
+  _pages.push(page)
+}
+
+const isInTargetNode = (node, { targetNodeFilter }) => {
+  return targetNodeFilter(node)
+}
+
+const createSocialCardField = async (
+  {
+    node,
+    getNode,
+    createNode,
+    createParentChildLink,
+    createNodeField,
+    createContentDigest,
+    touchNode,
+    store,
+    cache,
+    createNodeId,
+  },
+  { viewport, createCardHtml, targetElement }
+) => {
+  const digest = createContentDigest(node)
+  const key = `social-card-${digest}`
+
+  const cacheData = await cache.get(key)
+  let fileNode
+
+  if (cacheData) {
+    touchNode({ nodeId: cacheData.fileNodeID })
+    fileNode = await getNode(cacheData.fileNodeID)
+  } else {
+    const page = await openPage()
+    await page.reload({
+      waitUntil: 'domcontentloaded',
+    })
+    await page.setViewport(viewport)
+    await page.setContent(createCardHtml(node), {
+      waitUntil: 'networkidle0',
+    })
+    await page.waitFor(targetElement)
+    const section = await page.$(targetElement)
+
+    const buffer = await section.screenshot()
+    await returnPage(page)
+
+    fileNode = await createFileNodeFromBuffer({
+      buffer,
+      store,
+      cache,
+      createNode,
+      createNodeId,
+      name: `social-card-${node.id}`,
     })
   }
-  await browser.close()
+
+  await createNodeField({
+    node,
+    name: 'socialCard',
+    value: fileNode,
+  })
+
+  // await createParentChildLink({ parent: node, child: fileNode })
+  await cache.set(key, { fileNodeID: fileNode.id })
+}
+
+exports.onCreateNode = async (
+  {
+    actions: {
+      getNode,
+      createNode,
+      createNodeField,
+      createParentChildLink,
+      touchNode,
+    },
+    createContentDigest,
+    basePath,
+    node,
+    createNodeId,
+    store,
+    cache,
+    reporter,
+  },
+  pluginOptions
+) => {
+  const options = {
+    ...defaultOptions,
+    ...pluginOptions,
+  }
+
+  if (!isInTargetNode(node, options)) {
+    return
+  }
+
+  queueProcess = queueProcess || new QueueProcess(options.puppeteerQueueSize)
+  await initBrowsers(options.puppeteerQueueSize, options.puppeteerOptions)
+
+  await queueProcess.queue(async () => {
+    await createSocialCardField(
+      {
+        node,
+        getNode,
+        createNode,
+        createNodeField,
+        createParentChildLink,
+        createContentDigest,
+        touchNode,
+        store,
+        cache,
+        createNodeId,
+        basePath,
+      },
+      options
+    )
+  })
+
+  reporter.success(`Social Card generated for ${node.frontmatter.title}`)
+}
+
+exports.sourceNodes = async ({ actions, getNodes }) => {
+  const { touchNode } = actions
+  const nodes = getNodes()
+
+  // touch exisiting social cards
+  nodes
+    .filter(n => {
+      return n.internal.type === 'File' && n.name.indexOf('social-card-') === 0
+    })
+    .forEach(n => touchNode({ nodeId: n.id }))
+}
+
+exports.onPostBootstrap = async () => {
+  await closeBrowsers()
+}
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions
+
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields
+    }
+
+    type MarkdownRemarkFields {
+      socialCard: File
+    }
+  `
+
+  createTypes(typeDefs)
 }

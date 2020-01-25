@@ -1,5 +1,6 @@
-module.exports = ({ title, author }) =>
-  `<!doctype html>
+module.exports = site => {
+  return ({ frontmatter: { title, headline } }) =>
+    `<!doctype html>
     <html lang='ko'>
       <head>
         <style>
@@ -90,29 +91,17 @@ module.exports = ({ title, author }) =>
         <div>
           <section>
             <div>
-              <h1 id="title"></h1>
-              <h2 id="headline"></h2>
-
+              <h1 id="title">${title}</h1>
+              ${headline ? `<h2 id="headline">${headline}</h2>` : ""}
               <p>
-                 <span>${title}</span> ${author}
+                 <span>${site.title}</span> ${site.author}
               </p>
             </div>
           </section>
         </div>
 
         <div class="background"></div>
-
-        <script>
-        function setCard(title, headline) {
-          document.getElementsByTagName("h1")[0].innerText = title;
-          if (headline) {
-            document.getElementsByTagName("h2")[0].style.display = "block";
-            document.getElementsByTagName("h2")[0].innerText = headline;
-          } else {
-            document.getElementsByTagName("h2")[0].style.display = "none";
-          }
-        }
-        </script>
       </body>
     </html>
   `
+}
