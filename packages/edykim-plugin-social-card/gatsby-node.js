@@ -104,7 +104,6 @@ const createSocialCardField = async (
     value: fileNode,
   })
 
-  // await createParentChildLink({ parent: node, child: fileNode })
   await cache.set(key, { fileNodeID: fileNode.id })
 }
 
