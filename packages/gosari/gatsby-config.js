@@ -144,7 +144,7 @@ module.exports = {
         },
         targetElement: "body > div",
         createCardHtml: createSocialCardTemplate(siteMetadata),
-        puppeteerQueueSize: 8,
+        puppeteerQueueSize: 4,
       },
     },
     `@edykim/gatsby-plugin-redirect-json`,
