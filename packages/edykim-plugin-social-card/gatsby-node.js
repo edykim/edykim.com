@@ -1,128 +1,117 @@
-const path = require(`path`)
-const puppeteer = require('puppeteer')
+const grayMatter = require(`gray-matter`)
+const _ = require(`lodash`)
 const { createFileNodeFromBuffer } = require(`gatsby-source-filesystem`)
 const { defaultOptions, QueueProcess } = require(`./internals`)
 
+const { setupPuppeteer } = require('./browser')
+const { initBrowsers, closeBrowsers, openPage, returnPage } = setupPuppeteer()
+
+const { setupTracker } = require('./job-tracker')
+const { initProgress, jobStart, jobEnd } = setupTracker()
+
 let queueProcess = null
-let browserPromise = null
-let _browsers = null
-let _pages = null
-
-const initBrowsers = async (size, options) => {
-  if (_pages) {
-    return
-  }
-
-  if (browserPromise) {
-    return browserPromise
-  }
-
-  browserPromise = new Promise(async (resolve, reject) => {
-    _browsers = await Promise.all(
-      [...Array(size).keys()].map(() => puppeteer.launch(options))
-    )
-    const pages = await Promise.all(_browsers.map(browser => browser.newPage()))
-    resolve(pages)
-  }).then(pages => {
-    _pages = pages
-  })
-
-  return browserPromise
-}
-
-const closeBrowsers = () => {
-  return _browsers
-    ? Promise.all(_browsers.map(browser => browser.close()))
-    : true
-}
-
-const openPage = async () => {
-  const page = _pages.shift()
-  return page
-}
-
-const returnPage = async page => {
-  _pages.push(page)
-}
 
 const isInTargetNode = (node, { targetNodeFilter }) => {
   return targetNodeFilter(node)
 }
 
-const createSocialCardField = async (
+exports.onPreBootstrap = async (
   {
+    actions,
+    getNodesByType,
+    reporter,
+  },
+  pluginOptions,
+) => {
+  const { touchNode } = actions
+  const options = {
+    ...defaultOptions,
+    ...pluginOptions,
+  }
+
+  const socialCardNodes = getNodesByType('SocialCard')
+  socialCardNodes.forEach(n => {
+    touchNode({ nodeId: n.file___NODE })
+  })
+
+  queueProcess = new QueueProcess(options.puppeteerQueueSize)
+  await initProgress({ reporter })
+  await initBrowsers({
+    size: options.puppeteerQueueSize,
+    options: options.puppeteerOptions
+  })
+}
+
+exports.onPostBootstrap = async () => {
+  // Keep instance alive in dev mode
+  if (process.env.NODE_ENV === 'production') {
+    await closeBrowsers()
+  }
+}
+
+const createSocialCardNode = async (
+  {
+    frontmatter,
     node,
-    getNode,
     createNode,
-    createParentChildLink,
-    createNodeField,
+    createNodeId,
     createContentDigest,
-    touchNode,
     store,
     cache,
-    createNodeId,
   },
   { viewport, createCardHtml, targetElement }
 ) => {
-  const digest = createContentDigest(node)
-  const key = `social-card-${digest}`
+  const page = await openPage()
+  await page.reload({
+    waitUntil: 'domcontentloaded',
+  })
+  await page.setViewport(viewport)
+  await page.setContent(createCardHtml({ frontmatter }), {
+    waitUntil: 'networkidle0',
+  })
+  await page.waitFor(targetElement)
 
-  const cacheData = await cache.get(key)
-  let fileNode
+  const section = await page.$(targetElement)
+  const buffer = await section.screenshot()
+  await returnPage(page)
 
-  if (cacheData) {
-    touchNode({ nodeId: cacheData.fileNodeID })
-    fileNode = await getNode(cacheData.fileNodeID)
-  } else {
-    const page = await openPage()
-    await page.reload({
-      waitUntil: 'domcontentloaded',
-    })
-    await page.setViewport(viewport)
-    await page.setContent(createCardHtml(node), {
-      waitUntil: 'networkidle0',
-    })
-    await page.waitFor(targetElement)
-    const section = await page.$(targetElement)
-
-    const buffer = await section.screenshot()
-    await returnPage(page)
-
-    fileNode = await createFileNodeFromBuffer({
-      buffer,
-      store,
-      cache,
-      createNode,
-      createNodeId,
-      name: `social-card-${node.id}`,
-    })
-  }
-
-  await createNodeField({
-    node,
-    name: 'socialCard',
-    value: fileNode,
+  const fileNode = await createFileNodeFromBuffer({
+    buffer,
+    store,
+    cache,
+    createNode,
+    createNodeId,
+    name: `social-card-${node.id}`,
   })
 
-  await cache.set(key, { fileNodeID: fileNode.id })
+  const socialCardNode = {
+    id: createNodeId(`${node.id} >>> SocialCard`),
+    parent: node.id,
+    children: [],
+    internal: {
+      type: 'SocialCard',
+    },
+    file___NODE: fileNode.id,
+  }
+  socialCardNode.internal.contentDigest = createContentDigest(socialCardNode)
+  createNode(socialCardNode)
+
+  return socialCardNode
 }
 
 exports.onCreateNode = async (
   {
     actions: {
-      getNode,
       createNode,
       createNodeField,
-      createParentChildLink,
-      touchNode,
     },
-    createContentDigest,
-    basePath,
     node,
     createNodeId,
+    createContentDigest,
+    loadNodeContent,
+    basePath,
     store,
     cache,
-    reporter,
   },
   pluginOptions
 ) => {
@@ -131,63 +120,60 @@ exports.onCreateNode = async (
     ...pluginOptions,
   }
 
-  if (!isInTargetNode(node, options)) {
+  if (
+    node.internal.mediaType !== `text/markdown` &&
+    node.internal.mediaType !== `text/x-markdown`
+  ) {
     return
   }
 
-  queueProcess = queueProcess || new QueueProcess(options.puppeteerQueueSize)
-  await initBrowsers(options.puppeteerQueueSize, options.puppeteerOptions)
+  let frontmatter = null
+  const content = await loadNodeContent(node)
 
-  await queueProcess.queue(async () => {
-    await createSocialCardField(
+  try {
+    const { data } = grayMatter(content, pluginOptions)
+    if (data) {
+      frontmatter = _.mapValues(data, value => {
+        if (_.isDate(value)) {
+          return value.toJSON()
+        }
+        return value
+      })
+    }
+  } catch (err) {
+    reporter.panicOnBuild(
+      `Error processing Markdown ${
+        node.absolutePath ? `file ${node.absolutePath}` : `in node ${node.id}`
+      }:\n
+      ${err.message}`
+    )
+    return
+  }
+
+  if (!frontmatter) {
+    return
+  }
+
+  if (!isInTargetNode({ frontmatter }, options)) {
+    return
+  }
+
+  jobStart()
+  return queueProcess.queue(async () => {
+    await createSocialCardNode(
       {
+        frontmatter,
         node,
-        getNode,
         createNode,
         createNodeField,
-        createParentChildLink,
         createContentDigest,
-        touchNode,
         store,
         cache,
         createNodeId,
         basePath,
       },
-      options
+      options,
     )
+    jobEnd()
   })
-
-  reporter.success(`Social Card generated for ${node.frontmatter.title}`)
-}
-
-exports.sourceNodes = async ({ actions, getNodes }) => {
-  const { touchNode } = actions
-  const nodes = getNodes()
-
-  // touch exisiting social cards
-  nodes
-    .filter(n => {
-      return n.internal.type === 'File' && n.name.indexOf('social-card-') === 0
-    })
-    .forEach(n => touchNode({ nodeId: n.id }))
-}
-
-exports.onPostBootstrap = async () => {
-  await closeBrowsers()
-}
-
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes, createFieldExtension } = actions
-
-  const typeDefs = `
-    type MarkdownRemark implements Node {
-      fields: MarkdownRemarkFields
-    }
-
-    type MarkdownRemarkFields {
-      socialCard: File
-    }
-  `
-
-  createTypes(typeDefs)
 }

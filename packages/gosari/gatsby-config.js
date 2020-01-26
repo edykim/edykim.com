@@ -104,7 +104,12 @@ module.exports = {
     {
       resolve: `@edykim/gatsby-plugin-url`,
       options: {
+        targetTypes: [`MarkdownRemark`, `SocialCard`],
         urlHandler: ({ node }, { slugFieldName }) => {
+          if (node.internal.type === `SocialCard`) {
+            return null
+          }
+
           let url = node.fields[slugFieldName]
 
           if (node.frontmatter) {
@@ -133,9 +138,6 @@ module.exports = {
       options: {
         targetNodeFilter: node => {
           return (
-            node &&
-            node.internal &&
-            node.internal.type === `MarkdownRemark` &&
             node.frontmatter &&
             node.frontmatter.type === "post" &&
             node.frontmatter.draft !== true &&

@@ -15,7 +15,7 @@ module.exports = site => {
           word-break: keep-all;
           margin: 0;
         }
-        
+
         h1 {
           line-height: 8vw;
           font-size: 8vw;
@@ -60,7 +60,7 @@ module.exports = site => {
           margin-top: -4.5vw;
           box-shadow: 3.5vw 0 0 #ea1f63, 7vw 0 0 #dddddd;
         }
-        
+
         section {
           height: 100vh;
           display: flex;
@@ -68,12 +68,12 @@ module.exports = site => {
           justify-content: flex-start;
           align-items: center;
         }
-        
+
         section > div {
           padding-left: 3vw;
           padding-right: 3vw;
         }
-        
+
         .background {
           transform: rotate(5deg) translateY(-50vw) translateX(92vw);
           z-index: -1;
@@ -94,7 +94,7 @@ module.exports = site => {
               <h1 id="title">${title}</h1>
               ${headline ? `<h2 id="headline">${headline}</h2>` : ""}
               <p>
-                 <span>${site.title}</span> ${site.author}
+                <span>${site.title}</span> ${site.author}
               </p>
             </div>
           </section>

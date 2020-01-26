@@ -24,6 +24,9 @@ const createSlugField = (
 const createUrlField = ({ node, createNodeField }, options) => {
   const { urlHandler, urlFieldName } = options
   const url = urlHandler({ node }, { ...options })
+  if (!url) {
+    return
+  }
 
   createNodeField({
     node,
