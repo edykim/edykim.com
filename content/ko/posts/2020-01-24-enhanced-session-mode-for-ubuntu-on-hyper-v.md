@@ -8,9 +8,10 @@ slug: enhanced-session-mode-for-ubuntu-on-hyper-v
 headline:
  - 고급 세션 모드(enhanced session mode)로 느린 사용성 개선하는 방법
 categories:
- - 개발 이야기
+ - 두루두루 IT
 tags:
  - hyper-v
+ - windows
 ---
 
 Windows에 Hyper-V로 Ubuntu를 설치한 후에 제공하는 도구로 접속해보면 마우스도 느리게 움직이고 키보드 입력도 답답하다.
