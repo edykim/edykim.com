@@ -11,6 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "gatsby-source-filesystem": "^2.1.46",
+    "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
     "mkdirp": "^0.5.1",
     "puppeteer": "^2.0.0"
   }
