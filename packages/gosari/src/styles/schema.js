@@ -12,8 +12,8 @@ export const color = {
 
 export const layout = {
   narrow: "26rem",
-  wide: "32rem",
+  wide: "38rem",
   full: "46rem",
-  medium: "30rem",
+  medium: "36rem",
   sidePadding: "0.8rem",
 }
