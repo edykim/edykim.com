@@ -19,6 +19,8 @@ const Hero = styled.div`
   }
   p {
     font-size: 0.8rem;
+    line-height: 1.8;
+    word-break: keep-all;
   }
   @media (max-width: 800px) {
     margin-top: 30px;
@@ -46,7 +48,8 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const { profile } = data.site.siteMetadata
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.recents.edges
+    const featuredArticles = data.featuredArticles.edges
 
     return (
       <Site location={this.props.location}>
@@ -65,14 +68,24 @@ class BlogIndex extends React.Component {
         <Section>
           <ButtonTypeLink
             title={`제 소개 👨🏻‍💻`}
-            subtext={"제가 어떤 사람인지 알고 싶다면!"}
+            subtext={"궁금한 점, 제안 및 기타 사항은 연락처로 남겨주세요"}
             linkTo={`/about`}
           />
         </Section>
 
         <Section>
           <SectionInner>
-            <Title>최근 포스트</Title>
+            <Title>인기 글</Title>
+
+            {featuredArticles.map(({ node }, index) => {
+              return <PostItem key={index} post={node} />
+            })}
+          </SectionInner>
+        </Section>
+
+        <Section>
+          <SectionInner>
+            <Title>최근 글</Title>
 
             {posts.map(({ node }, index) => {
               return <PostItem key={index} post={node} />
@@ -98,7 +111,7 @@ export const pageQuery = graphql`
         profile
       }
     }
-    allMarkdownRemark(
+    recents: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         frontmatter: {
@@ -107,17 +120,43 @@ export const pageQuery = graphql`
           type: { eq: "post" }
         }
       }
-      limit: 5
+      limit: 6
     ) {
       edges {
         node {
-          excerpt(format: PLAIN, truncate: true)
           fields {
             slug
             url
           }
           frontmatter {
             date(formatString: "MMMM D")
+            title
+          }
+        }
+      }
+    }
+
+    featuredArticles: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: {
+          private: { ne: true }
+          draft: { ne: true }
+          type: { eq: "post" }
+          featured: { eq: true }
+        }
+      }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+            url
+          }
+          frontmatter {
+            date(formatString: "MMMM D")
+            dateSort: date(formatString: "YYYY")
             title
           }
         }
