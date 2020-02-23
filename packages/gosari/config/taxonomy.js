@@ -6,6 +6,10 @@ module.exports = {
       url: `life-in-australia`,
     },
     {
+      key: `미국 사는 이야기`,
+      url: `life-in-us`,
+    },
+    {
       key: `개발 이야기`,
       url: `dev-life`,
     },
