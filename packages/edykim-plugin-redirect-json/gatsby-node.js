@@ -76,6 +76,7 @@ exports.onPostBuild = async ({ graphql, actions }) => {
       fromPath: redirect.from,
       toPath: redirect.to,
       isPermanent: false,
+      force: true,
     })
   })
 
