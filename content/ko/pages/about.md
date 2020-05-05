@@ -16,7 +16,7 @@ url: about
 
 캘리포니아 리버사이드에서 공부하고 있습니다. 오랜 시간을 제주에서 보냈고 [호주](https://edykim.com/ko/category/life-in-australia/)에서 거주한 경험도 있습니다.
 
-커뮤니티 [이상한모임](https://weirdx.io/)에서 활동하고 있습니다. 무슨 모임인지 궁금하다면 [슬랙에 가입해서](http://bit.ly/WeirdxSlack) 살펴보세요.
+커뮤니티 [이상한모임](https://weirdx.io/)에서 활동하고 있습니다. 무슨 모임인지 궁금하다면 [슬랙에 가입해서](https://weirdx.io/join-slack) 살펴보세요.
 
 제 이력은 [링크드인 @edwardykim](https://linkedin.com/in/edwardykim/)에서 확인할 수 있습니다. 이 웹페이지 이외에는 [트위터 @haruair](https://twitter.com/haruair/)에서 제 소식을 볼 수 있습니다.
 질의, 제언, 무엇이든 전하고 싶은 말이 있다면 아래 경로로 알려주세요.
