@@ -9,6 +9,7 @@ tags:
   - Hugo
   - GitHub
   - Travis CI
+private: true
 ---
 
 I don't know much about Go, but I saw so many tweets it's a great language,
