@@ -19,6 +19,12 @@ body {
   }
 }
 
+:not(pre) > code {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.2em 0.3em;
+}
+
 a {
   color: #002dd1;
   text-decoration: none;
