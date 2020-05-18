@@ -4,7 +4,7 @@ export const color = {
   separator: "#eeeeee",
   note: "#f3f7ff",
   caption: "#545454",
-  underline: "#d2e1ee",
+  underline: "#b1b1c1",
   footer: "#aaaaaa",
   white: "#ffffff",
   highlight: "#dddddd",
