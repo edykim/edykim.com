@@ -5,6 +5,7 @@ module.exports = {
     title: `edykim.com`,
     description: `I'm an open web developer who loves focusing on problems and creating quick prototypes. I'm excited about web technology, software architecture and community.`,
     author: `@edykim`,
+    siteUrlForSitemap: `https://edykim.com`,
   },
   plugins: [
     {
@@ -120,4 +121,25 @@ module.exports = {
       resolve: `@edykim/gatsby-plugin-template`,
     },
   ],
+  {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      exclude: [`/archives/*`],
+      query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl: siteUrlForSitemap
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`,
+    },
+  },
 }
