@@ -26,7 +26,7 @@ url: /note
 ### Open Courses
 {class="no-number"}
 
-- [CS11 C++](/note/cs-11-cpp)
+- [CS11 Intro C++](/note/cs-11-intro-cpp)
 
 ## Coursera
 {class="no-number"}
