@@ -21,9 +21,9 @@ prototypes. I'm excited about web technology, software architecture, and communi
 - Passionate about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
-Right now, I'm studying computer science in Riverside, CA.
+Right now, I am studying computer science in Riverside, CA and currently exploring new opportunities.
 
-Before that, I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
+I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
 
 ### Projects
 
