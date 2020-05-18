@@ -1,10 +1,10 @@
 ---
-title: "CS11 C++"
+title: "CS11 Intro C++"
 author: haruair
 type: note
 date: "2020-05-18T11:28:00"
 lang: en
-url: /note/cs-11-cpp
+url: /note/cs-11-intro-cpp
 
 ---
 
@@ -13,7 +13,8 @@ This is a lecture note of CS-11 C++ track from Caltech. I summarized materials o
 ## Lectures
 {class="no-number"}
 
-- [Lecture 1: Intro](/note/cs-11-cpp/lecture-1)
+- [Lecture 1](/note/cs-11-intro-cpp/lecture-1) Overview, compiler & build, classes
+- [Lecture 2](/note/cs-11-intro-cpp/lecture-2)
 
 ## Afterwards
 {class="no-number"}

@@ -1,10 +1,10 @@
 ---
-title: "CS11 C++: Intro"
+title: "CS11 Intro C++: Lecture 1"
 author: haruair
 type: note
 date: "2020-05-18T11:28:00"
 lang: en
-url: /note/cs-11-cpp/lecture-1
+url: /note/cs-11-intro-cpp/lecture-1
 
 ---
 
