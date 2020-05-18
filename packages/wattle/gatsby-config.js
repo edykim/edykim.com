@@ -120,26 +120,26 @@ module.exports = {
     {
       resolve: `@edykim/gatsby-plugin-template`,
     },
-  ],
-  {
-    resolve: `gatsby-plugin-sitemap`,
-    options: {
-      exclude: [`/archives/*`],
-      query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl: siteUrlForSitemap
-            }
-          }
-          allSitePage {
-            edges {
-              node {
-                path
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/archives/*`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: siteUrlForSitemap
               }
             }
-          }
-      }`,
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+      },
     },
-  },
+  ],
 }
