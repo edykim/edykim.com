@@ -65,6 +65,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-catch-links`,
+      options: {
+        excludePattern: /(ko|static)/,
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -112,29 +118,6 @@ module.exports = {
     },
     {
       resolve: `@edykim/gatsby-plugin-template`,
-      options: {
-        query: `{
-          pages: allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
-          ) {
-            edges {
-              node {
-                excerpt(format: PLAIN, truncate: true)
-                frontmatter {
-                  type
-                  lang
-                  title
-                  date(formatString: "MMMM DD, YYYY")
-                }
-                fields {
-                  slug
-                  url
-                }
-              }
-            }
-          }
-        }`,
-      },
     },
   ],
 }
