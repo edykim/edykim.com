@@ -8,15 +8,19 @@ url: /note
 
 ---
 
-## Note taking
+## Programming
 {class="no-number"}
 
-### English
+- [Programming Language Theory](/plt)
+
+## App
+{class="no-number"}
+
+- [Visual Timer](/app/visual-timer)
+- [Tip Calculator](/app/tip-calculator-by-yong)
+- [Temperature Quiz!](/app/temperature-quiz)
+
+## Coursera
 {class="no-number"}
 
 - [Academic English: Writing Specialization](/note/english-writing)
-
-### Mathematics
-{class="no-number"}
-
-- [Introduction to Calculus](/note/introduction-to-calculus)
