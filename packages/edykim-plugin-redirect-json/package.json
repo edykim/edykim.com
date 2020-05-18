@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^0.5.5",
     "pify": "^4.0.0"
   },
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
