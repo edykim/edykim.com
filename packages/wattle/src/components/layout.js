@@ -8,8 +8,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import {
+  fab,
+  faTwitter,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import "./layout.css"
+
+library.add(fab, faTwitter, faGithub, faLinkedin)
 
 const Layout = ({ location, children }) => (
   <StaticQuery
@@ -29,23 +39,14 @@ const Layout = ({ location, children }) => (
           <div
             style={{
               margin: `0 auto`,
-              maxWidth: 640,
+              maxWidth: 740,
               padding: `0px 1.0875rem 1.45rem`,
               paddingTop: 0,
             }}
           >
             <header>
               <div>
-                <Link
-                  to={`/`}
-                  style={{
-                    textDecoration: "none",
-                    margin: "60px 0 20px",
-                    display: "inline-block",
-                    fontWeight: "900",
-                    color: "#666666",
-                  }}
-                >
+                <Link className={`header__title`} to={`/`}>
                   Edward Kim
                 </Link>
               </div>
@@ -54,17 +55,55 @@ const Layout = ({ location, children }) => (
             <footer
               style={{
                 margin: `50px auto`,
+                display: `flex`,
+                flexDirection: `row`,
+                justifyContent: `space-between`,
+                alignItems: `flex-end`,
               }}
             >
-              <Link style={{ color: "#666666" }} to={`/`}>
-                edykim
-              </Link>
-              <Link
-                style={{ color: "#666666", marginLeft: "6px" }}
-                to={`/pages`}
-              >
-                pages
-              </Link>
+              <div>
+                <Link
+                  style={{ color: `#555555`, textDecoration: `none` }}
+                  to={`/`}
+                >
+                  edykim
+                </Link>
+              </div>
+              <div>
+                <a
+                  style={{ margin: 5 }}
+                  href={`https://twitter.com/heyedykim`}
+                  title={`twitter @heyedykim`}
+                >
+                  <FontAwesomeIcon
+                    size={`lg`}
+                    icon={[`fab`, `twitter`]}
+                    style={{ color: `#555555` }}
+                  />
+                </a>
+                <a
+                  style={{ margin: 5 }}
+                  href={`https://github.com/edykim`}
+                  title={`github @edykim`}
+                >
+                  <FontAwesomeIcon
+                    size={`lg`}
+                    icon={[`fab`, `github`]}
+                    style={{ color: `#555555` }}
+                  />
+                </a>
+                <a
+                  style={{ margin: 5 }}
+                  href={`https://www.linkedin.com/in/edwardykim/`}
+                  title={`Linkedin @edwardykim`}
+                >
+                  <FontAwesomeIcon
+                    size={`lg`}
+                    icon={[`fab`, `linkedin`]}
+                    style={{ color: `#555555` }}
+                  />
+                </a>
+              </div>
             </footer>
           </div>
         </>

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,7 +8,12 @@ export default ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <h1>{post.frontmatter.title}</h1>
+      <h1>
+        <Link className="post__title" to={post.fields.url}>
+          {post.frontmatter.title}
+        </Link>
+      </h1>
+      <time className="datetime">{post.frontmatter.date}</time>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
@@ -22,7 +27,7 @@ export const query = graphql`
       frontmatter {
         title
         lang
-        date
+        date(formatString: "MMM D, Y")
       }
       fields {
         url

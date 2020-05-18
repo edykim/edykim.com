@@ -1,53 +1,37 @@
 ---
-title: About Me
+title: About
 author: haruair
 type: page
-date: "2010-10-27T05:28:41"
+date: '2010-10-27T05:28:41'
 url: /about
 lang: en
-
 ---
 
-<img src="https://avatars3.githubusercontent.com/u/1009457?s=400&v=4" style="width: 92px; border-radius: 50%; box-shadow: 0px 3px 12px rgba(80, 37, 214, 0.37); margin-bottom: 1rem; float: right; margin-left: 1rem;">
+<figure class="profile" style="float: right; margin-left: 30px;margin-top: -30px;">
+<img src="https://avatars3.githubusercontent.com/u/1009457?s=200&v=4">
+</figure>
+
+## Yong Gyun Kim (Edward)
 
 I'm an open web developer who loves focusing on problems and creating quick
-prototypes. I'm excited about web technology, software architecture and community.
-
-## Me Now
+prototypes. I'm excited about web technology, software architecture, and community.
 
 - Love to talk about ECMAScript, microservices, serverless architecture
 - Comfortable with JS, Python, PHP, HTML/CSS, and C#
 - Passionate about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
-## Me Previously
+Right now, I'm studying computer science in Riverside, CA.
 
-### Work-wise
+Before that, I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
 
-- Software Engineer at Swinburne
-- Web/Integration Developer at Kobe Creations
-- Web Developer at Nine Communications
+### Projects
 
-More details are [here](https://www.linkedin.com/in/edwardykim/).
+I love to make useful things in my free time.
 
-### On Regional Geographic Eyes
+- [Visual Timer](/app/visual-timer/). A simple visual timer for iOS with various customizable options.
+- [Tip Calculator](/app/tip-calculator-by-yong/). A tip calculator for iOS. Gratuity splitting and pre-tax support.
 
-- Relocated to west coast of the US recently 🇺🇸
-- Lived in Melbourne, Australia 🐨🇦🇺
-  - Four seasons in one day, but can't complain.
-  - Best ☕️ in the world!
-  - Spent 6 yrs, working and enjoying foodie life.
-- My hometown is Jeju, South Korea 🇰🇷
-  - Honeymoon island, small and beautiful city
-  - Studied and grew up as a geek
+### Contact
 
-## My Name
-
-My name is Yong Gyun Kim (김용균) and [Google speaks right way](https://translate.google.com/#view=home&op=translate&sl=ko&tl=en&text=%EA%B9%80%EC%9A%A9%EA%B7%A0).
-
-## Contact
-
-- [edward@edykim.com](mailto:edward@edykim.com?subject=Hello)
-- [twitter (@heyedykim)](https://twitter.com/heyedykim)
-- [GitHub (@edykim)](https://github.com/edykim)
-- [Linkedin](https://www.linkedin.com/in/edwardykim/)
+[edward@edykim.com](mailto:edward@edykim.com)

@@ -139,10 +139,21 @@ cursor: help;
 }
 
 .gatsby-highlight {
+  border: 1px solid var(--highlight-base0);
+  border-radius: 5px;
   background-color: var(--highlight-base5);
   padding: 1em;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  box-shadow: var(--highlight-base4) 0px 2px 4px,  var(--highlight-base2) 0px 4px 6px;
+}
+
+@media all and (max-width:750px) {
+  .gatsby-highlight {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
 
 .gatsby-highlight > pre {
