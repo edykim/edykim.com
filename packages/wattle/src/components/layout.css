@@ -186,6 +186,13 @@ hr {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  .header__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  main :first-child {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
