@@ -33,10 +33,12 @@ pre[class*="language-"] {
 	margin: .5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
-	position: relative;
 }
 
-pre[class*="language-"]:before {
+.gatsby-highlight {
+	position: relative;
+}
+.gatsby-highlight[data-language]::before {
 	position: absolute;
 	left: 0;
 	top: 0;
