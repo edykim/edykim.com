@@ -20,6 +20,14 @@ url: /note
 - [Tip Calculator](/app/tip-calculator-by-yong)
 - [Temperature Quiz!](/app/temperature-quiz)
 
+## Lecture
+{class="no-number"}
+
+### Open Courses
+{class="no-number"}
+
+- [CS11 C++](/note/cs-11-cpp)
+
 ## Coursera
 {class="no-number"}
 
