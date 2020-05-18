@@ -25,6 +25,8 @@ Right now, I am studying computer science in Riverside, CA and currently explori
 
 I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
 
+---
+
 ### Projects
 
 I love to make useful things in my free time.
@@ -32,6 +34,8 @@ I love to make useful things in my free time.
 - [Visual Timer](/app/visual-timer/). A simple visual timer for iOS with various customizable options.
 - [Tip Calculator](/app/tip-calculator-by-yong/). A tip calculator for iOS. Gratuity splitting and pre-tax support.
 
-### Contact
+### Get in touch
 
-[edward@edykim.com](mailto:edward@edykim.com)
+- [edward@edykim.com](mailto:edward@edykim.com)
+- [twitter/heyedykim](https://twitter.com/heyedykim)
+- [github/edykim](https://github.com/edykim)
