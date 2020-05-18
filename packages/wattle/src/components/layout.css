@@ -25,6 +25,10 @@ body {
   padding: 0.2em 0.3em;
 }
 
+.gatsby-highlight + .gatsby-highlight {
+  margin-top: 1em;
+}
+
 a {
   color: #002dd1;
   text-decoration: none;
