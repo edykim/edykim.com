@@ -27,8 +27,7 @@ const IndexPage = ({ location }) => (
         <Link to={`/note`}>Notes</Link>
       </li>
     </ul>
-    I have other pages written in Korean,{" "}
-    <a href="https://edykim.com/ko/">check here</a>.
+    I have other pages written in Korean, <a href="/ko/">check here</a>.
   </Layout>
 )
 
