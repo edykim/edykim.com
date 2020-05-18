@@ -172,6 +172,14 @@ footer {
   border-color: #5255ff;
 }
 
+hr {
+  border: 0;
+  height: 3px;
+  background-color: #aaaaaa;
+  margin: 2em 0;
+  width: 30%;
+}
+
 @media screen and (max-width: 760px) {
   .main__links {
     flex-direction: column;
