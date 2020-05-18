@@ -8,21 +8,22 @@ slug: add-keyboard-shortcut-for-disabling-trackpad-in-lubuntu
 tags:
   - lubuntu
   - shortcut
+private: true
 ---
 
 I've sold Dell XPS 13 because of a keyboard, I'm back to Dell Inspiron 11 3000.
-I bought this marchine 8 months ago, Windows 10 was a bit heavy on this laptop.
+I bought this machine 8 months ago, Windows 10 was a bit heavy on this laptop.
 So I replaced OS as Lubuntu. The laptop is low spec but it's not bad for the
 normal terminal work.
 
-Only thing I hate is that this laptop doesn't have a palm rejection. The touch
-pad is almost unusable, I think they forgot someone actually can use it as a
+The only thing I hate is that this laptop doesn't have a palm rejection. The touchpad
+is almost unusable, I think they forgot someone actually can use it as a
 pointing device. So I instantly searched how to disable the touchpad when I
 want. I found [this solution](http://askubuntu.com/a/160549).
 
-I can see the device on `xinput`, but I cannot temporary disabled the touch pad
-using this script. It turns out, the other weird looking name one is actual
-touch pad. It shows up `DLL0725:01 06CB:7D47` for me.
+I can see the device on `xinput`, but I cannot temporarily disabled the touchpad
+using this script. It turns out, the other weird looking name one is the actual
+touchpad. It shows up `DLL0725:01 06CB:7D47` for me.
 
 Also, `xinput disable <id>` makes something weird. When I use this shell script,
 the cursor is disappeared. So I changed the script like below:
@@ -47,7 +48,7 @@ else
 fi
 ```
 
-I saved this file as `toggle-touchpad.sh` at user directory and changed the file
+I saved this file as `toggle-touchpad.sh` at the user directory and changed the file
 permission. I'm not sure the script is good enough so if you think this script
 can be upgraded, please leave a PR to the article.
 
@@ -55,7 +56,7 @@ can be upgraded, please leave a PR to the article.
 chmod +x toggle-touchpad.sh
 ```
 
-My first thought is that this shell file should excute when Vim change to Insert
+My first thought is that this shell file should execute when Vim change to Insert
 mode. So I added `autocmd` config into the vim config file.
 
 ```.vimrc
@@ -63,8 +64,8 @@ autocmd InsertEnter * silent! execute "!~/toggle-touchpad.sh > /dev/null 2>&1" |
 autocmd InsertLeave * silent! execute "!~/toggle-touchpad.sh > /dev/null 2>&1" | redraw!
 ```
 
-This event triggered when Vim change to Insert mode. I realised that the insert
-mode is the good solution because I couldn't use my mouse when I did Alt-Tab
+This event triggered when Vim change to Insert mode. I realized that the insert
+mode is a good solution because I couldn't use my mouse when I did Alt-Tab
 action during the edit. Therefore, I added another hotkey for this script. I
 updated this code into `openbox_config > Keyboard` in
 `~/.config/openbox/lubuntu-rc.xml` file. You can change if you want to use other
@@ -87,5 +88,4 @@ openbox --reconfigure
 Now, <kbd>Win+L</kbd> will be the key just like a touchpad on/off switch.
 
 This is not a good solution. There are so many options for this type of
-configuration, You can achieve same thing in other ways.
-
+configuration, You can achieve the same thing in other ways.

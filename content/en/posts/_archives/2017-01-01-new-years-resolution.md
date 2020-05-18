@@ -8,6 +8,7 @@ slug: new-years-resolution
 tags:
   - resolution
   - new year
+private: true
 ---
 
 I'd love to make a list. New year's resolution is one of the things, I almost
