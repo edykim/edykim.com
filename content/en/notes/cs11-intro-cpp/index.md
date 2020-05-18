@@ -13,8 +13,8 @@ This is a lecture note of CS-11 C++ track from Caltech. I summarized materials o
 ## Lectures
 {class="no-number"}
 
-- [Lecture 1](/note/cs-11-intro-cpp/lecture-1) Overview, compiler & build, classes
-- [Lecture 2](/note/cs-11-intro-cpp/lecture-2)
+- [Lecture 1](/note/cs-11-intro-cpp/lecture-1): Overview, compiler & build, classes
+- [Lecture 2](/note/cs-11-intro-cpp/lecture-2): Build phase, structs & vector, exception handling
 
 ## Afterwards
 {class="no-number"}
