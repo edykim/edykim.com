@@ -10,9 +10,9 @@
     "netlify:build": "npm run prepare && npm run build-packages && npm run post-build"
   },
   "devDependencies": {
-    "fs-extra": "^7.0.1",
-    "glob": "^7.1.4",
-    "lerna": "^3.15.0"
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6",
+    "lerna": "^3.21.0"
   },
   "dependencies": {
     "gatsby-plugin-netlify-cache": "^1.2.0"
