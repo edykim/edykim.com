@@ -19,12 +19,6 @@ body {
   }
 }
 
-:not(pre) > code {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 0.2em 0.3em;
-}
-
 .gatsby-highlight + .gatsby-highlight {
   margin-top: 1em;
 }
@@ -124,13 +118,6 @@ footer {
   color: #555555;
   display: inline-block;
   width: 18%;
-}
-
-.gatsby-highlight {
-  border-radius: 5px;
-  overflow: auto;
-  background-color: #f4f4f4;
-  padding: 0 20px;
 }
 
 @media screen and (max-width: 760px) {
