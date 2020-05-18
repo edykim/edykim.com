@@ -7,7 +7,7 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Home" keywords={[`edykim`]} />
     <blockquote className="hero">Think simple, do more and better.</blockquote>
-    <p>
+    <p class="tagline">
       Hey{" "}
       <span role="img" aria-label="wave hand">
         👋
