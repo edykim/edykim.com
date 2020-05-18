@@ -8,7 +8,7 @@ lang: en
 ---
 
 <figure class="profile" style="float: right; margin-left: 30px;margin-top: -30px;">
-<img src="https://avatars3.githubusercontent.com/u/1009457?s=200&v=4">
+<img src="https://avatars3.githubusercontent.com/u/1009457?s=150&v=4">
 </figure>
 
 ## Yong Gyun Kim (Edward)
