@@ -9,6 +9,10 @@ const StyledContent = styled.div`
   margin: 2rem auto;
   font-weight: 400;
 
+  [id] {
+    scroll-margin-top: 2rem;
+  }
+
   @media (max-width: 800px) {
     margin-top: 1rem;
   }
@@ -107,6 +111,7 @@ const StyledContent = styled.div`
     margin-top: -1.4em;
     text-indent: 0;
     text-decoration: none;
+    transform: translateX(0);
     svg {
       vertical-align: middle;
     }
