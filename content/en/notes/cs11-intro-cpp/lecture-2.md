@@ -5,7 +5,7 @@ type: note
 date: "2020-05-18T11:28:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-2
-
+linkToParent: true
 ---
 
 ## Compilation
@@ -148,3 +148,10 @@ double compute_value(double x) {
   // ...
 }
 ```
+
+---
+
+## Coming up next
+{class="no-number"}
+
+- [Lecture 3](/note/cs-11-intro-cpp/lecture-3): `fstream`, scope, pass by value/reference
