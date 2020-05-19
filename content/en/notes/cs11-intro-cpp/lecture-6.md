@@ -217,7 +217,7 @@ cout << c.real();
 cout << c.re;
 ```
 
-The compiler will inline function only when it is simple and straightforward only.
+The compiler will inline function when it is simple and straightforward only.
 
 Defines a top-level function with `inline` keyword (not a member-function in a class):
 
