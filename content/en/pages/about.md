@@ -25,7 +25,7 @@ Right now, I am studying computer science in Riverside, CA and currently explori
 
 I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
 
----
+<hr class="left" />
 
 ### Projects
 
