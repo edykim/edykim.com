@@ -18,7 +18,7 @@ This is a lecture note of CS-11 C++ track from Caltech. I summarized materials o
 - [Lecture 4](/note/cs-11-intro-cpp/lecture-4): GNU make, Doxygen
 - [Lecture 5](/note/cs-11-intro-cpp/lecture-5): Operator overloading, Constructors, Output Stream
 - [Lecture 6](/note/cs-11-intro-cpp/lecture-6): Copy and assignment operator with Heap, Inline
-- [Lecture 7](/note/cs-11-intro-cpp/lecture-7)
+- [Lecture 7](/note/cs-11-intro-cpp/lecture-7): Copy and Move, The Rule of Five, Member Initializer Lists
 
 ## Afterwards
 {class="no-number"}
