@@ -12,7 +12,7 @@ This is a lecture note of CS-11 C++ track from Caltech. I summarized materials o
 ## What I've Learned
 {class="no-number"}
 
-I already familiar with the language a bit, so it was easy to follow the detail. The lecture explained some concepts deeply, which I enjoyed. The later tracks are mainly focused on the optimization and introduce the rules that I can utilize during the process.
+I am familiar with the language a bit, so it was easy to follow the detail. The lecture explained some concepts deeply, which I enjoyed. The later tracks are mainly focused on the optimization and introduce the rules that I can utilize during the process.
 
 - Building process (preprocessor, compiler, and linker)
 - Basic of class and member functions
