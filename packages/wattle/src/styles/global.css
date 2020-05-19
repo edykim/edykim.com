@@ -170,11 +170,15 @@ footer {
 }
 
 hr {
+  height: 0;
   border: 0;
-  height: 3px;
-  background-color: #aaaaaa;
-  margin: 2em 0;
-  width: 30%;
+  border-bottom: 4px double #666666;
+  max-width: 20rem;
+  margin: 4rem auto 4rem;
+}
+
+hr.left {
+  margin-left: 0;
 }
 
 @media screen and (max-width: 760px) {
@@ -192,6 +196,12 @@ hr {
   }
   main :first-child {
     margin-top: 0;
+  }
+
+  hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 200px;
   }
 }
 

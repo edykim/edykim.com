@@ -17,8 +17,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import "./layout.css"
-
 library.add(fab, faTwitter, faGithub, faLinkedin)
 
 const Layout = ({ location, children }) => (

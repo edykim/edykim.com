@@ -99,24 +99,10 @@ const Section = styled.div`
   .reset-number {
     counter-reset: h1counter 0 h2counter 0 h3counter 0 h4counter 0 h5counter 0;
   }
-
-  hr {
-    height: 0;
-    border: 0;
-    border-bottom: 4px double #666666;
-    max-width: 20rem;
-    margin: 4rem auto 4rem;
-
-    @media (max-width: 750px) {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      width: 200px;
-    }
-  }
 `
 
 export const Content = ({ html }) => (
   <Wrapper>
-    <Section dangerouslySetInnerHTML={{ __html: html }} />
+    <Section className="content" dangerouslySetInnerHTML={{ __html: html }} />
   </Wrapper>
 )
