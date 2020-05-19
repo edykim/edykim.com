@@ -137,3 +137,10 @@ ostream & operator<<(ostream &os, const Complex &c) {
 ```
 
 Expression is evaluated from left to right. Each `operator<<` call returns the output-stream, so that the next `operator<<` call can use it for output.
+
+---
+
+## Coming up next
+{class="no-number"}
+
+- [Lecture 6](/note/cs-11-intro-cpp/lecture-6): Copy and assignment operator with Heap, Inline

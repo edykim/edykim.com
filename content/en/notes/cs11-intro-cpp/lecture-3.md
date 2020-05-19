@@ -102,4 +102,4 @@ double Point::get_x() const {
 ## Coming up next
 {class="no-number"}
 
-[Lecture 4](/note/cs-11-intro-cpp/lecture-4): GNU make, Doxygen
+- [Lecture 4](/note/cs-11-intro-cpp/lecture-4): GNU make, Doxygen
