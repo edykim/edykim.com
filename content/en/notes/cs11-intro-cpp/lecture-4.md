@@ -183,3 +183,10 @@ EXTRACT_STATIC = YES
 MyWidget mw;
 MyWidget mw; /**< My widget */
 ```
+
+---
+
+## Coming up next
+{class="no-number"}
+
+- [Lecture 5](/note/cs-11-intro-cpp/lecture-5): Operator overloading, Constructors, Output Stream

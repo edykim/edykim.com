@@ -16,8 +16,9 @@ This is a lecture note of CS-11 C++ track from Caltech. I summarized materials o
 - [Lecture 2](/note/cs-11-intro-cpp/lecture-2): Build phase, structs & vector, exception handling
 - [Lecture 3](/note/cs-11-intro-cpp/lecture-3): `fstream`, scope, pass by value/reference
 - [Lecture 4](/note/cs-11-intro-cpp/lecture-4): GNU make, Doxygen
-- [Lecture 5](/note/cs-11-intro-cpp/lecture-5)
-
+- [Lecture 5](/note/cs-11-intro-cpp/lecture-5): Operator overloading, Constructors, Output Stream
+- [Lecture 6](/note/cs-11-intro-cpp/lecture-6): Copy and assignment operator with Heap, Inline
+- [Lecture 7](/note/cs-11-intro-cpp/lecture-7)
 
 ## Afterwards
 {class="no-number"}
