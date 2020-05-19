@@ -5,7 +5,7 @@ type: note
 date: "2020-05-18T11:28:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-1
-
+linkToParent: true
 ---
 
 ## Books!
@@ -187,3 +187,10 @@ string favorite_color{"green"};
 string mood = "happy";
 mood = "cheery";
 ```
+
+---
+
+## Coming up next
+{class="no-number"}
+
+- [Lecture 2](/note/cs-11-intro-cpp/lecture-2): Build phase, structs & vector, exception handling
