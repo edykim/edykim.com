@@ -1,19 +1,50 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { Content } from "components/note"
 
 import "katex/dist/katex.min.css"
 
-export default ({ data, location }) => {
-  const page = data.page
+export default ({
+  data: {
+    page: {
+      excerpt,
+      html,
+      frontmatter: { title, linkToParent },
+      fields: { url },
+    },
+  },
+  location,
+}) => {
+  const parentLink = linkToParent ? (
+    <Link to={`${url}/../`}>Go to Parent Page</Link>
+  ) : null
+
   return (
     <Layout location={location}>
-      <SEO title={page.frontmatter.title} description={page.excerpt} />
-      <h1>{page.frontmatter.title}</h1>
-
-      <Content html={page.html} />
+      <SEO title={title} description={excerpt} />
+      <h1>
+        <Link to={url} className={`post__title`}>
+          {title}
+        </Link>
+      </h1>
+      {html.length > 0 ? (
+        <>
+          {parentLink && (
+            <header className={`parent__meta`}>{parentLink}</header>
+          )}
+          <Content html={html} />
+          {parentLink && (
+            <footer className={`parent__meta`}>{parentLink}</footer>
+          )}
+        </>
+      ) : (
+        <>
+          <div className="empty">This page is empty for now.</div>
+          {parentLink}
+        </>
+      )}
     </Layout>
   )
 }
@@ -27,6 +58,7 @@ export const query = graphql`
         title
         lang
         date
+        linkToParent
       }
       fields {
         url

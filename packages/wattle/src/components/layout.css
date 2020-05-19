@@ -200,3 +200,17 @@ hr {
     float: none !important;
   }
 }
+
+header.parent__meta {
+  margin-top: -1.5em;
+}
+
+.parent__meta a {
+  font-size: 0.9rem;
+}
+
+.empty {
+  margin: 1rem 0;
+  border-radius: 3px;
+  color: #777777;
+}
