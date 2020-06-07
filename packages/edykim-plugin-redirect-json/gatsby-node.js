@@ -8,7 +8,7 @@ const mkdirp = require(`mkdirp`)
 const writeFile = pify(fs.writeFile)
 
 const runQuery = (handler, query) =>
-  handler(query).then(r => {
+  handler(query).then((r) => {
     if (r.errors) {
       throw new Error(r.errors.join(`, `))
     }
@@ -48,14 +48,18 @@ exports.onPostBuild = async ({ graphql, actions }) => {
 
   const result = await runQuery(graphql, query)
 
+  const baseUrl =
+    result.site.siteMetadata.siteUrl.substr(-1) !== '/'
+      ? result.site.siteMetadata.siteUrl + '/'
+      : result.site.siteMetadata.siteUrl
+
   var redirects = []
   result.redirects.edges.forEach(({ node }) => {
     if (node.frontmatter.private || node.frontmatter.draft) return
     if (!node.frontmatter.history || node.frontmatter.history.length === 0)
       return
-
-    const to = urlResolve(result.site.siteMetadata.siteUrl, node.fields.url)
-    const newRedirects = node.frontmatter.history.map(v => ({
+    const to = urlResolve(baseUrl, node.fields.url)
+    const newRedirects = node.frontmatter.history.map((v) => ({
       from: v.from,
       to,
     }))
@@ -71,7 +75,7 @@ exports.onPostBuild = async ({ graphql, actions }) => {
 
   await writeFile(outputPath, JSON.stringify(redirects, null, 2))
 
-  redirects.forEach(redirect => {
+  redirects.forEach((redirect) => {
     createRedirect({
       fromPath: redirect.from,
       toPath: redirect.to,
