@@ -181,6 +181,26 @@ hr.left {
   margin-left: 0;
 }
 
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #dddddd;
+}
+
+thead th {
+    background-color: #f8f8fa;
+}
+
+th, td {
+    padding: 0.3em 0.5em;
+}
+tbody td {
+    vertical-align: top;
+}
+
 @media screen and (max-width: 760px) {
   .main__links {
     flex-direction: column;
