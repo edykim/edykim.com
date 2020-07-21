@@ -13,7 +13,8 @@ const Button = styled.button`
   outline: none;
   .label {
     right: 60px;
-    width: 140px;
+    width: 120px;
+    text-align: right;
     line-height: 30px;
     opacity: 0;
     position: absolute;
@@ -22,7 +23,7 @@ const Button = styled.button`
   }
   @media screen and (max-width: 900px) {
     &.collapsed .label {
-      right: -10px;
+      right: 0px;
       top: -35px;
     }
   }
@@ -38,6 +39,8 @@ const Button = styled.button`
     border: 1px solid ${colors.subtext};
     border-radius: 100px;
     padding: 3px;
+    position: relative;
+    z-index: 10;
   }
 
   &:hover .box,
