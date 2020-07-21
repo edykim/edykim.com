@@ -51,10 +51,14 @@ class SiteIndex extends React.Component {
           <SectionTitle>링크</SectionTitle>
           <SectionList>
             <li>
-              <SectionLink to={"/about"}>트위터 @haruair</SectionLink>
+              <SectionOutLink href={"https://twitter.com/haruair"}>
+                트위터 @haruair
+              </SectionOutLink>
             </li>
             <li>
-              <SectionLink to={"/about"}>깃허브 @edykim</SectionLink>
+              <SectionOutLink href={"https://github.com/edykim"}>
+                깃허브 @edykim
+              </SectionOutLink>
             </li>
             <li>
               <SectionOutLink href={"https://weirdx.io"}>
