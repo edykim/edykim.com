@@ -5,6 +5,8 @@ import { colors, layouts, fonts } from "styles/schema"
 const Button = styled.button`
   appearance: none;
   background: transparent;
+  padding: 0;
+  margin: 0;
   border: 0;
   cursor: pointer;
   position: relative;
