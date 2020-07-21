@@ -3,6 +3,11 @@
 * {
   box-sizing: border-box;
 }
+
+[data-theme-transition] * {
+  transition: background-color 0.3s ease;
+}
+
 :root {
   --site-color-background: #f7f7ff;
   --site-color-backgroundAlt: #f0f0f8;
@@ -14,6 +19,7 @@
   --site-color-subtext: #7d869c;
   --site-color-shade: #eae6ea;  
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --site-color-background: #101010;
@@ -24,8 +30,32 @@
     --site-color-text: #eeeeee;
     --site-color-body: #eeeee0;
     --site-color-subtext: #7d869c;
-    --site-color-shade: #000000;  
+    --site-color-shade: #000000;
   }
+}
+
+[data-theme="light"] {
+  --site-color-background: #f7f7ff;
+  --site-color-backgroundAlt: #f0f0f8;
+  --site-color-primary: #4445c9;
+  --site-color-link: #ec0b43;
+  --site-color-highlight: #fdca40;
+  --site-color-text: #011627;
+  --site-color-body: #080708;
+  --site-color-subtext: #7d869c;
+  --site-color-shade: #eae6ea;  
+}
+
+[data-theme="dark"] {
+  --site-color-background: #101010;
+  --site-color-backgroundAlt: #202020;
+  --site-color-primary: #00b6aa;
+  --site-color-link: #09ab00;
+  --site-color-highlight: #14005e;
+  --site-color-text: #eeeeee;
+  --site-color-body: #eeeee0;
+  --site-color-subtext: #7d869c;
+  --site-color-shade: #000000;  
 }
 
 html, body {
