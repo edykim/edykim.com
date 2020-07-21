@@ -1,49 +1,46 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, layout } from "styles/schema"
+import { color, layout, fonts, colors, layouts } from "styles/schema"
 
 const Container = styled.div`
+  font-size: ${fonts.body};
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   box-sizing: border-box;
-  margin: 6rem auto 1rem;
-  max-width: ${layout.medium};
-  padding-left: ${layout.sidePadding};
-  padding-right: ${layout.sidePadding};
-  @media (max-width: 800px) {
-    margin-top: 2rem;
-    margin-bottom: 0rem;
-  }
+  margin: 0 auto 3rem;
+  max-width: ${layouts.content};
+  padding-left: ${layouts.sidePadding};
+  padding-right: ${layouts.sidePadding};
 `
 
 const Title = styled.h1`
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: -0.08rem;
-  line-height: 1.6;
-  margin: 0 auto 1rem;
+  font-size: ${fonts.hero};
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  line-height: 1.2;
+  margin: 0 auto;
   word-break: keep-all;
+  overflow-wrap: break-word;
   a {
     text-decoration: none;
-    color: ${color.plain};
+    color: ${colors.text};
   }
 `
 
 const PublishedAt = styled.time`
   display: block;
   font-size: 0.78rem;
-  color: ${color.caption};
+  margin-top: 1rem;
+  color: ${colors.subtext};
 `
 
 export const Headline = styled.p`
-  font-size: 0.85rem;
+  font-size: ${fonts.title};
   line-height: 1.7;
   word-break: keep-all;
-  margin: -0.8rem auto 2rem;
-  @media (max-width: 800px) {
-    margin-bottom: 0rem;
-  }
+  color: ${colors.subtext};
+  margin: ${fonts.title} auto -0.8rem;
 `
 
 export const Header = ({ title, publishedAt, headline, linkTo }) => (

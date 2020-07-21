@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { color, layout } from "styles/schema"
+import { color, layout, fonts, colors, layouts } from "styles/schema"
 
 const StyledContent = styled.div`
-  color: ${color.plain};
-  font-size: 0.8rem;
+  color: ${colors.text};
+  font-size: ${fonts.body};
   line-height: 1.72;
   margin: 2rem auto;
   font-weight: 400;
@@ -13,9 +13,10 @@ const StyledContent = styled.div`
     scroll-margin-top: 2rem;
   }
 
-  @media (max-width: 800px) {
-    margin-top: 1rem;
+  * {
+    word-break: keep-all;
   }
+
   li > a,
   em > a,
   i > a,
@@ -26,28 +27,30 @@ const StyledContent = styled.div`
   h4 > a:not(.title-anchor),
   h5 > a:not(.title-anchor),
   h6 > a:not(.title-anchor) {
-    color: ${color.primary};
+    color: ${colors.primary};
     text-decoration: none;
-    border-bottom: 2px solid ${color.underline};
+    box-shadow: 0 3px 0;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     > code {
-      border-bottom: 2px solid ${color.underline};
+      box-shadow: 0 3px 0;
     }
     :hover {
-      opacity: 0.8;
+      background-color: ${colors.highlight};
     }
   }
 
   > iframe {
     padding: 0;
-    max-width: ${layout.wide};
+    max-width: ${layouts.wide};
     margin-left: auto;
     margin-right: auto;
     display: block;
   }
 
   > * {
-    padding-left: ${layout.sidePadding};
-    padding-right: ${layout.sidePadding};
+    padding-left: ${layouts.sidePadding};
+    padding-right: ${layouts.sidePadding};
   }
 
   > ul,
@@ -55,7 +58,9 @@ const StyledContent = styled.div`
     padding-left: 3rem;
     padding-right: 2rem;
   }
-
+  ul {
+    list-style: square;
+  }
   ul p {
     margin: 0;
   }
@@ -76,7 +81,7 @@ const StyledContent = styled.div`
     margin-right: auto !important;
   }
   > div {
-    max-width: ${layout.wide};
+    max-width: ${layouts.wide};
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -103,7 +108,7 @@ const StyledContent = styled.div`
   .title-anchor {
     margin: 0;
     padding: 0;
-    padding-left: ${layout.sidePadding};
+    padding-left: ${layouts.sidePadding};
     float: none;
     position: absolute;
     left: 1em;
@@ -133,26 +138,26 @@ const StyledContent = styled.div`
   > p,
   > ul,
   > ol,
-  > li, // why?
+  > li,
   .footnotes {
     box-sizing: border-box;
-    max-width: ${layout.medium};
+    max-width: ${layouts.content};
     margin-left: auto;
     margin-right: auto;
   }
   > blockquote {
     box-sizing: border-box;
-    max-width: ${layout.narrow};
+    max-width: ${layouts.narrow};
     margin-left: auto;
     margin-right: auto;
   }
   .gatsby-highlight {
-    max-width: ${layout.wide};
+    max-width: ${layouts.wide};
     margin: 40px auto;
   }
   .translation-note {
     box-sizing: border-box;
-    max-width: ${layout.narrow};
+    max-width: ${layouts.narrow};
     margin: 40px auto;
   }
   p {
@@ -162,7 +167,8 @@ const StyledContent = styled.div`
   }
   p,
   p * {
-    word-break: break-all;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   h1 {
     font-size: 1.5em;
@@ -244,21 +250,20 @@ const StyledContent = styled.div`
   hr {
     height: 0;
     border: 0;
-    border-bottom: 4px double ${color.separator};
-    max-width: 20rem;
+    border-bottom: 4px solid ${colors.subtext};
+    max-width: 10rem;
     margin: 4rem auto 2rem;
 
     @media (max-width: 750px) {
       margin-top: 2rem;
       margin-bottom: 1rem;
-      width: 200px;
     }
   }
   blockquote {
     font-size: 0.95em;
     line-height: 1.68;
     padding: 20px;
-    background: #f0f0f0;
+    background: ${colors.backgroundAlt};
     margin-top: 40px;
     margin-bottom: 40px;
     * {
@@ -277,19 +282,20 @@ const StyledContent = styled.div`
 
   .translation-note {
     font-size: 0.95em;
-    background: ${color.note};
+    background: ${colors.backgroundAlt};
     margin: 2rem auto;
     padding: 1px 20px;
   }
 
   .translation-note p:nth-of-type(1):before {
     content: "📝";
+    margin-right: 0.5rem;
   }
 
   table {
     border-collapse: collapse;
     width: 100%;
-    max-width: ${layout.narrow};
+    max-width: ${layouts.narrow};
     margin: 3rem auto;
     border: 1px solid #ddd;
   }
@@ -316,8 +322,12 @@ const StyledContent = styled.div`
     margin: 3rem auto;
     text-align: center;
     text-indent: 0;
+    p a {
+      font-size: 0;
+      box-shadow: none;
+    }
     &.wide {
-      max-width: ${layout.full};
+      max-width: ${layouts.wide};
     }
     * {
       text-indent: 0;

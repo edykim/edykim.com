@@ -1,53 +1,42 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { layout, color } from "styles/schema"
+import { colors, fonts, layouts } from "styles/schema"
+import { PostItem } from "."
 
 const Wrapper = styled.div`
-  max-width: ${layout.medium};
-  margin: 0 auto;
-`
-const Container = styled.div`
-  background-color: ${color.white};
-  border: 5px solid ${color.white};
-  border-radius: 20px;
-  box-shadow: 0 1rem 30px rgba(0, 0, 0, 0.03);
-  padding: ${layout.sidePadding};
-  font-size: 0.8rem;
-  a {
-    color: ${color.primary};
-    text-decoration: none;
-    border-bottom: 2px solid ${color.underline};
-    margin: 0.2em 0;
-    display: inline-block;
-  }
-
-  @media (max-width: 600px) {
-    border-radius: 0;
-  }
+  max-width: ${layouts.content};
+  margin: 0 auto 2rem;
 `
 
 const Title = styled.div`
-  font-size: 0.78em;
-  color: ${color.caption};
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+  color: ${colors.text};
+  font-weight: 800;
+  font-size: ${fonts.title};
 `
 
-export const Featured = ({ posts: { edges } }) => {
-  return (
-    <Wrapper>
-      <Container>
-        <Title>인기글</Title>
-        {edges.map(({ node }, index) => {
-          return (
-            <div key={`featured-${index}`}>
-              <Link to={`/${node.fields.url}`} rel={`nofollow`}>
-                {node.frontmatter.title}
-              </Link>
-            </div>
-          )
-        })}
-      </Container>
-    </Wrapper>
-  )
+const Container = styled.div`
+  padding: 0 ${layouts.sidePadding};
+`
+
+export class Featured extends Component {
+  render() {
+    const { posts } = this.props
+    return (
+      <Wrapper>
+        <Container>
+          <Title>인기 글</Title>
+
+          {posts.length > 0 &&
+            posts.map(({ node }, index) => (
+              <PostItem
+                post={node}
+                key={`featured-${index}`}
+                showYears={true}
+              />
+            ))}
+        </Container>
+      </Wrapper>
+    )
+  }
 }

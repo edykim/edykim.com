@@ -1,11 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900|Roboto+Mono:500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --site-color-background: #f7f7ff;
+  --site-color-backgroundAlt: #f0f0f8;
+  --site-color-primary: #4445c9;
+  --site-color-link: #ec0b43;
+  --site-color-highlight: #fdca40;
+  --site-color-text: #011627;
+  --site-color-body: #080708;
+  --site-color-subtext: #7d869c;
+  --site-color-shade: #eae6ea;  
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --site-color-background: #101010;
+    --site-color-backgroundAlt: #202020;
+    --site-color-primary: #00b6aa;
+    --site-color-link: #09ab00;
+    --site-color-highlight: #14005e;
+    --site-color-text: #eeeeee;
+    --site-color-body: #eeeee0;
+    --site-color-subtext: #7d869c;
+    --site-color-shade: #000000;  
+  }
+}
 
 html, body {
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--site-color-background);
+  color: var(--site-color-text);
   margin: 0;
 }
 
-html { font-size: 2.4vw; }
-@media all and (min-width:1000px) { html { font-size: 24px; } }
-@media all and (max-width:750px) { html{ font-size: 18px; } }
+button, input {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html { font-size: 2vw; }
+@media all and (min-width:1250px) { html { font-size: 25px; } }
+@media all and (max-width:900px) { html{ font-size: 18px; } }

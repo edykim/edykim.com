@@ -1,10 +1,11 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, layout } from "styles/schema"
+import moment from "moment"
+import { colors, layouts, fonts } from "styles/schema"
 
 const Wrapper = styled.div`
-  max-width: ${layout.medium};
+  max-width: ${layouts.content};
   margin: 0 auto 2rem;
 `
 
@@ -13,16 +14,19 @@ const Sections = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  padding 0 ${layout.sidePadding};
-  a {
-    display: block;
-    word-break: keep-all;
-    width: 100%;
-    text-decoration: none;
-    color: ${color.primary};
-  }
+  padding 0 ${layouts.sidePadding};
+
   > div:nth-of-type(2) {
     text-align: right;
+  }
+
+  @media screen and (max-width: 900px) {
+    display: block;
+
+  > div:nth-of-type(2) {
+    text-align: left;
+    margin-top: 2rem;
+  }
   }
 `
 const Section = styled.div`
@@ -35,7 +39,20 @@ const Section = styled.div`
 const PublishedAt = styled.time`
   display: block;
   font-size: 0.78em;
-  color: ${color.caption};
+  color: ${colors.subtext};
+`
+
+const TitleLink = styled(Link)`
+  display: block;
+  word-break: keep-all;
+  width: 100%;
+  text-decoration: none;
+  color: ${colors.primary};
+  font-size: ${fonts.card.title};
+  span {
+    box-shadow: 0 3px 0;
+    font-weight: 700;
+  }
 `
 
 export class ColophonLinks extends Component {
@@ -48,10 +65,14 @@ export class ColophonLinks extends Component {
             post =>
               post && (
                 <Section key={post.fields.url}>
-                  <Link to={post.fields.url} rel={`nofollow`}>
-                    <PublishedAt>{post.frontmatter.date}</PublishedAt>
-                    {post.frontmatter.title}
-                  </Link>
+                  <TitleLink to={post.fields.url} rel={`nofollow`}>
+                    <PublishedAt>
+                      {moment(post.frontmatter.date).format(
+                        "YYYY[년] M[월] D[일]"
+                      )}
+                    </PublishedAt>
+                    <span>{post.frontmatter.title}</span>
+                  </TitleLink>
                 </Section>
               )
           )}

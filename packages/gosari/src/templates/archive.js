@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import { CategoryList } from "components/CategoryList"
 import { Header, Content, PostList } from "components"
 import { Site } from "components/layout"
+import { Featured } from "components/Featured"
 
 export default ({ data, location }) => {
   const { archive, articles } = data
@@ -11,20 +12,42 @@ export default ({ data, location }) => {
     carry[node.frontmatter.dateSort].push(node)
     return carry
   }, {})
+  const categories = articles.edges.reduce((carry, { node }) => {
+    node.frontmatter.categories.map(category => {
+      carry[category] = carry[category] || 0
+      carry[category]++
+    })
+    return carry
+  }, {})
+
+  const featured = articles.edges.filter(
+    ({ node }) => node.frontmatter.featured
+  )
   const years = Object.keys(sorted).sort((a, b) => b - a)
+
   return (
-    <Site location={location}>
+    <Site location={location} linkTitle={"블로그"} linkTo={"/archives"}>
       <Header
         title={archive.frontmatter.title}
+        headline={archive.frontmatter.headline}
         linkTo={archive.fields.url}
-      ></Header>
+      />
 
       <Content html={archive.html} />
+
+      <CategoryList summary={categories} />
+      <Featured posts={featured} />
 
       {years.map(date => {
         const nodes = sorted[date]
 
-        return <PostList key={date} nodes={nodes} />
+        return (
+          <PostList
+            key={date}
+            nodes={nodes}
+            isCollapsed={date <= new Date().getFullYear() - 3}
+          />
+        )
       })}
     </Site>
   )
@@ -35,6 +58,7 @@ export const query = graphql`
     archive: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        headline
         title
         lang
         tags
@@ -67,6 +91,9 @@ export const query = graphql`
             date(formatString: "MMMM D")
             dateSort: date(formatString: "YYYY")
             title
+            tags
+            categories
+            featured
           }
         }
       }

@@ -1,28 +1,34 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color } from "styles/schema"
+import { colors, fonts } from "styles/schema"
+import moment from "moment"
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0.3rem 0;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
 `
 
 const PublishedAt = styled.time`
-  width: 4.2rem;
-  font-size: 0.6rem;
+  width: 5rem;
   text-align: right;
   line-height: 1.8;
-  color: ${color.caption};
+  color: ${colors.subtext};
 `
 const LinkSection = styled.div`
   flex: 1;
-  font-size: 0.8rem;
+  font-size: ${fonts.title};
+  word-break: keep-all;
+  overflow-wrap: break-word;
   a {
-    color: ${color.primary};
+    color: ${colors.primary};
     text-decoration: none;
-    border-bottom: 2px solid ${color.underline};
+    box-shadow: 0 3px 0;
   }
 `
 
@@ -34,7 +40,9 @@ export class PostItem extends Component {
         <LinkSection>
           <Link to={`/${post.fields.url}`}>{post.frontmatter.title}</Link>
         </LinkSection>
-        <PublishedAt>{post.frontmatter.date}</PublishedAt>
+        <PublishedAt>
+          {moment(post.frontmatter.date).format("M[월] D[일]")}
+        </PublishedAt>
       </Row>
     )
   }

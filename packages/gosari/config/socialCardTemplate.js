@@ -8,6 +8,10 @@ module.exports = site => {
         * {
           font-family: 'Noto Sans KR', sans-serif;
         }
+        html, body {
+          background: rgb(68,69,201);
+          background: linear-gradient(155deg, rgba(68,69,201,1) 34%, rgba(69,13,205,1) 100%);
+        }
         body {
           overflow: hidden;
         }
@@ -17,6 +21,7 @@ module.exports = site => {
         }
 
         h1 {
+          color: #f7f7ff;
           line-height: 8vw;
           font-size: 8vw;
           font-weight: 900;
@@ -25,13 +30,14 @@ module.exports = site => {
           width: 95%;
         }
         h2 {
+          color: #f7f7ff;
+          opacity: 0.5;
           line-height: 5vw;
           font-size: 4vw;
           font-weight: 700;
           letter-spacing: -0.05em;
           margin-top: 0.5em;
           margin-bottom: -1vw;
-          color: #666666;
           width: 95%;
         }
         p {
@@ -39,26 +45,13 @@ module.exports = site => {
           font-size: 4vw;
           font-weight: 700;
           letter-spacing: -0.1em;
+          color: #f7f7ff;
         }
+
         p span {
           font-weight: 700;
           margin-right: 0.2em;
-          color: #666666;
-        }
-        p span:after {
-          color: #dddddd;
-          margin-left: 0.3em;
-          content: '·';
-        }
-        p:before {
-          content: '';
-          background: #6700ed;
-          width: 3vw;
-          height: 3vw;
-          border-radius: 50%;
-          position: absolute;
-          margin-top: -4.5vw;
-          box-shadow: 3.5vw 0 0 #ea1f63, 7vw 0 0 #dddddd;
+          color: #fdca40;
         }
 
         section {
@@ -72,18 +65,6 @@ module.exports = site => {
         section > div {
           padding-left: 3vw;
           padding-right: 3vw;
-        }
-
-        .background {
-          transform: rotate(5deg) translateY(-50vw) translateX(92vw);
-          z-index: -1;
-          left: 0;
-          top: 0;
-          position: absolute;
-          background: #dddddd;
-          box-shadow: -2vw 0 0 #eeeeee, -4vw 0 0 #fafafa;
-          height: 200vw;
-          width: 100vw;
         }
         </style>
       </head>
@@ -99,9 +80,8 @@ module.exports = site => {
             </div>
           </section>
         </div>
-
-        <div class="background"></div>
       </body>
     </html>
+
   `
 }

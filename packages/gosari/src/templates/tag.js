@@ -15,7 +15,7 @@ export default ({ data, location, pageContext }) => {
   const years = Object.keys(sorted).sort((a, b) => b - a)
   const title = `"${taxonomy}" 태그된 글`
   return (
-    <Site location={location}>
+    <Site location={location} linkTitle={"블로그"} linkTo={"/archives"}>
       <Meta title={title} />
 
       <Header title={title} linkTo={location.pathname} />

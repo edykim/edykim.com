@@ -12,11 +12,9 @@ slug: google-chrome-has-a-missingsubjectaltname-issue-with-a-selfsigned-certific
 categories:
   - 개발 이야기
 tags:
-  - EnableCommonNameFallbackForLocalAnchors
   - google chrome
-  - missing_subjectAltName
-
 ---
+
 Google Chrome 58 에서 정책 EnableCommonNameFallbackForLocalAnchors의 기본 설정이 변경되었다. 이 변경으로 개발 환경에서 https에 사용하는 사내 자가서명 인증서에 `missing_subjectAltName` 문제로 접근이 차단되었다.
 
 보안상 이 설정을 변경하지 않는 것이 옳지만 인증서를 다시 발급받는 과정이 오래 걸리고 그 동안 가만히 있을 순 없기 때문에 해법을 검색했다. 최근 변경사항이라 글이 많지 않았지만 답을 찾을 수 있었다. 앞서 언급한 EnableCommonNameFallbackForLocalAnchors 설정을 활성화하면 된다.
