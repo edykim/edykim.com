@@ -12,14 +12,24 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const Title = styled(Link)`
-  color: ${colors.primary};
+const titleStyle = css`
   font-size: ${fonts.title};
   letter-spacing: -0.05em;
   font-weight: 900;
   margin: 0;
   word-break: keep-all;
   text-decoration: none;
+`
+
+const Title = styled(Link)`
+  ${titleStyle};
+  color: ${colors.primary};
+`
+
+const SubTitle = styled(Link)`
+  ${titleStyle};
+  color: ${colors.subtext};
+  margin-left: 10px;
 `
 
 const Subtitle = styled.span`
@@ -30,10 +40,11 @@ const NewLine = styled.span`
   display: block;
 `
 
-export const Header = () => (
+export const Header = ({ linkTo, linkTitle }) => (
   <ContainerWrapper>
     <Container>
       <Title to={"/"}>매일 성장하기</Title>
+      {linkTo && <SubTitle to={linkTo}>{linkTitle}</SubTitle>}
     </Container>
   </ContainerWrapper>
 )

@@ -36,6 +36,10 @@ const Button = styled.button`
   }
 `
 
+const Count = styled.small`
+  color: ${colors.subtext};
+`
+
 export class PostList extends Component {
   constructor(props) {
     super(props)
@@ -53,14 +57,14 @@ export class PostList extends Component {
       <Wrapper>
         <Container>
           <Title id={`in-${date}`}>
-            {date} ({nodes.length}){" "}
+            {date} <Count>({nodes.length})</Count>{" "}
             {isCollapsed && (
               <Button
                 onClick={() => {
                   this.setState({ isCollapsed: false })
                 }}
               >
-                지난 글 목록 보기
+                목록 보기
               </Button>
             )}
           </Title>

@@ -23,7 +23,7 @@ export default ({ data, location, pageContext }) => {
   const { url } = post.fields
 
   return (
-    <Site location={location}>
+    <Site location={location} linkTitle={"블로그"} linkTo={"/archives"}>
       <Meta
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

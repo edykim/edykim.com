@@ -58,7 +58,9 @@ const StyledContent = styled.div`
     padding-left: 3rem;
     padding-right: 2rem;
   }
-
+  ul {
+    list-style: square;
+  }
   ul p {
     margin: 0;
   }

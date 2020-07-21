@@ -31,6 +31,7 @@ const Title = styled.h1`
 const PublishedAt = styled.time`
   display: block;
   font-size: 0.78rem;
+  margin-top: 1rem;
   color: ${colors.subtext};
 `
 
@@ -39,10 +40,7 @@ export const Headline = styled.p`
   line-height: 1.7;
   word-break: keep-all;
   color: ${colors.subtext};
-  margin: ${fonts.title} auto 0.2rem;
-  @media (max-width: 800px) {
-    margin-bottom: 0rem;
-  }
+  margin: ${fonts.title} auto -0.8rem;
 `
 
 export const Header = ({ title, publishedAt, headline, linkTo }) => (

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { CategoryList } from "components/CategoryList"
 import { Header, Content, PostList } from "components"
 import { Site } from "components/layout"
+import { Featured } from "components/Featured"
 
 export default ({ data, location }) => {
   const { archive, articles } = data
@@ -19,9 +20,13 @@ export default ({ data, location }) => {
     return carry
   }, {})
 
+  const featured = articles.edges.filter(
+    ({ node }) => node.frontmatter.featured
+  )
   const years = Object.keys(sorted).sort((a, b) => b - a)
+
   return (
-    <Site location={location}>
+    <Site location={location} linkTitle={"블로그"} linkTo={"/archives"}>
       <Header
         title={archive.frontmatter.title}
         headline={archive.frontmatter.headline}
@@ -31,6 +36,7 @@ export default ({ data, location }) => {
       <Content html={archive.html} />
 
       <CategoryList summary={categories} />
+      <Featured posts={featured} />
 
       {years.map(date => {
         const nodes = sorted[date]
@@ -87,6 +93,7 @@ export const query = graphql`
             title
             tags
             categories
+            featured
           }
         }
       }
