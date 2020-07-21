@@ -289,6 +289,7 @@ const StyledContent = styled.div`
 
   .translation-note p:nth-of-type(1):before {
     content: "📝";
+    margin-right: 0.5rem;
   }
 
   table {
