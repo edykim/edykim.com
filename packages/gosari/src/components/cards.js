@@ -94,7 +94,6 @@ export const Cards = ({ data }) => {
   return (
     <CardContainer>
       {data.map(({ node }) => {
-        console.log(node)
         return (
           <Card key={node.fields.slug}>
             <Title>{node.frontmatter.title}</Title>
