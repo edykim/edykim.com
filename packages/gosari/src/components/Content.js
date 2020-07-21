@@ -30,6 +30,8 @@ const StyledContent = styled.div`
     color: ${colors.primary};
     text-decoration: none;
     box-shadow: 0 3px 0;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     > code {
       box-shadow: 0 3px 0;
     }
@@ -77,7 +79,7 @@ const StyledContent = styled.div`
     margin-right: auto !important;
   }
   > div {
-    max-width: ${layout.wide};
+    max-width: ${layouts.wide};
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -104,7 +106,7 @@ const StyledContent = styled.div`
   .title-anchor {
     margin: 0;
     padding: 0;
-    padding-left: ${layout.sidePadding};
+    padding-left: ${layouts.sidePadding};
     float: none;
     position: absolute;
     left: 1em;
@@ -153,7 +155,7 @@ const StyledContent = styled.div`
   }
   .translation-note {
     box-sizing: border-box;
-    max-width: ${layout.narrow};
+    max-width: ${layouts.narrow};
     margin: 40px auto;
   }
   p {
@@ -163,7 +165,8 @@ const StyledContent = styled.div`
   }
   p,
   p * {
-    word-break: break-all;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   h1 {
     font-size: 1.5em;
@@ -277,7 +280,7 @@ const StyledContent = styled.div`
 
   .translation-note {
     font-size: 0.95em;
-    background: ${color.note};
+    background: ${colors.backgroundAlt};
     margin: 2rem auto;
     padding: 1px 20px;
   }
@@ -289,7 +292,7 @@ const StyledContent = styled.div`
   table {
     border-collapse: collapse;
     width: 100%;
-    max-width: ${layout.narrow};
+    max-width: ${layouts.narrow};
     margin: 3rem auto;
     border: 1px solid #ddd;
   }
@@ -316,8 +319,12 @@ const StyledContent = styled.div`
     margin: 3rem auto;
     text-align: center;
     text-indent: 0;
+    p a {
+      font-size: 0;
+      box-shadow: none;
+    }
     &.wide {
-      max-width: ${layout.full};
+      max-width: ${layouts.wide};
     }
     * {
       text-indent: 0;

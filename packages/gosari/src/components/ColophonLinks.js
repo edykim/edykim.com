@@ -15,8 +15,18 @@ const Sections = styled.div`
   justify-content: space-between;
   align-items: stretch;
   padding 0 ${layouts.sidePadding};
+
   > div:nth-of-type(2) {
     text-align: right;
+  }
+
+  @media screen and (max-width: 900px) {
+    display: block;
+
+  > div:nth-of-type(2) {
+    text-align: left;
+    margin-top: 2rem;
+  }
   }
 `
 const Section = styled.div`

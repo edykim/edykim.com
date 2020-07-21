@@ -21,9 +21,10 @@ const Title = styled.h1`
   line-height: 1.2;
   margin: 0 auto;
   word-break: keep-all;
+  overflow-wrap: break-word;
   a {
     text-decoration: none;
-    color: ${color.plain};
+    color: ${colors.text};
   }
 `
 

@@ -8,6 +8,10 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0.3rem 0;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
 `
 
 const PublishedAt = styled.time`
@@ -19,6 +23,8 @@ const PublishedAt = styled.time`
 const LinkSection = styled.div`
   flex: 1;
   font-size: ${fonts.title};
+  word-break: keep-all;
+  overflow-wrap: break-word;
   a {
     color: ${colors.primary};
     text-decoration: none;

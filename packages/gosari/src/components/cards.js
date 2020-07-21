@@ -54,14 +54,14 @@ const Title = styled.h1`
   margin: 0;
   word-break: keep-all;
   font-size: ${fonts.card.title};
-  color: #080708;
+  color: ${colors.body};
 `
 const Headline = styled.p`
   word-break: keep-all;
   margin: 0;
   font-size: ${fonts.card.headline};
   width: 80%;
-  color: #7d869c;
+  color: ${colors.subtext};
 `
 const ReadMore = styled(Link)`
   position: absolute;
@@ -73,7 +73,7 @@ const ReadMore = styled(Link)`
 
   &:after {
     text-indent: 0;
-    color: #7d869c;
+    color: ${colors.subtext};
     position: absolute;
     right: 20px;
     bottom: 15px;

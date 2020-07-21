@@ -41,7 +41,7 @@ export default ({ data, location, pageContext }) => {
       <Content html={post.html} />
 
       <Tags post={post} />
-      <ColophonLinks links={[next, previous]} />
+      <ColophonLinks links={[previous, next]} />
     </Site>
   )
 }
