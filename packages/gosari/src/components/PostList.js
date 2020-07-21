@@ -1,19 +1,22 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { layout } from "styles/schema"
+import { colors, fonts, layouts } from "styles/schema"
 import { PostItem } from "."
 
 const Wrapper = styled.div`
-  max-width: ${layout.medium};
+  max-width: ${layouts.content};
   margin: 0 auto 2rem;
 `
 
 const Title = styled.div`
   margin-bottom: 0.8rem;
+  color: ${colors.text};
+  font-weight: 800;
+  font-size: ${fonts.title};
 `
 
 const Container = styled.div`
-  padding: 0 ${layout.sidePadding};
+  padding: 0 ${layouts.sidePadding};
 `
 
 export class PostList extends Component {

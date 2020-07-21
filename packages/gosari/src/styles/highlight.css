@@ -6,9 +6,9 @@
 --highlight-base0     : #d0d0d0;
 --highlight-base1     : #505050;
 --highlight-base2     : #d2e1ee;
---highlight-base3     : #fafafa;
---highlight-base4     : #dddddd;
---highlight-base5     : #f3f3f3;
+--highlight-base3     : #f0f0f8;
+--highlight-base4     : #d2e1ee;
+--highlight-base5     : #f0f0f8;
 --highlight-yellow    : #0061b5;
 --highlight-orange    : #5216cb;
 --highlight-red       : #dc322f;
@@ -139,13 +139,10 @@ cursor: help;
 }
 
 .gatsby-highlight {
-  border: 1px solid var(--highlight-base0);
-  border-radius: 5px;
   background-color: var(--highlight-base5);
   padding: 1em;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  box-shadow: var(--highlight-base4) 0px 2px 4px,  var(--highlight-base2) 0px 4px 6px;
 }
 
 @media all and (max-width:750px) {
