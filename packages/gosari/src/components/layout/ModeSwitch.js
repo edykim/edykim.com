@@ -63,11 +63,13 @@ const Button = styled.button`
 
 const ModeSwitch = ({ isCollapsed = true }) => {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme")
+    typeof localStorage !== "undefined" && localStorage.getItem("theme")
       ? localStorage.getItem("theme") === "dark"
         ? true
         : false
-      : window.matchMedia("(prefers-color-scheme: dark)")
+      : typeof window !== "undefined"
+      ? window.matchMedia("(prefers-color-scheme: dark)")
+      : false
   )
   useEffect(() => {
     if (darkMode !== null) {
