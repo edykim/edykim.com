@@ -19,7 +19,7 @@ const Button = styled.button`
     color: ${colors.text};
   }
   @media screen and (max-width: 900px) {
-    .label {
+    &.collapsed .label {
       right: -10px;
       top: -35px;
     }
@@ -41,6 +41,7 @@ const Button = styled.button`
   &:hover .box,
   &:active .box,
   &:focus .box {
+    background-color: ${colors.highlight};
     border-color: ${colors.primary};
     box-shadow: 0 0 8px ${colors.primary};
   }
@@ -60,7 +61,7 @@ const Button = styled.button`
   }
 `
 
-const ModeSwitch = () => {
+const ModeSwitch = ({ isCollapsed = true }) => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme")
       ? localStorage.getItem("theme") === "dark"
@@ -75,6 +76,7 @@ const ModeSwitch = () => {
   }, [darkMode])
   return (
     <Button
+      className={`${isCollapsed ? "collapsed" : ""}`}
       onClick={() => {
         document.documentElement.setAttribute("data-theme-transition", "true")
         document.documentElement.setAttribute(

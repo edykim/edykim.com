@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Container from "./Container"
 import { colors, layouts, fonts } from "styles/schema"
+import ModeSwitch from "./ModeSwitch"
 
 const Header = styled.header`
   background-color: ${colors.primary};
@@ -25,6 +26,12 @@ const NewLine = styled.span`
   display: block;
 `
 
+const Fixer = styled.div`
+  position: absolute;
+  right: ${layouts.sidePadding};
+  top: ${layouts.sidePadding};
+`
+
 export const HeroHeader = () => (
   <Header>
     <Container>
@@ -36,5 +43,8 @@ export const HeroHeader = () => (
         매일 성장하기
       </Title>
     </Container>
+    <Fixer>
+      <ModeSwitch isCollapsed={false} />
+    </Fixer>
   </Header>
 )
