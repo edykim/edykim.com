@@ -55,8 +55,10 @@ const Button = styled.button`
     width: 22px;
     height: 22px;
     border-radius: 100px;
+    background-color: ${colors.backgroundAlt};
+  }
+  .switcher.loaded {
     background-color: ${colors.primary};
-    transition: transform 0.3s ease;
   }
   .switcher.on {
     transform: translateX(20px);
@@ -67,25 +69,29 @@ const Button = styled.button`
 `
 
 const ModeSwitch = ({ isCollapsed = true }) => {
-  const [darkMode, setDarkMode] = useState(
-    typeof localStorage !== "undefined" && localStorage.getItem("theme")
-      ? localStorage.getItem("theme") === "dark"
-        ? true
-        : false
-      : typeof window !== "undefined"
-      ? window.matchMedia("(prefers-color-scheme: dark)")
-      : false
-  )
+  const [darkMode, setDarkMode] = useState(null)
+  const [loaded, setLoaded] = useState(false)
   useEffect(() => {
     if (darkMode !== null) {
       localStorage.setItem("theme", darkMode ? "dark" : "light")
+    } else {
+      setDarkMode(
+        typeof localStorage !== "undefined" && localStorage.getItem("theme")
+          ? localStorage.getItem("theme") === "dark"
+            ? true
+            : false
+          : typeof window !== "undefined"
+          ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          : false
+      )
+      setLoaded(true)
     }
   }, [darkMode])
+
   return (
     <Button
       className={`${isCollapsed ? "collapsed" : ""}`}
       onClick={() => {
-        document.documentElement.setAttribute("data-theme-transition", "true")
         document.documentElement.setAttribute(
           "data-theme",
           darkMode ? "light" : "dark"
@@ -97,7 +103,10 @@ const ModeSwitch = ({ isCollapsed = true }) => {
         !darkMode ? "어두운 모드 전환하기" : "밝은 모드 전환하기"
       }`}</span>
       <div className="box">
-        <div className={`switcher ${darkMode ? "on" : "off"}`}></div>
+        <div
+          className={`switcher ${!darkMode ? "on" : "off"} ${loaded &&
+            "loaded"}`}
+        ></div>
       </div>
     </Button>
   )

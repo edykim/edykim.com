@@ -15,5 +15,13 @@ require("./src/styles/highlight.css")
 
   if (current) {
     document.documentElement.setAttribute("data-theme", current)
+  } else {
+    const isDarkMode = window.matchMedia
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : false
+    const theme = isDarkMode ? "dark" : "light"
+
+    document.documentElement.setAttribute("data-theme", theme)
+    localStorage.setItem("theme", theme)
   }
 })()
