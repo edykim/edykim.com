@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Container } from "./container"
 
 const FooterComponent = styled.footer`
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 5rem;
 `
 
 const Title = styled.div`
