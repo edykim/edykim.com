@@ -18,11 +18,14 @@ const SubHeaderComponent = styled.header`
   background-color: var(--site-color-primary);
   font-size: 10px;
   > div {
-    padding-top: 1rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
   }
   @media screen and (max-width: 1024px) {
     font-size: 6px;
+    > div {
+      padding-top: 1rem;
+    }
   }
 `
 
@@ -35,6 +38,8 @@ const SiteTitle = styled.h1`
 
 const SiteHeadline = styled.p`
   margin: 0;
+  margin-top: 0.8rem;
+  line-height: 1.4;
   font-size: 1.2em;
   color: #ffffff;
 `
