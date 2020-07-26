@@ -1,7 +1,15 @@
 import React from "react"
+import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Container } from "../components/container"
+import { Title } from "../components/title"
+import { Time } from "../components/post"
+
+const List = styled.ul`
+  list-style: square;
+`
 
 const ArchivePage = ({
   data: {
@@ -11,26 +19,28 @@ const ArchivePage = ({
 }) => (
   <Layout location={location}>
     <SEO title="Posts" keywords={[`edykim`]} />
-    <h1>Posts</h1>
-    {edges.length > 0 ? (
-      <ul className="archive">
-        {edges.map(
-          ({
-            node: {
-              fields: { url, slug },
-              frontmatter: { title, date },
-            },
-          }) => (
-            <li key={slug}>
-              <time className="datetime">{date}</time>
-              <Link to={`/${url}`}>{title}</Link>
-            </li>
-          )
-        )}
-      </ul>
-    ) : (
-      <div>Coming soon.</div>
-    )}
+    <Container>
+      <Title>Posts</Title>
+      {edges.length > 0 ? (
+        <List>
+          {edges.map(
+            ({
+              node: {
+                fields: { url, slug },
+                frontmatter: { title, date },
+              },
+            }) => (
+              <li key={slug}>
+                <Link to={`/${url}`}>{title}</Link>
+                <Time style={{ marginLeft: "0.5rem" }}>{date}</Time>
+              </li>
+            )
+          )}
+        </List>
+      ) : (
+        <div>Coming soon.</div>
+      )}
+    </Container>
   </Layout>
 )
 

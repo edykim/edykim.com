@@ -1,20 +1,23 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Container } from "../components/container"
+import { Title, TitleLink } from "../components/title"
+import { Time } from "../components/post"
 
 export default ({ data, location }) => {
   const post = data.post
   return (
     <Layout location={location}>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <h1>
-        <Link className="post__title" to={post.fields.url}>
-          {post.frontmatter.title}
-        </Link>
-      </h1>
-      <time className="datetime">{post.frontmatter.date}</time>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Container>
+        <Title>
+          <TitleLink to={post.fields.url}>{post.frontmatter.title}</TitleLink>
+        </Title>
+        <Time>{post.frontmatter.date}</Time>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Container>
     </Layout>
   )
 }

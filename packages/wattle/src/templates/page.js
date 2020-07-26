@@ -2,14 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Container } from "../components/container"
+import { Title, TitleLink } from "../components/title"
 
 export default ({ data, location }) => {
   const page = data.page
   return (
     <Layout location={location}>
       <SEO title={page.frontmatter.title} description={page.excerpt} />
-      <h1>{page.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      <Container>
+        <Title>
+          <TitleLink to={page.fields.url}>{page.frontmatter.title}</TitleLink>
+        </Title>
+        <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      </Container>
     </Layout>
   )
 }
