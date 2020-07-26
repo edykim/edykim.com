@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Header, MainHeader } from "./header"
 import { Footer } from "./footer"
 
-const Layout = ({ location, children }) => (
+const Layout = ({ location, isMain = false, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,7 +27,7 @@ const Layout = ({ location, children }) => (
       const rootPath = `${__PATH_PREFIX__}/`
       return (
         <>
-          {location.pathname === rootPath ? <MainHeader /> : <Header />}
+          {isMain ? <MainHeader /> : <Header />}
           <main>{children}</main>
           <Footer />
         </>

@@ -19,7 +19,7 @@ const List = styled.ul`
 `
 
 const IndexPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout location={location} isMain={true}>
     <SEO title="Home" keywords={[`edykim`]} />
     <Container>
       <Headline>
