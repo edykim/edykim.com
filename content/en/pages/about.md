@@ -7,25 +7,18 @@ url: /about
 lang: en
 ---
 
-<figure class="profile" style="float: right; margin-left: 30px;margin-top: -30px;">
-<img src="https://avatars3.githubusercontent.com/u/1009457?s=150&v=4">
-</figure>
-
-## Yong Gyun Kim (Edward)
-
-I'm an open web developer who loves focusing on problems and creating quick
-prototypes. I'm excited about web technology, software architecture, and community.
+Hello, I'm Edward. I'm an open web developer who loves focusing on problems and creating quick prototypes. I'm excited to talk about web technology, software architecture, and community.
 
 - Love to talk about ECMAScript, microservices, serverless architecture
 - Comfortable with JS, Python, PHP, HTML/CSS, and C#
 - Passionate about solving complexities and problems
 - Community Manager at [weirdx.io](http://weirdx.io)
 
-Right now, I am studying computer science in Riverside, CA and currently exploring new opportunities.
+I am originally from Jeju, South Korea, and am studying computer science in Riverside, CA. I'm happy to discuss new opportunities.
 
-I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). More details are on the [LinkedIn](https://www.linkedin.com/in/edwardykim/).
+Before moving to the U.S., I worked at [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/) in Melbourne, Australia. You can find more detail on [my LinkedIn page](https://www.linkedin.com/in/edwardykim/).
 
-<hr class="left" />
+<hr />
 
 ### Projects
 
