@@ -1,30 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 
-const Wrapper = styled.div`
-  font-size: 2.4vw;
-  @media all and (min-width: 1000px) {
-    font-size: 24px;
-  }
-  @media all and (max-width: 750px) {
-    font-size: 18px;
-  }
-`
+const Wrapper = styled.div``
 
 const Section = styled.div`
-  font-size: 0.8em;
   line-height: 1.7;
-  font-weight: 400;
 
   a[href^="http"]:after {
     content: "external";
-    color: #333333;
+    color: var(--site-color-subtext);
     text-decoration: none;
     display: inline-block;
     font-size: 0.6em;
     margin-left: 5px;
     vertical-align: super;
   }
+
   blockquote {
     padding: 1em;
     margin: 0;
