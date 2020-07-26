@@ -10,7 +10,7 @@
   --site-color-shade: #eae6ea;  
 }
 
-@media (prefers-color-scheme: daark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --site-color-background: #101310;
     --site-color-backgroundAlt: #202020;
