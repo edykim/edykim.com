@@ -49,3 +49,11 @@ main a:not([class]) {
   text-decoration: none;
   box-shadow: 0 3px 0 var(--site-color-link);
 }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--site-color-subtext);
+  margin: 3rem 0 2rem;
+}
+
