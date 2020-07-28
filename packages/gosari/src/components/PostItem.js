@@ -41,7 +41,7 @@ export class PostItem extends Component {
           <Link to={`/${post.fields.url}`}>{post.frontmatter.title}</Link>
         </LinkSection>
         <PublishedAt>
-          {moment(post.frontmatter.date).format("M[월] D[일]")}
+          {moment(post.frontmatter.date, "MMMM D").format("M[월] D[일]")}
         </PublishedAt>
       </Row>
     )
