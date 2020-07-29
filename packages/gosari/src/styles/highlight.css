@@ -88,7 +88,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: var(--highlight-base00);
 
-  font-family: "Roboto Mono", "SF Mono", Monaco, "Andale Mono", "Ubuntu Mono",
+  font-family: "Source Code Pro", "Roboto Mono", "SF Mono", Monaco, "Andale Mono", "Ubuntu Mono",
     Menlo, Consolas, monospace;
   text-align: left;
   word-spacing: normal;
