@@ -1,7 +1,7 @@
 ---
 title: 비주얼 타이머 앱 개발하며 배운 것들
 headline:
-  - React native로 비주얼 타이머 개발한 과정 정리
+  - React native로 지난 1년여 비주얼 타이머 개발한 과정 정리
 author: haruair
 type: post
 date: "2020-08-16T11:52:00"
