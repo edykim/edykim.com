@@ -18,10 +18,11 @@ const Title = styled.h1`
   font-size: ${fonts.hero};
   font-weight: 900;
   letter-spacing: -0.1rem;
-  line-height: 1.2;
-  margin: 0 auto;
+  line-height: 1.1;
   word-break: keep-all;
   overflow-wrap: break-word;
+  margin: 3rem 0 1rem;
+  max-width: 95%;
   a {
     text-decoration: none;
     color: ${colors.text};
