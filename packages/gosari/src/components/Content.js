@@ -5,7 +5,7 @@ import { color, layout, fonts, colors, layouts } from "styles/schema"
 const StyledContent = styled.div`
   color: ${colors.text};
   font-size: ${fonts.body};
-  line-height: 1.72;
+  line-height: 1.6;
   margin: 2rem auto;
   font-weight: 400;
 
@@ -28,13 +28,8 @@ const StyledContent = styled.div`
   h5 > a:not(.title-anchor),
   h6 > a:not(.title-anchor) {
     color: ${colors.primary};
-    text-decoration: none;
-    box-shadow: 0 3px 0;
     word-break: keep-all;
     overflow-wrap: break-word;
-    > code {
-      box-shadow: 0 3px 0;
-    }
     :hover {
       background-color: ${colors.highlight};
     }
@@ -108,7 +103,7 @@ const StyledContent = styled.div`
   .title-anchor {
     margin: 0;
     padding: 0;
-    padding-left: ${layouts.sidePadding};
+    padding-left: 0;
     float: none;
     position: absolute;
     left: 1em;
@@ -127,7 +122,7 @@ const StyledContent = styled.div`
   h4,
   h5 {
     position: relative;
-    text-indent: 1em;
+    text-indent: 0;
     word-break: keep-all;
   }
   h1,
@@ -162,8 +157,8 @@ const StyledContent = styled.div`
   }
   p {
     text-indent: 0.5em;
-    margin-top: 1.4em;
-    margin-bottom: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 0.7em;
   }
   p,
   p * {
@@ -171,10 +166,10 @@ const StyledContent = styled.div`
     overflow-wrap: break-word;
   }
   h1 {
-    font-size: 1.5em;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-top: 2.8em;
-    margin-bottom: 1.4em;
+    margin-bottom: 1em;
   }
   h2 {
     margin-top: 2.4em;
@@ -250,8 +245,8 @@ const StyledContent = styled.div`
   hr {
     height: 0;
     border: 0;
-    border-bottom: 4px solid ${colors.subtext};
-    max-width: 10rem;
+    border-bottom: 1px solid ${colors.subtext};
+    max-width: ${layouts.content};
     margin: 4rem auto 2rem;
 
     @media (max-width: 750px) {
@@ -266,6 +261,9 @@ const StyledContent = styled.div`
     background: ${colors.backgroundAlt};
     margin-top: 40px;
     margin-bottom: 40px;
+    a {
+      color: ${colors.primary};
+    }
     * {
       margin-top: 0;
       margin-bottom: 0;

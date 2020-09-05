@@ -12,20 +12,14 @@ const Button = styled.button`
   position: relative;
   outline: none;
   .label {
-    right: 60px;
-    width: 150px;
-    text-align: right;
-    line-height: 30px;
+    left: 42px;
+    width: 70px;
+    line-height: 20px;
+    text-align: left;
     opacity: 0;
     position: absolute;
     transition: opacity 0.3s ease;
     color: ${colors.text};
-  }
-  @media screen and (max-width: 900px) {
-    &.collapsed .label {
-      right: 0px;
-      top: -35px;
-    }
   }
   &:active .label,
   &:focus .label,
@@ -33,11 +27,9 @@ const Button = styled.button`
     opacity: 1;
   }
   .box {
-    width: 50px;
-    height: 30px;
-    background-color: ${colors.backgroundAlt};
-    border: 1px solid ${colors.subtext};
-    border-radius: 100px;
+    width: 34px;
+    height: 20px;
+    border: 1px solid ${colors.text};
     padding: 3px;
     position: relative;
     z-index: 10;
@@ -46,22 +38,18 @@ const Button = styled.button`
   &:hover .box,
   &:active .box,
   &:focus .box {
-    background-color: ${colors.highlight};
-    border-color: ${colors.primary};
-    box-shadow: 0 0 8px ${colors.primary};
   }
 
   .switcher {
-    width: 22px;
-    height: 22px;
-    border-radius: 100px;
-    background-color: ${colors.backgroundAlt};
+    width: 12px;
+    height: 12px;
+    background-color: ${colors.text};
   }
   .switcher.loaded {
-    background-color: ${colors.primary};
+    background-color: ${colors.text};
   }
   .switcher.on {
-    transform: translateX(20px);
+    transform: translateX(14px);
   }
   .switcher.off {
     transform: translateX(0px);
@@ -100,7 +88,7 @@ const ModeSwitch = ({ isCollapsed = true }) => {
       }}
     >
       <span className="label">{`${
-        !darkMode ? "어두운 모드 전환하기" : "밝은 모드 전환하기"
+        !darkMode ? "어둡게 보기" : "밝게 보기"
       }`}</span>
       <div className="box">
         <div

@@ -39,6 +39,7 @@ const Section = styled.div`
 const PublishedAt = styled.time`
   display: block;
   font-size: 0.78em;
+  text-decoration: none;
   color: ${colors.subtext};
 `
 
@@ -47,11 +48,10 @@ const TitleLink = styled(Link)`
   word-break: keep-all;
   width: 100%;
   text-decoration: none;
-  color: ${colors.primary};
+  color: ${colors.text};
   font-size: ${fonts.card.title};
   span {
-    box-shadow: 0 3px 0;
-    font-weight: 700;
+    text-decoration: underline;
   }
 `
 

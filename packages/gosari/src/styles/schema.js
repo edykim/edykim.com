@@ -20,17 +20,17 @@ export const colors = {
 }
 
 export const layouts = {
-  content: "40rem",
+  content: "42rem",
   wide: "44rem",
   narrow: "36rem",
 
   sidePadding: "1rem",
-  innerPadding: "7rem",
+  innerPadding: "3rem",
   headerPadding: "3rem",
 }
 
 export const fonts = {
-  hero: "3rem",
+  hero: "1.13rem",
   title: "1.13rem",
   button: "1.13rem",
   section: "1.5rem",
@@ -39,6 +39,7 @@ export const fonts = {
     headline: "0.8rem",
   },
   body: "1rem",
+  tag: "0.8rem",
 }
 
 export const scheme = {

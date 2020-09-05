@@ -27,8 +27,6 @@ const LinkSection = styled.div`
   overflow-wrap: break-word;
   a {
     color: ${colors.primary};
-    text-decoration: none;
-    box-shadow: 0 3px 0;
   }
 `
 

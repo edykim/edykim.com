@@ -6,9 +6,8 @@ import Container from "components/layout/Container"
 
 export const SectionContainer = styled.section`
   > div > p {
-    font-size: ${fonts.section};
-    font-weight: 500;
     word-break: keep-all;
+    line-height: 1.6;
   }
   ${props =>
     props.isOdd &&
@@ -20,7 +19,8 @@ export const SectionContainer = styled.section`
 export const SectionTitle = styled.h1`
   margin: 0;
   font-size: ${fonts.title};
-  font-weight: 900;
+  line-height: 1.6;
+  font-weight: 600;
   color: ${colors.text};
   ${props =>
     props.hero &&
@@ -38,26 +38,12 @@ export const SectionList = styled.ul`
 
 const linkStyle = css`
   color: ${colors.link};
-  font-weight: 900;
-  font-size: ${fonts.button};
   text-decoration: none;
-  box-shadow: 0 3px 0;
+  box-shadow: 0 1px 0;
   &:focus,
   &:hover,
   &:active {
     background-color: ${colors.highlight};
-  }
-  &:after {
-    position: absolute;
-    content: "→";
-    transition: transform ease-out 0.3s;
-    transform: scale(1) translateX(5px);
-  }
-  &:focus:after,
-  &:hover:after,
-  &:active:after {
-    transition: transform ease-out 0.3s;
-    transform: scale(1.3) translateX(10px) rotateZ(-360deg);
   }
 `
 

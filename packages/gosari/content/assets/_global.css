@@ -1,71 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&family=Noto+Sans+KR:wght@100;400;500;900&display=swap");
-
 * {
   box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
 
 :root {
-  --site-color-background: #f7f7ff;
-  --site-color-backgroundAlt: #f0f0f8;
+  --site-color-background: #f7f7f7;
+  --site-color-backgroundAlt: #f0f0f3;
   --site-color-primary: #4445c9;
   --site-color-link: #ec0b43;
   --site-color-highlight: #fdca40;
   --site-color-text: #011627;
   --site-color-body: #080708;
-  --site-color-subtext: #7d869c;
+  --site-color-subtext: #777777;
   --site-color-shade: #eae6ea;  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-color-background: #101010;
-    --site-color-backgroundAlt: #202020;
-    --site-color-primary: #00b6aa;
-    --site-color-link: #09ab00;
+    --site-color-background: #202020;
+    --site-color-backgroundAlt: #262626;
+    --site-color-primary: #07df8f;
+    --site-color-link: #fdca40;
     --site-color-highlight: #14005e;
     --site-color-text: #eeeeee;
     --site-color-body: #eeeee0;
-    --site-color-subtext: #7d869c;
+    --site-color-subtext: #777777;
     --site-color-shade: #000000;
   }
 }
 
 [data-theme="light"] {
-  --site-color-background: #f7f7ff;
-  --site-color-backgroundAlt: #f0f0f8;
+  --site-color-background: #f7f7f7;
+  --site-color-backgroundAlt: #f0f0f3;
   --site-color-primary: #4445c9;
   --site-color-link: #ec0b43;
   --site-color-highlight: #fdca40;
   --site-color-text: #011627;
   --site-color-body: #080708;
-  --site-color-subtext: #7d869c;
+  --site-color-subtext: #777777;
   --site-color-shade: #eae6ea;  
 }
 
 [data-theme="dark"] {
-  --site-color-background: #101010;
-  --site-color-backgroundAlt: #202020;
-  --site-color-primary: #00b6aa;
-  --site-color-link: #09ab00;
+  --site-color-background: #202020;
+  --site-color-backgroundAlt: #262626;
+  --site-color-primary: #07df8f;
+  --site-color-link: #fdca40;
   --site-color-highlight: #14005e;
   --site-color-text: #eeeeee;
   --site-color-body: #eeeee0;
-  --site-color-subtext: #7d869c;
+  --site-color-subtext: #777777;
   --site-color-shade: #000000;  
 }
 
 html, body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", MalgunGothic, "HY Dotum", "Lexi Gulim", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: var(--site-color-background);
   color: var(--site-color-text);
   margin: 0;
 }
 
 button, input {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", MalgunGothic, "HY Dotum", "Lexi Gulim", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-html { font-size: 2vw; }
-@media all and (min-width:1250px) { html { font-size: 25px; } }
-@media all and (max-width:900px) { html{ font-size: 18px; } }

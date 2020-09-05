@@ -29,7 +29,7 @@ const CategoryLink = styled(Link)`
     color: ${colors.subtext};
   }
   span {
-    box-shadow: 0 3px 0;
+    text-decoration: underline;
   }
 
   @media screen and (max-width: 900px) {

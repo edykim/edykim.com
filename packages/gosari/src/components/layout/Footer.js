@@ -16,8 +16,6 @@ const Wrapper = styled.footer`
   }
   li a {
     color: ${colors.subtext};
-    text-decoration: none;
-    box-shadow: 0 2px 0;
   }
   > * {
     padding-top: 1em;
@@ -61,24 +59,6 @@ export const Footer = () => (
   <Wrapper>
     <Container>
       <SiteLink to={"/"}>매일 성장하기</SiteLink>
-      <Section>
-        <ul>
-          <li>
-            <Link to={"/archives"}>블로그</Link>
-          </li>
-          <li>
-            <Link to={"/notes"}>노트</Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="https://twitter.com/haruair">트위터 @haruair</a>
-          </li>
-          <li>
-            <a href="https://github.com/edykim">깃허브 @edykim</a>
-          </li>
-        </ul>
-      </Section>
     </Container>
   </Wrapper>
 )

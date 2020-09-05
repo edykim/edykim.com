@@ -6,7 +6,7 @@ import { colors, layouts, fonts } from "styles/schema"
 const CardContainer = styled.ul`
   list-style: none;
   padding: 0;
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,9 +26,7 @@ const Card = styled.li`
   min-width: 40%;
   flex: 1;
   flex-grow: 1;
-  background-color: ${colors.background};
-  border-radius: 20px;
-  box-shadow: 0px 3px 10px ${colors.shade};
+  border: 1px solid ${colors.backgroundAlt};
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -36,18 +34,10 @@ const Card = styled.li`
 
   @media all and (min-width: 900px) {
     min-height: 100px;
-
-    &:focus,
-    &:hover,
-    &:active {
-      transform: scale(1.1);
-      z-index: 100;
-    }
   }
   @media all and (max-width: 900px) {
-    border-radius: 0;
-    margin: 0;
-    border-bottom: 1px solid ${colors.shade};
+    border: 0;
+    border-bottom: 1px solid ${colors.backgroundAlt};
   }
 `
 const Title = styled.h1`

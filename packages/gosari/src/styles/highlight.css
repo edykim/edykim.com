@@ -6,9 +6,9 @@
   --highlight-base0: #d0d0d0;
   --highlight-base1: #505050;
   --highlight-base2: #d2e1ee;
-  --highlight-base3: #f0f0f8;
+  --highlight-base3: #f0f0f0;
   --highlight-base4: #d2e1ee;
-  --highlight-base5: #f0f0f8;
+  --highlight-base5: #f0f0f0;
   --highlight-yellow: #0061b5;
   --highlight-orange: #5216cb;
   --highlight-red: #dc322f;
@@ -25,12 +25,12 @@
     --highlight-base02: #606060;
     --highlight-base01: #606060;
     --highlight-base00: #b8b8b8;
-    --highlight-base0: #d0d0d0;
+    --highlight-base0: #404040;
     --highlight-base1: #505050;
     --highlight-base2: #d2e1ee;
     --highlight-base3: #00000c;
     --highlight-base4: #1c133c;
-    --highlight-base5: #000505;
+    --highlight-base5: #141414;
     --highlight-yellow: #1cbbd7;
     --highlight-orange: #b28dfc;
     --highlight-red: #dc322f;
@@ -50,9 +50,9 @@
   --highlight-base0: #d0d0d0;
   --highlight-base1: #505050;
   --highlight-base2: #d2e1ee;
-  --highlight-base3: #f0f0f8;
+  --highlight-base3: #f0f0f0;
   --highlight-base4: #d2e1ee;
-  --highlight-base5: #f0f0f8;
+  --highlight-base5: #f0f0f0;
   --highlight-yellow: #0061b5;
   --highlight-orange: #5216cb;
   --highlight-red: #dc322f;
@@ -68,12 +68,12 @@
   --highlight-base02: #606060;
   --highlight-base01: #606060;
   --highlight-base00: #b8b8b8;
-  --highlight-base0: #d0d0d0;
+  --highlight-base0: #404040;
   --highlight-base1: #505050;
   --highlight-base2: #d2e1ee;
   --highlight-base3: #00000c;
   --highlight-base4: #1c133c;
-  --highlight-base5: #000505;
+  --highlight-base5: #141414;
   --highlight-yellow: #1cbbd7;
   --highlight-orange: #b28dfc;
   --highlight-red: #dc322f;
@@ -244,5 +244,5 @@ pre[class*="language-"] {
   background: var(--highlight-base3);
 }
 .gatsby-highlight::-webkit-scrollbar-thumb {
-  background: var(--highlight-base4);
+  background: var(--highlight-base0);
 }

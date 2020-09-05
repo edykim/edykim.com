@@ -16,12 +16,11 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: ${fonts.hero};
-  font-weight: 900;
-  letter-spacing: -0.1rem;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.6;
   word-break: keep-all;
   overflow-wrap: break-word;
-  margin: 3rem 0 1rem;
+  margin: 3rem 0 0rem;
   max-width: 95%;
   a {
     text-decoration: none;
@@ -41,7 +40,7 @@ export const Headline = styled.p`
   line-height: 1.7;
   word-break: keep-all;
   color: ${colors.subtext};
-  margin: ${fonts.title} auto -0.8rem;
+  margin: 0 auto -0.8rem;
 `
 
 export const Header = ({ title, publishedAt, headline, linkTo }) => (

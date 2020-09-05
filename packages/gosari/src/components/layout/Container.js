@@ -4,7 +4,7 @@ import { layouts } from "styles/schema"
 const Container = styled.div`
   max-width: ${layouts.content};
   margin: 0 auto;
-  padding: ${layouts.innerPadding} ${layouts.sidePadding};
+  padding: ${layouts.innerPadding} ${layouts.sidePadding} 0;
   ${props =>
     props.overwrap &&
     css`

@@ -4,23 +4,32 @@ import styled, { css } from "styled-components"
 import { colors, layouts, fonts } from "styles/schema"
 import ModeSwitch from "./ModeSwitch"
 
-const ContainerWrapper = styled.header``
+const ContainerWrapper = styled.header`
+  max-width: ${layouts.content};
+  margin: 0 auto;
+  border-bottom: 1px solid ${colors.border};
+  padding-bottom: 30px;
+  @media screen and (min-width: 62rem) {
+    position: absolute;
+    left: 50%;
+    margin: 0;
+    margin-left: -31rem;
+    border-bottom: 0;
+    background-color: ${colors.background};
+    width: 10rem;
+    padding-bottom: 0;
+  }
+`
 
 const Container = styled.div`
-  max-width: ${layouts.content};
   padding: ${layouts.sidePadding};
   padding-top: ${layouts.headerPadding};
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  font-size: ${fonts.body};
 `
 
 const titleStyle = css`
-  font-size: ${fonts.title};
   letter-spacing: -0.05em;
-  font-weight: 900;
+  line-height: 1.6;
   margin: 0;
   word-break: keep-all;
   text-decoration: none;
@@ -28,7 +37,7 @@ const titleStyle = css`
 
 const Title = styled(Link)`
   ${titleStyle};
-  color: ${colors.primary};
+  color: ${colors.text};
 `
 
 const SubTitle = styled(Link)`
@@ -45,12 +54,33 @@ const NewLine = styled.span`
   display: block;
 `
 
-export const Header = ({ linkTo, linkTitle }) => (
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 0.4em;
+  }
+  a {
+    color: ${colors.text};
+  }
+`
+
+export const Header = () => (
   <ContainerWrapper>
     <Container>
       <div>
         <Title to={"/"}>매일 성장하기</Title>
-        {linkTo && <SubTitle to={linkTo}>{linkTitle}</SubTitle>}
+        <List>
+          <li>
+            <Link to={"/about"}>소개</Link>
+          </li>
+          <li>
+            <Link to={"/archives"}>포스트</Link>
+          </li>
+          <li>
+            <Link to={"/notes"}>노트</Link>
+          </li>
+        </List>
       </div>
 
       <ModeSwitch />
