@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   margin-bottom: 0.8rem;
   color: ${colors.text};
-  font-weight: 800;
+  font-weight: 600;
   font-size: ${fonts.title};
 `
 
@@ -24,9 +24,8 @@ const Button = styled.button`
   margin-left: 10px;
   border: 0;
   background: none;
-  font-size: ${fonts.title};
-  box-shadow: 0 3px 0;
-  color: ${colors.link};
+  font-size: ${fonts.tag};
+  color: ${colors.text};
   padding: 0;
   cursor: pointer;
   &:focus,
@@ -64,7 +63,7 @@ export class PostList extends Component {
                   this.setState({ isCollapsed: false })
                 }}
               >
-                목록 보기
+                목록 열기 ▼
               </Button>
             )}
           </Title>

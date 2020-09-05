@@ -7,18 +7,16 @@ import { colors, fonts, layouts } from "styles/schema"
 
 export const TagLink = styled(Link)`
   display: inline-block;
-  border-radius: 10px;
-  background-color: ${colors.card};
   color: ${colors.text};
   text-decoration: none;
-  padding: 0.3rem 0.7rem;
-  font-size: ${fonts.text};
-  box-shadow: 0 2px 20px ${colors.shade};
-  margin: 5px;
+  padding: 0.3rem 0.6rem;
+  font-size: ${fonts.tag};
+  margin-right: 6px;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  background-color: ${colors.shade};
 
   &.taxonomy-category {
-    background-color: ${colors.primary};
+    background-color: ${colors.text};
     color: ${colors.background};
   }
   &:hover {
