@@ -28,22 +28,23 @@ class SiteIndex extends React.Component {
         />
 
         <Section>
-          <SectionTitle hero={true}>안녕하세요!</SectionTitle>
+          <SectionTitle hero={true}>매일 성장하기</SectionTitle>
           <p>
-            문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다. 웹의
-            자유로운 접근성을 좋아합니다. 프로그래밍 언어, 소프트웨어 아키텍처,
-            커뮤니티에 관심이 많습니다.
+            저는 문제를 해결하기 위해 작고 단단한 코드를 작성하는 일을 합니다.
+            더 멀리가기 위해서는 꾸준한 기록이 중요하다고 생각합니다. 그래서 제
+            성장을 꿈꾸며 그 여정을 이 공간에 남기고 있습니다. 작지만 이 기록이
+            같은 방향을 보며 달리는 사람에게 도움이 되었으면 하는 바람도
+            있습니다.
           </p>
-          <SectionLink to={"/about"}>저는 이런 사람입니다</SectionLink>
+          <p>만나서 반갑고 잘부탁드립니다.</p>
+
+          <SectionLink to={"/about"}>💁🏻‍♂️ 저는 이런 사람입니다</SectionLink>
         </Section>
 
         <Section>
           <SectionTitle>블로그</SectionTitle>
-          <p>
-            다양한 주제로 포스트를 작성하고 있습니다. 주로 개발 관련 경험,
-            일상을 기록하며 개발 관련 번역도 하고 있습니다.
-          </p>
-          <SectionLink to={"/archives"}>전체 목록 보기</SectionLink>
+          <p>주로 소프트웨어, 웹, 그리고 일상을 주제로 기록합니다.</p>
+          <SectionLink to={"/archives"}>📝 전체 목록 보기</SectionLink>
           <Cards data={featuredArticles.concat(posts)} />
         </Section>
       </Site>
