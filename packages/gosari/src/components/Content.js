@@ -296,7 +296,7 @@ const StyledContent = styled.div`
     width: 100%;
     max-width: ${layouts.narrow};
     margin: 3rem auto;
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.border};
   }
 
   table th {
@@ -305,12 +305,12 @@ const StyledContent = styled.div`
 
   table th,
   table td {
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.border};
     padding: 0.5rem 1rem;
   }
 
   table tr:nth-of-type(2n) td {
-    background: #fafafa;
+    background: ${colors.backgroundAlt};
   }
 
   .twitter-tweet {
