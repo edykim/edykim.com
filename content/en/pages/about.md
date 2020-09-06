@@ -7,6 +7,12 @@ url: /about
 lang: en
 ---
 
+<figure>
+
+<img src="/assets/me-with-a-red-bird.jpg" alt="Me" style="margin: 0 auto;max-width: 100%;">
+
+</figure>
+
 Hello, I'm Edward. I'm an open web developer who loves focusing on problems and creating quick prototypes. I'm excited to talk about web technology, software architecture, and community.
 
 - Love to talk about ECMAScript, microservices, serverless architecture
