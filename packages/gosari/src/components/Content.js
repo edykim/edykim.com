@@ -296,16 +296,16 @@ const StyledContent = styled.div`
     width: 100%;
     max-width: ${layouts.narrow};
     margin: 3rem auto;
-    border: 1px solid ${colors.border};
+    border: 1px solid ${colors.shade};
   }
 
   table th {
-    background: #f0f0f0;
+    background: ${colors.shade};
   }
 
   table th,
   table td {
-    border: 1px solid ${colors.border};
+    border: 1px solid ${colors.shade};
     padding: 0.5rem 1rem;
   }
 
