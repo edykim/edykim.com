@@ -13,7 +13,7 @@ const Button = styled.button`
   outline: none;
   .label {
     left: 42px;
-    width: 70px;
+    width: 90px;
     line-height: 20px;
     text-align: left;
     opacity: 0;
