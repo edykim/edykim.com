@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import styled from "styled-components"
 import { colors, layouts, fonts } from "styles/schema"
 
@@ -59,7 +59,7 @@ const Button = styled.button`
 const ModeSwitch = ({ isCollapsed = true }) => {
   const [darkMode, setDarkMode] = useState(null)
   const [loaded, setLoaded] = useState(false)
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (darkMode !== null) {
       localStorage.setItem("theme", darkMode ? "dark" : "light")
     } else {
@@ -96,6 +96,7 @@ const ModeSwitch = ({ isCollapsed = true }) => {
             "loaded"}`}
         ></div>
       </div>
+      {console.log(darkMode, loaded)}
     </Button>
   )
 }
