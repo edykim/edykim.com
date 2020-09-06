@@ -96,7 +96,6 @@ const ModeSwitch = ({ isCollapsed = true }) => {
             "loaded"}`}
         ></div>
       </div>
-      {console.log(darkMode, loaded)}
     </Button>
   )
 }
