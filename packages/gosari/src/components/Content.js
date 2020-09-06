@@ -96,7 +96,7 @@ const StyledContent = styled.div`
     margin-left: 6px;
     font-size: 14px;
     vertical-align: middle;
-    color: #333333;
+    color: ${colors.subtext};
     font-weight: 400;
     content: "제목 주소";
   }
@@ -113,6 +113,7 @@ const StyledContent = styled.div`
     text-decoration: none;
     transform: translateX(0);
     svg {
+      fill: ${colors.subtext};
       vertical-align: middle;
     }
   }
