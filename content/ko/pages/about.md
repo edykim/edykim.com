@@ -10,7 +10,7 @@ url: about
 
 <figure>
 
-![김용균과 빨간 트위터 풍선 사진](/assets/ko/profile-with-twit.png)
+![김용균과 빨간 트위터 풍선 사진](/assets/ko/me-with-a-red-bird.jpg)
 
 <figcaption>암흑의 트위터와 노는 김용균</figcaption>
 </figure>
