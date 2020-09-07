@@ -22,6 +22,8 @@ const Title = styled.h1`
   overflow-wrap: break-word;
   margin: 3rem 0 0rem;
   max-width: 95%;
+  color: ${colors.text};
+
   a {
     text-decoration: none;
     color: ${colors.text};
@@ -46,9 +48,7 @@ export const Headline = styled.p`
 export const Header = ({ title, publishedAt, headline, linkTo }) => (
   <Container>
     <div>
-      <Title>
-        <Link to={linkTo}>{title}</Link>
-      </Title>
+      <Title>{linkTo ? <Link to={linkTo}>{title}</Link> : title}</Title>
       {headline && <Headline>{headline}</Headline>}
     </div>
     {publishedAt && (
