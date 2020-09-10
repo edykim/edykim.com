@@ -326,7 +326,7 @@ const StyledContent = styled.div`
       box-shadow: none;
     }
     &.wide {
-      max-width: ${layouts.wide};
+      max-width: ${layouts.full};
     }
     * {
       text-indent: 0;
