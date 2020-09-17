@@ -54,7 +54,7 @@
 }
 
 html, body {
-  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", MalgunGothic, "HY Dotum", "Lexi Gulim", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", MalgunGothic, "HY Dotum", "Lexi Gulim", "Spoqa Han Sans", "Spoqa Han Sans KR", "Noto Sans", "Noto Sans CJK KR", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: var(--site-color-background);
   color: var(--site-color-text);
   margin: 0;
