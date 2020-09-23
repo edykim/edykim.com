@@ -85,7 +85,7 @@ export const Meta = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title} - ${site.siteMetadata.author}`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={_meta}
     />
   )

@@ -23,7 +23,7 @@ class SiteIndex extends React.Component {
     return (
       <Site location={this.props.location} hero={true}>
         <Meta
-          title="안녕하세요, 김용균입니다"
+          title="첫 페이지"
           keywords={[`블로그`, `프로그래밍`, `소프트웨어 아키텍처`, `커뮤니티`]}
         />
 

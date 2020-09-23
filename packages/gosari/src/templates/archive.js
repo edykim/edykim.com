@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { CategoryList } from "components/CategoryList"
-import { Header, Content, PostList } from "components"
+import { Header, Content, Meta, PostList } from "components"
 import { Site } from "components/layout"
 import { Featured } from "components/Featured"
 
@@ -27,6 +27,7 @@ export default ({ data, location }) => {
 
   return (
     <Site location={location} linkTitle={"블로그"} linkTo={"/archives"}>
+      <Meta title={archive.frontmatter.title} description={archive.excerpt} />
       <Header
         title={archive.frontmatter.title}
         headline={archive.frontmatter.headline}
@@ -57,6 +58,7 @@ export const query = graphql`
   query ArchiveQuery($slug: String!) {
     archive: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt(format: PLAIN, truncate: true)
       frontmatter {
         headline
         title
