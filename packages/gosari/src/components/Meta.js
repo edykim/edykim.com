@@ -11,6 +11,7 @@ export const Meta = ({
   title,
   url,
   socialCardUrl,
+  noindex = false,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -77,6 +78,11 @@ export const Meta = ({
     const imagePath = `${site.siteMetadata.siteUrlForSitemap}${socialCardUrl}`
     _meta.push({ name: `twitter:image:src`, content: imagePath })
     _meta.push({ name: `og:image`, content: imagePath })
+  }
+
+  if (noindex) {
+    _meta.push({ name: "robots", content: "noindex, nofollow" })
+    _meta.push({ name: "googlebot", content: "noindex, nofollow" })
   }
 
   return (

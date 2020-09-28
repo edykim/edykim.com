@@ -15,6 +15,7 @@ export default ({ data, location, pageContext }) => {
         title={title || date}
         description={description || micro.excerpt}
         url={url}
+        noindex={true}
       />
       <Header title={title || "#"} publishedAt={date} linkTo={url} />
 
