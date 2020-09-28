@@ -134,22 +134,22 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `@edykim/gatsby-plugin-social-card`,
-      options: {
-        targetNodeFilter: node => {
-          return (
-            node.frontmatter &&
-            node.frontmatter.type === "post" &&
-            node.frontmatter.draft !== true &&
-            node.frontmatter.private !== true
-          )
-        },
-        targetElement: "body > div",
-        createCardHtml: createSocialCardTemplate(siteMetadata),
-        puppeteerQueueSize: 8,
-      },
-    },
+    // {
+    //   resolve: `@edykim/gatsby-plugin-social-card`,
+    //   options: {
+    //     targetNodeFilter: node => {
+    //       return (
+    //         node.frontmatter &&
+    //         node.frontmatter.type === "post" &&
+    //         node.frontmatter.draft !== true &&
+    //         node.frontmatter.private !== true
+    //       )
+    //     },
+    //     targetElement: "body > div",
+    //     createCardHtml: createSocialCardTemplate(siteMetadata),
+    //     puppeteerQueueSize: 8,
+    //   },
+    // },
     `@edykim/gatsby-plugin-redirect-json`,
     `@edykim/gatsby-plugin-template`,
     {

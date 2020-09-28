@@ -14,9 +14,9 @@ import { Site } from "components/layout"
 
 export default ({ data, location, pageContext }) => {
   const post = data.markdownRemark
-  const {
-    file: { publicURL },
-  } = data.socialCard
+  // const {
+  //   file: { publicURL },
+  // } = data.socialCard
   const { featuredArticles } = data
   const { previous, next } = pageContext
   const { date, title, headline } = post.frontmatter
@@ -28,7 +28,7 @@ export default ({ data, location, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         url={url}
-        socialCardUrl={publicURL}
+        // socialCardUrl={publicURL}
       />
 
       <Header
@@ -48,11 +48,11 @@ export default ({ data, location, pageContext }) => {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
-    socialCard(fields: { slug: { eq: $slug } }) {
-      file {
-        publicURL
-      }
-    }
+    # socialCard(fields: { slug: { eq: $slug } }) {
+    #   file {
+    #     publicURL
+    #   }
+    # }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt(format: PLAIN, truncate: true)
