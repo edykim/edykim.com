@@ -1,7 +1,19 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { color, layout, fonts, colors, layouts } from "styles/schema"
 
+const Hr = css`
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid ${colors.subtext};
+  max-width: ${layouts.content};
+  margin: 4rem auto 2rem;
+
+  @media (max-width: 750px) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+`
 const StyledContent = styled.div`
   color: ${colors.text};
   font-size: ${fonts.body};
@@ -244,16 +256,7 @@ const StyledContent = styled.div`
       ". ";
   }
   hr {
-    height: 0;
-    border: 0;
-    border-bottom: 1px solid ${colors.subtext};
-    max-width: ${layouts.content};
-    margin: 4rem auto 2rem;
-
-    @media (max-width: 750px) {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
+    ${Hr};
   }
   blockquote {
     font-size: 0.95em;
@@ -366,3 +369,10 @@ export class Content extends React.Component {
     )
   }
 }
+
+export const ContentHr = styled.hr`
+  ${Hr};
+  @media (max-width: 750px) {
+    margin-bottom: 2rem;
+  }
+`

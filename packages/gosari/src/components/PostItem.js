@@ -36,7 +36,9 @@ export class PostItem extends Component {
     return (
       <Row>
         <LinkSection>
-          <Link to={`/${post.fields.url}`}>{post.frontmatter.title}</Link>
+          <Link to={`/${post.fields.url}`}>
+            {post.frontmatter.title || post.excerpt}
+          </Link>
         </LinkSection>
         <PublishedAt>
           {moment(post.frontmatter.date, "MMMM D").format("M[월] D[일]")}

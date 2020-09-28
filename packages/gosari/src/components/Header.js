@@ -9,6 +9,11 @@ const Container = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   margin: 0 auto 3rem;
+  ${props =>
+    props.tidy &&
+    `
+    margin-bottom: 2rem;
+  `}
   max-width: ${layouts.content};
   padding-left: ${layouts.sidePadding};
   padding-right: ${layouts.sidePadding};
@@ -46,7 +51,7 @@ export const Headline = styled.p`
 `
 
 export const Header = ({ title, publishedAt, headline, linkTo }) => (
-  <Container>
+  <Container tidy={!headline}>
     <div>
       <Title>{linkTo ? <Link to={linkTo}>{title}</Link> : title}</Title>
       {headline && <Headline>{headline}</Headline>}

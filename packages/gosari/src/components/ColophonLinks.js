@@ -61,8 +61,18 @@ export class ColophonLinks extends Component {
     return (
       <Wrapper>
         <Sections>
-          {links.map(
-            post =>
+          {links.map(post => {
+            if (!post) return null
+            let title
+            if (post.frontmatter && post.frontmatter.title) {
+              title = post.frontmatter.title
+            } else if (post.excerpt) {
+              title = post.excerpt.substr(0, 24).trim()
+              if (post.excerpt.length > 24) title += "..."
+            } else {
+              title = "제목 없음"
+            }
+            return (
               post && (
                 <Section key={post.fields.url}>
                   <TitleLink to={post.fields.url} rel={`nofollow`}>
@@ -71,11 +81,12 @@ export class ColophonLinks extends Component {
                         "YYYY[년] M[월] D[일]"
                       )}
                     </PublishedAt>
-                    <span>{post.frontmatter.title}</span>
+                    <span>{title}</span>
                   </TitleLink>
                 </Section>
               )
-          )}
+            )
+          })}
         </Sections>
       </Wrapper>
     )
