@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "lerna": "lerna",
+    "new-micro": "node ./scripts/new-micro.js",
     "bootstrap": "lerna bootstrap",
     "prepare": "npm run bootstrap",
     "build-packages": "lerna run build",
