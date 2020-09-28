@@ -51,7 +51,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1024,
+              quality: 80,
             },
           },
           {
@@ -160,7 +161,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/archives/*`, `/micro/*`, `/category/*`, `/tag/*`],
+        exclude: [
+          `/micro/`,
+          `/archives/*`,
+          `/micro/*`,
+          `/category/*`,
+          `/tag/*`,
+        ],
         query: `
           {
             site {
