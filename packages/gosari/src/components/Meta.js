@@ -73,7 +73,7 @@ export const Meta = ({
     )
     .concat(meta)
 
-  if (url) {
+  if (url && socialCardUrl) {
     const imagePath = `${site.siteMetadata.siteUrlForSitemap}${socialCardUrl}`
     _meta.push({ name: `twitter:image:src`, content: imagePath })
     _meta.push({ name: `og:image`, content: imagePath })
