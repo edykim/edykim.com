@@ -14,8 +14,12 @@ export default ({ data, location }) => {
   const years = Object.keys(sorted).sort((a, b) => b - a)
 
   return (
-    <Site location={location} linkTitle={"마이크로"} linkTo={"/micros"}>
-      <Meta title={archive.frontmatter.title} description={archive.excerpt} />
+    <Site location={location} linkTitle={"마이크로"} linkTo={"/micro"}>
+      <Meta
+        title={archive.frontmatter.title}
+        description={archive.excerpt}
+        noindex={true}
+      />
       <Header
         title={archive.frontmatter.title}
         headline={archive.frontmatter.headline}
