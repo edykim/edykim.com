@@ -156,6 +156,12 @@ module.exports = {
       resolve: `@edykim/gatsby-plugin-taxonomy`,
       options: require(`./config/taxonomy`),
     },
+    {
+      resolve: `gatsby-plugin-catch-links`,
+      options: {
+        excludePattern: /(static)/,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
     {
