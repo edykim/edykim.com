@@ -8,4 +8,5 @@ url: notes
 
 ---
 
--
+- [요리 레시피](./recipes)
+
