@@ -137,6 +137,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.1em;
+  word-break: break-all;
 }
 
 .token.comment,
@@ -229,6 +230,11 @@ pre[class*="language-"] {
   overflow: initial;
   min-width: 100%;
   white-space: pre;
+}
+
+.gatsby-highlight > pre > code {
+  padding-right: 1rem;
+  display: inline-block;
 }
 
 .gatsby-highlight code[class*="language-"],
