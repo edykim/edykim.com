@@ -237,11 +237,6 @@ pre[class*="language-"] {
   display: inline-block;
 }
 
-.gatsby-highlight code[class*="language-"],
-.gatsby-highlight pre[class*="language-"] {
-  font-size: 0.95em;
-}
-
 .gatsby-highlight::-webkit-scrollbar {
   width: 6px;
   height: 12px;
