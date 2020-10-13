@@ -1,5 +1,6 @@
 import React from "react"
 import { Header, HeroHeader, Footer } from "."
+import "../../../content/assets/_global.css"
 
 export class Site extends React.Component {
   render() {

@@ -3,10 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
-require("./content/assets/_global.css")
-require("./src/styles/highlight.css")
-
 // Load saved theme
 ;(() => {
   const current = localStorage.getItem("theme")

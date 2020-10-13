@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { color, layout, fonts, colors, layouts } from "styles/schema"
+import "./../styles/highlight.css"
 
 const Hr = css`
   height: 0;

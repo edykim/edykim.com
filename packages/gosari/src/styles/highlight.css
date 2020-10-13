@@ -234,6 +234,8 @@ pre[class*="language-"] {
 
 .gatsby-highlight > pre > code {
   padding-right: 1rem;
+  font-size: 16px;
+  font-size: 1rem;
   display: inline-block;
 }
 
