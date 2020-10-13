@@ -53,7 +53,7 @@ export const Headline = styled.p`
 export const Header = ({ title, publishedAt, headline, linkTo }) => (
   <Container tidy={!headline}>
     <div>
-      <Title>{linkTo ? <Link to={linkTo}>{title}</Link> : title}</Title>
+      <Title>{linkTo ? <Link to={`/${linkTo}`}>{title}</Link> : title}</Title>
       {headline && <Headline>{headline}</Headline>}
     </div>
     {publishedAt && (

@@ -75,7 +75,7 @@ export class ColophonLinks extends Component {
             return (
               post && (
                 <Section key={post.fields.url}>
-                  <TitleLink to={post.fields.url} rel={`nofollow`}>
+                  <TitleLink to={`/${post.fields.url}`} rel={`nofollow`}>
                     <PublishedAt>
                       {moment(post.frontmatter.date).format(
                         "YYYY[년] M[월] D[일]"
