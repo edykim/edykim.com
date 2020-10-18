@@ -8,7 +8,7 @@ url: recipes
 
 ---
 
-만들 때마다 매번 유튜브 보는게 지쳐서 자주 해먹는 음식 정리.
+만들 때마다 매번 유튜브 보는게 지쳐서 정리.
 
 - [닭갈비](/recipes/dak-galbi)
-
+- [모카포트](/recipes/moka-pot)
