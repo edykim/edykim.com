@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, layout, fonts, colors, layouts } from "styles/schema"
+import { fonts, colors, layouts } from "styles/schema"
 
 const Container = styled.div`
   font-size: ${fonts.body};

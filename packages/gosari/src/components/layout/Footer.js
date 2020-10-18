@@ -1,7 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { layouts, colors } from "styles/schema"
+import { colors } from "styles/schema"
 import Container from "./Container"
 
 const Wrapper = styled.footer`
@@ -38,14 +38,6 @@ const Wrapper = styled.footer`
       margin-right: 5px;
       margin-bottom: 5px;
     }
-  }
-`
-
-const Section = styled.div`
-  display: flex;
-  flex-direction: row;
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
   }
 `
 

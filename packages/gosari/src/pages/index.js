@@ -1,22 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
 import { Site } from "components/layout"
-import { ButtonTypeLink, PostItem, Meta, TagLink as Link } from "components"
-import { layout, color } from "styles/schema"
-import {
-  Section,
-  SectionTitle,
-  SectionLink,
-  SectionOutLink,
-  SectionList,
-} from "components/sections"
+import { Meta } from "components"
+import { Section, SectionTitle, SectionLink } from "components/sections"
 import { Cards } from "components/cards"
 
 class SiteIndex extends React.Component {
   render() {
     const { data } = this.props
-    const { profile } = data.site.siteMetadata
     const posts = data.recents.edges
     const featuredArticles = data.featuredArticles.edges
 
@@ -38,13 +29,23 @@ class SiteIndex extends React.Component {
           </p>
           <p>만나서 반갑고 잘 부탁드립니다.</p>
 
-          <SectionLink to={"/about"}>💁🏻‍♂️ 저는 이런 사람입니다</SectionLink>
+          <SectionLink to={"/about"}>
+            <span role={"img"} aria-label="사람">
+              💁🏻‍♂️
+            </span>{" "}
+            저는 이런 사람입니다
+          </SectionLink>
         </Section>
 
         <Section>
           <SectionTitle>블로그</SectionTitle>
           <p>주로 소프트웨어, 웹, 그리고 일상을 주제로 기록합니다.</p>
-          <SectionLink to={"/archives"}>📝 전체 목록 보기</SectionLink>
+          <SectionLink to={"/archives"}>
+            <span role={"img"} aria-label="수첩">
+              📝
+            </span>{" "}
+            전체 목록 보기
+          </SectionLink>
           <Cards data={featuredArticles.concat(posts)} />
         </Section>
       </Site>

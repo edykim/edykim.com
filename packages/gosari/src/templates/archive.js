@@ -13,7 +13,7 @@ export default ({ data, location }) => {
     return carry
   }, {})
   const categories = articles.edges.reduce((carry, { node }) => {
-    node.frontmatter.categories.map(category => {
+    node.frontmatter.categories.forEach(category => {
       carry[category] = carry[category] || 0
       carry[category]++
     })

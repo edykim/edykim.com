@@ -40,20 +40,6 @@ const Title = styled(Link)`
   color: ${colors.text};
 `
 
-const SubTitle = styled(Link)`
-  ${titleStyle};
-  color: ${colors.subtext};
-  margin-left: 10px;
-`
-
-const Subtitle = styled.span`
-  opacity: 0.5;
-`
-
-const NewLine = styled.span`
-  display: block;
-`
-
 const List = styled.ul`
   list-style: none;
   padding: 0;
