@@ -1,6 +1,5 @@
 export * from "./Header"
 export * from "./Content"
-export * from "./Bio"
 export * from "./ColophonLinks"
 export * from "./PostList"
 export * from "./PostItem"

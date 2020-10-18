@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { color, layout, fonts, colors, layouts } from "styles/schema"
+import { fonts, colors, layouts } from "styles/schema"
 import "./../styles/highlight.css"
 
 const Hr = css`
@@ -345,7 +345,7 @@ const StyledContent = styled.div`
     }
     figcaption {
       font-size: 0.8em;
-      color: ${color.caption};
+      color: ${colors.subtext};
     }
 
     @media (max-width: 600px) {

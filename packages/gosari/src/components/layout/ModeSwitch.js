@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react"
 import styled from "styled-components"
-import { colors, layouts, fonts } from "styles/schema"
+import { colors } from "styles/schema"
 
 const Button = styled.button`
   appearance: none;

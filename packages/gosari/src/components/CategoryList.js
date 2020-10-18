@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { colors, fonts, layouts } from "styles/schema"

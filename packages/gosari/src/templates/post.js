@@ -1,15 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import {
-  Header,
-  Content,
-  Bio,
-  ColophonLinks,
-  Tags,
-  Meta,
-  Featured,
-} from "components"
+import { Header, Content, ColophonLinks, Tags, Meta } from "components"
 import { Site } from "components/layout"
 
 export default ({ data, location, pageContext }) => {
@@ -17,7 +9,6 @@ export default ({ data, location, pageContext }) => {
   // const {
   //   file: { publicURL },
   // } = data.socialCard
-  const { featuredArticles } = data
   const { previous, next } = pageContext
   const { date, title, headline } = post.frontmatter
   const { url } = post.fields
@@ -67,32 +58,6 @@ export const query = graphql`
       }
       fields {
         url
-      }
-    }
-    featuredArticles: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: {
-          private: { ne: true }
-          draft: { ne: true }
-          type: { eq: "post" }
-          featured: { eq: true }
-        }
-      }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            url
-          }
-          frontmatter {
-            date(formatString: "MMMM D")
-            dateSort: date(formatString: "YYYY")
-            title
-          }
-        }
       }
     }
   }
