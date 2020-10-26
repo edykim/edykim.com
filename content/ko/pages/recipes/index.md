@@ -12,3 +12,4 @@ url: recipes
 
 - [닭갈비](/recipes/dak-galbi)
 - [모카포트](/recipes/moka-pot)
+- [갈치국](/recipes/beltfish-soup)
