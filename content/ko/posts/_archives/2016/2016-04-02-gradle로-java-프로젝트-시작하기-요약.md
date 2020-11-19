@@ -75,7 +75,7 @@ public class Greeter {
 
 빌드와 관련한 모든 설정은 `build.gradle`에 담겨 있다. 빌드를 위해 다음 내용을 `build.gradle`에 추가한다.
 
-```gradle
+```groovy
 apply plugin: 'java'
 ```
 
@@ -87,7 +87,7 @@ $ gradle build
 
 아래 내용을 추가해서 어플리케이션을 직접 구동할 수 있다.
 
-```gradle
+```groovy
 apply plugin: 'application'
 mainClassName = 'hello.HelloWorld'
 ```
@@ -100,7 +100,7 @@ $ ./gradlew run
 
 다음은 튜토리얼에서 최종적으로 작성하게 되는 gradle 파일이다.
 
-```gradle
+```groovy
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
