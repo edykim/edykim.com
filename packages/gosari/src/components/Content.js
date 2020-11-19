@@ -48,12 +48,15 @@ const StyledContent = styled.div`
     }
   }
 
-  > iframe {
+  > iframe,
+  > div > iframe,
+  .gatsby-resp-iframe-wrapper iframe {
     padding: 0;
     max-width: ${layouts.wide};
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border: 0;
   }
 
   > * {
