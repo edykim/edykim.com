@@ -17,7 +17,7 @@ const ContainerWrapper = styled.header`
     margin-left: -31rem;
     border-bottom: 0;
     background-color: ${colors.background};
-    width: 10rem;
+    width: 9rem;
     padding-bottom: 0;
   }
 `
