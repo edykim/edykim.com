@@ -9,6 +9,7 @@ const ContainerWrapper = styled.header`
   margin: 0 auto;
   border-bottom: 1px solid ${colors.border};
   padding-bottom: 30px;
+  z-index: 100;
   @media screen and (min-width: 62rem) {
     position: absolute;
     left: 50%;
