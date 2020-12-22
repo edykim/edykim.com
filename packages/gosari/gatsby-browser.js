@@ -3,6 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+require(`katex/dist/katex.min.css`)
+
 // Load saved theme
 ;(() => {
   const current = localStorage.getItem("theme")
