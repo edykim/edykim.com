@@ -72,7 +72,8 @@ const StyledContent = styled.div`
   ul {
     list-style: square;
   }
-  ul p {
+  ul p,
+  ol p {
     margin: 0;
   }
 
