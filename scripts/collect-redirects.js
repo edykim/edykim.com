@@ -30,6 +30,16 @@ exports.collectRedirects = (
       redirects.unshift(
         `# ${staticDirName}${redirectsFileName}\n` + globalRedirects.toString()
       )
+      let globalRedirectsAfter;
+      try {
+          globalRedirectsAfter = fs.readFileSync(
+        path.join(currentWorkingDirectory, staticDirName, redirectsFileName + '.after'))
+          redirects.push(
+        `# ${staticDirName}${redirectsFileName}.after\n` + globalRedirectsAfter.toString()
+      )
+      } catch(err) {
+          // skip
+      }
 
       const rules = [
         ...new Set(
