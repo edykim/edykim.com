@@ -8,9 +8,10 @@ url: recipes
 
 ---
 
-만들 때마다 매번 유튜브 보는게 지쳐서 정리.
+유튜브에서 보거나 어디선가 봤던 레시피를 여기에 정리합니다. 요리를 코딩처럼.
 
 - [닭갈비](/recipes/dak-galbi)
 - [모카포트](/recipes/moka-pot)
 - [갈치국](/recipes/beltfish-soup)
 - [달매소스](/recipes/sweet-spicy-sauce)
+- [군고구마](/recipes/sweet-potato)
