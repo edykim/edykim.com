@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --site-color-background: #f7f7ff;
   --site-color-backgroundAlt: #f0f0f8;
-  --site-color-primary: #4445c9;
-  --site-color-link: #ec0b43;
+  --site-color-primary: #12126c;
+  --site-color-link: #0b70ec;
   --site-color-highlight: #fdca40;
   --site-color-text: #011627;
   --site-color-body: #080708;
@@ -14,8 +16,8 @@
   :root {
     --site-color-background: #101310;
     --site-color-backgroundAlt: #202020;
-    --site-color-primary: #4CAF50;
-    --site-color-link: #fdca40;
+    --site-color-primary: #bae95c;
+    --site-color-link: #befd40;
     --site-color-highlight: #14005e;
     --site-color-text: #eeeeee;
     --site-color-body: #eeeee0;
@@ -25,12 +27,17 @@
 }
 
 html {
-  font-family: "Helvetica Neue", arial, helvetica, sans-serif;
+  font-family: 'PT Serif', serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: var(--site-color-background);
   color: var(--site-color-text);
-  font-size: 20px;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 body {
@@ -47,7 +54,7 @@ body {
 main a:not([class]) {
   color: var(--site-color-link);
   text-decoration: none;
-  box-shadow: 0 3px 0 var(--site-color-link);
+  box-shadow: 0 2px 0 var(--site-color-link);
 }
 
 hr {

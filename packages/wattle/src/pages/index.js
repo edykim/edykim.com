@@ -7,14 +7,11 @@ import { Container } from "../components/container"
 import { Headline } from "../components/headline"
 
 const List = styled.ul`
-  font-size: 1.3rem;
   font-weight: 500;
   display: block;
-  padding: 0;
-  margin-left: -1rem;
-  li {
-    display: inline-block;
-    margin: 0 1rem;
+  list-style: square;
+  a {
+    font-family: "PT Sans", sans-serif;
   }
 `
 

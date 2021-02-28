@@ -4,27 +4,15 @@ import styled from "styled-components"
 import { Container } from "./container"
 
 const HeaderComponent = styled.header`
-  background-color: var(--site-color-primary);
-  font-size: 30px;
-  > div {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  @media screen and (max-width: 1024px) {
-    font-size: 20px;
-  }
-`
-const SubHeaderComponent = styled.header`
-  background-color: var(--site-color-primary);
   font-size: 10px;
   > div {
     padding-top: 3rem;
     padding-bottom: 1rem;
   }
   @media screen and (max-width: 1024px) {
-    font-size: 6px;
     > div {
       padding-top: 1rem;
+      padding-bottom: 0;
     }
   }
 `
@@ -32,16 +20,18 @@ const SubHeaderComponent = styled.header`
 const SiteTitle = styled.h1`
   line-height: 1;
   margin: 0;
-  font-size: 3em;
-  color: #ffffff;
+  display: inline-block;
+  color: var(--site-color-primary);
+  margin-right: 10px;
 `
 
 const SiteHeadline = styled.p`
+  display: inline-block;
   margin: 0;
   margin-top: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4;
-  font-size: 1.2em;
-  color: #ffffff;
+  color: var(--site-color-primary);
 `
 
 const StyledLink = styled(Link)`
@@ -49,7 +39,7 @@ const StyledLink = styled(Link)`
   color: inherit;
 `
 
-export const MainHeader = () => {
+export const Header = () => {
   return (
     <HeaderComponent>
       <Container>
@@ -59,17 +49,5 @@ export const MainHeader = () => {
         <SiteHeadline>Software Engineer, Web, Community</SiteHeadline>
       </Container>
     </HeaderComponent>
-  )
-}
-
-export const Header = () => {
-  return (
-    <SubHeaderComponent>
-      <Container>
-        <SiteTitle>
-          <StyledLink to={"/"}>Edward Kim</StyledLink>
-        </SiteTitle>
-      </Container>
-    </SubHeaderComponent>
   )
 }
