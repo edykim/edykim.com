@@ -8,27 +8,17 @@ url: /note
 
 ---
 
-## Programming
-{class="no-number"}
-
 - [Programming Language Theory](/plt)
 
-## App
+## Apps
 {class="no-number"}
 
 - [Visual Timer](/app/visual-timer)
 - [Tip Calculator](/app/tip-calculator-by-yong)
 - [Temperature Quiz!](/app/temperature-quiz)
 
-## Lecture
-{class="no-number"}
-
-### Open Courses
+## Lecture Notes
 {class="no-number"}
 
 - [CS11 Intro C++](/note/cs-11-intro-cpp)
-
-## Coursera
-{class="no-number"}
-
-- [Academic English: Writing Specialization](/note/english-writing)
+- [Academic English: Writing Specialization (Coursera)](/note/english-writing)

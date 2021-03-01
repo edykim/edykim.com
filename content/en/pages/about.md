@@ -26,13 +26,6 @@ Before moving to the U.S., I worked at [Swinburne University](https://www.swinbu
 
 <hr />
 
-### Projects
-
-I love to make useful things in my free time.
-
-- [Visual Timer](/app/visual-timer/). A simple visual timer for iOS with various customizable options.
-- [Tip Calculator](/app/tip-calculator-by-yong/). A tip calculator for iOS. Gratuity splitting and pre-tax support.
-
 ### Get in touch
 
 - [edward@edykim.com](mailto:edward@edykim.com)
