@@ -7,9 +7,7 @@ import { Container } from "../components/container"
 import { Title } from "../components/title"
 import { Time } from "../components/post"
 
-const List = styled.ul`
-  list-style: square;
-`
+const List = styled.ul``
 
 const ArchivePage = ({
   data: {

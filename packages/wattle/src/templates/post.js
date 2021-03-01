@@ -13,7 +13,9 @@ export default ({ data, location }) => {
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <Container>
         <Title>
-          <TitleLink to={post.fields.url}>{post.frontmatter.title}</TitleLink>
+          <TitleLink to={`/${post.fields.url}`}>
+            {post.frontmatter.title}
+          </TitleLink>
         </Title>
         <Time>{post.frontmatter.date}</Time>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

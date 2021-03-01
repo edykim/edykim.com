@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import { Header } from "./header"
+import { Header, MainHeader } from "./header"
 import { Footer } from "./footer"
 
 const Layout = ({ location, isMain = false, children }) => (
@@ -27,7 +27,7 @@ const Layout = ({ location, isMain = false, children }) => (
       const rootPath = `${__PATH_PREFIX__}/`
       return (
         <>
-          <Header />
+          {isMain ? <MainHeader /> : <Header />}
           <main>{children}</main>
           <Footer />
         </>

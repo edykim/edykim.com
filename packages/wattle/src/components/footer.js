@@ -7,13 +7,14 @@ const FooterComponent = styled.footer`
 `
 
 const Title = styled.div`
-  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
   color: var(--site-color-subtext);
   font-weight: 900;
 `
 
 const Small = styled.small`
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--site-color-subtext);
 `
@@ -21,7 +22,7 @@ const Small = styled.small`
 const Link = styled.a`
   color: var(--site-color-text);
   text-decoration: none;
-  box-shadow: 0 2px 0;
+  box-shadow: 0;
 `
 
 export const Footer = () => {

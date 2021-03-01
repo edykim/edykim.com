@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Literata:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --site-color-background: #f7f7ff;
   --site-color-backgroundAlt: #f0f0f8;
-  --site-color-primary: #12126c;
-  --site-color-link: #0b70ec;
+  --site-color-primary: #1a1a8c;
+  --site-color-link: #1a1a8c;
   --site-color-highlight: #fdca40;
   --site-color-text: #011627;
   --site-color-body: #080708;
   --site-color-subtext: #7d869c;
-  --site-color-shade: #eae6ea;  
+  --site-color-shade: #eae6ea;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,22 +22,25 @@
     --site-color-text: #eeeeee;
     --site-color-body: #eeeee0;
     --site-color-subtext: #7d869c;
-    --site-color-shade: #000000;
+    --site-color-shade: #222222;
   }
 }
 
 html {
-  font-family: 'PT Serif', serif;
+  font-family: "Literata", serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: var(--site-color-background);
   color: var(--site-color-text);
-  font-size: 16px;
+  font-size: 18px;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'PT Sans', sans-serif;
-  text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -51,6 +54,22 @@ body {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+li::before {
+  content: "▪";
+  color: var(--site-color-subtext);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+li p {
+  display: inline;
+}
+
 main a:not([class]) {
   color: var(--site-color-link);
   text-decoration: none;
@@ -60,7 +79,20 @@ main a:not([class]) {
 hr {
   border: 0;
   height: 1px;
-  background-color: var(--site-color-subtext);
+  background-color: var(--site-color-shade);
   margin: 3rem 0 2rem;
 }
 
+p {
+  line-height: 1.8;
+  margin-block-start: 1.6em;
+  margin-block-end: 1.6em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+blockquote {
+  border-left: 5px solid var(--site-color-link);
+  margin-left: 0;
+  padding-left: 30px;
+}
