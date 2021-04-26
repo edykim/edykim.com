@@ -9,3 +9,4 @@ url: /notes/
 ---
 
 - [요리 레시피](/recipes/)
+- [트럼펫](/trumpet/)
