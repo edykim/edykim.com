@@ -21,7 +21,7 @@ url: /trumpet/
 
 ## 교재
 
-- [Getting Started Right on Trumpet](https://qpress.ca/product/getting-started-right-trumpet-knevitt-pdf) by Bill Knevitt
+- [Getting Started Right on Trumpet](https://qpress.ca/product/getting-started-right-trumpet-knevitt-pdf) by Bill Knevitt. Or, [Begginer Method Collection](https://qpress.ca/product/begginer-method-collection)
 - [The Jazz Trumpet Routine](https://john-raymond.com/store/jazz-trumpet-routine-pdf) by John Raymond
 
 ## 튜토리얼
