@@ -19,6 +19,7 @@ url: /trumpet/
 - [야마하 모델 역사](https://www.trumpet-history.com/yamaha%20models.htm)
 - 마우스피스
   - [야마하 Yamaha](https://usa.yamaha.com/files/download/brochure/6/1267056/WA-37R.pdf)
+  - [야마하 규격 비교표](https://denlillebasun.no/wp-content/uploads/2017/05/Yamaha-munntykker-for-trompet-kornett-og-flygelhorn.pdf)
   - [빈센트 바하 Vincent Bach](https://www.bachbrass.com/application/files/4614/8521/7763/AV2BA901_Original_1889_web.pdf)
 
 ## 교재
