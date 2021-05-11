@@ -12,7 +12,7 @@
   "dependencies": {
     "gatsby-source-filesystem": "^2.3.3",
     "gray-matter": "^4.0.2",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mkdirp": "^0.5.5",
     "puppeteer": "^2.1.1"
   }
