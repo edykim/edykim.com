@@ -1,18 +1,24 @@
-const url = require("url")
+const { URL } = require("url")
+const { join } = require("path")
+
+const createUrl = (base, rest) => {
+  const u = new URL(base)
+  u.pathname = join(u.pathname, rest)
+  return u.toString()
+}
 
 const serialize = ({ query: { site, allMarkdownRemark } }) => {
   return allMarkdownRemark.edges.map(edge => {
+    const u = createUrl(
+      site.siteMetadata.siteUrl,
+      edge.node.fields.url || edge.node.fields.slug
+    )
+
     return Object.assign({}, edge.node.frontmatter, {
       description: edge.node.excerpt,
       date: edge.node.frontmatter.date,
-      url: url.resolve(
-        site.siteMetadata.siteUrl,
-        edge.node.fields.url || edge.node.fields.slug
-      ),
-      guid: url.resolve(
-        site.siteMetadata.siteUrl,
-        edge.node.fields.url || edge.node.fields.slug
-      ),
+      url: u,
+      guid: u,
       custom_elements: [{ "content:encoded": edge.node.html }],
     })
   })
