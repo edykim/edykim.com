@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path")
 
 const siteUrl = `https://edykim.com/`
 
@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-root-import`,
       options: {
-        '~': path.join(__dirname, 'src'),
-        '@': __dirname,
+        "~": path.join(__dirname, "src"),
+        "@": __dirname,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -68,7 +68,7 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-embed-youtube',
+            resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
               height: 300,
@@ -80,13 +80,19 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-katex`,
         ],
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /assets/, // See below to configure properly
@@ -101,7 +107,7 @@ module.exports = {
       },
     },
     `edykim-plugin-redirect-json`,
-    require('./config/ko/feeds'),
+    require("./config/ko/feeds"),
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -115,7 +121,7 @@ module.exports = {
           `/ko/tag/**`,
         ],
         resolveSiteUrl: () => siteUrl,
-        output: '/ko/sitemap',
+        output: "/ko/sitemap",
         query: `
           {
             allSitePage {
@@ -131,7 +137,7 @@ module.exports = {
       options: {
         excludes: [`/ko`, `/ko/**`],
         resolveSiteUrl: () => siteUrl,
-        output: '/sitemap',
+        output: "/sitemap",
         query: `
           {
             allSitePage {
