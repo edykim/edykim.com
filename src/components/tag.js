@@ -1,9 +1,9 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { sanitizeUrl } from "@/plugins/edykim-plugin-taxonomy/utils"
-import options from "@/config/taxonomy"
-import { colors, fonts, layouts } from "~/constraint"
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import { sanitizeUrl } from '@/plugins/edykim-plugin-taxonomy/utils'
+import options from '@/config/taxonomy'
+import { colors, fonts, layouts } from '~/constraint'
 
 export const TagLink = styled(Link)`
   display: inline-block;
@@ -12,6 +12,7 @@ export const TagLink = styled(Link)`
   padding: 0.2rem 0.8rem;
   font-size: ${fonts.tag};
   margin-right: 6px;
+  margin-bottom: 6px;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
   background-color: ${colors.shade};
   border-radius: 4px;
@@ -39,7 +40,7 @@ export default class Tags extends Component {
   render() {
     const { post } = this.props
     const { categories = [], tags = [], lang } = post.frontmatter
-    const langPrefix = lang !== "en" ? `/${lang}` : ""
+    const langPrefix = lang !== 'en' ? `/${lang}` : ''
     return (
       <Section>
         <Inner>
