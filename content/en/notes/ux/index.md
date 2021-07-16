@@ -1,7 +1,7 @@
 ---
 title: "UX Study Research"
 author: haruair
-type: note
+type: page
 date: "2020-07-04T11:28:00"
 lang: en
 url: /note/ux

@@ -5,8 +5,6 @@ type: page
 date: "2012-01-12T23:52:32"
 lang: ko
 slug: history
-ampforwp-amp-on-off:
-  - default
 
 ---
   * 2011년 5월 haruair blog 개설
