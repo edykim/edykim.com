@@ -17,6 +17,7 @@ const ShowcaseTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} item={post}>
       <Seo
+        lang={post.frontmatter.lang}
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />

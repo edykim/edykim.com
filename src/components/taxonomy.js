@@ -25,7 +25,11 @@ const Taxonomy = ({ data, location, pageContext, format }) => {
       title={siteTitle}
       item={articles.edges[0]?.node}
     >
-      <Seo title={title} noindex={true} />
+      <Seo
+        lang={articles.edges[0]?.node.frontmatter.lang}
+        title={title}
+        noindex={true}
+      />
       <section>
         <Subject>
           <h1>
