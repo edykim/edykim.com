@@ -5,10 +5,8 @@ type: page
 date: "2014-10-14T23:32:55"
 lang: ko
 slug: want-to-buy
-ampforwp-amp-on-off:
-  - default
-
 ---
+
 ## 전자제품
 
   * [ergodox 키보드][1]

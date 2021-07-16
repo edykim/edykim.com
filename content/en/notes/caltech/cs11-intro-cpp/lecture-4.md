@@ -1,7 +1,7 @@
 ---
 title: "CS11 Intro C++: Lecture 4"
 author: haruair
-type: note
+type: page
 date: "2020-05-18T16:00:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-4
@@ -187,6 +187,6 @@ MyWidget mw; /**< My widget */
 ---
 
 ## Coming up next
-{class="no-number"}
+
 
 - [Lecture 5](/note/cs-11-intro-cpp/lecture-5): Operator overloading, Constructors, Output Stream

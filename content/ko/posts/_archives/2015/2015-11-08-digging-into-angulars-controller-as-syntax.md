@@ -32,7 +32,7 @@ v1.2.0 이전의 컨트롤러는 다음과 같이 생겼다:
       $scope.title = 'Some title';
     });
 
-늘 컨트롤러에 $scope를 주입했었지만, 다음은 컨트롤러를 $scope로부터 분리한 개념이다. 이 방식이 더 낫다고 논의되었다:
+늘 컨트롤러에 \$scope를 주입했었지만, 다음은 컨트롤러를 \$scope로부터 분리한 개념이다. 이 방식이 더 낫다고 논의되었다:
 
     app.controller('MainCtrl', function () {
       this.title = 'Some title';
