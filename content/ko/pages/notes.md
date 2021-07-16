@@ -4,9 +4,9 @@ author: haruair
 type: page
 date: "2019-07-18T05:28:41"
 lang: ko
-url: /notes/
+url: notes
 
 ---
 
-- [요리 레시피](/recipes/)
-- [트럼펫](/trumpet/)
+- [요리 레시피](/ko/recipes/)
+- [트럼펫](/ko/trumpet/)

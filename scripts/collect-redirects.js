@@ -1,9 +1,9 @@
 /**
  * Collect _redirects file for Netlify
  */
-const fs = require('fs')
-const glob = require('glob')
-const path = require('path')
+const fs = require("fs")
+const glob = require("glob")
+const path = require("path")
 
 exports.collectRedirects = (
   currentWorkingDirectory = process.cwd(),
@@ -12,7 +12,7 @@ exports.collectRedirects = (
   redirectsFileName = `_redirects`
 ) => {
   glob(
-    path.join(currentWorkingDirectory, publicDirName, '**', redirectsFileName),
+    path.join(currentWorkingDirectory, publicDirName, "**", redirectsFileName),
     {},
     (err, files) => {
       if (err) {
@@ -30,15 +30,21 @@ exports.collectRedirects = (
       redirects.unshift(
         `# ${staticDirName}${redirectsFileName}\n` + globalRedirects.toString()
       )
-      let globalRedirectsAfter;
+      let globalRedirectsAfter
       try {
-          globalRedirectsAfter = fs.readFileSync(
-        path.join(currentWorkingDirectory, staticDirName, redirectsFileName + '.after'))
-          redirects.push(
-        `# ${staticDirName}${redirectsFileName}.after\n` + globalRedirectsAfter.toString()
-      )
-      } catch(err) {
-          // skip
+        globalRedirectsAfter = fs.readFileSync(
+          path.join(
+            currentWorkingDirectory,
+            staticDirName,
+            redirectsFileName + ".after"
+          )
+        )
+        redirects.push(
+          `# ${staticDirName}${redirectsFileName}.after\n` +
+            globalRedirectsAfter.toString()
+        )
+      } catch (err) {
+        // skip
       }
 
       const rules = [
@@ -54,10 +60,10 @@ exports.collectRedirects = (
         path.join(currentWorkingDirectory, publicDirName, redirectsFileName),
         rules.join(`\n`) + `\n`
       )
-      const ruleCount = rules.filter(v => v.indexOf('#') !== 0).length
+      const ruleCount = rules.filter(v => v.indexOf("#") !== 0).length
       console.log(
         `${ruleCount} line${
-          ruleCount !== 1 ? 's' : ''
+          ruleCount !== 1 ? "s" : ""
         } of redirect rule applied.`
       )
     }

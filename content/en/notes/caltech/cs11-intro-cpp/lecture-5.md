@@ -1,7 +1,7 @@
 ---
 title: "CS11 Intro C++: Lecture 5"
 author: haruair
-type: note
+type: page
 date: "2020-05-18T17:00:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-5
@@ -141,6 +141,6 @@ Expression is evaluated from left to right. Each `operator<<` call returns the o
 ---
 
 ## Coming up next
-{class="no-number"}
+
 
 - [Lecture 6](/note/cs-11-intro-cpp/lecture-6): Copy and assignment operator with Heap, Inline

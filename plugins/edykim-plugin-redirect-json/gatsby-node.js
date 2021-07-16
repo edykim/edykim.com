@@ -1,0 +1,90 @@
+const path = require(`path`)
+const urlResolve = require(`url`).resolve
+
+const fs = require(`fs`)
+const pify = require(`pify`)
+const mkdirp = require(`mkdirp`)
+
+const writeFile = pify(fs.writeFile)
+
+const runQuery = (handler, query) =>
+  handler(query).then((r) => {
+    if (r.errors) {
+      throw new Error(r.errors.join(`, `))
+    }
+
+    return r.data
+  })
+
+exports.onPostBuild = async ({ graphql, actions }) => {
+  const query = `
+  {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+    redirects: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            private
+            draft
+            history {
+              from
+            }
+          }
+          fields {
+            url
+          }
+        }
+      }
+    }
+  }`
+
+  const filename = `redirect.json`
+  const publicPath = `./public`
+  const { createRedirect } = actions
+
+  const result = await runQuery(graphql, query)
+
+  const baseUrl =
+    result.site.siteMetadata.siteUrl.substr(-1) !== '/'
+      ? result.site.siteMetadata.siteUrl + '/'
+      : result.site.siteMetadata.siteUrl
+
+  var redirects = []
+  result.redirects.edges.forEach(({ node }) => {
+    if (node.frontmatter.private || node.frontmatter.draft) return
+    if (!node.frontmatter.history || node.frontmatter.history.length === 0)
+      return
+    const to = urlResolve(baseUrl, node.fields.url)
+    const newRedirects = node.frontmatter.history.map((v) => ({
+      from: v.from,
+      to,
+    }))
+
+    redirects = redirects.concat(newRedirects)
+  })
+
+  const outputPath = path.join(publicPath, filename)
+  const outputDir = path.dirname(publicPath)
+  if (!fs.existsSync(outputDir)) {
+    mkdirp.sync(outputDir)
+  }
+
+  await writeFile(outputPath, JSON.stringify(redirects, null, 2))
+
+  redirects.forEach((redirect) => {
+    createRedirect({
+      fromPath: redirect.from,
+      toPath: redirect.to,
+      isPermanent: false,
+      force: true,
+    })
+  })
+
+  console.log(`${redirects.length} of redirections generated. (${outputPath})`)
+
+  return Promise.resolve()
+}

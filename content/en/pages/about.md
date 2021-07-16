@@ -9,7 +9,7 @@ lang: en
 
 <figure>
 
-<img src="/assets/me-with-a-red-bird.jpg" alt="Me" style="margin: 0 auto;max-width: 100%;">
+![me with a red bird](./../../ko/pages/about/me-with-a-red-bird.jpg)
 
 </figure>
 

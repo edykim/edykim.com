@@ -41,7 +41,7 @@ Johnpapa의 [Do You Like Your Angular Controllers with or without Sugar?](http:/
     vm.title = 'some title';
     vm.saveData = function() { ... };
 
-이 방식이 더 보기 쉽고 어떤 부분이 뷰에 노출되는지 쉽게 확인할 수 있다. "vm" 변수는 뷰모델(viewmodel)을 의미한다. 이 명칭은 단순하게 내 컨벤션이다. $scope를 사용할 때도 같은 방법을 쓸 수 있지만 $scope를 사용할 때는 그렇게 작성하지 않았다.
+이 방식이 더 보기 쉽고 어떤 부분이 뷰에 노출되는지 쉽게 확인할 수 있다. "vm" 변수는 뷰모델(viewmodel)을 의미한다. 이 명칭은 단순하게 내 컨벤션이다. \$scope를 사용할 때도 같은 방법을 쓸 수 있지만 \$scope를 사용할 때는 그렇게 작성하지 않았다.
 
     $scope.title = 'some title';
     $scope.saveData = function() { ... };
@@ -50,8 +50,8 @@ Johnpapa의 [Do You Like Your Angular Controllers with or without Sugar?](http:/
 
 ### 주입이 필요한 경우
 
-`$scope`는 컨트롤러에 `$scope`를 주입할 필요가 있을 때 사용한다. 이 부분은 controller as 기법을 사용할 때는 필요 없는 부분이지만 몇가지 다른 이유에 의해 필요할 때가 존재한다. (가령 $broadcast가 필요하거나, watch를 사용할 필요가 있는데 컨트롤러 내에서 하는 것을 피하고 싶을 때.) 이 부분은 사실 Controller As 기법을 더 좋아하는 이유 중 하나다. `$scope`가 데이터 바인딩 등을 위해 정말 필요한 상황일 때만 명시적으로 선언하기 때문이다. broadcast 메시지를 듣기 위한 것도 한 예제다. watch는 다른 경우지만 컨트롤러 내에서 watch하고 싶지 않은 경우에 사용할 수 있다.
+`$scope`는 컨트롤러에 `$scope`를 주입할 필요가 있을 때 사용한다. 이 부분은 controller as 기법을 사용할 때는 필요 없는 부분이지만 몇가지 다른 이유에 의해 필요할 때가 존재한다. (가령 \$broadcast가 필요하거나, watch를 사용할 필요가 있는데 컨트롤러 내에서 하는 것을 피하고 싶을 때.) 이 부분은 사실 Controller As 기법을 더 좋아하는 이유 중 하나다. `$scope`가 데이터 바인딩 등을 위해 정말 필요한 상황일 때만 명시적으로 선언하기 때문이다. broadcast 메시지를 듣기 위한 것도 한 예제다. watch는 다른 경우지만 컨트롤러 내에서 watch하고 싶지 않은 경우에 사용할 수 있다.
 
 ### 유행은?
 
-명시적으로 $scope가 선언된 코드가 더 오래 사용한 방식이기 때문에 예제가 많다. 하지만 최근 예제는 Controller As를 사용한 경우가 많다. 이 예제를 원한다면 Visual Studio 플러그인인 [SideWaffle](http://sidewaffle.com)을 사용할 수 있다. 이 두가지 기법 컨트롤러 모두를 지원한다. 설탕이 싫다면 전통적인 $scope 컨트롤러를 선택하라. 설탕을 원한다면 controller as 를 선택하라. Angular 팀은 이 두가지 선택지를 제공하고 있고 이 선택지 모두 마음에 든다. 개인적으로는 Controller As 기법이 마음에 든다. 이 두가지 방법 모두 데이터 바인딩을 할 수 있다. Controller As는 $scope와 개발하는데 더 편리하게 한다고 생각한다. 그러니 둘 중 어느 것을 선택하는가는 온전히 당신의 몫이다.
+명시적으로 \$scope가 선언된 코드가 더 오래 사용한 방식이기 때문에 예제가 많다. 하지만 최근 예제는 Controller As를 사용한 경우가 많다. 이 예제를 원한다면 Visual Studio 플러그인인 [SideWaffle](http://sidewaffle.com)을 사용할 수 있다. 이 두가지 기법 컨트롤러 모두를 지원한다. 설탕이 싫다면 전통적인 \$scope 컨트롤러를 선택하라. 설탕을 원한다면 controller as 를 선택하라. Angular 팀은 이 두가지 선택지를 제공하고 있고 이 선택지 모두 마음에 든다. 개인적으로는 Controller As 기법이 마음에 든다. 이 두가지 방법 모두 데이터 바인딩을 할 수 있다. Controller As는 \$scope와 개발하는데 더 편리하게 한다고 생각한다. 그러니 둘 중 어느 것을 선택하는가는 온전히 당신의 몫이다.

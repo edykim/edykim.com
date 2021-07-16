@@ -1,7 +1,7 @@
 ---
 title: "CS11 Intro C++: Lecture 1"
 author: haruair
-type: note
+type: page
 date: "2020-05-18T11:28:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-1
@@ -191,6 +191,6 @@ mood = "cheery";
 ---
 
 ## Coming up next
-{class="no-number"}
+
 
 - [Lecture 2](/note/cs-11-intro-cpp/lecture-2): Build phase, structs & vector, exception handling
