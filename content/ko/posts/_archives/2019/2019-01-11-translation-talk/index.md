@@ -17,7 +17,7 @@ tags:
 
 <iframe width="100%" height="480" src="https://www.youtube-nocookie.com/embed/z7IaVmxIxTM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-발표를 하기 위해 슬라이드를 두 번 만들었다. 처음 만든 슬라이드는 생각보다 내용이 너무 길어져버려서 랩이라도 하듯 슬라이드를 읽어도 분량이 도무지 줄어들지 않았다. 그래서 아예 [새로 만들었는데](https://edykim.com/ko/slides/2019-translate-what-i-want-to-read.pdf) 다시 보니 도구 얘기보다 너무 겉도는 이야기만 한 것 같아 아쉽다. 연습이 필요한 부분이다!
+발표를 하기 위해 슬라이드를 두 번 만들었다. 처음 만든 슬라이드는 생각보다 내용이 너무 길어져버려서 랩이라도 하듯 슬라이드를 읽어도 분량이 도무지 줄어들지 않았다. 그래서 아예 [새로 만들었는데](2019-translate-what-i-want-to-read.pdf) 다시 보니 도구 얘기보다 너무 겉도는 이야기만 한 것 같아 아쉽다. 연습이 필요한 부분이다!
 
 ---
 
