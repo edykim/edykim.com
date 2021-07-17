@@ -32,6 +32,7 @@ const Content = styled.div`
   em > a,
   i > a,
   p > a,
+  a.footnote-ref,
   h1 > a:not(.title-anchor),
   h2 > a:not(.title-anchor),
   h3 > a:not(.title-anchor),
