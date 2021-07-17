@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { colors, layouts } from "~/constraint"
 import Face from "../../assets/yong.svg"
 import WowFace from "../../assets/yong-surprised.svg"
 
@@ -35,7 +36,7 @@ const Header = ({ siteTitle, item }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: "52rem",
+          maxWidth: layouts.content,
           padding: `1.45rem 1.0875rem`,
         }}
       >
@@ -47,10 +48,13 @@ const Header = ({ siteTitle, item }) => {
           }}
         >
           <FaceLink to="/">
-            <Face className={"link"} style={{ width: 64, marginRight: 15 }} />
+            <Face
+              className={"link"}
+              style={{ width: 64, marginRight: 15, fill: colors.text }}
+            />
             <WowFace
               className={"active"}
-              style={{ width: 64, marginRight: 15 }}
+              style={{ width: 64, marginRight: 15, fill: colors.text }}
             />
           </FaceLink>
 
@@ -59,19 +63,19 @@ const Header = ({ siteTitle, item }) => {
               to="/"
               style={{
                 textDecoration: `none`,
-                color: `#222222`,
+                color: colors.text,
               }}
             >
               {siteTitle}
             </Link>
             {lang && lang !== "en" && (
               <>
-                <span style={{ color: "#777777" }}>{"/"}</span>
+                <span style={{ color: colors.subtext }}>{"/"}</span>
                 <Link
                   to={`/${lang}/`}
                   style={{
                     textDecoration: `none`,
-                    color: `#222222`,
+                    color: colors.text,
                   }}
                 >
                   {lang}
@@ -80,12 +84,12 @@ const Header = ({ siteTitle, item }) => {
             )}
             {contentType && contentType !== "page" && (
               <>
-                <span style={{ color: "#777777" }}>{"/"}</span>
+                <span style={{ color: colors.subtext }}>{"/"}</span>
                 <Link
                   to={`${lang !== "en" ? `/${lang}` : ""}/${contentType}/`}
                   style={{
                     textDecoration: `none`,
-                    color: `#222222`,
+                    color: colors.text,
                   }}
                 >
                   {contentType}
