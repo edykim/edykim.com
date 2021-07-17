@@ -11,8 +11,10 @@ url: /
 
 I'm a software engineer who loves to make web services and useful tools. I'm currently studying computer science and living in Riverside. Plus, I enjoy building small things and taking photographs in my free time.
 
-- [More about me](/about/)
-- [Say hi on Twitter](https://twitter.com/haruair)
+:::div{.no-indent}
+:span[[More about me](/about/)]{.button} :span[[Say hi on Twitter](https://twitter.com/heyedykim)]{.button}
+:::
+
 - [Writings](/post/)
 - [Notes](/note/)
-- [한국어 페이지](/ko/)
+- [한국어 (Korean)](/ko/) 🇰🇷
