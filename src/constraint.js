@@ -1,13 +1,25 @@
+// export const colors = {
+//   background: "#ffffff",
+//   backgroundAlt: "#f8f8f8",
+//   primary: "#191ab5",
+//   link: "#ec0b43",
+//   highlight: "#fff7e0",
+//   text: "#011627",
+//   body: "#080708",
+//   subtext: "#7d869c",
+//   shade: "#eae6ea",
+// }
+
 export const colors = {
-  background: "#ffffff",
-  backgroundAlt: "#f8f8f8",
-  primary: "#191ab5",
-  link: "#ec0b43",
-  highlight: "#fff7e0",
-  text: "#011627",
-  body: "#080708",
-  subtext: "#7d869c",
-  shade: "#eae6ea",
+  background: "var(--color-background)",
+  backgroundAlt: "var(--color-background-alt)",
+  primary: "var(--color-primary)",
+  link: "var(--color-link)",
+  highlight: "var(--color-highlight)",
+  text: "var(--color-text)",
+  body: "var(--color-body)",
+  subtext: "var(--color-subtext)",
+  shade: "var(--color-shade)",
 }
 
 export const layouts = {

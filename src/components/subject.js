@@ -1,13 +1,14 @@
 import styled from "styled-components"
-import { colors } from "~/constraint"
+import { colors, layouts } from "~/constraint"
 
 const Subject = styled.header`
-  max-width: 52rem;
+  max-width: ${layouts.content};
   margin: 0 auto;
-  padding-left: 1.0875rem;
-  padding-right: 1.0875rem;
+  padding-left: ${layouts.sidePadding};
+  padding-right: ${layouts.sidePadding};
   h1 {
     word-break: keep-all;
+    color: ${colors.text};
   }
   h1 a {
     color: ${colors.text};
@@ -19,6 +20,9 @@ export const Headline = styled.p`
   font-size: 0.9rem;
   color: ${colors.subtext};
   margin-top: -1rem;
+`
+export const Date = styled.p`
+  color: ${colors.text};
 `
 
 export default Subject

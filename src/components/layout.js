@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Header from './header'
-import './layout.css'
+import { colors, layouts } from "~/constraint"
+import Header from "./header"
+import "./layout.css"
 
 const Layout = ({ item, children }) => {
   const data = useStaticQuery(graphql`
@@ -37,14 +38,17 @@ const Layout = ({ item, children }) => {
         <main>{children}</main>
         <footer
           style={{
-            maxWidth: '52rem',
-            margin: '2rem auto',
-            padding: '0 1.0875rem',
-            fontSize: '0.8rem',
+            maxWidth: layouts.content,
+            margin: "2rem auto",
+            padding: `0 ${layouts.sidePadding}`,
+            fontSize: "0.8rem",
           }}
         >
-          <a href="https://github.com/edykim/edykim.com/issues">
-            {item?.frontmatter.lang === 'ko' ? '피드백 보내기' : 'feedback'}
+          <a
+            href="https://github.com/edykim/edykim.com/issues/new"
+            style={{ color: colors.subtext }}
+          >
+            {item?.frontmatter.lang === "ko" ? "피드백 보내기" : "feedback"}
           </a>
         </footer>
       </div>

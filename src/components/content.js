@@ -371,7 +371,24 @@ const Content = styled.div`
       width: 100%;
     }
   }
-
+  .align-center {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .dark-only {
+    display: none;
+  }
+  .light-only {
+    display: inline-block;
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark-only {
+      display: inline-block;
+    }
+    .light-only {
+      display: none;
+    }
+  }
   .no-indent,
   .no-indent * {
     text-indent: 0;
@@ -396,6 +413,11 @@ const Content = styled.div`
       &:active {
         text-decoration: underline;
       }
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .gatsby-resp-image-image {
+      box-shadow: none !important;
     }
   }
 `

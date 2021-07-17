@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Subject, { Headline } from "./subject"
+import Subject, { Headline, Date } from "./subject"
 import Content from "./content"
 import { PostNav } from "./nav"
 import Tags from "./tag"
@@ -21,7 +21,7 @@ const PostTemplate = ({ data, location }) => {
             <Link to={post.fields.url}>{post.frontmatter.title || "#"}</Link>
           </h1>
           {headline && <Headline>{headline}</Headline>}
-          <p>{post.frontmatter.date}</p>
+          <Date>{post.frontmatter.date}</Date>
         </Subject>
         <Content
           style={{

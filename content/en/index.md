@@ -7,7 +7,9 @@ lang: en
 url: /
 ---
 
-<img src="../portrait.svg" width="200" alt="It's me" />
+:::div{.align-center.no-indent}
+<img src="../portrait.svg" width="200" alt="It's me" class="light-only" /><img src="../portrait-dark.svg" width="200" alt="It's me" class="dark-only" />
+:::
 
 I'm a software engineer who loves to make web services and useful tools. I'm currently studying computer science and living in Riverside. Plus, I enjoy building small things and taking photographs in my free time.
 
