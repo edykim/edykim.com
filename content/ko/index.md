@@ -7,7 +7,7 @@ lang: ko
 url: /
 ---
 
-<img src="/portrait.svg" width="200" alt="It's me" />
+<img src="../portrait.svg" width="200" alt="It's me" />
 
 안녕하세요, 저는 김용균입니다. 작고 단단한 코드를 작성하는 일을 좋아합니다. 현재는 더 멋진 일 해보고 싶어서 공부하고 있습니다. 더 많은 경험을 해보고 싶어서 늘 노력하고 어떤 이야기든 기록을 남기는 일을 좋아합니다.
 
