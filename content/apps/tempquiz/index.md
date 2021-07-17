@@ -8,7 +8,7 @@ lang: en
 
 ---
 
-<img src="/assets/en/apps/tempquiz/icon.png" alt="app icon" style="max-width: 200px; margin: 0 auto; border-radius: 10px; display: block;">
+![](icon.png)
 
 Can you convert between Fahrenheit and Celsius easily? Why? Just for fun!
 

@@ -5,10 +5,9 @@ type: page
 date: "2019-05-17T05:28:41"
 url: /app/visual-timer
 lang: en
-
 ---
 
-<img src="/assets/en/apps/visual-timer/icon.png" alt="app icon" style="max-width: 200px; margin: 0 auto; border-radius: 10px; display: block;">
+![](icon.png)
 
 This app provides a simple visual timer which has a straightforward design, and fully customizable options! Try all colors, sounds, reminders, and image sets!
 
@@ -22,7 +21,7 @@ This app provides a simple visual timer which has a straightforward design, and 
 
 If you have any questions, please contact me via [email (visualtimer@edykim.com)](mailto:visualtimer@edykim.com)
 
-<a href="https://apps.apple.com/app/id1458639178"><img src="/assets/en/apps/en-download.svg" alt="Download App" style="width: 200px; margin: 0 auto; display: block;"></a>
+[![Download App](../en-download.svg)](https://apps.apple.com/app/id1458639178)
 
 - [Download from Apple App Store](https://apps.apple.com/app/id1458639178)
 - [Privacy Policy](/app/visual-timer/privacy-policy)

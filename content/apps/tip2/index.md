@@ -8,7 +8,7 @@ lang: en
 
 ---
 
-<img src="/assets/en/apps/tip2/icon.png" alt="app icon" style="max-width: 200px; margin: 0 auto; border-radius: 10px; display: block;">
+![](icon.png)
 
 A simple tool to calculate gratuity on the fly with a simple design to solve your everyday math question.
 
