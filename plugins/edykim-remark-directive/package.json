@@ -1,0 +1,14 @@
+{
+  "name": "edykim-remark-directive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Edward Yonggyun Kim <edward@edykim.com> (https://edykim.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "hastscript": "^6.0.0",
+    "remark-directive": "^1.0.1",
+    "unist-util-visit": "^2.0.0"
+  }
+}
