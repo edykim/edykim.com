@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
-    "hastscript": "^7.0.1",
+    "hastscript": "^6.0.0",
     "katex": "^0.13.11",
     "lodash.groupby": "^4.6.0",
     "lodash.memoize": "^4.1.2",
@@ -40,7 +40,7 @@
     "react-helmet": "^6.1.0",
     "remark-directive": "^1.0.1",
     "styled-components": "^5.3.0",
-    "unist-util-visit": "^3.1.0"
+    "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "@netlify/plugin-gatsby": "^1.0.3",
