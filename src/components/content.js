@@ -158,6 +158,7 @@ const Content = styled.div`
   > ul,
   > ol,
   > li,
+  > div.no-indent,
   .footnotes {
     box-sizing: border-box;
     max-width: ${layouts.content};
@@ -368,6 +369,33 @@ const Content = styled.div`
       padding-right: 0;
       max-width: none !important;
       width: 100%;
+    }
+  }
+
+  .no-indent,
+  .no-indent * {
+    text-indent: 0;
+  }
+
+  .button {
+    display: inline-block;
+    + .button {
+      margin-left: 10px;
+    }
+    a {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-indent: 0;
+      display: inline-block;
+      text-decoration: none;
+      color: ${colors.text};
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: 2px solid ${colors.text};
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
     }
   }
 `
