@@ -60,6 +60,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `edykim-remark-directive`,
           {
             resolve: `gatsby-remark-images`,
             options: {
