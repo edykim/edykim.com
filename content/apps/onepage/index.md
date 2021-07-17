@@ -8,7 +8,7 @@ lang: en
 
 ---
 
-<img src="/assets/en/apps/onepage/icon.png" alt="app icon" style="max-width: 200px; margin: 0 auto; border-radius: 10px; display: block; box-shadow: 0 0 30px rgba(0,0,0,0.1)">
+![](icon.png)
 
 A simple note app to write anything quickly.
 
