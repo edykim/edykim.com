@@ -9,7 +9,7 @@ module.exports = {
       name: `Edward Kim`,
       summary: `who loves to make web services and useful tools.`,
     },
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Hello, I'm Edward. I'm writing about the web, tech, and my journey. Good to see you here!`,
     siteUrl,
   },
   plugins: [
