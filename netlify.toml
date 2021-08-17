@@ -4,3 +4,9 @@ publish = "public/"
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
