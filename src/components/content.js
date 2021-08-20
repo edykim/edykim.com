@@ -160,6 +160,7 @@ const Content = styled.div`
   > ol,
   > li,
   > div.no-indent,
+  > div.hero,
   .footnotes {
     box-sizing: border-box;
     max-width: ${layouts.content};
@@ -420,6 +421,41 @@ const Content = styled.div`
     .gatsby-resp-image-image {
       box-shadow: none !important;
     }
+  }
+
+  div.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .aside {
+      min-width: 20%;
+      text-align: right;
+      margin-left: 20px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+    p {
+      text-indent: 0;
+    }
+    p.tagline {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      .aside {
+        order: 1;
+        text-align: center;
+      }
+      .text {
+        order: 2;
+      }
+    }
+
   }
 `
 

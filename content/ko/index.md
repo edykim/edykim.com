@@ -4,16 +4,28 @@ author: haruair
 type: page
 date: "2021-07-15T01:49:00"
 lang: ko
+noTitle: true
 url: /
 ---
 
-:::div{.align-center.no-indent}
+<div class="hero">
+
+<div class="text">
+
+<h1 class="skip">안녕하세요, 김용균입니다.</h1>
+
+<p class="tagline">저는 소프트웨어 엔지니어로 웹서비스와 유용한 도구를 만드는 일을 합니다. 작은 것을 만드는 일, 사진 찍는 일, 그리고 맛있는 커피를 좋아합니다.</p>
+
+<p>현재는 CS 학생으로 열심히 배우고 있습니다. 만나서 반갑고 잘 부탁드립니다 :)</p>
+
+</div>
+
+<div class="aside">
+
 <img src="../portrait.svg" width="200" alt="It's me" class="light-only" /><img src="../portrait-dark.svg" width="200" alt="It's me" class="dark-only" />
-:::
 
-안녕하세요, 저는 김용균입니다. 작고 단단한 코드를 작성하는 일을 좋아합니다. 현재는 더 멋진 일 해보고 싶어서 공부하고 있습니다. 더 많은 경험을 해보고 싶어서 늘 노력하고 어떤 이야기든 기록을 남기는 일을 좋아합니다.
-
-만나서 반갑고 잘 부탁드립니다 :)
+</div>
+</div>
 
 :::div{.no-indent}
 :span[[저는 이런 사람입니다](/ko/about/)]{.button} :span[[트위터에서도 만나요](https://twitter.com/haruair)]{.button}
