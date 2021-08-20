@@ -10,6 +10,7 @@ const PageTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const headline = post.frontmatter.headline?.join(" ")
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const noTitle = post.frontmatter?.noTitle
 
   return (
     <Layout location={location} title={siteTitle} item={post}>
@@ -23,10 +24,10 @@ const PageTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <Subject>
+        {!noTitle && <Subject>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {headline && <Headline>{headline}</Headline>}
-        </Subject>
+        </Subject>}
         <Content
           style={{
             lineHeight: 1.76,
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        noTitle
         description
         headline
         lang
