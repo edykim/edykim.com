@@ -80,6 +80,20 @@ const Content = styled.div`
     margin: 0;
   }
 
+  li ul,
+  li ol {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  ul > li > ul {
+    list-style-type: circle;
+  }
+
+  ul > li > ul > li > ul {
+    list-style-type: disc;
+  }
+
   p {
     line-height: 1.76;
   }
@@ -455,7 +469,6 @@ const Content = styled.div`
         order: 2;
       }
     }
-
   }
 `
 
