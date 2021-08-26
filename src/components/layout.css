@@ -70,6 +70,16 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+@media screen and (max-width: 720px) {
+  :root {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 84.5%;
+  }
+}
 body {
   background-color: var(--color-background);
   margin: 0;
