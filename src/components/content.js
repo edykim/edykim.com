@@ -4,7 +4,7 @@ import { colors, layouts, fonts } from "~/constraint"
 const Hr = css`
   height: 0;
   border: 0;
-  border-bottom: 1px solid ${colors.subtext};
+  border-bottom: 5px solid ${colors.backgroundAlt};
   max-width: ${layouts.content};
   margin: 4rem auto 2rem;
 
