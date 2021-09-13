@@ -31,6 +31,8 @@ url: /
 :span[[More about me](/about/)]{.button} :span[[Say hi on Twitter](https://twitter.com/heyedykim)]{.button}
 :::
 
+---
+
 - [Writings](/post/)
 - [Notes](/note/)
 - [한국어 (Korean)](/ko/) 🇰🇷

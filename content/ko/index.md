@@ -31,6 +31,8 @@ url: /
 :span[[저는 이런 사람입니다](/ko/about/)]{.button} :span[[트위터에서도 만나요](https://twitter.com/haruair)]{.button}
 :::
 
+---
+
 - [글 모음](/ko/post/): 개발 관련 경험과 번역글 비정기 포스트 (얇고 길게 가고 싶습니다)
 - [노트](/ko/notes/): 아무거나 정리용 페이지
 - [조각글 모음](/ko/micro/): 일상적인 이야기와 스크랩용 페이지
