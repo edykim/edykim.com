@@ -13,6 +13,15 @@ const FaceLink = styled(Link)`
     display: inline-block;
   }
 
+  > * {
+    width: 64px;
+    margin-right: 5px;
+    fill: ${colors.text};
+    @media (max-width: 1024px) {
+      width: 48px;
+    }
+  }
+
   &:hover {
     .active {
       display: inline-block;
@@ -63,23 +72,15 @@ const Header = ({ siteTitle, item }) => {
           <h1
             style={{
               margin: 0,
-              fontSize: 20,
+              fontSize: "1rem",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
             }}
           >
             <FaceLink to="/">
-              <Face
-                className={"link"}
-                style={{ width: 48, marginRight: 5, fill: colors.text }}
-                alt={siteTitle}
-              />
-              <WowFace
-                className={"active"}
-                style={{ width: 48, marginRight: 5, fill: colors.text }}
-                alt={siteTitle}
-              />
+              <Face className={"link"} alt={siteTitle} />
+              <WowFace className={"active"} alt={siteTitle} />
             </FaceLink>
             <div>
               {lang && lang !== "en" && (
