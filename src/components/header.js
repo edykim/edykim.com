@@ -23,12 +23,20 @@ const FaceLink = styled(Link)`
   }
 `
 
+const contentTypeTranslation = {
+  ko: {
+    post: "게시글",
+    micro: "조각글",
+    note: "노트",
+  },
+}
+
 const Header = ({ siteTitle, item }) => {
   const lang = item?.frontmatter.lang
   let contentType = item?.frontmatter.type
 
   if (contentType === "archive" || contentType === "showcase") {
-    contentType = item.frontmatter.contentType
+    contentType = null
   }
 
   return (
@@ -47,55 +55,80 @@ const Header = ({ siteTitle, item }) => {
             alignItems: "center",
           }}
         >
-          <FaceLink to="/">
-            <Face
-              className={"link"}
-              style={{ width: 64, marginRight: 15, fill: colors.text }}
-            />
-            <WowFace
-              className={"active"}
-              style={{ width: 64, marginRight: 15, fill: colors.text }}
-            />
-          </FaceLink>
-
-          <h1 style={{ margin: 0, fontSize: 16 }}>
-            <Link
-              to="/"
-              style={{
-                textDecoration: `none`,
-                color: colors.text,
-              }}
-            >
-              {siteTitle}
-            </Link>
-            {lang && lang !== "en" && (
-              <>
-                <span style={{ color: colors.subtext }}>{"/"}</span>
-                <Link
-                  to={`/${lang}/`}
-                  style={{
-                    textDecoration: `none`,
-                    color: colors.text,
-                  }}
-                >
-                  {lang}
-                </Link>
-              </>
-            )}
-            {contentType && contentType !== "page" && (
-              <>
-                <span style={{ color: colors.subtext }}>{"/"}</span>
-                <Link
-                  to={`${lang !== "en" ? `/${lang}` : ""}/${contentType}/`}
-                  style={{
-                    textDecoration: `none`,
-                    color: colors.text,
-                  }}
-                >
-                  {contentType}
-                </Link>
-              </>
-            )}
+          <h1
+            style={{
+              margin: 0,
+              fontSize: 20,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <FaceLink to="/">
+              <Face
+                className={"link"}
+                style={{ width: 48, marginRight: 5, fill: colors.text }}
+                alt={siteTitle}
+              />
+              <WowFace
+                className={"active"}
+                style={{ width: 48, marginRight: 5, fill: colors.text }}
+                alt={siteTitle}
+              />
+            </FaceLink>
+            <div>
+              {lang && lang !== "en" && (
+                <>
+                  <span
+                    style={{
+                      color: colors.text,
+                      fontWeight: "normal",
+                      margin: "0 0.5rem",
+                    }}
+                  >
+                    {"/"}
+                  </span>
+                  <Link
+                    to={`/${lang}/`}
+                    style={{
+                      fontWeight: "normal",
+                      textDecoration: `none`,
+                      color: colors.text,
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {lang === "ko" ? "한국어" : lang}
+                  </Link>
+                </>
+              )}
+              {contentType && contentType !== "page" && (
+                <>
+                  <span
+                    style={{
+                      color: colors.text,
+                      fontWeight: "normal",
+                      margin: "0 0.5rem",
+                    }}
+                  >
+                    {"/"}
+                  </span>
+                  <Link
+                    to={`${lang !== "en" ? `/${lang}` : ""}/${contentType}/`}
+                    style={{
+                      fontWeight: "normal",
+                      textDecoration: `none`,
+                      color: colors.text,
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    {contentTypeTranslation[lang] &&
+                    contentTypeTranslation[lang][contentType]
+                      ? contentTypeTranslation[lang][contentType]
+                      : contentType}
+                  </Link>
+                </>
+              )}
+            </div>
           </h1>
         </div>
       </div>
