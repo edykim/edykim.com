@@ -1,5 +1,5 @@
 ---
-title: 마이크로
+title: 조각글 모음
 author: haruair
 type: archive
 contentType: micro
