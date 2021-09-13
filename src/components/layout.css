@@ -32,9 +32,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #101010;
-    --color-background-alt: #181818;
-    --color-primary: #ff9a00;
+    --color-background: #121212;
+    --color-background-alt: #202020;
+    --color-primary: #f5af8e;
     --color-link: #ec0b43;
     --color-highlight: #262626;
     --color-text: #dee4e9;
