@@ -1,5 +1,5 @@
 ---
-title: 블로그
+title: 글 모음
 author: haruair
 type: showcase
 contentType: post
