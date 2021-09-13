@@ -23,6 +23,17 @@ const FaceLink = styled(Link)`
   }
 `
 
+const HeaderContainer = styled.div`
+  margin: 0 auto;
+  max-width: ${layouts.content};
+  padding: 1.45rem 1.0875rem;
+
+  @media (min-width: 1024px) {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+`
+
 const contentTypeTranslation = {
   ko: {
     post: "게시글",
@@ -41,13 +52,7 @@ const Header = ({ siteTitle, item }) => {
 
   return (
     <header>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: layouts.content,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
+      <HeaderContainer>
         <div
           style={{
             display: "flex",
@@ -131,7 +136,7 @@ const Header = ({ siteTitle, item }) => {
             </div>
           </h1>
         </div>
-      </div>
+      </HeaderContainer>
     </header>
   )
 }
