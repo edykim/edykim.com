@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 const ColorModeMeta = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? (
+  return (typeof window !== 'undefined') && window.matchMedia("(prefers-color-scheme: dark)").matches ? (
     <Helmet
       meta={[
         {
