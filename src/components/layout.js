@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { colors, layouts } from "~/constraint"
 import Header from "./header"
+import ColorModeMeta from "./color-mode"
 import "./layout.css"
 
 const Layout = ({ item, children }) => {
@@ -26,6 +27,7 @@ const Layout = ({ item, children }) => {
 
   return (
     <>
+      <ColorModeMeta />
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         item={item}
