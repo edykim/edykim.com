@@ -17,7 +17,7 @@ const FaceLink = styled(Link)`
     width: 64px;
     margin-right: 5px;
     fill: ${colors.text};
-    @media (max-width: 1024px) {
+    @media (max-width: ${layouts.wide}) {
       width: 48px;
     }
   }
@@ -33,11 +33,11 @@ const FaceLink = styled(Link)`
 `
 
 const HeaderContainer = styled.div`
-  margin: 0 auto;
+  margin: 1.4rem auto 0.5rem;
   max-width: ${layouts.content};
   padding: 1.45rem 1.0875rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${layouts.wide}) {
     margin-top: 3rem;
     margin-bottom: 2rem;
   }
