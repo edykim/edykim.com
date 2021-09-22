@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { Helmet } from "react-helmet"
 
+const COLOR_SCHEME_DARK = "dark"
+const COLOR_SCHEME_LIGHT = "light"
+const PREFERS_COLOR_SCHEME = `(prefers-color-scheme: ${COLOR_SCHEME_DARK})`
+
 const darkMeta = [
   {
     name: "color-scheme",
-    content: "dark",
+    content: COLOR_SCHEME_DARK,
   },
   {
     name: "theme-color",
@@ -27,19 +31,28 @@ const setPersistColorScheme = colorScheme => {
   )
 }
 
+const getSystemColorScheme = () => {
+  if (typeof window === "undefined") return
+  return window.matchMedia(PREFERS_COLOR_SCHEME).matches
+    ? COLOR_SCHEME_DARK
+    : COLOR_SCHEME_LIGHT
+}
+
 const ColorModeMeta = () => {
-  const [colorScheme, setColorScheme] = useState(getPersistColorScheme() || "light")
+  const [colorScheme, setColorScheme] = useState(
+    getPersistColorScheme() || getSystemColorScheme() || COLOR_SCHEME_LIGHT
+  )
 
   useEffect(() => {
     if (typeof window === "undefined") return
 
     const onChange = e => {
-      const newColor = e.matches ? "dark" : "light"
+      const newColor = e.matches ? COLOR_SCHEME_DARK : COLOR_SCHEME_LIGHT
       setColorScheme(newColor)
       setPersistColorScheme(newColor)
     }
 
-    const media = window.matchMedia("(prefers-color-scheme: dark)")
+    const media = window.matchMedia(PREFERS_COLOR_SCHEME)
 
     onChange(media)
     media.addEventListener("change", onChange)
@@ -49,7 +62,9 @@ const ColorModeMeta = () => {
     }
   }, [setColorScheme])
 
-  return <Helmet meta={colorScheme === "dark" ? darkMeta : lightMeta} />
+  return (
+    <Helmet meta={colorScheme === COLOR_SCHEME_DARK ? darkMeta : lightMeta} />
+  )
 }
 
 export default ColorModeMeta
