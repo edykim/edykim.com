@@ -101,3 +101,21 @@ alias night_mode="xrandr --output eDP1 --gamma 1:0.72:0.43 --brightness 0.55"
 
 모니터가 여럿이면 `--output eDP1 --output eDP2` 이런 식.
 
+# 오피스 파일을 pdf로 변환하기
+
+`libreoffice`를 사용하면 오피스 파일, 즉, pptx, ppt, docx, doc 등을 pdf로 변환할 수 있다. 다른 도구도 많았는데 중간에 내용이 안나오거나 하는 경우가 종종 있었다. 용도 외로 사용하는 기분이 들긴 하지만 가장 높은 신용도.
+
+`.zshrc`에 추가한다.
+
+```bash
+alias to-pdf="libreoffice --headless --convert-to pdf"
+```
+
+사용은 아래처럼.
+
+```bash
+$ to-pdf lecture_03.pptx
+$ to-pdf *.ppt
+$ to-pdf essay_mid.docx
+```
+
