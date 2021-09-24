@@ -11,6 +11,8 @@ url: linux
 
 # 사용하는 프로그램
 
+dwm 쓰고 있어서 다른 wm 사용하면 편하게 할 것을 안편하게 쓰고 있는 부분이 많습니다. 더 좋은 것 있으면 언제든지 알려주세요.
+
 - [Manjaro]: Arch linux 기반.
 - [suckless dwm](https://dwm.suckless.org/): X용 동적 창 관리자. 화면을 꽉 채우는 방식이 기본이라서 편리. 커스텀을 많이 할 수 있는데 거의 기본으로 사용중.
 - [suckless st](https://st.suckless.org/): 단순한 터미널인데 dwm과 잘 맞음.
@@ -21,7 +23,11 @@ url: linux
 - go-chromecast: 크롬캐스트 제어할 수 있는 cli
 - nemo: 파일 탐색기. 특별한건 없는데 아이콘 크기를 키울 수 있어서.
 
-dwm 쓰고 있어서 다른 wm 사용하면 편하게 할 것을 안편하게 쓰고 있는 부분이 많습니다. 더 좋은 것 있으면 언제든지 알려주세요.
+## 시스템 제어 관련
+
+- pactl, amixer: 오디오 제어. pactl은 음량 100%을 넘길 수 있음.
+    - `pactl set-sink-volume @DEFAULT_SINK@ 150%`
+- xorg-xbacklight: 디스플레이 밝기 제어.
 
 # `open` 사용하기
 
