@@ -33,7 +33,7 @@ const FaceLink = styled(Link)`
 `
 
 const HeaderContainer = styled.div`
-  margin: 1.4rem auto 0.5rem;
+  margin: 0rem auto 0.5rem;
   max-width: ${layouts.content};
   padding: 1.45rem 1.0875rem;
 
