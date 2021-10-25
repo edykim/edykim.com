@@ -23,7 +23,7 @@ const IndexPage = () => (
       </figure>
     </HeroContainer>
     <ContentContainer>
-      <h1>Hello, I am Edward Kim!</h1>
+      <h1>Hello, I am Edward.</h1>
       <p>
         I am a software engineer who loves to make web services and useful
         tools. I enjoy building small things, taking photographs, and having a
