@@ -107,6 +107,7 @@ const Content = styled.div`
 
   img {
     max-width: 100%;
+    height: auto;
   }
   > img {
     text-indent: 0;
