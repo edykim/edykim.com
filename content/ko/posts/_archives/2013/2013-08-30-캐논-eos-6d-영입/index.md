@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: canon-eos-6d-recruitment
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - 40mm 팬케익
   - canon eos 6d
   - 지름

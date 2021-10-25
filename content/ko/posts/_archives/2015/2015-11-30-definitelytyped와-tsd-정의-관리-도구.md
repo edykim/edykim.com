@@ -11,9 +11,8 @@ lang: ko
 slug: definitelytyped-and-tsd-definition-management-tool
 headline:
   - 인터페이스가 있는 JavaScript가 쓰고 싶다면, TypeScript에 DefinitelyTyped는 필수.
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - tsd
   - typescript
 

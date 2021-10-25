@@ -1,5 +1,5 @@
 ---
-title: "블로그: 보관함"
+title: "전체 글"
 author: haruair
 type: archive
 contentType: post
@@ -9,6 +9,4 @@ url: archives
 
 ---
 
-:::div{.no-indent}
-:span[[블로그 RSS 피드](https://edykim.com/ko/feed.xml)]{.button}
-:::
+- [블로그 RSS 피드](https://edykim.com/ko/feed.xml)

@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: change-to-a-new-theme-twenty-twelve
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - themes
   - twenty twelve
   - wordpress

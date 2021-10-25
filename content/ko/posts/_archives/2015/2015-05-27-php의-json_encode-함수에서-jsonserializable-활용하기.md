@@ -11,9 +11,8 @@ lang: ko
 slug: using-jsonserializable-in-phps-jsonencode-function
 headline:
   - PHP 5.4 이상에서 활용 가능한 JsonSerializable 인터페이스 소개
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - JsonSerializable
   - php
 

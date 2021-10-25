@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: how-to-troubleshoot-shared-folders-after-windows-8.1-update-in-vmfusion
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - vmware
   - windows 8.1
   - wmfusion

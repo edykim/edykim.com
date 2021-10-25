@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: installing-opencv-on-mac-and-running-examples
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - opencv
 
 ---

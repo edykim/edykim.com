@@ -41,12 +41,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(format: PLAIN, truncate: true)
+          excerpt(format: PLAIN, truncate: true, pruneLength: 30)
           fields {
             url
           }
           frontmatter {
-            date(formatString: "M월 D일")
+            date(formatString: "YYYY-MM-DD")
             dateSort: date(formatString: "YYYY")
             title
           }
@@ -67,12 +67,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(format: PLAIN, truncate: true)
+          excerpt(format: PLAIN, truncate: true, pruneLength: 30)
           fields {
             url
           }
           frontmatter {
-            date(formatString: "M월 D일")
+            date(formatString: "YYYY-MM-DD")
             dateSort: date(formatString: "YYYY")
             title
           }

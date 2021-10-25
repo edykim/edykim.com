@@ -10,9 +10,8 @@ history:
 lang: ko
 slug: new-years-day
 featured_image: 'https://edykim.com/wp-content/uploads/2013/01/any-do-11.png?resize=624%2C143&ssl=1'
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - android
   - app
   - calendar

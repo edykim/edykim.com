@@ -36,7 +36,7 @@ export const query = graphql`
             url
           }
           frontmatter {
-            date(formatString: "MMMM D")
+            date(formatString: "YYYY-MM-DD")
             dateSort: date(formatString: "YYYY")
             title
             lang

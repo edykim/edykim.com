@@ -11,10 +11,9 @@ lang: ko
 slug: module.exports-and-exports-in-node.js
 headline:
   - 이 둘은 무엇이고 어떻게 사용하고 사용하지 말아야 하는가, 번역.
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - exports
   - module.exports
   - nodejs

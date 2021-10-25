@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout, { ContentContainer } from "../components/layout"
 import Seo from "../components/seo"
 import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
@@ -26,24 +26,25 @@ const ShowcaseTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <Subject>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {headline && <Headline>{headline}</Headline>}
-        </Subject>
-        <Content
-          style={{
-            lineHeight: 1.76,
-            fontSize: "1rem",
-            wordBreak: "keep-all",
-            textIndent: "0.5rem",
-          }}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        {featuredItems.edges.length > 0 && (
-          <PostShortList title={"인기 글"} posts={featuredItems.edges} />
-        )}
-        <PostShortList title={"최근 글"} posts={items.edges} />
+        <ContentContainer>
+          <Subject>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            {headline && <Headline>{headline}</Headline>}
+          </Subject>
+          <Content
+            style={{
+              lineHeight: 1.76,
+              fontSize: "1rem",
+              wordBreak: "keep-all",
+            }}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+          {featuredItems.edges.length > 0 && (
+            <PostShortList title={"인기 글"} posts={featuredItems.edges} />
+          )}
+          <PostShortList title={"최근 글"} posts={items.edges} />
+        </ContentContainer>
       </article>
     </Layout>
   )

@@ -28,7 +28,6 @@ const PostTemplate = ({ data, location }) => {
             lineHeight: 1.76,
             fontSize: "1rem",
             wordBreak: "keep-all",
-            textIndent: "0.5rem",
           }}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -48,14 +47,14 @@ const PostTemplate = ({ data, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.url} rel="prev">
-                ← {previous.frontmatter.title || previous.frontmatter.date}
+                ← {previous.frontmatter.title || previous.excerpt || next.frontmatter.date}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.url} rel="next">
-                {next.frontmatter.title || next.frontmatter.date} →
+                {next.frontmatter.title || next.excerpt || next.frontmatter.date} →
               </Link>
             )}
           </li>

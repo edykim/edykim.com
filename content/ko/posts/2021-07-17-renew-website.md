@@ -5,9 +5,8 @@ type: post
 date: "2021-07-17T10:02:23"
 lang: ko
 slug: migrating-gatsby-from-v2-to-v3
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - blog
   - housekeeping
   - gatsby

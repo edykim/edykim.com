@@ -12,9 +12,8 @@ slug: microsoft-universal-foldable-keyboard
 featured_image: 'https://edykim.com/wp-content/uploads/2018/05/DSC06985_.jpg?resize=825%2C510&ssl=1'
 headline:
   - 글이 쉬이 써지지 않는 것은 내 탓이 아니고 키보드 탓입니다
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - 키보드
 
 ---

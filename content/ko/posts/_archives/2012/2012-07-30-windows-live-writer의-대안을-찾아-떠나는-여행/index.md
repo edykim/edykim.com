@@ -9,7 +9,7 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: a-journey-to-find-alternatives-to-windows-live-writer-for-mac
-categories:
+tags:
   - 두루두루 IT
 
 ---

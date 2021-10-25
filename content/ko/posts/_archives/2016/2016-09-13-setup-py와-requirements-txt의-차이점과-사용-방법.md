@@ -11,10 +11,9 @@ lang: ko
 slug: how-does-setup.py-differ-from-requirements.txt-and-how-to-use-it
 headline:
   - 파이썬의 의존성 관리 양대산맥, setup.py vs requirements.txt 용도와 차이점 살펴보기, 번역
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - pypi
   - python
   - reqruirements.txt

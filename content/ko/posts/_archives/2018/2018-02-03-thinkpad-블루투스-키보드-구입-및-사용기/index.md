@@ -13,9 +13,8 @@ headline:
   - 맥북프로 키보드가 주는 고난을 벗어나기 위해, 휴대용 키보드를 생각하고 있다면.
 amp_status:
   - enabled
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - keyboard
   - thinkpad keyboard
 

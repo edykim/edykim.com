@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: goodbye-steve-jobs
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - apple
   - steve jobs
 

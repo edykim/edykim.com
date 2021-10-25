@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: purchase-lenovo-x1-carbon-6th-generation
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - Lenovo x1 carbon
 
 ---

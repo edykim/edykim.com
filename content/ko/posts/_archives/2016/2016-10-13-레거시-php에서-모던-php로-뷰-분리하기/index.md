@@ -11,9 +11,8 @@ lang: ko
 slug: legacy-php-to-modern-php-split-views
 headline:
   - 먼 길을 가도 그 시작은 첫 발을 내딛는 일에서, 구렁이 담 넘어가듯 모던 PHP 넘어가기 시리즈.
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - composer
   - php
   - view

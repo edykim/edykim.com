@@ -11,9 +11,8 @@ lang: ko
 slug: do-not-get-rid-of-your-pull-request
 headline:
   - 코드를 단순히 push 할 것이 아니라 상대가 pull 할 수 있도록, 커뮤니티와 소통하는 방법. 번역글.
-categories:
-  - 번역
 tags:
+  - 번역
   - pull request
   - 오픈소스
   - 코드줍기

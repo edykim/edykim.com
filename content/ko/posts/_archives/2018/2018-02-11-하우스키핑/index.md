@@ -11,7 +11,7 @@ lang: ko
 slug: housekeeping
 headline:
   - 신년맞이 블로그 정리
-categories:
+tags:
   - 나의 이야기
 
 ---

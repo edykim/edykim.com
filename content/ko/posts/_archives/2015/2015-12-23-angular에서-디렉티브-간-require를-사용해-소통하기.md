@@ -11,10 +11,9 @@ lang: ko
 slug: use-require-between-directives-in-angular
 headline:
   - 계층 구조의 Directive에서 `require`를 이용해 컨트롤러를 공유하고 데이터를 주고 받는 방법
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - angularjs
   - directive
 

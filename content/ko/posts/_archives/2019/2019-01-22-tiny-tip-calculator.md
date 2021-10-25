@@ -5,9 +5,8 @@ type: post
 date: "2019-01-22T11:52:00"
 lang: ko
 slug: postmortem-tiny-tip-calculator
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - app
   - ios
   - ionic

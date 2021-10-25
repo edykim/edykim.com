@@ -4,9 +4,9 @@ import { colors, layouts, fonts } from "~/constraint"
 const Hr = css`
   height: 0;
   border: 0;
-  border-bottom: 5px solid ${colors.backgroundAlt};
-  max-width: ${layouts.content};
-  margin: 4rem auto 2rem;
+  border-bottom: 1px solid ${colors.text};
+  max-width: ${layouts.tiny};
+  margin: 4rem auto 4rem;
 
   @media (max-width: 750px) {
     margin-top: 2rem;
@@ -209,7 +209,6 @@ const Content = styled.div`
     margin: 40px auto;
   }
   p {
-    text-indent: 0.5em;
     margin-top: 1em;
     margin-bottom: 0.7em;
   }
@@ -242,64 +241,11 @@ const Content = styled.div`
     font-size: 1em;
     margin-bottom: 1em;
   }
-  h1 {
-    counter-increment: h1counter;
-    counter-reset: h2counter;
-  }
-  h2 {
-    counter-increment: h2counter;
-    counter-reset: h3counter;
-  }
-  h3 {
-    counter-increment: h3counter;
-    counter-reset: h4counter;
-  }
-  h4 {
-    counter-increment: h4counter;
-    counter-reset: h5counter;
-  }
-  h2:before {
-    content: counter(h2counter) ". ";
-  }
-  h3:before {
-    content: counter(h2counter) "." counter(h3counter) ". ";
-  }
-  h4:before {
-    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter)
-      ". ";
-  }
-  h1:not(.skip) :before {
-    content: counter(h1counter) ". ";
-  }
-  h1:not(.skip) ~ h2:before {
-    content: counter(h1counter) "." counter(h2counter) ". ";
-  }
-  h1:not(.skip) ~ h3:before {
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter)
-      ". ";
-  }
-  h1:not(.skip) ~ h4:before {
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter)
-      "." counter(h4counter) ". ";
-  }
-  hr + h1:not(.skip):before {
-    content: "";
-  }
-  hr + h1:not(.skip) ~ h2:before {
-    content: counter(h2counter) ". ";
-  }
-  hr + h1:not(.skip) ~ h3:before {
-    content: counter(h2counter) "." counter(h3counter) ". ";
-  }
-  hr + h1:not(.skip) ~ h4:before {
-    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter)
-      ". ";
-  }
   hr {
     ${Hr};
   }
   blockquote {
-    font-size: 0.95em;
+    font-size: 0.95rem;
     line-height: 1.68;
     padding: 20px;
     background: ${colors.backgroundAlt};

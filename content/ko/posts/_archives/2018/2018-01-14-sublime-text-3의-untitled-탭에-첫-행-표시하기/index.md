@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: displaying-the-first-line-in-the-untitled-tab-of-sublime-text-3
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - sublime text 3
 
 ---

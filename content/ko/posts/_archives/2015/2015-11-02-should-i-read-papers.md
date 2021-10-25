@@ -5,10 +5,9 @@ type: post
 date: "2015-11-02T08:14:00"
 lang: ko
 slug: should-i-read-papers
-categories:
-  - 공부
   - 번역
 tags:
+  - 공부
   - paper
   - 논문
 history:
