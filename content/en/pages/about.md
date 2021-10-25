@@ -8,7 +8,7 @@ url: /about
 lang: en
 ---
 
-# Hello, I'm Edward.
+<p style="font-weight: 600; font-size: 1.6rem;">Hello, I'm Edward.</p>
 
 I'm an open web developer who loves focusing on problems and creating quick prototypes. I like to talk about web technology, software architecture, and community.
 
