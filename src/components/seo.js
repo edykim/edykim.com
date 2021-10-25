@@ -44,6 +44,7 @@ function Seo({ description, lang, title, noindex = false }) {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
+        { name: "theme-color", content: "#ffffff" },
         {
           name: `description`,
           content: metaDescription,
