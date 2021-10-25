@@ -7,10 +7,9 @@ lang: ko
 slug: when-to-break-up-a-component-into-multiple-components
 headline:
   - 어떤 상황에서 하나의 컴포넌트를 여러 컴포넌트로 나누는 게 맞을까요?
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - react
   - js
 

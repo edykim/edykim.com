@@ -10,9 +10,8 @@ history:
 lang: ko
 slug: developers-way-of-learning-english-developer-english
 featured_image: 'https://edykim.com/wp-content/uploads/2012/04/스크린샷-2012-04-19-오전-8.43.23.png?resize=486%2C306&ssl=1'
-categories:
-  - 공부
 tags:
+  - 공부
   - english
   - 개발자영어
   - 영어공부

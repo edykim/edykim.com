@@ -11,9 +11,8 @@ lang: ko
 slug: basic-usage-of-babel-for-ecmascript-6
 headline:
   - JavaScript의 최신 문법, ECMAScript 6가 적용되기 전에 사용해볼 수 있는 방법
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - babel
   - ECMAScript6
   - javascript

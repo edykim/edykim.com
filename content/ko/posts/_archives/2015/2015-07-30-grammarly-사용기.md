@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: english-spelling-grammar-checking
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - grammarly
   - 영어
 

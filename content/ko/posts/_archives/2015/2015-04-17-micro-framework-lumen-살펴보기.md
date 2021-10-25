@@ -11,9 +11,8 @@ lang: ko
 slug: microframework-lumen-at-a-glance
 headline:
   - Laravel에서 발표한 경량 프레임워크 Lumen을 간단하게 정리. 작고 간단하면서도 강력한 기능을 제공.
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - lumen
   - micro framework
   - php

@@ -7,10 +7,9 @@ lang: ko
 slug: prop-drilling
 headline:
   - 프로퍼티 내리꽂기가 무엇인지, 장단점은 무엇인지, 사용하면서 겪는 문제를 피하는 방법을 살펴봅니다
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - react
 
 ---

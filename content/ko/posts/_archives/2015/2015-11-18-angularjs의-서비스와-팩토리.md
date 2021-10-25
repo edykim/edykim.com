@@ -11,9 +11,8 @@ lang: ko
 slug: services-and-factory-of-angularjs
 headline:
   - "같은 듯 다른 서비스와 팩토리 구분해서 사용하기. Factory: I'm your father. Service: Noooo!!"
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - angularjs
 
 ---

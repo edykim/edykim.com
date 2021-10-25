@@ -9,7 +9,7 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: iriver-story-k-reviews
-categories:
+tags:
   - 리뷰
 
 ---

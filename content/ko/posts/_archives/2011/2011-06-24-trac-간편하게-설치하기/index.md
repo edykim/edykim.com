@@ -9,7 +9,7 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: easy-installation-of-trac
-categories:
+tags:
   - 개발 이야기
 
 ---

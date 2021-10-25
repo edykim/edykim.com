@@ -11,10 +11,9 @@ lang: ko
 slug: javascript-partial-application
 headline:
   - Partial Application in JavaScript 번역, 부분 어플리케이션의 개념
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - javascript
   - js
   - partial application

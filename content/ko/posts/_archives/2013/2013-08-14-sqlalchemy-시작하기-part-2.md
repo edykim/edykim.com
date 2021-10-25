@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: getting-started-with-sqlalchemy-part-2
-categories:
-  - 번역
 tags:
+  - 번역
   - python
   - sqlalchemy
   - 대충번역

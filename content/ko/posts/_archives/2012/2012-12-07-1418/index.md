@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: flow-unlock-pattern-to-game
-categories:
-  - 리뷰
 tags:
+  - 리뷰
   - android
   - flow
   - game

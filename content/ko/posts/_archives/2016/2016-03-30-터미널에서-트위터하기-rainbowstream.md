@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: twitter-from-terminal-rainbowstream
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - rainbowstream
   - terminal
   - 터미널에서

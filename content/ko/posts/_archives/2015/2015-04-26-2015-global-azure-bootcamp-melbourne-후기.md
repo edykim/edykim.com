@@ -11,10 +11,9 @@ lang: ko
 slug: 2015-global-azure-bootcamp-melbourne-reviews
 headline:
   - Azure의 다양한 서비스를 살펴볼 수 있었던 GAB 참가 이야기.
-categories:
-  - 두루두루 IT
   - 멜번 사는 이야기
 tags:
+  - 두루두루 IT
   - Azure
   - Azure Bootcamp
 

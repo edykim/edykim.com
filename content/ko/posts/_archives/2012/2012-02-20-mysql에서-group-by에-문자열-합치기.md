@@ -9,7 +9,7 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: merging-strings-into-group-by-in-mysql
-categories:
+tags:
   - 나의 이야기
 
 ---

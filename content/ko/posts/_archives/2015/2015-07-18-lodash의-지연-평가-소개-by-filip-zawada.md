@@ -11,10 +11,9 @@ lang: ko
 slug: introduction-to-lodashs-delay-evaluation-by-filip-zawada
 headline:
   - Lodash가 100배 빨라진 비결, 지연평가 적용에 대한 소개 포스트 번역
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - lazy evaluation
   - lodash
 

@@ -11,9 +11,8 @@ lang: ko
 slug: how-to-use-typescript-without-reference
 headline:
   - 'TypeScript의 tsconfig.json으로 <reference path="foo.ts" />에서 탈출하는 방법'
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - dts
   - typescript
 

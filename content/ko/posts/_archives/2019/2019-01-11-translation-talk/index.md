@@ -5,10 +5,9 @@ type: post
 date: "2019-01-11T11:52:00"
 lang: ko
 slug: talk-translate-what-i-want
-categories:
-  - 내 이야기
   - 번역
 tags:
+  - 내 이야기
   - talk
 
 ---

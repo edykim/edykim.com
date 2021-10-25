@@ -11,9 +11,8 @@ lang: ko
 slug: changing-keyboard-mapping-on-mac-karabiner
 headline:
   - 일반 키보드에서 다 HHKB 같은 기운이 오게 만드는 맵핑 프로그램, Karabiner와 설정
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - karabiner
   - 키보드
 

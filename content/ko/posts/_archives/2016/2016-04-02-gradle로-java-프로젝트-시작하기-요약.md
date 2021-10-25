@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: start-a-java-project-with-gradle-summary
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - gradle
   - java
   - spring

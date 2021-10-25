@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: outputting-characters-in-terminal-as-asciiart-figlet
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - figlet
   - terminal
   - 터미널에서

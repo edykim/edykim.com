@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: php-dependency-management-tool-getting-started-with-composer
-categories:
-  - 번역
 tags:
+  - 번역
   - composer
   - Dependency
   - php

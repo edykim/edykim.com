@@ -9,10 +9,9 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: transfer-from-chrome-to-safari
-categories:
-  - 두루두루 IT
   - 리뷰
 tags:
+  - 두루두루 IT
   - Chrome
   - safari
   - safari extension

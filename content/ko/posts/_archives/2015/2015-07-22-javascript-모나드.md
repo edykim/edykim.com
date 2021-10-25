@@ -11,10 +11,9 @@ lang: ko
 slug: javascript-monad
 headline:
   - '함수형 프로그래밍에서의 모나드 JavaScript에서 살펴보기,  Monads in JavaScript 번역'
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - javascript
   - js
   - monad

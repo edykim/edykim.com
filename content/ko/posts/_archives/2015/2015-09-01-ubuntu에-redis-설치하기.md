@@ -11,9 +11,8 @@ lang: ko
 slug: installing-redis-on-ubuntu
 headline:
   - Redis 설치 삽질 기록. Ubuntu에 Redis를 빠르게 설치하기 위한 치트 노트.
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - redis
   - server
   - ubuntu

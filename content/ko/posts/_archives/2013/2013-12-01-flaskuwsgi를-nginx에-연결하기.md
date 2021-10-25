@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: connecting-flask-uwsgi-to-nginx
-categories:
-  - 번역
 tags:
+  - 번역
   - flask
   - nginx
   - python

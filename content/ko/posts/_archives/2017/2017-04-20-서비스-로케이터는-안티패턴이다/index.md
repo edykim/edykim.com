@@ -11,10 +11,9 @@ lang: ko
 slug: the-service-locator-is-an-antipattern
 headline:
   - 디자인패턴인 서비스 로케이터를 사용하면 안되는 이유에 대해, 번역.
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - csharp
   - dependency injection
   - design pattern
