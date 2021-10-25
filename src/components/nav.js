@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { colors, layouts } from "~/constraint"
 
 export const PostNav = styled.nav`
-  max-width: ${layouts.narrow};
+  max-width: ${layouts.content};
   margin: 0 auto;
   a {
     color: ${colors.primary};
