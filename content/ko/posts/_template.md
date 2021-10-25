@@ -1,5 +1,6 @@
 ---
 title: _template
+noTitle: true
 author: haruair
 type: post
 date: "2020-01-24T13:02:23"
