@@ -9,10 +9,9 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: events-eventemitter-translation-in-node.js
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - eventemitter
   - nodejs
   - js

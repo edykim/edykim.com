@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: dell-latitude-e7240-display-replacement
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - dell
   - latitude E7240
 

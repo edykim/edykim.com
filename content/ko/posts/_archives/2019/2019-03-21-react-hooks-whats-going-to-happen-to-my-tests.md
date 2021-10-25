@@ -7,10 +7,9 @@ lang: ko
 slug: react-hooks-whats-going-to-happen-to-my-tests
 headline:
   - 새로 나온 훅 기능에 대비해서 테스트는 어떻게 준비할지 알아봅니다
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - react
   - js
   - testing

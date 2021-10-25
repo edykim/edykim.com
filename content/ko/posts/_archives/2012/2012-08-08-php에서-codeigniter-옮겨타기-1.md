@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: moving-from-codeigniter-to-php-1
-categories:
-  - 공부
 tags:
+  - 공부
   - codeigniter
   - php
 

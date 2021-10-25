@@ -6,10 +6,9 @@ lang: ko
 slug: application-state-management
 headline:
   - 소프트웨어에서 가장 복잡한 문제 중 하나인 상태 관리를 React에서는 어떻게 접근하는지 알아봅니다
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - react
   - state
 

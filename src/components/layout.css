@@ -1,75 +1,11 @@
-:root {
-  --color-background: #ffffff;
-  --color-background-alt: #f8f8f8;
-  --color-primary: #0070ff;
-  --color-link: #ec0b43;
-  --color-highlight: #fff7e0;
-  --color-text: #011627;
-  --color-body: #080708;
-  --color-subtext: #7d869c;
-  --color-shade: #eae6ea;
-
-  /* Syntax highlights */
-  --highlight-base03: #000000;
-  --highlight-base02: #606060;
-  --highlight-base01: #606060;
-  --highlight-base00: #393649;
-  --highlight-base0: #d0d0d0;
-  --highlight-base1: #505050;
-  --highlight-base2: #d2e1ee;
-  --highlight-base3: #f0f0f0;
-  --highlight-base4: #d2e1ee;
-  --highlight-base5: #f0f0f0;
-  --highlight-yellow: #0061b5;
-  --highlight-orange: #5216cb;
-  --highlight-red: #dc322f;
-  --highlight-magenta: #d33682;
-  --highlight-violet: #393945;
-  --highlight-blue: #485487;
-  --highlight-cyan: #5e3e8a;
-  --highlight-green: #001f99;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #121212;
-    --color-background-alt: #202020;
-    --color-primary: #f5af8e;
-    --color-link: #ec0b43;
-    --color-highlight: #262626;
-    --color-text: #dee4e9;
-    --color-body: #d2ccd2;
-    --color-subtext: #6b6f76;
-    --color-shade: #1c1c1c;
-
-    /* Syntax highlights */
-    --highlight-base03: #000000;
-    --highlight-base02: #606060;
-    --highlight-base01: #606060;
-    --highlight-base00: #b8b8b8;
-    --highlight-base0: #404040;
-    --highlight-base1: #505050;
-    --highlight-base2: #d2e1ee;
-    --highlight-base3: #00000c;
-    --highlight-base4: #1c133c;
-    --highlight-base5: #141414;
-    --highlight-yellow: #1cbbd7;
-    --highlight-orange: #b28dfc;
-    --highlight-red: #dc322f;
-    --highlight-magenta: #d33682;
-    --highlight-violet: #a4a4a4;
-    --highlight-blue: #8195f0;
-    --highlight-cyan: #c4abe8;
-    --highlight-green: #c8ff00;
-  }
-}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em sans-serif;
+  font: 112.5%/1.6em -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 @media screen and (max-width: 720px) {
   :root {
     font-size: 90%;
@@ -80,12 +16,13 @@ html {
     font-size: 84.5%;
   }
 }
+
 body {
-  background-color: var(--color-background);
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  color: #000000;
+  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -108,6 +45,17 @@ section,
 summary {
   display: block;
 }
+figcaption {
+  font-size: 0.8rem;
+  color: hsla(0, 0%, 0%, 0.8);
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 1140px) {
+  figcaption {
+    margin: 0.5rem 1rem;
+    text-align: right;
+  }
+}
 audio,
 canvas,
 progress,
@@ -128,6 +76,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: #0000ff;
 }
 a:active,
 a:hover {
@@ -156,11 +105,10 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 1.4rem;
   line-height: 1.1;
 }
 mark {
@@ -339,7 +287,7 @@ h2 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 h3 {
@@ -356,7 +304,7 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -373,7 +321,7 @@ h4 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.1;
 }
 h5 {
@@ -390,7 +338,7 @@ h5 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 0.8rem;
   line-height: 1.1;
 }
 h6 {
@@ -407,7 +355,7 @@ h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: 0.75rem;
   line-height: 1.1;
 }
 hgroup {
@@ -563,11 +511,11 @@ dt {
 th {
   font-weight: bold;
 }
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
 ol li {
   padding-left: 0;
+}
+ul {
+  list-style: square;
 }
 ul li {
   padding-left: 0;
@@ -670,78 +618,78 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
-code[class*="language-"],
-pre[class*="language-"] {
-  color: var(--highlight-base00);
-
-  font-family: "Source Code Pro", "Roboto Mono", "SF Mono", Monaco, "Andale Mono", "Ubuntu Mono",
-    Menlo, Consolas, monospace;
+/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
+/* http://k88hudson.github.io/react-markdocs */
+/**
+ * @author k88hudson
+ *
+ * Based on prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/*********************************************************
+* General
+*/
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #262626;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
   text-align: left;
+  white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
-
   line-height: 1.5;
-
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  padding: 1rem;
 }
-
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  background: var(--highlight-base2);
-}
-
 pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  background: var(--highlight-base2);
+pre[class*="language-"]::mozselection,
+code[class*="language-"]::mozselection {
+  text-shadow: none;
+  background: #394451;
 }
-
-/* Code blocks */
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
 pre[class*="language-"] {
   padding: 1em;
-  margin: 0.5em 0;
+  margin: .5em 0;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  background: #fafafa;
 }
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background-color: var(--highlight-base5);
-}
-
-/* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  word-break: break-all;
+  padding: .1em .3em;
+  border-radius: .3em;
+  color: #000000;
+  background: #ededed;
 }
-
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: .7;
+}
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--highlight-base1);
+  color: #93a1a1;
 }
-
 .token.punctuation {
-  color: var(--highlight-base01);
+  color: #999999;
 }
-
-.namespace {
-  opacity: 0.7;
-}
-
 .token.property,
 .token.tag,
 .token.boolean,
@@ -749,41 +697,37 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: var(--highlight-blue);
+  color: #144d34;
 }
-
 .token.selector,
 .token.attr-name,
 .token.string,
 .token.char,
 .token.builtin,
-.token.url,
 .token.inserted {
-  color: var(--highlight-cyan);
+  color: #6b6b6b;
 }
-
-.token.entity {
-  color: var(--highlight-base00);
-  background: var(--highlight-base2);
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: #ffffff;
 }
-
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: var(--highlight-green);
+  color: #0077aa;
 }
-
-.token.function,
-.token.class-name {
-  color: var(--highlight-yellow);
+.token.function {
+  color: #4b6fdd;
 }
-
 .token.regex,
 .token.important,
 .token.variable {
-  color: var(--highlight-orange);
+  color: #d18800;
 }
-
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -791,13 +735,33 @@ pre[class*="language-"] {
 .token.italic {
   font-style: italic;
 }
-
 .token.entity {
   cursor: help;
 }
-
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+  position: relative;
+}
+pre[class*="language-"] > code[class*="language-"] {
+  position: relative;
+  z-index: 1;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #e6e6e6;
+  box-shadow: inset 5px 0 0 #bdbdbd;
+  z-index: 0;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
 .gatsby-highlight {
-  background-color: var(--highlight-base5);
   padding: 1em;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -811,6 +775,9 @@ pre[class*="language-"] {
   }
 }
 
+.gatsby-highlight {
+  background: #fafafa;
+}
 .gatsby-highlight > pre {
   margin: 0;
   padding: 0;
@@ -820,9 +787,9 @@ pre[class*="language-"] {
 }
 
 .gatsby-highlight > pre > code {
-  padding-right: 1rem;
+  padding-right: 2rem;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: inline-block;
 }
 
@@ -831,8 +798,8 @@ pre[class*="language-"] {
   height: 12px;
 }
 .gatsby-highlight::-webkit-scrollbar-track {
-  background: var(--highlight-base3);
+  background: #fafafa;
 }
 .gatsby-highlight::-webkit-scrollbar-thumb {
-  background: var(--highlight-base0);
+  background: #ddd;
 }

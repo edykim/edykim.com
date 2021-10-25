@@ -11,9 +11,8 @@ lang: ko
 slug: sending-telegram-messages-in-ms-powershell
 headline:
   - 웹페이지를 가공해서 텔레그램 메시지 보내기, Windows의 강력한 내장 쉘인 파워쉘을 이용하는 방법
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - powershell
 
 ---

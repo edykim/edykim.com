@@ -9,7 +9,7 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: tomcat-7.0-virtual-host-virtualhost-setup
-categories:
+tags:
   - 개발 이야기
 
 ---

@@ -1,22 +1,14 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { colors, fonts, layouts } from "~/constraint"
+import { colors } from "~/constraint"
 import PostItem from "./post-item"
 
 const Wrapper = styled.div`
-  max-width: ${layouts.narrow};
   margin: 0 auto 2rem;
 `
 
-const Title = styled.div`
-  margin-bottom: 0.8rem;
+const Title = styled.h2`
   color: ${colors.text};
-  font-weight: 800;
-  font-size: ${fonts.title};
-`
-
-const Container = styled.div`
-  padding: 0 ${layouts.sidePadding};
 `
 
 export default class PostShortList extends Component {
@@ -24,9 +16,8 @@ export default class PostShortList extends Component {
     const { posts, title } = this.props
     return (
       <Wrapper>
-        <Container>
-          <Title>{title}</Title>
-
+        <Title>{title}</Title>
+        <ul style={{ listStyle: "square" }}>
           {posts.length > 0 &&
             posts.map(({ node }, index) => (
               <PostItem
@@ -35,7 +26,7 @@ export default class PostShortList extends Component {
                 showYears={true}
               />
             ))}
-        </Container>
+        </ul>
       </Wrapper>
     )
   }

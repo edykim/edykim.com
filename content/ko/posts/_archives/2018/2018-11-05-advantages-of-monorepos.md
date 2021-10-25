@@ -7,10 +7,9 @@ lang: ko
 slug: advantages-of-monorepos
 headline:
   - 여러 리포지터리를 운영하는 방법 대신에 단일 리포지터리를 운영할 때 좋은 점, 번역
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - monorepo
 
 ---

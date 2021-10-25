@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: extracting-files-based-on-revisions-from-mercurial-totoisehg
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - mercurial
   - SVN
   - tortoiseHg

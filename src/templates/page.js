@@ -33,7 +33,6 @@ const PageTemplate = ({ data, location }) => {
             lineHeight: 1.76,
             fontSize: "1rem",
             wordBreak: "keep-all",
-            textIndent: "0.5rem",
           }}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"

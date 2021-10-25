@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: creating-a-.gitignore-file-with-ease-gitignore.io
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - git
   - gitignore
   - 이상한

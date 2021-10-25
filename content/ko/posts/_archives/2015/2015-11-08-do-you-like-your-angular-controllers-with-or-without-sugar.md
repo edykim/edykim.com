@@ -5,10 +5,9 @@ type: post
 date: "2015-11-08T08:14:00"
 lang: ko
 slug: do-you-like-your-angular-controllers-with-or-without-sugar
-categories:
-  - 번역
   - 개발 이야기
 tags:
+  - 번역
   - js
   - angularjs
 history:

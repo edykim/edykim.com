@@ -11,10 +11,9 @@ lang: ko
 slug: start-with-orgmode-basics
 headline:
   - Emacs에서 사용할 수 있는 강력한 생산성 도구 Org-mode 튜토리얼, 번역.
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - emacs
   - org-mode
 

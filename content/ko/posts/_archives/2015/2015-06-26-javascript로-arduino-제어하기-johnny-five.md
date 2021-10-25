@@ -11,9 +11,8 @@ lang: ko
 slug: controlling-arduino-with-javascript-johnnyfive
 headline:
   - JS의 다양한 라이브러리, 강력한 기능을 Arduino에서 활용하는 방법
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - Firmata
   - javascript
   - js

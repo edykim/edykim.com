@@ -11,9 +11,8 @@ lang: ko
 slug: ipify-to-30-billion-and-beyond
 headline:
   - 스케일 가능한 웹서비스를 Heroku로 엄청나게 단순한 방법으로 만들어 운영한 이야기. 번역.
-categories:
-  - 번역
 tags:
+  - 번역
   - ipify
 featured: true
 ---

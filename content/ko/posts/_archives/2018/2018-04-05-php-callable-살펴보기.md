@@ -11,9 +11,8 @@ lang: ko
 slug: a-look-at-php-callable
 headline:
   - 문자열도 배열도 객체도 callable일 수 있는 신비한 php의 세계에서 callable을 알아보자
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - callable
   - closure
   - interface

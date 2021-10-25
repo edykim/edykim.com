@@ -9,10 +9,9 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: koala-hates-rain-reviews
-categories:
-  - 개발 이야기
   - 나의 이야기
 tags:
+  - 개발 이야기
   - game
   - koala hates rain
   - 게임

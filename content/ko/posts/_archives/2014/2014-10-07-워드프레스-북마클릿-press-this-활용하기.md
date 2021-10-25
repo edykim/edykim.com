@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: using-wordpress-bookmarklet-press-this
-categories:
-  - 두루두루 IT
 tags:
+  - 두루두루 IT
   - press this
   - tip
   - wordpress

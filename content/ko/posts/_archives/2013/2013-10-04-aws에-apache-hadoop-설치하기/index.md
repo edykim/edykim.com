@@ -9,10 +9,9 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: installing-apache-hadoop-on-aws
-categories:
-  - 개발 이야기
   - 공부
 tags:
+  - 개발 이야기
   - hadoop
   - HDFS
   - 빅데이터

@@ -11,9 +11,8 @@ lang: ko
 slug: organizing-django-girls-tutorial
 headline:
   - DjangoGirls에서 제공하는 django로 블로그 만들기 요약
-categories:
-  - 개발 이야기
 tags:
+  - 개발 이야기
   - django
   - python
 

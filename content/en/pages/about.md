@@ -7,12 +7,6 @@ url: /about
 lang: en
 ---
 
-<figure>
-
-![me with a red bird](./../../ko/pages/about/me-with-a-red-bird.jpg)
-
-</figure>
-
 Hello, I'm Edward. I'm an open web developer who loves focusing on problems and creating quick prototypes. I'm excited to talk about web technology, software architecture, and community.
 
 - Love to talk about ECMAScript, microservices, serverless architecture

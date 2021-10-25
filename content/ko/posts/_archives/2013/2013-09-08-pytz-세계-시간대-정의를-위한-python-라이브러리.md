@@ -9,10 +9,9 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: pytz-python-library-for-world-time-zone-definition
-categories:
-  - 개발 이야기
   - 번역
 tags:
+  - 개발 이야기
   - python
   - pytz
   - timezone

@@ -9,9 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: ielts-general
-categories:
-  - 공부
 tags:
+  - 공부
   - IELTS
   - 아이엘츠
   - 영어

@@ -12,21 +12,22 @@
 
 export const colors = {
   background: "var(--color-background)",
-  backgroundAlt: "var(--color-background-alt)",
+  backgroundAlt: "#f8f8f8",
   primary: "var(--color-primary)",
   link: "var(--color-link)",
   highlight: "var(--color-highlight)",
-  text: "var(--color-text)",
+  text: "#000000",
   body: "var(--color-body)",
   subtext: "var(--color-subtext)",
   shade: "var(--color-shade)",
 }
 
 export const layouts = {
-  content: "52rem",
-  wide: "62rem",
-  full: "80rem",
-  narrow: "50rem",
+  content: "820px",
+  wide: "1140px",
+  full: "960px",
+  narrow: "720px",
+  tiny: "420px",
 
   sidePadding: "1rem",
   innerPadding: "3rem",

@@ -13,22 +13,6 @@ const ArchiveTemplate = ({ data, location }) => {
   const headline = post.frontmatter.headline?.join(" ")
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
-  const sorted = items.edges.reduce((carry, { node }) => {
-    carry[node.frontmatter.dateSort] = carry[node.frontmatter.dateSort] || []
-    carry[node.frontmatter.dateSort].push(node)
-    return carry
-  }, {})
-  // const categories = items.edges.reduce((carry, { node }) => {
-  //   node.frontmatter.categories &&
-  //     node.frontmatter.categories.forEach(category => {
-  //       carry[category] = carry[category] || 0
-  //       carry[category]++
-  //     })
-  //   return carry
-  // }, {})
-
-  const years = Object.keys(sorted).sort((a, b) => b - a)
-
   return (
     <Layout location={location} title={siteTitle} item={post}>
       <Seo
@@ -51,22 +35,12 @@ const ArchiveTemplate = ({ data, location }) => {
             lineHeight: 1.76,
             fontSize: "1rem",
             wordBreak: "keep-all",
-            textIndent: "0.5rem",
           }}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        {years.map(date => {
-          const nodes = sorted[date]
 
-          return (
-            <PostList
-              key={date}
-              nodes={nodes}
-              isCollapsed={date <= new Date().getFullYear() - 4}
-            />
-          )
-        })}
+        <PostList key={"archive"} nodes={items.edges.map(({ node }) => node)} />
       </article>
     </Layout>
   )
@@ -118,7 +92,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMM D")
-            dateSort: date(formatString: "YYYY")
             title
             tags
             categories
