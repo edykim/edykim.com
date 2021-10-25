@@ -12,7 +12,6 @@ import styled from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
-import ColorModeMeta from "./color-mode"
 import "./layout.css"
 
 const MainContainer = styled.div`
@@ -48,7 +47,6 @@ const Layout = ({ item, children }) => {
 
   return (
     <>
-      <ColorModeMeta />
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         item={item}
