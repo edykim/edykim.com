@@ -51,12 +51,25 @@ const Nav = styled.nav`
     top: 0;
     bottom: 0;
     right: 0;
+    padding: 1.8rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: 1.5rem;
-    row-gap: 2rem;
+    row-gap: 1rem;
+    :before {
+      font-weight: bold;
+      font-size: 1rem;
+      content: "edykim";
+      display: block;
+    }
+    a {
+      margin: 0;
+    }
+    ul + ul {
+      margin-top: 2rem;
+    }
     `
         : `display: none;`}
   }
