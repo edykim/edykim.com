@@ -53,6 +53,7 @@ export const pageQuery = graphql`
       }
     }
     previous: markdownRemark(id: { eq: $previousItemId }) {
+      excerpt(format: PLAIN, truncate: true, pruneLength: 16)
       fields {
         url
       }
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
       }
     }
     next: markdownRemark(id: { eq: $nextItemId }) {
+      excerpt(format: PLAIN, truncate: true, pruneLength: 16)
       fields {
         url
       }

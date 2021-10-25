@@ -1,145 +1,154 @@
-import * as React from "react"
+import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import styled from "styled-components"
-import { colors, layouts } from "~/constraint"
-import Face from "../../assets/yong.svg"
-import WowFace from "../../assets/yong-surprised.svg"
+import styled, {createGlobalStyle} from "styled-components"
+import Navigation from "../pieces/Navigation"
 
-const FaceLink = styled(Link)`
-  .active {
-    display: none;
-  }
-  .link {
-    display: inline-block;
-  }
-
-  > * {
-    width: 64px;
-    margin-right: 5px;
-    fill: ${colors.text};
-    @media (max-width: ${layouts.wide}) {
-      width: 48px;
-    }
-  }
-
-  &:hover {
-    .active {
-      display: inline-block;
-    }
-    .link {
-      display: none;
-    }
-  }
-`
+const collapsedWidth = '480px';
 
 const HeaderContainer = styled.div`
-  margin: 0rem auto 0.5rem;
-  max-width: ${layouts.content};
-  padding: 1.45rem 1.0875rem;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  @media (min-width: ${layouts.wide}) {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+  @media screen and (max-width: ${collapsedWidth}) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
   }
 `
 
-const contentTypeTranslation = {
-  ko: {
-    post: "게시글",
-    micro: "조각글",
-    note: "노트",
-  },
+const DocumentFixation = createGlobalStyle`
+  html {
+    overflow-y: hidden;
+  }
+`
+
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -0.5rem;
+  font-size: 0.9rem;
+  a {
+    display: block;
+    margin: 0 0.5rem;
+    color: #000000;
+  }
+  @media screen and (max-width: ${collapsedWidth}) {
+    ${props =>
+      props.showCollpaseMenu
+        ? `
+    position: fixed;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    row-gap: 2rem;
+    `
+        : `display: none;`}
+  }
+`
+
+const FloatContainer = styled.div`
+  position: fixed;
+  right: 1rem;
+  top: 1.5rem;
+  z-index: 200;
+  @media screen and (min-width: ${collapsedWidth}) {
+    display: none;
+  }
+`
+const StyleWrapper = styled.div`
+  border: 2px solid #000000;
+  border-radius: 3px;
+`
+const CollapseButton = styled.button`
+  appearance: none;
+  font-family: monospace;
+  font-weight: bold;
+  border-width: 2px;
+  background-color: #c0c0c0;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
+  outline: none;
+  &:focus {
+    background-color: #dddddd;
+  }
+`
+
+const CollapsedMenu = ({ toggleMenu }) => {
+  return (
+    <FloatContainer>
+      <StyleWrapper>
+        <CollapseButton onClick={() => toggleMenu()}>Menu</CollapseButton>
+      </StyleWrapper>
+    </FloatContainer>
+  )
 }
 
-const Header = ({ siteTitle, item }) => {
-  const lang = item?.frontmatter.lang
-  let contentType = item?.frontmatter.type
-
-  if (contentType === "archive" || contentType === "showcase") {
-    contentType = null
-  }
-
+const Header = ({ siteTitle }) => {
+  const [showCollpaseMenu, setCollpaseMenu] = useState(false)
   return (
-    <header>
+    <header
+      style={{
+        marginBottom: `2rem`,
+      }}
+    >
       <HeaderContainer>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <h1
+        <h1 style={{ margin: 0, fontSize: "1rem" }}>
+          <Link
+            to="/"
             style={{
-              margin: 0,
-              fontSize: "1rem",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
+              color: "#000000",
+              textDecoration: `none`,
             }}
           >
-            <FaceLink to="/">
-              <Face className={"link"} alt={siteTitle} />
-              <WowFace className={"active"} alt={siteTitle} />
-            </FaceLink>
-            <div>
-              {lang && lang !== "en" && (
-                <>
-                  <span
-                    style={{
-                      color: colors.text,
-                      fontWeight: "normal",
-                      margin: "0 0.5rem",
-                    }}
-                  >
-                    {"/"}
-                  </span>
-                  <Link
-                    to={`/${lang}/`}
-                    style={{
-                      fontWeight: "normal",
-                      textDecoration: `none`,
-                      color: colors.text,
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    {lang === "ko" ? "한국어" : lang}
-                  </Link>
-                </>
-              )}
-              {contentType && contentType !== "page" && (
-                <>
-                  <span
-                    style={{
-                      color: colors.text,
-                      fontWeight: "normal",
-                      margin: "0 0.5rem",
-                    }}
-                  >
-                    {"/"}
-                  </span>
-                  <Link
-                    to={`${lang !== "en" ? `/${lang}` : ""}/${contentType}/`}
-                    style={{
-                      fontWeight: "normal",
-                      textDecoration: `none`,
-                      color: colors.text,
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    {contentTypeTranslation[lang] &&
-                    contentTypeTranslation[lang][contentType]
-                      ? contentTypeTranslation[lang][contentType]
-                      : contentType}
-                  </Link>
-                </>
-              )}
-            </div>
-          </h1>
-        </div>
+            {siteTitle}
+          </Link>
+        </h1>
+        <CollapsedMenu
+          toggleMenu={() => {
+            setCollpaseMenu(!showCollpaseMenu)
+            if (typeof window !== "undefined") {
+              window.addEventListener("keydown", function keydown({ code }) {
+                if (code === "Escape") {
+                  window.removeEventListener("keydown", keydown)
+                  setCollpaseMenu(false)
+                }
+              })
+            }
+          }}
+        />
+        {showCollpaseMenu && <DocumentFixation />}
+        <Nav showCollpaseMenu={showCollpaseMenu}>
+          <Navigation />
+        </Nav>
       </HeaderContainer>
     </header>
   )
+}
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
 }
 
 export default Header
