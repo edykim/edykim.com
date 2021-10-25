@@ -23,7 +23,7 @@ const HeaderContainer = styled.div`
 `
 
 const DocumentFixation = createGlobalStyle`
-  html {
+  html, body {
     overflow-y: hidden;
   }
 `
@@ -77,6 +77,7 @@ const StyleWrapper = styled.div`
 `
 const CollapseButton = styled.button`
   appearance: none;
+  color: #000000;
   font-family: monospace;
   font-weight: bold;
   border-width: 2px;
