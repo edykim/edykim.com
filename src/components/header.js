@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import styled, {createGlobalStyle} from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 import Navigation from "../pieces/Navigation"
+import Footnote from "../pieces/Footnote"
 
-const collapsedWidth = '480px';
+const collapsedWidth = "480px"
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
@@ -19,6 +20,13 @@ const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     row-gap: 0.5rem;
+  }
+`
+
+const CollpasedOnly = styled.div`
+  display: none;
+  @media screen and (max-width: ${collapsedWidth}) {
+    display: block;
   }
 `
 
@@ -52,13 +60,22 @@ const Nav = styled.nav`
     bottom: 0;
     right: 0;
     padding: 1.8rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 1.5rem;
-    row-gap: 1rem;
+    overflow-y: scroll;
+    padding-top: 5rem;
+    &, div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 1.5rem;
+      row-gap: 1rem;
+    }
+    div {
+      margin-top: 1rem;
+    }
     :before {
+      position: fixed;
+      top: 1.8rem;
       font-weight: bold;
       font-size: 1rem;
       content: "edykim";
@@ -66,6 +83,9 @@ const Nav = styled.nav`
     }
     a {
       margin: 0;
+    }
+    a[aria-current="page"] {
+      font-weight: bold;
     }
     ul + ul {
       margin-top: 2rem;
@@ -80,8 +100,9 @@ const FloatContainer = styled.div`
   right: 1rem;
   top: 1.5rem;
   z-index: 200;
-  @media screen and (min-width: ${collapsedWidth}) {
-    display: none;
+  display: none;
+  @media screen and (max-width: ${collapsedWidth}) {
+    display: block;
   }
 `
 const StyleWrapper = styled.div`
@@ -103,6 +124,13 @@ const CollapseButton = styled.button`
   &:focus {
     background-color: #dddddd;
   }
+`
+const FloatImg = styled.img`
+  width: 64px;
+  image-rendering: pixelated;
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
 `
 
 const CollapsedMenu = ({ toggleMenu }) => {
@@ -150,7 +178,14 @@ const Header = ({ siteTitle }) => {
         />
         {showCollpaseMenu && <DocumentFixation />}
         <Nav showCollpaseMenu={showCollpaseMenu}>
+          <CollpasedOnly>
+            <Link to={"/"}>home</Link>
+          </CollpasedOnly>
           <Navigation />
+          <CollpasedOnly>
+            <Footnote />
+            <FloatImg src="/PROGM001.png" alt="Some cute Windows 3.1 icon :)" />
+          </CollpasedOnly>
         </Nav>
       </HeaderContainer>
     </header>
