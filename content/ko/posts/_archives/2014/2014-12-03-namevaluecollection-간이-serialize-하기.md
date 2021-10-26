@@ -11,7 +11,7 @@ lang: ko
 slug: serializing-namevaluecollection-to-json
 tags:
   - 개발 이야기
-  - 'C#'
+  - csharp
   - NameValueCollection
   - serialize
 
