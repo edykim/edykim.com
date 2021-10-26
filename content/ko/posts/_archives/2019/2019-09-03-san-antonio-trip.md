@@ -6,7 +6,7 @@ date: "2019-09-03T01:50:00"
 lang: ko
 slug: san-antonio-trip-2019
 tags:
-  - 나의 이야기
+  - 내 이야기
   - travel
   - texas
   - san antonio

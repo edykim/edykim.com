@@ -8,7 +8,7 @@ date: "2020-12-18T01:32:31.614Z"
 lang: ko
 slug: 2020-retrospective
 tags:
- - 나의 이야기
+ - 내 이야기
  - 회고
 ---
 

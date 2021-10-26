@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: koala-hates-rain-reviews
 tags:
-  - 나의 이야기
+  - 내 이야기
   - 개발 이야기
   - game
   - koala hates rain

@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: php-sql-to-mongo-mapping-chart-–-manual
 tags:
-  - 나의 이야기
+  - 내 이야기
 
 ---
 [PHP: SQL to Mongo Mapping Chart &#8211; Manual][1].

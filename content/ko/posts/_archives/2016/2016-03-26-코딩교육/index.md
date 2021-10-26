@@ -11,7 +11,7 @@ lang: ko
 slug: coding-training
 tags:
   - 잡다한 생각들
-  - 나의 이야기
+  - 내 이야기
   - 코딩교육
 
 ---

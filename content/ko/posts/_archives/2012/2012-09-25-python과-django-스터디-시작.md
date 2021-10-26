@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: start-python-and-django-studies
 tags:
-  - 나의 이야기
+  - 내 이야기
 
 ---
 흔히 말하는 꾸준글을 잘 못하는 탓에 도움 받은 링크 및 배운 부분들을 간략하게나마 정리하는 글을 적어본다.
