@@ -5,9 +5,8 @@ type: post
 date: "2020-03-18T20:27:00"
 lang: ko
 slug: fix-hangul-input-spacing-order-issue-in-st-with-fcitx
-categories:
- - 두루두루 IT
 tags:
+ - 두루두루 IT
  - st
  - fcitx
 ---

@@ -7,10 +7,9 @@ lang: ko
 slug: user-ineterface-design
 headline:
  - UI 디자인에서 고려할 점, usability.gov 번역
-categories:
+tags:
  - 디자인
  - 번역
-tags:
  - usability
  - user interface
 ---

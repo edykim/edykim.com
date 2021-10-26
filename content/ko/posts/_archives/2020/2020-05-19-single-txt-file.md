@@ -7,9 +7,8 @@ lang: ko
 slug: productivity-text-file
 headline:
  - 
-categories:
- - 두루두루 IT
 tags:
+ - 두루두루 IT
  - productivity
  - txt
 draft: true

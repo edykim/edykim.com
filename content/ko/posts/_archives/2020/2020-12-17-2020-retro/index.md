@@ -7,9 +7,8 @@ type: post
 date: "2020-12-18T01:32:31.614Z"
 lang: ko
 slug: 2020-retrospective
-categories:
- - 나의 이야기
 tags:
+ - 나의 이야기
  - 회고
 ---
 
