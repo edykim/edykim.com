@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: using-the-mysql-enum-type-in-the-where-clause
 tags:
-  - 나의 이야기
+  - 내 이야기
 
 ---
     animal enum('코끼리','사자','호랑이','기린')

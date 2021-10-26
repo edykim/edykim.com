@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: jquery-ui-datepicker-rangeselect-problem
 tags:
-  - 나의 이야기
+  - 내 이야기
 
 ---
 예전엔 jQuery UI에서 지원하는 datepicker가 range select가 가능했는데 버전이 올라가면서 <a href="http://wiki.jqueryui.com/w/page/12137778/Datepicker" target="_blank">리펙토링 과정</a>에서 버린 기능이 되었는지 존재를 감춰버렸다.

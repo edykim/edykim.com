@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: merging-strings-into-group-by-in-mysql
 tags:
-  - 나의 이야기
+  - 내 이야기
 
 ---
 MySQL에서 문자열을 병합할 때 `concat()`을 사용할 수 있는데 `group by`로 묶은 쿼리에서 `concat()`을 사용하면 해당하는 행 중 하나의 값만 도출된다. 합친 문자열이 필요한 경우 `group_concat()`을 사용해야 한다.

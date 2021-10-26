@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: stop-and-smell-the-roses
 tags:
-  - 나의 이야기
+  - 내 이야기
   - 멜번 사는 이야기
 
 ---
