@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout, { ContentContainer } from "../components/layout"
 import Seo from "../components/seo"
 import PostShortList from "../components/post-short-list"
+import TaxonomyLinks from "../components/taxonomy-links"
 
 const KoIndexPage = ({ data, location }) => {
   const { items, featuredItems } = data
@@ -37,9 +38,12 @@ const KoIndexPage = ({ data, location }) => {
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
         )}
         <PostShortList title={"최근 글"} posts={items.edges} />
-        <p>
+        <p style={{ marginBottom: "2rem" }}>
           <Link to="/ko/archives/">전체 글 보기</Link>
         </p>
+
+        <h2>주제별</h2>
+        <TaxonomyLinks />
       </ContentContainer>
     </Layout>
   )

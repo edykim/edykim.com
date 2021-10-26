@@ -65,7 +65,7 @@ export const categories = [
     url: `study`,
   },
   {
-    key: `나의 이야기`,
+    key: `내 이야기`,
     url: `my-stories`,
   },
   {
