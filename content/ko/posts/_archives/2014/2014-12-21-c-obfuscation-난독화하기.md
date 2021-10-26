@@ -11,7 +11,7 @@ lang: ko
 slug: how-to-obfuscate-c-sharp-code
 tags:
   - 개발 이야기
-  - 'C#'
+  - csharp
   - obfuscate
   - 난독화
 
