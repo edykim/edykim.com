@@ -5,9 +5,8 @@ type: post
 date: "2020-07-05T13:02:23"
 lang: ko
 slug: digital-minimalism
-categories:
- - 책
 tags:
+ - 책
  - digital minimalism
 ---
 

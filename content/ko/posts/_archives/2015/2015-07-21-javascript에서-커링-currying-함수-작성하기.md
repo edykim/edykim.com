@@ -11,8 +11,8 @@ lang: ko
 slug: writing-a-curling-currying-function-in-javascript
 headline:
   - 함수형 프로그래밍에서 자주 쓰이는 curry 함수를 JavaScript에서 구현하는 방법 번역
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - currying
   - javascript

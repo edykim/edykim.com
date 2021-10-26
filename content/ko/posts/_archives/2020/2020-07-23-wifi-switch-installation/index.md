@@ -7,9 +7,8 @@ headline:
  - wifi 스위치 설치 전 고려 사항과 설치 과정 정리
 lang: ko
 slug: tp-link-wifi-switch-installation
-categories:
- - 미국 사는 이야기
 tags:
+ - 미국 사는 이야기
  - wifi switch
 ---
 

@@ -7,9 +7,8 @@ lang: ko
 slug: enhanced-session-mode-for-ubuntu-on-hyper-v
 headline:
  - 고급 세션 모드(enhanced session mode)로 느린 사용성 개선하는 방법
-categories:
- - 두루두루 IT
 tags:
+ - 두루두루 IT
  - hyper-v
  - windows
 ---

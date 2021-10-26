@@ -7,9 +7,8 @@ type: post
 date: "2020-02-22T13:02:23"
 lang: ko
 slug: over-the-air-tv-antenna-installation
-categories:
- - 미국 사는 이야기
 tags:
+ - 미국 사는 이야기
  - 공중파
  - OTA 안테나
 ---
