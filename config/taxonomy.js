@@ -4,12 +4,12 @@ module.exports = {
   ],
   mappedUrls: [
     {
-      key: `멜번 사는 이야기`,
-      url: `life-in-australia`,
-    },
-    {
       key: `미국 사는 이야기`,
       url: `life-in-us`,
+    },
+    {
+      key: `멜번 사는 이야기`,
+      url: `life-in-australia`,
     },
     {
       key: `개발 이야기`,
@@ -20,7 +20,7 @@ module.exports = {
       url: `study`,
     },
     {
-      key: `나의 이야기`,
+      key: `내 이야기`,
       url: `my-stories`,
     },
     {
