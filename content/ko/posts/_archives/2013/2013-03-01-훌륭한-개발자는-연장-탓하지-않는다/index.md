@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: great-developers-do-not-blame-prolongation
-  - 잡다한 생각들
 tags:
+  - 잡다한 생각들
   - 두루두루 IT
   - VDT
   - 개발환경

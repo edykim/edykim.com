@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:42+00:00
 lang: ko
 slug: create-highperformance-php-apps-with-reactphp
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - php
   - reactphp

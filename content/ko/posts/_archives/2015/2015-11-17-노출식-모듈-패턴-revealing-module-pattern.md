@@ -11,8 +11,8 @@ lang: ko
 slug: revealing-module-pattern
 headline:
   - JavaScript 디자인 패턴, 명시적으로 노출될 메소드를 지정하는 디자인.
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - pattern
 

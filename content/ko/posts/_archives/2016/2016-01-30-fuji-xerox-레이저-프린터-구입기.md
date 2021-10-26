@@ -11,8 +11,8 @@ lang: ko
 slug: fuji-xerox-laser-printer-buyer
 headline:
   - 지름은 늘 뜬금 없이 찾아온다. Fuji Xerox DocuPrint P265DW
-  - 리뷰
 tags:
+  - 리뷰
   - 나의 이야기
   - fuji xerox
   - printer

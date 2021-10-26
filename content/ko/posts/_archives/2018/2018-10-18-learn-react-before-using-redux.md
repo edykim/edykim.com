@@ -7,8 +7,8 @@ lang: ko
 slug: learn-react-before-using-redux
 headline:
   - React에 Redux (또는 MobX)를 사용하기 전에 알아야 할 사실들, 번역
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - react
   - js

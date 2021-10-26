@@ -11,7 +11,6 @@ lang: ko
 slug: taste-arduino-with-ino-toolkit
 headline:
   - 아두이노, 드라이버, ino만 설치하면 아두이노 준비 끝!
-  - 아두이노, 드라이버, ino만 설치하면 아두이노 준비 끝!
 tags:
   - 개발 이야기
   - arduino

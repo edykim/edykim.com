@@ -5,8 +5,8 @@ type: post
 date: "2015-11-12T08:14:00"
 lang: ko
 slug: no-scope-soup-bind-to-controller-angularjs
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - angularjs
   - js

@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: coding-training
-  - 잡다한 생각들
 tags:
+  - 잡다한 생각들
   - 나의 이야기
   - 코딩교육
 

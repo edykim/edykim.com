@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:41+00:00
 lang: ko
 slug: fp-in-elm-notes-intro-to-frp-in-elm
-  - 공부
 tags:
+  - 공부
   - 개발 이야기
   - elm
   - fp
