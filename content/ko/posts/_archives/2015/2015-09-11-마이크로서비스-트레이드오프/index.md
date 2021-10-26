@@ -12,8 +12,8 @@ slug: microservice-tradeoff
 featured_image: 'https://edykim.com/wp-content/uploads/2015/09/sketch.png?resize=825%2C510&ssl=1'
 headline:
   - Martin Fowler의 Microservice Trade-Offs 한국어 번역, 마이크로서비스 장단점과 사례
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - microservice
   - 마이크로서비스

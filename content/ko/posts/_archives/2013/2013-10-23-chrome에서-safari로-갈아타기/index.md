@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: transfer-from-chrome-to-safari
-  - 리뷰
 tags:
+  - 리뷰
   - 두루두루 IT
   - Chrome
   - safari

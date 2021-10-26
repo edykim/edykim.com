@@ -11,8 +11,8 @@ lang: ko
 slug: why-can-not-i-leave-google-chrome
 headline:
   - Chrome 예찬을 쓰려고 하지 않았지만 자랑만 줄줄줄 적게 된, 진행형 Chrome 사용기
-  - 리뷰
 tags:
+  - 리뷰
   - 개발 이야기
   - Chrome
 

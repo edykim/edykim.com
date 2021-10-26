@@ -5,8 +5,8 @@ type: post
 date: "2015-09-29T08:14:00"
 lang: ko
 slug: how-to-read-an-academic-article
-  - 번역
 tags:
+  - 번역
   - 공부
   - paper
   - 논문

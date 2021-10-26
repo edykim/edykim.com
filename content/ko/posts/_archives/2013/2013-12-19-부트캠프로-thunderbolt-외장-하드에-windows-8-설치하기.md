@@ -9,8 +9,8 @@ history:
     movedAt: 2018-09-13T22:02:40+00:00
 lang: ko
 slug: installing-windows-8-on-thunderbolt-external-hard-drive-as-boot-camp
-  - 리뷰
 tags:
+  - 리뷰
   - 두루두루 IT
   - bootcamp
   - ssd

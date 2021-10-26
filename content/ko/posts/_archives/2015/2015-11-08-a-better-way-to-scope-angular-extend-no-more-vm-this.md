@@ -5,8 +5,8 @@ type: post
 date: "2015-11-08T08:14:00"
 lang: ko
 slug: a-better-way-to-scope-angular-extend-no-more-vm-this
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - angularjs
   - js
