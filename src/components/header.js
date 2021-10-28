@@ -143,14 +143,17 @@ const CollapsedMenu = ({ toggleMenu }) => {
   )
 }
 
+const HeaderWrapper = styled.header`
+margin-bottom: 1rem;
+
+@media screen and (max-width: ${collapsedWidth}) {
+  margin-bottom: 0rem;
+}`
+
 const Header = ({ siteTitle }) => {
   const [showCollpaseMenu, setCollpaseMenu] = useState(false)
   return (
-    <header
-      style={{
-        marginBottom: `2rem`,
-      }}
-    >
+    <HeaderWrapper>
       <HeaderContainer>
         <h1 style={{ margin: 0, fontSize: "1rem" }}>
           <Link
@@ -188,7 +191,7 @@ const Header = ({ siteTitle }) => {
           </CollpasedOnly>
         </Nav>
       </HeaderContainer>
-    </header>
+    </HeaderWrapper>
   )
 }
 
