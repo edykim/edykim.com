@@ -18,7 +18,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 60)
+      excerpt(format: PLAIN, truncate: true, pruneLength: 160)
       html
       frontmatter {
         title
