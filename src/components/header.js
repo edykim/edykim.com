@@ -144,8 +144,11 @@ const CollapsedMenu = ({ toggleMenu }) => {
 }
 
 const HeaderWrapper = styled.header`
-margin-bottom: 1rem;
+margin-bottom: 2rem;
 
+@media screen and (max-width: 1140px) {
+  margin-bottom: 1rem;
+}
 @media screen and (max-width: ${collapsedWidth}) {
   margin-bottom: 0rem;
 }`
