@@ -136,7 +136,7 @@ const FloatImg = styled.img`
 
 const CollapsedMenu = ({ toggleMenu }) => {
   return (
-    <FloatContainer className={'global-nav-toggle'}>
+    <FloatContainer className={"global-nav-toggle"}>
       <StyleWrapper>
         <CollapseButton onClick={() => toggleMenu()}>Menu</CollapseButton>
       </StyleWrapper>
@@ -145,14 +145,15 @@ const CollapsedMenu = ({ toggleMenu }) => {
 }
 
 const HeaderWrapper = styled.header`
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 
-@media screen and (max-width: 1140px) {
-  margin-bottom: 1rem;
-}
-@media screen and (max-width: ${collapsedWidth}) {
-  margin-bottom: 0rem;
-}`
+  @media screen and (max-width: 1140px) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (max-width: ${collapsedWidth}) {
+    margin-bottom: 0rem;
+  }
+`
 
 const noscriptStyle = `
 @media screen and (max-width: ${collapsedWidth}) {
@@ -198,7 +199,7 @@ const Header = ({ siteTitle }) => {
           }}
         />
         {showCollpaseMenu && <DocumentFixation />}
-        <Nav className={'global-nav'} showCollpaseMenu={showCollpaseMenu}>
+        <Nav className={"global-nav"} showCollpaseMenu={showCollpaseMenu}>
           <CollpasedOnly>
             <Link to={"/"}>home</Link>
           </CollpasedOnly>
@@ -209,7 +210,9 @@ const Header = ({ siteTitle }) => {
           </CollpasedOnly>
         </Nav>
       </HeaderContainer>
-      <Helmet><noscript>{`<style>${noscriptStyle}</style>`}</noscript></Helmet>
+      <Helmet>
+        <noscript>{`<style>${noscriptStyle}</style>`}</noscript>
+      </Helmet>
     </HeaderWrapper>
   )
 }

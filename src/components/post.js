@@ -47,14 +47,20 @@ const PostTemplate = ({ data, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.url} rel="prev">
-                ← {previous.frontmatter.title || previous.excerpt || previous.frontmatter.date}
+                ←{" "}
+                {previous.frontmatter.title ||
+                  previous.excerpt ||
+                  previous.frontmatter.date}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.url} rel="next">
-                {next.frontmatter.title || next.excerpt || next.frontmatter.date} →
+                {next.frontmatter.title ||
+                  next.excerpt ||
+                  next.frontmatter.date}{" "}
+                →
               </Link>
             )}
           </li>

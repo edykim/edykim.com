@@ -48,7 +48,6 @@ const Main = styled.main`
   @media (prefers-reduced-motion) {
     animation: none;
   }
-  
 `
 
 const Layout = ({ item, children }) => {
