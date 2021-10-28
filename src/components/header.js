@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet"
 import Navigation from "../pieces/Navigation"
 import Footnote from "../pieces/Footnote"
 
@@ -135,7 +136,7 @@ const FloatImg = styled.img`
 
 const CollapsedMenu = ({ toggleMenu }) => {
   return (
-    <FloatContainer>
+    <FloatContainer className={'global-nav-toggle'}>
       <StyleWrapper>
         <CollapseButton onClick={() => toggleMenu()}>Menu</CollapseButton>
       </StyleWrapper>
@@ -143,14 +144,34 @@ const CollapsedMenu = ({ toggleMenu }) => {
   )
 }
 
+const HeaderWrapper = styled.header`
+margin-bottom: 2rem;
+
+@media screen and (max-width: 1140px) {
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: ${collapsedWidth}) {
+  margin-bottom: 0rem;
+}`
+
+const noscriptStyle = `
+@media screen and (max-width: ${collapsedWidth}) {
+  .global-nav-toggle {
+    display: none !important;
+  }
+  .global-nav {
+    display: flex !important;
+  }
+  .global-nav > div {
+    display: none;
+  }
+}
+`
+
 const Header = ({ siteTitle }) => {
   const [showCollpaseMenu, setCollpaseMenu] = useState(false)
   return (
-    <header
-      style={{
-        marginBottom: `2rem`,
-      }}
-    >
+    <HeaderWrapper>
       <HeaderContainer>
         <h1 style={{ margin: 0, fontSize: "1rem" }}>
           <Link
@@ -177,7 +198,7 @@ const Header = ({ siteTitle }) => {
           }}
         />
         {showCollpaseMenu && <DocumentFixation />}
-        <Nav showCollpaseMenu={showCollpaseMenu}>
+        <Nav className={'global-nav'} showCollpaseMenu={showCollpaseMenu}>
           <CollpasedOnly>
             <Link to={"/"}>home</Link>
           </CollpasedOnly>
@@ -188,7 +209,8 @@ const Header = ({ siteTitle }) => {
           </CollpasedOnly>
         </Nav>
       </HeaderContainer>
-    </header>
+      <Helmet><noscript>{`<style>${noscriptStyle}</style>`}</noscript></Helmet>
+    </HeaderWrapper>
   )
 }
 

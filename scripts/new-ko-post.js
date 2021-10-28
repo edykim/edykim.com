@@ -36,10 +36,8 @@ date: "${d.toISOString()}"
 lang: ko
 # headline:
 #  - sample headline
-categories:
-${cat}
 tags:
-#  - sample-tag
+${cat}
 draft: true
 slug: "${slug}"
 ---
