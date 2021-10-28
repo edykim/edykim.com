@@ -57,7 +57,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "new-micro": "node ./scripts/new-micro.js",
+    "new-ko-post": "node ./scripts/new-ko-post.js",
     "post-build": "node ./scripts/post-build.js",
     "netlify:build": "npm run build && npm run post-build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
