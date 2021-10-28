@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Footnote from '../pieces/Footnote'
+import Footnote from "../pieces/Footnote"
 
 const SocialNav = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ const Footer = () => (
   >
     <FooterContainer>
       <SocialNav>
-          <Footnote />
+        <Footnote />
       </SocialNav>
       <div className="copyright">© {new Date().getFullYear()} edward kim</div>
     </FooterContainer>

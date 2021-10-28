@@ -19,7 +19,7 @@ const PublishedAt = styled.time`
   line-height: 1.8;
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -.012em;
+  letter-spacing: -0.012em;
   margin: 0 0.5rem;
 `
 

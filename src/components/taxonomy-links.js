@@ -1,15 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 import taxonomy from "../../config/taxonomy"
 
 const Container = styled.div`
-margin: 0 -0.5rem;
-a {
+  margin: 0 -0.5rem;
+  a {
     display: inline-block;
     color: #000000;
     margin: 0.1rem 0.5rem;
-}
+  }
 `
 
 const TaxonomyLinks = () => {

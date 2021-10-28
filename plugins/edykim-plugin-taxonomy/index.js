@@ -1,4 +1,4 @@
-const internals = require('./internals')
+const internals = require("./internals")
 
 module.exports = {
   ...internals,

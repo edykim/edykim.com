@@ -1,7 +1,5 @@
 module.exports = {
-  keys: [
-    { key: `tags`, singular: `tag` },
-  ],
+  keys: [{ key: `tags`, singular: `tag` }],
   mappedUrls: [
     {
       key: `미국 사는 이야기`,
