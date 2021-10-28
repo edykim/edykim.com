@@ -47,7 +47,7 @@ const PostTemplate = ({ data, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.url} rel="prev">
-                ← {previous.frontmatter.title || previous.excerpt || next.frontmatter.date}
+                ← {previous.frontmatter.title || previous.excerpt || previous.frontmatter.date}
               </Link>
             )}
           </li>
