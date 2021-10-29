@@ -14,3 +14,7 @@ url: /notes
 
 - [CS11 Intro C++](/note/cs-11-intro-cpp)
 - [Academic English: Writing Specialization (Coursera)](/note/english-writing)
+
+## Living
+
+- [Plants](/plants)
