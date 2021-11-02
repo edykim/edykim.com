@@ -45,6 +45,10 @@ module.exports = {
       key: `리뷰`,
       url: `review`,
     },
+    {
+      key: `사진`,
+      url: `photography`,
+    },
   ],
   query: `
   {
