@@ -10,10 +10,8 @@ history:
 lang: ko
 slug: simpson-tapped-out-meet-the-simpsons-in-the-game
 tags:
-  - 리뷰
   - game
   - Ipad game
-  - review
 
 ---
 심슨이 게임으로 있길래 D&#8217;oh!! 이러면서 내려 받았다. 흔한 마을 꾸미는 류의 게임, 그 컨셉은 스머프와 여타 게임들과 동일하며 과금 정책도 유사. 주변에서 그런 게임 하는 것만 봐왔긴 했으나 실제로 해본 적은 거의 없기 때문에 비교하여 리뷰하기가 어렵다.
