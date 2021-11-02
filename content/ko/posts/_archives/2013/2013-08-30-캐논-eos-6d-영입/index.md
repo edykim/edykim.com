@@ -14,6 +14,7 @@ tags:
   - 40mm 팬케익
   - canon eos 6d
   - 지름
+  - 사진
 
 ---
 ![Canon EOS 6D and EF 40mm F/2.8][1]

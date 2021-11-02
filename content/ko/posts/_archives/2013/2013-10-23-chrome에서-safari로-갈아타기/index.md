@@ -10,7 +10,6 @@ history:
 lang: ko
 slug: transfer-from-chrome-to-safari
 tags:
-  - 리뷰
   - 두루두루 IT
   - Chrome
   - safari

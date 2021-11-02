@@ -9,7 +9,6 @@ history:
 lang: ko
 slug: journey-to-read-good-writing-feat.-ipad-rss-app
 tags:
-  - 리뷰
   - app
   - Ipad
   - rss reader

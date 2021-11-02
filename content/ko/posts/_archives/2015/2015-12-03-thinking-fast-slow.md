@@ -10,9 +10,7 @@ history:
 lang: ko
 slug: thinking-fast-and-slow
 tags:
-  - 리뷰
-  - thinking fast and slow
-  - 독후감
+  - 책
 
 ---
 이상한모임에서 대림절 달력으로 크리스마스 전까지 12월 내내 하루 한 권씩 각자 올해 읽은 책을 공유합니다. 매일 공유되는 독후감을 [이상한모임 대림절 달력 페이지][1]를 통해 확인할 수 있습니다.
