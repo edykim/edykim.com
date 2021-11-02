@@ -10,10 +10,8 @@ history:
 lang: ko
 slug: the-settler-hd-lemmings-style-strategy-sim
 tags:
-  - 리뷰
   - game
   - Ipad game
-  - review
 
 ---
 이전 PC판은 리뷰와 친구의 얘기로 들은 적이 있었는데 아이패드 버전이 보이길래 구매해봤다. 아쉽게도 레티나 디스플레이에 최적화 되진 않아 다소 거친 느낌이다.
