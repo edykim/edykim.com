@@ -10,7 +10,6 @@ history:
 lang: ko
 slug: rushing-bloody-puzzle-game-rise-of-blobs
 tags:
-  - 리뷰
   - android
   - app
   - game

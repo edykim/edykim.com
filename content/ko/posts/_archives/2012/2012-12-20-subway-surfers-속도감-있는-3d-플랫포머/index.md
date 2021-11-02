@@ -10,7 +10,6 @@ history:
 lang: ko
 slug: subway-surfers-a-fastpaced-3d-platformer
 tags:
-  - 리뷰
   - android
   - game
 

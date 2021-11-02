@@ -10,7 +10,6 @@ history:
 lang: ko
 slug: bad-piggies-encounters-of-abdominal-pain-machine-and-angry-bird
 tags:
-  - 리뷰
   - android
   - bad pigges
   - game

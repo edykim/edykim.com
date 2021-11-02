@@ -10,7 +10,6 @@ history:
 lang: ko
 slug: flow-unlock-pattern-to-game
 tags:
-  - 리뷰
   - android
   - flow
   - game
