@@ -11,7 +11,7 @@ tags:
 slug: "debugging-behind-the-iron-curtain"
 ---
 
-글 [Debugging Behind the Iron Curtain](https://www.jakepoz.com/debugging-behind-the-iron-curtain/)을 번역했다.
+[Jake Poznanski](https://www.jakepoz.com/)의 글 [Debugging Behind the Iron Curtain](https://www.jakepoz.com/debugging-behind-the-iron-curtain/)을 번역했다.
 
 ---
 
