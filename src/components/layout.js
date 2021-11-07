@@ -16,7 +16,7 @@ import "./layout.css"
 
 const MainContainer = styled.div`
   margin: 0 auto;
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 16rem);
   @media screen and (max-width: 720px) {
     min-height: initial;
   }

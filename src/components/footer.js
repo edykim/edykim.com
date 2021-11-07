@@ -27,22 +27,22 @@ const FooterContainer = styled.footer`
   }
 `
 
+const FooterWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2rem 1.0875rem 2rem;
+  font-size: 0.8rem;
+`
+
 const Footer = () => (
-  <div
-    style={{
-      margin: `0 auto`,
-      maxWidth: 960,
-      padding: `0 1.0875rem 12rem`,
-      fontSize: "0.8rem",
-    }}
-  >
+  <FooterWrapper>
     <FooterContainer>
       <SocialNav>
         <Footnote />
       </SocialNav>
       <div className="copyright">© {new Date().getFullYear()} edward kim</div>
     </FooterContainer>
-  </div>
+  </FooterWrapper>
 )
 
 export default Footer
