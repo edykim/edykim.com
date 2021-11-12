@@ -125,3 +125,40 @@ $ to-pdf *.ppt
 $ to-pdf essay_mid.docx
 ```
 
+# 충전 어뎁터 연결 시 스크립트 구동하기
+
+`acpi`를 통해서 스크립트를 구동할 수 있다. `/etc/acpi/events`에 파일을 추가한다.
+
+```
+event=ac_adapter.*
+action=/etc/acpi/ac_adapter.sh %e
+```
+
+이제 acpi에서 해당 이벤트가 발생하면 등록한 스크립트가 실행된다.
+
+내 경우에는 `aplay`를 이용해서 wav 파일을 재생하도록 했다. 해당 경로에 아래와 같은 스크립트를 추가한다.
+
+```sh
+#!/bin/bash
+
+case "$1" in
+    ac_adapter)
+        case "$2" in
+            AC*|AD*)
+                case "$4" in
+                    00000001) # 연결시 1 분리시 0
+                        aplay /etc/acpi/ac_adapter.wav 2>&1
+                        ;;
+                esac
+                ;;
+        esac
+        ;;
+esac
+```
+
+wav 파일도 당연히 해당 경로에 필요하다. 그리고 acpid를 다시 시작한다.
+
+```bash
+$ systemctl restart acpid.service
+```
+
