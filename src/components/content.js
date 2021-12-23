@@ -429,6 +429,24 @@ const Content = styled.div`
       }
     }
   }
+
+  .columns {
+    max-width: ${layouts.full};
+
+    @media (max-width: 600px) {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none !important;
+      width: 100%;
+      column-gap: 0.1rem;
+    }
+
+    display: flex;
+    column-gap: 1rem;
+    > * {
+      flex: 1;
+    }
+  }
 `
 
 export default Content

@@ -15,7 +15,7 @@ url: recipes/scone
 - 버터 (차갑게, 큐브로 썰어서) 80g
 - 우유 1컵에서 1 1/4컵
 
-셀프라이징 밀가루가 없다면 직접 만든다. 다음 비율로 잘 섞는다.
+셀프라이징 밀가루가 없다면 직접 만든다. 아래 비율로 섞으면 셀프라이징 밀가루 1컵과 같다.
 
 - 중력분(all purpose flour) 1컵
 - 베이킹 파우더 1 1/2 티스푼
@@ -33,16 +33,20 @@ url: recipes/scone
 8. 잘 부풀고 원하는 색이 되었다면 꺼낸다.
 9. 잼이나 생크림을 곁들여 먹는다.
 
-<figure class="wide">
+:::div{.columns}
+
+<figure>
 
 ![스콘 반죽](IMG_0475.jpg)
 
 <figcaption>엄청 부풀지는 않아서 적당히 간격을 두면 된다.</figcaption>
 </figure>
 
-<figure class="wide">
+<figure>
 
 ![스콘](IMG_0477.jpg)
 
 <figcaption>완성!</figcaption>
 </figure>
+
+:::
