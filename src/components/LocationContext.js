@@ -8,7 +8,7 @@ export const useLocation = () => {
 
 export const usePageLanguage = () => {
   const location = useLocation()
-  return /^\/ko\//gi.test(location.pathname) ? "ko" : "en"
+  return /^\/ko\//gi.test(location?.pathname) ? "ko" : "en"
 }
 
 export const LocationContextProvider = ({ location, children }) => {
