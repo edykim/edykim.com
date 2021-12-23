@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from "styled-components"
 import { Helmet } from "react-helmet"
 import Navigation from "../pieces/Navigation"
 import Footnote from "../pieces/Footnote"
+import { usePageLanguage } from "./LocationContext"
 
 const collapsedWidth = "480px"
 
@@ -62,7 +63,7 @@ const Nav = styled.nav`
     right: 0;
     padding: 1.8rem 1.5rem;
     overflow-y: scroll;
-    padding-top: 5rem;
+    padding-top: 1.5rem;
     &, div {
       display: flex;
       flex-direction: column;
@@ -73,14 +74,6 @@ const Nav = styled.nav`
     }
     div {
       margin-top: 1rem;
-    }
-    :before {
-      position: fixed;
-      top: 1.8rem;
-      font-weight: bold;
-      font-size: 1rem;
-      content: "edykim";
-      display: block;
     }
     a {
       margin: 0;
@@ -126,13 +119,6 @@ const CollapseButton = styled.button`
     background-color: #dddddd;
   }
 `
-const FloatImg = styled.img`
-  width: 64px;
-  image-rendering: pixelated;
-  position: fixed;
-  right: 2rem;
-  bottom: 1rem;
-`
 
 const CollapsedMenu = ({ toggleMenu }) => {
   return (
@@ -169,21 +155,36 @@ const noscriptStyle = `
 }
 `
 
+const TitleLink = ({ siteTitle }) => {
+  const lang = usePageLanguage()
+  return (
+    <Link
+      to={lang === "ko" ? "/ko/" : "/"}
+      style={{
+        color: "#000000",
+        textDecoration: `none`,
+      }}
+    >
+      {`${siteTitle}${lang === "ko" ? "/ko" : ""}`}
+    </Link>
+  )
+}
+const NavHeaderLink = ({ siteTitle }) => {
+  const lang = usePageLanguage()
+  return (
+    <Link to={lang === "ko" ? "/ko/" : "/"}>
+      {lang === "ko" ? "첫 페이지" : "home"}
+    </Link>
+  )
+}
+
 const Header = ({ siteTitle }) => {
   const [showCollpaseMenu, setCollpaseMenu] = useState(false)
   return (
     <HeaderWrapper>
       <HeaderContainer>
         <h1 style={{ margin: 0, fontSize: "1rem" }}>
-          <Link
-            to="/"
-            style={{
-              color: "#000000",
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
+          <TitleLink siteTitle={siteTitle} />
         </h1>
         <CollapsedMenu
           toggleMenu={() => {
@@ -201,12 +202,11 @@ const Header = ({ siteTitle }) => {
         {showCollpaseMenu && <DocumentFixation />}
         <Nav className={"global-nav"} showCollpaseMenu={showCollpaseMenu}>
           <CollpasedOnly>
-            <Link to={"/"}>home</Link>
+            <NavHeaderLink />
           </CollpasedOnly>
           <Navigation />
           <CollpasedOnly>
             <Footnote />
-            <FloatImg src="/PROGM001.png" alt="Some cute Windows 3.1 icon :)" />
           </CollpasedOnly>
         </Nav>
       </HeaderContainer>

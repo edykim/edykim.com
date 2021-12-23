@@ -17,7 +17,6 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 2rem;
 
   @media screen and (max-width: 720px) {
     flex-direction: column;

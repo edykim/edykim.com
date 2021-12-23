@@ -13,6 +13,7 @@ import styled from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+import { LocationContextProvider } from "./LocationContext"
 
 const MainContainer = styled.div`
   margin: 0 auto;
@@ -50,7 +51,7 @@ const Main = styled.main`
   }
 `
 
-const Layout = ({ item, children }) => {
+const Layout = ({ item, location, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -62,7 +63,7 @@ const Layout = ({ item, children }) => {
   `)
 
   return (
-    <>
+    <LocationContextProvider location={location}>
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
         item={item}
@@ -71,7 +72,7 @@ const Layout = ({ item, children }) => {
         <Main>{children}</Main>
       </MainContainer>
       <Footer />
-    </>
+    </LocationContextProvider>
   )
 }
 

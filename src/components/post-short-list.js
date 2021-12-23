@@ -4,7 +4,7 @@ import { colors } from "~/constraint"
 import PostItem from "./post-item"
 
 const Wrapper = styled.div`
-  margin: 0 auto 2rem;
+  margin: 2rem auto;
 `
 
 const Title = styled.h2`
