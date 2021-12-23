@@ -7,6 +7,7 @@ import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
 
 import PostShortList from "../components/post-short-list"
+import TaxonomyLinks from "../components/taxonomy-links"
 
 const ShowcaseTemplate = ({ data, location }) => {
   const { post, items, featuredItems } = data
@@ -21,31 +22,28 @@ const ShowcaseTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <ContentContainer>
-          <Subject>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            {headline && <Headline>{headline}</Headline>}
-          </Subject>
-          <Content
-            style={{
-              lineHeight: 1.76,
-              fontSize: "1rem",
-              wordBreak: "keep-all",
-            }}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
-          {featuredItems.edges.length > 0 && (
-            <PostShortList title={"인기 글"} posts={featuredItems.edges} />
-          )}
-          <PostShortList title={"최근 글"} posts={items.edges} />
-        </ContentContainer>
-      </article>
+      <Subject>
+        <h1 itemProp="headline">{post.frontmatter.title}</h1>
+        {headline && <Headline>{headline}</Headline>}
+      </Subject>
+      <Content
+        style={{
+          lineHeight: 1.76,
+          fontSize: "1rem",
+          wordBreak: "keep-all",
+        }}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        itemProp="articleBody"
+      />
+      <ContentContainer>
+
+        <h2>주제별</h2>
+        <TaxonomyLinks />
+        {featuredItems.edges.length > 0 && (
+          <PostShortList title={"인기 글"} posts={featuredItems.edges} />
+        )}
+        <PostShortList title={"최근 글"} posts={items.edges} linkTitle={'전체 글 보기'} link={'/ko/archives/'} />
+      </ContentContainer>
     </Layout>
   )
 }

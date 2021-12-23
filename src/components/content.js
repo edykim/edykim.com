@@ -13,6 +13,30 @@ const Hr = css`
     margin-bottom: 1rem;
   }
 `
+
+export const button = css`
+  .button {
+    display: inline-block;
+    + .button {
+      margin-left: 10px;
+    }
+    a {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-indent: 0;
+      display: inline-block;
+      text-decoration: none;
+      color: ${colors.text};
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: 2px solid ${colors.text};
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+`
 const Content = styled.div`
   color: ${colors.text};
   font-size: ${fonts.body};
@@ -364,27 +388,8 @@ const Content = styled.div`
     text-indent: 0;
   }
 
-  .button {
-    display: inline-block;
-    + .button {
-      margin-left: 10px;
-    }
-    a {
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-indent: 0;
-      display: inline-block;
-      text-decoration: none;
-      color: ${colors.text};
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      border: 2px solid ${colors.text};
-      &:hover,
-      &:active {
-        text-decoration: underline;
-      }
-    }
-  }
+  ${button};
+
   @media (prefers-color-scheme: dark) {
     .gatsby-resp-image-image {
       box-shadow: none !important;

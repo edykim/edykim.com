@@ -7,8 +7,9 @@ const Navigation = () => {
   if (language === "ko") {
     return (
       <>
-        <Link to="/ko/writings/">Blog</Link>
+        <Link to="/ko/post/">Blog</Link>
         <Link to="/ko/notes/">Notes</Link>
+        <Link to="/ko/photos/">Photos</Link>
         <Link to="/ko/about/">About</Link>
       </>
     )
