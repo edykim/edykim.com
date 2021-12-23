@@ -9,4 +9,6 @@ url: archives
 
 ---
 
-- [블로그 RSS 피드](https://edykim.com/ko/feed.xml)
+:::div{.no-indent}
+:span[[블로그 RSS 피드](https://edykim.com/ko/feed.xml)]{.button}
+:::
