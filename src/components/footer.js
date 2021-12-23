@@ -15,11 +15,11 @@ const SocialNav = styled.div`
 
 const FooterContainer = styled.footer`
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @media screen and (max-width: 720px) {
-    flex-direction: column;
     align-items: flex-start;
     row-gap: 0.5rem;
     flex-wrap: wrap;
