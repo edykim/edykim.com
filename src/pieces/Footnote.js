@@ -3,9 +3,8 @@ import { Link } from "gatsby"
 
 const Footnote = () => (
   <>
-    <Link to="/ko/">한국어</Link>
-    <a href="https://twitter.com/heyedykim">Twitter</a>
-    <a href="https://github.com/edykim">GitHub</a>
+    <Link to="/ko/">🇰🇷 한국어</Link>
+    <Link to="/">🇺🇸 English</Link>
     <a href="https://github.com/edykim/edykim.com">Feedback</a>
   </>
 )

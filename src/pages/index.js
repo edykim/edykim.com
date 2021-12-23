@@ -4,8 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout, { HeroContainer, ContentContainer } from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({location}) => (
+  <Layout location={location}>
     <Seo title="Home" />
 
     <HeroContainer>
