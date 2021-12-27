@@ -7,9 +7,9 @@ const Navigation = () => {
   if (language === "ko") {
     return (
       <>
-        <Link to="/ko/post/">blog</Link>
-        <Link to="/ko/notes/">notes</Link>
-        <Link to="/ko/about/">about</Link>
+        <Link to="/ko/post/">블로그</Link>
+        <Link to="/ko/notes/">노트</Link>
+        <Link to="/ko/about/">소개</Link>
       </>
     )
   }
