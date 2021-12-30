@@ -9,8 +9,9 @@ url: notes
 
 <figure>
 
-<img src="https://live.staticflickr.com/4840/31785100457_dddd0a0476_h.jpg" style="object-fit: cover; max-width: 1200px; width: 100%; aspect-ratio: 2.39;" alt="The Getty, 2019" />
+<img src="https://live.staticflickr.com/4840/31785100457_dddd0a0476_h.jpg" style="object-fit: cover; max-width: 1200px; width: 100%; aspect-ratio: 2.39; margin: 0;" />
 
+<figcaption>The Getty, 2019</figcaption>
 </figure>
 
 정리하고 싶은 것이 있을 때 하나씩 정리하는 페이지입니다.
