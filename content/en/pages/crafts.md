@@ -13,7 +13,7 @@ lang: en
 Visual Timer by Yong provides an awesome graphical indicator for
 measuring times. It contains wide configuration options so that the
 user can make their own timers for various occasions. Boost your
-productivity with a powerful timer! [Go to the page →](/app/visual-timer)
+productivity with a powerful timer! [Go to the page →](https://visualtimer.edykim.com)
 
 ## Tip Calculator
 
