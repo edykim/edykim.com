@@ -13,7 +13,7 @@ import Seo from "../../components/seo"
 const KoIndexPage = ({ location, data: { featuredItems } }) => {
   return (
     <Layout location={location}>
-      <Seo title="Home" />
+      <Seo title="Home" lang={"ko"} />
       <HeroContainer>
         <figure>
           <StaticImage
