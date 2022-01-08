@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, title, noindex = false }) {
+function Seo({ description, lang, title, redirect, noindex = false }) {
   let meta = []
   const { site } = useStaticQuery(
     graphql`
@@ -34,6 +34,14 @@ function Seo({ description, lang, title, noindex = false }) {
   if (noindex) {
     meta.push({ name: "robots", content: "noindex, nofollow" })
     meta.push({ name: "googlebot", content: "noindex, nofollow" })
+  }
+
+  if (redirect) {
+    meta.push({
+      name: "refresh",
+      "http-equiv": "refresh",
+      content: `0;url=${redirect}`,
+    })
   }
 
   return (

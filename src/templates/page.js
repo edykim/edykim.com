@@ -11,10 +11,12 @@ const PageTemplate = ({ data, location }) => {
   const headline = post.frontmatter.headline?.join(" ")
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const noTitle = post.frontmatter?.noTitle
+  const redirect = post.frontmatter?.redirect
 
   return (
     <Layout location={location} title={siteTitle} item={post}>
       <Seo
+        redirect={redirect}
         lang={post.frontmatter.lang}
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -64,6 +66,7 @@ export const pageQuery = graphql`
         headline
         lang
         type
+        redirect
       }
       fields {
         url
