@@ -5,6 +5,7 @@ type: page
 date: "2019-05-17T05:28:41"
 url: /app/visual-timer
 lang: ko
+redirect: https://visualtimer.edykim.com/ko/
 ---
 
 ![](icon.png)
