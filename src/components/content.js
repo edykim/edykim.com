@@ -244,26 +244,40 @@ const Content = styled.div`
   }
   h1 {
     font-size: 1.3rem;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-bottom: 1px solid ${colors.text};
+      left: ${layouts.sidePadding};
+      right: ${layouts.sidePadding};
+      bottom: 0;
+    }
+    padding-bottom: 1rem;
     font-weight: 700;
     margin-top: 2.8em;
     margin-bottom: 1em;
   }
+  hr + h1:after {
+    display: none;
+  }
   h2 {
     margin-top: 2.4em;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 1.3em;
   }
   h3 {
     margin-top: 2.2em;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 700;
     margin-bottom: 1.1em;
   }
   h4,
   h5 {
     margin-top: 2em;
-    font-size: 1em;
+    font-size: 0.9em;
     margin-bottom: 1em;
   }
   hr {
