@@ -20,3 +20,8 @@ url: notes
 - [트럼펫](/ko/trumpet/)
 - [리눅스](/ko/linux/)
 - [사진](/ko/photos/)
+
+
+# 공부 노트
+
+- [인지과학개론 노트](/ko/intro-cog-sci/)
