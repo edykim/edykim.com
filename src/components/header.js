@@ -6,12 +6,13 @@ import { Helmet } from "react-helmet"
 import Navigation from "../pieces/Navigation"
 import Footnote from "../pieces/Footnote"
 import { usePageLanguage } from "./LocationContext"
+import { layouts } from "~/constraint"
 
 const collapsedWidth = "480px"
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: ${layouts.content};
   padding: 2rem 1rem;
   display: flex;
   flex-direction: row;

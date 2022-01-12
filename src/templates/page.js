@@ -5,22 +5,28 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
+import { AsideWidget } from "../components/widget"
 
 const PageTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const headline = post.frontmatter.headline?.join(" ")
+  const {
+    page,
+    relatedPages: { edges: relatedPages },
+  } = data
+
+  const headline = page.frontmatter.headline?.join(" ")
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const noTitle = post.frontmatter?.noTitle
-  const redirect = post.frontmatter?.redirect
+  const noTitle = page.frontmatter?.noTitle
+  const redirect = page.frontmatter?.redirect
 
   return (
-    <Layout location={location} title={siteTitle} item={post}>
+    <Layout location={location} title={siteTitle} item={page}>
       <Seo
         redirect={redirect}
-        lang={post.frontmatter.lang}
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        lang={page.frontmatter.lang}
+        title={page.frontmatter.title}
+        description={page.frontmatter.description || page.excerpt}
       />
+      <AsideWidget nodes={relatedPages} node={page} />
       <article
         className="blog-post"
         itemScope
@@ -28,7 +34,7 @@ const PageTemplate = ({ data, location }) => {
       >
         {!noTitle && (
           <Subject>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            <h1 itemProp="headline">{page.frontmatter.title}</h1>
             {headline && <Headline>{headline}</Headline>}
           </Subject>
         )}
@@ -38,7 +44,7 @@ const PageTemplate = ({ data, location }) => {
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: page.html }}
           itemProp="articleBody"
         />
       </article>
@@ -49,13 +55,18 @@ const PageTemplate = ({ data, location }) => {
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query PageBySlug($id: String!) {
+  query PageBySlug(
+    $id: String!
+    $lang: String!
+    $type: String!
+    $tags: [String]!
+  ) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    page: markdownRemark(id: { eq: $id }) {
       id
       excerpt(format: PLAIN, truncate: true, pruneLength: 160)
       html
@@ -70,6 +81,34 @@ export const pageQuery = graphql`
       }
       fields {
         url
+      }
+    }
+    relatedPages: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: ASC }
+      limit: 10
+      filter: {
+        frontmatter: {
+          private: { ne: true }
+          draft: { ne: true }
+          lang: { eq: $lang }
+          type: { eq: $type }
+          tags: { in: $tags }
+        }
+      }
+    ) {
+      edges {
+        node {
+          excerpt(format: PLAIN, truncate: true)
+          id
+          fields {
+            url
+          }
+          frontmatter {
+            date(formatString: "MMM D")
+            dateSort: date(formatString: "YYYY")
+            title
+          }
+        }
       }
     }
   }

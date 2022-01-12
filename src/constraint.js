@@ -24,6 +24,7 @@ export const colors = {
 
 export const layouts = {
   content: "820px",
+  halfContent: "430px",
   wide: "1140px",
   full: "960px",
   narrow: "720px",
