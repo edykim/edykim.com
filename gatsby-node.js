@@ -49,6 +49,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               type
               lang
               contentType
+              tags
             }
             fields {
               slug
@@ -86,13 +87,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
         const context = {
           id: item.id,
+          type: item.frontmatter?.type,
+          lang: item.frontmatter?.lang,
+          tags: item.frontmatter?.tags || [],
+          contentType: item.frontmatter?.contentType,
           previousItemId,
           nextItemId,
-        }
-
-        if (item.frontmatter.contentType) {
-          context.lang = item.frontmatter.lang
-          context.contentType = item.frontmatter.contentType
         }
 
         createPage({
@@ -141,6 +141,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       lang: String
       url: String
       date: Date @dateformat
+      tags: [String]
     }
     type Fields {
       slug: String
