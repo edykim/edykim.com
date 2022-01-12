@@ -6,6 +6,8 @@ date: "2020-05-18T15:24:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-3
 linkToParent: true
+tags:
+  - cs11
 ---
 
 ## File I/O

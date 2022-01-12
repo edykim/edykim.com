@@ -6,6 +6,8 @@ date: "2020-05-18T19:48:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-6
 linkToParent: true
+tags:
+  - cs11
 ---
 
 ## Copy constructor
