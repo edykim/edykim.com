@@ -6,6 +6,8 @@ date: "2020-05-18T16:00:00"
 lang: en
 url: /note/cs-11-intro-cpp/lecture-4
 linkToParent: true
+tags:
+  - cs11
 ---
 
 ## Build Automation

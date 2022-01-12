@@ -5,7 +5,8 @@ type: page
 date: "2020-10-10T05:28:41"
 lang: ko
 url: recipes/dak-galbi
-
+tags:
+  - recipe
 ---
 
 ([초:초:초간단 만능 양념장으로 만드는 춘천식 닭갈비! 1:1:1:1:1:1 ㅣ 백종원의 쿠킹로그](https://www.youtube.com/watch?v=HI8DlDs1gko))

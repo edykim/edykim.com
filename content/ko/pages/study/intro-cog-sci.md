@@ -5,6 +5,10 @@ type: page
 date: "2022-01-12T12:53:11.239Z"
 lang: ko
 url: /intro-cog-sci/
+tags:
+  - test
+  - test2
+  - test3
 ---
 
 [Introduction to Cognitive Science 실라버스](https://perception.yale.edu/Brian/courses/IntroCogSci-Syllabus.pdf) 따라서 리딩 읽고 요약/정리.

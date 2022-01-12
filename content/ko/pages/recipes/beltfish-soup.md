@@ -5,7 +5,8 @@ type: page
 date: "2020-10-25T08:30:41"
 lang: ko
 url: recipes/beltfish-soup
-
+tags:
+  - recipe
 ---
 
 제주 향토 음식 갈치국.

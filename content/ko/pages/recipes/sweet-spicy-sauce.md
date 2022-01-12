@@ -5,7 +5,8 @@ type: page
 date: "2020-10-25T08:41:41"
 lang: ko
 url: recipes/sweet-spicy-sauce
-
+tags:
+  - recipe
 ---
 
 신발에 발라먹어도 맛있다는 마법 소스.

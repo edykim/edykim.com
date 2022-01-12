@@ -5,6 +5,8 @@ type: page
 date: "2021-04-03T03:08:41"
 lang: ko
 url: recipes/scone
+tags:
+  - recipe
 ---
 
 ## 준비물
