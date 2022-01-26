@@ -11,7 +11,7 @@ const FloatContainer = styled.aside`
     font-size: 0.8rem;
     color: ${colors.text};
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: ${layouts.wide}) {
     display: none;
   }
 `
@@ -20,8 +20,6 @@ const Container = styled.div`
   position: absolute;
   left: 50%;
   top: 0;
-  border-left: 1px solid #000000;
-  padding-left: 12px;
   margin-top: 60px;
   margin-left: ${layouts.halfContent};
   ul {
