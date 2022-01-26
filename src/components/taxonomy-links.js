@@ -2,12 +2,13 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import taxonomy from "../../config/taxonomy"
+import { colors, fonts } from "~/constraint"
 
 const Container = styled.div`
-  margin: 2rem -0.5rem;
+  margin: 1rem -0.5rem 3rem;
   a {
     display: inline-block;
-    color: #000000;
+    color: ${colors.text};
     margin: 0.1rem 0.5rem;
   }
 `
