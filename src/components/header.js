@@ -32,6 +32,18 @@ const CollpasedOnly = styled.div`
     display: block;
   }
 `
+const CollpasedOnlySmall = styled.div`
+  display: none;
+  @media screen and (max-width: ${collapsedWidth}) {
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+    width: 100%;
+    a {
+      font-size: 0.8em;
+    }
+  }
+`
 
 const DocumentFixation = createGlobalStyle`
   html, body {
@@ -58,7 +70,7 @@ const Nav = styled.nav`
         ? `
     position: fixed;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     left: 0;
     top: 0;
     bottom: 0;
@@ -71,11 +83,8 @@ const Nav = styled.nav`
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      font-size: 1.5rem;
-      row-gap: 1rem;
-    }
-    div {
-      margin-top: 1rem;
+      font-size: 1.2rem;
+      row-gap: 0.4rem;
     }
     a {
       margin: 0;
@@ -209,9 +218,9 @@ const Header = ({ siteTitle }) => {
             <NavHeaderLink />
           </CollpasedOnly>
           <Navigation />
-          <CollpasedOnly>
+          <CollpasedOnlySmall>
             <Footnote />
-          </CollpasedOnly>
+          </CollpasedOnlySmall>
         </Nav>
       </HeaderContainer>
       <Helmet>
