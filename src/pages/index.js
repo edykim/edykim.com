@@ -7,21 +7,6 @@ import Seo from "../components/seo"
 const IndexPage = ({location}) => (
   <Layout location={location}>
     <Seo title="Home" />
-
-    <HeroContainer>
-      <figure>
-        <StaticImage
-          src="../images/me.jpg"
-          width={1140}
-          aspectRatio={2}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          transformOptions={{ cropFocus: "attention" }}
-          alt="Edward"
-        />
-        <figcaption>When I visited UT Austin</figcaption>
-      </figure>
-    </HeroContainer>
     <ContentContainer>
       <h1>Hello, I am Edward.</h1>
       <p>

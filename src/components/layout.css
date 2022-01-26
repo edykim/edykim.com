@@ -1,7 +1,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.6em -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
+  font: 16px/1.8 -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -9,11 +9,6 @@ html {
 @media screen and (max-width: 720px) {
   :root {
     font-size: 90%;
-  }
-}
-@media screen and (max-width: 480px) {
-  :root {
-    font-size: 84.5%;
   }
 }
 

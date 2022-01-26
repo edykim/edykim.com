@@ -1,12 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout, {
-  HeroContainer,
-  ContentContainer,
-} from "../../components/layout"
+import Layout, { ContentContainer } from "../../components/layout"
 import PostShortList from "../../components/post-short-list"
 import Seo from "../../components/seo"
 
@@ -14,20 +9,6 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
   return (
     <Layout location={location}>
       <Seo title="Home" lang={"ko"} />
-      <HeroContainer>
-        <figure>
-          <StaticImage
-            src="../images/me.jpg"
-            width={1140}
-            aspectRatio={2}
-            quality={95}
-            formats={["auto", "webp", "avif"]}
-            transformOptions={{ cropFocus: "attention" }}
-            alt="Edward"
-          />
-          <figcaption>UT Austin 놀러 가서 :)</figcaption>
-        </figure>
-      </HeroContainer>
       <ContentContainer>
         <h1>안녕하세요, 김용균입니다.</h1>
         <p>

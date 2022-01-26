@@ -4,8 +4,11 @@ import { colors, layouts, fonts } from "~/constraint"
 const Hr = css`
   height: 0;
   border: 0;
-  border-bottom: 1px solid ${colors.text};
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23aaaaaa' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-position: center;
   max-width: ${layouts.tiny};
+  height: 16px;
   margin: 4rem auto 4rem;
 
   @media (max-width: 750px) {
@@ -249,7 +252,7 @@ const Content = styled.div`
       content: "";
       display: block;
       position: absolute;
-      border-bottom: 1px solid ${colors.text};
+      border-bottom: 1px solid #ccc;
       left: ${layouts.sidePadding};
       right: ${layouts.sidePadding};
       bottom: 0;
