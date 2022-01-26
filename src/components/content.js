@@ -66,7 +66,7 @@ const Content = styled.div`
   h4 > a:not(.title-anchor),
   h5 > a:not(.title-anchor),
   h6 > a:not(.title-anchor) {
-    color: ${colors.primary};
+    color: ${colors.link};
     word-break: keep-all;
     overflow-wrap: break-word;
     :hover {

@@ -44,12 +44,13 @@ const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -0.5rem;
+  margin: 0 -0.6rem;
   font-size: 0.9rem;
   a {
     display: block;
-    margin: 0 0.5rem;
+    margin: 0 0.6rem;
     color: #000000;
+    text-decoration: none;
   }
   @media screen and (max-width: ${collapsedWidth}) {
     ${props =>

@@ -21,6 +21,7 @@ const PublishedAt = styled.time`
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em;
   margin: 0 0.5rem;
+  color: ${colors.subtext};
 `
 
 const LinkSection = styled.div`
@@ -28,7 +29,7 @@ const LinkSection = styled.div`
   word-break: keep-all;
   overflow-wrap: break-word;
   a {
-    color: ${colors.text};
+    color: ${colors.link};
     text-decoration: underline;
     &:hover,
     &:active {
