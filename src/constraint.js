@@ -1,15 +1,3 @@
-// export const colors = {
-//   background: "#ffffff",
-//   backgroundAlt: "#f8f8f8",
-//   primary: "#191ab5",
-//   link: "#ec0b43",
-//   highlight: "#fff7e0",
-//   text: "#011627",
-//   body: "#080708",
-//   subtext: "#7d869c",
-//   shade: "#eae6ea",
-// }
-
 export const colors = {
   background: "var(--color-background)",
   backgroundAlt: "#f8f8f8",
@@ -23,11 +11,11 @@ export const colors = {
 }
 
 export const layouts = {
-  content: "820px",
-  halfContent: "430px",
-  wide: "1140px",
-  full: "960px",
-  narrow: "720px",
+  content: "720px",
+  halfContent: "360px",
+  wide: "960px",
+  full: "860px",
+  narrow: "620px",
   tiny: "420px",
 
   sidePadding: "1rem",

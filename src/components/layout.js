@@ -14,18 +14,16 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 import { LocationContextProvider } from "./LocationContext"
+import { layouts } from "~/constraint"
+
 
 const MainContainer = styled.div`
   margin: 0 auto;
-  min-height: calc(100vh - 16rem);
-  @media screen and (max-width: 720px) {
-    min-height: initial;
-  }
 `
 export const ContentContainer = styled.div`
   margin: 0 auto;
   padding: 0 1.0875rem 1rem;
-  max-width: 820px;
+  max-width: ${layouts.content};
   word-break: keep-all;
 `
 
