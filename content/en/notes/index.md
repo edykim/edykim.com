@@ -18,3 +18,4 @@ url: /notes
 ## Living
 
 - [Plants](/plants)
+- [Security Freeze](/note/security-freeze)
