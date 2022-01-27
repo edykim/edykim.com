@@ -17,10 +17,12 @@ const PageTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const noTitle = page.frontmatter?.noTitle
   const redirect = page.frontmatter?.redirect
+  const noIndex = page.frontmatter?.noIndex
 
   return (
     <Layout location={location} title={siteTitle} item={page}>
       <Seo
+        noindex={noIndex}
         redirect={redirect}
         lang={page.frontmatter.lang}
         title={page.frontmatter.title}
@@ -78,6 +80,7 @@ export const pageQuery = graphql`
         lang
         type
         redirect
+        noIndex
       }
       fields {
         url

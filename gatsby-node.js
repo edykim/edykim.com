@@ -142,6 +142,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String
       date: Date @dateformat
       tags: [String]
+      noIndex: Boolean
     }
     type Fields {
       slug: String
