@@ -812,3 +812,16 @@ pre[class*="language-"] > code[class*="language-"] {
   background-color: #ccc !important;
   max-width: 658px !important;
 }
+
+.memo-date:target:before {
+  content: '';
+  display: block;
+  position: absolute;
+  margin-left: -1.2rem;
+  margin-top: 0.8rem;
+  width: 9px;
+  height: 9px;
+  margin-right: 0.5rem;
+  background-color: dodgerblue;
+  border-radius: 100%;
+}
