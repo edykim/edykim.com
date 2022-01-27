@@ -798,3 +798,17 @@ pre[class*="language-"] > code[class*="language-"] {
 .gatsby-highlight::-webkit-scrollbar-thumb {
   background: #ddd;
 }
+
+.memo-date {
+  text-decoration: none;
+  font-size: 0.7em;
+  color: #666666 !important;
+}
+
+.memo-divider {
+  margin-top: 0 !important;
+  height: 1px !important;
+  background-image: none !important;
+  background-color: #ccc !important;
+  max-width: 658px !important;
+}
