@@ -33,21 +33,7 @@ export const HeroContainer = styled.div`
   max-width: 1140px;
 `
 
-const Main = styled.main`
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  animation: fade 0.2s ease-in-out;
-
-  @media (prefers-reduced-motion) {
-    animation: none;
-  }
-`
+const Main = styled.main``
 
 const Layout = ({ item, location, children }) => {
   const data = useStaticQuery(graphql`
