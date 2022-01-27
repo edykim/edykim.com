@@ -13,6 +13,7 @@ Security Freeze prevents creating new credit cards or any new activity.
 - Free to add/remove a freeze
 - Temporaily lift available for short-term
 - For the most protection, freeze all major credit bureaus
+- Still, [existing inquiries](https://www.experian.com/blogs/ask-experian/credit-education/preventing-fraud/security-freeze/#:~:text=Who%20Can%20Access,orders%20or%20warrants.) can access the report
 
 > A credit freeze, also called a security freeze, helps stop identity thieves from taking out credit in your name by preventing new creditors from accessing your credit report.
 >
