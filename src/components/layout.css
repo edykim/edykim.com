@@ -806,7 +806,8 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 .memo-divider {
-  margin-top: 0 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
   height: 1px !important;
   background-image: none !important;
   background-color: #ccc !important;
@@ -815,10 +816,7 @@ pre[class*="language-"] > code[class*="language-"] {
 
 .memo-date:target:before {
   content: '';
-  display: block;
-  position: absolute;
-  margin-left: -1.2rem;
-  margin-top: 0.8rem;
+  display: inline-block;
   width: 9px;
   height: 9px;
   margin-right: 0.5rem;
