@@ -823,3 +823,14 @@ pre[class*="language-"] > code[class*="language-"] {
   background-color: dodgerblue;
   border-radius: 100%;
 }
+
+
+::-moz-selection {
+  color: #000;
+  background: #eee;
+}
+
+::selection {
+  color: #000;
+  background: #eee;
+}
