@@ -17,8 +17,10 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
           캘리포니아에서 컴퓨터 공부를 하고 있습니다.
         </p>
         <p>
-          🪴 늘 성장하고 싶어합니다. 아무리 작은 경험이라도 글로 적어두면 나에게도, 남에게도 도움이
-          된다는 생각으로 웹페이지를 꾸리고 있습니다. 함께 무럭무럭 성장합시다!
+          항상 성장에 대한 욕심이 많아서 늘 배우려고 노력하고
+          있습니다. 아무리 작은 경험이라도 글로 적어두면 나에게도, 남에게도
+          도움이 된다는 생각으로 웹페이지를 꾸리고 있습니다. 함께 무럭무럭
+          성장합시다 🪴
         </p>
         {featuredItems.edges.length > 0 && (
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
