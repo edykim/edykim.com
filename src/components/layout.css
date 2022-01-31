@@ -1,7 +1,9 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 16px/1.8 -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
+  font: 16px/1.8 -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+    Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
+    "Malgun Gothic", "맑은 고딕", sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -17,7 +19,9 @@ body {
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   color: #000000;
-  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+    Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
+    "Malgun Gothic", "맑은 고딕", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -100,7 +104,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+    Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.4rem;
@@ -278,8 +283,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.2rem;
@@ -295,8 +299,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -312,8 +315,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85rem;
@@ -329,8 +331,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.8rem;
@@ -346,8 +347,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.75rem;
