@@ -42,6 +42,33 @@ const FooterWrapper = styled.div`
   font-size: 0.8rem;
 `
 
+const Form = styled.form`
+  @media screen and (max-width: 430px) {
+    order: -1;
+    margin-bottom: 0.8rem;
+    fieldset {
+      margin-bottom: 0;
+    }
+  }
+  input {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    min-height: 1.5rem;
+    line-height: 1;
+    appearance: none;
+    font-size: 0.7rem;
+    border-radius: 0;
+    color: #000;
+  }
+  input[type="text"] {
+    margin-right: 0.5rem;
+  }
+  input[type="submit"] {
+    padding: 0 0.4rem;
+    background-color: #eeeeee;
+  }
+`
+
 const Footer = () => {
   const lang = usePageLanguage()
   return (
@@ -53,30 +80,21 @@ const Footer = () => {
           </SocialNav>
           <div className="copyright">Edward Kim</div>
         </div>
-        <form
+        <Form
           name="google-search"
           action="https://google.com/search"
           method="get"
         >
           <fieldset style={{ border: 0 }}>
             <input type="hidden" name="sitesearch" value="https://edykim.com" />
-            <input
-              name="q"
-              type="text"
-              style={{
-                border: "1px solid #ccc",
-                appearance: "none",
-                marginRight: "0.5rem",
-              }}
-            />
+            <input name="q" type="text" />
             <input
               type="submit"
               name="btn-search"
               value={lang === "ko" ? "검색" : "Search"}
-              style={{ border: "1px solid #ccc", appearance: "none" }}
             />
           </fieldset>
-        </form>
+        </Form>
       </FooterContainer>
     </FooterWrapper>
   )
