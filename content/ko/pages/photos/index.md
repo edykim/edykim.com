@@ -4,8 +4,7 @@ author: haruair
 type: page
 date: "2021-12-23T12:53:11.239Z"
 lang: ko
-url: /photos/
-
+url: /photo/
 ---
 
-(준비중)
+- [Melbourne, Australia](/ko/photo/melbourne/)
