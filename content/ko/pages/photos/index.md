@@ -7,4 +7,7 @@ lang: ko
 url: /photo/
 ---
 
+기록하는 일을 좋아해서 늘 사진을 남깁니다.
+
 - [Melbourne, Australia](/ko/photo/melbourne/)
+
