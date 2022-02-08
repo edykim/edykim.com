@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Content from "../components/content"
 
-const NotFoundPage = () => (
-  <Layout>
+const NotFoundPage = ({ location }) => (
+  <Layout location={location}>
     <Seo title="404: Not found" />
     <Content style={{ textAlign: "center" }}>
       <h1 class="skip">Page not found</h1>

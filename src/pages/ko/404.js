@@ -5,8 +5,8 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Content from "../../components/content"
 
-const KoNotFoundPage = () => (
-  <Layout>
+const KoNotFoundPage = ({ location }) => (
+  <Layout location={location}>
     <Seo title="404: 페이지를 찾을 수 없음" lang={"ko"} />
     <Content style={{ textAlign: "center" }}>
       <h1 class="skip">페이지가 없어요!</h1>
