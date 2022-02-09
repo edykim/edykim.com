@@ -162,3 +162,18 @@ wav 파일도 당연히 해당 경로에 필요하다. 그리고 acpid를 다시
 $ systemctl restart acpid.service
 ```
 
+# Caps Lock 키를 한영키로 사용하기
+
+`.Xmodmap`에 다음 내용을 추가한다.
+
+```
+remove lock = Caps_Lock
+keycode 66 = Hangul
+```
+
+동작하지 않는다면 `.xinitrc` 에서 해당 파일을 불러오지 않는 경우일 수 있다. 그럴 때는 `.xinitrc`에 다음을 추가한다.
+
+```
+xmodmap "$HOME/.Xmodmap"
+```
+
