@@ -59,6 +59,7 @@
     "clean": "gatsby clean",
     "new-ko-post": "node ./scripts/new-ko-post.js",
     "new-memo": "node ./scripts/new-memo.js",
+    "timestamp": "node ./scripts/timestamp.js",
     "post-build": "node ./scripts/post-build.js",
     "netlify:build": "npm run build && npm run post-build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
