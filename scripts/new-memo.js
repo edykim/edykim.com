@@ -1,9 +1,10 @@
 const path = require("path")
+const { getTimestamp } = require("./utils")
+
 const {
   existsSync,
   writeFileSync,
   readFileSync,
-  appendFileSync,
 } = require("fs")
 
 let content = process.argv.slice(2).join(" ")
@@ -43,16 +44,8 @@ url: /memo/${y}/
 const data = readFileSync(p)
 
 const ds = data.toString().split("<!-- -->")
+const newItem = getTimestamp(d, content)
 
-const month = d.toLocaleString("default", { month: "long" })
-
-const newItem = `
-<a class="memo-date" id="${d.toISOString()}" href="#${d.toISOString()}">${month} ${d.getDate()}, ${y} #</a>
-
-${content}
-
-<hr class="memo-divider" />
-`
-writeFileSync(path.join(p), [ds[0], "<!-- -->\n", newItem, ds[1]].join(''))
+writeFileSync(path.join(p), [ds[0], "<!-- -->\n", newItem, ds[1]].join(""))
 
 console.log(p)
