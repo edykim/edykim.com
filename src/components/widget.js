@@ -5,7 +5,7 @@ import { colors, layouts } from "~/constraint"
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  width: ${layouts.content};
+  max-width: ${layouts.content};
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
