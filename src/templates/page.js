@@ -28,7 +28,6 @@ const PageTemplate = ({ data, location }) => {
         title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
       />
-      <AsideWidget nodes={relatedPages} node={page} />
       <article
         className="blog-post"
         itemScope
@@ -50,6 +49,7 @@ const PageTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
       </article>
+      <AsideWidget nodes={relatedPages} node={page} />
     </Layout>
   )
 }
