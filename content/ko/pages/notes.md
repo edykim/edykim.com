@@ -9,17 +9,10 @@ lang: ko
 url: notes
 ---
 
-## 주제별
-
-- [요리 레시피](/ko/recipes/)
-- [트럼펫](/ko/trumpet/)
-- [리눅스](/ko/linux/)
 - [사진](/ko/photo/)
-
-## 공부
-
-- [인지과학개론 노트](/ko/intro-cog-sci/)
-
-## 그 외
-
+- [트럼펫](/ko/trumpet/)
+- [요리 레시피](/ko/recipes/)
+- [리눅스](/ko/linux/)
 - [부스러기](/ko/memo/2022/)
+- 공부
+  - [인지과학개론 노트](/ko/intro-cog-sci/)
