@@ -502,7 +502,7 @@ const Content = styled.div`
     &:hover,
     &:focus,
     &:active {
-      background-color: #ffc;
+      background-color: #f8f8f8;
     }
   }
 `
