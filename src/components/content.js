@@ -30,12 +30,12 @@ export const button = css`
       display: inline-block;
       text-decoration: none;
       color: ${colors.text};
-      padding: 0.4rem 0.8rem;
+      padding: 0.2rem 0.8rem;
       border-radius: 4px;
       border: 2px solid ${colors.text};
       &:hover,
       &:active {
-        text-decoration: underline;
+        transform: translateY(-2px);
       }
     }
   }

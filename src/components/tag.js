@@ -4,14 +4,9 @@ import { Link } from "gatsby"
 import { sanitizeUrl } from "@/plugins/edykim-plugin-taxonomy/utils"
 import options from "@/config/taxonomy"
 import { colors, fonts, layouts } from "~/constraint"
+import { Container } from "./taxonomy-links"
 
-export const TagLink = styled(Link)`
-  display: inline-block;
-  color: ${colors.text};
-  font-size: ${fonts.tag};
-  margin-right: 6px;
-  margin-bottom: 6px;
-`
+export const TagLink = styled(Link)``
 
 const Section = styled.div`
   max-width: ${layouts.content};
@@ -30,20 +25,22 @@ export default class Tags extends Component {
     return (
       <Section>
         <Inner>
-          {tags &&
-            tags.length > 0 &&
-            tags.map((tag, index) => {
-              const path = `${langPrefix}/tag/${sanitizeUrl(tag, options)}/`
-              return (
-                <TagLink
-                  className={`taxonomy-tag`}
-                  key={`tag-${index}`}
-                  to={path}
-                >
-                  {`#${tag}`}
-                </TagLink>
-              )
-            })}
+          <Container>
+            {tags &&
+              tags.length > 0 &&
+              tags.map((tag, index) => {
+                const path = `${langPrefix}/tag/${sanitizeUrl(tag, options)}/`
+                return (
+                  <TagLink
+                    className={`taxonomy-tag`}
+                    key={`tag-${index}`}
+                    to={path}
+                  >
+                    {`${tag}`}
+                  </TagLink>
+                )
+              })}
+          </Container>
         </Inner>
       </Section>
     )

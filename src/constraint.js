@@ -11,12 +11,12 @@ export const colors = {
 }
 
 export const layouts = {
-  content: "720px",
-  halfContent: "360px",
-  wide: "960px",
-  full: "860px",
-  narrow: "620px",
-  tiny: "420px",
+  content: "810px",
+  halfContent: "405px",
+  wide: "1080px",
+  full: "970px",
+  narrow: "690px",
+  tiny: "470px",
 
   sidePadding: "1rem",
   innerPadding: "3rem",

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 16px/1.8 -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+  font: 18px/1.8 Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
     Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
     "Malgun Gothic", "맑은 고딕", sans-serif;
   box-sizing: border-box;
@@ -19,7 +21,7 @@ body {
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   color: #000000;
-  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+  font-family: Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
     Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
     "Malgun Gothic", "맑은 고딕", sans-serif;
   font-weight: normal;
@@ -104,7 +106,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+  font-family: Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
     Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
