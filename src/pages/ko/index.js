@@ -10,7 +10,7 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
     <Layout location={location}>
       <Seo title="Home" lang={"ko"} />
       <ContentContainer>
-        <h1 style={{ fontWeight: "900", fontSize: 42, letterSpacing: -1 }}>
+        <h1 style={{ fontWeight: "900", fontSize: '3.3rem', letterSpacing: -1 }}>
           안녕하세요, 김용균입니다 👋
         </h1>
         <p>
