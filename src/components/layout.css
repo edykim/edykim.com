@@ -812,8 +812,8 @@ pre[class*="language-"] > code[class*="language-"] {
   margin-bottom: 2rem !important;
   height: 1px !important;
   background-image: none !important;
-  background-color: #ccc !important;
-  max-width: 658px !important;
+  background-color: #eee !important;
+  max-width: 738px !important;
 }
 
 .memo-date:target:before {
