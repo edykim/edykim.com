@@ -32,7 +32,7 @@ const Navigation = () => {
   return (
     <>
       <NavLink to="/crafts/">crafts</NavLink>
-      <NavLink to="/writings/">writings</NavLink>
+      {/* <NavLink to="/writings/">writings</NavLink> */}
       <NavLink to="/notes/">notes</NavLink>
       <NavLink to="/about/">about</NavLink>
     </>
