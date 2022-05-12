@@ -17,7 +17,7 @@ const SocialNav = styled.div`
 `
 
 const FooterContainer = styled.footer`
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eee;
   padding-top: 1.5rem;
   flex-direction: row;
   display: flex;
@@ -27,7 +27,8 @@ const FooterContainer = styled.footer`
   flex-wrap: wrap;
 
   .copyright {
-    font-weight: 600;
+    margin-top: 0.5rem;
+    font-weight: 700;
   }
 
   @media screen and (max-width: 430px) {
@@ -78,9 +79,9 @@ const Footer = () => {
           <SocialNav>
             <Footnote />
           </SocialNav>
-          <div className="copyright">Edward Kim</div>
+          <div className="copyright">김용균 · Edward Kim</div>
         </div>
-        <Form
+        {/* <Form
           name="google-search"
           action="https://google.com/search"
           method="get"
@@ -94,7 +95,7 @@ const Footer = () => {
               value={lang === "ko" ? "검색" : "Search"}
             />
           </fieldset>
-        </Form>
+        </Form> */}
       </FooterContainer>
     </FooterWrapper>
   )

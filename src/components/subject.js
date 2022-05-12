@@ -22,7 +22,8 @@ export const Headline = styled.p`
   margin-top: -1rem;
 `
 export const Date = styled.p`
-  color: ${colors.text};
+  color: ${colors.subtext};
+  font-size: 0.9rem;
 `
 
 export default Subject
