@@ -7,7 +7,7 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Seo title="Home" />
     <ContentContainer>
-      <h1 style={{ fontWeight: "900", fontSize: '3.3rem', letterSpacing: -1 }}>
+      <h1 style={{ fontWeight: "900", fontSize: '2.5rem', letterSpacing: -1 }}>
         Hello, I am Edward 👋
       </h1>
       <p>
