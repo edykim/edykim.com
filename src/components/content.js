@@ -449,7 +449,6 @@ const Content = styled.div`
 
   .columns {
     max-width: ${layouts.full};
-
     @media (max-width: 600px) {
       padding-left: 0;
       padding-right: 0;
@@ -462,6 +461,48 @@ const Content = styled.div`
     column-gap: 1rem;
     > * {
       flex: 1;
+    }
+  }
+
+  .grid {
+    max-width: ${layouts.content};
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr !important;
+      .item-card {
+        min-height: auto;
+      }
+    }
+  }
+  .col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-card {
+    min-height: 105px;
+    border: 1px solid #eee;
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    color: ${colors.subtext};
+    font-size: 0.8rem;
+    span {
+      font-size: 1rem;
+      display: block;
+      color: ${colors.text};
+      font-weight: 600;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #ffc;
     }
   }
 `
