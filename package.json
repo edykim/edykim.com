@@ -38,6 +38,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "rehype-react": "^7.1.1",
     "remark-directive": "^1.0.1",
     "styled-components": "^5.3.0",
     "unist-util-visit": "^2.0.0"

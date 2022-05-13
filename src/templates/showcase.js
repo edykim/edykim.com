@@ -32,17 +32,20 @@ const ShowcaseTemplate = ({ data, location }) => {
           fontSize: "1rem",
           wordBreak: "keep-all",
         }}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-        itemProp="articleBody"
+        page={post}
       />
       <ContentContainer>
-
         <h2>주제별</h2>
         <TaxonomyLinks />
         {featuredItems.edges.length > 0 && (
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
         )}
-        <PostShortList title={"최근 글"} posts={items.edges} linkTitle={'전체 글 보기'} link={'/ko/archives/'} />
+        <PostShortList
+          title={"최근 글"}
+          posts={items.edges}
+          linkTitle={"전체 글 보기"}
+          link={"/ko/archives/"}
+        />
       </ContentContainer>
     </Layout>
   )
@@ -60,7 +63,7 @@ export const pageQuery = graphql`
     post: markdownRemark(id: { eq: $id }) {
       id
       excerpt(format: PLAIN, truncate: true, pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         description

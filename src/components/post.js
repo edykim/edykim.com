@@ -29,8 +29,7 @@ const PostTemplate = ({ data, location }) => {
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+          page={post}
         />
       </article>
       <Tags post={post} />
