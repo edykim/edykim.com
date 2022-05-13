@@ -34,8 +34,12 @@ url: notes
 
 <div class="grid col-2">
 <a href="/ko/linux/" class="item-card">
-<span>💾 리눅스 메모</span>
+<span>💾 리눅스 노트</span>
 나중에 설치하며 보려고 정리한 잡다한 설정들
+</a>
+<a href="/ko/java/" class="item-card">
+<span>💾 자바 노트</span>
+org.edykim.study.java
 </a>
 </div>
 
