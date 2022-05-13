@@ -19,7 +19,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(format: PLAIN, truncate: true, pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "YYYY년 M월 D일")

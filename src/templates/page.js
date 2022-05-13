@@ -45,8 +45,7 @@ const PageTemplate = ({ data, location }) => {
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}
-          dangerouslySetInnerHTML={{ __html: page.html }}
-          itemProp="articleBody"
+          page={page}
         />
       </article>
       <AsideWidget nodes={relatedPages} node={page} />
@@ -71,7 +70,7 @@ export const pageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       id
       excerpt(format: PLAIN, truncate: true, pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         noTitle

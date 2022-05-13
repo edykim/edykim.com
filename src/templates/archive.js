@@ -36,8 +36,7 @@ const ArchiveTemplate = ({ data, location }) => {
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+          page={post}
         />
 
         <PostList key={"archive"} nodes={items.edges.map(({ node }) => node)} />
@@ -58,7 +57,7 @@ export const pageQuery = graphql`
     post: markdownRemark(id: { eq: $id }) {
       id
       excerpt(format: PLAIN, truncate: true, pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         description

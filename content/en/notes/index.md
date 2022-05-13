@@ -8,35 +8,21 @@ url: /notes
 
 ---
 
-<div class="grid col-2">
-<a href="/plt/" class="item-card">
-<span>📓 Programming Language Theory</span>
-A collection of Programming Language Theory related articles/pages.
-</a>
-</div>
+<grid cols="2">
+<card-link to="/plt/" title="📓 Programming Language Theory" subtext="A collection of Programming Language Theory related articles/pages."></card-link>
+</grid>
 
 ## Living
 
-<div class="grid col-2">
-<a href="/plants/" class="item-card">
-<span>🪴 Plants</span>
-Notes about my plants, how to cares
-</a>
-<a href="/plants/" class="item-card">
-<span>🔐 Security Freeze</span>
-What is about, how to apply
-</a>
-</div>
+<grid cols="2">
+<card-link to="/plants/" title="🪴 Plants" subtext="Notes about my plants, how to cares"></card-link>
+<card-link to="/note/security-freeze/" title="🔐 Security Freeze" subtext="What is about, how to apply"></card-link>
+</grid>
 
 ## Lecture Notes
 
-<div class="grid col-2">
-<a href="/note/cs-11-intro-cpp/" class="item-card">
-<span>📝 CS11 Intro C++</span>
-from Caltech open syl.
-</a>
-<a href="/note/english-writing/" class="item-card">
-<span>📝 Academic English: Writing Specialization</span>
-from Coursera
-</a>
-</div>
+<grid cols="2">
+<card-link to="/note/cs-11-intro-cpp/" title="📝 CS11 Intro C++" subtext="from Caltech open syl."></card-link>
+<card-link to="/note/english-writing/" title="📝 Academic English: Writing Specialization" subtext="
+from Coursera"></card-link>
+</grid>
