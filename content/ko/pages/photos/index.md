@@ -9,9 +9,6 @@ lang: ko
 url: /photo/
 ---
 
-<div class="grid col-2">
-<a href="/ko/photo/melbourne/" class="item-card">
-<span>🐨 Melbourne, Australia</span>
-멜버른에서 마주한 일상의 풍경
-</a>
-</div>
+<grid cols="2">
+<card-link to="/ko/photo/melbourne/" title="🐨 Melbourne, Australia" subtext="멜버른에서 마주한 일상의 풍경"></card-link>
+</grid>
