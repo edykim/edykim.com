@@ -1,9 +1,0 @@
----
-title: 조각글 모음
-author: haruair
-type: archive
-contentType: micro
-date: "2020-09-28T04:32:24.505Z"
-lang: ko
-url: micro
----
