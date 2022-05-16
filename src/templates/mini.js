@@ -5,6 +5,8 @@ import Seo from "../components/seo"
 import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
 
+import "../components/layout.css"
+
 const MiniTemplate = ({ data }) => {
   const { page } = data
 
