@@ -23,8 +23,8 @@ noTitle: true
   <card-link to="https://apps.apple.com/app/id1458639178" inline="true" title="⏲ visual timer"></card-link>
   <card-link to="https://note.edykim.com/" inline="true" title="🗓 free PDF planner"></card-link>
   <card-link to="https://github.com/edykim/edykim.com/issues/new/" inline="true" title="✉️ say hello"></card-link>
-  <card-link to="https://edykim.com/" inline="true" title="📝 한국어 웹사이트"></card-link>
-  <card-link to="https://twitter.com/heyedykim/" inline="true" title="💬 한국어 트위터"></card-link>
+  <card-link to="https://edykim.com/ko/" inline="true" title="📝 한국어 웹사이트"></card-link>
+  <card-link to="https://twitter.com/haruair/" inline="true" title="💬 한국어 트위터"></card-link>
   <card-link to="https://www.youtube.com/watch?v=AJOVf0DH4x4" inline="true" title='🎵 Miles Davis - "It Never Entered My Mind"'></card-link>
 </grid>
 
