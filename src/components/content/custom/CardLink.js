@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { colors } from "~/constraint"
 
 const StyledLink = styled(Link)`
-  min-height: 105px;
   border: 1px solid #eee;
   display: block;
   text-decoration: none;
@@ -21,13 +20,19 @@ const StyledLink = styled(Link)`
   &:hover,
   &:focus,
   &:active {
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
   }
+  ${props =>
+    props.isInline
+      ? `
+  text-align: center; display: flex; align-items: center;  justify-content: center;`
+      : `min-height: 105px;`}
+
 `
 
-const CardLink = ({ to, title, subtext = "" }) => {
+const CardLink = ({ to, title, subtext = "", inline = false }) => {
   return (
-    <StyledLink to={to} className="item-card">
+    <StyledLink to={to} className="item-card" isInline={inline}>
       <span>{title}</span>
       {subtext}
     </StyledLink>
