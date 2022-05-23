@@ -23,16 +23,19 @@ const StyledLink = styled(Link)`
     background-color: #f8f8f8 !important;
   }
   ${props =>
-    props.isInline
+    props.isinline
       ? `
   text-align: center; display: flex; align-items: center;  justify-content: center;`
       : `min-height: 105px;`}
-
 `
 
 const CardLink = ({ to, title, subtext = "", inline = false }) => {
   return (
-    <StyledLink to={to} className="item-card" isInline={inline}>
+    <StyledLink
+      to={to}
+      className="item-card"
+      isinline={inline === true ? true : undefined}
+    >
       <span>{title}</span>
       {subtext}
     </StyledLink>
