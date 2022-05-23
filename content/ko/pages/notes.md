@@ -31,3 +31,24 @@ url: notes
 <grid cols="2">
 <card-link to="/ko/intro-cog-sci/" title="📝 인지과학개론" subtext="심심할 때 리딩 읽고 요약/정리"></card-link>
 </grid>
+
+## 습관 만들기
+
+<grid cols="2">
+<card-link to="/ko/reading/" title="📚 매일 읽기" subtext="자잘하고 꾸준하게 읽기"></card-link>
+</grid>
+
+<!--
+calendar template
+  <tile-calendar
+    done
+    hide-empty
+    start-date="2022-01-01"
+    end-date="2022-05-01"
+    colors="#7d1d6f,#dc3977,#f0746d,#fcde9c,#7bcba2,#079099,#035275">
+    <log date="2022-02-01" color="0"></log>
+    <log date="2022-02-02" color="1"></log>
+    <log date="2022-02-03" color="2"></log>
+  </tile-calendar>
+-->
+
