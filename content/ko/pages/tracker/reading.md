@@ -9,7 +9,13 @@ lang: ko
 url: reading
 ---
 
+## 2022년 독서 기록
+
+- 매일 최소 2페이지 읽기
+- 메모와 함께 읽은 책 기록하기
+
 <tile-calendar 
-  start-date="2022-05-01"
+  start-date="2022-05-23"
   end-date="2022-12-31">
+  <log date="2022-05-23">신앙을 통한 내적 평안 (올 어바웃 해피니스)</log>
 </tile-calendar>
