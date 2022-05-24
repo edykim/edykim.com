@@ -28,11 +28,10 @@ const ContainerWrapper = styled.div`
   max-width: ${layouts.content} !important;
   display: flex;
   flex-direction: row;
-  justify-content: ${props => (props.done ? "flex-start" : "flex-end")};
   align-items: stretch;
-  overflow: hidden;
-  @media screen and (min-width: 810px) {
-    ${props => (!props.done ? `padding: 0 !important;` : "")}
+
+  @media screen and (max-width: 810px) {
+    justify-content: ${props => (props.continued ? "flex-end" : "flex-start")};
   }
 `
 
@@ -136,7 +135,7 @@ const TileCalendar = props => {
   return (
     <CalendarContext.Provider value={value}>
       <>{children}</>
-      <ContainerWrapper done={done}>
+      <ContainerWrapper continued={!_startDate && !_endDate}>
         <Container>
           {result.map((r, i) => {
             const date = format(r, "yyyy-MM-dd")
