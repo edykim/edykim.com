@@ -10,7 +10,6 @@ url: reading
 ---
 
 <tile-calendar 
-  done
   start-date="2022-05-01"
   end-date="2022-12-31">
 </tile-calendar>
