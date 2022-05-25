@@ -80,7 +80,7 @@ const LogList = styled.div`
   margin-bottom: 2rem;
   max-width: ${layouts.content} !important;
   font-size: 0.8rem;
-  div {
+  .row {
     display: grid;
     grid-template-columns: 20% auto;
     margin-bottom: 0.5rem;
@@ -177,12 +177,14 @@ const TileCalendar = props => {
           .map((tile, i) => {
             if (hideEmpty && !tile.note) return null
             return (
-              <div key={`${tile.date}-${i}`}>
-                <span className="date">{`${format(
+              <div className="row" key={`${tile.date}-${i}`}>
+                <div className="date">{`${format(
                   parse(tile.date, "yyyy-MM-dd", new Date()),
                   "MMMM d, yyyy"
-                )}`}</span>{" "}
-                <span className="note">{`${tile.note || "-"}`}</span>
+                )}`}</div>{" "}
+                <div className="note">
+                  {tile.note.map(v => v.split("\n").map(vv => <div>{vv}</div>))}
+                </div>
               </div>
             )
           })}
