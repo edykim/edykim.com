@@ -183,7 +183,7 @@ const TileCalendar = props => {
                   "MMMM d, yyyy"
                 )}`}</div>{" "}
                 <div className="note">
-                  {tile.note.map(v => v.split("\n").map(vv => <div>{vv}</div>))}
+                  {tile.note}
                 </div>
               </div>
             )
