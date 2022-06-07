@@ -39,4 +39,10 @@ url: reading
   학대받으며 자란 아이들은 역기능적인 가정으로부터 자기 자신을 분리시키는 것을 불편해하며 좋은 가정에서 사랑을 주는 부모 밑에서 자란 아이들은 가정과 분리되는 일에 별로 갈등하지 않음. 
   **노력을 하지 않는다면, 부모와의 맺은 관계가 친구, 배우자, 직장 동료, 자녀와 맺는 관계에서 그대로 반복된다.** 나 자신을 파악, 이해하고 공감하는 노력. 억압된 것은 반드시 돌아온다.<br />
   전이로 인한 재현 발생, 스스로 인식과 책임을 지는 것으로 불행에 익숙한 것을 벗어남, 자아실현으로 연결. (올 어바웃 해피니스)</log>
+  <log date="2022-05-31">New behaviors have a short half-life, as our minds tend to revert to our old ways of thinking and doing. (Hooked)</log>
+  <log date="2022-06-02">Too many choices or irrelevant options can cuase hesitation, confusion or worse - abandonment. (Hooked)</log>
+  <log date="2022-06-06">Our life is filled with tiny stressors and we're usually unaware of our habitual reactions to these nagging issues.
+  <br />
+  The ultimate goal of a habit-forming product is to solve the user's pain by creating an association so that the user identifies the company's product or service as the source of relief.
+  (Hooked)</log>
 </tile-calendar>
