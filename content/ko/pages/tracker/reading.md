@@ -18,6 +18,7 @@ url: reading
 ### 읽은 책
 
 - **올 어바웃 해피니스**: 행복에 대한 정의부터 행복의 다양한 관점과 사례를 전문가 인터뷰로 풀어간 책. 다양한 인터뷰이 선정도 매우 좋았고 인터뷰 이후 종합한 부분도 일목요연해서 유익. 행복한 삶은 나를 더 인식하고 이해하는 일에서부터 시작!
+- **스몰빅**: 작은 성공을 반복해야 하는 이유와 어떻게 실천할 수 있는지 방법론을 얘기하는 책. 조금 뻔하긴 하지만 읽다보면 이렇게 뻔한 것도 안하고 살고 있다며 반성하게 됨.
 
 ### 메모판
 
@@ -45,4 +46,5 @@ url: reading
   <br />
   The ultimate goal of a habit-forming product is to solve the user's pain by creating an association so that the user identifies the company's product or service as the source of relief.
   (Hooked)</log>
+  <log date="2022-06-09">1%의 우위는 현재의 목표와 자신에게 가장 효과적인 방법을 파악한 뒤에 작은 개선을 이루어감으로써 집중과 과정, 성공률이 조금씩 개선되도록 해준다. (스몰빅)</log>
 </tile-calendar>
