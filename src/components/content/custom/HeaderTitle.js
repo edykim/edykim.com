@@ -26,3 +26,7 @@ const headers = targets.reduce((carry, key) => {
 }, [])
 
 export default headers
+
+export const resetCount = () => {
+  slugger.reset()
+}
