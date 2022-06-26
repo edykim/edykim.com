@@ -30,6 +30,7 @@
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.9.0",
+    "github-slugger": "^1.4.0",
     "hastscript": "^6.0.0",
     "katex": "^0.13.11",
     "lodash.groupby": "^4.6.0",
