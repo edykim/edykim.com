@@ -9,11 +9,19 @@ lang: ko
 tags:
   - 개발 이야기
   - php
-draft: true
 slug: "how-to-filter-an-array-using-callable-in-php"
 ---
 
 어떤 프로그램이든 배열이나 목록과 같은 자료구조에서 조건에 맞는 요소(element)를 찾아 하위 집합을 만들어야 하는 경우가 있습니다. PHP에서는 배열(array)이 기본이 되는 자료구조 중 하나인데요. 이 배열을 대상으로 내장 함수인 [`array_filter()`](https://www.php.net/manual/en/function.array-filter.php)를 사용해서 조건에 맞는 요소만 골라내는 작업을 수행할 수 있습니다.
+
+빠르게 callable 표현식/문법만 확인하고 싶다면 [callable 정리](#callable-정리) 부분을 참고하세요.
+
+- [배열 필터하기](#배열-필터하기)
+  - [문자열로 된 callable 타입](#문자열로-된-callable-타입)
+  - [정적 클래스 메소드를 `callable`로](#정적-클래스-메소드를-callable로)
+  - [개체(object)를 활용하는 `callable`](#개체object를-활용하는-callable)
+  - [클로저(Closure)를 `callable`로 활용하기](#클로저closure를-callable로-활용하기)
+  - [`CallableExpr(...)` 문법으로 `callable` 날개 달기](#callableexpr-문법으로-callable-날개-달기)
 
 # 배열 필터하기
 
@@ -291,6 +299,7 @@ $filtered = array_filter($nums, $five_is_smaller_than);
 그런데 PHP에는 익명 클래스도 존재합니다. 간단하게 사용할 클래스라면 익명 클래스를 활용할 수도 있습니다. 여기서 배운 `__invoke()` 매직 메소드를 사용하면 익명 클래스도 `callable`로 사용할 수 있습니다.
 
 ```php
+//@ PHP >= 7.0
 // $num의 배수만 골라내는 클래스에 3으로 초기화하고 사용
 array_filter($nums, new class(3) {
   protected $num;
@@ -318,7 +327,7 @@ array_filter($nums, new class(3) {
 다른 곳에서 활용할 일이 없는 필터라면 익명 함수를 활용해도 간단하고 편리합니다.
 
 ```php
-//@ PHP >= 5.3.0
+//@ PHP >= 5.3
 $is_even = function ($num) {
   return $num % 2 === 0;
 };
@@ -409,7 +418,16 @@ var_dump($actor);
 $actor(); // Hello!
 ```
 
-문자열로 되어 있는 `callable`을 `Closure` 인스턴스로 바꿔서 활용합니다. 이 메소드를 `CallableExpr(...)` 문법으로 사용할 수 있습니다. 어떤 방법인지 확인해봅시다.
+문자열로 되어 있는 `callable`을 `Closure` 인스턴스로 바꿔서 활용합니다. 이 메소드를 `CallableExpr(...)` 문법으로 사용할 수 있습니다.
+
+```php
+$a = Closure::fromCallable('sayHello');
+$b = sayHello(...); // 위 메소드 호출과 동일한 표현
+
+var_dump($a == $b); // true
+```
+
+다음과 같은 방식으로 사용하게 됩니다.
 
 ```php
 $nums = [1, 2, 3, 4, 5, 6, 7];
@@ -432,7 +450,9 @@ var_dump($even_nums);
 // }
 ```
 
-이전에 문자열일 때는 존재하지 않는 함수명을 적을 수 있는 문제가 있었습니다. 또한 문자열이나 배열로 된 `callable`을 다루는 방식보다 이 새로운 `CallableExpr(...)` 문법은 좀 더 일관성이 있습니다. 이 문법은 어떤 `callable`이든 가능합니다. 앞에서 살펴본 예제를 이 문법으로 작성해봅니다.
+이전에 문자열일 때는 존재하지 않는 함수명을 적을 수 있는 문제가 있었습니다.  `CallableExpr(...)` 문법은  `callable`에 없는 메소드 등을 사용하는걸 방지하는데 도움이 됩니다. 또한 문자열이나 배열로 된 `callable`을 다루는 방식보다 이 문법은 좀 더 일관성이 있습니다.
+
+이 문법은 어떤 `callable`이든 활용할 수 있습니다. 앞에서 살펴본 `callable` 예제를 이 문법으로 작성하면 다음과 같습니다.
 
 ```php
 // 1. 함수
@@ -448,4 +468,66 @@ array_filter($nums, NumberFilter::is_odd(...));
 // 3. 개체 메소드
 // array_filter($nums, [$five, 'isSmallerThan']);
 array_filter($nums, $five->isSmallerThan(...));
+```
+
+## `callable` 정리
+
+이 글에서 다룬 모든 `callable` 타입 표현을 정리합니다.
+
+### 문자열 callable
+
+```php
+$a = 'sayHello';
+$b = 'Foo\Bar\SomeClass::filter';
+$c = Foo\Bar\SomeClass::class . '::filter';
+```
+
+### 배열 callable
+
+```php
+$a = [Foo\Bar\SomeClass::class, 'filter'];
+$b = [$obj, 'methodName'];
+```
+
+### `__invoke()` 매직 메소드가 있는 인스턴스
+
+```php
+//@ PHP >= 5.3
+$obj;
+```
+
+### 익명함수 (클로저) callable
+
+```php
+//@ PHP >= 5.3
+$a = function ($num) use ($other) { /* ... */ };
+//@ PHP >= 7.4
+$b = fn($num) => $num > $other; // 축약식 (화살표 함수)
+```
+
+### `__invoke()` 매직 메소드가 있는 익명 클래스
+
+```php
+//@ PHP >= 7.0
+$a = new class () {
+  public function __invoke() {
+    /* ... */
+  }
+};
+```
+
+### `Closure::fromCallable()`로 만든 클로저 callable
+
+```php
+//@ PHP >= 7.4
+$a = Closure::fromCallable('sayHello');
+```
+
+### `CallableExpr(...)`로 만든 클로저 callable
+
+```php
+//@ PHP >= 8.1
+$a = sayHello(...);
+$b = Foo\Bar\SomeClass::is_odd(...);
+$c = $obj->methodName(...);
 ```
