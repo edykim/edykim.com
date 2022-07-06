@@ -1,5 +1,6 @@
 const { URL } = require("url")
 const { join } = require("path")
+const taxonomy = require("../taxonomy")
 
 const createUrl = (base, rest) => {
   const u = new URL(base)
@@ -24,6 +25,58 @@ const serialize = ({ query: { site, allMarkdownRemark } }) => {
   })
 }
 
+const generateFeed = ({ url = null, key = null }) => {
+  return {
+    serialize,
+    query: `
+      {
+        site {
+          siteMetadata {
+            title
+            description
+            siteUrl
+            site_url: siteUrl
+          }
+        }
+        allMarkdownRemark(
+          limit: 5,
+          sort: { order: DESC, fields: [frontmatter___date] },
+          filter: {
+            frontmatter: {
+              draft: { ne: true },
+              private: {ne: true},
+              type: {eq: "post"},
+              lang: {eq: "ko"}${
+                key
+                  ? `,
+              tags: { in: ["${key}"] }`
+                  : ""
+              }
+            }
+          }
+        ) {
+          edges {
+            node {
+              excerpt
+              html
+              fields {
+                slug
+                url
+              }
+              frontmatter {
+                title
+                date
+              }
+            }
+          }
+        }
+      }
+    `,
+    output: `ko${url ? `/${url}` : ""}/feed.xml`,
+    title: `edykim.com 블로그 ${key ? ` ${key} ` : ""}RSS 피드`,
+  }
+}
+
 module.exports = {
   resolve: `gatsby-plugin-feed`,
   options: {
@@ -39,44 +92,6 @@ module.exports = {
         }
       }
     `,
-    feeds: [
-      {
-        serialize,
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-            allMarkdownRemark(
-              limit: 5,
-              sort: { order: DESC, fields: [frontmatter___date] },
-              filter: {frontmatter: { draft: { ne: true }, private: {ne: true}, type: {eq: "post"}, lang: {eq: "ko"} }}
-            ) {
-              edges {
-                node {
-                  excerpt
-                  html
-                  fields {
-                    slug
-                    url
-                  }
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }
-          }
-        `,
-        output: "ko/feed.xml",
-        title: "edykim.com 블로그 RSS 피드",
-      },
-    ],
+    feeds: [generateFeed({}), ...taxonomy.mappedUrls.map(r => generateFeed(r))],
   },
 }
