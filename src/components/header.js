@@ -7,7 +7,7 @@ import { usePageLanguage } from "./LocationContext"
 
 const HeaderContainer = styled.div`
   padding: 3rem 0 1rem;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 860px) {
     padding: 1rem 0;
   }
   margin: 0 var(--site-margin);

@@ -56,6 +56,10 @@ figure {
   margin: 0 0 2rem 0;
 }
 
+figure img {
+  max-width: 100%;
+}
+
 figcaption {
   font-size: 0.9em;
   color: hsl(0deg 0% 0% / 60%);

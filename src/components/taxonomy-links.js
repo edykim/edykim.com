@@ -21,7 +21,7 @@ export const Container = styled.div`
       transform: translateY(-1px);
     }
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 860px) {
     display: flex;
     flex-wrap: wrap;
     a {
