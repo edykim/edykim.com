@@ -25,7 +25,8 @@ const Content = styled.div`
   > table {
     max-width: var(--site-max-width);
   }
-  > img {
+  > img,
+  > p > img {
     max-width: 100%;
   }
   blockquote {
