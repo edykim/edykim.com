@@ -3,7 +3,7 @@ import { colors, layouts } from "~/constraint"
 
 const Subject = styled.header`
   margin: 1rem var(--site-margin);
-  max-width: var(--site-max-width);
+  width: var(--site-width);
   padding: 3rem 0 2rem;
   @media screen and (max-width: 860px) {
     padding: 0rem 0 0rem;

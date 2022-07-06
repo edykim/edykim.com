@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const PostNav = styled.nav`
-  margin: 0 var(--site-margin);
+  margin: 2rem var(--site-margin);
+  width: var(--site-width);
   a {
     color: inherit;
   }

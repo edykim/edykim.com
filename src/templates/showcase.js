@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -16,7 +16,7 @@ const ShowcaseTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} item={post}>
+    <Layout location={location} title={siteTitle}>
       <Seo
         lang={post.frontmatter.lang}
         title={post.frontmatter.title}
@@ -26,17 +26,14 @@ const ShowcaseTemplate = ({ data, location }) => {
         <h1 itemProp="headline">{post.frontmatter.title}</h1>
         {headline && <Headline>{headline}</Headline>}
       </Subject>
-      <Content
-        style={{
-          lineHeight: 1.76,
-          fontSize: "1rem",
-          wordBreak: "keep-all",
-        }}
-        page={post}
-      />
-      <Content>
-        <h2>주제별</h2>
+      <Content page={post} itemProp={null}>
+        <h2>분류로 찾기</h2>
+        <h3>주제별</h3>
         <TaxonomyLinks />
+
+        <h3>태그별</h3>
+        <p>전체 태그를 보려면 <Link to={'/ko/archives/tag/'}>여기</Link>를 확인하세요.</p>
+
         {featuredItems.edges.length > 0 && (
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
         )}
@@ -44,7 +41,7 @@ const ShowcaseTemplate = ({ data, location }) => {
           title={"최근 글"}
           posts={items.edges}
           linkTitle={"전체 글 보기"}
-          link={"/ko/archives/"}
+          link={"/ko/archives/posts/"}
         />
       </Content>
     </Layout>

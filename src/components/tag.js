@@ -9,6 +9,7 @@ export const TagLink = styled(Link)``
 
 const Section = styled.div`
   margin: 2rem var(--site-margin) 4rem;
+  width: var(--site-width);
 `
 
 export default class Tags extends Component {

@@ -6,7 +6,7 @@ import PostItem from "./post-item"
 import { button } from "./content"
 
 const Wrapper = styled.div`
-  max-width: var(--site-max-width);
+  width: var(--site-width);
   margin: 0 0 2rem;
   ul {
     list-style: none;

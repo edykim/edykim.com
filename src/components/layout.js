@@ -47,7 +47,6 @@ const Layout = ({ item, location, children }) => {
     <LocationContextProvider location={location}>
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
-        item={item}
       />
       <MainContainer>
         <Main>{children}</Main>

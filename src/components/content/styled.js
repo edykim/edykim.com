@@ -7,11 +7,11 @@ export const button = css`
 const Content = styled.div`
   margin: 1rem var(--site-margin);
   hr {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: var(--site-container-margin);
+    margin-right: var(--site-container-margin);
     border: 0;
     border-bottom: 1px solid #ddd;
-    max-width: var(--site-max-width);
+    width: var(--site-width);
   }
   > p,
   > h1,
@@ -21,22 +21,30 @@ const Content = styled.div`
   > h5,
   > ul,
   > ol,
-  > div:not(.gatsby-highlight),
+  > div:not(.gatsby-highlight, .columns),
   > table {
-    max-width: var(--site-max-width);
+    width: var(--site-width);
+    margin-left: var(--site-container-margin);
+    margin-right: var(--site-container-margin);
   }
   > img,
   > p > img {
     max-width: 100%;
+    margin-left: var(--site-container-margin);
+    margin-right: var(--site-container-margin);
+    display: block;
   }
   blockquote {
     max-width: var(--site-narrow-max-width);
     border-left: 5px solid #ddbead;
     padding-left: 1rem;
-    margin-left: 1rem;
+    margin-left: var(--site-blockquote-margin);
+    margin-right: var(--site-blockquote-margin);
   }
   .gatsby-highlight {
-    max-width: var(--site-max-width);
+    width: var(--site-width);
+    margin-left: var(--site-container-margin);
+    margin-right: var(--site-container-margin);
   }
 `
 

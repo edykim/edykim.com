@@ -1,11 +1,12 @@
 ---
 title: 트럼펫 🎺
 author: haruair
-type: page
+type: post
 date: "2021-04-26T19:39:11.197Z"
 lang: ko
 url: /trumpet/
-
+tags:
+  - trumpet
 ---
 
 ## 웹사이트

@@ -4,7 +4,7 @@ import renderer from "./renderer"
 
 export { button } from "./styled"
 
-const ContentWithCustomComponents = ({ page, children }) => {
+const ContentWithCustomComponents = ({ page, children, ...props }) => {
   return (
     <Content
       itemProp="articleBody"
@@ -13,8 +13,10 @@ const ContentWithCustomComponents = ({ page, children }) => {
         fontSize: "1rem",
         wordBreak: "keep-all",
       }}
+      {...props}
     >
-      {children ? children : page ? renderer(page.htmlAst) : null}
+      {page ? renderer(page.htmlAst) : null}
+      {children ? children : null}
     </Content>
   )
 }

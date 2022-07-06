@@ -38,7 +38,7 @@ const FooterContainer = styled.footer`
 
 const FooterWrapper = styled.div`
   margin: 3rem var(--site-margin);
-  max-width: var(--site-max-width);
+  width: var(--site-width);
   font-size: 0.8rem;
 `
 

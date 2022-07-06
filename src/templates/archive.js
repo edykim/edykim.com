@@ -14,7 +14,7 @@ const ArchiveTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} item={post}>
+    <Layout location={location} title={siteTitle}>
       <Seo
         lang={post.frontmatter.lang}
         title={post.frontmatter.title}

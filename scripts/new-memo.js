@@ -1,51 +1,32 @@
 const path = require("path")
-const { getTimestamp } = require("./utils")
-
-const {
-  existsSync,
-  writeFileSync,
-  readFileSync,
-} = require("fs")
-
-let content = process.argv.slice(2).join(" ")
-if (content.trim() === "") {
-  console.error("Your memo is missing.")
-  return
-}
+const { writeFileSync, mkdirSync } = require("fs")
 
 const d = new Date()
+const np = n => String(n).padStart(2, "0")
 const y = d.getFullYear()
-const p = path.join(
-  __dirname,
-  "..",
-  "content",
-  "ko",
-  "pages",
-  "memo",
-  `${y}.md`
-)
-if (!existsSync(p)) {
-  writeFileSync(
-    path.join(p),
-    `---
-title: 부스러기
+const m = d.getMonth() + 1
+
+const stamp = `${y}-${np(m)}-${np(d.getDate())}`
+const filename = `${stamp}.md`
+const p = path.join(__dirname, "..", "content", "ko", "posts")
+
+mkdirSync(p, { recursive: true })
+writeFileSync(
+  path.join(p, filename),
+  `---
 author: haruair
-headline:
-  - 삶의 작은 조각들 모음
-type: page
+type: post
 date: "${d.toISOString()}"
 lang: ko
-url: /memo/${y}/
+tags:
+  - 내 이야기
+  - 부스러기
+noIndex: true
+slug: "${stamp}"
 ---
-  `
-  )
-}
 
-const data = readFileSync(p)
+-
+`
+)
 
-const ds = data.toString().split("<!-- -->")
-const newItem = getTimestamp(d, content)
-
-writeFileSync(path.join(p), [ds[0], "<!-- -->\n", newItem, ds[1]].join(""))
-
-console.log(p)
+console.log(filename)

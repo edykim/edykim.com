@@ -5,6 +5,7 @@ const siteUrl = `https://edykim.com/`
 module.exports = {
   siteMetadata: {
     title: `edykim`,
+    titleKo: '보통의 비망록',
     author: {
       name: `Edward Kim`,
       summary: `who loves to make web services and useful tools.`,
@@ -116,6 +117,7 @@ module.exports = {
           `!/ko/**`,
           `/ko/micro/`,
           `/ko/archives/**`,
+          `/ko/post/page/**`,
           `/ko/micro/**`,
           `/ko/category/**`,
           `/ko/tag/**`,

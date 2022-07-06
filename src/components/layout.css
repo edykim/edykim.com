@@ -2,18 +2,32 @@
 
 :root {
   --site-margin: 5rem;
-  --site-max-width: 38rem;
+  --site-width: 38rem;
   --site-narrow-max-width: 32rem;
+  --site-neg-margin: 0;
+  --site-container-margin: 0;
+  --site-blockquote-margin: 1rem;
+  --site-figcaption-margin: 0;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 800px) {
   :root {
-    --site-margin: 0.75rem;
+    --site-margin: auto;
+    --site-neg-margin: auto;
+    --site-container-margin: auto;
+    --site-blockquote-margin: auto;
+    --site-figcaption-margin: 0.75rem;
+    --site-width: 38rem;
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 620px) {
   :root {
+    --site-margin: 0.75rem;
+    --site-neg-margin: -0.75rem;
+    --site-container-margin: 0;
+    --site-blockquote-margin: 1rem;
+    --site-width: auto;
     font-size: 95%;
   }
 }
@@ -56,6 +70,17 @@ figure {
   margin: 0 0 2rem 0;
 }
 
+figure.wide {
+  margin-left: var(--site-neg-margin);
+  margin-right: var(--site-neg-margin);
+}
+
+@media screen and (max-width: 800px) {
+  figure {
+    text-align: center;
+  }
+}
+
 figure img {
   max-width: 100%;
 }
@@ -63,6 +88,12 @@ figure img {
 figcaption {
   font-size: 0.9em;
   color: hsl(0deg 0% 0% / 60%);
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 *,
@@ -634,4 +665,13 @@ table th, table td {
 
 .gatsby-resp-image-wrapper {
   margin-left: 0 !important;
+}
+
+.columns {
+  max-width: 2000px !important;
+  display: grid;
+  margin-left: var(--site-neg-margin);
+  margin-right: var(--site-neg-margin);
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );;
+  grid-gap: 0.5rem;
 }

@@ -1,12 +1,12 @@
 ---
 title: 에어프라이어로 군고구마 굽기
 author: haruair
-type: page
+type: post
 date: "2021-02-26T05:28:41"
 lang: ko
 url: recipes/sweet-potato
 tags:
-  - recipe
+  - 요리 레시피
 ---
 
 시간이 좀 걸리긴 하지만 결과물이 너무 만족스러워서 고구마 한 박스를 순식간에... 혈당 올라가는 이야기 😓 

@@ -46,6 +46,14 @@ module.exports = {
       url: `review`,
     },
     {
+      key: `요리 레시피`,
+      url: `recipe`,
+    },
+    {
+      key: `부스러기`,
+      url: `memo`,
+    },
+    {
       key: `사진`,
       url: `photography`,
     },

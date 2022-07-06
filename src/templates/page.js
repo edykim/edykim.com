@@ -5,13 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
-import { AsideWidget } from "../components/widget"
 
 const PageTemplate = ({ data, location }) => {
-  const {
-    page,
-    relatedPages: { edges: relatedPages },
-  } = data
+  const { page } = data
 
   const headline = page.frontmatter.headline?.join(" ")
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -48,7 +44,6 @@ const PageTemplate = ({ data, location }) => {
           page={page}
         />
       </article>
-      <AsideWidget nodes={relatedPages} node={page} />
     </Layout>
   )
 }
