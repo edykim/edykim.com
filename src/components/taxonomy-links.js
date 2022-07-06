@@ -18,7 +18,7 @@ export const Container = styled.div`
     padding: 0.1rem 0.5rem;
     &:hover,
     &:active {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
   }
   @media screen and (max-width: 750px) {

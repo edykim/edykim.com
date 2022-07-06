@@ -1,16 +1,17 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Layout, { ContentContainer } from "../../components/layout"
+import Layout from "../../components/layout"
 import PostShortList from "../../components/post-short-list"
 import Seo from "../../components/seo"
+import Content from "../../components/content/styled"
 
 const KoIndexPage = ({ location, data: { featuredItems } }) => {
   return (
     <Layout location={location}>
       <Seo title="Home" lang={"ko"} />
-      <ContentContainer>
-        <h1 style={{ fontWeight: "900", fontSize: '2.5rem', letterSpacing: -1 }}>
+      <Content>
+        <h1 style={{ fontWeight: "100", fontSize: '3rem', letterSpacing: -1 }}>
           안녕하세요, 김용균입니다 👋
         </h1>
         <p>
@@ -26,7 +27,7 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
         {featuredItems.edges.length > 0 && (
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
         )}
-      </ContentContainer>
+      </Content>
     </Layout>
   )
 }

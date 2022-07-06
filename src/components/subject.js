@@ -2,10 +2,9 @@ import styled from "styled-components"
 import { colors, layouts } from "~/constraint"
 
 const Subject = styled.header`
-  max-width: ${layouts.content};
-  margin: 0 auto;
-  padding-left: ${layouts.sidePadding};
-  padding-right: ${layouts.sidePadding};
+  margin: 1rem var(--site-margin);
+  max-width: var(--site-max-width);
+  padding: 3rem 0 2rem;
   h1 {
     word-break: keep-all;
     color: ${colors.text};

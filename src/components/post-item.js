@@ -20,7 +20,7 @@ const PublishedAt = styled.time`
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em;
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 0 0;
   color: ${colors.subtext};
 `
 
@@ -29,7 +29,6 @@ const LinkSection = styled.div`
   word-break: keep-all;
   overflow-wrap: break-word;
   a {
-    color: ${colors.link};
     text-decoration: underline;
     &:hover,
     &:active {
@@ -44,12 +43,12 @@ export default class PostItem extends Component {
     return (
       <li>
         <Row>
+          <PublishedAt>{post.frontmatter.date}</PublishedAt>
           <LinkSection>
             <Link to={post.fields.url}>
               {post.frontmatter.title || post.excerpt}
             </Link>
           </LinkSection>
-          <PublishedAt>{post.frontmatter.date}</PublishedAt>
         </Row>
       </li>
     )

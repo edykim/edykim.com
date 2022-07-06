@@ -17,10 +17,11 @@ const StyledLink = styled(Link)`
     color: ${colors.text};
     font-weight: 600;
   }
+  background-color: rgba(255, 255, 255, 0.8);
   &:hover,
   &:focus,
   &:active {
-    background-color: #f8f8f8 !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
   }
   ${props =>
     props.isinline

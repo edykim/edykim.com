@@ -1,14 +1,13 @@
 import styled from "styled-components"
-import { colors, layouts } from "~/constraint"
 
 export const PostNav = styled.nav`
-  max-width: ${layouts.content};
-  margin: 0 auto;
+  margin: 0 var(--site-margin);
   a {
-    color: ${colors.primary};
+    color: inherit;
   }
   ul {
-    margin: 0 1rem;
+    list-style: none;
+    padding: 0;
   }
   @media screen and (max-width: 720px) {
     ul {

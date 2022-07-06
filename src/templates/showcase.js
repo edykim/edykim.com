@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Layout, { ContentContainer } from "../components/layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Subject, { Headline } from "../components/subject"
 import Content from "../components/content"
@@ -34,7 +34,7 @@ const ShowcaseTemplate = ({ data, location }) => {
         }}
         page={post}
       />
-      <ContentContainer>
+      <Content>
         <h2>주제별</h2>
         <TaxonomyLinks />
         {featuredItems.edges.length > 0 && (
@@ -46,7 +46,7 @@ const ShowcaseTemplate = ({ data, location }) => {
           linkTitle={"전체 글 보기"}
           link={"/ko/archives/"}
         />
-      </ContentContainer>
+      </Content>
     </Layout>
   )
 }

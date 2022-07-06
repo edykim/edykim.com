@@ -6,7 +6,12 @@ import PostItem from "./post-item"
 import { button } from "./content"
 
 const Wrapper = styled.div`
-  margin: 2rem auto;
+  max-width: var(--site-max-width);
+  margin: 0 0 2rem;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
   ${button};
 `
 
@@ -17,7 +22,7 @@ const Title = styled.h2`
 const PostShortList = ({ posts, title, linkTitle, link }) => (
   <Wrapper>
     <Title>{title}</Title>
-    <ul style={{ listStyle: "square" }}>
+    <ul>
       {posts.length > 0 &&
         posts.map(({ node }, index) => (
           <PostItem post={node} key={`${title}-${index}`} showYears={true} />

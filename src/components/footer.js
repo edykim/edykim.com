@@ -37,41 +37,12 @@ const FooterContainer = styled.footer`
 `
 
 const FooterWrapper = styled.div`
-  margin: 3rem auto;
-  max-width: ${layouts.content};
-  padding: 0 1.0875rem;
+  margin: 3rem var(--site-margin);
+  max-width: var(--site-max-width);
   font-size: 0.8rem;
 `
 
-const Form = styled.form`
-  @media screen and (max-width: 430px) {
-    order: -1;
-    margin-bottom: 0.8rem;
-    fieldset {
-      margin-bottom: 0;
-    }
-  }
-  input {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    min-height: 1.5rem;
-    line-height: 1;
-    appearance: none;
-    font-size: 0.7rem;
-    border-radius: 0;
-    color: #000;
-  }
-  input[type="text"] {
-    margin-right: 0.5rem;
-  }
-  input[type="submit"] {
-    padding: 0 0.4rem;
-    background-color: #eeeeee;
-  }
-`
-
 const Footer = () => {
-  const lang = usePageLanguage()
   return (
     <FooterWrapper>
       <FooterContainer>
@@ -81,21 +52,6 @@ const Footer = () => {
           </SocialNav>
           <div className="copyright">김용균 · Edward Kim</div>
         </div>
-        {/* <Form
-          name="google-search"
-          action="https://google.com/search"
-          method="get"
-        >
-          <fieldset style={{ border: 0 }}>
-            <input type="hidden" name="sitesearch" value="https://edykim.com" />
-            <input name="q" type="text" />
-            <input
-              type="submit"
-              name="btn-search"
-              value={lang === "ko" ? "검색" : "Search"}
-            />
-          </fieldset>
-        </Form> */}
       </FooterContainer>
     </FooterWrapper>
   )

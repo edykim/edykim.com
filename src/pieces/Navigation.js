@@ -17,15 +17,9 @@ const Navigation = () => {
   if (language === "ko") {
     return (
       <>
-        <NavLink to="/ko/post/">
-          블로그 <Subtext>blog</Subtext>
-        </NavLink>
-        <NavLink to="/ko/notes/">
-          노트 <Subtext>notes</Subtext>
-        </NavLink>
-        <NavLink to="/ko/about/">
-          소개 <Subtext>about</Subtext>
-        </NavLink>
+        <NavLink to="/ko/post/">블로그</NavLink>
+        <NavLink to="/ko/notes/">노트</NavLink>
+        <NavLink to="/ko/about/">소개</NavLink>
       </>
     )
   }
