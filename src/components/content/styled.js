@@ -31,7 +31,7 @@ const Content = styled.div`
   }
   blockquote {
     max-width: var(--site-narrow-max-width);
-    border-left: 5px solid #ddd;
+    border-left: 5px solid #ddbead;
     padding-left: 1rem;
     margin-left: 1rem;
   }
