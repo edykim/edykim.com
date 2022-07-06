@@ -22,10 +22,12 @@ export const Container = styled.div`
     }
   }
   @media screen and (max-width: 750px) {
+    display: flex;
+    flex-wrap: wrap;
     a {
       text-align: center;
-      min-width: 90px;
-      margin: 0.5rem 0.1rem;
+      flex: 1 0 32%;
+      margin: 0.1rem 0.1rem;
       padding: 0.5rem 1rem;
     }
   }
