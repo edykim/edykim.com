@@ -6,7 +6,7 @@ const np = n => String(n).padStart(2, "0")
 const y = d.getFullYear()
 const m = d.getMonth() + 1
 
-const stamp = `${y}-${np(m)}-${np(d.getDate())}`
+const stamp = `${y}-${np(m)}-${np(d.getDate())}-${np(d.getHours())}${np(d.getMinutes())}`
 const filename = `${stamp}.md`
 const p = path.join(__dirname, "..", "content", "ko", "posts")
 
