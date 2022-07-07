@@ -20,6 +20,11 @@ export const Container = styled.div`
     &:active {
       transform: translateY(-1px);
     }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #3b3b38;
+      color: #cececb;
+    }
   }
   @media screen and (max-width: 860px) {
     display: grid;

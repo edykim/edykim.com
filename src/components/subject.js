@@ -10,10 +10,10 @@ const Subject = styled.header`
   }
   h1 {
     word-break: keep-all;
-    color: ${colors.text};
+    color: inherit;
   }
   h1 a {
-    color: ${colors.text};
+    color: inherit;
     text-decoration: none;
   }
 `
@@ -21,10 +21,16 @@ const Subject = styled.header`
 export const Headline = styled.p`
   font-size: 0.9rem;
   color: ${colors.subtext};
+  @media (prefers-color-scheme: dark) {
+    color: #b7a792;
+  }
   margin-top: -1rem;
 `
 export const Date = styled.p`
   color: ${colors.subtext};
+  @media (prefers-color-scheme: dark) {
+    color: #b7a792;
+  }
   font-size: 0.9rem;
 `
 

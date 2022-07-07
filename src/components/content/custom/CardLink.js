@@ -9,12 +9,12 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 0.8rem;
   border-radius: 10px;
-  color: ${colors.subtext};
+  color: inherit;
   font-size: 0.8rem;
   span {
     font-size: 1rem;
     display: block;
-    color: ${colors.text};
+    color: inherit;
     font-weight: 600;
   }
   background-color: rgba(255, 255, 255, 0.3);
@@ -22,6 +22,15 @@ const StyledLink = styled(Link)`
   &:focus,
   &:active {
     background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2) !important;
+    }
   }
   ${props =>
     props.isinline
