@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { colors } from "~/constraint"
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   border: 1px solid #eee;
   display: block;
   text-decoration: none;
@@ -42,9 +42,9 @@ const StyledLink = styled(Link)`
 const CardLink = ({ to, title, subtext = "", inline = false }) => {
   return (
     <StyledLink
-      to={to}
+      href={to}
       className="item-card"
-      isinline={inline === true ? true : undefined}
+      isinline={inline === 'true' ? true : undefined}
     >
       <span>{title}</span>
       {subtext}
