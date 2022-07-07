@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Footnote from "../pieces/Footnote"
-import { layouts } from "~/constraint"
-import { usePageLanguage } from "~/components/LocationContext"
 
 const SocialNav = styled.div`
   display: flex;

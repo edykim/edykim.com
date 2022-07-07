@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { colors, layouts } from "~/constraint"
+import { colors } from "~/constraint"
 
 const Subject = styled.header`
   margin: 1rem var(--site-margin);
