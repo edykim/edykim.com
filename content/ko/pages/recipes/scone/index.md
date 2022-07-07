@@ -1,12 +1,12 @@
 ---
 title: 스콘
 author: haruair
-type: page
+type: post
 date: "2021-04-03T03:08:41"
 lang: ko
 url: recipes/scone
 tags:
-  - recipe
+  - 요리 레시피
 ---
 
 ## 준비물

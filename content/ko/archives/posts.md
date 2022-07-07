@@ -5,7 +5,7 @@ type: archive
 contentType: post
 date: "2010-10-07T05:28:41"
 lang: ko
-url: archives
+url: archives/posts
 
 ---
 

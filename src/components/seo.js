@@ -18,6 +18,7 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
         site {
           siteMetadata {
             title
+            titleKo
             description
             author {
               name
@@ -29,7 +30,7 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = lang === 'ko' ? site.siteMetadata?.titleKo : site.siteMetadata?.title
 
   if (noindex) {
     meta.push({ name: "robots", content: "noindex, nofollow" })

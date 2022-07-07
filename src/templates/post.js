@@ -10,11 +10,12 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} item={post}>
+    <Layout location={location} title={siteTitle}>
       <Seo
         lang={post.frontmatter.lang}
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        noindex={post.frontmatter?.noIndex}
       />
       <PostTemplate data={data} location={location} />
     </Layout>
@@ -47,6 +48,7 @@ export const pageQuery = graphql`
         type
         categories
         tags
+        noIndex
       }
       fields {
         url

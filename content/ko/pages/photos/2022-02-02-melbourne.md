@@ -1,10 +1,14 @@
 ---
 title: Melbourne, Australia
 author: haruair
-type: page
-date: "2022-02-02T018:42:11.239Z"
+type: post
+date: "2022-02-02T18:42:11.239Z"
+headline:
+  - 멜버른에서 마주한 일상의 풍경
 lang: ko
-url: /photo/melbourne/
+tags:
+  - 사진
+url: photo/melbourne-australia
 ---
 
 <figure>

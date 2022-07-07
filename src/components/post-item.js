@@ -7,8 +7,8 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 0.3rem;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: no-wrap;
   @media screen and (max-width: 900px) {
     display: block;
   }
@@ -17,10 +17,10 @@ const Row = styled.div`
 const PublishedAt = styled.time`
   text-align: right;
   line-height: 1.8;
-  font-size: 0.9rem;
+  font-size: ${fonts.title};
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em;
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 0 0;
   color: ${colors.subtext};
 `
 
@@ -28,8 +28,8 @@ const LinkSection = styled.div`
   font-size: ${fonts.title};
   word-break: keep-all;
   overflow-wrap: break-word;
+  flex: 1;
   a {
-    color: ${colors.link};
     text-decoration: underline;
     &:hover,
     &:active {
@@ -44,12 +44,12 @@ export default class PostItem extends Component {
     return (
       <li>
         <Row>
+          <PublishedAt>{post.frontmatter.date}</PublishedAt>
           <LinkSection>
             <Link to={post.fields.url}>
               {post.frontmatter.title || post.excerpt}
             </Link>
           </LinkSection>
-          <PublishedAt>{post.frontmatter.date}</PublishedAt>
         </Row>
       </li>
     )

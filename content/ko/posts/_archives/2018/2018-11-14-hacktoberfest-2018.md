@@ -31,7 +31,7 @@ PR을 보내며 느낀 점, 더 배우고 싶은 부분을 적어야겠다 생�
 
 ### [geokrety/geokrety-website](https://github.com/geokrety/geokrety-website)
 
-"label:hacktoberfest"로 검색하던 중에 찾은 리포지터리다. php로 만든 geocaching 웹사이트인데 php도 할 줄 알고 geocaching도 좋아하는 주제라서 더 살펴보게 되었다. 코드가 엄청 깔끔하진 않지만, 이슈 내용으로는 내가 쉽게 도울 수 있는 부분이라서 코드를 보냈다.
+`"label:hacktoberfest"`로 검색하던 중에 찾은 리포지터리다. php로 만든 geocaching 웹사이트인데 php도 할 줄 알고 geocaching도 좋아하는 주제라서 더 살펴보게 되었다. 코드가 엄청 깔끔하진 않지만, 이슈 내용으로는 내가 쉽게 도울 수 있는 부분이라서 코드를 보냈다.
 
 코드 내에서 영어가 아닌 폴란드어를 자주 사용하고 있다는 점이 흥미로웠다. 예를 들면 `search.php`가 아니라 `szukaj.php`라는 파일명을 쓰거나 변수명이 `name` 대신 `nazwa`를 사용한다. 테이블 이름도 테이블 필드명도 부분마다 그랬다. (그래도 영어와는 다르긴 하지만) 알파벳을 사용하는 국가에서는 큰 어려움 없이 프로그래밍에 사용할 수 있다는 장점이 있었다. 여기서 구글 번역기의 힘이 크게 도움 되었다.
 

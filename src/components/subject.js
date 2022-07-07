@@ -2,10 +2,12 @@ import styled from "styled-components"
 import { colors, layouts } from "~/constraint"
 
 const Subject = styled.header`
-  max-width: ${layouts.content};
-  margin: 0 auto;
-  padding-left: ${layouts.sidePadding};
-  padding-right: ${layouts.sidePadding};
+  margin: 1rem var(--site-margin);
+  width: var(--site-width);
+  padding: 3rem 0 2rem;
+  @media screen and (max-width: 860px) {
+    padding: 0rem 0 0rem;
+  }
   h1 {
     word-break: keep-all;
     color: ${colors.text};
