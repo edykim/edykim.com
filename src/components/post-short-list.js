@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h2`
-  color: ${colors.text};
+  color: inherit;
 `
 
 const PostShortList = ({ posts, title, linkTitle, link }) => (
