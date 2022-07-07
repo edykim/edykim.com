@@ -95,13 +95,13 @@ slug: "landscaping-backyard-in-california"
 
 <figcaption>잡초 제거로 프로젝트가 시작되었다!</figcaption>
 
+</figure>
+
 <figure class="wide">
 
 ![](https://live.staticflickr.com/65535/52026346482_34f0d18229_o.jpg)
 
 <figcaption>잡초 제거 후 모습. 이후 틸러로 땅을 뒤집었다.</figcaption>
-
-</figure>
 
 </figure>
 
