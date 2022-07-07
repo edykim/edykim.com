@@ -6,7 +6,6 @@ import Seo from "../../components/seo"
 import Subject, { Headline } from "../../components/subject"
 import Content from "../../components/content"
 
-import PostShortList from "../../components/post-short-list"
 import TaxonomyLinks from "../../components/taxonomy-links"
 
 const TagsTemplate = ({ data, location }) => {

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { colors } from "~/constraint"
 
 export const button = css`
 `
