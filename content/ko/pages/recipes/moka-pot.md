@@ -1,12 +1,12 @@
 ---
 title: 모카포트
 author: haruair
-type: page
+type: post
 date: "2020-10-18T05:28:41"
 lang: ko
 url: recipes/moka-pot
 tags:
-  - recipe
+  - 요리 레시피
 ---
 
 모카포트로 커피를 추출했을 때 쓴 맛이 나기 쉽다. 아래 방법으로는 에스프레소 보다는 연하고 드립 커피보다는 진한 느낌으로 추출됨. 깔끔한 커피 추출하는 방법:

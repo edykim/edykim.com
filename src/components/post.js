@@ -34,15 +34,7 @@ const PostTemplate = ({ data, location }) => {
       </article>
       <Tags post={post} />
       <PostNav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.url} rel="prev">

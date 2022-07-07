@@ -105,6 +105,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         })
       })
     })
+
+    // create blog-list pages
+    const blogPages = sortedItems['ko-post'];
+    const postsPerPage = 6
+    const numPages = Math.ceil(blogPages.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/ko/post/` : `/ko/post/page/${i + 1}`,
+        component: path.resolve("./src/templates/ko/post-list.js"),
+        context: {
+          lang: 'ko',
+          contentType: 'post',
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
   }
 }
 

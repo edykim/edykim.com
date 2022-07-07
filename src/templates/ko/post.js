@@ -29,6 +29,7 @@ export const pageQuery = graphql`
         type
         categories
         tags
+        noIndex
       }
       fields {
         url

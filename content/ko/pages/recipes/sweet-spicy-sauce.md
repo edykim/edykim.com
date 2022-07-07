@@ -1,12 +1,12 @@
 ---
 title: "달매소스"
 author: mindymkkim
-type: page
+type: post
 date: "2020-10-25T08:41:41"
 lang: ko
 url: recipes/sweet-spicy-sauce
 tags:
-  - recipe
+  - 요리 레시피
 ---
 
 신발에 발라먹어도 맛있다는 마법 소스.

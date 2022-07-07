@@ -29,100 +29,23 @@ tags:
 
 다음과 같이 일련의 이벤트가 있다고 생각해보자.
 
-<table class="table">
-  <tr>
-    <th>
-      id
-    </th>
-    
-    <th>
-      root_id
-    </th>
-    
-    <th>
-      event
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      1
-    </td>
-    
-    <td>
-      1
-    </td>
-    
-    <td>
-      카트 생성함
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      2
-    </td>
-    
-    <td>
-      1
-    </td>
-    
-    <td>
-      상품1 추가함
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      3
-    </td>
-    
-    <td>
-      1
-    </td>
-    
-    <td>
-      상품2 추가함
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      4
-    </td>
-    
-    <td>
-      1
-    </td>
-    
-    <td>
-      상품2 제거함
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      5
-    </td>
-    
-    <td>
-      1
-    </td>
-    
-    <td>
-      배송정보 입력함
-    </td>
-  </tr>
-</table>
+| id | root_id | event |
+|-|-|-|
+| 1 | 1 | 카트 생성함 |
+| 2 | 1 | 상품1 추가함 |
+| 3 | 1 | 상품2 추가함 |
+| 4 | 1 | 상품2 제거함 |
+| 5 | 1 | 배송정보 입력함 |
 
 이 이벤트를 개체에 하나씩 적용한다면 최종적으로 생성된 카트에 상품2가 추가되어 있고 배송정보까지 입력된 개체를 얻을 수 있게 된다. 기존 CRUD 모델과 비교한다면 이미 정형화된 모델에 상태를 저장하는 과정에서 나타나는 문제를 해결할 수 있다. CRUD에서는 카트에 추가되었다가 제거된 상품 목록을 뽑고 싶다고 했을 때 별도로 그 특정한 상태를 저장하지 않는다면 어려운 작업이 될 것이다. 게다가 작업을 한다 하더라도 그 작업 이후의 데이터에 대해서만 볼 수 있는 한계점이 있다. 이처럼 정형화되지 않은 데이터인 이벤트를 저장하고 있다는 점에서 더욱 유연한 변화가 가능하다.
 
 여기서 사용되는 개체는 도메인 모델이고 흔히 집합체(aggregate)로 불리며 `root_id`를 `aggregateRoot`로 삼아서 각 개체로 전환한다.
 
-    var cart = events.reduce((aggregate, event) => aggregate.apply(event), new CartAggregate);
-    console.log(cart.getItems()) // ['상품1']
-    console.log(cart.shippingInfoExists()) // true
-    
+```js
+var cart = events.reduce((aggregate, event) => aggregate.apply(event), new CartAggregate);
+console.log(cart.getItems()) // ['상품1']
+console.log(cart.shippingInfoExists()) // true
+```
 
 내 경우에는 다음과 같은 궁금점이 생겼다.
 

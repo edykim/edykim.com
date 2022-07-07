@@ -1,8 +1,8 @@
 export const colors = {
   background: "var(--color-background)",
-  backgroundAlt: "#f8f8f8",
+  backgroundAlt: "#ffffff",
   primary: "var(--color-primary)",
-  link: "#3762c7",
+  link: "#071fab",
   highlight: "var(--color-highlight)",
   text: "#000000",
   body: "var(--color-body)",

@@ -30,9 +30,9 @@ const Taxonomy = ({ data, location, pageContext, format }) => {
           </h1>
         </Subject>
         <Content>
-          <p style={{ textIndent: 0 }}>{format(articles.totalCount || 0)}</p>
+          <p>{format(articles.totalCount || 0)}</p>
+          <PostList nodes={articles.edges.map(({ node }) => node)} />
         </Content>
-        <PostList nodes={articles.edges.map(({ node }) => node)} />
       </section>
     </Layout>
   )

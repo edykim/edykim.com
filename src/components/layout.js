@@ -14,17 +14,14 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 import { LocationContextProvider } from "./LocationContext"
-import { layouts } from "~/constraint"
-
 
 const MainContainer = styled.div`
   margin: 0 auto;
 `
 export const ContentContainer = styled.div`
-  margin: 0 auto;
-  padding: 0 1.0875rem 1rem;
-  max-width: ${layouts.content};
-  word-break: keep-all;
+> * {
+  max-width: 42rem;
+}
 `
 
 export const HeroContainer = styled.div`
@@ -50,7 +47,6 @@ const Layout = ({ item, location, children }) => {
     <LocationContextProvider location={location}>
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
-        item={item}
       />
       <MainContainer>
         <Main>{children}</Main>

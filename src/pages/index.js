@@ -1,12 +1,13 @@
 import * as React from "react"
+import Content from "../components/content/styled"
 
-import Layout, { ContentContainer } from "../components/layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Seo title="Home" />
-    <ContentContainer>
+    <Content>
       <h1 style={{ fontWeight: "900", fontSize: '2.5rem', letterSpacing: -1 }}>
         Hello, I am Edward 👋
       </h1>
@@ -16,7 +17,7 @@ const IndexPage = ({ location }) => (
         nice cup of cofffee. I'm currently studying computer science and living
         in Riverside, CA.
       </p>
-    </ContentContainer>
+    </Content>
   </Layout>
 )
 

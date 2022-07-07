@@ -14,7 +14,7 @@ const ArchiveTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle} item={post}>
+    <Layout location={location} title={siteTitle}>
       <Seo
         lang={post.frontmatter.lang}
         title={post.frontmatter.title}
@@ -30,16 +30,14 @@ const ArchiveTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {headline && <Headline>{headline}</Headline>}
         </Subject>
-        <Content
-          style={{
-            lineHeight: 1.76,
-            fontSize: "1rem",
-            wordBreak: "keep-all",
-          }}
-          page={post}
-        />
-
-        <PostList key={"archive"} nodes={items.edges.map(({ node }) => node)} />
+        <Content page={post}>
+        </Content>
+        <Content>
+          <PostList
+            key={"archive"}
+            nodes={items.edges.map(({ node }) => node)}
+          />
+        </Content>
       </article>
     </Layout>
   )

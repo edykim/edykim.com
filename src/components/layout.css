@@ -1,30 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;600;900&display=swap");
+
+:root {
+  --site-margin: 5rem;
+  --site-width: 38rem;
+  --site-narrow-max-width: 32rem;
+  --site-neg-margin: 0;
+  --site-container-margin: 0;
+  --site-blockquote-margin: 1rem;
+  --site-figcaption-margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --site-margin: auto;
+    --site-neg-margin: auto;
+    --site-container-margin: auto;
+    --site-blockquote-margin: auto;
+    --site-figcaption-margin: 0.75rem;
+    --site-width: 38rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  :root {
+    --site-margin: 0.75rem;
+    --site-neg-margin: -0.75rem;
+    --site-container-margin: 0;
+    --site-blockquote-margin: 1rem;
+    --site-width: auto;
+    font-size: 95%;
+  }
+}
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 18px/1.8 Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
-    Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
-    "Malgun Gothic", "맑은 고딕", sans-serif;
+  font: 16px/1.7 Noto Serif KR, apple myungjo, serif;
+  letter-spacing: -0.02rem;
   box-sizing: border-box;
-  overflow-y: scroll;
-}
-
-@media screen and (max-width: 720px) {
-  :root {
-    font-size: 90%;
-  }
 }
 
 body {
   margin: 0;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  background-color: #f2eee8;
   color: #000000;
-  font-family: Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
-    Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
-    "Malgun Gothic", "맑은 고딕", sans-serif;
-  font-weight: normal;
+  font-family: Noto Serif KR, apple myungjo, serif;
+  font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -32,734 +53,528 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
+
+[lang="ko"] {
+  word-break: keep-all;
 }
-figcaption {
-  font-size: 0.8rem;
-  color: hsla(0, 0%, 0%, 0.8);
-  margin-top: 0.5rem;
+
+[lang="ko"] * {
+  word-break: inherit;
 }
-@media screen and (max-width: 1140px) {
-  figcaption {
-    margin: 0.5rem 1rem;
-    text-align: right;
+
+a {
+  color: #071fab;
+}
+
+figure {
+  margin: 0 0 2rem 0;
+}
+
+figure.wide {
+  margin-left: var(--site-neg-margin);
+  margin-right: var(--site-neg-margin);
+}
+
+@media screen and (max-width: 800px) {
+  figure {
+    text-align: center;
   }
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  color: #0000ff;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: Lato, -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
-    Noto Sans CJK KR, Apple SD Gothic Neo, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.4rem;
-  line-height: 1.1;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
+
+figure img {
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
 }
-svg:not(:root) {
-  overflow: hidden;
+
+figcaption {
+  font-size: 0.9em;
+  color: hsl(0deg 0% 0% / 60%);
 }
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-figure {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  margin: 0;
-}
-optgroup {
-  font-weight: 700;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  border: 1px solid silver;
-  padding: 0.35em 0.625em 0.75em;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
+
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
-h2 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.2rem;
-  line-height: 1.1;
+
+.button {
+  display: inline-block;
+  font-family: -apple-system, Helvetica Neue, Arial, Helvetica, Noto Sans KR,
+    Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic, Nanum Barun Gothic,
+    "Malgun Gothic", "맑은 고딕", sans-serif;
 }
-h3 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
+
+.button + .button {
+  margin-left: 10px;
 }
-h4 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+
+.button a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-indent: 0;
+  display: inline-block;
+  text-decoration: none;
   color: inherit;
-  font-family: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.85rem;
-  line-height: 1.1;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  border: 2px solid;
 }
+
+.button a:hover,
+.button a:active {
+  transform: translateY(-1px);
+}
+
+h1,
+h2,
+h3,
+h4,
 h5 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.8rem;
-  line-height: 1.1;
+  font-weight: 600;
 }
-h6 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: inherit;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.75rem;
-  line-height: 1.1;
-}
-hgroup {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-ul {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-dl {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-dd {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  overflow: auto;
-  word-wrap: normal;
-  padding: 1.45rem;
-}
-table {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
-  border-collapse: collapse;
-  width: 100%;
-}
-blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-form {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-noscript {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-iframe {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-address {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-b {
-  font-weight: bold;
-}
-strong {
-  font-weight: bold;
-}
-dt {
-  font-weight: bold;
-}
-th {
-  font-weight: bold;
-}
-ol li {
-  padding-left: 0;
-}
-ul {
-  list-style: square;
-}
-ul li {
-  padding-left: 0;
-}
-li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
-}
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(1.45rem / 2);
-}
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-samp {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-thead {
-  text-align: left;
-}
-td,
-th {
-  text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
-  padding-top: 0.725rem;
-  padding-bottom: calc(0.725rem - 1px);
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
-/* Generated with http://k88hudson.github.io/syntax-highlighting-theme-generator/www */
-/* http://k88hudson.github.io/react-markdocs */
 /**
- * @author k88hudson
- *
- * Based on prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
+ * One Light theme for prism.js
+ * Based on Atom's One Light theme: https://github.com/atom/atom/tree/master/packages/one-light-syntax
  */
-/*********************************************************
-* General
-*/
-pre[class*="language-"],
-code[class*="language-"] {
-  color: #262626;
-  text-shadow: none;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+/**
+ * One Light colours (accurate as of commit eb064bf on 19 Feb 2021)
+ * From colors.less
+ * --mono-1: hsl(230, 8%, 24%);
+ * --mono-2: hsl(230, 6%, 44%);
+ * --mono-3: hsl(230, 4%, 64%)
+ * --hue-1: hsl(198, 99%, 37%);
+ * --hue-2: hsl(221, 87%, 60%);
+ * --hue-3: hsl(301, 63%, 40%);
+ * --hue-4: hsl(119, 34%, 47%);
+ * --hue-5: hsl(5, 74%, 59%);
+ * --hue-5-2: hsl(344, 84%, 43%);
+ * --hue-6: hsl(35, 99%, 36%);
+ * --hue-6-2: hsl(35, 99%, 40%);
+ * --syntax-fg: hsl(230, 8%, 24%);
+ * --syntax-bg: hsl(230, 1%, 98%);
+ * --syntax-gutter: hsl(230, 1%, 62%);
+ * --syntax-guide: hsla(230, 8%, 24%, 0.2);
+ * --syntax-accent: hsl(230, 100%, 66%);
+ * From syntax-variables.less
+ * --syntax-selection-color: hsl(230, 1%, 90%);
+ * --syntax-gutter-background-color-selected: hsl(230, 1%, 90%);
+ * --syntax-cursor-line: hsla(230, 8%, 24%, 0.05);
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  background: #ebe8e4;
+  color: hsl(230, 8%, 24%);
+  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono",
+    monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  padding: 1rem;
 }
-pre[class*="language-"]::selection,
+
+/* Selection */
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] *::-moz-selection,
+pre[class*="language-"] *::-moz-selection {
+  /* background: hsl(230, 1%, 90%); */
+  color: inherit;
+}
+
 code[class*="language-"]::selection,
-pre[class*="language-"]::mozselection,
-code[class*="language-"]::mozselection {
-  text-shadow: none;
-  background: #394451;
+code[class*="language-"] *::selection,
+pre[class*="language-"] *::selection {
+  /* background: hsl(230, 1%, 90%); */
+  color: inherit;
 }
-@media print {
-  pre[class*="language-"],
-  code[class*="language-"] {
-    text-shadow: none;
-  }
-}
+
+/* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  background: #fafafa;
-}
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em 0.3em;
   border-radius: 0.3em;
-  color: #000000;
-  background: #ededed;
 }
-/*********************************************************
-* Tokens
-*/
-.namespace {
-  opacity: 0.7;
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
 }
+
 .token.comment,
 .token.prolog,
-.token.doctype,
 .token.cdata {
-  color: #93a1a1;
+  color: hsl(230, 4%, 64%);
 }
-.token.punctuation {
-  color: #999999;
+
+.token.doctype,
+.token.punctuation,
+.token.entity {
+  color: hsl(230, 8%, 24%);
 }
+
+.token.attr-name,
+.token.class-name,
+.token.boolean,
+.token.constant,
+.token.number,
+.token.atrule {
+  color: hsl(35, 99%, 36%);
+}
+
+.token.keyword {
+  color: hsl(301, 63%, 40%);
+}
+
 .token.property,
 .token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
 .token.symbol,
-.token.deleted {
-  color: #144d34;
+.token.deleted,
+.token.important {
+  color: hsl(5, 74%, 59%);
 }
+
 .token.selector,
-.token.attr-name,
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted {
-  color: #6b6b6b;
-}
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #a67f59;
-  background: #ffffff;
-}
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #0077aa;
-}
-.token.function {
-  color: #4b6fdd;
-}
+.token.inserted,
 .token.regex,
-.token.important,
-.token.variable {
-  color: #d18800;
+.token.attr-value,
+.token.attr-value > .token.punctuation {
+  color: hsl(119, 34%, 47%);
 }
-.token.important,
+
+.token.variable,
+.token.operator,
+.token.function {
+  color: hsl(221, 87%, 60%);
+}
+
+.token.url {
+  color: hsl(198, 99%, 37%);
+}
+
+/* HTML overrides */
+.token.attr-value > .token.punctuation.attr-equals,
+.token.special-attr > .token.attr-value > .token.value.css {
+  color: hsl(230, 8%, 24%);
+}
+
+/* CSS overrides */
+.language-css .token.selector {
+  color: hsl(5, 74%, 59%);
+}
+
+.language-css .token.property {
+  color: hsl(230, 8%, 24%);
+}
+
+.language-css .token.function,
+.language-css .token.url > .token.function {
+  color: hsl(198, 99%, 37%);
+}
+
+.language-css .token.url > .token.string.url {
+  color: hsl(119, 34%, 47%);
+}
+
+.language-css .token.important,
+.language-css .token.atrule .token.rule {
+  color: hsl(301, 63%, 40%);
+}
+
+/* JS overrides */
+.language-javascript .token.operator {
+  color: hsl(301, 63%, 40%);
+}
+
+.language-javascript
+  .token.template-string
+  > .token.interpolation
+  > .token.interpolation-punctuation.punctuation {
+  color: hsl(344, 84%, 43%);
+}
+
+/* JSON overrides */
+.language-json .token.operator {
+  color: hsl(230, 8%, 24%);
+}
+
+.language-json .token.null.keyword {
+  color: hsl(35, 99%, 36%);
+}
+
+/* MD overrides */
+.language-markdown .token.url,
+.language-markdown .token.url > .token.operator,
+.language-markdown .token.url-reference.url > .token.string {
+  color: hsl(230, 8%, 24%);
+}
+
+.language-markdown .token.url > .token.content {
+  color: hsl(221, 87%, 60%);
+}
+
+.language-markdown .token.url > .token.url,
+.language-markdown .token.url-reference.url {
+  color: hsl(198, 99%, 37%);
+}
+
+.language-markdown .token.blockquote.punctuation,
+.language-markdown .token.hr.punctuation {
+  color: hsl(230, 4%, 64%);
+  font-style: italic;
+}
+
+.language-markdown .token.code-snippet {
+  color: hsl(119, 34%, 47%);
+}
+
+.language-markdown .token.bold .token.content {
+  color: hsl(35, 99%, 36%);
+}
+
+.language-markdown .token.italic .token.content {
+  color: hsl(301, 63%, 40%);
+}
+
+.language-markdown .token.strike .token.content,
+.language-markdown .token.strike .token.punctuation,
+.language-markdown .token.list.punctuation,
+.language-markdown .token.title.important > .token.punctuation {
+  color: hsl(5, 74%, 59%);
+}
+
+/* General */
 .token.bold {
   font-weight: bold;
 }
+
+.token.comment,
 .token.italic {
   font-style: italic;
 }
+
 .token.entity {
   cursor: help;
 }
-/*********************************************************
-* Line highlighting
-*/
-pre[data-line] {
-  position: relative;
+
+.token.namespace {
+  opacity: 0.8;
 }
-pre[class*="language-"] > code[class*="language-"] {
-  position: relative;
-  z-index: 1;
+
+/* Plugin overrides */
+/* Selectors should have higher specificity than those in the plugins' default stylesheets */
+
+/* Show Invisibles plugin overrides */
+.token.token.tab:not(:empty):before,
+.token.token.cr:before,
+.token.token.lf:before,
+.token.token.space:before {
+  color: hsla(230, 8%, 24%, 0.2);
 }
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: #e6e6e6;
-  box-shadow: inset 5px 0 0 #bdbdbd;
-  z-index: 0;
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
+
+/* Toolbar plugin overrides */
+/* Space out all buttons and move them away from the right edge of the code block */
+div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+  margin-right: 0.4em;
 }
+
+/* Styling the buttons */
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+  background: hsl(230, 1%, 90%);
+  color: hsl(230, 6%, 44%);
+  padding: 0.1em 0.4em;
+  border-radius: 0.3em;
+}
+
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+  background: hsl(230, 1%, 78%); /* custom: darken(--syntax-bg, 20%) */
+  color: hsl(230, 8%, 24%);
+}
+
+/* Line Highlight plugin overrides */
+/* The highlighted line itself */
+.line-highlight.line-highlight {
+  background: hsla(230, 8%, 24%, 0.05);
+}
+
+/* Default line numbers in Line Highlight plugin */
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+  background: hsl(230, 1%, 90%);
+  color: hsl(230, 8%, 24%);
+  padding: 0.1em 0.6em;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+}
+
+/* Hovering over a linkable line number (in the gutter area) */
+/* Requires Line Numbers plugin as well */
+pre[id].linkable-line-numbers.linkable-line-numbers
+  span.line-numbers-rows
+  > span:hover:before {
+  background-color: hsla(230, 8%, 24%, 0.05);
+}
+
+/* Line Numbers and Command Line plugins overrides */
+/* Line separating gutter from coding area */
+.line-numbers.line-numbers .line-numbers-rows,
+.command-line .command-line-prompt {
+  border-right-color: hsla(230, 8%, 24%, 0.2);
+}
+
+/* Stuff in the gutter */
+.line-numbers .line-numbers-rows > span:before,
+.command-line .command-line-prompt > span:before {
+  color: hsl(230, 1%, 62%);
+}
+
+/* Match Braces plugin overrides */
+/* Note: Outline colour is inherited from the braces */
+.rainbow-braces .token.token.punctuation.brace-level-1,
+.rainbow-braces .token.token.punctuation.brace-level-5,
+.rainbow-braces .token.token.punctuation.brace-level-9 {
+  color: hsl(5, 74%, 59%);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-2,
+.rainbow-braces .token.token.punctuation.brace-level-6,
+.rainbow-braces .token.token.punctuation.brace-level-10 {
+  color: hsl(119, 34%, 47%);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-3,
+.rainbow-braces .token.token.punctuation.brace-level-7,
+.rainbow-braces .token.token.punctuation.brace-level-11 {
+  color: hsl(221, 87%, 60%);
+}
+
+.rainbow-braces .token.token.punctuation.brace-level-4,
+.rainbow-braces .token.token.punctuation.brace-level-8,
+.rainbow-braces .token.token.punctuation.brace-level-12 {
+  color: hsl(301, 63%, 40%);
+}
+
+/* Diff Highlight plugin overrides */
+/* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+pre.diff-highlight > code .token.token.deleted:not(.prefix),
+pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+  background-color: hsla(353, 100%, 66%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix),
+pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+  background-color: hsla(137, 100%, 55%, 0.15);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+
+/* Previewers plugin overrides */
+/* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-light-ui */
+/* Border around popup */
+.prism-previewer.prism-previewer:before,
+.prism-previewer-gradient.prism-previewer-gradient div {
+  border-color: hsl(0, 0, 95%);
+}
+
+/* Angle and time should remain as circles and are hence not included */
+.prism-previewer-color.prism-previewer-color:before,
+.prism-previewer-gradient.prism-previewer-gradient div,
+.prism-previewer-easing.prism-previewer-easing:before {
+  border-radius: 0.3em;
+}
+
+/* Triangles pointing to the code */
+.prism-previewer.prism-previewer:after {
+  border-top-color: hsl(0, 0, 95%);
+}
+
+.prism-previewer-flipped.prism-previewer-flipped.after {
+  border-bottom-color: hsl(0, 0, 95%);
+}
+
+/* Background colour within the popup */
+.prism-previewer-angle.prism-previewer-angle:before,
+.prism-previewer-time.prism-previewer-time:before,
+.prism-previewer-easing.prism-previewer-easing {
+  background: hsl(0, 0%, 100%);
+}
+
+/* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
+/* For time, this is the alternate colour */
+.prism-previewer-angle.prism-previewer-angle circle,
+.prism-previewer-time.prism-previewer-time circle {
+  stroke: hsl(230, 8%, 24%);
+  stroke-opacity: 1;
+}
+
+/* Stroke colours of the handle, direction point, and vector itself */
+.prism-previewer-easing.prism-previewer-easing circle,
+.prism-previewer-easing.prism-previewer-easing path,
+.prism-previewer-easing.prism-previewer-easing line {
+  stroke: hsl(230, 8%, 24%);
+}
+
+/* Fill colour of the handle */
+.prism-previewer-easing.prism-previewer-easing circle {
+  fill: transparent;
+}
+
 .gatsby-highlight {
   padding: 1em;
+  margin: 2rem 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -773,7 +588,7 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 .gatsby-highlight {
-  background: #fafafa;
+  background: #ebe8e4;
 }
 .gatsby-highlight > pre {
   margin: 0;
@@ -786,19 +601,20 @@ pre[class*="language-"] > code[class*="language-"] {
 .gatsby-highlight > pre > code {
   padding-right: 2rem;
   font-size: 16px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   display: inline-block;
 }
 
 .gatsby-highlight::-webkit-scrollbar {
-  width: 6px;
-  height: 12px;
+  width: 3px;
+  height: 8px;
 }
 .gatsby-highlight::-webkit-scrollbar-track {
-  background: #fafafa;
+  background: #ebe8e4;
 }
+
 .gatsby-highlight::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background: #d1cdc8;
 }
 
 .memo-date {
@@ -827,8 +643,35 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 ::-moz-selection {
-  background: #ffc;
+  background: rgba(255, 193, 7, 0.2);
 }
 ::selection {
-  background: #ffc;
+  background: rgba(255, 193, 7, 0.2);
+}
+
+table {
+  border-collapse: collapse;
+  min-width: var(--site-max-width);
+}
+
+table th, table td {
+  border: 1px solid #eee;
+  padding: 0.3rem 0.5rem;
+}
+
+.gatsby-resp-image-image {
+  box-shadow: none !important;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+}
+
+.columns {
+  max-width: 2000px !important;
+  display: grid;
+  margin-left: var(--site-neg-margin);
+  margin-right: var(--site-neg-margin);
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );;
+  grid-gap: 0.5rem;
 }

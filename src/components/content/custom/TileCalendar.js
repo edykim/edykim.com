@@ -98,7 +98,6 @@ const TileCalendar = props => {
     colors: _colors,
     children,
   } = props
-  const done = props.hasOwnProperty("done")
   const hideEmpty = props.hasOwnProperty("hide-empty")
 
   const startDate = _startDate
@@ -202,6 +201,7 @@ export const TileLog = ({ date, color, note, children }) => {
     return () => {
       removeTile({ date, color, note: children ?? note })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return null
 }
