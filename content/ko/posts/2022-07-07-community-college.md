@@ -1,5 +1,5 @@
 ---
-title: "미국 커뮤니티 컬리지 졸업 잡담"
+title: "미국 커뮤니티 컬리지와 편입에 관해"
 author: haruair
 type: post
 date: "2022-07-08T05:20:56.191Z"
