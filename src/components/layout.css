@@ -692,6 +692,9 @@ table th, table td {
   hr {
     border-color: #3e3932 !important;
   }
+  table th, table td {
+    border-color: #3e3932;
+  }
   figcaption {
     color: #b7a792;
   }
