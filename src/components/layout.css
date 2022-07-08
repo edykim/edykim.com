@@ -16,15 +16,15 @@
     --site-neg-margin: auto;
     --site-container-margin: auto;
     --site-blockquote-margin: auto;
-    --site-figcaption-margin: 0.75rem;
+    --site-figcaption-margin: 1.001rem;
     --site-width: 38rem;
   }
 }
 
 @media screen and (max-width: 620px) {
   :root {
-    --site-margin: 0.75rem;
-    --site-neg-margin: -0.75rem;
+    --site-margin: 1.001rem;
+    --site-neg-margin: -1.001rem;
     --site-container-margin: 0;
     --site-blockquote-margin: 1rem;
     --site-width: auto;
