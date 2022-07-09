@@ -574,41 +574,7 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 }
 
 .gatsby-highlight {
-  padding: 1em;
-  margin: 2rem 0;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media all and (max-width: 750px) {
-  .gatsby-highlight {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
-
-.gatsby-highlight {
   background: #ebe8e4;
-}
-.gatsby-highlight > pre {
-  margin: 0;
-  padding: 0;
-  overflow: initial;
-  min-width: 100%;
-  white-space: pre;
-}
-
-.gatsby-highlight > pre > code {
-  padding-right: 2rem;
-  font-size: 16px;
-  font-size: 0.8rem;
-  display: inline-block;
-}
-
-.gatsby-highlight::-webkit-scrollbar {
-  width: 3px;
-  height: 8px;
 }
 .gatsby-highlight::-webkit-scrollbar-track {
   background: #ebe8e4;
@@ -1147,4 +1113,38 @@ table th, table td {
  .prism-previewer-easing.prism-previewer-easing circle {
    fill: transparent;
  }
+}
+
+.gatsby-highlight {
+  padding: 1em;
+  margin: 2rem 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight > pre {
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  min-width: 100%;
+  white-space: pre;
+}
+
+.gatsby-highlight > pre > code {
+  padding-right: 2rem;
+  font-size: 16px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.gatsby-highlight::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+}
+@media all and (max-width: 750px) {
+  .gatsby-highlight {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
