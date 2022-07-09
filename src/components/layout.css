@@ -3,6 +3,7 @@
 :root {
   --site-margin: 5rem;
   --site-width: 38rem;
+  --site-code-width: 42rem;
   --site-narrow-max-width: 32rem;
   --site-neg-margin: 0;
   --site-container-margin: 0;
@@ -18,16 +19,18 @@
     --site-blockquote-margin: auto;
     --site-figcaption-margin: 1.001rem;
     --site-width: 38rem;
+    --site-code-width: 38rem;
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
   :root {
     --site-margin: 1.001rem;
     --site-neg-margin: -1.001rem;
     --site-container-margin: 0;
     --site-blockquote-margin: 1rem;
     --site-width: auto;
+    --site-code-width: auto;
     font-size: 95%;
   }
 }

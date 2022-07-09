@@ -41,7 +41,7 @@ const Content = styled.div`
     margin-right: var(--site-blockquote-margin);
   }
   .gatsby-highlight {
-    width: var(--site-width);
+    width: var(--site-code-width);
     margin-left: var(--site-container-margin);
     margin-right: var(--site-container-margin);
   }
