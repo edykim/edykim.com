@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import taxonomy from "../../config/taxonomy"
+import { sanitizeUrl } from "@/plugins/edykim-plugin-taxonomy/utils"
 import { colors } from "~/constraint"
 
 export const Container = styled.div`
@@ -41,16 +42,11 @@ export const Container = styled.div`
 `
 
 const defaultTags = taxonomy.mappedUrls.map(({ key }) => key)
-const mappedUrls = taxonomy.mappedUrls.reduce((carry, { key, url }) => {
-  carry[key] = url
-  return carry
-}, {})
-
 const TaxonomyLinks = ({ tags = defaultTags }) => {
   return (
     <Container>
       {tags.map(tag => {
-        const url = mappedUrls[tag] ?? tag
+        const url = sanitizeUrl(tag, taxonomy)
         return (
           <Link key={`taxonomy-${url}`} to={`/ko/tag/${url}/`}>
             {`${tag}`}
