@@ -13,6 +13,7 @@ const BlogPostTemplate = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo
         lang={post.frontmatter.lang}
+        date={post.frontmatter.date}
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         noindex={post.frontmatter?.noIndex}
