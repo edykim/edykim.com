@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, title, redirect, noindex = false }) {
+function Seo({ description, lang, title, redirect, date = null, noindex = false }) {
   let meta = []
   const { site } = useStaticQuery(
     graphql`
@@ -29,6 +29,14 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
     `
   )
 
+  let metaTitle = title
+  if (!metaTitle && date) {
+    if (lang === 'ko') {
+      metaTitle = `${date}의 기록`
+    } else {
+      metaTitle = `Note for ${date}`
+    }
+  }
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = lang === 'ko' ? site.siteMetadata?.titleKo : site.siteMetadata?.title
 
@@ -50,7 +58,7 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={metaTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         { name: "theme-color", content: "#ffffff" },
@@ -60,7 +68,7 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -80,7 +88,7 @@ function Seo({ description, lang, title, redirect, noindex = false }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
