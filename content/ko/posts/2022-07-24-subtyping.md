@@ -7,7 +7,7 @@ lang: ko
 tags:
   - 개발 이야기
   - 번역
-  - OOP
+  - oop
 slug: "subtyping"
 ---
 
