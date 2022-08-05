@@ -35,7 +35,7 @@ const Content = styled.div`
   }
   blockquote {
     max-width: var(--site-narrow-max-width);
-    border-left: 5px solid #ddbead;
+    border-left: 5px solid #d7d2cf;
     padding-left: 1rem;
     margin-left: var(--site-blockquote-margin);
     margin-right: var(--site-blockquote-margin);
