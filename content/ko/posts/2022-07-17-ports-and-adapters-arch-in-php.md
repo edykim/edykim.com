@@ -7,6 +7,7 @@ lang: ko
 tags:
  - 개발 이야기
  - 디자인 패턴
+ - php
 slug: "ports-and-adapters-architecture-in-php"
 ---
 
