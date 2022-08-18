@@ -97,7 +97,7 @@ enum Suit: string
 print Suit::Clubs->value; // "C"
 ```
 
-이 지원 열거영은 내부적으로 `BackedEnum` 인터페이스를 구현하고 있습니다. 이 인터페이스는 `from(int|string): self`와 `tryFrom(int|string): ?self` 메소드를 포함하고 있습니다. 이 메소드는 다음처럼 활용할 수 있습니다.
+이 지원 열거형은 내부적으로 `BackedEnum` 인터페이스를 구현하고 있습니다. 이 인터페이스는 `from(int|string): self`와 `tryFrom(int|string): ?self` 메소드를 포함하고 있습니다. 이 메소드는 다음처럼 활용할 수 있습니다.
 
 ```php
 enum InvoiceState: string {
