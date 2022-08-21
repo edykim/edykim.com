@@ -24,6 +24,8 @@ export const query = graphql`
           private: { ne: true }
           draft: { ne: true }
           type: { eq: "post" }
+        }
+        fields: {
           tags: { in: $taxonomy }
         }
       }
