@@ -45,12 +45,19 @@ exports.createTaxonomyPages = (data, { createPage }, options) => {
           taxonomies = taxonomies.concat(node.frontmatter[key])
         }
       })
-      taxonomies = uniq(taxonomies)
+
+      taxonomies = uniq(taxonomies.map(t => t.toLowerCase()))
       taxonomies.forEach(t => {
         createTaxonomyPage(t, singular, { createPage, lang, ...options })
       })
     })
   })
+}
+
+exports.convertTags = ({ node }, { taxonomyFieldName }) => {
+  return Array.isArray(node.frontmatter[taxonomyFieldName])
+    ? node.frontmatter[taxonomyFieldName].map(t => t.toLowerCase())
+    : []
 }
 
 exports.defaultOptions = {
@@ -89,4 +96,8 @@ exports.defaultOptions = {
       }
     }
   }`,
+  // Target Types of additional url handling.
+  targetTypes: [`MarkdownRemark`],
+  taxonomyFieldName: `tags`,
+  taxonomyHandler: exports.convertTags,
 }
