@@ -17,3 +17,35 @@ exports.createPages = ({ actions, graphql }, pluginOptions) => {
     createTaxonomyPages(posts, { createPage }, options)
   })
 }
+
+const isInTargetResources = (node, { targetTypes }) => {
+  return targetTypes.indexOf(node.internal.type) !== -1
+}
+
+const createTaxonomyIndexField = ({ node, createNodeField }, options) => {
+  const { taxonomyHandler, taxonomyFieldName } = options
+  const taxonomy = taxonomyHandler({ node }, { ...options })
+
+  if (!taxonomy) {
+    return
+  }
+
+  createNodeField({
+    node,
+    name: taxonomyFieldName,
+    value: taxonomy,
+  })
+}
+
+exports.onCreateNode = ({ node, actions }, pluginOptions) => {
+  const { createNodeField } = actions
+
+  const options = {
+    ...defaultOptions,
+    ...pluginOptions,
+  }
+
+  if (isInTargetResources(node, options)) {
+    createTaxonomyIndexField({ node, createNodeField }, options)
+  }
+}
