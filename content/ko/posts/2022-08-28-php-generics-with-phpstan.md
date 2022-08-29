@@ -353,7 +353,7 @@ getFirstBook($list);
 
 `ReadableListInterface<T>`에서의 `T`는 공변성을 지니고 있다고 `@template-covariant`로 정의한 덕분에 위처럼 파생 클래스를 대상으로도 동작하게 됩니다.
 
-참고로 `ReadableListInterface<T>`와 `WritableListInterface<T>`로 분리하는 이유는 함수에서 인자 타입은 반공변성을 갖고 반환 타입은 공변성을 갖기 때문입니다. `WritableListInterface<T>`에서 `T`는 인자 타입에 사용되고 있어서 이 타입에 공변성이 있다고 정의하면 모순적이기 때문입니다. 다행히 이런 부분도 오류로 모두 확인할 수 있습니다.
+참고로 `ReadableListInterface<T>`와 `WritableListInterface<T>`로 분리하는 이유는 함수에서 인자 타입은 반공변성을 갖고 반환 타입은 공변성을 갖기 때문입니다. 이 부분은 PHP 자체에서도 강제하고 있습니다. 그래서 `WritableListInterface<T>`에서 `T`는 인자 타입에 사용되고 있는 상황에서 이 타입에 공변성이 있다고 정의하면 서로 충돌합니다. 다행히 이런 부분도 오류로 모두 확인할 수 있습니다. 인자 타입의 반공변성과 반환 타입의 공변성은 [공변성과 반공변성은 무엇인가?](https://edykim.com/ko/post/what-are-covariance-and-contravariance/)에서 더 자세히 확인할 수 있습니다.
 
 ---
 
