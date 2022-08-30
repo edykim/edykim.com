@@ -254,9 +254,9 @@ getFirstBook($list);
 
 공변성을 정말 간단하게 정리하면 다음과 같습니다. [공변성과 반공변성은 무엇인가?](https://edykim.com/ko/post/what-are-covariance-and-contravariance/) 글에서 좀 더 예시를 볼 수 있습니다.
 
-- 공변성(covariance): 지정된 타입, 그 타입의 파생 타입 허용
+- 공변성(covariance): 지정된 타입과 같거나 그보다 범위가 작아진 타입 허용
 - 무공변성(invariance): 지정된 타입만 허용
-- 반공변성(contravariance): 지정된 타입, 그 타입의 부모 타입 허용 
+- 반공변성(contravariance): 지정된 타입과 같거나 그보다 범위가 넓어진 타입 허용
 
 먼저 다음과 같이 인터페이스를 추출할 수 있습니다.
 
