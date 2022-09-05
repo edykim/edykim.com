@@ -5,7 +5,6 @@ type: post
 date: "2022-09-04T23:13:53.735Z"
 lang: ko
 tags:
-  - 두루두루 IT
   - 리뷰
 slug: "mac-to-mac-mode-on-luna-display"
 ---
