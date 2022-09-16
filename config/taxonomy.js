@@ -26,6 +26,10 @@ module.exports = {
       url: `it`,
     },
     {
+      key: `두루두루 it`,
+      url: `it`,
+    },
+    {
       key: `번역`,
       url: `translations`,
     },
