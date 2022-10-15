@@ -12,6 +12,8 @@ lang: en
 
 I'm an open web developer who loves focusing on problems and creating quick prototypes. I like to talk about web technology, software architecture, and community.
 
+I'm an undergrad student at UC San Diego as a computer science major right now and am working at [Greenleaf Media](https://greenleafmedia.com/) as a web developer.
+
 Previously, I had the chance to work with [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). You can find more details at [this page](https://www.linkedin.com/in/edwardykim/).
 
 <hr />
@@ -20,4 +22,3 @@ Previously, I had the chance to work with [Swinburne University](https://www.swi
 
 - [edward@edykim.com](mailto:edward@edykim.com)
 - [twitter/heyedykim](https://twitter.com/heyedykim)
-
