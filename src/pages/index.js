@@ -15,7 +15,7 @@ const IndexPage = ({ location }) => (
         I am a software engineer who loves to make web services and useful
         tools. I enjoy building small things, taking photographs, and having a
         nice cup of cofffee. I'm currently studying computer science and living
-        in Riverside, CA.
+        in San Diego, CA.
       </p>
     </Content>
   </Layout>
