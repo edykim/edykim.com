@@ -9,8 +9,8 @@ const Content = styled.div`
     margin-left: var(--site-container-margin);
     margin-right: var(--site-container-margin);
     border: 0;
-    border-bottom: 1px solid #ddd;
-    width: var(--site-width);
+    border-bottom: 1px solid var(--color-separator);
+    width: var(--site-code-width);
   }
   > p,
   > h1,

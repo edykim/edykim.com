@@ -8,20 +8,14 @@ const SocialNav = styled.div`
   margin: 0 -0.3rem;
   a {
     text-decoration: none;
-    color: #666666;
-    @media (prefers-color-scheme: dark) {
-      color: #b7a792;
-    }
+    color: var(--color-subtitle);
     display: block;
     margin: 0 0.3rem;
   }
 `
 
 const FooterContainer = styled.footer`
-  border-top: 1px solid #eee;
-  @media (prefers-color-scheme: dark) {
-    border-color: #3e3932;
-  }
+  border-top: 1px solid var(--color-separator);
   padding-top: 1.5rem;
   flex-direction: row;
   display: flex;

@@ -2,11 +2,11 @@ export const colors = {
   background: "var(--color-background)",
   backgroundAlt: "#ffffff",
   primary: "var(--color-primary)",
-  link: "#071fab",
+  link: "var(--color-link)",
   highlight: "var(--color-highlight)",
-  text: "#000000",
+  text: "var(--color-body)",
   body: "var(--color-body)",
-  subtext: "#555555",
+  subtext: "var(--color-subtitle)",
   shade: "var(--color-shade)",
 }
 
