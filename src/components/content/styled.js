@@ -10,7 +10,7 @@ const Content = styled.div`
     margin-right: var(--site-container-margin);
     border: 0;
     border-bottom: 1px solid var(--color-separator);
-    width: var(--site-code-width);
+    width: var(--site-width);
   }
   > p,
   > h1,
