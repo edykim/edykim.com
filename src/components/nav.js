@@ -14,7 +14,7 @@ export const PostNav = styled.nav`
     ul {
       display: block !important;
     }
-    a {
+    > ul a {
       display: inline-block;
       padding: 0.5rem 0;
     }

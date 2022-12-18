@@ -10,6 +10,8 @@ export const pageQuery = graphql`
     $id: String!
     $previousItemId: String
     $nextItemId: String
+    $beforePreviousItemId: String
+    $afterNextItemId: String
   ) {
     site {
       siteMetadata {
@@ -36,21 +38,43 @@ export const pageQuery = graphql`
       }
     }
     previous: markdownRemark(id: { eq: $previousItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 16)
+      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
       fields {
         url
       }
       frontmatter {
         title
+        date(formatString: "YYYY-MM-DD")
       }
     }
     next: markdownRemark(id: { eq: $nextItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 16)
+      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
       fields {
         url
       }
       frontmatter {
         title
+        date(formatString: "YYYY-MM-DD")
+      }
+    }
+    beforePrevious: markdownRemark(id: { eq: $beforePreviousItemId }) {
+      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
+      fields {
+        url
+      }
+      frontmatter {
+        title
+        date(formatString: "YYYY-MM-DD")
+      }
+    }
+    afterNext: markdownRemark(id: { eq: $afterNextItemId }) {
+      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
+      fields {
+        url
+      }
+      frontmatter {
+        title
+        date(formatString: "YYYY-MM-DD")
       }
     }
   }

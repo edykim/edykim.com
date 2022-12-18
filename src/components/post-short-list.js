@@ -21,7 +21,7 @@ const Title = styled.h2`
 
 const PostShortList = ({ posts, title, linkTitle, link }) => (
   <Wrapper>
-    <Title>{title}</Title>
+    {title ? <Title>{title}</Title> : null}
     <ul>
       {posts.length > 0 &&
         posts.map(({ node }, index) => (
