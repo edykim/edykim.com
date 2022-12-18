@@ -166,6 +166,12 @@ figcaption {
   }
 }
 
+@media screen and (max-width: 780px) {
+  figcaption {
+    padding: 0 var(--site-figcaption-margin);
+  }
+}
+
 .aligncenter {
   display: block;
   margin-left: auto;
