@@ -13,7 +13,7 @@
   --color-date: #555;
   --color-body: #000;
   --color-link: #023dff;
-  --color-separator: #000;
+  --color-separator: #ddd;
   --color-background: #fff;
   --color-blockquote: #faf7fa;
   --color-scroll-thumb: #ddd;
@@ -253,6 +253,7 @@ pre[class*="language-"] ::selection {
   border-radius: 0.2em;
   padding: 0.2em;
   color: var(--color-code-inline);
+  word-break: break-all;
 }
 
 pre[class*="language-"] {
