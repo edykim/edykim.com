@@ -21,6 +21,7 @@ const BlogPostListTemplate = ({ data, location, pageContext }) => {
         <PostTemplate
           key={`post-${node.fields.slug || node.fields.url}`}
           data={{ markdownRemark: node }}
+          showLinkCaret={true}
           location={location}
         />
       ))}

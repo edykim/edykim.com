@@ -5,7 +5,7 @@ import Content from "./content"
 import { PostNav } from "./nav"
 import Tags from "./tag"
 
-const PostTemplate = ({ data, location }) => {
+const PostTemplate = ({ data, location, showLinkCaret = false }) => {
   const post = data.markdownRemark
   const headline = post.frontmatter.headline?.join(" ")
   const { previous, next } = data
@@ -18,7 +18,10 @@ const PostTemplate = ({ data, location }) => {
       >
         <Subject>
           <h1 itemProp="headline">
-            <Link to={post.fields.url}>{post.frontmatter.title || "#"}</Link>
+            <Link to={post.fields.url}>
+              {post.frontmatter.title || "#"}
+              {showLinkCaret ? <span className="link-caret"></span> : null}
+            </Link>
           </h1>
           {headline && <Headline>{headline}</Headline>}
           <Date>{post.frontmatter.date}</Date>

@@ -404,3 +404,10 @@ table td {
     font-size: 0.8rem;
   }
 }
+
+.link-caret:after {
+  content: '→';
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: var(--color-separator);
+}
