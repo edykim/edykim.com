@@ -7,8 +7,8 @@ lang: ko
 slug: tech-has-a-toxic-tone-problem-lets-fix-it
 headline:
   - 독성 말투의 예시, 발생하는 커뮤니케이션 문제와 대안, 번역
-  - 번역
 tags:
+  - 번역
   - 개발 이야기
   - culture
 featured: true
