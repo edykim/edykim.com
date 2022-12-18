@@ -3,12 +3,16 @@ import { Link } from "gatsby"
 import Subject, { Headline, Date } from "./subject"
 import Content from "./content"
 import { PostNav } from "./nav"
+import PostShortList from "./post-short-list"
 import Tags from "./tag"
 
-const PostTemplate = ({ data, location, showLinkCaret = false }) => {
+const PostTemplate = ({ data, showLinkCaret = false }) => {
   const post = data.markdownRemark
   const headline = post.frontmatter.headline?.join(" ")
-  const { previous, next } = data
+  const { previous, next, beforePrevious, afterNext } = data
+  const related = [afterNext, next, previous, beforePrevious]
+    .filter(v => !!v)
+    .map(v => ({node: v}))
   return (
     <>
       <article
@@ -37,28 +41,7 @@ const PostTemplate = ({ data, location, showLinkCaret = false }) => {
       </article>
       <Tags post={post} />
       <PostNav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.url} rel="prev">
-                ←{" "}
-                {previous.frontmatter.title ||
-                  previous.excerpt ||
-                  previous.frontmatter.date}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.url} rel="next">
-                {next.frontmatter.title ||
-                  next.excerpt ||
-                  next.frontmatter.date}{" "}
-                →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <PostShortList posts={related} />
       </PostNav>
     </>
   )

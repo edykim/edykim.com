@@ -83,9 +83,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const _items = sortedItems[key]
 
       _items.forEach((item, index) => {
-        const previousItemId = index === 0 ? null : _items[index - 1].id
-        const nextItemId =
-          index === _items.length - 1 ? null : _items[index + 1].id
+        const beforePreviousItemId = _items?.[index - 2]?.id
+        const previousItemId = _items?.[index - 1]?.id
+        const nextItemId = _items?.[index + 1]?.id
+        const afterNextItemId = _items?.[index + 2]?.id
 
         const context = {
           id: item.id,
@@ -95,6 +96,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           contentType: item.frontmatter?.contentType,
           previousItemId,
           nextItemId,
+          beforePreviousItemId,
+          afterNextItemId,
         }
 
         createPage({
