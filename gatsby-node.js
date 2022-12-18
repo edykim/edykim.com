@@ -1,11 +1,13 @@
 const path = require(`path`)
 const fs = require("fs")
-const { createFilePath } = require(`gatsby-source-filesystem`)
 const groupby = require("lodash.groupby")
 const memoize = require("lodash.memoize")
 
 const getItemKey = item => `${item.frontmatter.lang}-${item.frontmatter.type}`
 
+const getItemKeyWithTags = item => `${item.frontmatter.lang}-${item.frontmatter.type}${
+  item.frontmatter?.tags?.length > 0 ? '-' + item.frontmatter?.tags[0] : ''}`
+  
 const _getTemplatePath = (lang, type) => {
   if (lang !== "en") {
     const langTypeTemplatePath = path.resolve(
@@ -75,7 +77,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
   if (items.length > 0) {
-    const sortedItems = groupby(items, getItemKey)
+    const sortedItems = groupby(items, getItemKeyWithTags)
 
     Object.keys(sortedItems).forEach(key => {
       const _items = sortedItems[key]
@@ -107,7 +109,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
     // create blog-list pages
-    const blogPages = sortedItems['ko-post'];
+    const sortedItemsByTypes = groupby(items, getItemKey)
+    const blogPages = sortedItemsByTypes['ko-post']
     const postsPerPage = 6
     const numPages = Math.ceil(blogPages.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
