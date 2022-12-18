@@ -95,6 +95,11 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  :root {
+    font-size: 85%;
+  }
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
