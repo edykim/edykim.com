@@ -31,10 +31,12 @@ const LinkSection = styled.div`
   flex: 1;
   a {
     color: var(--color-body);
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-separator);
+
     &:hover,
     &:active {
-      text-decoration: underline;
+      border-bottom: 2px solid var(--color-date);
     }
   }
 `
