@@ -72,13 +72,14 @@
 
 @media screen and (max-width: 1100px) {
   :root {
-    --site-margin: auto;
-    --site-neg-margin: auto;
-    --site-container-margin: auto;
-    --site-blockquote-margin: auto;
+    --site-margin: 2.001rem;
+    --site-neg-margin: -1.001rem;
+    --site-container-margin: 0;
+    --site-blockquote-margin: 1rem;
     --site-figcaption-margin: 1.001rem;
-    --site-width: 38rem;
-    --site-code-width: 38rem;
+    --site-width: auto;
+    --site-narrow-max-width: auto;
+    --site-code-width: auto;
   }
 }
 
