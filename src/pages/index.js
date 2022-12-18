@@ -8,9 +8,9 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Seo title="Home" />
     <Content>
-      <h1 style={{ fontWeight: "900", fontSize: '2.5rem', letterSpacing: -1 }}>
-        Hello, I am Edward 👋
-      </h1>
+      <p>
+        Hello, I am <strong>Edward</strong> 👋
+      </p>
       <p>
         I am a software engineer who loves to make web services and useful
         tools. I enjoy building small things, taking photographs, and having a
