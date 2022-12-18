@@ -22,9 +22,6 @@ const PublishedAt = styled.time`
   letter-spacing: -0.012em;
   margin: 0 0.5rem 0 0;
   color: ${colors.subtext};
-  @media (prefers-color-scheme: dark) {
-    color: #b7a792;
-  }
 `
 
 const LinkSection = styled.div`
@@ -33,6 +30,7 @@ const LinkSection = styled.div`
   overflow-wrap: break-word;
   flex: 1;
   a {
+    color: var(--color-body);
     text-decoration: underline;
     &:hover,
     &:active {

@@ -9,22 +9,17 @@ export const Container = styled.div`
   margin: 1rem 0 2rem;
   a {
     display: inline-block;
-    color: ${colors.text};
+    color: var(--color-taxonomy-color);
     margin: 0.1rem 0.1rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8rem;
-    border-radius: 6px;
-    background-color: ${colors.backgroundAlt};
     padding: 0.1rem 0.5rem;
+    border: 1px solid var(--color-taxonomy-border);
+    box-shadow: 1px 1px 0px var(--color-taxonomy-border);
     &:hover,
     &:active {
       transform: translateY(-1px);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #3b3b38;
-      color: #cececb;
     }
   }
   @media screen and (max-width: 860px) {
