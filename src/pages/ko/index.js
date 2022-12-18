@@ -11,13 +11,13 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
     <Layout location={location}>
       <Seo title="Home" lang={"ko"} />
       <Content>
-        <h1 style={{ fontWeight: "100", fontSize: '3rem', letterSpacing: -1 }}>
-          안녕하세요, 김용균입니다 👋
-        </h1>
         <p>
-          반갑습니다! 저는 웹서비스와 유용한 도구를 만드는 일을 합니다. 작은
+          안녕하세요, <strong>김용균</strong>입니다 👋
+        </p>
+        <p>
+          저는 웹서비스와 유용한 도구를 만드는 일을 합니다. 작은
           도구 만들기를 좋아하며 사진과 커피에도 관심이 많습니다. 지금은 미
-          캘리포니아에서 컴퓨터 공부를 하고 있습니다. 🪴
+          캘리포니아에서 컴퓨터 공부를 하고 있습니다.
         </p>
         {featuredItems.edges.length > 0 && (
           <PostShortList title={"인기 글"} posts={featuredItems.edges} />
