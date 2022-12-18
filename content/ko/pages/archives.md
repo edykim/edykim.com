@@ -8,7 +8,5 @@ lang: ko
 url: archives
 ---
 
-:::div{.no-indent}
-:span[[블로그 RSS 피드](https://edykim.com/ko/feed.xml)]{.button}
-:span[[피드백](https://github.com/edykim/edykim.com/issues/new)]{.button}
-:::
+- [블로그 RSS 피드](https://edykim.com/ko/feed.xml)
+- [문의/피드백](https://github.com/edykim/edykim.com/issues/new)
