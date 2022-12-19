@@ -5,6 +5,7 @@ import Content from "./content"
 import { PostNav } from "./nav"
 import PostShortList from "./post-short-list"
 import Tags from "./tag"
+import Comment from "./comment"
 
 const PostTemplate = ({ data, showLinkCaret = false }) => {
   const post = data.markdownRemark
@@ -12,7 +13,7 @@ const PostTemplate = ({ data, showLinkCaret = false }) => {
   const { previous, next, beforePrevious, afterNext } = data
   const related = [afterNext, next, previous, beforePrevious]
     .filter(v => !!v)
-    .map(v => ({node: v}))
+    .map(v => ({ node: v }))
   return (
     <>
       <article
@@ -40,9 +41,15 @@ const PostTemplate = ({ data, showLinkCaret = false }) => {
         />
       </article>
       <Tags post={post} />
-      <PostNav>
-        <PostShortList posts={related} />
-      </PostNav>
+
+      {showLinkCaret ? null : (
+        <>
+          <PostNav>
+            <PostShortList posts={related} />
+          </PostNav>
+          <Comment />
+        </>
+      )}
     </>
   )
 }
