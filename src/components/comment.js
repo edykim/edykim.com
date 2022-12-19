@@ -5,7 +5,7 @@ const CommentContainer = styled.div`
   margin: 2rem var(--site-margin);
   width: var(--site-width);
   .utterances {
-    max-width: 540px !important;
+    max-width: var(--site-width) !important;
     margin: 0 -2px;
   }
 `
