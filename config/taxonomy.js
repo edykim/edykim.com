@@ -7,13 +7,23 @@ module.exports = {
       featured: true,
     },
     {
-      key: `공부`,
-      url: `study`,
+      key: `미국 사는 이야기`,
+      url: `life-in-us`,
+      featured: true,
+    },
+    {
+      key: `멜번 사는 이야기`,
+      url: `life-in-australia`,
+      featured: true,
     },
     {
       key: `내 이야기`,
       url: `my-stories`,
       featured: true,
+    },
+    {
+      key: `공부`,
+      url: `study`,
     },
     {
       key: `두루두루 IT`,
@@ -27,6 +37,7 @@ module.exports = {
     {
       key: `번역`,
       url: `translations`,
+      featured: true,
     },
     {
       key: `잡다한 생각들`,
@@ -52,23 +63,13 @@ module.exports = {
       featured: true,
     },
     {
-      key: `부스러기`,
-      url: `memo`,
-      featured: true,
-    },
-    {
       key: `사진`,
       url: `photography`,
       featured: true,
     },
     {
-      key: `미국 사는 이야기`,
-      url: `life-in-us`,
-      featured: true,
-    },
-    {
-      key: `멜번 사는 이야기`,
-      url: `life-in-australia`,
+      key: `부스러기`,
+      url: `memo`,
       featured: true,
     },
   ],
