@@ -10,11 +10,13 @@ export const Container = styled.div`
   a {
     display: inline-block;
     color: var(--color-taxonomy-color);
-    margin: 0.1rem 0.1rem;
+    margin: 0.2rem 0.2rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8rem;
-    padding: 0.1rem 0.5rem;
+    padding: 0.3rem 0.5rem;
+    min-width: 160px;
+    text-align: center;
     border: 1px solid var(--color-taxonomy-border);
     box-shadow: 1px 1px 0px var(--color-taxonomy-border);
     &:hover,
