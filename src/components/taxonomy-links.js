@@ -19,7 +19,8 @@ export const Container = styled.div`
     box-shadow: 1px 1px 0px var(--color-taxonomy-border);
     &:hover,
     &:active {
-      transform: translateY(-1px);
+      transform: translate(-1px, -2px);
+      box-shadow: 2px 3px 0px var(--color-taxonomy-border);
     }
   }
   @media screen and (max-width: 860px) {
