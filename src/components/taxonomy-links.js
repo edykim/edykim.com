@@ -39,7 +39,9 @@ export const Container = styled.div`
   }
 `
 
-const defaultTags = taxonomy.mappedUrls.map(({ key }) => key)
+const defaultTags = taxonomy.mappedUrls
+  .filter(tag => tag.featured)
+  .map(({ key }) => key)
 const TaxonomyLinks = ({ tags = defaultTags }) => {
   return (
     <Container>

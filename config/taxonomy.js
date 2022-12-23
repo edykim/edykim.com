@@ -2,16 +2,9 @@ module.exports = {
   keys: [{ key: `tags`, singular: `tag` }],
   mappedUrls: [
     {
-      key: `미국 사는 이야기`,
-      url: `life-in-us`,
-    },
-    {
-      key: `멜번 사는 이야기`,
-      url: `life-in-australia`,
-    },
-    {
       key: `개발 이야기`,
       url: `dev-life`,
+      featured: true,
     },
     {
       key: `공부`,
@@ -20,10 +13,12 @@ module.exports = {
     {
       key: `내 이야기`,
       url: `my-stories`,
+      featured: true,
     },
     {
       key: `두루두루 IT`,
       url: `it`,
+      featured: true,
     },
     {
       key: `두루두루 it`,
@@ -44,22 +39,37 @@ module.exports = {
     {
       key: `책`,
       url: `book`,
+      featured: true,
     },
     {
       key: `리뷰`,
       url: `review`,
+      featured: true,
     },
     {
       key: `요리 레시피`,
       url: `recipe`,
+      featured: true,
     },
     {
       key: `부스러기`,
       url: `memo`,
+      featured: true,
     },
     {
       key: `사진`,
       url: `photography`,
+      featured: true,
+    },
+    {
+      key: `미국 사는 이야기`,
+      url: `life-in-us`,
+      featured: true,
+    },
+    {
+      key: `멜번 사는 이야기`,
+      url: `life-in-australia`,
+      featured: true,
     },
   ],
   query: `
