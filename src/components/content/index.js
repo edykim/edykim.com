@@ -9,7 +9,6 @@ const ContentWithCustomComponents = ({ page, children, ...props }) => {
     <Content
       itemProp="articleBody"
       style={{
-        lineHeight: 1.76,
         fontSize: "1rem",
         wordBreak: "keep-all",
       }}

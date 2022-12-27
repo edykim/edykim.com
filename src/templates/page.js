@@ -37,7 +37,6 @@ const PageTemplate = ({ data, location }) => {
         )}
         <Content
           style={{
-            lineHeight: 1.76,
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}

@@ -33,7 +33,6 @@ const PostTemplate = ({ data, showLinkCaret = false }) => {
         </Subject>
         <Content
           style={{
-            lineHeight: 1.76,
             fontSize: "1rem",
             wordBreak: "keep-all",
           }}
