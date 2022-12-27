@@ -3,7 +3,9 @@ import styled, { css } from "styled-components"
 export const button = css`
 `
 
-const Content = styled.div`
+const Content = styled.div.attrs(props => ({
+  className: 'page-content',
+}))`
   margin: 1rem var(--site-margin);
   hr {
     margin-left: var(--site-container-margin);

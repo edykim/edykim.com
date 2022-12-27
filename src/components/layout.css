@@ -100,10 +100,11 @@
     font-size: 85%;
   }
 }
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 18px/1.8 Lato, -apple-system, Helvetica Neue, Arial, Helvetica,
+  font: 18px/1.65 Lato, -apple-system, Helvetica Neue, Arial, Helvetica,
     Noto Sans KR, Noto Sans CJK KR, Apple SD Gothic Neo, Barun Gothic,
     Nanum Barun Gothic, "Malgun Gothic", "맑은 고딕", sans-serif;
   box-sizing: border-box;
@@ -128,7 +129,7 @@ body {
 
 [lang="ko"] {
   word-break: keep-all;
-  letter-spacing: -0.02rem;
+  letter-spacing: -0.01rem;
 }
 
 [lang="ko"] * {
