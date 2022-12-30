@@ -8,10 +8,10 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <Seo title="Home" />
     <Content>
-      <p>
+      <p style={{maxWidth: '30rem'}}>
         Hello, I am <strong>Edward</strong> 👋
       </p>
-      <p>
+      <p style={{maxWidth: '30rem'}}>
         I am a software engineer who loves to make web services and useful
         tools. I enjoy building small things, taking photographs, and having a
         nice cup of cofffee. I'm currently studying computer science and living
