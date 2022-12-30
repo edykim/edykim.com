@@ -3,10 +3,8 @@ import styled from "styled-components"
 
 const CommentContainer = styled.div`
   margin: 2rem var(--site-margin);
-  width: var(--site-width);
-  .utterances {
+  .giscus-frame {
     max-width: var(--site-width) !important;
-    margin: 0 -2px;
   }
 `
 
@@ -21,12 +19,20 @@ const Comment = () => {
   useEffect(() => {
     const se = document.createElement("script")
     assignAttrs(se, {
-      src: "https://utteranc.es/client.js",
-      repo: "edykim/edykim.com",
-      "issue-term": "pathname",
-      label: "💬 comment",
-      theme: "preferred-color-scheme",
-      crossorigin: "anonymous",
+      src: "https://giscus.app/client.js",
+      "data-repo":"edykim/edykim.com",
+      "data-repo-id":"MDEwOlJlcG9zaXRvcnkxMDgxMTYwNDY=",
+      "data-category":"Announcements",
+      "data-category-id":"DIC_kwDOBnG4Ts4CTVMX",
+      "data-mapping":"pathname",
+      "data-strict":"0",
+      "data-reactions-enabled":"0",
+      "data-emit-metadata":"0",
+      "data-input-position":"bottom",
+      "data-theme":"preferred_color_scheme",
+      "data-lang":"en",
+      "data-loading":"lazy",
+      "crossorigin":"anonymous",
       async: true,
     })
     ref.current.appendChild(se)
