@@ -9,6 +9,8 @@ package = "@netlify/plugin-gatsby"
   for = "/*"
   [headers.values]
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
   for = "/giscus.css"
   [headers.values]
     Access-Control-Allow-Origin = "*"
