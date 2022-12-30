@@ -15,7 +15,6 @@ export const Container = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
-    min-width: 160px;
     text-align: center;
     border: 1px solid var(--color-taxonomy-border);
     box-shadow: 1px 1px 0px var(--color-taxonomy-border);
