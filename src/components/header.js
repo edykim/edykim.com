@@ -67,7 +67,7 @@ const TitleLink = ({ siteTitle }) => {
         textDecoration: `none`,
       }}
     >
-      {lang === "ko" ? "보통의 비망록" : siteTitle}
+      {lang === "ko" ? "edykim" : siteTitle}
     </Link>
   )
 }
