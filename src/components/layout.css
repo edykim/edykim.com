@@ -413,7 +413,7 @@ table td {
 }
 
 .link-caret:after {
-  content: '→';
+  content: '»';
   display: inline-block;
   margin-left: 0.5rem;
   color: var(--color-separator);
