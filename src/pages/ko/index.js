@@ -16,7 +16,7 @@ const KoIndexPage = ({ location, data: { featuredItems } }) => {
         </p>
         <p style={{maxWidth: '30rem'}}>
           저는 일상에서 유용하게 사용할 수 있는 디지털 도구와 웹서비스를 만드는 일을 합니다.
-          이 공간에는 번역, 개발 관련 글을 주로 게시하며 일상 주제로도 자주 작성하고 있습니다.
+          이 공간에는 번역, 개발 관련 글을 주로 게시하고 있습니다.
         </p>
         {featuredItems.edges.length > 0 && (
           <PostShortList posts={featuredItems.edges} />
