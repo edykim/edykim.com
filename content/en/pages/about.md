@@ -21,4 +21,4 @@ Previously, I had the chance to work with [Swinburne University](https://www.swi
 ### Get in touch
 
 - [edward@edykim.com](mailto:edward@edykim.com)
-- [twitter/heyedykim](https://twitter.com/heyedykim)
+- [twitter/itsedykim](https://twitter.com/itsedykim)
