@@ -17,7 +17,7 @@ PR을 보내며 느낀 점, 더 배우고 싶은 부분을 적어야겠다 생�
 
 <figure class="image-twitter">
 
-[<img src="https://pbs.twimg.com/media/DsAzpSZUUAAKaTU.jpg">](https://twitter.com/heyedykim/status/1062906341327437825)
+[<img src="https://pbs.twimg.com/media/DsAzpSZUUAAKaTU.jpg">](https://twitter.com/itsedykim/status/1062906341327437825)
 
 <figcaption>I just got a package from #Hacktoberfest! 😊😊😊</figcaption>
 </figure>
