@@ -18,7 +18,7 @@ featured: true
 
 ---
 
-[잇창명](https://eatch.dev/)님이 이 글을 재번역해주셨습니다. 해당 글은 [잇창명님 웹페이지](https://eatchangmyeong.github.io/2023/05/21/tech-has-a-toxic-tone-problem-let-s-fix-it.html)에서 확인하실 수 있습니다.
+2023년 5월 추가: [잇창명](https://eatch.dev/)님이 이 글을 재번역해주셨습니다. 해당 글은 [잇창명님 웹페이지](https://eatchangmyeong.github.io/2023/05/21/tech-has-a-toxic-tone-problem-let-s-fix-it.html)에서 확인하실 수 있습니다.
 
 ---
 
