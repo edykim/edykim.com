@@ -31,7 +31,7 @@
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "github-slugger": "^2.0.0",
-    "hastscript": "^7.2.0",
+    "hastscript": "^6.0.0",
     "lodash.groupby": "^4.6.0",
     "lodash.memoize": "^4.1.2",
     "prismjs": "^1.29.0",
@@ -40,9 +40,9 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "rehype-react": "^7.2.0",
-    "remark-directive": "^2.0.1",
+    "remark-directive": "^1.0.1",
     "styled-components": "^6.0.3",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "@netlify/plugin-gatsby": "^3.6.2",
