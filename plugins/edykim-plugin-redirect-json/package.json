@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mkdirp": "^0.5.5",
-    "pify": "^4.0.0"
+    "mkdirp": "^3.0.1",
+    "pify": "^6.1.0"
   },
   "author": "Edward Yong Gyun Kim <ed@edykim.com>",
   "license": "MIT"
