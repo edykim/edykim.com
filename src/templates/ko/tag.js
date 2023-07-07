@@ -29,7 +29,7 @@ export const query = graphql`
           tags: { in: $taxonomy }
         }
       }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {frontmatter: {date: DESC}}
     ) {
       totalCount
       edges {

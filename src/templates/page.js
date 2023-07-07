@@ -80,7 +80,7 @@ export const pageQuery = graphql`
       }
     }
     relatedPages: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: ASC }
+      sort: {frontmatter: {date: ASC}}
       limit: 10
       filter: {
         frontmatter: {
