@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           filter: {
             frontmatter: { private: { ne: true }, draft: { ne: true } }
           }
-          sort: { fields: [frontmatter___date], order: ASC }
+          sort: {frontmatter: {date: ASC}}
           limit: 1000
         ) {
           nodes {

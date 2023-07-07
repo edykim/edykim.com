@@ -74,7 +74,7 @@ export const pageQuery = graphql`
       }
     }
     featuredItems: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {frontmatter: {date: DESC}}
       limit: 10
       filter: {
         frontmatter: {
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
       }
     }
     items: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {frontmatter: {date: DESC}}
       limit: 10
       filter: {
         frontmatter: {

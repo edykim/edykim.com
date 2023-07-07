@@ -46,7 +46,7 @@ export const pageQuery = graphql`
       }
     }
     posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {frontmatter: {date: DESC}}
       filter: {
         frontmatter: {
           private: { ne: true }
