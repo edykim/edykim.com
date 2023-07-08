@@ -42,13 +42,14 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(format: PLAIN, truncate: true, pruneLength: 32)
+          excerpt(format: PLAIN, truncate: true, pruneLength: 80)
           fields {
             url
           }
           frontmatter {
             title
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "YYYY년 M월 D일")
+            headline
           }
         }
       }
