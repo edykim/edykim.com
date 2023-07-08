@@ -12,11 +12,17 @@ import styled from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
+import Sidebar from "./sidebar"
 import "./layout.css"
 import { LocationContextProvider } from "./LocationContext"
 
 const MainContainer = styled.div`
   margin: 0 auto;
+  position: relative;
+  ${({hasSidebar}) => hasSidebar && `
+  @media screen and (min-width: 1000px) {
+    padding-left: 9rem;
+  }`}
 `
 export const ContentContainer = styled.div`
 > * {
@@ -42,16 +48,18 @@ const Layout = ({ item, location, children }) => {
       }
     }
   `)
-
+  const hasSidebar = location.pathname.startsWith('/ko/');
   return (
     <LocationContextProvider location={location}>
       <Header
         siteTitle={data.site.siteMetadata?.title || `Title`}
+        hasSidebar={hasSidebar}
       />
-      <MainContainer>
+      <MainContainer hasSidebar={hasSidebar}>
+        {hasSidebar && <Sidebar />}
         <Main>{children}</Main>
       </MainContainer>
-      <Footer />
+      <Footer hasSidebar={hasSidebar} />
     </LocationContextProvider>
   )
 }

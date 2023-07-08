@@ -9,6 +9,12 @@ const Wrapper = styled.div`
     list-style: none;
     padding: 0;
   }
+  li {
+    max-width: 32rem;
+  }
+  li + li {
+    border-top: 1px solid var(--color-separator);
+  }
 `
 
 const PostList = ({ nodes }) => (

@@ -13,6 +13,12 @@ const Wrapper = styled.div`
     padding: 0;
   }
   ${button};
+  li {
+    max-width: 32rem;
+  }
+  li + li {
+    border-top: 1px solid var(--color-separator);
+  }
 `
 
 const Title = styled.h2`
