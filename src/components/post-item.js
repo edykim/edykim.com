@@ -14,9 +14,7 @@ const RowLink = styled(Link)`
   }
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--color-separator);
 
-  max-width: 32rem;
   .post-item-title {
     margin-bottom: 0.5rem;
     transition: background-color 0.3s;
