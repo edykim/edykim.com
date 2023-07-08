@@ -66,12 +66,6 @@ export default function Sidebar() {
       <ul>
         <Node
           node={{
-            key: `소개`,
-            url: `about`,
-          }}
-        />
-        <Node
-          node={{
             key: `블로그`,
             url: `post`,
           }}
@@ -80,6 +74,12 @@ export default function Sidebar() {
           node={{
             key: `아카이브`,
             url: `archives`,
+          }}
+        />
+        <Node
+          node={{
+            key: `소개`,
+            url: `about`,
           }}
         />
         {taxonomy.tree.children.map(c => (
