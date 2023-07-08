@@ -23,7 +23,7 @@ const PostShortList = ({ posts, title, linkTitle, link }) => (
   <Wrapper>
     {title ? <Title>{title}</Title> : null}
     <ul>
-      {posts.length > 0 &&
+      {posts && posts.length > 0 &&
         posts.map(({ node }, index) => (
           <PostItem post={node} key={`${title}-${index}`} showYears={true} />
         ))}

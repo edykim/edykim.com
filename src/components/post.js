@@ -10,10 +10,6 @@ import Comment from "./comment"
 const PostTemplate = ({ data, showLinkCaret = false }) => {
   const post = data.markdownRemark
   const headline = post.frontmatter.headline?.join(" ")
-  const { previous, next, beforePrevious, afterNext } = data
-  const related = [afterNext, next, previous, beforePrevious]
-    .filter(v => !!v)
-    .map(v => ({ node: v }))
   return (
     <>
       <article
@@ -44,7 +40,7 @@ const PostTemplate = ({ data, showLinkCaret = false }) => {
       {showLinkCaret ? null : (
         <>
           <PostNav>
-            <PostShortList posts={related} />
+            <PostShortList posts={data.relatedPosts.edges ?? []} />
           </PostNav>
           <Comment />
         </>
