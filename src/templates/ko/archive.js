@@ -40,18 +40,19 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          excerpt(format: PLAIN, truncate: true, pruneLength: 36)
+          excerpt(format: PLAIN, truncate: true, pruneLength: 80)
           fields {
             slug
             url
           }
           frontmatter {
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "YYYY년 M월 D일")
             dateSort: date(formatString: "YYYY")
             title
             tags
             categories
             featured
+            headline
           }
         }
       }

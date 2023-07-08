@@ -3,21 +3,44 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { colors, fonts } from "~/constraint"
 
-const Row = styled.div`
+const RowLink = styled(Link)`
   display: flex;
   flex-direction: row;
-  padding-bottom: 0.3rem;
+  padding: 1.5rem 0;
   align-items: flex-start;
   flex-wrap: no-wrap;
   @media screen and (max-width: 900px) {
     display: block;
+  }
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-separator);
+
+  max-width: 32rem;
+  .post-item-title {
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  .post-item-desc {
+    font-size: 0.8em;
+    color: var(--color-subtitle);
+  }
+  > div {
+    transition: transform 0.3s;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    > div {
+      transform: translateX(3px);
+    }
   }
 `
 
 const PublishedAt = styled.time`
   text-align: right;
   line-height: 1.8;
-  font-size: ${fonts.title};
+  font-size: 0.8em;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.012em;
   margin: 0 0.5rem 0 0;
@@ -46,14 +69,13 @@ export default class PostItem extends Component {
     const { post } = this.props
     return (
       <li>
-        <Row>
-          <PublishedAt>{post.frontmatter.date}</PublishedAt>
+        <RowLink to={post.fields.url}>
           <LinkSection>
-            <Link to={post.fields.url}>
-              {post.frontmatter.title || post.excerpt}
-            </Link>
+              <div className="post-item-title">{post.frontmatter.title || post.excerpt}</div>
+              {post.frontmatter.title && <div className="post-item-desc">{post.frontmatter.headline || post.excerpt}</div>}
+              <PublishedAt>{post.frontmatter.date}</PublishedAt>
           </LinkSection>
-        </Row>
+        </RowLink>
       </li>
     )
   }
