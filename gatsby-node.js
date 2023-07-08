@@ -2,16 +2,19 @@ const path = require(`path`)
 const fs = require("fs")
 const groupby = require("lodash.groupby")
 const memoize = require("lodash.memoize")
+const uniq = require("lodash.uniq")
 
 const getItemKey = item => `${item.frontmatter.lang}-${item.frontmatter.type}`
 
-const getItemKeyWithTags = item => `${item.frontmatter.lang}-${item.frontmatter.type}${
-  item.frontmatter?.tags?.length > 0 ? '-' + item.frontmatter?.tags[0] : ''}`
-  
+const getItemKeyWithTags = item =>
+  `${item.frontmatter.lang}-${item.frontmatter.type}${
+    item.frontmatter?.tags?.length > 0 ? "-" + item.frontmatter?.tags[0] : ""
+  }`
+
 const _getTemplatePath = (lang, type) => {
   if (lang !== "en") {
     const langTypeTemplatePath = path.resolve(
-      `./src/templates/${lang}/${type}.js`
+      `./src/templates/${lang}/${type}.js`,
     )
     if (fs.existsSync(langTypeTemplatePath)) return langTypeTemplatePath
   }
@@ -25,7 +28,7 @@ const _getTemplatePath = (lang, type) => {
 
 const getTemplatePath = memoize(
   _getTemplatePath,
-  (lang, type) => `${lang}_${type}`
+  (lang, type) => `${lang}_${type}`,
 )
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -35,38 +38,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
   // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          filter: {
-            frontmatter: { private: { ne: true }, draft: { ne: true } }
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { private: { ne: true }, draft: { ne: true } } }
+        sort: { frontmatter: { date: ASC } }
+        limit: 1000
+      ) {
+        nodes {
+          id
+          frontmatter {
+            type
+            lang
+            contentType
+            tags
           }
-          sort: {frontmatter: {date: ASC}}
-          limit: 1000
-        ) {
-          nodes {
-            id
-            frontmatter {
-              type
-              lang
-              contentType
-              tags
-            }
-            fields {
-              slug
-              url
-            }
+          fields {
+            slug
+            url
           }
         }
       }
-    `
-  )
+    }
+  `)
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
-      result.errors
+      result.errors,
     )
     return
   }
@@ -87,6 +86,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         const previousItemId = _items?.[index - 1]?.id
         const nextItemId = _items?.[index + 1]?.id
         const afterNextItemId = _items?.[index + 2]?.id
+        const relatedIds = uniq([
+          previousItemId,
+          nextItemId,
+          beforePreviousItemId,
+          afterNextItemId,
+        ]).filter(v => !!v)
 
         const context = {
           id: item.id,
@@ -94,17 +99,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           lang: item.frontmatter?.lang,
           tags: item.frontmatter?.tags || [],
           contentType: item.frontmatter?.contentType,
-          previousItemId,
-          nextItemId,
-          beforePreviousItemId,
-          afterNextItemId,
+          relatedIds,
         }
 
         createPage({
           path: item.fields.url,
           component: getTemplatePath(
             item.frontmatter.lang,
-            item.frontmatter.type
+            item.frontmatter.type,
           ),
           context,
         })
@@ -113,7 +115,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     // create blog-list pages
     const sortedItemsByTypes = groupby(items, getItemKey)
-    const blogPages = sortedItemsByTypes['ko-post']
+    const blogPages = sortedItemsByTypes["ko-post"]
     const postsPerPage = 6
     const numPages = Math.ceil(blogPages.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
@@ -121,8 +123,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         path: i === 0 ? `/ko/post/` : `/ko/post/page/${i + 1}`,
         component: path.resolve("./src/templates/ko/post-list.js"),
         context: {
-          lang: 'ko',
-          contentType: 'post',
+          lang: "ko",
+          contentType: "post",
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,

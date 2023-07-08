@@ -28,10 +28,7 @@ export default BlogPostTemplate
 export const pageQuery = graphql`
   query BlogPostBySlug(
     $id: String!
-    $previousItemId: String
-    $nextItemId: String
-    $beforePreviousItemId: String
-    $afterNextItemId: String
+    $relatedIds: [String]
   ) {
     site {
       siteMetadata {
@@ -57,44 +54,23 @@ export const pageQuery = graphql`
         url
       }
     }
-    previous: markdownRemark(id: { eq: $previousItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
-      fields {
-        url
+    relatedPosts: allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      filter: {
+        id: { in: $relatedIds }
       }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
-    next: markdownRemark(id: { eq: $nextItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
-      fields {
-        url
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
-    beforePrevious: markdownRemark(id: { eq: $beforePreviousItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
-      fields {
-        url
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
-    afterNext: markdownRemark(id: { eq: $afterNextItemId }) {
-      excerpt(format: PLAIN, truncate: true, pruneLength: 32)
-      fields {
-        url
-      }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
+    ) {
+      edges {
+        node {
+          excerpt(format: PLAIN, truncate: true, pruneLength: 32)
+          fields {
+            url
+          }
+          frontmatter {
+            title
+            date(formatString: "YYYY-MM-DD")
+          }
+        }
       }
     }
   }
