@@ -16,7 +16,7 @@ const PostListNav = ({ pageContext }) => {
   return (
     <PostNav>
       {numPages > 1 ? <span>{`${numPages} 페이지 중 ${currentPage} 페이지`}</span> : null}
-      <ul>
+      <ul className={'horizontal'}>
         <li>
           {!isFirst ? (
             <Link to={prevPage} rel="prev">

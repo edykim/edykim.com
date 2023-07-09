@@ -7,14 +7,16 @@ export const PostNav = styled.nav`
   a {
     color: inherit;
   }
-  li {
-    display: inline-block;
-    margin: 0 0.3rem;
-  }
   ul {
     list-style: none;
+  }
+  ul.horizontal {
     padding: 0;
     margin: 0 -0.3rem;
+    li {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
   }
   .disabled {
     opacity: 0.5;
