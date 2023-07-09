@@ -76,7 +76,7 @@ function Node({ node, isTag = false }) {
 export default function Sidebar({forceShow}) {
   return (
     <>
-      <SideContainer className={forceShow ? 'full-menu' : null}>
+      <SideContainer className={forceShow ? 'full-menu' : null} role="navigation" aria-label="주 메뉴">
         <ul>
           <Node
             node={{
