@@ -49,6 +49,9 @@ const Main = styled.main`
 `
 
 const ToggleButton = styled.div`
+  ${({ hasSidebar }) =>
+    !hasSidebar &&
+    `display: none;`}
   position: absolute;
   right: 0;
   margin: 0 var(--site-margin);
@@ -103,7 +106,7 @@ const Layout = ({ item, location, children }) => {
         siteTitle={data.site.siteMetadata?.title || `Title`}
         hasSidebar={hasSidebar}
       />
-      <ToggleButton>
+      <ToggleButton hasSidebar={hasSidebar}>
         <button
           aria-expanded={toggleSidebar ? "true" : "false"}
           className={toggleSidebar && 'opened'}
