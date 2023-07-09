@@ -61,7 +61,14 @@ const ToggleButton = styled.div`
     background: transparent;
     border: 0;
     color: var(--color-subtitle);
-    padding: 0.3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-right: -10px;
+    margin-top: -6px;
     appearance: none;
     cursor: pointer;
     &:after {
@@ -109,7 +116,7 @@ const Layout = ({ item, location, children }) => {
       <ToggleButton hasSidebar={hasSidebar}>
         <button
           aria-expanded={toggleSidebar ? "true" : "false"}
-          className={toggleSidebar && 'opened'}
+          className={toggleSidebar ? 'opened' : undefined}
           onClick={() => {
             setToggleSidebar(!toggleSidebar)
           }}
