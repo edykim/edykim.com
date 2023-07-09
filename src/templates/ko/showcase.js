@@ -46,7 +46,7 @@ export const pageQuery = graphql`
             url
           }
           frontmatter {
-            date(formatString: "YYYY년 M월 D일")
+            date(formatString: "YYYY.MM.DD")
             dateSort: date(formatString: "YYYY")
             title
             headline
@@ -73,7 +73,7 @@ export const pageQuery = graphql`
             url
           }
           frontmatter {
-            date(formatString: "YYYY년 M월 D일")
+            date(formatString: "YYYY.MM.DD")
             dateSort: date(formatString: "YYYY")
             title
             headline
