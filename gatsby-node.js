@@ -3,6 +3,7 @@ const fs = require("fs")
 const groupby = require("lodash.groupby")
 const memoize = require("lodash.memoize")
 const uniq = require("lodash.uniq")
+const taxonomy = require("./config/taxonomy")
 
 const getItemKey = item => `${item.frontmatter.lang}-${item.frontmatter.type}`
 
@@ -113,10 +114,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
 
+    const postsPerPage = 6
+
     // create blog-list pages
     const sortedItemsByTypes = groupby(items, getItemKey)
     const blogPages = sortedItemsByTypes["ko-post"]
-    const postsPerPage = 6
     const numPages = Math.ceil(blogPages.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
@@ -132,6 +134,37 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+
+    taxonomy.mappedUrls
+      .filter(v => !v.hidden)
+      .map(tax => {
+        const taxonomyPosts = blogPages.filter(v =>
+          v.frontmatter?.tags?.includes(tax.key)
+        )
+        return {
+          url: tax.url,
+          key: tax.key,
+          numPages: Math.ceil(taxonomyPosts.length / postsPerPage),
+        }
+      })
+      .forEach(({ url, key, numPages }) => {
+        Array.from({ length: numPages }).forEach((_, i) => {
+          createPage({
+            path: `/ko/post/tag/${url}${i !== 0 ? `/page/${i + 1}` : ""}`,
+            component: path.resolve("./src/templates/ko/tag-post-list.js"),
+            context: {
+              lang: "ko",
+              contentType: "post",
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
+              taxonomy: [key],
+              taxonomySlug: url,
+            },
+          })
+        })
+      })
   }
 }
 
