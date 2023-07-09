@@ -15,7 +15,6 @@ tags:
   - 번역
   - 개발 이야기
   - currying
-  - javascript
   - js
   - 커링
 

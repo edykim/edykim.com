@@ -11,6 +11,7 @@ const Subject = styled.header`
   h1 {
     word-break: keep-all;
     color: inherit;
+    font-size: 1.5rem;
   }
   h1 a {
     color: inherit;

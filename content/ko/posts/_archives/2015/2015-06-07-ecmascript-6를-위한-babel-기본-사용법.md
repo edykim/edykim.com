@@ -15,7 +15,6 @@ tags:
   - 개발 이야기
   - babel
   - ECMAScript6
-  - javascript
   - js
   - webpack
 

@@ -7,6 +7,7 @@ lang: ko
 tags:
  - 내 이야기
  - 조각모음
+ - 부스러기
 slug: "defragment-sep-2021-to-oct"
 ---
 

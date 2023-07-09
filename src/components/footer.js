@@ -42,6 +42,7 @@ const FooterWrapper = styled.div`
   ${({hasSidebar}) => hasSidebar && `
   @media screen and (min-width: 1000px) {
     padding-left: 9rem;
+    width: var(--site-width-with-padding);
   }`}
 `
 

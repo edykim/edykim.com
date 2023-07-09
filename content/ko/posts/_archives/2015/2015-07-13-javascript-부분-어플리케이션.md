@@ -14,7 +14,6 @@ headline:
 tags:
   - 번역
   - 개발 이야기
-  - javascript
   - js
   - partial application
 

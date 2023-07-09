@@ -1,7 +1,8 @@
 :root {
   --site-margin: 5rem;
   --site-width: 48rem;
-  --site-code-width: 52rem;
+  --site-width-with-padding: 57rem;
+  --site-code-width: 48rem;
   --site-narrow-max-width: 44rem;
   --site-neg-margin: 0;
   --site-container-margin: 0;
@@ -45,15 +46,15 @@
     --color-date: #aaa;
     --color-body: #eee;
     --color-link: #65d68c;
-    --color-separator: #333;
-    --color-background: #202320;
-    --color-blockquote: #232823;
-    --color-scroll-thumb: #33462f;
+    --color-separator: #202022;
+    --color-background: #171719;
+    --color-blockquote: #18181a;
+    --color-scroll-thumb: #302f46;
     --color-selection: rgba(7, 255, 52, 0.2);
     --color-table: #333;
 
-    --color-taxonomy-color: #a7c0a7;
-    --color-taxonomy-border: #2e362e;
+    --color-taxonomy-color: #d8d8d8;
+    --color-taxonomy-border: #393939;
 
     --color-code-text: #eee;
     --color-code-inline: #ade0ad;

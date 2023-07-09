@@ -19,11 +19,15 @@ const taxonomies = {
         {
           key: `제주 사는 이야기`,
           url: `life-in-jeju`,
+          hidden: true,
         },
         {
           key: `내 이야기`,
           url: `my-stories`,
-          featured: true,
+        },
+        {
+          key: `부스러기`,
+          url: `memo`,
         },
       ],
     },
@@ -50,15 +54,28 @@ const taxonomies = {
           url: `translations`,
           featured: true,
         },
+        {
+          key: `주제별`,
+          children: [
+            {
+              key: `리눅스`,
+              url: `linux`,
+            },
+            {
+              key: `자바스크립트`,
+              url: `js`,
+            },
+            {
+              key: `PHP`,
+              url: `php`,
+            },
+          ],
+        },
       ],
     },
     {
       key: `이것저것`,
       children: [
-        {
-          key: `잡다한 생각들`,
-          url: `random-thoughts`,
-        },
         {
           key: `책`,
           url: `book`,
@@ -80,9 +97,8 @@ const taxonomies = {
           featured: true,
         },
         {
-          key: `부스러기`,
-          url: `memo`,
-          featured: true,
+          key: `음악`,
+          url: `music`,
         },
       ],
     },
@@ -90,15 +106,15 @@ const taxonomies = {
 }
 
 let flatten = node => {
-  const {children, ...rest} = node;
+  const { children, ...rest } = node
   if (!node.children) {
-    return [rest];
+    return [rest]
   }
   const nodes = node.children.reduce((carry, node) => {
-    carry = carry.concat(flatten(node));
-    return carry;
-  }, []);
-  return [...nodes, rest];
+    carry = carry.concat(flatten(node))
+    return carry
+  }, [])
+  return [...nodes, rest]
 }
 
 module.exports = {

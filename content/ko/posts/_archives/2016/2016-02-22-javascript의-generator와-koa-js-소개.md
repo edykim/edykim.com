@@ -13,7 +13,6 @@ tags:
   - 개발 이야기
   - co
   - generator
-  - javascript
   - js
   - koa
 

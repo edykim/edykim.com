@@ -27,11 +27,8 @@ const ShowcaseTemplate = ({ data, location }) => {
         {headline && <Headline>{headline}</Headline>}
       </Subject>
       <Content page={post} itemProp={null}>
-        <h2>분류로 찾기</h2>
-        <h3>주제별</h3>
+        <h2>태그별</h2>
         <TaxonomyLinks />
-
-        <h3>태그별</h3>
         <p>전체 태그를 보려면 <Link to={'/ko/archives/tag/'}>여기</Link>를 확인하세요.</p>
 
         {featuredItems.edges.length > 0 && (

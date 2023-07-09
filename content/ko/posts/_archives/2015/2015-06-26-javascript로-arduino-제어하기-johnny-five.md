@@ -14,7 +14,6 @@ headline:
 tags:
   - 개발 이야기
   - Firmata
-  - javascript
   - js
   - Johnny-Five
   - 아두이노
