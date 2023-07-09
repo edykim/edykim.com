@@ -9,7 +9,29 @@ import Comment from "./comment"
 import { styled } from "styled-components"
 
 const PostSeparator = styled.div`
-margin-top: 10rem;
+margin-top: 8rem;
+margin-bottom: 3rem;
+width: var(--site-width);
+background-color: var(--color-separator);
+position: relative;
+&:after {
+  content: '//';
+  font-size: 1.2rem;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background-color: var(--color-background);
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -16px;
+  text-align: center;
+  font-family: monospace;
+  color: var(--color-table);
+}
+height: 1px;
+@media screen and (min-width: 1000px) {
+  margin-left: 5rem;
+}
 `
 
 const PostTemplate = ({ data, showLinkCaret = false }) => {
