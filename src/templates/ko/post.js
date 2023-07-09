@@ -48,7 +48,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "YYYY년 M월 D일")
+            date(formatString: "YYYY.MM.DD")
             headline
           }
         }

@@ -69,9 +69,9 @@ export default class PostItem extends Component {
       <li>
         <RowLink to={post.fields.url}>
           <LinkSection>
-              <div className="post-item-title">{post.frontmatter.title || post.excerpt}</div>
-              {post.frontmatter.title && <div className="post-item-desc">{post.frontmatter.headline || post.excerpt}</div>}
-              <PublishedAt>{post.frontmatter.date}</PublishedAt>
+            <PublishedAt>{post.frontmatter.date}</PublishedAt>
+            <div className="post-item-title">{post.frontmatter.title || post.excerpt}</div>
+            {post.frontmatter.title && <div className="post-item-desc">{post.frontmatter.headline || post.excerpt}</div>}
           </LinkSection>
         </RowLink>
       </li>
