@@ -65,7 +65,7 @@ export const pageQuery = graphql`
           htmlAst
           frontmatter {
             title
-            date(formatString: "YYYY.MM.DD")
+            date(formatString: "YYYY년 M월 D일")
             description
             headline
             lang
