@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   }
   ${button};
   li {
+    display: block;
     max-width: 32rem;
   }
   li + li {
