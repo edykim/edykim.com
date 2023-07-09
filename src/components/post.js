@@ -6,6 +6,11 @@ import { PostNav } from "./nav"
 import PostShortList from "./post-short-list"
 import Tags from "./tag"
 import Comment from "./comment"
+import { styled } from "styled-components"
+
+const PostSeparator = styled.div`
+margin-top: 10rem;
+`
 
 const PostTemplate = ({ data, showLinkCaret = false }) => {
   const post = data.markdownRemark
@@ -37,7 +42,9 @@ const PostTemplate = ({ data, showLinkCaret = false }) => {
       </article>
       <Tags post={post} />
 
-      {showLinkCaret ? null : (
+      {showLinkCaret ? <>
+        <PostSeparator />
+      </> : (
         <>
           <PostNav>
             <PostShortList posts={data.relatedPosts.edges ?? []} />
