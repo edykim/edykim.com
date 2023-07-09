@@ -8,7 +8,7 @@ slug: productivity-text-file
 headline:
  - 
 tags:
- - 두루두루 IT
+ - 개발 잡동사니
  - productivity
  - txt
 draft: true

@@ -12,7 +12,7 @@ slug: setting-up-the-right-alt-key-in-lubuntu-with-the-hanyou-conversion-key
 headline:
   - xkb로 우측 Alt키를 Hangul키로 바인딩해서 한영키 설정하는 방법
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - lubuntu
   - xkb
 

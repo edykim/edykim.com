@@ -6,7 +6,7 @@ date: "2022-08-29T02:42:22.879Z"
 lang: ko
 tags:
  - 개발 이야기
- - PHP
+ - php
  - generic
 slug: "php-generics-with-phpstan"
 ---

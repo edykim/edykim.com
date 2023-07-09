@@ -40,14 +40,9 @@ const taxonomies = {
           featured: true,
         },
         {
-          key: `두루두루 IT`,
+          key: `개발 잡동사니`,
           url: `it`,
           featured: true,
-        },
-        {
-          key: `두루두루 it`,
-          url: `it`,
-          hidden: true,
         },
         {
           key: `번역`,

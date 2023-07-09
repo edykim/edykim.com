@@ -13,7 +13,7 @@ headline:
   - Azure의 다양한 서비스를 살펴볼 수 있었던 GAB 참가 이야기.
 tags:
   - 멜번 사는 이야기
-  - 두루두루 IT
+  - 개발 잡동사니
   - Azure
   - Azure Bootcamp
 

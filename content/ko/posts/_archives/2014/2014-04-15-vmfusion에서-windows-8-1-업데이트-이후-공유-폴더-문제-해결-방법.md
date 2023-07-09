@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: how-to-troubleshoot-shared-folders-after-windows-8.1-update-in-vmfusion
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - vmware
   - windows 8.1
   - wmfusion

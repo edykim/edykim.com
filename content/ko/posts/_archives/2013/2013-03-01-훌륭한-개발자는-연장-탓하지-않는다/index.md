@@ -11,7 +11,7 @@ lang: ko
 slug: great-developers-do-not-blame-prolongation
 tags:
   - 잡다한 생각들
-  - 두루두루 IT
+  - 개발 잡동사니
   - VDT
   - 개발환경
   - 모니터

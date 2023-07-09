@@ -58,7 +58,7 @@ export const categories = [
     url: `my-stories`,
   },
   {
-    key: `두루두루 IT`,
+    key: `개발 잡동사니`,
     url: `it`,
   },
   {

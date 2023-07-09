@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: outputting-characters-in-terminal-as-asciiart-figlet
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - figlet
   - terminal
   - 터미널에서

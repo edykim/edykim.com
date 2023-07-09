@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: tweet-deck-memo
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - 트윗덱
 
 ---
