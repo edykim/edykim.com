@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: goodbye-steve-jobs
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - apple
   - steve jobs
 

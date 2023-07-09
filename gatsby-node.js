@@ -138,16 +138,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     taxonomy.mappedUrls
       .filter(v => !v.hidden)
       .map(tax => {
-        const taxonomyPosts = blogPages.filter(v =>
-          v.frontmatter?.tags?.includes(tax.key)
+        let found = tax.key
+        let taxonomyPosts = blogPages.filter(v =>
+          v.frontmatter?.tags?.includes(found),
         )
+        if (taxonomyPosts.length === 0) {
+          found = tax.url
+          taxonomyPosts = blogPages.filter(v =>
+            v.frontmatter?.tags?.includes(found),
+          )
+        }
+        if (taxonomyPosts.length === 0) {
+          found = tax.url.toLowerCase()
+          taxonomyPosts = blogPages.filter(v =>
+            v.frontmatter?.tags?.includes(found),
+          )
+        }
         return {
           url: tax.url,
           key: tax.key,
+          found,
           numPages: Math.ceil(taxonomyPosts.length / postsPerPage),
         }
       })
-      .forEach(({ url, key, numPages }) => {
+      .forEach(({ url, key, found, numPages }) => {
+        console.log({ url, key, found, numPages })
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
             path: `/ko/post/tag/${url}${i !== 0 ? `/page/${i + 1}` : ""}`,
@@ -159,7 +174,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               skip: i * postsPerPage,
               numPages,
               currentPage: i + 1,
-              taxonomy: [key],
+              taxonomy: [found],
               taxonomySlug: url,
             },
           })

@@ -6,7 +6,7 @@ date: "2022-08-21T15:25:44.687Z"
 lang: ko
 tags:
  - 개발 이야기
- - PHP
+ - php
  - phpstorm
 slug: "note-for-phpstorm-tip-series"
 ---

@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: a-journey-to-find-alternatives-to-windows-live-writer-for-mac
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
 
 ---
 인정하고 싶지 않지만 mac에서 Windows Live Writer 만큼 강력하고 편리한 블로깅 도구를 찾을 수가 없었다. 그나마 대안으로 찾은 도구가 ecto와 MarsEdit인데 ecto는 왠지 모를 불편한 부분이 있어 이전에 몇번 써보다가 그냥 지워버렸다. 그래서 한동안 로컬에 WordPress 설치 해두고 거기에 일기 쓰고, 이것저것 글 쓰고 그랬는데 이러다 내 맥북을 분실하게 되면 깡그리 사라지는데? 라는 생각이 들어 다시 이쪽으로 옮겨 담으려고 하고 있다.

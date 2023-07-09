@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: testing-the-rest-api-in-terminal-httpie
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - HTTPie
   - terminal
   - 터미널에서

@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: installing-the-dell-latitude-e7240-archlinux
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - archlinux
   - dell
   - latitude

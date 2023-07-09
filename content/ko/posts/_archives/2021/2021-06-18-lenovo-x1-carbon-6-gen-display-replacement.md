@@ -6,7 +6,7 @@ date: "2021-06-18T13:02:23"
 lang: ko
 slug: lenovo-thinkpad-x1-6gen-display-replacement
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - Lenovo x1 carbon
 ---
 

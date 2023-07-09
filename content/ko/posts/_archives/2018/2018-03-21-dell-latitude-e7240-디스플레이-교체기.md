@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: dell-latitude-e7240-display-replacement
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - dell
   - latitude E7240
 

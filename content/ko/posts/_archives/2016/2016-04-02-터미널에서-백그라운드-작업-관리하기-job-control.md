@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: managing-background-jobs-in-a-terminal-jobcontrol
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - jobs
   - terminal
   - 터미널에서

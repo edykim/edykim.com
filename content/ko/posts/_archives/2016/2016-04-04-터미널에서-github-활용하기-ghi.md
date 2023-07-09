@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: managing-github-issues-at-the-terminal-ghi
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - ghi
   - terminal
   - 터미널에서

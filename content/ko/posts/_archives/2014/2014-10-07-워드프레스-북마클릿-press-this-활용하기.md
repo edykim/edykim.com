@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: using-wordpress-bookmarklet-press-this
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - press this
   - tip
   - wordpress

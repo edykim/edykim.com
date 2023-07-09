@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: twitter-from-terminal-rainbowstream
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - rainbowstream
   - terminal
   - 터미널에서

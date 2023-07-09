@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: why-facebook-is-the-worst
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - facebook
   - like button
   - newsfeed

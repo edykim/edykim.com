@@ -45,9 +45,6 @@ const TaxonomyLinks = ({ tags = defaultTags }) => {
   return (
     <Container>
       {tags.map(tag => {
-        if (tag === '두루두루 it') {
-          return null;
-        }
         const url = sanitizeUrl(tag, taxonomy)
         return (
           <Link key={`taxonomy-${url}`} to={`/ko/tag/${url}/`}>

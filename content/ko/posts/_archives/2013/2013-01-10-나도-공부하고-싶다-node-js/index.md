@@ -10,7 +10,7 @@ history:
 lang: ko
 slug: i-want-to-study-node.js
 tags:
-  - 두루두루 IT
+  - 개발 잡동사니
   - nodejs
   - js
 
