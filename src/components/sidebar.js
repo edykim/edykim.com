@@ -41,6 +41,10 @@ const SideContainer = styled.aside`
       z-index: 1000;
       overflow-y: auto;
       font-size: 1.1rem;
+      a {
+        display: inline-block;
+        padding: 0.3rem 0;
+      }
     }
   }
 `
