@@ -105,6 +105,7 @@ const Layout = ({ item, location, children }) => {
       />
       <ToggleButton>
         <button
+          aria-expanded={toggleSidebar ? "true" : "false"}
           className={toggleSidebar && 'opened'}
           onClick={() => {
             setToggleSidebar(!toggleSidebar)
