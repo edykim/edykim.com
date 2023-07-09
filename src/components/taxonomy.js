@@ -23,12 +23,12 @@ const Taxonomy = ({ data, location, pageContext, format }) => {
         title={title}
         noindex={true}
       />
+      <Subject>
+        <h1>
+          <Link to={location.pathname}>{title}</Link>
+        </h1>
+      </Subject>
       <section>
-        <Subject>
-          <h1>
-            <Link to={location.pathname}>{title}</Link>
-          </h1>
-        </Subject>
         <Content>
           <p>{format(articles.totalCount || 0)}</p>
           <PostList nodes={articles.edges.map(({ node }) => node)} />

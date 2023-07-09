@@ -39,7 +39,7 @@ function Node({ node, isTag = false }) {
       {node.url ? (
         <Link
           key={`side-link-${url}`}
-          to={isTag ? `/ko/tag/${url}/` : `/ko/${url}/`}
+          to={isTag ? `/ko/post/tag/${url}/` : `/ko/${url}/`}
         >
           {`${node.key}`}
         </Link>
