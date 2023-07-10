@@ -19,7 +19,6 @@ type: post
 date: "${d.toISOString()}"
 lang: ko
 tags:
-  - 내 이야기
   - 부스러기
 noIndex: true
 slug: "${stamp}"
