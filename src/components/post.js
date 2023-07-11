@@ -29,7 +29,7 @@ position: relative;
   color: var(--color-table);
 }
 height: 1px;
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1150px) {
   margin-left: 5rem;
 }
 `

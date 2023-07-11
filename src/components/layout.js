@@ -19,13 +19,8 @@ import { LocationContextProvider } from "./LocationContext"
 const MainContainer = styled.div`
   margin: 0 auto;
   position: relative;
-  ${({ hasSidebar }) =>
-    hasSidebar &&
-    `
-  @media screen and (min-width: 1000px) {
-    padding-left: 9rem;
-  }`}
 `
+
 export const ContentContainer = styled.div`
   > * {
     max-width: 42rem;
@@ -49,9 +44,6 @@ const Main = styled.main`
 `
 
 const ToggleButton = styled.div`
-  ${({ hasSidebar }) =>
-    !hasSidebar &&
-    `display: none;`}
   position: absolute;
   right: 0;
   margin: 0 var(--site-margin);
@@ -72,7 +64,7 @@ const ToggleButton = styled.div`
     appearance: none;
     cursor: pointer;
     &:after {
-      content: '';
+      content: "";
       display: block;
       background-position: center;
       background-repeat: no-repeat;
@@ -85,12 +77,14 @@ const ToggleButton = styled.div`
     }
   }
 
+  ${({ hasSidebar }) =>
+    !hasSidebar ? `display: none !important;` : `display: none;`}
+
+  @media screen and (max-width: 1150px) {
+    display: block;
+  }
   @media screen and (max-width: 780px) {
     top: 1rem;
-  }
-
-  @media screen and (min-width: 1000px) {
-    display: none;
   }
 `
 
@@ -104,30 +98,37 @@ const Layout = ({ item, location, children }) => {
       }
     }
   `)
+  const LayoutWrapper = styled.div`
+    padding-left: 9rem;
+    @media screen and (max-width: 1150px) {
+      padding-left: 0;
+    }
+  `
+
   const hasSidebar = location.pathname.startsWith("/ko/")
   const [toggleSidebar, setToggleSidebar] = useState(false)
 
   return (
     <LocationContextProvider location={location}>
-      <Header
-        siteTitle={data.site.siteMetadata?.title || `Title`}
-        hasSidebar={hasSidebar}
-      />
-      <ToggleButton hasSidebar={hasSidebar}>
-        <button
-          aria-expanded={toggleSidebar ? "true" : "false"}
-          className={toggleSidebar ? 'opened' : undefined}
-          onClick={() => {
-            setToggleSidebar(!toggleSidebar)
-          }}
-        >
-        </button>
-      </ToggleButton>
-      <MainContainer hasSidebar={hasSidebar}>
+      <LayoutWrapper>
         {hasSidebar && <Sidebar forceShow={toggleSidebar} />}
-        <Main forceHide={toggleSidebar}>{children}</Main>
-      </MainContainer>
-      <Footer hasSidebar={hasSidebar} />
+        <div>
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <ToggleButton hasSidebar={hasSidebar}>
+            <button
+              aria-expanded={toggleSidebar ? "true" : "false"}
+              className={toggleSidebar ? "opened" : undefined}
+              onClick={() => {
+                setToggleSidebar(!toggleSidebar)
+              }}
+            ></button>
+          </ToggleButton>
+          <MainContainer>
+            <Main forceHide={toggleSidebar}>{children}</Main>
+          </MainContainer>
+          <Footer />
+        </div>
+      </LayoutWrapper>
     </LocationContextProvider>
   )
 }
