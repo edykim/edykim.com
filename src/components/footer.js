@@ -38,17 +38,11 @@ const FooterWrapper = styled.div`
   margin: 3rem var(--site-margin);
   width: var(--site-width);
   font-size: 0.8rem;
-  
-  ${({hasSidebar}) => hasSidebar && `
-  @media screen and (min-width: 1000px) {
-    padding-left: 9rem;
-    width: var(--site-width-with-padding);
-  }`}
 `
 
-const Footer = ({hasSidebar}) => {
+const Footer = () => {
   return (
-    <FooterWrapper hasSidebar={hasSidebar}>
+    <FooterWrapper>
       <FooterContainer>
         <div>
           <SocialNav>

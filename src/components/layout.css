@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   :root {
     --site-margin: 2.001rem;
     --site-neg-margin: -1.001rem;
@@ -159,7 +159,7 @@ figcaption {
   color: var(--color-subtitle);
 }
 
-@media screen and (max-width:1100px) and (min-width: 780px) {
+@media screen and (max-width:1150px) and (min-width: 780px) {
   figcaption {
     padding: 0.3rem 0.5rem;
   }

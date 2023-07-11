@@ -5,7 +5,8 @@ import taxonomy from "../../config/taxonomy"
 import { sanitizeUrl } from "@/plugins/edykim-plugin-taxonomy/utils"
 
 const SideContainer = styled.aside`
-  @media screen and (max-width: 999px) {
+  display: block;
+  @media screen and (max-width: 1150px) {
     display: none;
   }
   position: absolute;
@@ -19,7 +20,7 @@ const SideContainer = styled.aside`
     list-style: none;
   }
   margin-left: -1rem;
-  margin-top: -0.25rem;
+  margin-top: 5rem;
 
   .side-title {
     color: var(--color-subtitle);
@@ -31,11 +32,12 @@ const SideContainer = styled.aside`
     text-decoration: none;
   }
   &.full-menu {
-    @media screen and (max-width: 999px) {
+    @media screen and (max-width: 1150px) {
       position: fixed;
       right: 0;
       left: 0;
       bottom: 0;
+      margin-top: 0;
       background-color: var(--color-background);
       display: block !important;
       z-index: 1000;

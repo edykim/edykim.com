@@ -8,10 +8,6 @@ import { usePageLanguage } from "./LocationContext"
 const HeaderContainer = styled.div`
   padding: 3rem 0 1rem;
   width: var(--site-width);
-  ${({hasSidebar}) => hasSidebar && `
-  @media screen and (min-width: 1000px) {
-    padding-left: 9rem;
-  }`}
   @media screen and (max-width: 780px) {
     padding: 1.5rem 0px 1rem;
   }
@@ -76,9 +72,9 @@ const TitleLink = ({ siteTitle }) => {
   )
 }
 
-const Header = ({ siteTitle, hasSidebar }) => {
+const Header = ({ siteTitle }) => {
   return (
-    <HeaderContainer hasSidebar={hasSidebar}>
+    <HeaderContainer>
       <h1>
         <TitleLink siteTitle={siteTitle} />
       </h1>
