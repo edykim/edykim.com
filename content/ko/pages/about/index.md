@@ -21,7 +21,9 @@ url: about
 
 커뮤니티 [이상한모임](https://weirdx.io/)에서 활동하고 있습니다. 무슨 모임인지 궁금하다면 [슬랙에 가입해서](https://weirdx.io/join-slack) 살펴보세요.
 
-자세한 이력 사항은 [링크드인](https://linkedin.com/in/edwardykim/)에서 확인할 수 있습니다. 가장 빠른 소식은 [트위터](https://twitter.com/haruair/)에서 접할 수 있습니다. 질의, 제언, 무엇이든 전하고 싶은 말이 있다면 아래 경로로 알려주세요.
+자세한 이력 사항은 [링크드인](https://linkedin.com/in/edwardykim/)에서 확인할 수 있습니다. 질의, 제언, 무엇이든 전하고 싶은 말이 있다면 아래 경로로 알려주세요.
 
+- [@edykim.bsky.social](https://bsky.app/profile/edykim.bsky.social)
+- [구 트위터 @haruair](https://twitter.com/haruair/)
 - [GitHub 이슈로 등록하기](https://github.com/edykim/edykim.com/issues/new)
 - [이메일로 문의하기](mailto:edward@edykim.com)
