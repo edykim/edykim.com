@@ -41,22 +41,22 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --color-title: #eee;
-    --color-subtitle: #aaa;
-    --color-date: #aaa;
-    --color-body: #eee;
+    --color-title: #F4EFDB;
+    --color-subtitle: #B0AB97;
+    --color-date: #B0AB97;
+    --color-body: #F4EFDB;
     --color-link: #65d68c;
-    --color-separator: #202022;
+    --color-separator: #232321;
     --color-background: #171719;
     --color-blockquote: #1e1e26;
     --color-scroll-thumb: #302f46;
     --color-selection: rgba(7, 255, 52, 0.2);
     --color-table: #333;
 
-    --color-taxonomy-color: #d8d8d8;
-    --color-taxonomy-border: #393939;
+    --color-taxonomy-color: #DED9C5;
+    --color-taxonomy-border: #3F3A26;
 
-    --color-code-text: #eee;
+    --color-code-text: #F4EFDB;
     --color-code-inline: #ade0ad;
     --color-code-background: var(--color-blockquote);
     --color-code-selection: var(--color-selection);
