@@ -22,7 +22,7 @@ const HeaderContainer = styled.div`
     font-size: 1rem;
     font-weight: 600;
     color: var(--site-title);
-    :after {
+    &:after {
       font-weight: 400;
       content: "·";
       margin: 0 0.8rem 0 0.5rem;
