@@ -25,5 +25,4 @@ url: about
 
 - [@edykim.bsky.social](https://bsky.app/profile/edykim.bsky.social)
 - [구 트위터 @haruair](https://twitter.com/haruair/)
-- [GitHub 이슈로 등록하기](https://github.com/edykim/edykim.com/issues/new)
-- [이메일로 문의하기](mailto:edward@edykim.com)
+- [메시지 남기기](https://forms.gle/VET6pUuCvMBfxE219)
