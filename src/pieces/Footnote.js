@@ -5,7 +5,7 @@ const Footnote = () => (
   <>
     <Link to="/ko/">한국어</Link>
     <Link to="/">English</Link>
-    <a href="https://github.com/edykim/edykim.com/issues/new">Feedback</a>
+    <a href="https://forms.gle/VET6pUuCvMBfxE219">Feedback</a>
   </>
 )
 
