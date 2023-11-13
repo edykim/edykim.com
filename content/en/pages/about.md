@@ -3,7 +3,7 @@ title: About
 noTitle: true
 author: haruair
 type: page
-date: '2010-10-27T05:28:41'
+date: '2013-11-13T07:45:41'
 url: /about
 lang: en
 ---
@@ -12,9 +12,9 @@ lang: en
 
 I'm an open web developer who loves focusing on problems and creating quick prototypes. I like to talk about web technology, software architecture, and community.
 
-I'm an undergrad student at UC San Diego as a computer science major right now and am working at [Greenleaf Media](https://greenleafmedia.com/) as a web developer.
+I'm an undergrad student at UC San Diego as a computer science major.
 
-Previously, I had the chance to work with [Swinburne University](https://www.swinburne.edu.au/) and [Kobe Creations](https://kobecreations.com/). You can find more details at [this page](https://www.linkedin.com/in/edwardykim/).
+Previously, I had the chance to work with [Swinburne University](https://www.swinburne.edu.au/), [Kobe Creations](https://kobecreations.com/), and [Greenleaf Media](https://greenleafmedia.com/). You can find more details at [this page](https://www.linkedin.com/in/edwardykim/).
 
 <hr />
 
