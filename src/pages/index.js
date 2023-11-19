@@ -14,7 +14,7 @@ const IndexPage = ({ location }) => (
       <p style={{maxWidth: '30rem'}}>
         I am a software engineer who loves to make web services and useful
         tools. I enjoy building small things, taking photographs, and having a
-        nice cup of cofffee. I'm currently studying computer science and living
+        nice cup of coffee. I'm currently studying computer science and living
         in San Diego, CA.
       </p>
     </Content>
