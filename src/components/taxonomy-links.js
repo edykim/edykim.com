@@ -14,10 +14,11 @@ export const Container = styled.div`
     text-decoration: none;
     font-weight: 600;
     font-size: 0.8rem;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 1rem;
     text-align: center;
     border: 1px solid var(--color-taxonomy-border);
     box-shadow: 1px 1px 0px var(--color-taxonomy-border);
+    border-radius: 30px;
     &:hover,
     &:active {
       transform: translate(-1px, -2px);
