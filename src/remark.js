@@ -9,6 +9,7 @@ import rehypeSlug from 'rehype-slug'
 import {unified} from 'unified'
 import {read} from 'to-vfile'
 import {selectAll} from 'unist-util-select'
+import {visit} from 'unist-util-visit'
 
 import {parseRoute} from './route.js'
 
@@ -19,6 +20,7 @@ const pipeline = unified()
     .use(collectImages)
     .use(updateRoute)
     .use(updateImagePath)
+    .use(updateYoutube)
     .use(remarkGfm)
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeStringify, {allowDangerousHtml: true})
@@ -64,6 +66,35 @@ function updateImagePath() {
     }
 }
 
+function updateYoutube(options = {width: 600, height: 300}) {
+    function isUrlValid(userInput) {
+        const res = userInput.match(
+            /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
+            )
+        return res != null
+    }
+
+    return (tree, file) => {
+        visit(tree, 'inlineCode', node => {
+            const { value } = node
+
+            if (value.startsWith(`youtube:`)) {
+                const videoUrl = value.substr(8)
+
+                if (isUrlValid(videoUrl)) {
+                    node.type = `html`
+                    node.value = `<div>
+                        <iframe
+                            src="${videoUrl}"
+                            width="${options.width}"
+                            height="${options.height}"></iframe>
+                    </div>`
+                }
+            }
+
+        })
+    }
+}
 
 export async function load(filename) {
     return pipeline.process(await read(filename));
