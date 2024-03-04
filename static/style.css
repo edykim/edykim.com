@@ -215,6 +215,13 @@ html, body {
     display: block;
 }
 
+.content iframe {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
 .page-header {
     margin-top: 4rem;
     margin-bottom: 3rem;
