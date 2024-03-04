@@ -186,7 +186,7 @@ html, body {
     padding: 0.35rem 0 0;
     border: 2px solid;
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     background-color: var(--color-shadow);
 }
@@ -203,6 +203,16 @@ html, body {
 
 .subnav > .site-container > ul {
     display: none;
+}
+
+.subnav .subnav-title:before {
+    content: url('/chevron-down.svg');
+    float: right;
+    margin-top: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.subnav.opened .subnav-title:before {
+    transform: rotate(-180deg) translateY(5px);
 }
 
 .subnav.opened > .site-container > ul {
