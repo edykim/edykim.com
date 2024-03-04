@@ -7,6 +7,10 @@
     --color-night-text: #c7c7dd;
     --color-sepia-text: #3c2b12;
     --site-padding: 0.75rem;
+
+    --color-day-shadow: #e4efdb;
+    --color-night-shadow: #1c1c51;
+    --color-sepia-shadow: #e2d5b0;
 }
 
 @media screen and (max-width: 460px) {
@@ -60,6 +64,7 @@ li {
     --color-text: var(--color-night-text);
     --color-gray: #7d80c2;
     --color-border: #151748;
+    --color-shadow: var(--color-night-shadow);
 }
 
 .mode--day {
@@ -67,6 +72,7 @@ li {
     --color-text: var(--color-day-text);
     --color-gray: #555555;
     --color-border: #eee;
+    --color-shadow: var(--color-day-shadow);
 }
 
 .mode--sepia {
@@ -74,6 +80,7 @@ li {
     --color-text: var(--color-sepia-text);
     --color-gray: #6d5e2e;
     --color-border: #e4d8b4;
+    --color-shadow: var(--color-sepia-shadow);
 }
 
 html, body {
@@ -168,8 +175,58 @@ html, body {
 }
 
 .site-header,
-.site-footer {
+.site-footer,
+.subnav {
     max-width: var(--max-width);
+}
+
+.subnav {
+    margin: -1rem auto -2rem;
+    padding: 0.35rem 0 0;
+    border: 2px solid;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: var(--color-shadow);
+}
+
+.subnav-title {
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
+    cursor: pointer;
+}
+
+.subnav-title a {
+    display: block;
+}
+
+.subnav > .site-container > ul {
+    display: none;
+}
+
+.subnav.opened > .site-container > ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid;
+}
+
+.subnav.opened > .site-container ul ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.subnav ul li {
+    padding: 0;
+    margin: 0.35rem 0;
+}
+
+.subnav a {
+    text-decoration: none;
+    color: inherit !important;
 }
 
 .site-header {
@@ -237,6 +294,14 @@ html, body {
     .page-header {
         margin-top: 1.5rem;
         margin-bottom: 1rem;
+    }
+    .subnav {
+        margin-bottom: -1rem;
+        border-radius: 0;
+        border: 0;
+    }
+    .subnav.opened {
+        padding-bottom: 0.1em;
     }
 }
 
