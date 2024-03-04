@@ -1,16 +1,4 @@
 [build]
-command = "npm run netlify:build"
+command = "npm run build"
 publish = "public/"
 
-[[plugins]]
-package = "@netlify/plugin-gatsby"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
-[[headers]]
-  for = "/giscus.css"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
