@@ -3,6 +3,7 @@ import fs from 'fs'
 import {mkdirp} from 'mkdirp'
 import path from 'path'
 import {glob} from 'glob'
+import {createHash} from 'crypto'
 import {load} from './remark.js'
 
 export function setupStatic(src, dest) {
@@ -27,17 +28,40 @@ export async function loadNodesFromGlob(globPath) {
 
 export function createPages({nodes, template}) {
     return async (_nodes, outputDir) => {
+        let cache = {};
+        try {
+            cache = JSON.parse(
+                fs.readFileSync(
+                    `${outputDir}/.cache.json`, {encoding: 'utf-8'}));
+        } catch(e) {
+        }
+
         for (const node of _nodes) {
             const dir = path.join(outputDir, node.data.fields.url);
             await mkdirp(dir);
 
-            fs.writeFile(`${dir}/index.html`, template(node, nodes), err => {
+            const page = template(node, nodes);
+            const hash = createHash('sha256').update(page).digest('hex');
+            const filePath = `${dir}/index.html`;
+
+            if (cache[filePath] === hash) {
+                continue;
+            }
+
+            fs.writeFile(filePath, page, err => {
                 if (err) {
                     console.error(err);
                 }
+                cache[filePath] = hash;
             });
         }
+
+        storeCache(`${outputDir}/.cache.json`, cache);
     }
+}
+
+export function storeCache(filePath, cache) {
+    fs.writeFileSync(filePath, JSON.stringify(cache));
 }
 
 function parseTitle(node) {

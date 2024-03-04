@@ -24,8 +24,6 @@ const CreatePages = createPages({nodes, template});
     CreatePages,
     copyImages,
     createRedirects(config.redirects),
-    // generate sitemap
-
 ].forEach(f => f(nodes, outputDir));
 
 // taxonomy pages

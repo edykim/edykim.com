@@ -2,7 +2,6 @@ import moment from 'moment'
 import fs from 'fs'
 import path from 'path'
 import {glob} from 'glob'
-import {createHash} from 'crypto'
 
 import {getTagTree} from './../config/tag.js'
 import {publicPostOnly} from './filters.js'
@@ -141,8 +140,8 @@ function displayHeadline({data}) {
 
 function template(node, nodes, {partial}) {
     const {data, value} = node;
-    const page = `<!doctype html>
-<html lang="${data.frontmatter.lang}" data-hash="%%PAGE_HASH%%">
+    return `<!doctype html>
+<html lang="${data.frontmatter.lang}">
 <head>
 ${partial(data.fields.url, 'head.html', data)}
 </head>
@@ -167,9 +166,5 @@ ${partial(data.fields.url, 'site-footer.html')}
 </body>
 </html>
 `;
-    return page.replace(
-        "%%PAGE_HASH%%",
-        createHash('sha256').update(page).digest('hex')
-    );
 }
 
