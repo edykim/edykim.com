@@ -1,5 +1,6 @@
 :root {
     --max-width: 47.5rem;
+    --max-width-narrow: 44.5rem;
     --color-day-background-color: white;
     --color-night-background-color: #000033;
     --color-sepia-background-color: #f6edd3;
@@ -270,6 +271,11 @@ html, body {
 
 .content > img {
     display: block;
+}
+
+.content > blockquote {
+    max-width: var(--max-width-narrow);
+    border-left: 3px solid var(--color-border);
 }
 
 .content iframe {
