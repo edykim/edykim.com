@@ -8,14 +8,8 @@ url: /notes
 
 ---
 
-<grid cols="2">
-<card-link to="/plt/" title="📓 Programming Language Theory" subtext="A collection of Programming Language Theory related articles/pages."></card-link>
-</grid>
-
-## Living
-
-<grid cols="2">
-<card-link to="/plants/" title="🪴 Plants" subtext="Notes about my plants, how to cares"></card-link>
-<card-link to="/note/security-freeze/" title="🔐 Security Freeze" subtext="What is about, how to apply"></card-link>
-</grid>
+- [Programming Language Theory](/plt): a collection of programming language
+  theory related articles/pages
+- [Plants](/plants): note for my plants, how to care
+- [Security Freeze](/note/security-freeze): what is about, how to apply
 

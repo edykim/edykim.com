@@ -35,7 +35,7 @@ tags:
 8. 잘 부풀고 원하는 색이 되었다면 꺼낸다.
 9. 잼이나 생크림을 곁들여 먹는다.
 
-:::div{.columns}
+<div class="columns">
 
 <figure>
 
@@ -51,4 +51,4 @@ tags:
 <figcaption>완성!</figcaption>
 </figure>
 
-:::
+</div>

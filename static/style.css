@@ -1,0 +1,451 @@
+:root {
+    --max-width: 47.5rem;
+    --color-day-background-color: white;
+    --color-night-background-color: #000033;
+    --color-sepia-background-color: #f6edd3;
+    --color-day-text: #000000;
+    --color-night-text: #c7c7dd;
+    --color-sepia-text: #3c2b12;
+    --site-padding: 0.75rem;
+}
+
+@media screen and (max-width: 460px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;stylecss
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[lang=ko] * {
+    word-break: keep-all;
+}
+
+html {
+    font: 16px/1.5 Lato,-apple-system,Helvetica Neue,Arial,Helvetica,Noto Sans
+        KR,Noto Sans CJK KR,Apple SD Gothic Neo,Barun Gothic,Nanum Barun
+        Gothic,Malgun Gothic,맑은 고딕,sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-kerning: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1 a {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    padding: 0.2rem 0;
+}
+
+.mode--night  {
+    --color-background-color: var(--color-night-background-color);
+    --color-text: var(--color-night-text);
+    --color-gray: #7d80c2;
+    --color-border: #151748;
+}
+
+.mode--day {
+    --color-background-color: var(--color-day-background-color);
+    --color-text: var(--color-day-text);
+    --color-gray: #555555;
+    --color-border: #eee;
+}
+
+.mode--sepia {
+    --color-background-color: var(--color-sepia-background-color);
+    --color-text: var(--color-sepia-text);
+    --color-gray: #6d5e2e;
+    --color-border: #e4d8b4;
+}
+
+html, body {
+    background-color: var(--color-background-color);
+    color: var(--color-text);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.setting-btn {
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+    float: right;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    line-height: 0;
+    margin-right: -5px;
+    margin-top: -10px;
+}
+
+.cog-icon {
+    display: inline-block;
+}
+
+.mode--night .setting-btn path {
+    fill: #7777aa;
+}
+
+.mode--day .setting-btn path {
+    fill: #666666;
+}
+
+.mode--sepia .seting-btn path {
+    fill: #6d5e2e;
+}
+
+.mode--night a:link    { color: #79e0ff; }
+.mode--night a:visited { color: #c579ff; }
+.mode--night a:active  { color: #ffacac; }
+
+.mode--sepia a:link    { color: #4147a1; }
+.mode--sepia a:visited { color: #7a3d5e; }
+.mode--sepia a:active  { color: #ec341c; }
+
+.mode--night {
+    scrollbar-color: var(--color-text) var(--color-background-color);
+}
+
+.mode--sepia {
+    scrollbar-color: var(--color-text) var(--color-background-color);
+}
+
+.site-header,
+.site-footer,
+.page {
+    margin: 1rem auto;
+}
+
+.site-container {
+    margin-left: var(--site-padding);
+    margin-right: var(--site-padding);
+}
+
+.site-header nav {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: inherit !important;
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: inherit !important;
+    font-weight: bold;
+}
+
+.site-header,
+.site-footer {
+    max-width: var(--max-width);
+}
+
+.site-header {
+    margin-top: 3rem;
+}
+
+.site-header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.site-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: inherit !important;
+    margin-right: 0.3rem;
+    display: inline-block;
+}
+
+.page-header,
+.page-footer,
+.content > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: var(--site-padding);
+    padding-right: var(--site-padding);
+}
+
+.content > ul:not([class]),
+.content > ol:not([class]) {
+    padding-left: 40px;
+}
+
+.aligncenter {
+    display: block;
+}
+
+.page-header {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .site-header {
+        margin-top: var(--site-padding);
+    }
+    .site-footer {
+        margin-bottom: var(--site-padding);
+    }
+    .page-header {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.page-footer {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.page-header .headline {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-gray);
+}
+
+.post-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-item .post-item--title {
+    flex: 1;
+    padding-right: 0.5rem;
+}
+
+.post-item date {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-gray);
+}
+
+.content figure.wide {
+    max-width: 1024px;
+    text-align: center;
+}
+
+.content figcaption {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+    opacity: 0.8;
+}
+
+.content .columns {
+    display: flex;
+}
+
+.content .columns figure {
+    margin: 0;
+}
+
+:not(pre) > code {
+    border: 1px solid;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px
+}
+
+pre code.hljs {
+    font-size: 0.8rem;
+    padding: 1rem !important;
+    border-radius: 4px;
+}
+
+footer {
+    font-size: 0.8rem;
+    color: var(--color-gray);
+}
+
+.content .post-list {
+    list-style: none;
+}
+
+.post-list .post-item a {
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border-color: var(--color-border);
+}
+
+::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+#website-setting {
+    padding: 1.25rem;
+    background-color: #191b1c;
+    border: 1px solid #272b2d;
+    border-radius: 10px;
+    color: #fff;
+    min-width: 95vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #website-setting {
+        min-width: 600px;
+    }
+}
+
+#website-setting :first-child {
+    margin-top: 0;
+}
+
+#website-setting h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+#website-setting .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #3f4548;
+    padding-bottom: 0.5rem;
+}
+
+#website-setting .options {
+    display: flex;
+}
+
+#website-setting .color-select {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    width: 80px;
+    margin: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#website-setting .color-select:before {
+    display: inline-block;
+    content: '';
+    border: 3px solid #000;
+    border-radius: 100%;
+    background-color: #000;
+    width: 12px;
+    height: 12px;
+    margin-right: 0.5rem;
+}
+
+#website-setting .preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+#website-setting .preview:before {
+    content: '';
+    display: inline-block;
+    width: 80%;
+    height: 8px;
+}
+
+#website-setting .preview:after {
+    content: '';
+    display: inline-block;
+    width: 70%;
+    height: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 0, 0 20px 0;
+}
+
+.mode--day #website-setting .color-select[data-color="day"]:before {
+    background-color: #fff;
+}
+.mode--night #website-setting .color-select[data-color="night"]:before {
+    background-color: #fff;
+}
+.mode--sepia #website-setting .color-select[data-color="sepia"]:before {
+    background-color: #fff;
+}
+
+.mode--day #website-setting .preview {
+    background-color: var(--color-day-background-color);
+}
+.mode--night #website-setting .preview {
+    background-color: var(--color-night-background-color);
+}
+.mode--sepia #website-setting .preview {
+    background-color: var(--color-sepia-background-color);
+}
+
+.mode--day #website-setting .preview:before,
+.mode--day #website-setting .preview:after {
+    background-color: var(--color-day-text);
+    color: var(--color-day-text);
+}
+
+.mode--night #website-setting .preview:before,
+.mode--night #website-setting .preview:after {
+    background-color: var(--color-night-text);
+    color: var(--color-night-text);
+}
+
+.mode--sepia #website-setting .preview:before,
+.mode--sepia #website-setting .preview:after {
+    background-color: var(--color-sepia-text);
+    color: var(--color-sepia-text);
+}
+
+#website-setting .close-btn {
+    appearance: 0;
+    border: 0;
+    background: transparent;
+    font-weight: bold;
+    display: block;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0;
+}
+

@@ -1,0 +1,25 @@
+# Redirect default Netlify subdomain to primary domain
+
+http://edykim.netlify.com/* https://edykim.com/:splat 301!
+https://edykim.netlify.com/* https://edykim.com/:splat 301!
+https://haruair.com/* https://www.haruair.com/:splat 301!
+http://haruair.com/* https://www.haruair.com/:splat 301!
+http://www.haruair.com/* https://www.haruair.com/:splat 301!
+http://haruair.com https://edykim.com/ko/ 301!
+https://haruair.com https://edykim.com/ko/ 301!
+http://www.haruair.com https://edykim.com/ko/ 301!
+https://www.haruair.com https://edykim.com/ko/ 301!
+https://www.haruair.com/feed https://edykim.com/ko/feed.xml 301!
+https://www.haruair.com/blog https://edykim.com/ko/archives/ 301!
+https://www.haruair.com/translation https://edykim.com/ko/tag/translations/ 301!
+https://www.haruair.com/php https://edykim.com/ko/tag/php/ 301!
+https://www.haruair.com/ng https://edykim.com/ko/tag/angularjs/ 301!
+
+# generated redirection from the files
+## generated 
+
+# fallback for 404
+
+/ko/* /ko/404/ 404
+/* /404/ 404
+
