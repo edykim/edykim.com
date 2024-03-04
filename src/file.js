@@ -33,6 +33,7 @@ export function createPages({nodes, template}) {
             cache = JSON.parse(
                 fs.readFileSync(
                     `${outputDir}/.cache.json`, {encoding: 'utf-8'}));
+            console.log(`cache loaded: ${Object.keys(cache).length} entries`);
         } catch(e) {
         }
 
