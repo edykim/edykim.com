@@ -62,7 +62,7 @@ window.onload = () => {
 
     const subnav = document.querySelector('.subnav')
     const subnavTitle = document.querySelector('.subnav-title a')
-    subnavTitle.addEventListener('click', () => {
+    subnavTitle?.addEventListener('click', () => {
             if (subnav.classList.contains('opened')) {
                 subnav.classList.remove('opened');
             } else {
