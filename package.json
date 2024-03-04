@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node src/app.js",
-    "netlify:build": "mkdir public && cp -rf /opt/build/cache/public . && npm run build && cp -r public /opt/build/cache/public"
+    "netlify:build": "build"
   },
   "keywords": [],
   "author": "",
