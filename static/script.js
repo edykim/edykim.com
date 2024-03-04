@@ -51,13 +51,23 @@ window.onload = () => {
         });
     document.querySelectorAll('#website-setting .color-select')
         .forEach(ele => ele
-            .addEventListener('click', (el) => {
-                setMode(el.target.dataset.color);
+            .addEventListener('click', (e) => {
+                setMode(e.target.dataset.color);
             }));
 
     document.querySelector('.setting-btn')
         .addEventListener('click', () => {
             modal.showModal();
+        });
+
+    const subnav = document.querySelector('.subnav')
+    const subnavTitle = document.querySelector('.subnav-title a')
+    subnavTitle.addEventListener('click', () => {
+            if (subnav.classList.contains('opened')) {
+                subnav.classList.remove('opened');
+            } else {
+                subnav.classList.add('opened');
+            }
         });
 }
 
