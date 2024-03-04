@@ -153,7 +153,7 @@ ${partial(data.fields.url, 'header.html')}
     ${data.frontmatter.noTitle
         ? ''
         : `<header class="page-header">
-        <h1><a href="/${data.fields.url ? '' : `${data.fields.url}/`}">${displayTitle(node)}</a></h1>
+        <h1><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${displayTitle(node)}</a></h1>
         ${displayHeadline(node)}
     </header>`}
 
