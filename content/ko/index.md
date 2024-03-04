@@ -4,6 +4,7 @@ author: haruair
 type: page
 lang: ko
 url: /
+noTitle: true
 ---
 
 안녕하세요, 김용균입니다. 🪴

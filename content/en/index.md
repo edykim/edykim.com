@@ -4,6 +4,7 @@ author: haruair
 type: page
 lang: en
 url: /
+noTitle: true
 ---
 
 Hello, I am Edward 👋
