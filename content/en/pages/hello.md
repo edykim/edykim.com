@@ -13,18 +13,18 @@ noTitle: true
 <div style="margin-bottom: 1.5rem;">
 <strong style="display: block; margin-bottom: 0.5rem;">Edward Kim (김용균)</strong>Software Engineer · Occasional photographer
 </div>
-<grid cols="3">
-  <card-link to="https://github.com/edykim/" inline="true" title="🧑🏻‍💻 GitHub"></card-link>
-  <card-link to="https://twitter.com/itsedykim/" inline="true" title="💬 Twitter"></card-link>
-  <card-link to="https://edykim.com/" inline="true" title="📝 my website"></card-link>
-  <card-link to="https://apps.apple.com/app/id1458639178" inline="true" title="⏲ visual timer"></card-link>
-  <card-link to="https://note.edykim.com/" inline="true" title="🗓 free PDF planner"></card-link>
-  <card-link to="https://github.com/edykim/edykim.com/issues/new/" inline="true" title="✉️ say hello"></card-link>
-  <card-link to="https://edykim.com/ko/" inline="true" title="📝 한국어 웹사이트"></card-link>
-  <card-link to="https://twitter.com/haruair/" inline="true" title="💬 한국어 트위터"></card-link>
-  <card-link to="https://www.youtube.com/watch?v=AJOVf0DH4x4" inline="true" title='🎵 Miles Davis - "It Never Entered My Mind"'></card-link>
-</grid>
-<div style="margin: 1rem 0 2rem;"><small>I'm happy when I'm having a good coffee ☕️</small></div>
-</div>
 
-<style>@media screen and (max-width: 620px) {.mini, .mini * {text-align: center !important;}}</style>
+- [🧑🏻‍💻 GitHub](https://github.com/edykim/)
+- [💬 Twitter](https://twitter.com/itsedykim/)
+- [📝 my website](https://edykim.com/)
+- [⏲ visual timer](https://apps.apple.com/app/id1458639178)
+- [🗓 free PDF planner](https://note.edykim.com/)
+- [✉️ say hello](https://github.com/edykim/edykim.com/issues/new/)
+- [📝 한국어 웹사이트](https://edykim.com/ko/)
+- [💬 한국어 트위터](https://twitter.com/haruair/)
+- [🎵 Miles Davis - "It Never Entered My Mind"](https://www.youtube.com/watch?v=AJOVf0DH4x4)
+
+I'm happy when I'm having a good coffee ☕️
+
+<style>@media screen and (max-width: 620px) {.mini, .mini * {text-align: center !important;} ul {list-style: none; padding: 0;} }</style>
+
