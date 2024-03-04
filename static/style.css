@@ -205,14 +205,21 @@ html, body {
     display: none;
 }
 
-.subnav .subnav-title:before {
-    content: url('/chevron-down.svg');
+.subnav .subnav-title a:before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-left: 3px solid;
+    border-top: 3px solid;
     float: right;
-    margin-top: 2px;
+    margin-top: 7px;
+    margin-right: 3px;
     transition: all 0.3s ease-in-out;
+    transform: rotateZ(45deg);
 }
-.subnav.opened .subnav-title:before {
-    transform: rotate(-180deg) translateY(5px);
+.subnav.opened .subnav-title a:before {
+    transform: rotateZ(225deg);
+    margin-top: 5px;
 }
 
 .subnav.opened > .site-container > ul {
