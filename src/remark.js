@@ -1,6 +1,7 @@
 import rehypeStringify from 'rehype-stringify'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkParseFrontmatter from 'remark-parse-frontmatter'
+import remarkDirective from 'remark-directive'
 import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
@@ -9,6 +10,7 @@ import rehypeSlug from 'rehype-slug'
 import {unified} from 'unified'
 import {read} from 'to-vfile'
 import {selectAll} from 'unist-util-select'
+import {h} from 'hastscript'
 import {visit} from 'unist-util-visit'
 
 import {parseRoute} from './route.js'
@@ -17,6 +19,8 @@ const pipeline = unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
     .use(remarkParseFrontmatter)
+    .use(remarkDirective)
+    .use(updateHtmlDirectives)
     .use(collectImages)
     .use(updateRoute)
     .use(updateImagePath)
@@ -63,6 +67,25 @@ function updateImagePath() {
         }
 
         tree.children = tree.children.map(t => itr(t));
+    }
+}
+
+// ref: https://unifiedjs.com/explore/package/remark-directive/
+function updateHtmlDirectives() {
+    return function (tree) {
+        visit(tree, function (node) {
+            if (
+                node.type === 'containerDirective' ||
+                node.type === 'leafDirective' ||
+                node.type === 'textDirective'
+            ) {
+                const data = node.data || (node.data = {})
+                const hast = h(node.name, node.attributes || {})
+
+                data.hName = hast.tagName
+                data.hProperties = hast.properties
+            }
+        })
     }
 }
 
