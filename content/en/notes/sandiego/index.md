@@ -8,6 +8,6 @@ url: sandiego
 noTitle: true
 ---
 
-Welcome! There are plenty of places to eat and enjoy in San Diego, CA. I'll
+☕ Welcome! There are plenty of places to eat and enjoy in San Diego, CA. I'll
 record the places I've visited and the experiences here.
 
