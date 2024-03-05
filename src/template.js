@@ -29,11 +29,9 @@ export async function templateFactory({ path }) {
         const t = templateFiles[urlLookup + '/' + templateName] || '';
         const nextUrl = urlLookup.slice(0, urlLookup.lastIndexOf('/'));
         const parent = () => partial(nextUrl, templateName, data);
+        const _template = (templateName, data) => partial(url, templateName, data);
 
-        if (data) {
-            return eval('(data, parent) => `' + t + '`')(data, parent);
-        }
-        return t;
+        return eval('(data, parent, template) => `' + t + '`')(data || {}, parent, _template);
     }
 
     return (node, nodes) => {
