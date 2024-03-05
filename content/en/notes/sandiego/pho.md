@@ -7,5 +7,5 @@ lang: en
 url: sandiego/pho
 ---
 
-pho.
+This is just the beginning! I will put our pho list soon!
 

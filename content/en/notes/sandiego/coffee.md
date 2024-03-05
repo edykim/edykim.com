@@ -7,5 +7,5 @@ lang: en
 url: sandiego/coffee
 ---
 
-coffee.
+This is just the beginning! I will put our coffee list soon!
 
