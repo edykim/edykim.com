@@ -2,7 +2,6 @@
 title: Crafts
 author: haruair
 type: page
-date: "2021-10-24T05:28:41"
 url: /crafts
 lang: en
 
