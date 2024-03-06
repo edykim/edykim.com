@@ -1,6 +1,8 @@
 <meta charset="utf-8" />
 ${data.frontmatter.lang != 'ko' ? `
-<title>${data.frontmatter.title} - edykim</title>
+<title>${data.frontmatter.metaTitle
+    ? data.frontmatter.metaTitle
+    : data.frontmatter.title} - edykim</title>
 <link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/>
 ` : ''}
 
