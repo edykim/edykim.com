@@ -22,6 +22,10 @@ This is just the beginning! I will put our coffee list soon!
 - [Forum Coffee](https://www.forumcoffees.com/)
   ([map](https://maps.app.goo.gl/3dCD26WtriY9yGzv7)):
   geeky menu name, good coffee, hard to find a seat
+- [James Coffee Co.](https://jamescoffeeco.com/)
+  ([map](https://maps.app.goo.gl/F3Ew7a6XsrRN26gN8),
+  [other loc](https://jamescoffeeco.com/pages/locations)):
+  Good vibe, nice coffee
 
 ## Coffee at UTC
 
