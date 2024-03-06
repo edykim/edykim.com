@@ -414,6 +414,7 @@ footer {
     background: transparent;
     font-weight: 600;
     cursor: pointer;
+    color: inherit;
 }
 
 .content .with-random-button ul {
