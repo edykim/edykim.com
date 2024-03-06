@@ -29,6 +29,8 @@ This is just the beginning! I will put our coffee list soon!
 - [Hawthorn Coffee](https://www.hawthorncoffee.com/)
   ([map](https://maps.app.goo.gl/apUng4P9t6BbshRW7)):
   Good vibe, good coffee and menu
+- [Communal Coffee](https://communalcoffee.com/)
+  ([map](https://maps.app.goo.gl/EK3mtUjaM8UYFB727))
 
 ## Coffee at UTC
 
@@ -40,4 +42,10 @@ This is just the beginning! I will put our coffee list soon!
 - craving randomly
   - 85C Bakery Cafe: sea salt coffee with pastry
   - Starbucks: yep just starbucks
+
+## Plan to visit
+
+- Dark Horse Coffee Roasters
+- Heartwork Coffee
+- Genteel Coffee Co.
 
