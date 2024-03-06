@@ -51,7 +51,7 @@ noIndex: true
 
 :::
 
-### 이것저것 상점
+## 이것저것 상점
 
 :::div{.with-random-button}
 
