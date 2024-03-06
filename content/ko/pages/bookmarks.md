@@ -51,3 +51,16 @@ noIndex: true
 
 :::
 
+### 이것저것 상점
+
+:::div{.with-random-button}
+
+- [흑심 BLACKHEART](https://blackheart.kr/)
+- [콜렉토그라프](https://collectograph.com/)
+- [오롤리데이](https://www.oh-lolly-day.com/)
+- [Dinamo Typefaces](https://abcdinamo.com/)
+- [OMOI](https://omoionline.com/)
+- [Crumpler](https://www.crumpler.com/)
+- [Topo Designs](https://topodesigns.com/)
+
+:::
