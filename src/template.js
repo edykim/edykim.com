@@ -123,11 +123,19 @@ function displayDate(date) {
 }
 
 function displayPublishedOn({data}) {
-    if (! data.frontmatter.date || data.frontmatter.type != 'post') {
+    if (! data.frontmatter.date) {
         return '';
     }
     const d = moment(data.frontmatter.date).format('LLLL');
-    return `<div class="published-at">Published on <date>${d}</date></div>`;
+    return `<div class="published-on">Published on <date>${d}</date></div>`;
+}
+
+function displayUpdatedOn({data}) {
+    if (! data.frontmatter.updatedOn) {
+        return '';
+    }
+    const d = moment(data.frontmatter.updatedOn).format('LLLL');
+    return `<div class="updated-on">Updated on <date>${d}</date></div>`;
 }
 
 function displayTaxonomy({data}) {
@@ -174,6 +182,7 @@ ${partial(data.fields.url, 'header.html')}
 
     <footer class="page-footer">
         ${displayPublishedOn(node)}
+        ${displayUpdatedOn(node)}
         ${displayTaxonomy(node)}
     </footer>
 </div>

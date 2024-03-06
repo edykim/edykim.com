@@ -2,7 +2,6 @@
 title: 안녕하세요, 김용균입니다
 author: haruair
 type: page
-date: "2010-10-07T05:28:41"
 lang: ko
 url: about
 

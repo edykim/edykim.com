@@ -3,7 +3,6 @@ metaTitle: About
 title: Hello 👋
 author: haruair
 type: page
-date: '2013-11-13T07:45:41'
 url: /about
 lang: en
 ---
