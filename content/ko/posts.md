@@ -4,6 +4,7 @@ author: haruair
 type: page
 lang: ko
 url: post
+noIndex: true
 ---
 
 <!-- @template tags -->

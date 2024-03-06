@@ -302,6 +302,10 @@ html, body {
     height: auto;
 }
 
+.tags a {
+    color: inherit !important;
+}
+
 .page-header {
     margin-top: 4rem;
     margin-bottom: 3rem;

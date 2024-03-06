@@ -1,11 +1,11 @@
 import moment from 'moment'
 import fs from 'fs'
-import path from 'path'
 import {glob} from 'glob'
 import {createHash} from 'crypto'
 
 import {getTagTree} from './../config/tag.js'
 import {publicPostOnly} from './filters.js'
+import {taxRoute} from './tag.js'
 
 export async function templateFactory({ path }) {
     const templateFilenames = await glob(`./${path}/**/*.html`);
@@ -127,7 +127,22 @@ function displayPublishedOn({data}) {
         return '';
     }
     const d = moment(data.frontmatter.date).format('LLLL');
-    return `Published on <date>${d}</date>`;
+    return `<div class="published-at">Published on <date>${d}</date></div>`;
+}
+
+function displayTaxonomy({data}) {
+    if (! data.frontmatter.tags || data.frontmatter.type != 'post') {
+        return '';
+    }
+    
+    const tagUrl = t => `/${
+        data.frontmatter.lang != 'en'
+        ? `${data.frontmatter.lang}/`
+        : ''}tag/${taxRoute(t)}`;
+
+    return `<div class="tags">Tags: ${data.frontmatter.tags.map(tagName => `
+        <a href="${tagUrl(tagName)}">${tagName}</a>
+    `).join(' ')}</div>`;
 }
 
 function displayHeadline({data}) {
@@ -156,8 +171,10 @@ ${partial(data.fields.url, 'header.html')}
     </header>`}
 
     <div class="content">${displayContent(node, nodes)}</div>
+
     <footer class="page-footer">
         ${displayPublishedOn(node)}
+        ${displayTaxonomy(node)}
     </footer>
 </div>
 ${partial(data.fields.url, 'footer.html')}
