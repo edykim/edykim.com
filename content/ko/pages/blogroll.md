@@ -11,7 +11,6 @@ url: blogroll
 
 - [기계인간 John Grib](https://johngrib.github.io/)
 - [Cojette의 Data Wonderland](https://cojette.github.io/)
-- [스타트업 바이블](https://www.thestartupbible.com/)
 - [보통의 언어](https://www.saeyoonjeong.com/blog)
 - [Daily Log](https://jiyeonseo.github.io/)
 - [Zoeyful](https://joeyful52.tistory.com/)
@@ -42,6 +41,7 @@ url: blogroll
 - [starla's trash can](https://starlakim.wordpress.com/)
 - [듀나의 영화낙서판](http://www.djuna.kr/xe/review)
 - [GeekNews](https://news.hada.io/)
+- [스타트업 바이블](https://www.thestartupbible.com/)
 
 :::
 
