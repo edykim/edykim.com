@@ -39,6 +39,7 @@ url: blogroll
 - [디에디트](https://the-edit.co.kr/)
 - [권혜정을 권해](https://kwonejeong.tistory.com/)
 - [starla's trash can](https://starlakim.wordpress.com/)
+- [듀나의 영화낙서판](http://www.djuna.kr/xe/review)
 
 :::
 
