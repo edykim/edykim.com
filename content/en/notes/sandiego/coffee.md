@@ -26,6 +26,9 @@ This is just the beginning! I will put our coffee list soon!
   ([map](https://maps.app.goo.gl/F3Ew7a6XsrRN26gN8),
   [other loc](https://jamescoffeeco.com/pages/locations)):
   Good vibe, nice coffee
+- [Hawthorn Coffee](https://www.hawthorncoffee.com/)
+  ([map](https://maps.app.goo.gl/apUng4P9t6BbshRW7)):
+  Good vibe, good coffee and menu
 
 ## Coffee at UTC
 
