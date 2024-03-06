@@ -14,5 +14,5 @@ noTitle: true
 
 - [글목록](/ko/post/)
 - [프로필](/ko/about/)
-- [블로그롤](/ko/blogroll/)
+- [즐겨찾기](/ko/bookmarks/)
 

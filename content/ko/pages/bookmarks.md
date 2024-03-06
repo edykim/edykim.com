@@ -1,11 +1,13 @@
 ---
-title: 블로그롤
+title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
 lang: ko
-url: blogroll
+url: bookmarks 
 ---
+
+## 블로그롤
 
 :::div{.with-random-button}
 
@@ -30,14 +32,16 @@ url: blogroll
 - [꾸준함이 재능인 개발자 입니다](https://ddururiiiiiii.tistory.com/)
 - [제이크서 위키 블로그](https://jake-seo-dev.tistory.com/)
 - [raccoony's cave](https://blog.raccoony.dev/)
+- [권혜정을 권해](https://kwonejeong.tistory.com/)
 
 :::
+
+## 심심할 때 보는
 
 :::div{.with-random-button}
 
 - [월간 윤종신](https://yoonjongshin.com/)
 - [디에디트](https://the-edit.co.kr/)
-- [권혜정을 권해](https://kwonejeong.tistory.com/)
 - [starla's trash can](https://starlakim.wordpress.com/)
 - [듀나의 영화낙서판](http://www.djuna.kr/xe/review)
 - [GeekNews](https://news.hada.io/)

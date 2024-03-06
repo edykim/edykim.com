@@ -7,5 +7,5 @@ lang: ko
 url: notes
 ---
 
-- [블로그롤](/ko/blogroll/)
+- [즐겨찾기](/ko/bookmarks/)
 
