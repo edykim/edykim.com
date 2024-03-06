@@ -8,7 +8,7 @@ const mapped = getMappedTags()
         return carry;
     }, {});
 
-function taxRoute(tag) {
+export function taxRoute(tag) {
     return (`${mapped[tag] || tag}`)
         .toLowerCase()
         .replace('.net', 'dotnet')
@@ -39,6 +39,7 @@ export function fetchTaxonomies(nodes, lang) {
                 frontmatter: {
                     title: `Tag: ${tag}`,
                     type: 'tag',
+                    noIndex: true,
                     lang,
                 },
                 fields: {
