@@ -376,6 +376,14 @@ html, body {
     margin: 0;
 }
 
+.content li > :first-child {
+    margin-top: 0;
+}
+
+.content li > :first-child {
+    margin-bottom: 0;
+}
+
 :not(pre) > code {
     border: 1px solid;
     padding: 0.1rem 0.4rem;
@@ -395,6 +403,36 @@ footer {
 
 .content .post-list {
     list-style: none;
+}
+
+.content .random-btn {
+    appearance: none;
+    font-family: inherit;
+    padding: 0.3rem 0.45rem;
+    border: 2px solid;
+    border-radius: 5px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.content .with-random-button ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content .with-random-button li {
+    display: inline-block;
+}
+
+.content .with-random-button a {
+    color: inherit !important;
+    font-size: 0.9rem;
+}
+
+.content .random-btn:before {
+    content: "🎲";
+    margin-right: 0.3rem;
 }
 
 .post-list .post-item a {
