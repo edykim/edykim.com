@@ -91,5 +91,23 @@ window.onload = () => {
                 links[idx]?.click();
             });
         });
+
+    document.querySelectorAll('.with-fold-button')
+        .forEach(el => {
+            const container = document.createElement('div');
+            const button = document.createElement('button');
+            button.classList.add('fold-btn');
+            button.textContent = el.dataset.openLabel;
+            container.append(button);
+            el.parentNode.insertBefore(container, el);
+
+            el.style.display = 'none';
+
+            button.addEventListener('click', () => {
+                button.textContent = el.style.display !== 'none'
+                    ? el.dataset.openLabel : el.dataset.closeLabel;
+                el.style.display = el.style.display === 'none' ? '' : 'none';
+            });
+        });
 }
 

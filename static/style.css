@@ -409,7 +409,8 @@ footer {
     list-style: none;
 }
 
-.content .random-btn {
+.content .random-btn,
+.content .fold-btn {
     appearance: none;
     font-family: inherit;
     padding: 0.3rem 0.45rem;
