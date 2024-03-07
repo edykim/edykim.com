@@ -441,6 +441,17 @@ footer {
     margin-right: 0.3rem;
 }
 
+.content table {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.content th,
+.content td {
+    border: 1px solid;
+    padding: 0.3rem 0.5rem;
+}
+
 .post-list .post-item a {
     font-weight: 600;
     text-decoration: none;
