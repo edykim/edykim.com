@@ -9,8 +9,10 @@ export async function copyImages(nodes, outputDir) {
             if (image.url.indexOf(':') !== -1) {
                 continue;
             }
-            const dir = path.join(outputDir, node.data.fields.url);
+            const dir = path.join(outputDir, node.data.fields.url)
             await mkdirp(dir);
+            const subdir = path.dirname(path.join(dir, image.url))
+            await mkdirp(subdir);
 
             fs.copyFile(
                 path.join(path.dirname(node.data.fields.filePath), image.url),
