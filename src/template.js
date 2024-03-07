@@ -31,7 +31,7 @@ export async function templateFactory({ path }) {
         const parent = () => partial(nextUrl, templateName, data);
         const _template = (templateName, data) => partial(url, templateName, data);
 
-        return eval('(data, parent, template) => `' + t + '`')(data || {}, parent, _template);
+        return Function('data', 'parent', 'template', 'return `' + t + '`')(data || {}, parent, _template);
     }
 
     return (node, nodes) => {
