@@ -296,7 +296,7 @@ html, body {
     border-left: 3px solid var(--color-border);
 }
 
-.content iframe {
+.content iframe[src*="youtube"] {
     max-width: 100%;
     width: 100%;
     aspect-ratio: 16 / 9;
