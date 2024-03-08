@@ -7,7 +7,7 @@ lang: ko
 slug: migrating-gatsby-from-v2-to-v3
 tags:
   - 개발 이야기
-  - blog
+  - 블로그
   - housekeeping
   - gatsby
 
