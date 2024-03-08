@@ -70,6 +70,11 @@ function toggleGiscusTheme(name) {
 }
 
 function loadGiscus() {
+    const section = document.querySelector('.comments');
+    if (!section) {
+        return;
+    }
+
     const comment = document.createElement('script');
     comment.setAttribute('src', 'https://giscus.app/client.js');
     comment.setAttribute('data-repo', 'edykim/edykim.com');
@@ -91,7 +96,7 @@ function loadGiscus() {
     comment.setAttribute('crossorigin', 'anonymous');
     comment.setAttribute('async', 'async');
 
-    document.querySelector('.comments')?.append(comment);
+    section.append(comment);
 }
 
 const head = document.querySelector('head');
