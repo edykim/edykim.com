@@ -29,6 +29,8 @@ function setMode(name) {
         cl.remove(`mode--${current}`);
         localStorage.setItem('mode', name);
     }
+
+    toggleGiscusTheme(name);
 }
 
 function createModeToggle() {
@@ -39,6 +41,38 @@ function createModeToggle() {
 }
 
 setMode(getCurrentMode());
+
+const darkThemeNames = ['night'];
+const darkGiscusThemeName = 'dark_dimmed';
+const lightGiscusThemeName = 'light';
+
+function toggleGiscusTheme(name) {
+    const frame = document.querySelector('.giscus-frame');
+    if (!frame) {
+        const scr = document.querySelector('.commments script');
+        if (scr) {
+            scr.dataset.theme = darkThemeNames.includes(name)
+                ? darkGiscusThemeName : lightGiscusThemeName
+        }
+        return;
+    }
+    const src = frame.getAttribute('src');
+    if (darkThemeNames.includes(name)) {
+        if (src.indexOf(`theme=${lightGiscusThemeName}`) != -1) {
+            frame.setAttribute('src',
+                src.replace(
+                    `theme=${lightGiscusThemeName}`,
+                    `theme=${darkGiscusThemeName}`));
+        }
+    } else {
+        if (src.indexOf(`theme=${darkGiscusThemeName}`) != -1) {
+            frame.setAttribute('src',
+                src.replace(
+                    `theme=${darkGiscusThemeName}`,
+                    `theme=${lightGiscusThemeName}`));
+        }
+    }
+}
 
 const head = document.querySelector('head');
 
@@ -109,5 +143,7 @@ window.onload = () => {
                 el.style.display = el.style.display === 'none' ? '' : 'none';
             });
         });
+
+    toggleGiscusTheme(getCurrentMode());
 }
 
