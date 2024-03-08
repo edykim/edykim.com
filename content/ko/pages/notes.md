@@ -17,5 +17,5 @@ url: notes
 ## 작은 튜토리얼
 
 - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
-- [아주 조그마한 컴파일러 만들기](https://edykim.com/ko/post/the-super-tiny-compiler/)
+- [아주 조그마한 컴파일러 만들기](/ko/post/the-super-tiny-compiler/)
 
