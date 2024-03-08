@@ -599,3 +599,11 @@ hr {
     padding: 0;
 }
 
+.mode--night .hljs {
+    background: #080920;
+}
+
+.mode--sepia .hljs {
+    background: #29200f;
+}
+
