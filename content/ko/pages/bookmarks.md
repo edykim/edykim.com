@@ -35,6 +35,7 @@ noIndex: true
 - [raccoony's cave](https://blog.raccoony.dev/)
 - [권혜정을 권해](https://kwonejeong.tistory.com/)
 - [Lucas wiki](https://wiki.lucashan.space/)
+- [K리그 프로그래머](https://jeho.page/)
 
 :::
 
