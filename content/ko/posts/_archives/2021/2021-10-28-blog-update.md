@@ -6,7 +6,7 @@ date: "2021-10-28T09:02:49.307Z"
 lang: ko
 tags:
   - 개발 이야기
-  - blog
+  - 블로그
 slug: "blog-update-2021-fall"
 ---
 
