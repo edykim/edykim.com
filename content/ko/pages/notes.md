@@ -9,6 +9,7 @@ url: notes
 ## 소소한 페이지
 
 - [즐겨찾기](/ko/bookmarks/)
+- [방명록](/ko/guestbook/)
 
 ## 다시 볼 것들
 
