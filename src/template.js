@@ -186,7 +186,7 @@ ${partial(data.fields.url, 'header.html')}
         ${displayTaxonomy(node)}
     </footer>
 </div>
-${partial(data.fields.url, 'footer.html')}
+${partial(data.fields.url, 'footer.html', data)}
 ${partial(data.fields.url, 'site-footer.html')}
 </body>
 </html>
