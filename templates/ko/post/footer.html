@@ -1,5 +1,5 @@
-<div class="comments">
-</div>
+${(data.frontmatter.type === "post"
+  || data.frontmatter.hasComment)
+  ? `<div class="comments"></div>` : ''}
 
 ${parent()}
-
