@@ -496,12 +496,13 @@ hr {
 #website-setting .header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #3f4548;
+    border-bottom: 1px solid #212528;
     padding-bottom: 0.5rem;
 }
 
 #website-setting .options {
     display: flex;
+    justify-content: center;
 }
 
 #website-setting .color-select {
@@ -531,8 +532,8 @@ hr {
     width: 80px;
     height: 80px;
     border-radius: 10px;
-    margin-bottom: 1rem;
     padding: 10px;
+    margin: 1rem auto;
 }
 
 #website-setting .preview:before {
@@ -597,7 +598,9 @@ hr {
     display: block;
     color: #ffffff;
     font-size: 1.2rem;
-    padding: 0;
+    padding: 1rem;
+    margin: -1rem;
+    cursor: pointer;
 }
 
 .mode--night .hljs {
