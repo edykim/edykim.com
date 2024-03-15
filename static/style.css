@@ -249,6 +249,7 @@ html, body {
 
 .site-header {
     margin-top: 3rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .site-header:after {
