@@ -11,6 +11,13 @@ export function publicPostOnly(nodes, lang) {
         && !node.data.frontmatter.noIndex)
 }
 
+export function publicListablePostOnly(nodes, lang) {
+    return nodes.filter(node => node.data.frontmatter.type === 'post'
+        && node.data.frontmatter.lang === lang
+        && !node.data.frontmatter.private
+        && !node.data.frontmatter.draft)
+}
+
 export function publicNodeOnly(nodes, lang) {
     return nodes.filter(node => node.data.frontmatter.lang === lang
         && !node.data.frontmatter.private

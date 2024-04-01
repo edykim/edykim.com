@@ -4,7 +4,7 @@ import {glob} from 'glob'
 import {createHash} from 'crypto'
 
 import {getTagTree} from './../config/tag.js'
-import {publicPostOnly} from './filters.js'
+import {publicPostOnly, publicListablePostOnly} from './filters.js'
 import {taxRoute} from './tag.js'
 
 export async function templateFactory({ path }) {
@@ -111,7 +111,7 @@ function displayContent(node, nodes) {
     data = parseTemplateTag(data, '<!-- @template posts -->',
         () => templatePosts(publicPostOnly(nodes, node.data.frontmatter.lang)));
     data = parseTemplateTag(data, '<!-- @template tag -->',
-        () => templatePosts(publicPostOnly(node.data.fields.rels, node.data.frontmatter.lang)));
+        () => templatePosts(publicListablePostOnly(node.data.fields.rels, node.data.frontmatter.lang)));
     data = parseTemplateTag(data, '<!-- @template tags -->',
         () => templateTags());
 
