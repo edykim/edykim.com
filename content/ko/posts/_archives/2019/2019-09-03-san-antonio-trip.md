@@ -7,7 +7,7 @@ lang: ko
 slug: san-antonio-trip-2019
 tags:
   - 내 이야기
-  - travel
+  - 여행
   - texas
   - san antonio
 ---

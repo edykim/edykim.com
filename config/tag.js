@@ -88,6 +88,11 @@ const taxonomies = {
           key: `음악`,
           url: `music`,
         },
+        {
+          key: `여행`,
+          url: `travel`,
+          hidden: true,
+        },
       ],
     },
   ],
