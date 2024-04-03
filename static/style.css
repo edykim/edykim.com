@@ -7,7 +7,7 @@
     --color-day-text: #000000;
     --color-night-text: #c7c7dd;
     --color-sepia-text: #3c2b12;
-    --site-padding: 0.75rem;
+    --site-padding: 1rem;
 
     --color-day-shadow: #e4efdb;
     --color-night-shadow: #1c1c51;
@@ -183,6 +183,7 @@ html, body {
 
 .site-header .site-container .site-nav {
     float: left;
+    padding-bottom: 0.75rem;
 }
 
 .site-header .site-container .site-nav a {
