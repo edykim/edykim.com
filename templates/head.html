@@ -25,6 +25,8 @@ ${data.frontmatter.lang != 'ko' ? `
 <meta name="twitter:creator" content="edykim" />
 ` : ''}
 
+${data.frontmatter.ext ? data.frontmatter.ext?.map(extName => template(`_ext/${extName}.html`, data)).join("\n") : ``}
+
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="/style.css" />
 <script src="/script.js"></script>
 
@@ -33,3 +35,4 @@ ${data.frontmatter.lang != 'ko' ? `
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/lisp.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/groovy.min.js"></script>
 <script>hljs.highlightAll();</script>
+
