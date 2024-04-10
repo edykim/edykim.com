@@ -32,9 +32,9 @@
 }
 
 html {
-    font: 16px/1.5 Lato,-apple-system,Helvetica Neue,Arial,Helvetica,Noto Sans
-        KR,Noto Sans CJK KR,Apple SD Gothic Neo,Barun Gothic,Nanum Barun
-        Gothic,Malgun Gothic,맑은 고딕,sans-serif;
+    font: 16px/1.5 Lato,-apple-system,Helvetica Neue,Arial,Helvetica,
+    Apple SD Gothic Neo,Barun Gothic,Nanum Barun Gothic,Malgun Gothic,
+    맑은 고딕,sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -620,5 +620,62 @@ hr {
 
 .mode--sepia .hljs {
     background: #29200f;
+}
+
+.font--noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.font-size-extra-large {
+    font-size: 3rem;
+}
+.font-size-large {
+    font-size: 2rem;
+}
+.font-size-medium {
+    font-size: 1rem;
+}
+.font-size-small {
+    font-size: 0.9rem;
+}
+.font-size-extra-small {
+    font-size: 0.7rem;
+}
+
+.font-weight-100 {
+    font-weight: 100;
+}
+
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.font-weight-900 {
+    font-weight: 900;
 }
 
