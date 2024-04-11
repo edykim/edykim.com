@@ -32,9 +32,9 @@
 }
 
 html {
-    font: 16px/1.5 Lato,-apple-system,Helvetica Neue,Arial,Helvetica,
-    Apple SD Gothic Neo,Barun Gothic,Nanum Barun Gothic,Malgun Gothic,
-    맑은 고딕,Noto Sans KR, Noto Sans CJK KR, sans-serif;
+    font: 16px/1.5 Lato,-apple-system,Helvetica Neue,Arial,Helvetica,Noto Sans
+        KR,Noto Sans CJK KR,Apple SD Gothic Neo,Barun Gothic,Nanum Barun
+        Gothic,Malgun Gothic,맑은 고딕,sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
