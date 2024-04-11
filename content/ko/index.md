@@ -5,11 +5,9 @@ author: haruair
 type: page
 lang: ko
 url: /
-ext:
-  - font-noto-sans-kr
 ---
 
-:::div{.font--noto-sans-kr.font-size-medium.font-weight-800}
+:::div{.font-size-medium.font-weight-800}
 
 이것저것 웹으로 된 것 만들기 좋아하는 용균입니다.
 
