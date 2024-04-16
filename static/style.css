@@ -45,6 +45,7 @@ body {
     font-kerning: normal;
     margin: 0;
     padding: 0;
+    max-width: none;
 }
 
 h1 a {
@@ -112,6 +113,7 @@ html, body {
     line-height: 0;
     margin-right: -5px;
     margin-top: -10px;
+    display: inline-block;
 }
 
 .cog-icon {
@@ -149,6 +151,7 @@ html, body {
 .site-header,
 .site-footer,
 .page {
+    display: block;
     margin: 1rem auto;
 }
 
