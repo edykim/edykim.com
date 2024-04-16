@@ -27,6 +27,7 @@ ${data.frontmatter.lang != 'ko' ? `
 
 ${data.frontmatter.ext ? data.frontmatter.ext?.map(extName => template(`_ext/${extName}.html`, data)).join("\n") : ``}
 
+${template('style.html', data)}
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="/style.css" />
 <script src="/script.js"></script>
 
