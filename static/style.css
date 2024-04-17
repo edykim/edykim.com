@@ -345,6 +345,10 @@ html, body {
     .subnav.opened {
         padding-bottom: 0.1em;
     }
+    .content > blockquote {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .page-footer {
