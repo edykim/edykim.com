@@ -6,6 +6,7 @@ import {createHash} from 'crypto'
 import {getTagTree} from './../config/tag.js'
 import {publicPostOnly, publicListablePostOnly} from './filters.js'
 import {taxRoute} from './tag.js'
+import {latestFirst} from './sort.js'
 
 export async function templateFactory({ path }) {
     const templateFilenames = await glob(`./${path}/**/*.html`);
@@ -40,7 +41,7 @@ export async function templateFactory({ path }) {
 }
 
 function templateList(nodes) {
-    const list = nodes
+    const list = latestFirst(nodes)
         .map(node => `<li>
             <span class="post-item">
                 <span class="post-item--title">
