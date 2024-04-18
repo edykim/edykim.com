@@ -1,22 +1,5 @@
-<dialog id="website-setting">
-    <div class="header">
-        <h1>Website Setting</h1>
-        <button class="close-btn" autofocus>✕</button>
-    </div>
-
-    <p>Select website color</p>
-    <div class="preview"></div>
-
-    <div class="options">
-        <button class="color-select" data-color="day">
-            Day
-        </button>
-        <button class="color-select" data-color="night">
-            Night 
-        </button>
-        <button class="color-select" data-color="sepia">
-            Sepia 
-        </button>
-    </div>
-</dialog>
+${template('website-setting-dialog.html', {
+    title: 'Website Setting',
+    color: 'Select a website color',
+})}
 

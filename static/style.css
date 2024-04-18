@@ -487,7 +487,7 @@ hr {
 }
 
 #website-setting {
-    padding: 1.25rem;
+    padding: 0 1.25rem 1.25rem;
     background-color: #191b1c;
     border: 1px solid #272b2d;
     border-radius: 10px;
@@ -512,100 +512,26 @@ hr {
 }
 
 #website-setting .header {
+    background-color: inherit;
     display: flex;
+    padding-top: 1.25rem;
     justify-content: space-between;
     border-bottom: 1px solid #212528;
     padding-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
 }
 
 #website-setting .options {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
-#website-setting .color-select {
-    appearance: none;
-    background-color: transparent;
-    border: 0;
-    width: 80px;
-    margin: 0.2rem;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    color: #fff;
-}
-
-#website-setting .color-select:before {
-    display: inline-block;
-    content: '';
-    border: 3px solid #000;
-    border-radius: 100%;
-    background-color: #000;
-    width: 12px;
-    height: 12px;
-    margin-right: 0.5rem;
-}
-
-#website-setting .preview {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 1rem auto;
-}
-
-#website-setting .preview:before {
-    content: '';
-    display: inline-block;
-    width: 80%;
-    height: 8px;
-}
-
-#website-setting .preview:after {
-    content: '';
-    display: inline-block;
-    width: 70%;
-    height: 4px;
-    margin-bottom: 10px;
-    box-shadow: 0 10px 0, 0 20px 0;
-}
-
-.mode--day #website-setting .color-select[data-color="day"]:before {
-    background-color: #fff;
-}
-.mode--night #website-setting .color-select[data-color="night"]:before {
-    background-color: #fff;
-}
-.mode--sepia #website-setting .color-select[data-color="sepia"]:before {
-    background-color: #fff;
-}
-
-.mode--day #website-setting .preview {
-    background-color: var(--color-day-background-color);
-}
-.mode--night #website-setting .preview {
-    background-color: var(--color-night-background-color);
-}
-.mode--sepia #website-setting .preview {
-    background-color: var(--color-sepia-background-color);
-}
-
-.mode--day #website-setting .preview:before,
-.mode--day #website-setting .preview:after {
-    background-color: var(--color-day-text);
-    color: var(--color-day-text);
-}
-
-.mode--night #website-setting .preview:before,
-.mode--night #website-setting .preview:after {
-    background-color: var(--color-night-text);
-    color: var(--color-night-text);
-}
-
-.mode--sepia #website-setting .preview:before,
-.mode--sepia #website-setting .preview:after {
-    background-color: var(--color-sepia-text);
-    color: var(--color-sepia-text);
+@media screen and (max-width: 480px) {
+    #website-setting .options {
+        flex-direction: column;
+    }
 }
 
 #website-setting .close-btn {
@@ -619,6 +545,36 @@ hr {
     padding: 1rem;
     margin: -1rem;
     cursor: pointer;
+}
+
+#website-setting .options label {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+#website-setting .color-select:before {
+    content: '▄▄ ▄▄▄';
+    display: block;
+    width: 80px;
+    height: 40px;
+    margin: 0 auto 0.5rem;
+    border-radius: 4px;
+}
+
+#website-setting .color-select-day:before {
+    background-color: var(--color-day-background-color);
+    color: var(--color-day-text);
+}
+
+#website-setting .color-select-night:before {
+    background-color: var(--color-night-background-color);
+    color: var(--color-night-text);
+}
+
+#website-setting .color-select-sepia:before {
+    background-color: var(--color-sepia-background-color);
+    color: var(--color-sepia-text);
 }
 
 .mode--night .hljs {
