@@ -52,5 +52,3 @@ getMappedTags().forEach(tag => {
     CreateFeed(taggedNodes, {path: `/ko/${tag.url}`, name: tag.key}, outputDir);
 });
 
-// SEO: meta tag on template
-
