@@ -1,0 +1,27 @@
+${(({tags}) => {
+    function templateTags() {
+        return `<h2>태그별</h2><ul>${tags.children.map(n => parseTreeNode(n)).join('\n')}</ul>`;
+    }
+
+    function parseTreeNode(t) {
+        let result = '';
+
+        if (t.hidden) {
+            return '';
+        }
+
+        if (t.url) {
+            result += `<a href="/ko/tag/${t.url}/">${t.key}</a>`;
+        } else {
+            result += '<li>';
+            result += `<span class="tag-title">${t.key}</span>: `;
+            result += t.children.map(c => parseTreeNode(c)).join('\n');
+            result += '</li>';
+        }
+
+        return result;
+    }
+
+    return templateTags()
+})(data)}
+

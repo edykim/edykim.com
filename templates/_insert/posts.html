@@ -1,0 +1,39 @@
+${(({nodes}) => {
+    function displayDate(date) {
+        return `${date}`.substr(0, 10)
+    }
+
+    function templateList(nodes) {
+        const list = utils.latestFirst(nodes)
+            .map(node => `<li>
+                <span class="post-item">
+                    <span class="post-item--title">
+                        <a href="/${node.data.fields.url}/">${utils.displayTitle(node.data)}</a>
+                    </span>
+                    <date>${displayDate(node.data.frontmatter.date)}</date> 
+                </span>
+            </li>`).join('\n');
+        return list;
+    }
+
+    function templatePosts(nodes) {
+        const byYears = nodes.reduce((carry, node) => {
+            const year = node.data.frontmatter.date.substr(0, 4);
+            carry[year] = carry[year] || [];
+            carry[year].push(node);
+            return carry;
+        }, {});
+
+        let result = '';
+        const years = Object.keys(byYears).sort().reverse();
+        for(const year of years) {
+            const nodesByYear = byYears[year];
+            result += `<h2>${year}</h2>\n`;
+            result += `<ul class="post-list">${templateList(nodesByYear)}</ul>\n`;
+        }
+        return result;
+    }
+
+    return templatePosts(nodes)
+})(data)}
+
