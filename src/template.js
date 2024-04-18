@@ -17,7 +17,7 @@ export async function templateFactory({ path }) {
             filename, {encoding: 'utf-8'})
     }
 
-    function partial(url, templateName, data) {
+    function partial(url, templateName, data, additional = {}) {
         let urlLookup = '/' + url;
         while (!templateFiles[urlLookup + '/' + templateName]) {
             const _url = urlLookup.split('/');
@@ -32,7 +32,24 @@ export async function templateFactory({ path }) {
         const parent = () => partial(nextUrl, templateName, data);
         const _template = (templateName, data) => partial(url, templateName, data);
 
-        return Function('data', 'parent', 'template', 'return `' + t + '`')(data || {}, parent, _template);
+        return Function(
+            'data',
+            'parent',
+            'template',
+            'moment',
+            'utils',
+            'return `' + t + '`'
+        )(
+            data || {},
+            parent,
+            _template,
+            moment,
+            {
+                displayTitle,
+                taxRoute,
+                ...additional,
+            }
+        );
     }
 
     return (node, nodes) => {
@@ -45,7 +62,7 @@ function templateList(nodes) {
         .map(node => `<li>
             <span class="post-item">
                 <span class="post-item--title">
-                    <a href="/${node.data.fields.url}/">${displayTitle(node)}</a>
+                    <a href="/${node.data.fields.url}/">${displayTitle(node.data)}</a>
                 </span>
                 <date>${displayDate(node.data.frontmatter.date)}</date> 
             </span>
@@ -102,96 +119,34 @@ function parseTreeNode(t) {
     return result;
 }
 
-function displayTitle(node) {
-    return node.data.frontmatter.title;
+function displayTitle(data) {
+    return data.frontmatter.title;
 }
 
-function displayContent(node, nodes) {
-    let data = node.value;
+function createDisplayContent(node, nodes) {
+    return () => {
+        let data = node.value;
 
-    data = parseTemplateTag(data, '<!-- @template posts -->',
-        () => templatePosts(publicPostOnly(nodes, node.data.frontmatter.lang)));
-    data = parseTemplateTag(data, '<!-- @template tag -->',
-        () => templatePosts(publicListablePostOnly(node.data.fields.rels, node.data.frontmatter.lang)));
-    data = parseTemplateTag(data, '<!-- @template tags -->',
-        () => templateTags());
+        data = parseTemplateTag(data, '<!-- @template posts -->',
+            () => templatePosts(publicPostOnly(nodes, node.data.frontmatter.lang)));
+        data = parseTemplateTag(data, '<!-- @template tag -->',
+            () => templatePosts(publicListablePostOnly(node.data.fields.rels, node.data.frontmatter.lang)));
+        data = parseTemplateTag(data, '<!-- @template tags -->',
+            () => templateTags());
 
-    return data;
+        return data;
+    }
 }
 
 function displayDate(date) {
     return `${date}`.substr(0, 10)
 }
 
-function displayPublishedOn({data}) {
-    if (! data.frontmatter.date) {
-        return '';
-    }
-    const d = moment(data.frontmatter.date).format('LLLL');
-    return `<div class="published-on">Published on <date>${d}</date></div>`;
-}
-
-function displayUpdatedOn({data}) {
-    if (! data.frontmatter.updatedOn) {
-        return '';
-    }
-    const d = moment(data.frontmatter.updatedOn).format('LLLL');
-    return `<div class="updated-on">Updated on <date>${d}</date></div>`;
-}
-
-function displayTaxonomy({data}) {
-    if (! data.frontmatter.tags || data.frontmatter.type != 'post') {
-        return '';
-    }
-    
-    const tagUrl = t => `/${
-        data.frontmatter.lang != 'en'
-        ? `${data.frontmatter.lang}/`
-        : ''}tag/${taxRoute(t)}`;
-
-    return `<div class="tags">Tags: ${data.frontmatter.tags.map(tagName => `
-        <a href="${tagUrl(tagName)}">${tagName}</a>
-    `).join(' ')}</div>`;
-}
-
-function displayHeadline({data}) {
-    if (! data.frontmatter.headline) {
-        return '';
-    }
-    return `<div class="headline">${data.frontmatter.headline.join('')}</div>`;
-}
-
 function template(node, nodes, {partial}) {
     const {data, value} = node;
-    const page = `<!doctype html>
-<html lang="${data.frontmatter.lang}" data-hash="%%PAGE_HASH%%">
-<head>
-${partial(data.fields.url, 'head.html', data)}
-</head>
-<body>
-${partial(data.fields.url, 'site-header.html')}
-${partial(data.fields.url, 'header.html')}
-<div class="page">
-    ${data.frontmatter.noTitle
-        ? ''
-        : `<header class="page-header">
-        <h1><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${displayTitle(node)}</a></h1>
-        ${displayHeadline(node)}
-    </header>`}
-
-    <div class="content">${displayContent(node, nodes)}</div>
-
-    <footer class="page-footer">
-        ${displayPublishedOn(node)}
-        ${displayUpdatedOn(node)}
-        ${displayTaxonomy(node)}
-    </footer>
-</div>
-${partial(data.fields.url, 'footer.html', data)}
-${partial(data.fields.url, 'site-footer.html')}
-</body>
-</html>
-`;
+    const page = partial(data.fields.url, 'index.html', data, {
+        displayContent: createDisplayContent(node, nodes)
+    });
     return page.replace(
         "%%PAGE_HASH%%",
         createHash('sha256').update(page).digest('hex')
