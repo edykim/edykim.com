@@ -1,0 +1,16 @@
+${
+! data.frontmatter.tags || data.frontmatter.type != 'post'
+? ''
+: (() => {
+    const tagUrl = t => `/${
+        data.frontmatter.lang != 'en'
+        ? `${data.frontmatter.lang}/`
+        : ''}tag/${utils.taxRoute(t)}`;
+
+    return `<div class="tags">Tags: ${data.frontmatter.tags.map(tagName => `
+        <a href="${tagUrl(tagName)}">${tagName}</a>
+    `).join(' ')}</div>`;
+
+  })()
+}
+
