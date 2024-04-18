@@ -7,12 +7,10 @@ const taxonomies = {
         {
           key: `미국 사는 이야기`,
           url: `life-in-us`,
-          featured: true,
         },
         {
           key: `멜번 사는 이야기`,
           url: `life-in-australia`,
-          featured: true,
         },
         {
           key: `제주 사는 이야기`,
@@ -35,17 +33,14 @@ const taxonomies = {
         {
           key: `개발 이야기`,
           url: `dev-life`,
-          featured: true,
         },
         {
           key: `개발 잡동사니`,
           url: `it`,
-          featured: true,
         },
         {
           key: `번역`,
           url: `translations`,
-          featured: true,
         },
         {
           key: `리눅스`,
@@ -67,22 +62,18 @@ const taxonomies = {
         {
           key: `책`,
           url: `book`,
-          featured: true,
         },
         {
           key: `리뷰`,
           url: `review`,
-          featured: true,
         },
         {
           key: `요리 레시피`,
           url: `recipe`,
-          featured: true,
         },
         {
           key: `사진`,
           url: `photography`,
-          featured: true,
         },
         {
           key: `음악`,
