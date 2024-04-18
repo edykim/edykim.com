@@ -26,14 +26,14 @@ tags:
 
 함수형 프로그래밍에서는 다음 같은 데이터 타입으로 묘사할 수 있다.
 
-```haskell
+```hs
 type Shape = Squre of side
            | Circle of radius
 ```
 
 그리고 크기를 구하는 area 함수를 다음처럼 하나 작성할 수 있다:
 
-```haskell
+```hs
 define area = fun x -> case x of
   Squre of side => (side * side)
 | Circle of radius => (3.14 * radius * radius)
