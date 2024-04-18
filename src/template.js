@@ -66,13 +66,13 @@ function parseTemplateTag(data, identifier, producer) {
     return data;
 }
 
-function createDisplayContent(node, nodes, {_template}) {
+function createDisplayContent(node, nodes, {partial}) {
     return () => {
         let data = node.value;
 
         data = components.reduce((carry, component) => {
             carry = parseTemplateTag(carry, `<!-- @template ${component.key} -->`,
-                () => _template(
+                () => partial(
                     node.data.fields.url,
                     component.template,
                     component.props(node, nodes)
@@ -87,7 +87,7 @@ function createDisplayContent(node, nodes, {_template}) {
 function template(node, nodes, {partial}) {
     const {data, value} = node;
     const page = partial(data.fields.url, 'index.html', data, {
-        displayContent: createDisplayContent(node, nodes, {_template: partial})
+        displayContent: createDisplayContent(node, nodes, {partial})
     });
     return page.replace(
         "%%PAGE_HASH%%",
