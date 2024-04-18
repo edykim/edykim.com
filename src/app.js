@@ -41,7 +41,7 @@ CreateSitemap(publicNodeOnly(nodes, 'en'), '/sitemap', outputDir);
 
 // rss
 const CreateFeed = createFeed(config.feed);
-const feedNodes = publicPostOnly(nodes, 'ko');
+const feedNodes = latestFirst(publicPostOnly(nodes, 'ko'));
 CreateFeed(feedNodes, {path: '/ko'}, outputDir);
 
 getMappedTags().forEach(tag => {
