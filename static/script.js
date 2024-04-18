@@ -108,11 +108,17 @@ window.onload = () => {
         .addEventListener('click', () => {
             modal.close();
         });
-    document.querySelectorAll('#website-setting .color-select')
-        .forEach(ele => ele
-            .addEventListener('click', (e) => {
-                setMode(e.target.dataset.color);
-            }));
+    document.querySelectorAll('#website-setting .color-select input')
+        .forEach(ele => {
+            if (ele.value === getCurrentMode()) {
+                ele.setAttribute('checked', true);
+            }
+            ele.addEventListener('click', (e) => {
+                if (e.target.checked) {
+                    setMode(e.target.value);
+                }
+            })
+        });
 
     document.querySelector('.setting-btn')
         .addEventListener('click', () => {
