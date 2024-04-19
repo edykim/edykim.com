@@ -15,7 +15,7 @@ function getCurrentMode() {
         window.matchMedia
         && window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
-        return 'night';
+        return 'dark';
     }
 
     return 'day';
@@ -42,7 +42,7 @@ function createModeToggle() {
 
 setMode(getCurrentMode());
 
-const darkThemeNames = ['night'];
+const darkThemeNames = ['night', 'dark'];
 const darkGiscusThemeName = 'dark_dimmed';
 const lightGiscusThemeName = 'light';
 
