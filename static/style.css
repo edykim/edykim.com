@@ -614,12 +614,17 @@ hr {
 }
 
 #website-setting .color-select:before {
-    content: '▄▄ ▄▄▄';
+    content: '▄▄ ▄▄▄\A_____ㅤ__';
+    white-space: pre-wrap;
     display: block;
-    width: 80px;
-    height: 40px;
+    width: 75px;
+    height: 52px;
     margin: 0 auto 0.5rem;
     border-radius: 4px;
+    font-size: 0.9rem;
+    letter-spacing: -0.1rem;
+    padding: 5px 10px;
+    text-align: left;
 }
 
 #website-setting .color-select-day:before {
