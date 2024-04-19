@@ -206,12 +206,11 @@ a:link { color: var(--color-link); }
 a:visited { color: var(--color-link-visited); }
 a:active { color: var(--color-link-active); }
 
-.mode--night {
-    scrollbar-color: var(--color-text) var(--color-background-color);
-}
-
-.mode--sepia {
-    scrollbar-color: var(--color-text) var(--color-background-color);
+.mode--night,
+.mode--sepia,
+.mode--tumblr,
+.mode--dark {
+    scrollbar-color: var(--color-text) var(--color-shadow);
 }
 
 .site-header,
