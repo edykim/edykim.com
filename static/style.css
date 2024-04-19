@@ -42,9 +42,18 @@
     --color-dark-link-visited: #f190ff;
     --color-dark-link-active: #ffa290;
 
+
+    --color-tumblr-background-color: #1a2735;
+    --color-tumblr-text: #bfbfbf;
+    --color-tumblr-shadow: #3d4c62;
+    --color-tumblr-gray: #858a8e;
+    --color-tumblr-border: #303b47;
+    --color-tumblr-code-background-color: #19222c;
+    --color-tumblr-link: #529ecc;
+    --color-tumblr-link-visited: #bfb3ff;
+    --color-tumblr-link-active: #6a52cc;
+
     --site-padding: 1rem;
-
-
 }
 
 @media screen and (max-width: 460px) {
@@ -140,6 +149,18 @@ li {
     --color-link: var(--color-dark-link);
     --color-link-visited: var(--color-dark-link-visited);
     --color-link-active: var(--color-dark-link-active);
+}
+
+.mode--tumblr {
+    --color-background-color: var(--color-tumblr-background-color);
+    --color-text: var(--color-tumblr-text);
+    --color-gray: var(--color-tumblr-gray);
+    --color-border: var(--color-tumblr-border);
+    --color-shadow: var(--color-tumblr-shadow);
+    --color-code-background-color: var(--color-tumblr-code-background-color);
+    --color-link: var(--color-tumblr-link);
+    --color-link-visited: var(--color-tumblr-link-visited);
+    --color-link-active: var(--color-tumblr-link-active);
 }
 
 html {
@@ -620,6 +641,11 @@ hr {
 #website-setting .color-select-dark:before {
     background-color: var(--color-dark-background-color);
     color: var(--color-dark-text);
+}
+
+#website-setting .color-select-tumblr:before {
+    background-color: var(--color-tumblr-background-color);
+    color: var(--color-tumblr-text);
 }
 
 html .hljs {

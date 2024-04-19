@@ -42,7 +42,7 @@ function createModeToggle() {
 
 setMode(getCurrentMode());
 
-const darkThemeNames = ['night', 'dark'];
+const darkThemeNames = ['night', 'dark', 'tumblr'];
 const darkGiscusThemeName = 'dark_dimmed';
 const lightGiscusThemeName = 'light';
 
