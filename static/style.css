@@ -683,3 +683,12 @@ html .hljs {
     font-weight: 900;
 }
 
+.darkreader-warning {
+    display: none;
+}
+
+[data-darkreader-scheme="dark"] .darkreader-warning {
+    display: block;
+    margin-bottom: 0;
+}
+
