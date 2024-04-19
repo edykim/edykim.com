@@ -526,12 +526,7 @@ hr {
     display: flex;
     justify-content: center;
     flex-direction: row;
-}
-
-@media screen and (max-width: 480px) {
-    #website-setting .options {
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
 }
 
 #website-setting .close-btn {
