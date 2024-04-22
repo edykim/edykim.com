@@ -86,7 +86,7 @@ function createDisplayContent(node, nodes, {partial}) {
 
 function template(node, nodes, {partial}) {
     const {data, value} = node;
-    const page = partial(data.fields.url, 'index.html', data, {
+    const page = partial(data.fields.url, data.frontmatter.template ?? 'index.html', data, {
         displayContent: createDisplayContent(node, nodes, {partial})
     });
     return page.replace(
