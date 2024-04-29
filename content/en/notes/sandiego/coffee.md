@@ -3,7 +3,7 @@ title: Coffee
 author: haruair
 type: page 
 date: "2024-03-04T18:22:43"
-updatedOn: "2024-03-06T15:27:33"
+updatedOn: "2024-04-28T22:10:42"
 lang: en 
 url: sandiego/coffee
 ---
@@ -43,6 +43,11 @@ This is just the beginning! I will put our coffee list soon!
 - craving randomly
   - 85C Bakery Cafe: sea salt coffee with pastry
   - Starbucks: yep just starbucks
+
+## San Diego Airport
+
+- Dark Horse Coffee Roasters: Terminal 1 Gates 3-10, all days, best airport
+  coffee you can imagine. Food options are good too.
 
 ## Plan to visit
 
