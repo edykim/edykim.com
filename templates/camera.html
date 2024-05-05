@@ -1,46 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script>
-    window.onload = function () {
-      navigator.mediaDevices
-        .getUserMedia({ video: true, audio: false })
-        .then((stream) => {
-          const video = document.querySelector('video');
-          video.srcObject = stream;
-          video.onloadedmetadata = function (e) {
-            video.play();
-          };
+<title>간이카메라 (Draft)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const config = {
+    video: {
+      frameRate: { ideal: 16, max: 16 },
+      facingMode: 'environment'
+    },
+    audio: false,
+  };
+  navigator.mediaDevices
+    .getUserMedia(config)
+    .then((stream) => {
+      const video = document.querySelector('video');
+      video.srcObject = stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
 
-        })
-        .catch((err) => {
-          /* handle the error */
-          document.querySelector('#msg').textContent = "ERROR : " + e.message
-        });
-    }
-  </script>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    })
+    .catch((err) => {
+    });
+  document.querySelector("#shutter-btn").addEventListener("click", () => {
+    const video = document.querySelector("video");
+    const canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 
-    textarea {
-      width: 100%;
-      height: 300px;
-    }
+    const context = canvas.getContext("2d");
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const data = canvas.toDataURL("image/png");
 
-    video {
-      background: #f1f1f1;
-      width: 400px;
-      height: 300px;
-    }
-  </style>
+    const img = document.createElement("img");
+    document.querySelector("body").appendChild(img);
+    img.setAttribute("src", data);
+
+    img.addEventListener("click", () => {
+      img.remove();
+    });
+  });
+});
+</script>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #333333;
+  }
+
+  video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 2;
+  }
+  .buttons {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+  }
+  #shutter-btn {
+    appearance: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+</style>
 </head>
 
 <body>
-  <textarea id="msg"></textarea>
-  <!-- muted and playsinline are required for iOS -->
   <video autoplay muted playsinline></video>
+  <div class="buttons"><button id="shutter-btn" aria-label="셔터 버튼"></button></div>
 </body>
 </html>
