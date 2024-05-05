@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    window.onload = function () {
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: false })
+        .then((stream) => {
+          const video = document.querySelector('video');
+          video.srcObject = stream;
+          video.onloadedmetadata = function (e) {
+            video.play();
+          };
+
+        })
+        .catch((err) => {
+          /* handle the error */
+          document.querySelector('#msg').textContent = "ERROR : " + e.message
+        });
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      height: 300px;
+    }
+
+    video {
+      background: #f1f1f1;
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="msg"></textarea>
+  <video autoplay></video>
+</body>
+</html>
