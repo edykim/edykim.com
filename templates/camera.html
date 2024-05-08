@@ -5,26 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>
 window.addEventListener('DOMContentLoaded', () => {
-  const config = {
-    video: {
-      frameRate: { ideal: 16, max: 16 },
-      facingMode: 'environment'
-    },
-    audio: false,
-  };
-  navigator.mediaDevices
-    .getUserMedia(config)
-    .then((stream) => {
-      const video = document.querySelector('video');
-      video.srcObject = stream;
-      video.onloadedmetadata = function (e) {
-        video.play();
-      };
+  function setupCamera(mode = null) {
+    const config = {
+      video: {
+        width: { ideal: 4096 },
+        height: { ideal: 3032 },
+        frameRate: { ideal: 30, max: 30 },
+        facingMode: mode ? mode : 'environment'
+      },
+      audio: false,
+    };
+    navigator.mediaDevices
+      .getUserMedia(config)
+      .then((stream) => {
+        const video = document.querySelector('video');
+        video.srcObject = stream;
+        video.onloadedmetadata = function (e) {
+          video.play();
+        };
+      })
+      .catch((err) => {
+      });
+  }
 
-    })
-    .catch((err) => {
+  setupCamera();
+
+  const preview = document.querySelector(".preview");
+
+  let currentMode = null;
+  const facingModeBtn = document.querySelector("#facing-mode-btn");
+  facingModeBtn.addEventListener("click", () => {
+    if (currentMode) {
+      currentMode = null
+      facingModeBtn.textContent = "BACK";
+    } else {
+      currentMode = "user"
+      facingModeBtn.textContent = "FRONT";
+    }
+    setupCamera(currentMode)
+  })
+
+  const timerBtn = document.querySelector("#timer-btn");
+
+  let timeDelay = 0;
+
+  timerBtn.addEventListener("click", () => {
+    if (timeDelay === 0) {
+      timeDelay = 2;
+      timerBtn.textContent = "2s";
+    } else if (timeDelay === 2) {
+      timeDelay = 5;
+      timerBtn.textContent = "5s";
+    } else if (timeDelay === 5) {
+      timeDelay = 10;
+      timerBtn.textContent = "10s";
+    } else {
+      timeDelay = 0;
+      timerBtn.textContent = "0s";
+    }
+  })
+
+  document.querySelector("#share-btn").addEventListener("click", async () => {
+    const url = document.querySelector("img").getAttribute("src");
+    const byteCharacters = atob(url.split(',')[1]);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray], { type: "image/jpeg "});
+    const file = new File(
+      [blob],
+      `${new Date().toISOString().replace(/[^0-9]/gi, '')}.jpg`,
+      {
+        type: "image/jpeg",
+      });
+
+    await navigator.share({
+      files: [file],
     });
+  });
+
   document.querySelector("#shutter-btn").addEventListener("click", () => {
+    setTimeout(() => takePicture(), 80 + timeDelay * 1000);
+  });
+
+  function takePicture() {
     const video = document.querySelector("video");
     const canvas = document.createElement("canvas");
     canvas.width = video.videoWidth;
@@ -33,16 +99,32 @@ window.addEventListener('DOMContentLoaded', () => {
     const context = canvas.getContext("2d");
     context.fillRect(0, 0, canvas.width, canvas.height);
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const data = canvas.toDataURL("image/png");
+    let data = canvas.toDataURL("image/jpeg", 0.8);
+    for (let i = 0; i < 5; i++) {
+      if (data !== 'data:,') {
+        break;
+      }
+      context.drawImage(video, 0, 0, canvas.width/2, canvas.height);
+      data = canvas.toDataURL("image/jpeg", 0.8);
+    }
+    if (data === 'data:,') {
+        alert("Something went wrong. Please refresh the webpage.");
+        return;
+    }
 
     const img = document.createElement("img");
-    document.querySelector("body").appendChild(img);
+    preview.appendChild(img);
     img.setAttribute("src", data);
+
+    img.style.aspectRatio = canvas.width / canvas.height;
+
+    preview.style.display = "flex";
 
     img.addEventListener("click", () => {
       img.remove();
+      preview.style.display = "none";
     });
-  });
+  }
 });
 </script>
 
@@ -62,11 +144,7 @@ window.addEventListener('DOMContentLoaded', () => {
     height: 100%;
   }
   img {
-    position: fixed;
     width: 100%;
-    height: 100%;
-    inset: 0;
-    z-index: 2;
   }
   .buttons {
       position: fixed;
@@ -75,22 +153,43 @@ window.addEventListener('DOMContentLoaded', () => {
       bottom: 0;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       padding: 30px;
   }
-  #shutter-btn {
+  .btn {
     appearance: none;
+    color: inherit;
     width: 80px;
     height: 80px;
     border-radius: 100%;
     border: 10px;
     background-color: rgba(255, 255, 255, 0.7);
   }
+  .preview {
+    display: none;
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    background: #222222;
+    flex-direction: column;
+  }
 </style>
 </head>
 
 <body>
   <video autoplay muted playsinline></video>
-  <div class="buttons"><button id="shutter-btn" aria-label="셔터 버튼"></button></div>
+  <div class="buttons">
+    <button class="btn" id="facing-mode-btn">BACK</button>
+    <button class="btn" id="shutter-btn" aria-label="셔터 버튼"></button>
+    <button class="btn" id="timer-btn">0s</button>
+  </div>
+  <div class="preview">
+    <div class="buttons">
+      <button class="btn" id="share-btn">Share</button>
+    </div>
+  </div>
 </body>
 </html>
