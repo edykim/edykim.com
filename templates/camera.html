@@ -89,14 +89,14 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   };
 
-  makeToggle(
-    "#ratio-btn",
-    Object.keys(aspectConstraints),
-    (name) => {
-      aspectConstraints[name]();
-      setupCamera();
-    }
-  )
+  // makeToggle(
+  //   "#ratio-btn",
+  //   Object.keys(aspectConstraints),
+  //   (name) => {
+  //     aspectConstraints[name]();
+  //     setupCamera();
+  //   }
+  // )
 
   let mode = null;
   makeToggle(
@@ -373,7 +373,7 @@ window.addEventListener('DOMContentLoaded', () => {
   <div id="countdown"></div>
   <video autoplay muted playsinline></video>
   <div class="buttons top-buttons">
-    <button class="btn" id="ratio-btn">sq</button>
+    <!-- <button class="btn" id="ratio-btn">sq</button> -->
     <button class="btn" id="mode-btn">1x1</button>
   </div>
   <div class="buttons">
