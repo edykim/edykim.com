@@ -86,7 +86,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  let retry = 0;
   document.querySelector("#shutter-btn").addEventListener("click", () => {
+    retry = 0;
     setTimeout(() => takePicture(), 80 + timeDelay * 1000);
   });
 
@@ -99,17 +101,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const context = canvas.getContext("2d");
     context.fillRect(0, 0, canvas.width, canvas.height);
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    let data = canvas.toDataURL("image/jpeg", 0.8);
-    for (let i = 0; i < 5; i++) {
-      if (data !== 'data:,') {
-        break;
-      }
-      context.drawImage(video, 0, 0, canvas.width/2, canvas.height);
-      data = canvas.toDataURL("image/jpeg", 0.8);
-    }
+    const data = canvas.toDataURL("image/jpeg", 0.8);
+
     if (data === 'data:,') {
-        alert("Something went wrong. Please refresh the webpage.");
+      if (retry > 10) {
+        alert("Something went wrong. Please refresh the page.");
         return;
+      }
+
+      retry += 1;
+      setTimeout(() => takePicture(), 10);
+      return;
     }
 
     const img = document.createElement("img");
