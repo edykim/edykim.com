@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
     const data = canvas.toDataURL("image/jpeg", 0.8);
 
-    if (data === 'data:,') {
+    if (ctx.getImageData(0, 0, 1, 1).data[3] === 0) {
       if (retry > 10) {
         alert("Something went wrong. Please refresh the page.");
         return;
