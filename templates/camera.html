@@ -254,7 +254,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (done) {
       done = false;
-      showPreview();
+      setTimeout(() => showPreview(), 100);
     } else {
       setTimeout(() => takePicture(), 500);
     }
