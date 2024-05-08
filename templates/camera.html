@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const blob = new Blob([byteArray], { type: "image/jpeg "});
     const file = new File(
       [blob],
-      `${new Date().toISOString().replace(/[^0-9]/gi, '')}.jpg`,
+      new Date().toISOString().replace(/[^0-9]/gi, '') + '.jpg',
       {
         type: "image/jpeg",
       });
