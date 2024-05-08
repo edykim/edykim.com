@@ -173,16 +173,28 @@ window.addEventListener('DOMContentLoaded', () => {
   let done = false;
 
   function initCanvas() {
+    let width = 0;
+    let height = 0;
     if (mode === '4x1') {
-      canvas.width = video.videoWidth * 4;
-      canvas.height = video.videoHeight;
+      width = video.videoWidth * 4;
+      height = video.videoHeight;
     } else if (mode === '1x4') {
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight * 4;
+      width = video.videoWidth;
+      height = video.videoHeight * 4;
     } else {
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
+      width = video.videoWidth;
+      height = video.videoHeight;
     }
+
+    const maxSize = 4096;
+
+    if (Math.max(width, height) > maxSize) {
+      const aspectRatio = width / height;
+      width =  width > height ? maxSize : maxSize * aspectRatio;
+      height = width < height ? maxSize : maxSize / aspectRatio;
+    }
+    canvas.width = width;
+    canvas.height = height;
     context.clearRect(0, 0, canvas.width, canvas.height);
     order = 0;
   }
