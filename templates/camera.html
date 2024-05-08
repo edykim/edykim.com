@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>
 window.addEventListener('DOMContentLoaded', () => {
-  function setupCamera(mode = null) {
-    const config = {
+  let config = {
       video: {
         width: { ideal: 4096 },
         height: { ideal: 3032 },
         frameRate: { ideal: 30, max: 30 },
-        facingMode: mode ? mode : 'environment'
+        facingMode: 'environment'
       },
       audio: false,
     };
+
+  function setupCamera(mode = null) {
     navigator.mediaDevices
       .getUserMedia(config)
       .then((stream) => {
@@ -35,35 +36,92 @@ window.addEventListener('DOMContentLoaded', () => {
   let currentMode = null;
   const facingModeBtn = document.querySelector("#facing-mode-btn");
   facingModeBtn.addEventListener("click", () => {
-    if (currentMode) {
-      currentMode = null
-      facingModeBtn.textContent = "BACK";
+    if (currentMode === 'user') {
+      currentMode = null;
+      config.video.facingMode = 'environment';
+      facingModeBtn.textContent = 'BACK';
     } else {
-      currentMode = "user"
-      facingModeBtn.textContent = "FRONT";
+      currentMode = 'user';
+      config.video.facingMode = 'user';
+      facingModeBtn.textContent = 'FRONT';
     }
-    setupCamera(currentMode)
+    setupCamera()
   })
 
-  const timerBtn = document.querySelector("#timer-btn");
+  function makeToggle(eleName, modeNames, callback) {
+    const ele = document.querySelector(eleName);
+    const setIdx = (idx) => ele.dataset.idx = idx;
+    const idx = () => parseInt(ele.dataset.idx);
+    setIdx(0);
+
+    function updateMenuName() {
+      ele.textContent = modeNames[idx()];
+    }
+
+    ele.addEventListener("click", () => {
+      if (idx() + 1 == modeNames.length) {
+        setIdx(0);
+      } else {
+        setIdx(idx() + 1);
+      }
+
+      callback && callback(modeNames[idx()]);
+      updateMenuName();
+    })
+
+    callback && callback(modeNames[idx()]);
+    updateMenuName();
+  }
+
+
+  const aspectConstraints = {
+    "square": () => {
+      config.video.width.ideal = 4096;
+      config.video.height.ideal = 4096;
+    },
+    "portrait": () => {
+      config.video.width.ideal = 3032;
+      config.video.height.ideal = 4096;
+    },
+    "landscape": () => {
+      config.video.width.ideal = 4096;
+      config.video.height.ideal = 3032;
+    },
+  };
+
+  makeToggle(
+    "#ratio-btn",
+    Object.keys(aspectConstraints),
+    (name) => {
+      aspectConstraints[name]();
+      setupCamera();
+    }
+  )
+
+  let mode = null;
+  makeToggle(
+    "#mode-btn",
+    ["1x1", "2x2", "4x1", "1x4"],
+    (name) => {
+      mode = name;
+    }
+  )
 
   let timeDelay = 0;
+  const timerConstraints = {
+    "TIMER": 0,
+    "2s": 2,
+    "5s": 5,
+    "10s": 10,
+  };
 
-  timerBtn.addEventListener("click", () => {
-    if (timeDelay === 0) {
-      timeDelay = 2;
-      timerBtn.textContent = "2s";
-    } else if (timeDelay === 2) {
-      timeDelay = 5;
-      timerBtn.textContent = "5s";
-    } else if (timeDelay === 5) {
-      timeDelay = 10;
-      timerBtn.textContent = "10s";
-    } else {
-      timeDelay = 0;
-      timerBtn.textContent = "0s";
+  makeToggle(
+    "#timer-btn",
+    Object.keys(timerConstraints),
+    (name) => {
+      timeDelay = timerConstraints[name];
     }
-  })
+  )
 
   document.querySelector("#share-btn").addEventListener("click", async () => {
     const url = document.querySelector("img").getAttribute("src");
@@ -73,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
       byteNumbers[i] = byteCharacters.charCodeAt(i);
     }
     const byteArray = new Uint8Array(byteNumbers);
-    const blob = new Blob([byteArray], { type: "image/jpeg "});
+    const blob = new Blob([byteArray], { type: "image/jpeg"});
     const file = new File(
       [blob],
       new Date().toISOString().replace(/[^0-9]/gi, '') + '.jpg',
@@ -86,39 +144,124 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const countdown = document.querySelector("#countdown");
   let retry = 0;
   document.querySelector("#shutter-btn").addEventListener("click", () => {
     retry = 0;
+    if (timeDelay > 0) {
+      let count = null;
+      count = setInterval(() => {
+        let remain = parseInt(countdown.textContent);
+        if (remain == 1) {
+          countdown.style.display = "none";
+          clearInterval(count);
+        } else {
+          countdown.textContent = remain - 1;
+        }
+      }, 1000);
+      countdown.textContent = timeDelay;
+      countdown.style.display = "flex";
+    }
+    initCanvas();
     setTimeout(() => takePicture(), 80 + timeDelay * 1000);
   });
 
-  function takePicture() {
-    const video = document.querySelector("video");
-    const canvas = document.createElement("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
+  const canvas = document.createElement("canvas");
+  const video = document.querySelector("video");
+  const context = canvas.getContext("2d");
+  let order = 0;
+  let done = false;
 
-    const context = canvas.getContext("2d");
+  function initCanvas() {
+    if (mode === '4x1') {
+      canvas.width = video.videoWidth * 4;
+      canvas.height = video.videoHeight;
+    } else if (mode === '1x4') {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight * 4;
+    } else {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+    }
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    order = 0;
+  }
+  
+  function template() {
+    if (mode === '1x1') {
+      done = true;
+      return {x: 0, y: 0, width: canvas.width, height: canvas.height};
+    } else if (mode === '2x2') {
+      const width = canvas.width / 2;
+      const height = canvas.height / 2;
+      if (order === 0) {
+        order += 1;
+        return {x: 0, y: 0, width, height};
+      } else if (order === 1) {
+        order += 1;
+        return {x: width, y: 0, width, height};
+      } else if (order === 2) {
+        order += 1;
+        return {x: 0, y: height, width, height};
+      } else if (order === 3) {
+        order += 1;
+        done = true;
+        return {x: width, y: height, width, height};
+      }
+    } else if (mode === '4x1') {
+      const width = canvas.width / 4;
+      const height = canvas.height;
+      if (order === 3) done = true;
+      order += 1;
+      return {x: width * (order - 1), y: 0, width, height};
+    } else if (mode === '1x4') {
+      const width = canvas.width;
+      const height = canvas.height / 4;
+      if (order === 3) done = true;
+      order += 1;
+      return {x: 0, y: height * (order - 1), width, height};
+    }
+  }
 
-    if (context.getImageData(0, 0, 1, 1)?.data[3] === 0) {
+  function takePicture() {
+    const {x, y, width, height} = template();
+    console.log({x, y, width, height});
+    context.drawImage(video, x, y, width, height);
+
+    if (context.getImageData(x, y, 1, 1)?.data[3] === 0) {
       if (retry > 10) {
         alert("Something went wrong. Please refresh the page.");
         return;
       }
 
       retry += 1;
+      order -= 1;
       setTimeout(() => takePicture(), 10);
       return;
     }
 
+    if (done) {
+      done = false;
+      showPreview();
+    } else {
+      setTimeout(() => takePicture(), 500);
+    }
+  }
+
+  function showPreview() {
     const data = canvas.toDataURL("image/jpeg", 0.8);
     const img = document.createElement("img");
     preview.appendChild(img);
     img.setAttribute("src", data);
 
     img.style.aspectRatio = canvas.width / canvas.height;
+    if (canvas.width < canvas.height) {
+      img.style.width = "auto";
+      img.style.height = "100%";
+    } else {
+      img.style.width = "100%";
+      img.style.height = "auto";
+    }
 
     preview.style.display = "flex";
 
@@ -131,7 +274,13 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style>
+  html {
+    font: 16px/1.5 -apple-system,Helvetica Neue,Arial,Helvetica,Noto Sans
+        KR,Noto Sans CJK KR,Apple SD Gothic Neo,Barun Gothic,Nanum Barun
+        Gothic,Malgun Gothic,맑은 고딕,sans-serif;
+  }
   * {
+    font-family: inherit;
     box-sizing: border-box;
   }
 
@@ -147,6 +296,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   img {
     width: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
   .buttons {
       position: fixed;
@@ -155,8 +306,12 @@ window.addEventListener('DOMContentLoaded', () => {
       bottom: 0;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
       padding: 30px;
+  }
+  .top-buttons {
+    bottom: auto;
+    top: 0;
   }
   .btn {
     appearance: none;
@@ -178,15 +333,41 @@ window.addEventListener('DOMContentLoaded', () => {
     background: #222222;
     flex-direction: column;
   }
+  #countdown {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #queue {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 </style>
 </head>
 
 <body>
+  <div id="countdown"></div>
   <video autoplay muted playsinline></video>
+  <div class="buttons top-buttons">
+    <button class="btn" id="ratio-btn">sq</button>
+    <button class="btn" id="mode-btn">1x1</button>
+  </div>
   <div class="buttons">
     <button class="btn" id="facing-mode-btn">BACK</button>
     <button class="btn" id="shutter-btn" aria-label="셔터 버튼"></button>
-    <button class="btn" id="timer-btn">0s</button>
+    <button class="btn" id="timer-btn">TIMER</button>
   </div>
   <div class="preview">
     <div class="buttons">
