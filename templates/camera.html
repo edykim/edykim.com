@@ -101,7 +101,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const data = canvas.toDataURL("image/jpeg", 0.8);
 
     if (context.getImageData(0, 0, 1, 1)?.data[3] === 0) {
       if (retry > 10) {
@@ -114,6 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const data = canvas.toDataURL("image/jpeg", 0.8);
     const img = document.createElement("img");
     preview.appendChild(img);
     img.setAttribute("src", data);
