@@ -7,4 +7,5 @@ yarn-error.log
 /public
 .DS_Store
 /packages/*/public
+/*.pem
 
