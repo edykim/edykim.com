@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<title>Simple clock</title>
+<style>
+html {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+#datetime {
+    padding: 20px;
+}
+#date-text {
+    font-size: 70px;
+    font-weight: bold;
+}
+#hms-text {
+    font-size: 170px;
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+}
+#ampm-text {
+    font-size: 50px;
+}
+#setup-btn {
+    font-size: 60px;
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+#daybar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+.day {
+    flex: 1;
+    text-align: center;
+    padding: 2rem 0;
+}
+.day.active {
+    background: #333;
+    border-radius: 10px;
+    font-weight: bold;
+}
+</style>
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector("#setup-btn").addEventListener("click", async () => {
+            document.documentElement.requestFullscreen();
+            try {
+                await navigator.wakeLock.request("screen");
+            } catch (err) {
+                alert(err.message);
+            }
+            document.querySelector("#setup-btn").remove();
+        });
+
+        function showDatetime() {
+            const datetime = new Date();
+            const date = datetime.toDateString();
+            const timeLoc = datetime.toLocaleTimeString();
+            const [time, ampm] = timeLoc.split(' ');
+            const [h,m,s] = time.split(':');
+
+            document.querySelector("#date-text").textContent = date;
+            document.querySelector("#hms-text").textContent = h + ":" + m;
+            document.querySelector("#ampm-text").textContent = ampm;
+            if (
+                document.querySelector("#daybar .active")?.dataset.day == datetime.getDay()
+            ) {
+                // do nothing
+            } else {
+                document.querySelector("#daybar .active")?.classList.remove("active");
+                document.querySelector("#daybar .day[data-day='" + datetime.getDay() + "']")?.classList.add("active");
+            }
+        }
+
+        setInterval(showDatetime, 100);
+        showDatetime();
+    });
+</script>
+</head>
+<body>
+    <button id="setup-btn">Fullscreen & wake lock</button>
+    <div id="datetime">
+        <div id="date-text"></div>
+        <div id="time-text">
+            <span id="hms-text"></span>
+            <span id="ampm-text"></span>
+        </div>
+    </div>
+    <div id="daybar">
+        <div class="day" data-day="0">Sun</div>
+        <div class="day" data-day="1">Mon</div>
+        <div class="day" data-day="2">Tue</div>
+        <div class="day" data-day="3">Wed</div>
+        <div class="day" data-day="4">Thu</div>
+        <div class="day" data-day="5">Fri</div>
+        <div class="day" data-day="6">Sat</div>
+    </div>
+</body>
+</html>
