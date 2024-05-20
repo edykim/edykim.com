@@ -29,14 +29,45 @@ html {
     width: 100%;
     height: 80px;
 }
-#daybar {
-    display: flex;
+.bottom-area {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+#daybar {
+    display: flex;
     padding: 10px;
 }
+
+#progressbar {
+    background: #333;
+    height: 24px;
+    margin: 5px 30px;
+    border-radius: 30px;
+}
+.progress {
+    display: block;
+    border-radius: 30px;
+    width: 100px;
+    background: #344425;
+    height: inherit;
+    position: fixed;
+}
+.progress:after {
+    content: "";
+    display: block;
+    height: inherit;
+    max-width: 50px;
+    min-width: 10px;
+    width: 100%;
+    background: #80d600;
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+}
+
 .day {
     flex: 1;
     text-align: center;
@@ -67,9 +98,16 @@ html {
             const [time, ampm] = timeLoc.split(' ');
             const [h,m,s] = time.split(':');
 
+            const progress = Math.min((datetime.getHours() + parseInt(m) / 60 + parseInt(s) / 3600 - 6) / 16 * 100, 100);
+
             document.querySelector("#date-text").textContent = date;
             document.querySelector("#hms-text").textContent = h + ":" + m;
             document.querySelector("#ampm-text").textContent = ampm;
+
+            if (document.querySelector(".progress").style.width !== progress + '%') {
+                document.querySelector(".progress").style.width = progress + "%";
+            }
+
             if (
                 document.querySelector("#daybar .active")?.dataset.day == datetime.getDay()
             ) {
@@ -94,14 +132,19 @@ html {
             <span id="ampm-text"></span>
         </div>
     </div>
-    <div id="daybar">
-        <div class="day" data-day="0">Sun</div>
-        <div class="day" data-day="1">Mon</div>
-        <div class="day" data-day="2">Tue</div>
-        <div class="day" data-day="3">Wed</div>
-        <div class="day" data-day="4">Thu</div>
-        <div class="day" data-day="5">Fri</div>
-        <div class="day" data-day="6">Sat</div>
+    <div class="bottom-area">
+        <div id="progressbar">
+            <span class="progress"></span>
+        </div>
+        <div id="daybar">
+            <div class="day" data-day="0">Sun</div>
+            <div class="day" data-day="1">Mon</div>
+            <div class="day" data-day="2">Tue</div>
+            <div class="day" data-day="3">Wed</div>
+            <div class="day" data-day="4">Thu</div>
+            <div class="day" data-day="5">Fri</div>
+            <div class="day" data-day="6">Sat</div>
+        </div>
     </div>
 </body>
 </html>
