@@ -78,6 +78,26 @@ html {
     border-radius: 10px;
     font-weight: bold;
 }
+#weatherbar {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    font-size: 16px;
+    flex-flow: wrap;
+}
+
+#weatherbar .weather-t {
+    font-size: 60px;
+    margin: 10px 0;
+    font-weight: 100;
+}
+#weatherbar .weather-name,
+#weatherbar .weather-desc {
+    color: #ccc;
+}
 </style>
 <script>
     window.addEventListener("load", () => {
@@ -91,6 +111,7 @@ html {
             document.querySelector("#setup-btn").remove();
         });
 
+        let weatherTimer = null;
         function showDatetime() {
             const datetime = new Date();
             const date = datetime.toDateString();
@@ -116,10 +137,47 @@ html {
                 document.querySelector("#daybar .active")?.classList.remove("active");
                 document.querySelector("#daybar .day[data-day='" + datetime.getDay() + "']")?.classList.add("active");
             }
+
+            if (datetime.getMinutes() === 0 && datetime.getSeconds() === 0) {
+                clearTimeout(weatherTimer);
+                weatherTimer = setTimeout(weather, 2000);
+            }
         }
 
         setInterval(showDatetime, 100);
         showDatetime();
+
+        async function weather() {
+            const res = await fetch("https://api.weather.gov/gridpoints/SGX/55,22/forecast");
+            const data = await res.json();
+            const $weather = document.querySelector("#weatherbar");
+            $weather.textContent = "";
+
+            data.properties.periods
+                .filter(p => !p.name.includes(" Night"))
+                .slice(0, 6)
+                .forEach(p => {
+                    const div = document.createElement("div");
+                    div.classList.add("weather");
+                    const name = document.createElement("div");
+                    name.classList.add("weather-name");
+                    name.textContent = p.name;
+                    const temperature = document.createElement("div");
+                    temperature.classList.add("weather-t");
+                    temperature.textContent = p.temperature + "°";
+                    const desc = document.createElement("div");
+                    desc.classList.add("weather-desc");
+                    desc.textContent = p.shortForecast;
+
+                    div.appendChild(name);
+                    div.appendChild(temperature);
+                    div.appendChild(desc);
+                    $weather.appendChild(div);
+                });
+        }
+
+        weather();
+        window.weather = weather;
     });
 </script>
 </head>
@@ -133,6 +191,8 @@ html {
         </div>
     </div>
     <div class="bottom-area">
+        <div id="weatherbar">
+        </div>
         <div id="progressbar">
             <span class="progress"></span>
         </div>
