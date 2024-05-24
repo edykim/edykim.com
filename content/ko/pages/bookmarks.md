@@ -34,7 +34,6 @@ noIndex: true
 - [제이크서 위키 블로그](https://jake-seo-dev.tistory.com/)
 - [raccoony's cave](https://blog.raccoony.dev/)
 - [권혜정을 권해](https://kwonejeong.tistory.com/)
-- [Lucas wiki](https://wiki.lucashan.space/)
 
 :::
 
