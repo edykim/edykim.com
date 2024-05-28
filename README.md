@@ -36,3 +36,11 @@ Still, the template can use a parent template based on hierarchy using
 - Reusable components can be defined in `./config/components.js`. These
   components will replace any `<!-- @template <key> -->` strings in the content.
 
+## local
+
+Create a self-signed ssl key and then use serve.
+```bash
+$ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes \
+        -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
+$ npx serve --ssl-cert cert.pem --ssl-key key.pem -l 443 public
+```
