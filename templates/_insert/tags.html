@@ -1,6 +1,6 @@
 ${(({tags}) => {
     function templateTags() {
-        return `<h2>태그별</h2><ul>${tags.children.map(n => parseTreeNode(n)).join('\n')}</ul>`;
+        return `<h2>태그별</h2><ul class="flat-list">${tags.children.map(n => parseTreeNode(n)).join('\n')}</ul>`;
     }
 
     function parseTreeNode(t) {
@@ -11,11 +11,11 @@ ${(({tags}) => {
         }
 
         if (t.url) {
-            result += `<a href="/ko/tag/${t.url}/">${t.key}</a>`;
+            result += `<li><a href="/ko/tag/${t.url}/">${t.key}</a></li>`;
         } else {
             result += '<li>';
-            result += `<span class="tag-title">${t.key}</span>: `;
-            result += t.children.map(c => parseTreeNode(c)).join('\n');
+            result += `<span class="tag-title">${t.key}</span>`;
+            result += '<ul>' + t.children.map(c => parseTreeNode(c)).join('\n') + '</ul>';
             result += '</li>';
         }
 

@@ -1,0 +1,29 @@
+<div class="page">
+    ${data.frontmatter.noTitle
+        ? ''
+        : `<header class="page-header">
+        <h1><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a></h1>
+
+        ${data.frontmatter.headline ? `<div class="headline">
+            ${data.frontmatter.headline.join('')}
+        </div>` : ''}
+    </header>`}
+
+    ${data.fields.raw
+        ? utils.displayContent()
+        : `<div class="content">${utils.displayContent()}</div>`}
+
+    <footer class="page-footer">
+        ${template('date.html', {
+            label: 'Published on',
+            date: data.frontmatter.date,
+        })}
+        ${template('date.html', {
+            label: 'Updated on',
+            date: data.frontmatter.updatedOn,
+        })}
+
+        ${template('taxonomy.html', data)}
+    </footer>
+</div>
+

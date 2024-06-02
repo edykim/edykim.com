@@ -3,7 +3,6 @@ import fs from 'fs'
 import {glob} from 'glob'
 import {createHash} from 'crypto'
 
-import components from '../config/components.js'
 import utils from './template/utils.js'
 
 const externalDeps = {
@@ -31,8 +30,9 @@ export async function templateFactory({ path }) {
         }
         const t = templateFiles[urlLookup + '/' + templateName] || '';
         const nextUrl = urlLookup.slice(0, urlLookup.lastIndexOf('/'));
-        const parent = () => partial(nextUrl, templateName, data);
-        const _template = (templateName, data) => partial(url, templateName, data);
+        const parent = () => partial(nextUrl, templateName, data, additional);
+        const _template = (templateName, data, _additional = {}) =>
+                partial(url, templateName, data, {...additional, ..._additional});
 
         return Function(
             'data',
@@ -55,39 +55,15 @@ export async function templateFactory({ path }) {
     }
 
     return (node, nodes) => {
-        return template(node, nodes, {partial});
+        return template(node, nodes, {partial, utils});
     }
 }
 
-function parseTemplateTag(data, identifier, producer) {
-    if (data.indexOf(identifier) !== -1) {
-        data = data.replace(identifier, producer());
-    }
-    return data;
-}
-
-function createDisplayContent(node, nodes, {partial}) {
-    return () => {
-        let data = node.value;
-
-        data = components.reduce((carry, component) => {
-            carry = parseTemplateTag(carry, `<!-- @template ${component.key} -->`,
-                () => partial(
-                    node.data.fields.url,
-                    component.template,
-                    component.props(node, nodes)
-                ));
-            return carry;
-        }, data);
-
-        return data;
-    }
-}
 
 function template(node, nodes, {partial}) {
     const {data, value} = node;
     const page = partial(data.fields.url, data.frontmatter.template ?? 'index.html', data, {
-        displayContent: createDisplayContent(node, nodes, {partial})
+        displayContent: utils.createDisplayContent(node, nodes, {partial})
     });
     return page.replace(
         "%%PAGE_HASH%%",

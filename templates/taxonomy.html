@@ -7,8 +7,8 @@ ${
         ? `${data.frontmatter.lang}/`
         : ''}tag/${utils.taxRoute(t)}`;
 
-    return `<div class="tags">Tags: ${data.frontmatter.tags.map(tagName => `
-        <a href="${tagUrl(tagName)}">${tagName}</a>
+    return `<div class="tags">${data.frontmatter.tags.map(tagName => `
+        <a href="${tagUrl(tagName)}" aria-label="tag: ${tagName}">${tagName}</a>
     `).join(' ')}</div>`;
 
   })()
