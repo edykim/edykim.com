@@ -39,6 +39,13 @@ const components = [
             node,
         })
     },
+    {
+        key: 'searchbar',
+        template: '_insert/searchbar.html',
+        props: (node, nodes) => ({
+            node,
+        })
+    },
 ];
 
 export default components;
