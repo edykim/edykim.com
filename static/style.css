@@ -419,6 +419,10 @@ a:active { color: var(--color-link-active); }
     margin-bottom: 2rem;
 }
 
+.list-page .page:first-child {
+    margin-top: 0;
+}
+
 .list-page .page + .page .page-header:before {
     margin-top: 8rem;
 }
