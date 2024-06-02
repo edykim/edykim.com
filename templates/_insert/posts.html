@@ -1,39 +1,50 @@
-${(({nodes}) => {
+<div class="list-page">
+
+    <div class="list-section">
+${((nodes, node) => {
+    function templatePagination({data}) {
+        return `
+        <div class="pagination">
+            <div class="status">${data.fields.current + 1}/${data.fields.total} ${data.frontmatter.lang == 'ko' ? '페이지' : 'Pages'}</div>
+            <div class="tag-nav">
+                ${data.fields.olderUrl !== null ? `<a href="/${data.fields.olderUrl}">${data.frontmatter.lang == 'ko' ? '이전 포스트' : 'Older Posts'}</a>` : ''}
+                ${data.fields.newerUrl !== null ? `<a href="/${data.fields.newerUrl}">${data.frontmatter.lang == 'ko' ? '최근 포스트' : 'Newer Posts'}</a>` : ''}
+            </div>
+        </div>
+        `
+    }
+
     function displayDate(date) {
         return `${date}`.substr(0, 10)
     }
 
     function templateList(nodes) {
         const list = utils.latestFirst(nodes)
-            .map(node => `<li>
-                <span class="post-item">
-                    <span class="post-item--title">
-                        <a href="/${node.data.fields.url}/">${utils.displayTitle(node.data)}</a>
-                    </span>
-                    <date>${displayDate(node.data.frontmatter.date)}</date> 
-                </span>
-            </li>`).join('\n');
+        .map(node => template('post.html', node.data, {
+            displayContent: utils.createDisplayContent(node, nodes, {partial: template})
+            })).join('\n');
         return list;
     }
 
     function templatePosts(nodes) {
-        const byYears = nodes.reduce((carry, node) => {
-            const year = node.data.frontmatter.date.substr(0, 4);
-            carry[year] = carry[year] || [];
-            carry[year].push(node);
-            return carry;
-        }, {});
-
-        let result = '';
-        const years = Object.keys(byYears).sort().reverse();
-        for(const year of years) {
-            const nodesByYear = byYears[year];
-            result += `<h2>${year}</h2>\n`;
-            result += `<ul class="post-list">${templateList(nodesByYear)}</ul>\n`;
-        }
-        return result;
+        return `<div class="post-list">${templateList(nodes)}</div>\n`;
     }
 
-    return templatePosts(nodes)
-})(data)}
+    const page = templatePagination(node);
+    return templatePosts(nodes) + page;
+
+})(data.nodes, data.node)}
+    </div>
+    <div class="list-aside">
+        <aside class="profile">
+            <!-- @template profile -->
+        </aside>
+        <aside class="tag-list">
+            <!-- @template tags -->
+        </aside>
+        <aside class="archive-list">
+            <!-- @template years -->
+        </aside>
+    </div>
+</div>
 

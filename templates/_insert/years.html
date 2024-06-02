@@ -1,0 +1,9 @@
+<h2>연도별</h2>
+<ul class="flat-list">
+${(({data: {fields}}) => {
+    const {years} = fields;
+    return years.map(year => {
+        return `<li><a href="/${year.link}">${year.label}</a> (${year.count})</li>`
+    }).join('\n');
+})(data.node)}
+</ul>

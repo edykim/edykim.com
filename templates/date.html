@@ -1,6 +1,6 @@
 ${data.date
 ? `<div class="${data.label?.toLowerCase().replace(/\ /gi, '-')}">
-    ${data.label} <date>${moment(data.date).format('LLLL')}</date>
+    ${data.label} <date>${moment(data.date).format('LL')}</date>
 </div>`
 : ''}
 

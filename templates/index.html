@@ -6,32 +6,7 @@ ${template('head.html', data)}
 <body>
 ${template('site-header.html')}
 ${template('header.html')}
-<div class="page">
-    ${data.frontmatter.noTitle
-        ? ''
-        : `<header class="page-header">
-        <h1><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a></h1>
-
-        ${data.frontmatter.headline ? `<div class="headline">
-            ${data.frontmatter.headline.join('')}
-        </div>` : ''}
-    </header>`}
-
-    <div class="content">${utils.displayContent()}</div>
-
-    <footer class="page-footer">
-        ${template('date.html', {
-            label: 'Published on',
-            date: data.frontmatter.date,
-        })}
-        ${template('date.html', {
-            label: 'Updated on',
-            date: data.frontmatter.updatedOn,
-        })}
-
-        ${template('taxonomy.html', data)}
-    </footer>
-</div>
+${template('post.html', data)}
 ${template('footer.html', data)}
 ${template('site-footer.html')}
 </body>
