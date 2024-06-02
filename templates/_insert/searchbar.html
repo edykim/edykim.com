@@ -1,0 +1,13 @@
+<h2>사이트 내 검색</h2>
+<form id="google-search" action="https://google.com/search" method="get" target="_blank">
+    <input type="text" class="search-text" placeholder="구글 제공" />
+    <input type="hidden" class="search-query" name="q" />
+    <button>검색</button>
+</form>
+<script>
+document.querySelector("#google-search").addEventListener("submit", (e) => {
+    e.target.querySelector(".search-query").value =
+        'site:edykim.com ' + e.target.querySelector(".search-text").value
+});
+</script>
+
