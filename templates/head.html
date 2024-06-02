@@ -14,9 +14,11 @@ ${data.frontmatter.redirect
     : ''}<meta name="og:title" content="${data.frontmatter.title}" />
 <meta name="twitter:title" content="${data.frontmatter.title}" />
 
+${data.fields.excerpt ? `
 <meta name="description" content="${data.fields.excerpt}" />
 <meta name="og:description" content="${data.fields.excerpt}" />
 <meta name="twitter:description" content="${data.fields.excerpt}" />
+` : ''}
 
 <meta name="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
