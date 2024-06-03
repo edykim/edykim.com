@@ -502,6 +502,8 @@ a:active { color: var(--color-link-active); }
         margin-top: var(--site-padding);
     }
     .site-footer {
+        margin-top: 1rem;
+        padding-top: 1rem;
         margin-bottom: var(--site-padding);
     }
     .page-header {
@@ -519,6 +521,9 @@ a:active { color: var(--color-link-active); }
     .content > blockquote {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    .list-page .page + .page .page-header:before {
+        margin-top: 5rem;
     }
 }
 
