@@ -2,6 +2,7 @@ import {copyImages} from './image.js'
 import {loadNodesFromGlob, createPages, setupStatic} from './file.js'
 import {createRedirects} from './redirect.js'
 import {publicOnly, publicNodeOnly, publicPostOnly, hasTag} from './filters.js'
+import {postNeighborFriendly} from './meta.js'
 import {fetchTaxonomies} from './tag.js'
 import {templateFactory} from './template.js'
 import {createSitemap} from './sitemap.js'
@@ -16,7 +17,9 @@ const {outputDir, staticDir, contentGlob} = config;
 // setup with static as init
 setupStatic(staticDir, outputDir);
 
-const nodes = latestFirst( publicOnly( await loadNodesFromGlob(contentGlob) ) );
+const nodes = postNeighborFriendly(
+    latestFirst( publicOnly( await loadNodesFromGlob(contentGlob) ) ));
+
 const template = await templateFactory(config.template);
 const CreatePages = createPages({nodes, template});
 

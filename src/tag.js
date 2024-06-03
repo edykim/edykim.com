@@ -1,4 +1,5 @@
 import chunk from 'lodash.chunk'
+import {latestFirst} from './sort.js'
 import {getMappedTags} from './../config/tag.js'
 
 const POST_PER_PAGE = 10;
@@ -66,7 +67,7 @@ export function fetchTaxonomies(nodes, lang) {
 
     Array.from(collection.keys()).forEach(tag => {
         const posts = collection.get(tag);
-        const chunked = chunk(posts, POST_PER_PAGE);
+        const chunked = chunk(latestFirst(posts), POST_PER_PAGE);
         const totalPage = chunked.length;
 
         const urlBase = tag === 'posts'
