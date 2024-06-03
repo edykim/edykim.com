@@ -1,6 +1,7 @@
 :root {
     --max-layout-width: 80rem;
     --max-width: 47.5rem;
+    --max-width-wide: 52.5rem;
     --max-width-narrow: 44.5rem;
 
     --color-day-background-color: #f8f8f2;
@@ -363,6 +364,7 @@ a:active { color: var(--color-link-active); }
 .page-footer,
 .content > *,
 .list-aside,
+.neighbor-links,
 .comments {
     margin-left: auto;
     margin-right: auto;
@@ -370,6 +372,7 @@ a:active { color: var(--color-link-active); }
     padding-left: var(--site-padding);
     padding-right: var(--site-padding);
 }
+
 
 .content > ul:not([class]),
 .content > ol:not([class]) {
@@ -671,6 +674,50 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+
+.neighbor-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width-wide);
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.neighbor-links a {
+    display: inline-block;
+    padding-top: 1rem;
+    border-top: 5px solid var(--color-border);
+    max-width: 18rem;
+    letter-spacing: -0.01rem;
+    text-decoration: none;
+}
+
+.neighbor-links a + a {
+    text-align: right;
+}
+
+.neighbor-links a span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 790px) {
+    .neighbor-links {
+        display: block;
+    }
+    .neighbor-links a {
+        display: block;
+        max-width: none;
+    }
+    .neighbor-links a + a {
+        text-align: left;
+        margin-top: 1rem;
+    }
+}
+
 
 hr {
     color: var(--color-border);
