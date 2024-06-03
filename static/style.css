@@ -525,6 +525,10 @@ a:active { color: var(--color-link-active); }
     .list-page .page + .page .page-header:before {
         margin-top: 5rem;
     }
+
+    hr {
+        max-width: var(--max-width-narrow);
+    }
 }
 
 .page-footer {
@@ -669,7 +673,11 @@ footer {
 }
 
 hr {
-    border-color: var(--color-border);
+    color: var(--color-border);
+    border: 0;
+    border-top: 5px solid;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 ::backdrop {
