@@ -488,6 +488,10 @@ a:active { color: var(--color-link-active); }
         text-align: right;
         justify-self: end;
     }
+
+    .neighbor-links {
+        width: var(--max-width-wide);
+    }
 }
 
 .flat-list {
@@ -678,7 +682,6 @@ footer {
 .neighbor-links {
     display: flex;
     justify-content: space-between;
-    max-width: var(--max-width-wide);
     margin-top: 6rem;
     margin-bottom: 4rem;
 }
