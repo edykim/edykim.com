@@ -490,7 +490,7 @@ a:active { color: var(--color-link-active); }
     }
 
     .neighbor-links {
-        width: var(--max-width-wide);
+        max-width: var(--max-width-wide);
     }
 }
 
