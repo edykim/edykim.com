@@ -666,6 +666,15 @@ footer {
     margin: 5rem 0;
     text-align: center;
 }
+.pagination .status {
+    padding: 0.5rem 0;
+}
+.pagination a {
+    padding: 1rem 2rem;
+    display: inline-block;
+    background: var(--color-border);
+    text-decoration: none;
+}
 
 @media screen and (min-width: 81rem) {
     .pagination {
