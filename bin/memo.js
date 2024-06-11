@@ -5,8 +5,12 @@ const now = new Date().toISOString().split(".")[0];
 const date = now.substr(0, 10);
 const possible = findFileName(date);
 
-const script = process.argv.findIndex(p => p.endsWith('memo.js'));
-const body = process.argv.splice(script+1).join(' ');
+let body = await getStdin();
+
+if (body.length == 0) {
+    const script = process.argv.findIndex(p => p.endsWith('memo.js'));
+    body = process.argv.splice(script+1).join(' ');
+}
 
 if (body.length == 0) {
     console.log("> what you want to memo it?");
@@ -23,6 +27,8 @@ tags:
   - 부스러기
 noIndex: true
 ---
+
+${chunk(body, 80).join('\n')}
 
 `
 const filepath = `${path}/${possible}.md`;
@@ -44,5 +50,48 @@ function findFileName(date) {
             return name;
         }
     }
+}
+
+function getStdin(timeout = 10) {
+  return new Promise((resolve, reject) => {
+    let buffer = '';
+    process.stdin.on('data', (d) => (buffer += d.toString()))
+    const t = setTimeout(() => {
+      process.stdin.destroy()
+      resolve('')
+    }, timeout)
+    process.stdin.on('end', () => {
+      clearTimeout(t)
+      resolve(buffer.trim())
+    })
+    process.stdin.on('error', reject)
+  })
+}
+
+function chunk(str, length) {
+    return str.split('\n').map(s => chunkLine(s, length).join('\n'));
+}
+
+function chunkLine(str, length) {
+    const words = str.split(' ');
+    const result = [];
+    let currentLine = '';
+
+    words.forEach(word => {
+        if ((currentLine + word).length <= length) {
+            currentLine += (currentLine.length ? ' ' : '') + word;
+        } else {
+            if (currentLine.length) {
+                result.push(currentLine);
+            }
+            currentLine = word;
+        }
+    });
+
+    if (currentLine.length) {
+        result.push(currentLine);
+    }
+
+    return result;
 }
 
