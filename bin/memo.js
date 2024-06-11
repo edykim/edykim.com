@@ -78,7 +78,7 @@ function chunkLine(str, length) {
     let currentLine = '';
 
     words.forEach(word => {
-        if ((currentLine + word).length < length) {
+        if (len(currentLine + word) < length) {
             currentLine += (currentLine.length ? ' ' : '') + word;
         } else {
             if (currentLine.length) {
@@ -93,5 +93,13 @@ function chunkLine(str, length) {
     }
 
     return result;
+}
+
+function len(str) {
+    let len = 0;
+    for (let i = 0; i < str.length; i++) {
+        len += str.charCodeAt(i) >= 1024 ? 2 : 1;
+    }
+    return len;
 }
 
