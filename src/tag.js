@@ -50,7 +50,14 @@ export function fetchTaxonomies(nodes, lang) {
             years[year]++;
         }
 
-        insertIntoTag('posts', node);
+        if (node.data.frontmatter.noIndex) {
+            // if the node should not be indexed,
+            // skip it from the main list page...
+            // and still appear on each tag page
+        }
+        else {
+            insertIntoTag('posts', node);
+        }
     }
 
     const pages = [];
