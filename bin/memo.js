@@ -78,7 +78,7 @@ function chunkLine(str, length) {
     let currentLine = '';
 
     words.forEach(word => {
-        if ((currentLine + word).length <= length) {
+        if ((currentLine + word).length < length) {
             currentLine += (currentLine.length ? ' ' : '') + word;
         } else {
             if (currentLine.length) {
