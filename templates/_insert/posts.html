@@ -19,10 +19,9 @@ ${((nodes, node) => {
     }
 
     function templateList(nodes) {
-        const list = utils.latestFirst(nodes)
-        .map(node => template('post.html', node.data, {
+        const list = nodes.map(node => template('post.html', node.data, {
             displayContent: utils.createDisplayContent(node, nodes, {partial: template})
-            })).join('\n');
+        })).join('\n');
         return list;
     }
 
