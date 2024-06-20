@@ -464,7 +464,7 @@ a:active { color: var(--color-link-active); }
 
     .list-page .page {
         display: grid;
-        grid-template-columns: 260px 1fr;
+        grid-template-columns: 260px 760px;
         grid-template-rows: auto;
         grid-template-areas: ". header"
             "sidebar content";
@@ -665,6 +665,8 @@ footer {
 .pagination {
     margin: 5rem 0;
     text-align: center;
+    padding-left: var(--site-padding);
+    padding-right: var(--site-padding);
 }
 .pagination .status {
     padding: 0.5rem 0;
