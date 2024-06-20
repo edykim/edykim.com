@@ -13,7 +13,7 @@ export function createFeed(config) {
                  xmlns:content="http://purl.org/rss/1.0/modules/content/"
                  xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
                 <channel>
-                    <title><![CDATA[${config.title}: ${name}]]></title>
+                    <title><![CDATA[${config.title}${name ? `: ${name}` : ""}]]></title>
                     <description><![CDATA[${config.desc}]]></description>
                     <link>${config.baseUrl}</link>
                     <generator>edykim.com</generator>
