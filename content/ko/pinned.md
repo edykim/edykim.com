@@ -7,7 +7,6 @@ lang: ko
 slug: 2024-06-19
 tags:
   - 블로그
-  - 고정글
 pinned: true
 ---
 
