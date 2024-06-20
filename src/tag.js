@@ -28,6 +28,12 @@ export function fetchTaxonomies(nodes, lang) {
         col.push(node);
         collection.set(tag, col);
     }
+    const prependIntoTag = (tag, node) => {
+        const col = collection.get(tag) || [];
+        col.unshift(node);
+        collection.set(tag, col);
+    }
+    const pinned = [];
 
     let years = {};
     for (const node of nodes) {
@@ -50,12 +56,13 @@ export function fetchTaxonomies(nodes, lang) {
             years[year]++;
         }
 
-        if (node.data.frontmatter.noIndex) {
+        if (node.data.frontmatter.pinned) {
+            pinned.push(node);
+        } else if (node.data.frontmatter.noIndex) {
             // if the node should not be indexed,
             // skip it from the main list page...
             // and still appear on each tag page
-        }
-        else {
+        } else {
             insertIntoTag('posts', node);
         }
     }
@@ -74,7 +81,11 @@ export function fetchTaxonomies(nodes, lang) {
 
     Array.from(collection.keys()).forEach(tag => {
         const posts = collection.get(tag);
-        const chunked = chunk(latestFirst(posts), POST_PER_PAGE);
+        let prechunk = latestFirst(posts);
+        if (tag === "posts") {
+            prechunk = [...latestFirst(pinned), ...prechunk];
+        }
+        const chunked = chunk(prechunk, POST_PER_PAGE);
         const totalPage = chunked.length;
 
         const urlBase = tag === 'posts'

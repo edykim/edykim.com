@@ -84,6 +84,16 @@ const taxonomies = {
           url: `travel`,
           hidden: true,
         },
+        {
+          key: `블로그`,
+          url: `blog`,
+          hidden: true,
+        },
+        {
+          key: `고정글`,
+          url: `pinned`,
+          hidden: true,
+        },
       ],
     },
   ],
