@@ -35,6 +35,8 @@ noIndex: true
 - [raccoony's cave](https://blog.raccoony.dev/)
 - [권혜정을 권해](https://kwonejeong.tistory.com/)
 - [Jayoung](https://jayoung.blog/)
+- [박성범 Simon Park](https://parksb.github.io/articles.html)
+- [Pseudorandom Things](https://pseudorandomstring.wordpress.com/)
 
 :::
 
