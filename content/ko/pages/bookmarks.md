@@ -37,6 +37,7 @@ noIndex: true
 - [Jayoung](https://jayoung.blog/)
 - [박성범 Simon Park](https://parksb.github.io/articles.html)
 - [Pseudorandom Things](https://pseudorandomstring.wordpress.com/)
+- [juneyr.dev 테크 블로그](https://juneyr.dev/)
 
 :::
 
