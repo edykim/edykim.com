@@ -144,13 +144,14 @@ window.onload = () => {
 
             const ul = el.querySelector('ul');
             const links = el.querySelectorAll('a');
-            links.forEach(l => {
-                l.setAttribute('target', '_blank');
-                if (Math.random() < 0.5) {
-                    ul.append(document.createTextNode(' '));
-                    ul.append(l.parentNode);
-                }
-            });
+            // // TODO: disable random order for now..
+            // links.forEach(l => {
+            //     l.setAttribute('target', '_blank');
+            //     if (Math.random() < 0.5) {
+            //         ul.append(document.createTextNode(' '));
+            //         ul.append(l.parentNode);
+            //     }
+            // });
             button.addEventListener('click', () => {
                 const idx = Math.floor(Math.random() * links.length);
                 links[idx]?.click();
