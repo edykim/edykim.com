@@ -3,12 +3,15 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
+updatedOn: "2024-07-28T21:57:23"
 lang: ko
 url: bookmarks 
 noIndex: true
 ---
 
-## 블로그롤
+## 자주 보는 웹페이지
+
+좋아하는 글이 자주(또는 가끔) 올라와서 내적친밀감이 쌓인 곳.
 
 :::div{.with-random-button}
 
@@ -38,6 +41,11 @@ noIndex: true
 - [박성범 Simon Park](https://parksb.github.io/articles.html)
 - [Pseudorandom Things](https://pseudorandomstring.wordpress.com/)
 - [juneyr.dev 테크 블로그](https://juneyr.dev/)
+- [by minieetea](https://minieetea.com/)
+- [Pluu Developer Blog](https://pluu.github.io/)
+- [요창님 블로그](https://medium.com/@totuworld)
+- [ASH84](https://ash84.io/)
+- [민소네](https://minsone.github.io/)
 
 :::
 
@@ -45,6 +53,7 @@ noIndex: true
 
 :::div{.with-random-button}
 
+- [민음사TV](https://www.youtube.com/@minumsaTV)
 - [월간 윤종신](https://yoonjongshin.com/)
 - [디에디트](https://the-edit.co.kr/)
 - [starla's trash can](https://starlakim.wordpress.com/)
@@ -56,6 +65,8 @@ noIndex: true
 
 ## 이것저것 상점
 
+사야지와 샀지 사이
+
 :::div{.with-random-button}
 
 - [흑심 BLACKHEART](https://blackheart.kr/)
@@ -65,5 +76,7 @@ noIndex: true
 - [OMOI](https://omoionline.com/)
 - [Crumpler](https://www.crumpler.com/)
 - [Topo Designs](https://topodesigns.com/)
+- [tomtoc](https://www.tomtoc.com/)
 
 :::
+
