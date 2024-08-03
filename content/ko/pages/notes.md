@@ -11,6 +11,10 @@ url: notes
 - [즐겨찾기](/ko/bookmarks/)
 - [방명록](/ko/guestbook/)
 
+## 샌디에고
+
+- [샌디에고 커피](/ko/sd/coffee/)
+
 ## 다시 볼 것들
 
 - [지침서](/ko/guidance)
