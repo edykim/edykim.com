@@ -46,6 +46,7 @@ noIndex: true
 - [요창님 블로그](https://medium.com/@totuworld)
 - [ASH84](https://ash84.io/)
 - [민소네](https://minsone.github.io/)
+- [이형주 블로그](https://www.hyungjoo.me/)
 
 :::
 
