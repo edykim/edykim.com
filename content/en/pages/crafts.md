@@ -7,6 +7,11 @@ lang: en
 
 ---
 
+## PWA Apps
+
+- [Notes](https://notes-pwa.edykim.com/): a small prototype app for note taking. Offline support.
+- [PDF Viewer](https://pdf-viewer.edykim.com/): pdf.js based PDF viewer with OPFS. Offline support.
+
 ## Visual Timer
 
 [Visual Timer by Yong](https://apps.apple.com/app/id1458639178) provides an awesome graphical indicator for
