@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2024-07-28T21:57:23"
+updatedOn: "2024-09-11T21:08:24"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -78,6 +78,7 @@ noIndex: true
 - [Crumpler](https://www.crumpler.com/)
 - [Topo Designs](https://topodesigns.com/)
 - [tomtoc](https://www.tomtoc.com/)
+- [WAKA-WAKA](https://wakawaka.world/) 가구
 
 :::
 
