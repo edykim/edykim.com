@@ -1,0 +1,28 @@
+<meta charset="utf-8" />
+${data.frontmatter.lang != 'ko' ? `
+<title>${data.frontmatter.metaTitle
+    ? data.frontmatter.metaTitle
+    : data.frontmatter.title} - edykim</title>
+<link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/>
+` : ''}
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+${data.frontmatter.noIndex ? '<meta name="robots" content="noindex" />' : ''}
+${data.frontmatter.redirect
+    ? `<meta name="refresh" http-equiv="refresh" content="0;url=${data.frontmatter.redirect}" />`
+    : ''}<meta name="og:title" content="${data.frontmatter.title}" />
+<meta name="twitter:title" content="${data.frontmatter.title}" />
+
+${data.fields.excerpt ? `
+<meta name="description" content="${data.fields.excerpt}" />
+<meta name="og:description" content="${data.fields.excerpt}" />
+<meta name="twitter:description" content="${data.fields.excerpt}" />
+` : ''}
+
+<meta name="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+
+${data.frontmatter.lang != 'ko' ? `
+<meta name="twitter:creator" content="edykim" />
+` : ''}
