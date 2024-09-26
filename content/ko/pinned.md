@@ -13,7 +13,7 @@ pinned: true
 이런저런 글을 올리는 공간입니다.
 
 - [RSS 피드](/ko/feed.xml)
-- 사는 이야기: [미국 사는 이야기](/ko/tag/life-in-us/), [멜번 사는 이야기](/ko/tag/life-in-australia/)
+- 사는 이야기: [미국 사는 이야기](/ko/tag/life-in-us/), [멜번 사는 이야기](/ko/tag/life-in-australia/),
 [내 이야기](/ko/tag/my-stories/), [부스러기](/ko/tag/memo/)
 - 개발 이것저것:  [개발 이야기](/ko/tag/dev-life/), [개발 잡동사니](/ko/tag/it/),
 [번역](/ko/tag/translations/), [리눅스](/ko/tag/linux/), 
