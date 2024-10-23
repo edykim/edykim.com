@@ -1,3 +1,14 @@
+${data.frontmatter.type === "post" ? `
+    <div class="neighbor-links">
+        ${data.fields.prev ? `<a href="/${data.fields.prev.url}"><span>이전 글</span> ${data.fields.prev.title}</a>` : ''}
+        ${data.fields.next ? `<a href="/${data.fields.next.url}"><span>다음 글</span> ${data.fields.next.title}</a>` : ''}
+    </div>
+` : ''}
+
+${(data.frontmatter.type === "post"
+  || data.frontmatter.hasComment)
+  ? `<div class="comments"></div>` : ''}
+
 <footer class="site-footer">
     <div class="site-container">
         <nav>
