@@ -190,6 +190,7 @@ html {
     background-color: transparent;
     cursor: pointer;
     display: inline-block;
+    line-height: inherit;
 }
 
 .cog-icon {
