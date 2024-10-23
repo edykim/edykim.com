@@ -395,7 +395,7 @@ a:active { color: var(--color-link-active); }
 
 .page-header {
     margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .list-page .page-header h1 {
