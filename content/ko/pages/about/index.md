@@ -20,5 +20,5 @@ url: about
 
 - [@edykim.bsky.social](https://bsky.app/profile/edykim.bsky.social)
 - [LinkedIn](https://linkedin.com/in/edwardykim/)
-- [트위터 @haruair](https://twitter.com/haruair/)
-- [메시지 남기기](https://forms.gle/VET6pUuCvMBfxE219)
+- [(구) 트위터 @haruair](https://twitter.com/haruair/)
+
