@@ -183,16 +183,12 @@ html {
 }
 
 .setting-btn {
+    appearance: none;
+    font-size: inherit;
     color: inherit;
     border: 0;
     background-color: transparent;
-    float: right;
     cursor: pointer;
-    margin: 0;
-    padding: 10px;
-    line-height: 0;
-    margin-right: -5px;
-    margin-top: -10px;
     display: inline-block;
 }
 
@@ -239,6 +235,10 @@ a:active { color: var(--color-link-active); }
     margin-right: 0.3rem;
 }
 
+.site-title {
+    margin-left: -0.2rem;
+}
+
 .site-title a {
     text-decoration: none;
     color: inherit !important;
@@ -248,26 +248,17 @@ a:active { color: var(--color-link-active); }
 .site-header,
 .site-footer,
 .subnav {
-    max-width: var(--max-layout-width);
-}
-
-@media screen and (max-width: 81rem) {
-    .site-header,
-    .site-footer,
-    .subnav {
-        max-width: var(--max-width);
-    }
-
+    max-width: var(--max-width);
 }
 
 .site-header .site-container .site-nav {
-    float: left;
     padding-bottom: 0.75rem;
 }
 
-.site-header .site-container .site-nav a {
+.site-header .site-container .site-nav a,
+.setting-btn {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.2rem;
 }
 
 .subnav {
@@ -348,8 +339,11 @@ a:active { color: var(--color-link-active); }
 
 .site-footer {
     margin-top: 6rem;
-    padding-top: 2rem;
     margin-bottom: 4rem;
+}
+
+.site-footer .site-container {
+    padding-top: 2rem;
     border-top: 1px solid var(--color-border);
 }
 
@@ -487,10 +481,6 @@ a:active { color: var(--color-link-active); }
         margin-top: 1rem;
         text-align: right;
         justify-self: end;
-    }
-
-    .neighbor-links {
-        max-width: var(--max-width-wide);
     }
 }
 
@@ -748,10 +738,10 @@ hr {
 
 #website-setting {
     padding: 0 1.25rem 1.25rem;
-    background-color: #191b1c;
-    border: 1px solid #272b2d;
+    background-color: var(--color-background-color);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    color: #fff;
+    color: var(--color-text);
     min-width: 95vw;
 }
 
@@ -776,8 +766,7 @@ hr {
     display: flex;
     padding-top: 1.25rem;
     justify-content: space-between;
-    border-bottom: 1px solid #212528;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
     position: sticky;
     top: 0;
 }
@@ -795,7 +784,7 @@ hr {
     background: transparent;
     font-weight: bold;
     display: block;
-    color: #ffffff;
+    color: inherit;
     font-size: 1.2rem;
     padding: 1rem;
     margin: -1rem;
@@ -819,6 +808,7 @@ hr {
     font-size: 0.9rem;
     letter-spacing: -0.1rem;
     padding: 5px 10px;
+    border: 1px solid;
     text-align: left;
 }
 

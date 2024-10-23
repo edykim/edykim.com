@@ -7,7 +7,8 @@ lang: ko
 slug: 2024-06-19
 tags:
   - 블로그
-pinned: true
+noIndex: true
+draft: true
 ---
 
 이런저런 글을 올리는 공간입니다.
