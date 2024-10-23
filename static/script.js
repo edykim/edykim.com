@@ -176,6 +176,7 @@ window.onload = () => {
             });
         });
 
-    loadGiscus();
+    // 나는 늘 코멘트를 기대하면서 기대하지 않는다. 그러니까 다시 또 끈다.
+    // loadGiscus();
 }
 
