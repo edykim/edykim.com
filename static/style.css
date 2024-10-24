@@ -226,18 +226,18 @@ a:active { color: var(--color-link-active); }
 
 .site-header nav {
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-left: 1.2rem;
 }
 
 .site-header nav a {
     text-decoration: none;
     color: inherit !important;
     display: inline-block;
-    margin-right: 0.3rem;
+    margin-right: 0.8rem;
 }
 
 .site-title {
-    margin-left: -0.2rem;
+    margin-left: -0.4rem;
 }
 
 .site-title a {
@@ -259,7 +259,7 @@ a:active { color: var(--color-link-active); }
 .site-header .site-container .site-nav a,
 .setting-btn {
     display: inline-block;
-    padding: 0.2rem;
+    padding: 0.4rem;
 }
 
 .subnav {
