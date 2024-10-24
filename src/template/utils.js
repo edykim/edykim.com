@@ -7,8 +7,18 @@ function displayTitle(data) {
 }
 
 function parseTemplateTag(data, identifier, producer) {
-    if (data.indexOf(identifier) !== -1) {
-        data = data.replace(identifier, producer());
+    const front = `<!-- @template ${identifier} `;
+    const back = '-->';
+    
+    const begin = data.indexOf(front);
+    if (begin !== -1) {
+        const startedAt = begin + front.length;
+        const end = data.indexOf(back, startedAt);
+
+        if (end !== -1) {
+            const args = data.substr(startedAt, end - startedAt).trim();
+            data = data.substr(0, begin) + producer(args) + data.substr(end + back.length);
+        }
     }
     return data;
 }
@@ -18,12 +28,18 @@ function createDisplayContent(node, nodes, {partial}) {
         let data = node.value;
 
         data = components.reduce((carry, component) => {
-            carry = parseTemplateTag(carry, `<!-- @template ${component.key} -->`,
-                () => partial(
-                    node.data.fields.url,
-                    component.template,
-                    component.props(node, nodes)
-                ));
+            while (true) {
+                const newCarry = parseTemplateTag(carry, component.key,
+                    (args) => partial(
+                        node.data.fields.url,
+                        component.template,
+                        component.props(node, nodes, args)
+                    ));
+                if (newCarry === carry) {
+                    break;
+                }
+                carry = newCarry;
+            }
             return carry;
         }, data);
 
