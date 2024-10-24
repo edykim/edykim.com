@@ -374,6 +374,11 @@ a:active { color: var(--color-link-active); }
     padding-left: 40px;
 }
 
+.content > ul:not([class]) ul,
+.content > ol:not([class]) ol {
+    padding-left: 1.5rem;
+}
+
 .content > img {
     display: block;
 }
