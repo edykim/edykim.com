@@ -510,8 +510,10 @@ a:active { color: var(--color-link-active); }
 }
 
 .content .nav-flat-list {
-    padding-left: var(--site-padding);
+    display: inline-block;
+    font-size: inherit;
 }
+
 .content .nav-list-links h2 {
     /* .sr-only */
     position: absolute;
@@ -524,6 +526,7 @@ a:active { color: var(--color-link-active); }
     white-space: nowrap;
     border-width: 0;
 }
+
 .content .nav-flat-list li {
     display: inline-block;
 }
