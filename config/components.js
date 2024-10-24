@@ -1,5 +1,5 @@
 import {getTagTree} from './tag.js'
-import {publicPostOnly, publicListablePostOnly} from './../src/filters.js'
+import {publicPostOnly, publicListablePostOnly, hasTag} from './../src/filters.js'
 
 const components = [
     {
@@ -42,6 +42,24 @@ const components = [
     {
         key: 'searchbar',
         template: '_insert/searchbar.html',
+        props: (node, nodes) => ({
+            node,
+        })
+    },
+    {
+        key: 'post-list',
+        template: '_insert/post-list.html',
+        props: (node, nodes, args) => {
+            const _nodes = publicListablePostOnly(nodes, node.data.frontmatter.lang)
+            return {
+                node,
+                nodes: args !== '' ? hasTag(_nodes, args) : _nodes
+            }
+        },
+    },
+    {
+        key: 'list-nav',
+        template: '_insert/list-nav.html',
         props: (node, nodes) => ({
             node,
         })
