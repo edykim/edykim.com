@@ -42,15 +42,15 @@ noIndex: true
 
 ### 리눅스
 
-<!-- @template post-list 리눅스 -->
+<!-- @template post-list linux -->
 
 ### 자바스크립트
 
-<!-- @template post-list 자바스크립트 -->
+<!-- @template post-list js -->
 
 ### PHP
 
-<!-- @template post-list PHP -->
+<!-- @template post-list php -->
 
 ## 이것저것
 
@@ -73,3 +73,4 @@ noIndex: true
 ### 음악
 
 <!-- @template post-list 음악 -->
+
