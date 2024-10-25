@@ -176,6 +176,30 @@ window.onload = () => {
             });
         });
 
+    document.querySelectorAll('.with-details-toggle-button')
+        .forEach(el => {
+            const container = document.createElement('p');
+            const button = document.createElement('button');
+            button.classList.add('details-toggle-btn');
+            button.textContent = '전부 펼치기';
+            container.append(button);
+            el.prepend(container);
+
+            button.addEventListener('click', () => {
+                if (button.textContent === '전부 펼치기') {
+                    el.querySelectorAll('details').forEach(details => {
+                        details.setAttribute('open', 'open');
+                    });
+                    button.textContent = '전부 접기';
+                } else {
+                    el.querySelectorAll('details').forEach(details => {
+                        details.removeAttribute('open');
+                    });
+                    button.textContent = '전부 펼치기';
+                }
+            });
+        });
+
     // 나는 늘 코멘트를 기대하면서 기대하지 않는다. 그러니까 다시 또 끈다.
     // loadGiscus();
 }

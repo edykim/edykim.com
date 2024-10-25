@@ -662,7 +662,8 @@ footer {
 }
 
 .content .random-btn,
-.content .fold-btn {
+.content .fold-btn,
+.content .details-toggle-btn {
     appearance: none;
     font-family: inherit;
     padding: 0.3rem 0.45rem;
@@ -975,3 +976,17 @@ html .hljs {
     margin-bottom: 0;
 }
 
+details {
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+details[open] {
+    padding: 0.5em;
+}

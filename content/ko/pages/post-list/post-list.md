@@ -1,5 +1,5 @@
 ---
-title: 글목록
+title: "Archive: 일자별"
 type: page
 lang: ko
 url: post/list
