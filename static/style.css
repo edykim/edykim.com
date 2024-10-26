@@ -734,6 +734,15 @@ footer {
     outline: 1px solid var(--color-border);
     display: block;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.content .with-random-button a:hover,
+.content .with-random-button a:active,
+.content .with-random-button a:focus {
+    outline-color: var(--color-link-active);
+    position: relative;
+    transform: translateZ(100px);
 }
 
 .content .with-random-button a:after {
