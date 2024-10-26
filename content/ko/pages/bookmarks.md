@@ -11,7 +11,7 @@ noIndex: true
 
 ## 자주 보는 웹페이지
 
-좋아하는 글이 자주 올라와서 내적친밀감이 쌓인 곳.
+좋아하는 글이 자주 올라와서 내적친밀감 쌓이는 페이지들.
 
 :::div{.with-random-button}
 
@@ -54,7 +54,7 @@ noIndex: true
 
 :::
 
-## 심심할 때 보는
+## 새로운 자극들
 
 :::div{.with-random-button}
 
@@ -65,6 +65,7 @@ noIndex: true
 - [듀나의 영화낙서판](http://www.djuna.kr/xe/review)
 - [GeekNews](https://news.hada.io/)
 - [스타트업 바이블](https://www.thestartupbible.com/)
+- [People and Blogs](https://peopleandblogs.com/)
 
 :::
 
