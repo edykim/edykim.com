@@ -16,7 +16,7 @@ tags:
 
 <figure>
 
-![](MG_9900.jpg)
+![](MG_9900_resize.jpg)
 
 <figcaption>Canon EOS 20D / 25s F22 iso 100</figcaption></figure>
 
