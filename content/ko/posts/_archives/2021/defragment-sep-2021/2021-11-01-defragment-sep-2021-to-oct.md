@@ -10,7 +10,7 @@ tags:
 slug: "defragment-sep-2021-to-oct"
 ---
 
-<figure>
+<figure class="wide">
 
 ![](./seattle.jpg)
 
