@@ -753,7 +753,7 @@ footer {
     width: 140px;
     overflow: hidden;
     white-space:nowrap;
-    color: var(--color-shadow)
+    color: var(--color-gray);
 }
 
 .content .random-btn:before {
