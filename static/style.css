@@ -700,6 +700,27 @@ footer {
     grid-template-columns: repeat(3, 1fr);
 }
 
+@media screen and (min-width: 60rem) {
+    .content .with-random-button {
+        max-width: var(--max-layout-width);
+    }
+    .content .with-random-button ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .content .with-random-button ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .content .with-random-button ul {
+        grid-template-columns: 1fr;
+    }
+}
+
 .content .with-random-button li {
     display: inline-block;
     margin: 0;
