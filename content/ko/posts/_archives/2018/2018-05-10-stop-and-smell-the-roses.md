@@ -20,8 +20,7 @@ tags:
 
 회사 다니는 동안 크고 작은 다양한 업무를 했고 프로젝트는 대외적으로 인정도 받아 즐거웠다. 업무 프로세스가 많고 내 영어가 부족해서 지치는 면도 좀 있었지만 좋은 사람들과 함께 재미있는 프로젝트를 할 수 있었다. 프로젝트에서 대학에서만 볼 수 있는 그런 도메인 지식을 배운 것도 즐거운 경험이었다.
 
-<img
-src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/27072782_1769631846402286_6490159432207698943_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=QQ5hCHqZaBkQ7kNvgGVzx1Z&_nc_zt=23&_nc_ht=scontent-lax3-1.xx&oh=00_AYAic8N4Z8wXruZ0Vc5ebAUG8oWXREHlIzA6k2XT-rUbFA&oe=6744BA65" />
+![CIO Award](cio-award.webp)
 
 또한 성평등과 문화 다양성이 로드맵에 들어있을 정도로 신경을 많이 쓰는 회사라서 그런지 지난 회사에서 겪었던 작은 편견조차 여기서는 볼 수 없었다. 덕분에 회사가 차별에 맞서기 위해서는 어떤 역할을 해야 하는지, 어떤 장치를 둬야 하는지도 업무 외적으로도 많이 배웠다.
 
@@ -31,9 +30,7 @@ src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/27072782_1769631846402286
 
 무엇을 준비하고 어떻게 대비하는지 고민과 함께 정말 하고 싶은 것은 무엇인지도 생각하게 된다. 하고싶은 일이 기술적 깊이가 있는 엔지니어링인지, 아니면 비즈니스와 더 맞닿아 있는 기술 컨설팅인지, 아니면 좀 더 큰 그림을 그리는 아키텍트가 되고 싶은 건지. 이 전환 기간동안 좋은 결정을 내릴 수 있는 토대를 잘 가꿔서 결정 하고싶다.
 
-<img
-src="https://scontent.cdninstagram.com/v/t51.2885-15/31502050_246169269270430_4405030402805202944_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDgxMC5zZHIuZjI4ODUuZGVmYXVsdF9pbWFnZSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=e4wKEQhUQn8Q7kNvgGNK0FS&_nc_gid=903e0b00781649579da36ccec82e0122&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MTc3NjUxMDQ4ODA2NzUyMzg1OA%3D%3D.3-ccb7-5&oh=00_AYAEQU0w951HL_ref8tHyaewnLkOr1satIRv-7mlDKv_Dg&oe=67232865&_nc_sid=10d13b"
-/>
+![마지막 출근 날](last-day-of-sw.webp)
 
 벌써 멜번에서 만 6년의 시간을 보냈다. Stop and smell the roses. 고민도 많고 고생도 했던 기간이지만 몸 건강히 잘 지내는게 얼마나 다행인지 생각한다. 지금까지 지내온 시간과 받은 도움에 감사하는 시간을 보내고 싶다.
 
