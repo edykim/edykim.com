@@ -48,6 +48,9 @@ noIndex: true
 - [민소네](https://minsone.github.io/)
 - [이형주 블로그](https://www.hyungjoo.me/)
 - [사색송어](https://ahnheejong.name/)
+- [작은배](https://jagunbae.com/)
+- [강단 블로그](https://kangminsuk.com/ko/blog/)
+- [로그아웃아일랜드](https://www.logoutisland.com/)
 
 :::
 
@@ -79,7 +82,7 @@ noIndex: true
 - [Crumpler](https://www.crumpler.com/)
 - [Topo Designs](https://topodesigns.com/)
 - [tomtoc](https://www.tomtoc.com/)
-- [WAKA-WAKA](https://wakawaka.world/) 가구
+- [WAKA-WAKA](https://wakawaka.world/)
 
 :::
 
