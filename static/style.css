@@ -542,8 +542,24 @@ a:active { color: var(--color-link-active); }
 }
 
 .content > hr {
-    max-width: var(--max-width-narrow);
-    border-top-width: 2px;
+    border: none;
+}
+
+.content > hr:after {
+    border: none;
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    font-size: 0;
+    line-height: 1;
+    background: var(--color-border);
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 20px 0 0 var(--color-border), 
+        40px 0 0 var(--color-border),
+        -20px 0 0 var(--color-border), 
+        -40px 0 0 var(--color-border);
 }
 
 @media screen and (max-width: 790px) {
