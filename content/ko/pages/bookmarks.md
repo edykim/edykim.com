@@ -17,7 +17,6 @@ noIndex: true
 
 - [기계인간 John Grib](https://johngrib.github.io/)
 - [Cojette의 Data Wonderland](https://cojette.github.io/)
-- [보통의 언어](https://www.saeyoonjeong.com/blog)
 - [Daily Log](https://jiyeonseo.github.io/)
 - [Zoeyful](https://joeyful52.tistory.com/)
 - [리내로그](https://rinae.dev/)
