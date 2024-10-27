@@ -691,6 +691,9 @@ footer {
     color: inherit;
 }
 
+.content .with-random-button {
+    margin-bottom: 5rem;
+}
 
 .content .with-random-button ul {
     list-style: none;
