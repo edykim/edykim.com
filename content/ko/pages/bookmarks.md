@@ -50,6 +50,7 @@ noIndex: true
 - [작은배](https://jagunbae.com/)
 - [강단 블로그](https://kangminsuk.com/ko/blog/)
 - [로그아웃아일랜드](https://www.logoutisland.com/)
+- [서자영 블로그](https://jayoung.blog/)
 
 :::
 
