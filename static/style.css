@@ -470,7 +470,6 @@ a:active { color: var(--color-link-active); }
         grid-template-rows: auto;
         grid-template-areas: ". header"
             "sidebar content";
-        justify-items: start;
         align-items: start;
     }
     .list-page .page-header {
