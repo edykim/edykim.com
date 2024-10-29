@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2024-09-11T21:08:24"
+updatedOn: "2024-10-28T22:48:37"
 lang: ko
 url: bookmarks 
 noIndex: true
