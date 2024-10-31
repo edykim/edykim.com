@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2024-10-28T22:48:37"
+updatedOn: "2024-10-31T10:50:37"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -51,6 +51,7 @@ noIndex: true
 - [강단 블로그](https://kangminsuk.com/ko/blog/)
 - [로그아웃아일랜드](https://www.logoutisland.com/)
 - [서자영 블로그](https://jayoung.blog/)
+- [고은비 블로그](https://eunbiko.com/)
 
 :::
 
