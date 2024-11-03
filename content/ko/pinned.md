@@ -8,12 +8,14 @@ slug: 2024-06-19
 tags:
   - 블로그
 noIndex: true
-draft: true
+pinned: true
 ---
 
 이런저런 글을 올리는 공간입니다.
 
 - [RSS 피드](/ko/feed.xml)
+- [일자별](/ko/post/list)
+- [태그별](/ko/post/list/tags/)
 - 사는 이야기: [미국 사는 이야기](/ko/tag/life-in-us/), [멜번 사는 이야기](/ko/tag/life-in-australia/),
 [내 이야기](/ko/tag/my-stories/), [부스러기](/ko/tag/memo/)
 - 개발 이것저것:  [개발 이야기](/ko/tag/dev-life/), [개발 잡동사니](/ko/tag/it/),
