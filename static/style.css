@@ -568,7 +568,6 @@ a:active { color: var(--color-link-active); }
     .site-footer {
         margin-top: 1rem;
         padding-top: 1rem;
-        margin-bottom: var(--site-padding);
     }
     .page-header {
         margin-top: 1.5rem;
