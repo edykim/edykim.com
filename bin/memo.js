@@ -38,7 +38,7 @@ fs.writeFileSync(filepath, text);
 console.log(`${filepath} is created.`);
 
 function findFileName(date) {
-    const filename = (date, idx = 0) => `${date}-memo${idx == 0 ? "" : `-${idx}`}`
+    const filename = (date, idx = 0) => `${date}${idx == 0 ? "" : `-${idx}`}`
     const files = fs.readdirSync(path)
         .filter(file => file.startsWith(date));
 
