@@ -48,7 +48,7 @@ noIndex: true
 - [이형주 블로그](https://www.hyungjoo.me/)
 - [사색송어](https://ahnheejong.name/)
 - [작은배](https://jagunbae.com/)
-- [강단 블로그](https://kangminsuk.com/ko/blog/)
+- [강단 블로그](https://kangminsuk.com/ko/)
 - [로그아웃아일랜드](https://www.logoutisland.com/)
 - [서자영 블로그](https://jayoung.blog/)
 - [고은비 블로그](https://eunbiko.com/)
