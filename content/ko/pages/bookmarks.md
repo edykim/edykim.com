@@ -66,6 +66,7 @@ noIndex: true
 - [GeekNews](https://news.hada.io/)
 - [스타트업 바이블](https://www.thestartupbible.com/)
 - [People and Blogs](https://peopleandblogs.com/)
+- [WriterDeck.org](http://www.writerdeck.org/)
 
 :::
 
