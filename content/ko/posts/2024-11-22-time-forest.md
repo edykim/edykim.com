@@ -14,3 +14,7 @@ noIndex: true
 
 Hiroshi Yoshimura - Time forest
 
+`youtube:https://www.youtube.com/embed/9cSmrCOiby4`
+
+(Stretched)
+
