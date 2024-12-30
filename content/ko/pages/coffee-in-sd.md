@@ -3,6 +3,7 @@ title: 샌디에고 커피
 author: haruair
 type: page
 date: 2024-08-02T17:40:11
+updatedOn: 2024-12-29T20:30:15
 lang: ko
 slug: sd/coffee
 ---
@@ -13,11 +14,21 @@ slug: sd/coffee
   샌디에고 곳곳에 있는 커피 체인. 산미가 있는 중배전 커피가 버드락 블랜드로
   나오긴 하지만 계절과 날씨에 따라 즐길 수 있도록 다양하게 구비되어 있다. 특히
   산미가 좋은 원두로 만든 에스프레소 토닉은 여름의 더위를 잊게 만든다.
+- [Mnemonic Coffee](https://www.mnemonic.coffee)
+  ([지도](https://maps.app.goo.gl/184cQaPG6WkndGAD8)):
+  발보아파크 인근에 있는 카페. 커피도 맛있지만 계절메뉴가 정말 독특하다.
+- [Yipao Coffee](https://yipao-coffee.com/): SD 커피페어에서 상 받는
+  카페 중 하나. 에스프레소 음료도 잘 만들고 푸어오버도 다양한 배전도로 구비되어
+  있다.
 - [Wayfarer Bread & Pastry](https://www.wayfarerbread.com/)
   ([지도](https://maps.app.goo.gl/F4vumjC5AzVfsiVX6)):
   오픈 전부터 줄서는 유명한 빵집인데 Sightglass 커피도 준비되어 있다. 커피
   자체도 맛있지만 페이스트리와도 아주 잘 어울린다. 매번 바뀌는 페이스트리 메뉴는
   웹사이트를 통해 확인할 수 있다.
+- [Provecho! Coffee]()
+  ([지도](https://maps.app.goo.gl/w4KvfSiSai38ytti7)):
+  SD에서 가본 곳 중 가장 힙한 카페. 커피도 맛있고 분위기도 마치 브루클린 같다.
+  배전도가 조금 높은 편이지만 균형감 좋은 커피.
 - [Finjān Coffee Shop Co.](https://finjanco.com/)
   ([지도](https://maps.app.goo.gl/Nibo2AQ8bMH9mLCz6)):
   현대성이 가미되어 있는 터키식 커피를 제공한다. James Coffee Roasters에서
@@ -61,10 +72,15 @@ UTC가 가까이 있어서 종종 가서 커피를 마신다. 커피 들고 몰 
   페이스트리도 꽤 맛있다. Southwest에서도 여기 게이트에 배정되지 않으면 갈 수
   없는 그런 소소한 복권같은 장소. 체인이니까 꼭 여긴 아니어도 갈 수 있지만
   공항에서 이런 수준의 커피 찾기 힘드니까.
+  - 아무래도 연휴 때는 여행객이 많아서 좀 퀄리티가 떨어질 수 있다.
 
 ## 가볼 예정
 
-- Dark Horse Coffee Roasters
+- Dark Horse Coffee Roasters: 공항점 아닌 곳..
 - Heartwork Coffee
 - Genteel Coffee Co.
+- Jaunt Coffee Roasters: SD 이사 직후 딱 한번 다녀왔는데 다시 다녀와야 할 곳
+- Compa Coffee Roasters: hawthorn coffee와 자매점이라고 하던데
+- Coffee Cycle Roasting
+
 
