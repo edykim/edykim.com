@@ -25,7 +25,7 @@ slug: sd/coffee
   오픈 전부터 줄서는 유명한 빵집인데 Sightglass 커피도 준비되어 있다. 커피
   자체도 맛있지만 페이스트리와도 아주 잘 어울린다. 매번 바뀌는 페이스트리 메뉴는
   웹사이트를 통해 확인할 수 있다.
-- [Provecho! Coffee]()
+- [Provecho! Coffee](https://provechocoffee.com/)
   ([지도](https://maps.app.goo.gl/w4KvfSiSai38ytti7)):
   SD에서 가본 곳 중 가장 힙한 카페. 커피도 맛있고 분위기도 마치 브루클린 같다.
   배전도가 조금 높은 편이지만 균형감 좋은 커피.
