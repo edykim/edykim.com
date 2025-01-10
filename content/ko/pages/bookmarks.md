@@ -67,6 +67,7 @@ noIndex: true
 - [스타트업 바이블](https://www.thestartupbible.com/)
 - [People and Blogs](https://peopleandblogs.com/)
 - [WriterDeck.org](http://www.writerdeck.org/)
+- [The Local Project](https://thelocalproject.com.au/)
 
 :::
 
