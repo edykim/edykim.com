@@ -61,7 +61,7 @@
             line-height: 1;
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 760px) {
             .time-container {
                 grid-template-columns: auto;
                 grid-template-rows: auto;
@@ -89,34 +89,91 @@
                 timeout = setTimeout(() => func.apply(context, args), delay);
             };
         }
+        let w = window;
         function onLoad() {
-            document.querySelector('.date').textContent = dayjs().format('MMMM D, YYYY');
-            document.querySelector('.day-of-week').textContent = days[dayjs().day()];
-            document.querySelector('.time').textContent = dayjs().format('h:mm a') + (dayjs().second() % 2 === 0 ? '.' : '');
+            w.document.querySelector('.date').textContent = dayjs().format('MMMM D, YYYY');
+            w.document.querySelector('.day-of-week').textContent = days[dayjs().day()];
+            w.document.querySelector('.time').textContent = dayjs().format('h:mm a') + (dayjs().second() % 2 === 0 ? '.' : '');
         }
         function saveTextarea() {
             localStorage.setItem('--today-text', document.querySelector('textarea').value);
         }
         function onLoadText() {
-            document.querySelector('textarea').value = localStorage.getItem('--today-text');
+            w.document.querySelector('textarea').value = localStorage.getItem('--today-text');
             const _saveTextarea = debounce(saveTextarea, 300);
-            document.querySelector('textarea').addEventListener('keyup', _saveTextarea);
+            w.document.querySelector('textarea').addEventListener('keyup', _saveTextarea);
         }
         window.addEventListener('DOMContentLoaded', onLoad);
         window.addEventListener('DOMContentLoaded', onLoadText);
         setInterval(onLoad, 200);
+
+
+        let app, container;
+
+        function onLoadPip() {
+            app = document.querySelector(".app");
+            container = document.querySelector(".app-container");
+            if ("documentPictureInPicture" in window) {
+                document.querySelector('.time').addEventListener("click", togglePictureInPicture, false);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', onLoadPip);
+
+        async function togglePictureInPicture() {
+            if (window.documentPictureInPicture.window) {
+                container.append(app);
+                window.documentPictureInPicture.window.close();
+                return;
+            }
+
+            const pipWindow = await window.documentPictureInPicture.requestWindow({
+                width: 400,
+                height: 400,
+            });
+            w = pipWindow;
+
+            pipWindow.addEventListener("pagehide", (event) => {
+                container.append(app);
+                w = window;
+            });
+
+            [...document.styleSheets].forEach((styleSheet) => {
+                try {
+                const cssRules = [...styleSheet.cssRules]
+                    .map((rule) => rule.cssText)
+                    .join("");
+                const style = document.createElement("style");
+
+                style.textContent = cssRules;
+                pipWindow.document.head.appendChild(style);
+                } catch (e) {
+                const link = document.createElement("link");
+
+                link.rel = "stylesheet";
+                link.type = styleSheet.type;
+                link.media = styleSheet.media;
+                link.href = styleSheet.href;
+                pipWindow.document.head.appendChild(link);
+                }
+            });
+
+            pipWindow.document.body.append(app);
+        }
     </script>
 </head>
 
 <body>
-    <div class="app">
-        <div class="time-container">
-            <div class="date"></div>
-            <div class="day-of-week"></div>
-            <div class="time"></div>
-        </div>
+    <div class="app-container">
+        <div class="app">
+            <div class="time-container">
+                <div class="date"></div>
+                <div class="day-of-week"></div>
+                <div class="time"></div>
+            </div>
 
-        <textarea></textarea>
+            <textarea></textarea>
+        </div>
     </div>
 </body>
 
