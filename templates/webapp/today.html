@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Today</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+        body {
+            background-color: #222;
+            font-family: "Afacad Flux", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
+            color: #fff;
+            margin: 3rem;
+        }
+
+        textarea {
+            outline: none;
+            border: 0;
+            appearance: none;
+            background-color: transparent;
+            color: inherit;
+            resize: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 3rem;
+            width: 100%;
+            font-family: monospace;
+            flex: 1;
+        }
+
+        .date {
+            font-size: 2rem;
+            grid-area: date;
+        }
+        .day-of-week {
+            font-size: 3rem;
+            grid-area: day-of-week;
+        }
+        .time {
+            font-size: 5.5rem;
+            grid-area: time;
+        }
+
+        .app {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: stretch;
+            min-height: calc(100vh - 6rem);
+        }
+        .time-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 'date time' 'day-of-week time';
+            line-height: 1;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .time-container {
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+                grid-template-areas: 'date' 'day-of-week' 'time';
+            }
+        }
+
+    </style>
+    <script>
+        const days = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+        ];
+        function debounce(func, delay) {
+            let timeout;
+            return function() {
+                const context = this;
+                const args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), delay);
+            };
+        }
+        function onLoad() {
+            document.querySelector('.date').textContent = dayjs().format('MMMM D, YYYY');
+            document.querySelector('.day-of-week').textContent = days[dayjs().day()];
+            document.querySelector('.time').textContent = dayjs().format('h:mm a') + (dayjs().second() % 2 === 0 ? '.' : '');
+        }
+        function saveTextarea() {
+            localStorage.setItem('--today-text', document.querySelector('textarea').value);
+        }
+        function onLoadText() {
+            document.querySelector('textarea').value = localStorage.getItem('--today-text');
+            const _saveTextarea = debounce(saveTextarea, 300);
+            document.querySelector('textarea').addEventListener('keyup', _saveTextarea);
+        }
+        window.addEventListener('DOMContentLoaded', onLoad);
+        window.addEventListener('DOMContentLoaded', onLoadText);
+        setInterval(onLoad, 200);
+    </script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="time-container">
+            <div class="date"></div>
+            <div class="day-of-week"></div>
+            <div class="time"></div>
+        </div>
+
+        <textarea></textarea>
+    </div>
+</body>
+
+</html>
