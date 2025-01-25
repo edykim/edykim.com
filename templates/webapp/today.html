@@ -130,7 +130,7 @@
             w.document.querySelector('.time').textContent = dayjs().format('h:mm a') + (dayjs().second() % 2 === 0 ? '.' : '');
         }
         function saveTextarea() {
-            localStorage.setItem('--today-text', document.querySelector('textarea').value);
+            localStorage.setItem('--today-text', w.document.querySelector('textarea').value);
         }
         function onLoadText() {
             w.document.querySelector('textarea').value = localStorage.getItem('--today-text');
