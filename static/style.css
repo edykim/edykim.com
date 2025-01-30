@@ -124,7 +124,8 @@ body {
     font-weight: 400;
     font-style: normal;
     word-break: keep-all;
-    margin: 1.25rem;
+    margin: 1rem;
+    margin: calc(1rem + 0.8vw);
     max-width: none;
 }
 
