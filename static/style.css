@@ -514,3 +514,28 @@ summary {
 details[open] {
     padding: 0.5em;
 }
+
+.post-title-list {
+    padding: 0;
+    list-style: none;
+}
+
+.post-title-list time {
+    margin-right: 1rem;
+    color: var(--color-gray);
+}
+
+.post-title-list a {
+    text-decoration: none;
+}
+
+.random-btn, .details-toggle-btn, .fold-btn {
+    appearance: none;
+    border: 3px solid var(--color-text);
+    background: transparent;
+    color: var(--color-text);
+    padding: 0.4rem 0.75rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
