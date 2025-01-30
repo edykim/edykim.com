@@ -193,6 +193,10 @@ table td {
     font-size: 0.9rem;
 }
 
+.site-header, .site-footer {
+    display: block;
+}
+
 .site-header a {
     text-decoration: none;
     color: inherit;
