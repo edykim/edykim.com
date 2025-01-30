@@ -163,7 +163,7 @@ table td {
 }
 
 .page .content > * {
-    max-width: 860px;
+    max-width: 52rem;
 }
 
 .page .content > .wide {
@@ -286,7 +286,7 @@ footer.page-footer .updated-on {
     justify-content: space-between;
     padding: 2rem 0;
     font-size: 0.9rem;
-    max-width: 860px;
+    max-width: 52rem;
     gap: 1rem;
 }
 .neighbor-links a,
@@ -538,4 +538,11 @@ details[open] {
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.content iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 3 / 2;
 }
