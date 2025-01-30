@@ -9,7 +9,7 @@ url: /
 
 :::div{.font-size-medium.font-weight-800}
 
-<img src="https://live.staticflickr.com/65535/54090466206_13e8993bba_z.jpg" alt="노트와 커피" loading="lazy" style="border-radius: 4px">
+<img src="https://live.staticflickr.com/65535/54090466206_1a3257f762_k.jpg" alt="notes and coffee" loading="lazy" style="border-radius: 4px">
 
 이것저것 웹으로 된 것 만들기 좋아하는 용균입니다.
 
