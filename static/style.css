@@ -125,6 +125,7 @@ body {
     font-style: normal;
     word-break: keep-all;
     margin: 1.25rem;
+    max-width: none;
 }
 
 a:link { color: var(--color-link); }
