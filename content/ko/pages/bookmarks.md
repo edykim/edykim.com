@@ -9,6 +9,10 @@ url: bookmarks
 noIndex: true
 ---
 
+<div class="columns">
+
+<div class="col">
+
 ## 자주 보는 웹페이지
 
 좋아하는 글이 자주 올라와서 내적친밀감 쌓이는 페이지들.
@@ -54,6 +58,10 @@ noIndex: true
 
 :::
 
+</div>
+
+<div class="col">
+
 ## 새로운 자극들
 
 :::div{.with-random-button}
@@ -70,6 +78,10 @@ noIndex: true
 - [The Local Project](https://thelocalproject.com.au/)
 
 :::
+
+</div>
+
+<div class="col">
 
 ## 이것저것 상점
 
@@ -89,3 +101,4 @@ noIndex: true
 
 :::
 
+</div></div>
