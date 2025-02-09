@@ -165,6 +165,7 @@ table td {
 
 .page .content > * {
     max-width: 52rem;
+    box-sizing: border-box;
 }
 
 .page .content > .wide {
@@ -264,8 +265,13 @@ table td {
     text-decoration: underline;
 }
 
-.list-page .page + .page {
-    margin-top: 5rem;
+.list-page .page + .page:before {
+    content: '';
+    display: block;
+    max-width: 52rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-gray);
+    padding-top: 1rem;
 }
 
 footer.page-footer {
