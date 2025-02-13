@@ -31,8 +31,9 @@ slug: sd/coffee
   배전도가 조금 높은 편이지만 균형감 좋은 커피.
 - [Dark Horse Coffee](https://www.darkhorsecoffeeroasters.com/)
   ([지도](https://maps.app.goo.gl/Luf8sdsyCA7ywvY46)):
-  중배전 커피와 알맞은 우유 비율, 따뜻한 커피를 맛볼 수 있다. 주변에 구경할 곳이
-  많아서 구경하기 전에나 구경이 끝나서 픽업하기 좋은 곳.
+  노스파크점에 다녀와는데 중배전 커피와 알맞은 우유 비율, 따뜻한 커피를 맛볼 수
+  있다. 주변에 구경할 곳이 많아서 구경하기 전에나 구경이 끝나서 픽업하기 좋은
+  곳.
 - [Finjān Coffee Shop Co.](https://finjanco.com/)
   ([지도](https://maps.app.goo.gl/Nibo2AQ8bMH9mLCz6)):
   현대성이 가미되어 있는 터키식 커피를 제공한다. James Coffee Roasters에서
