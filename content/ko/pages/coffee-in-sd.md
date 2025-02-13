@@ -3,7 +3,7 @@ title: 샌디에고 커피
 author: haruair
 type: page
 date: 2024-08-02T17:40:11
-updatedOn: 2024-12-29T20:30:15
+updatedOn: 2025-02-13T10:24:53
 lang: ko
 slug: sd/coffee
 ---
@@ -29,6 +29,10 @@ slug: sd/coffee
   ([지도](https://maps.app.goo.gl/w4KvfSiSai38ytti7)):
   SD에서 가본 곳 중 가장 힙한 카페. 커피도 맛있고 분위기도 마치 브루클린 같다.
   배전도가 조금 높은 편이지만 균형감 좋은 커피.
+- [Dark Horse Coffee](https://www.darkhorsecoffeeroasters.com/)
+  ([지도](https://maps.app.goo.gl/Luf8sdsyCA7ywvY46)):
+  중배전 커피와 알맞은 우유 비율, 따뜻한 커피를 맛볼 수 있다. 주변에 구경할 곳이
+  많아서 구경하기 전에나 구경이 끝나서 픽업하기 좋은 곳.
 - [Finjān Coffee Shop Co.](https://finjanco.com/)
   ([지도](https://maps.app.goo.gl/Nibo2AQ8bMH9mLCz6)):
   현대성이 가미되어 있는 터키식 커피를 제공한다. James Coffee Roasters에서
@@ -54,14 +58,15 @@ slug: sd/coffee
 
 ## UTC 커피
 
-UTC가 가까이 있어서 종종 가서 커피를 마신다. 커피 들고 몰 걸으면 운동도 되고
-좋으니까.
+UTC가 가까이 있어서 종종 가서 커피를 마신다. 커피 들고 걸으면 운동도 되고
+안전하고 좋으니까.
 
 - 자주 가는 편 
   - La Colombe Coffee Roasters:
     생수/탄산수가 제공되어 커피를 더 깔끔하게 즐길 수 있음. 기본에 충실한 메뉴.
   - Blue Bottle Coffee:
     자주 갔었는데 가끔 기복이 있는 경우가 있어서 요즘은 좀 뜸해진 편.
+    최근 들어서는 맛도 그렇고 리테일에만 집중하는 것 같아서 좀 아쉽다.
 - 가끔 먹고 싶은
   - 85C Bakery Cafe: 바다소금 커피는 종종 생각날 때가 있다. 빵과 함꼐.
   - Starbucks: 그냥 스벅 마시고 싶은 날. 아님 계절 메뉴 나온 날.
@@ -74,13 +79,15 @@ UTC가 가까이 있어서 종종 가서 커피를 마신다. 커피 들고 몰 
   공항에서 이런 수준의 커피 찾기 힘드니까.
   - 아무래도 연휴 때는 여행객이 많아서 좀 퀄리티가 떨어질 수 있다.
 
+## 다녀왔지만 취향은 아닌
+
+- Jaunt Coffee Roasters: 위치, 분위기 좋고 갈 때마다 엄청 붐비긴 하지만 배전도가
+  상당히 높은 편이며 선호하는 맛이 아니라서.
+
 ## 가볼 예정
 
-- Dark Horse Coffee Roasters: 공항점 아닌 곳..
 - Heartwork Coffee
 - Genteel Coffee Co.
-- Jaunt Coffee Roasters: SD 이사 직후 딱 한번 다녀왔는데 다시 다녀와야 할 곳
 - Compa Coffee Roasters: hawthorn coffee와 자매점이라고 하던데
 - Coffee Cycle Roasting
-
 
