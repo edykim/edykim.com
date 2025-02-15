@@ -228,7 +228,7 @@ table td {
     color: var(--color-background-color);
     padding: 0.6rem;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 100%;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
