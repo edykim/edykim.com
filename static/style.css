@@ -201,10 +201,7 @@ table td {
 }
 
 .site-header a {
-    text-decoration: none;
     color: inherit;
-    font-weight: 500;
-    font-size: 1.5rem;
     margin: 0.2rem;
 }
 
