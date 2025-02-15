@@ -107,6 +107,5 @@ UTC가 가까이 있어서 종종 가서 커피를 마신다. 커피 들고 걸�
 
 - Heartwork Coffee
 - Genteel Coffee Co.
-- Compa Coffee Roasters: hawthorn coffee와 자매점이라고 하던데
 - Coffee Cycle Roasting
 
