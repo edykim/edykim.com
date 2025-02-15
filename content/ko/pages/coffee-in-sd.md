@@ -3,7 +3,7 @@ title: 샌디에고 커피
 author: haruair
 type: page
 date: 2024-08-02T17:40:11
-updatedOn: 2025-02-13T10:24:53
+updatedOn: 2025-02-15T15:58:10
 lang: ko
 slug: sd/coffee
 ---
@@ -53,6 +53,11 @@ slug: sd/coffee
 - [Hawthorn Coffee](https://www.hawthorncoffee.com/)
   ([지도](https://maps.app.goo.gl/apUng4P9t6BbshRW7)):
   좋은 분위기. 좋은 커피와 편하게 즐길 수 있는 메뉴가 있다.
+- [Compa Coffee Roasters](https://www.compacoffeeroasters.com/)
+  ([지도](https://maps.app.goo.gl/MFExVeuB7X1wukLX6)):
+  Hawthorn과 자매 카페라고 하던데 메뉴도 비슷하고 분위기도 비슷하다. 간편하게
+  즐길 수 있는 메뉴와 잘 어울리는 중배전 커피. 푸어 오버도 다양하게 구비되어 있고
+  샤케라토가 맛있다.
 - [Communal Coffee](https://communalcoffee.com/)
   ([지도](https://maps.app.goo.gl/EK3mtUjaM8UYFB727)):
   자리가 많아서 좋고 인테리어가 깔끔하고 이쁘다. 커피도 무난한 편.
