@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    h1 {
+      font-family: monospace;
+      font-size: 1rem;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #fff;
+      padding: 1rem;
+      margin: 2rem auto;
+      height: 2.8rem;
+      position: relative;
+    }
+    h1:after {
+      content: '';
+      display: block;
+      background-color: red;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      right: 0;
+    }
+    h1:before {
+      content: '';
+      display: block;
+      background-color: #cbf1ff;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 9px;
+      right: 0;
+    }
+    .player-outer-wrapper {
+      border: 3px solid #ddd;
+      border-radius: 22px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .player-wrapper {
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border: 40px solid black;
+      border-radius: 20px;
+      position: relative;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .buttons {
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 2rem;
+    border-radius: 0 0 20px 20px;
+    border-top: 3px dotted #dddddd;
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    border: 1px solid #333;
+    border-top-width: 3px;
+    background-color: #eee;
+    appearance: none;
+    line-height: 3rem;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 82px;
+    height: 82px;
+  }
+  button:hover {
+    background-color: #f3f3f3;
+  }
+  button.toggled,
+  button:active {
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), inset 0 3px 5px rgba(0, 0, 0, 0.2);
+    border-top-width: 5px;
+  }
+  .buttons button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  .buttons .button-label {
+    display: block;
+    font-size: 0.8rem;
+    font-family: arial;
+    font-weight: bold;
+    height: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  .buttons label:first-child button {
+    border-radius: 0 0 5px 20px;
+  }
+  .buttons label:last-child button {
+    border-radius: 0 0 20px 5px;
+  }
+
+  .screen {
+    padding: 2rem;
+  }
+
+  .device {
+    background: #eee;
+    padding-top: 2rem;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  </style>
+  <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div class="device">
+      <div class="screen">
+        <div class="player-outer-wrapper">
+          <div class="player-wrapper">
+            <div id="player"></div>
+          </div>
+        </div>
+        <h1></h1>
+      </div>
+      <div class="buttons">
+        <label>
+          <span class="button-label">◄◄ PREV</span>
+          <button type="button" id="prev-btn"><span>Prev</span></button>
+        </label>
+        <label>
+          <span class="button-label">◼ STOP</span>
+          <button type="button" id="stop-btn"><span>Stop</span></button>
+        </label>
+        <label>
+          <span class="button-label">START ►</span>
+          <button type="button" id="play-btn"><span>Start</span></button>
+        </label>
+        <label>
+          <span class="button-label">NEXT ►►</span>
+          <button type="button" id="next-btn"><span>Next</span></button>
+        </label>
+      </div>
+    </div>
+    <p>Note: just playing around with yt embed api</p>
+  <script>
+    const videoIds = [
+      'Ef7uqh_IJ5o',
+      'w-9URgw2830',
+      'DC37aCXOimo',
+      '98jt_U0jJ7E',
+      'A2KSvtsKgSs',
+      '4DfKl7gIDRo',
+      '9cSmrCOiby4',
+      'Wuza5WXiMkc',
+      'E95STK2tnoM',
+      'Ef7uqh_IJ5o',
+      '-Np8PJDGq_A',
+      'gw4NmBPLNBI',
+      'ThMGf07UBHQ',
+      '8Ykqw6jhvII',
+      'Ys9wiGNDCvA',
+      'WbhK3wMXluE',
+      'HcRQiNHrsoQ',
+      'NwvxiBEPDdA',
+    ]
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '640',
+        width: '640',
+        videoId: videoIds[0],
+        playerVars: {
+          'playsinline': 1
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onError': onError,
+          'onStateChange': onPlayerStateChange
+        },
+        rel: 0,
+      });
+    }
+
+    let lastDirection = nextVideo;
+
+    function onError(error) {
+      console.log('error', error.data);
+      lastDirection();
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    function onPlayerStateChange(event) {
+      console.log('onPlayerStateChange', event.data);
+      if (event.data === YT.PlayerState.PLAYING) {
+        document.querySelector('#play-btn').classList.add('toggled');
+        document.querySelector('#stop-btn').classList.remove('toggled');
+      } else if (event.data === YT.PlayerState.PAUSED) {
+        document.querySelector('#play-btn').classList.remove('toggled');
+        document.querySelector('#stop-btn').classList.add('toggled');
+      }
+
+      if (event.data === YT.PlayerState.ENDED) {
+        nextVideo();
+      }
+
+      // if (event.data == YT.PlayerState.PLAYING && !done) {
+      //   setTimeout(stopVideo, 6000);
+      //   done = true;
+      // }
+      document.querySelector('h1').textContent = player.getVideoData()?.title
+    }
+
+    function nextVideo() {
+      videoIds.push(videoIds.shift());
+      player.loadVideoById({'videoId': videoIds[0]});
+      lastDirection = nextVideo;
+    }
+
+    function prevVideo() {
+      videoIds.unshift(videoIds.pop());
+      player.loadVideoById({'videoId': videoIds[0]});
+      lastDirection = prevVideo;
+    }
+
+    document.querySelector('#play-btn').addEventListener('click', () => {
+      document.querySelector('#play-btn').classList.add('toggled');
+      document.querySelector('#stop-btn').classList.remove('toggled');
+      player.playVideo();
+    });
+    document.querySelector('#stop-btn').addEventListener('click', () => {
+      document.querySelector('#stop-btn').classList.add('toggled');
+      document.querySelector('#play-btn').classList.remove('toggled');
+      player.pauseVideo();
+    });
+    document.querySelector('#next-btn').addEventListener('click', () => {
+      nextVideo();
+    });
+    document.querySelector('#prev-btn').addEventListener('click', () => {
+      prevVideo();
+    });
+  </script>
+</body>
+
+</html>
