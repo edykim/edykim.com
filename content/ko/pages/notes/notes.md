@@ -8,7 +8,7 @@ url: notes
 noTitle: true
 ---
 
-:::div{.narrow}
+:::div{.narrow.headpiece}
 
 ![노트](note.webp)
 

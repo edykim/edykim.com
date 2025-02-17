@@ -569,3 +569,16 @@ details[open] {
 .subtitle + .list-page .post-title-list {
     margin-top: 0;  
 }
+
+
+.mode--night .headpiece img {
+    filter: invert(1) hue-rotate(330deg);
+}
+
+.mode--tumblr .headpiece img {
+    filter: invert(1);
+}
+
+.mode--dark .headpiece img {
+    filter: invert(1) grayscale(1);
+}
