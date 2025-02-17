@@ -221,7 +221,7 @@ table td {
 .setting-btn {
     position: absolute;
     right: 1.25rem;
-    top: 1.25rem;
+    top: 0.8rem;
     appearance: none;
     border: 0;
     background-color: var(--color-link);
