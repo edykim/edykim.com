@@ -50,10 +50,24 @@ const components = [
         key: 'post-list',
         template: '_insert/post-list.html',
         props: (node, nodes, args) => {
-            const _nodes = publicListablePostOnly(nodes, node.data.frontmatter.lang)
+            let opts = {};
+            try {
+                opts = JSON.parse(args);
+            } catch (e) {}
+
+            const _nodes = opts.publicOnly
+                ? publicPostOnly(nodes, node.data.frontmatter.lang)
+                : publicListablePostOnly(nodes, node.data.frontmatter.lang)
+
+            let __nodes = opts.tag ? hasTag(_nodes, opts.tag) : _nodes;
+
+            if (opts.limit) {
+                __nodes = __nodes.slice(0, opts.limit)
+            }
+
             return {
                 node,
-                nodes: args !== '' ? hasTag(_nodes, args) : _nodes
+                nodes: __nodes,
             }
         },
     },

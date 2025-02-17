@@ -550,3 +550,22 @@ details[open] {
     max-width: 100%;
     aspect-ratio: 3 / 2;
 }
+
+.content > .narrow {
+    max-width: 30rem;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.subtitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.subtitle + .list-page .post-title-list {
+    margin-top: 0;  
+}
