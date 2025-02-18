@@ -31,7 +31,6 @@ noIndex: true
 - [mov eax, 4](https://www.leonkim.net/)
 - [KODINGWARRIOR QUEST](https://kodingwarrior.github.io/posts/)
 - [yuza🍊](https://nvrtmd.hashnode.dev/)
-- [Seulgi_room Blog](https://www.seulgi-room.kr/)
 - [기억보다 기록을](https://jojoldu.tistory.com/)
 - [연로그](https://yeonyeon.tistory.com/)
 - [Toby's Epril](https://tobyepril.tistory.com/)
