@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2024-10-31T10:50:37"
+updatedOn: "2025-02-18T09:50:02"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -40,7 +40,7 @@ noIndex: true
 - [제이크서 위키 블로그](https://jake-seo-dev.tistory.com/)
 - [raccoony's cave](https://blog.raccoony.dev/)
 - [권혜정을 권해](https://kwonejeong.tistory.com/)
-- [Jayoung](https://jayoung.blog/)
+- [Jayoung](https://jayoung.substack.com/)
 - [박성범 Simon Park](https://parksb.github.io/articles.html)
 - [Pseudorandom Things](https://pseudorandomstring.wordpress.com/)
 - [juneyr.dev 테크 블로그](https://juneyr.dev/)
