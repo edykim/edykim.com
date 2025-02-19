@@ -17,7 +17,8 @@ ext:
 :::div{.youtube-playlist}
 
 1. [Roy Hargrove Quintet - Speak Low](https://www.youtube.com/watch?v=BzEKMZ3O6Vo) [5:16]
-2. [Bill Evans - Like Someone In Love](https://www.youtube.com/watch?v=gw-o0uTkp_k) [6:27]
-3. [Miles Davis - All Blues](https://www.youtube.com/watch?v=xb3iCpu-JFs) [11:32]
+1. [Bill Evans - Like Someone In Love](https://www.youtube.com/watch?v=gw-o0uTkp_k) [6:27]
+1. [Nicholas Payton - Chinatown](https://www.youtube.com/watch?v=VeJHf_oeTDg) [4:00]
+1. [Freddie Hubbard - You've Changed](https://www.youtube.com/watch?v=_xOaL7nbINI) [7:28]
 
 :::
