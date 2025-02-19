@@ -57,6 +57,7 @@
 .youtube-playlist [data-current] .entry-link {
     font-weight: bold;
 }
+
 #playlist-player {
     position: fixed;
     right: 0;
@@ -64,6 +65,7 @@
     width: 60px;
     height: 60px;
     z-index: -100;
+    opacity: 0.001;
 }
 
 .playlist--buttons {
@@ -113,7 +115,7 @@ if (document.querySelector('.youtube-playlist')) {
 
     function onPlayerReady(event) {
         console.log('onPlayerReady');
-        event.target.playVideo();
+        // event.target.playVideo();
     }
 
     function onPlayerStateChange(event) {
