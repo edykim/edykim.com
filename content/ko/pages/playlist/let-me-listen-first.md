@@ -10,7 +10,7 @@ ext:
   - playlist
 ---
 
-<div style="width: 150px; margin: 2rem 0; aspect-ratio: 1; background: var(--color-shadow); border-radius: 2px;"></div>
+<div style="width: 150px; margin: 2rem 0 1rem; aspect-ratio: 1; background: var(--color-shadow); border-radius: 2px;"></div>
 
 <h1 class="font-size-medium">일단 들어보고</h1>
 
