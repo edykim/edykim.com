@@ -1,0 +1,243 @@
+
+<style>
+.ext-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--color-text) !important;
+    opacity: 0.8;
+    margin-left: 0.5rem;
+}
+
+.youtube-playlist button {
+    appearance: none;
+    padding: 0.5rem 0.3rem;
+    color: var(--color-text);
+    background: var(--color-background);
+    cursor: pointer;
+    width: 60px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.youtube-playlist button:active {
+    border: 1px solid var(--color-gray);
+}
+
+.youtube-playlist button.toggled {
+    border-bottom-color: var(--color-night-link-active);
+}
+
+.youtube-playlist button img {
+    width: 9px;
+    height: 9px;
+    margin-left: 3px;
+}
+
+.mode--dark .youtube-playlist button img,
+.mode--night .youtube-playlist button img,
+.mode--tumblr .youtube-playlist button img {
+    filter: invert(1);
+}
+
+.youtube-playlist .entry-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.youtube-playlist .entry-link:hover,
+.youtube-playlist .entry-link:active,
+.youtube-playlist .entry-link:focus {
+    text-decoration: underline dotted;
+}
+
+.youtube-playlist [data-current] .entry-link {
+    font-weight: bold;
+}
+#playlist-player {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 120px;
+    z-index: -100;
+    display: none;
+}
+
+.playlist--buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+if (document.querySelector('.youtube-playlist')) {
+    let player = null;
+    let initialVideoId = null;
+    const playlist = createPlaylist(document.querySelector('.youtube-playlist'));
+
+    function loadYoutubeAPI() {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.querySelector('head').append(tag);
+    }
+
+    window.onYouTubeIframeAPIReady = () => {
+        console.log('onYouTubeIframeAPIReady');
+
+        const _player = document.createElement('div');
+        _player.setAttribute('id', 'playlist-player');
+        document.querySelector('body').append(_player);
+
+        player = new YT.Player('playlist-player', {
+            height: '120',
+            width: '120',
+            videoId: initialVideoId,
+            playerVars: {
+                'playsinline': 1,
+                'rel': 0
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onError': onError,
+                'onStateChange': onPlayerStateChange
+            },
+        });
+    }
+
+    function onError(error) {
+        console.log('error', error.data);
+    }
+
+    function onPlayerReady(event) {
+        console.log('onPlayerReady');
+        // event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+        console.log('onPlayerStateChange', event.data);
+        if (event.data === YT.PlayerState.ENDED) {
+            playlist?.buttons.playBtn.classList.remove('toggled');
+            playlist?.buttons.pauseBtn.classList.remove('toggled');
+            playlist?.buttons.stopBtn.classList.add('toggled');
+            playlist?.buttons.nextBtn.click();
+        }
+
+        if (event.data === YT.PlayerState.PLAYING) {
+            playlist?.buttons.playBtn.classList.add('toggled');
+            playlist?.buttons.pauseBtn.classList.remove('toggled');
+            playlist?.buttons.stopBtn.classList.remove('toggled');
+        } else if (event.data === YT.PlayerState.PAUSED) {
+            playlist?.buttons.playBtn.classList.add('toggled');
+            playlist?.buttons.pauseBtn.classList.add('toggled');
+            playlist?.buttons.stopBtn.classList.remove('toggled');
+        } else if (event.data === YT.PlayerState.ENDED || event.data === YT.PlayerState.CUED) {
+            playlist?.buttons.playBtn.classList.remove('toggled');
+            playlist?.buttons.pauseBtn.classList.remove('toggled');
+            playlist?.buttons.stopBtn.classList.add('toggled');
+        }
+    }
+
+    function createPlaylist(el) {
+        const lines = el.querySelectorAll('li');
+
+        function createButton(label, image, onclick) {
+            const button = document.createElement('button');
+            button.addEventListener('click', onclick);
+
+            const lbl = document.createElement('span');
+            lbl.textContent = label;
+            const img = document.createElement('img');
+            img.setAttribute('src', image);
+            button.append(lbl);
+            button.append(img);
+            return button;
+        }
+
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('playlist--buttons');
+
+        const playBtn = createButton('Play', '/assets/playlist/play.svg', () => {
+            if (el.querySelector('[data-current]') === null) {
+                switchTo(el.querySelector('li'));
+                return;
+            }
+            player.playVideo();
+        });
+        const pauseBtn = createButton('Pause', '/assets/playlist/pause.svg', () => {
+            player.pauseVideo();
+        });
+        const stopBtn = createButton('Stop', '/assets/playlist/stop.svg', () => {
+            player.stopVideo();
+        });
+        const prevBtn = createButton('Prev', '/assets/playlist/backward.svg', () => {
+            switchTo(el.querySelector('[data-current]')?.previousElementSibling);
+        });
+        const nextBtn = createButton('Next', '/assets/playlist/forward.svg', () => {
+            switchTo(el.querySelector('[data-current]')?.nextElementSibling);
+        });
+
+        const buttons = {
+            playBtn,
+            pauseBtn, 
+            stopBtn,
+            prevBtn,
+            nextBtn
+        }
+
+        function switchTo(next) {
+            el.querySelector('[data-current]')?.removeAttribute('data-current');
+            if (!next) {
+                player.stopVideo();
+                return;
+            }
+            next.setAttribute('data-current', '');
+            player?.loadVideoById({'videoId': next.dataset.youtubeId});
+        }
+
+        buttonContainer.prepend(nextBtn);
+        buttonContainer.prepend(prevBtn);
+        buttonContainer.prepend(stopBtn);
+        buttonContainer.prepend(pauseBtn);
+        buttonContainer.prepend(playBtn);
+
+        el.prepend(buttonContainer);
+
+        for(const line of lines) {
+            const link = line.querySelector('a');
+            link.classList.add('entry-link');
+            const id = link.getAttribute('href').split('watch?v=')[1];
+
+            const ext = document.createElement('a');
+            ext.classList.add('ext-link');
+            ext.setAttribute('target', '_blank');
+            ext.setAttribute('rel', 'nofollow');
+            ext.setAttribute('href', link.getAttribute('href'));
+            ext.textContent = '#';
+
+            line.append(ext);
+            line.dataset.youtubeId = id;
+
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const current = el.querySelector('[data-current]');
+                if (current === line) {
+                    return false;
+                }
+
+                switchTo(line);
+                return false;
+            });
+        }
+
+        initialVideoId = lines[0].dataset.youtubeId;
+
+        loadYoutubeAPI();
+        return {buttons};
+    }
+}
+});
+</script>
