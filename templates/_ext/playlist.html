@@ -227,11 +227,43 @@ if (document.querySelector('.youtube-playlist')) {
 
         el.prepend(buttonContainer);
 
+        function runningTimeToSeconds(str) {
+            const r = str.split(':').reverse()
+            if (r.length <= 3) {
+                return r.reduce((carry, val, i) => {
+                    carry += parseInt(val) * Math.pow(60, i);
+                    return carry;
+                }, 0);
+            }
+            // wrong format
+            return 0;
+        }
+
+        function convertSecondsToRunningTime(seconds) {
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            return [
+                    hrs > 0 ? String(hrs) : null,
+                    String(mins),
+                    String(secs)
+                ]
+                .filter(Boolean)
+                .map(unit => String(unit).padStart(2, '0'))
+                .join(':');
+        }
+
+        let totalRunning = 0;
+
         for(const line of lines) {
+            const timeText = Array.from(line.childNodes)
+                .find(node => node.nodeType === Node.TEXT_NODE);
+            const time = timeText.textContent.trim().slice(1,-1);
+            totalRunning += runningTimeToSeconds(time);
             const link = line.querySelector('a');
             link.classList.add('entry-link');
             const id = link.getAttribute('href').split('watch?v=')[1];
-
             const ext = document.createElement('a');
             ext.classList.add('ext-link');
             ext.setAttribute('target', '_blank');
@@ -253,6 +285,11 @@ if (document.querySelector('.youtube-playlist')) {
                 return false;
             });
         }
+
+        const small = document.createElement('small');
+        small.textContent = 'Total: ' + convertSecondsToRunningTime(totalRunning);
+
+        el.append(small);
 
         initialVideoId = lines[0].dataset.youtubeId;
 
