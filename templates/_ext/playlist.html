@@ -175,6 +175,10 @@ if (document.querySelector('.youtube-playlist')) {
     function createPlaylist(el) {
         const lines = el.querySelectorAll('li');
 
+        const status = {
+            repeat: false,
+        }
+
         function createButton(label, image, onclick) {
             const button = document.createElement('button');
             button.addEventListener('click', onclick);
@@ -208,7 +212,16 @@ if (document.querySelector('.youtube-playlist')) {
             switchTo(el.querySelector('[data-current]')?.previousElementSibling);
         });
         const nextBtn = createButton('Next', '/assets/playlist/forward.svg', () => {
-            switchTo(el.querySelector('[data-current]')?.nextElementSibling);
+            let next = el.querySelector('[data-current]')?.nextElementSibling;
+
+            if (!next && status.repeat) {
+                next = lines[0];
+            }
+
+            switchTo(next);
+        });
+        const repeatBtn = createButton('Repeat', '/assets/playlist/repeat.svg', () => {
+            status.repeat = repeatBtn.classList.toggle('toggled');
         });
 
         const buttons = {
@@ -216,7 +229,8 @@ if (document.querySelector('.youtube-playlist')) {
             pauseBtn, 
             stopBtn,
             prevBtn,
-            nextBtn
+            nextBtn,
+            repeatBtn
         }
 
         function switchTo(next) {
@@ -229,6 +243,7 @@ if (document.querySelector('.youtube-playlist')) {
             player?.loadVideoById({'videoId': next.dataset.youtubeId});
         }
 
+        buttonContainer.prepend(repeatBtn);
         buttonContainer.prepend(nextBtn);
         buttonContainer.prepend(prevBtn);
         buttonContainer.prepend(stopBtn);
