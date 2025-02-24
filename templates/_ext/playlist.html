@@ -78,14 +78,20 @@
     font-weight: bold;
 }
 
-#playlist-player {
+#playlist-player-wrapper {
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 60px;
-    height: 60px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
     z-index: -100;
     opacity: 0.001;
+}
+
+#playlist-player {
+    width: 60px;
+    height: 60px;
 }
 
 .playlist--buttons {
@@ -109,9 +115,13 @@ if (document.querySelector('.youtube-playlist')) {
     window.onYouTubeIframeAPIReady = () => {
         console.log('onYouTubeIframeAPIReady');
 
+        const _playerWrapper = document.createElement('div');
+        _playerWrapper.setAttribute('id', 'playlist-player-wrapper');
+        document.querySelector('body').append(_playerWrapper);
+
         const _player = document.createElement('div');
         _player.setAttribute('id', 'playlist-player');
-        document.querySelector('body').append(_player);
+        _playerWrapper.append(_player);
 
         player = new YT.Player('playlist-player', {
             height: '120',
