@@ -38,9 +38,18 @@ Still, the template can use a parent template based on hierarchy using
 
 ## local
 
-Create a self-signed ssl key and then use serve.
+`dev` script will provide watch via [chokidar-cli][1] and [serve][2] for local dev.
+
+```bash
+$ npm run dev
+```
+
+Alternatively, create a self-signed ssl key and then use serve.
 ```bash
 $ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes \
         -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
 $ npx serve --ssl-cert cert.pem --ssl-key key.pem -l 443 public
 ```
+
+[1]: https://github.com/open-cli-tools/chokidar-cli
+[2]: https://github.com/vercel/serve
