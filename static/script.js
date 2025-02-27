@@ -204,3 +204,51 @@ window.onload = () => {
     // loadGiscus();
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+    pageMarkApp();
+});
+
+function pageMarkApp() {
+    const SET_MARK_KEY = 'm'
+    const GOTO_MARK_KEY = "'"
+
+    const NONE_MODE = 'none'
+    const SET_MODE = 'set'
+    const GOTO_MODE = 'goto'
+
+    let markMode = 'none'
+
+    function mark(key) {
+        return `mark-${key}`;
+    }
+
+    document.addEventListener('keydown', e => {
+        const active = document.activeElement;
+        if (active instanceof HTMLInputElement || active instanceof HTMLTextAreaElement) {
+            return;
+        }
+
+        if (markMode === NONE_MODE) {
+            if (e.key === SET_MARK_KEY) {
+                e.preventDefault();
+                markMode = SET_MODE;
+            } else if (e.key === GOTO_MARK_KEY) {
+                e.preventDefault();
+                markMode = GOTO_MODE;
+            }
+        } else {
+            if (e.key.match(/[a-zA-Z]/)) {
+                if (markMode === SET_MODE) {
+                    localStorage
+                        .setItem(mark(e.key), window.location.href);
+                } else if (markMode === GOTO_MODE) {
+                    const url = localStorage.getItem(mark(e.key));
+                    if (url) {
+                        window.location.href = url;
+                    }
+                }
+            }
+            markMode = NONE_MODE
+        }
+    })
+}
