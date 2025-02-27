@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/app.js"
+    "build": "node src/app.js",
+    "watch": "npx chokidar-cli \"{src,content,config,templates,static}/**/*\" -c \"npm run build\"",
+    "serve": "npx serve public",
+    "dev": "npx concurrently \"npm run watch\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
