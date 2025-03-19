@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-02-18T09:50:02"
+updatedOn: "2025-03-18T17:43:44"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -13,9 +13,7 @@ noIndex: true
 
 <div class="col">
 
-## 자주 보는 웹페이지
-
-좋아하는 글이 자주 올라와서 내적친밀감 쌓이는 페이지들.
+## 수집한 웹페이지 
 
 :::div{.with-random-button}
 
@@ -54,6 +52,8 @@ noIndex: true
 - [강단 블로그](https://kangminsuk.com/ko/)
 - [로그아웃아일랜드](https://www.logoutisland.com/)
 - [고은비 블로그](https://eunbiko.com/)
+- [Dowha's Blog](https://blog.dowha.kim/)
+- [김평안](https://bepyan.me/)
 
 :::
 
