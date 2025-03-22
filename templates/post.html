@@ -13,7 +13,7 @@
         ? utils.displayContent()
         : `<div class="content">${utils.displayContent()}</div>`}
 
-    ${! data.frontmatter.noInteraction ? `
+    ${! data.frontmatter.noInteraction && ['post', 'page'].includes(data.frontmatter.type) ? `
     <form class="likes-widget" action="https://likes.poup.us/likes/${data.fields.urlUuid}" data-uuid="${data.fields.urlUuid}" method="post">
         <button type="submit"><span class="label" aria-label="Like this post">💚</span> <span class="cnt"></span></button>
     </form>
