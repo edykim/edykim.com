@@ -206,6 +206,7 @@ window.onload = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
     pageMarkApp();
+    initLikeButtons();
 });
 
 function pageMarkApp() {
@@ -251,4 +252,52 @@ function pageMarkApp() {
             markMode = NONE_MODE
         }
     })
+}
+
+function initLikeButtons() {
+    document.querySelectorAll('.likes-widget').forEach(function (el) {
+        const $btn = el.querySelector('button');
+        const $count = el.querySelector('.cnt');
+
+        if (localStorage.getItem('liked-' + el.dataset.uuid)) {
+            $btn.classList.add('liked');
+        }
+
+        fetch(el.getAttribute('action'), {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            },
+        }).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            $count.dataset.cnt = data.cnt;
+
+            if (data.cnt > 0) {
+                $count.textContent = $count.dataset.cnt;
+            }
+        });
+
+        el.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if ($btn.classList.contains('liked')) {
+                return false;
+            }
+
+            fetch(el.getAttribute('action'), {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                },
+            }).then(function (response) {
+                return response.json();
+            });
+
+            localStorage.setItem('liked-' + el.dataset.uuid, '1');
+            $btn.classList.add('liked');
+            $count.dataset.cnt = parseInt($count.dataset.cnt) + 1;
+            $count.textContent = $count.dataset.cnt;
+            return false;
+        });
+    });
 }

@@ -6,6 +6,7 @@ type: page
 lang: ko
 url: /
 noTitle: true
+noInteraction: true
 ---
 
 :::div{.narrow}

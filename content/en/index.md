@@ -6,6 +6,7 @@ type: page
 lang: en
 url: /
 noTitle: true
+noInteraction: true
 ---
 
 :::div{.narrow}

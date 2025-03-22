@@ -582,3 +582,55 @@ details[open] {
 .mode--dark .headpiece img {
     filter: invert(1) grayscale(1);
 }
+
+.likes-widget {
+    margin: 2rem 0 1rem;
+}
+
+.likes-widget button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    appearance: none;
+    border: none;
+    background-color: var(--color-border);
+    color: var(--color-text);
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+}
+
+.likes-widget button .label {
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+.likes-widget button .cnt:empty {
+    display: none;
+}
+.likes-widget button .cnt {
+    border-radius: 12px;
+    background-color: var(--color-background-color);
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 0.7rem;
+    display: inline-block;
+    padding: 0.2rem 0.3rem;
+    min-width: 0.6rem;
+}
+
+.likes-widget button:hover {
+    color: var(--color-background-color);
+    background-color: var(--color-link);
+}
+
+.likes-widget button:focus,
+.likes-widget button:active {
+    color: var(--color-background-color);
+    background-color: var(--color-link-active);
+}
+
+.likes-widget button.liked {
+    color: var(--color-background-color);
+    background-color: var(--color-link-visited);
+}

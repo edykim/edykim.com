@@ -14,6 +14,7 @@ import {h} from 'hastscript'
 import {visit} from 'unist-util-visit'
 
 import {parseRoute} from './route.js'
+import getUuidByString from 'uuid-by-string'
 
 const pipeline = unified()
     .use(remarkParse)
@@ -42,6 +43,7 @@ function updateRoute() {
 
         const url = parseRoute(node);
         node.data.fields.url = url;
+        node.data.fields.urlUuid = getUuidByString(url);
     }
 }
 
