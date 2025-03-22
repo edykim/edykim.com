@@ -603,23 +603,26 @@ details[open] {
 
 .likes-widget button .label {
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 }
 .likes-widget button .cnt:empty {
     display: none;
 }
 .likes-widget button .cnt {
-    border-radius: 12px;
-    background-color: var(--color-background-color);
-    color: var(--color-text);
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     display: inline-block;
-    padding: 0.2rem 0.3rem;
     min-width: 0.6rem;
+    color: var(--color-background-color);
 }
 
-.likes-widget button:hover {
+.likes-widget button.liked {
+    color: var(--color-background-color);
+    background-color: var(--color-link-visited);
+}
+
+.likes-widget button:hover,
+.likes-widget button.liked:hover {
     color: var(--color-background-color);
     background-color: var(--color-link);
 }
@@ -630,7 +633,18 @@ details[open] {
     background-color: var(--color-link-active);
 }
 
-.likes-widget button.liked {
-    color: var(--color-background-color);
-    background-color: var(--color-link-visited);
+.likes-widget button:active {
+    animation: button-focus 0.2s;
+}
+
+@keyframes button-focus {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -280,9 +280,6 @@ function initLikeButtons() {
 
         el.addEventListener('submit', function (e) {
             e.preventDefault();
-            if ($btn.classList.contains('liked')) {
-                return false;
-            }
 
             fetch(el.getAttribute('action'), {
                 method: 'POST',
