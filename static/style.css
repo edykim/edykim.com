@@ -119,7 +119,7 @@ html {
 }
 
 body {
-    font-family: Pretendard, -apple-system, system-ui, BlinkMacSystemFont, segoe ui, Roboto, Ubuntu, Arial, sans-serif;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -535,11 +535,11 @@ details[open] {
 
 .random-btn, .details-toggle-btn, .fold-btn {
     appearance: none;
-    border: 3px solid var(--color-text);
+    border: 2px solid var(--color-text);
     background: transparent;
     color: var(--color-text);
-    padding: 0.4rem 0.75rem;
-    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -647,4 +647,41 @@ details[open] {
     100% {
         transform: scale(1);
     }
+}
+
+.with-random-button {
+    margin-bottom: 3rem;
+    max-width: none !important;
+}
+
+.with-random-button ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid: auto-flow dense 1fr / repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 0.5rem;
+    align-items: stretch;
+}
+
+.with-random-button ul a {
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+    background-color: var(--color-border);
+    padding: 0.75rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+.with-random-button ul a:after {
+    content: attr(href);
+    display: block;
+    color: var(--color-gray);
+    font-size: 0.6rem;
+}
+.with-random-button ul a:hover {
+    background-color: var(--color-link);
+    color: var(--color-background-color);
+}
+.with-random-button ul a:hover:after {
+    color: var(--color-background-color);
 }

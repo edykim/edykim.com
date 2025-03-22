@@ -9,11 +9,7 @@ url: bookmarks
 noIndex: true
 ---
 
-<div class="columns">
-
-<div class="col">
-
-## 수집한 웹페이지 
+## 블로그/개인 웹사이트
 
 :::div{.with-random-button}
 
@@ -57,10 +53,6 @@ noIndex: true
 
 :::
 
-</div>
-
-<div class="col">
-
 ## 새로운 자극들
 
 :::div{.with-random-button}
@@ -77,12 +69,9 @@ noIndex: true
 - [The Local Project](https://thelocalproject.com.au/)
 - [Dead Simple Sites](https://deadsimplesites.com/)
 - [The Pudding](https://pudding.cool/)
+- [LIFE LABEL](https://lifelabel.jp/)
 
 :::
-
-</div>
-
-<div class="col">
 
 ## 이것저것 상점
 
@@ -101,5 +90,3 @@ noIndex: true
 - [WAKA-WAKA](https://wakawaka.world/)
 
 :::
-
-</div></div>

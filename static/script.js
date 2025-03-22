@@ -139,7 +139,7 @@ window.onload = () => {
         .forEach(el => {
             const button = document.createElement('button');
             button.classList.add('random-btn');
-            button.textContent = 'Random';
+            button.textContent = 'Random 🎲 ';
             el.prepend(button);
 
             const ul = el.querySelector('ul');
