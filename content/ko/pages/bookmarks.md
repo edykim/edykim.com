@@ -76,6 +76,7 @@ noIndex: true
 - [WriterDeck.org](http://www.writerdeck.org/)
 - [The Local Project](https://thelocalproject.com.au/)
 - [Dead Simple Sites](https://deadsimplesites.com/)
+- [The Pudding](https://pudding.cool/)
 
 :::
 
