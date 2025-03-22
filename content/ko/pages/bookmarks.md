@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-03-18T17:43:44"
+updatedOn: "2025-03-22T05:39:37"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -75,6 +75,7 @@ noIndex: true
 - [People and Blogs](https://peopleandblogs.com/)
 - [WriterDeck.org](http://www.writerdeck.org/)
 - [The Local Project](https://thelocalproject.com.au/)
+- [Dead Simple Sites](https://deadsimplesites.com/)
 
 :::
 
