@@ -8,7 +8,11 @@ url: about
 noTitle: true
 ---
 
+<figure>
+
 ![김용균과 빨간 트위터 풍선 사진](me-with-a-red-bird.jpg)
+
+</figure>
 
 :::div{.narrow}
 

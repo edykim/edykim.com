@@ -221,8 +221,8 @@ table td {
 
 .setting-btn {
     position: absolute;
-    top: calc(1rem + 0.4vw);
-    right: calc(1rem + 0.4vw);
+    top: max(1rem, 2vw);
+    right: max(1rem, 2vw);
     appearance: none;
     border: 0;
     background-color: transparent;
@@ -233,6 +233,8 @@ table td {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-top: -0.5rem;
+    margin-right: -0.5rem;
 }
 
 .setting-btn:hover,
@@ -545,6 +547,17 @@ details[open] {
 
 .post-title-list a {
     text-decoration: none;
+}
+
+.post-title-list li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+@media screen and (max-width: 340px) {
+    .post-title-list li {
+        grid-template-columns: 1fr;
+    }
 }
 
 .random-btn, .details-toggle-btn, .fold-btn {

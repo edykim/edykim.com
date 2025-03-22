@@ -9,8 +9,11 @@ noTitle: true
 noInteraction: true
 ---
 
-<img src="https://live.staticflickr.com/65535/54090466206_1a3257f762_k.jpg" alt="notes and coffee" loading="lazy" style="border-radius: 4px; margin-top: 1rem;">
+<figure>
 
+<img src="https://live.staticflickr.com/65535/54090466206_1a3257f762_k.jpg" alt="notes and coffee" loading="lazy" style="border-radius: 4px;">
+
+</figure>
 
 :::div{.narrow}
 
