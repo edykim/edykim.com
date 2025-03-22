@@ -43,7 +43,7 @@ function updateRoute() {
 
         const url = parseRoute(node);
         node.data.fields.url = url;
-        node.data.fields.urlUuid = getUuidByString(url);
+        node.data.fields.urlUuid = getUuidByString('ed059c22a9e8' + url);
     }
 }
 
