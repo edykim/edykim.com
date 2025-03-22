@@ -197,6 +197,11 @@ table td {
     font-size: 0.9rem;
 }
 
+
+.page .content > pre > code[class^=language-] {
+    overflow-x: auto;
+}
+
 .site-header, .site-footer {
     display: block;
 }
