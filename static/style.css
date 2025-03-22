@@ -115,7 +115,8 @@ html {
     background-color: var(--color-background-color);
     color: var(--color-text);
     line-height: 1.5;
-    font-size: calc(12px + .3vw);
+    font-size: 16px;
+    font-size: max(14px, calc(12px + .3vw));
 }
 
 body {
@@ -125,7 +126,7 @@ body {
     font-style: normal;
     word-break: keep-all;
     margin: 1rem;
-    margin: calc(1rem + 0.8vw);
+    margin: max(1rem, 2vw);
     max-width: none;
 }
 
@@ -220,12 +221,11 @@ table td {
 
 .setting-btn {
     position: absolute;
-    right: 1.25rem;
-    top: 0.8rem;
+    top: calc(1rem + 0.4vw);
+    right: calc(1rem + 0.4vw);
     appearance: none;
     border: 0;
-    background-color: var(--color-link);
-    color: var(--color-background-color);
+    background-color: transparent;
     padding: 0.6rem;
     cursor: pointer;
     border-radius: 100%;
@@ -235,12 +235,17 @@ table td {
     gap: 0.5rem;
 }
 
-.setting-btn:hover { background-color: var(--color-link-active); }
-.setting-btn:active { background-color: var(--color-link-visited); }
+.setting-btn:hover,
+.setting-btn:active { background-color: var(--color-link); }
 
 .setting-btn svg {
     width: 1rem;
     height: 1rem;
+    fill: var(--color-gray);
+}
+
+.setting-btn:hover svg,
+.setting-btn:active svg {
     fill: var(--color-background-color);
 }
 
