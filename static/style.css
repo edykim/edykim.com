@@ -659,7 +659,7 @@ details[open] {
     padding: 0;
     display: grid;
     grid: auto-flow dense 1fr / repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 0.5rem;
+    grid-gap: 0.3rem;
     align-items: stretch;
 }
 
@@ -671,6 +671,7 @@ details[open] {
     padding: 0.75rem;
     height: 100%;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 .with-random-button ul a:after {
     content: attr(href);
