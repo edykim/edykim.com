@@ -211,7 +211,7 @@ table td {
     margin: 0.2rem;
     border-bottom: 2px solid var(--color-border);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .site-header nav {
