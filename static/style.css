@@ -647,12 +647,16 @@ details[open] {
     font-size: 0.75rem;
     display: inline-block;
     min-width: 0.6rem;
-    color: var(--color-background-color);
+    color: var(--color-text);
 }
 
 .likes-widget button.liked {
     color: var(--color-background-color);
     background-color: var(--color-link-visited);
+}
+
+.likes-widget button.liked .cnt {
+    color: var(--color-background-color);
 }
 
 .likes-widget button:hover,
