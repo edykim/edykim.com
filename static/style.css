@@ -4,7 +4,7 @@
     --color-day-shadow: #e4efdb;
     --color-day-gray: #555555;
     --color-day-border: #eee;
-    --color-day-code-background-color: #0d1117;
+    --color-day-code-background-color: #fcfdff;
     --color-day-link: #301eb5;
     --color-day-link-visited: #551A8B;
     --color-day-link-active: #EE0000;
@@ -24,7 +24,7 @@
     --color-sepia-shadow: #e2d5b0;
     --color-sepia-gray: #6d5e2e;
     --color-sepia-border: #e4d8b4;
-    --color-sepia-code-background-color: #29200f;
+    --color-sepia-code-background-color: #fff3dc;
     --color-sepia-link: #4147a1;
     --color-sepia-link-visited: #7a3d5e;
     --color-sepia-link-active: #ec341c;
@@ -34,7 +34,7 @@
     --color-dark-shadow: #444;
     --color-dark-gray: #6d6d6d;
     --color-dark-border: #444444;
-    --color-dark-code-background-color: #0d1117;
+    --color-dark-code-background-color: #28282a;
     --color-dark-link: #90bfff;
     --color-dark-link-visited: #f190ff;
     --color-dark-link-active: #ffa290;
@@ -45,7 +45,7 @@
     --color-tumblr-shadow: #3d4c62;
     --color-tumblr-gray: #858a8e;
     --color-tumblr-border: #303b47;
-    --color-tumblr-code-background-color: #19222c;
+    --color-tumblr-code-background-color: #151d26;
     --color-tumblr-link: #529ecc;
     --color-tumblr-link-visited: #bfb3ff;
     --color-tumblr-link-active: #6a52cc;

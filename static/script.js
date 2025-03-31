@@ -21,9 +21,20 @@ function getCurrentMode() {
     return 'day';
 }
 
+const codeLight = ['day', 'sepia'];
+
 function setMode(name) {
     const current = getCurrentMode();
     cl.add(`mode--${name}`);
+
+    cl.remove(`code---light`);
+    cl.remove(`code--dark`);
+
+    if (codeLight.includes(name)) {
+        cl.add('code--light');
+    } else {
+        cl.add('code--dark');
+    }
 
     if (current != name) {
         cl.remove(`mode--${current}`);

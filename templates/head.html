@@ -4,12 +4,11 @@ ${data.frontmatter.ext ? data.frontmatter.ext?.map(extName => template(`_ext/${e
 
 ${template('style.html', data)}
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="/style.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="/highlight.css" />
 <script src="/script.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/lisp.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/groovy.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/haskell.min.js"></script>
 <script>window.addEventListener('load', () => hljs.highlightAll());</script>
-
