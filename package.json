@@ -9,7 +9,7 @@
     "build": "node src/app.js",
     "watch": "npx chokidar-cli \"{src,content,config,templates,static}/**/*\" -c \"npm run build\"",
     "serve": "npx serve public",
-    "dev": "npx concurrently \"npm run watch\" \"npm run serve\" -n \"watch,serve\" -c \"auto\""
+    "dev": "npm run build && npx concurrently \"npm run watch\" \"npm run serve\" -n \"watch,serve\" -c \"auto\""
   },
   "keywords": [],
   "author": "",
