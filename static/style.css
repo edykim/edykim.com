@@ -126,6 +126,7 @@ body {
     word-break: keep-all;
     margin: 1rem;
     margin: max(1rem, 2.5vw);
+    margin-top: max(1.5rem, 2.5vw);
     max-width: none;
 }
 
@@ -241,7 +242,7 @@ body > .comments {
 
 .site-header {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .site-header, .site-footer {
