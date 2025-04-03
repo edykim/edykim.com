@@ -353,7 +353,7 @@ body > .comments {
     margin: 0;
     padding: 0.5rem;
     list-style: none;
-    min-width: 130px;
+    min-width: 9.5rem;
     background: var(--color-shadow);
     border-radius: 10px;
     border-top-left-radius: 0;
