@@ -711,8 +711,8 @@ details[open] {
 }
 
 .subtitle {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
     margin: 1.5rem 0 0.5rem;
 }
 
