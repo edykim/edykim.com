@@ -588,55 +588,55 @@ html .hljs {
 }
 
 .font-size-extra-large {
-    font-size: 3rem;
+    font-size: 3rem !important;
 }
 .font-size-large {
-    font-size: 2rem;
+    font-size: 2rem !important;
 }
 .font-size-medium {
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
 .font-size-small {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
 }
 .font-size-extra-small {
-    font-size: 0.7rem;
+    font-size: 0.7rem !important;
 }
 
 .font-weight-100 {
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 
 .font-weight-200 {
-    font-weight: 200;
+    font-weight: 200 !important;
 }
 
 .font-weight-300 {
-    font-weight: 300;
+    font-weight: 300 !important;
 }
 
 .font-weight-400 {
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 .font-weight-500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .font-weight-600 {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .font-weight-700 {
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .font-weight-800 {
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 
 .font-weight-900 {
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 
 .darkreader-warning {
