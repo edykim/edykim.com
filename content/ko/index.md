@@ -11,14 +11,14 @@ noInteraction: true
 
 <figure>
 
-<img src="https://live.staticflickr.com/65535/54090466206_1a3257f762_k.jpg" alt="notes and coffee" loading="lazy" style="border-radius: 4px;">
+<img src="https://live.staticflickr.com/65535/54428226020_f41a28378d_k.jpg" alt="San Diego, 2024" loading="lazy" style="border-radius: 4px;">
 
 </figure>
 
 :::div{.narrow}
 
 <h1 class="font-size-medium font-weight-800">
-안녕하세요, 이것저것 웹으로 된 것 만들기 좋아하는 용균입니다.
+안녕하세요, 웹으로 이것저것 도구를 만드는 용균입니다.
 </h1>
 
 이 공간은 저에게 흥미 있는 주제들을 모아둔 개인 웹사이트입니다. 웹, 오픈소스, 사진, 커피 얘기하기 좋아합니다. 잡다하게 기록을 남기는 것과 이것저것 만사에 관심이 많아요. 오늘도 즐거운 웹생활 보내시길 바랄게요 ✨
