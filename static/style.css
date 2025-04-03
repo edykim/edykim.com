@@ -849,3 +849,10 @@ details[open] {
 .with-random-button ul a:hover:after {
     color: var(--color-background-color);
 }
+
+.content-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
