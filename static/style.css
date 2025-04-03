@@ -130,6 +130,10 @@ body {
     max-width: none;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a:link { color: var(--color-link); }
 a:visited { color: var(--color-link-visited); }
 a:active { color: var(--color-link-active); }
@@ -164,9 +168,14 @@ table td {
     padding: 0.25rem 0.75rem;
 }
 
-.page .content > * {
-    max-width: 52rem;
-    box-sizing: border-box;
+body > .site-header,
+body > .site-footer,
+body > .page,
+body > .neighbor-links,
+body > .comments {
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page .content > .wide {
@@ -202,34 +211,47 @@ table td {
     overflow-x: auto;
 }
 
+.site-header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 .site-header, .site-footer {
     display: block;
 }
 
-.site-header a {
+.site-header nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.site-header .site-title {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.site-header .site-title a {
+    text-decoration: none;
+    font-weight: bold;
     color: inherit;
-    margin: 0.2rem;
+}
+
+.site-header nav a {
+    color: inherit;
     border-bottom: 2px solid var(--color-border);
     text-decoration: none;
 }
 
-.site-header nav {
-    display: inline-block;
-}
-
-.site-header .site-title {
-    display: inline-block;
-    margin-left: -0.2rem;
-}
-
 .site-footer {
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .setting-btn {
     position: absolute;
-    top: max(1rem, 2.5vw);
-    right: max(1rem, 2.5vw);
+    top: 0;
+    right: 0;
     appearance: none;
     border: 0;
     background-color: transparent;
