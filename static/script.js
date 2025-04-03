@@ -266,6 +266,32 @@ function pageMarkApp() {
 }
 
 function initLikeButtons() {
+    const widgets = document.querySelectorAll('.likes-widget');
+    const ids = [];
+    const counts = {};
+    for(const widget of widgets) {
+        ids.push(widget.dataset.uuid);
+        counts[widget.dataset.uuid] = widget.querySelector('.cnt');
+    }
+
+    fetch(`https://likes.poup.us/likes/edykim.com/bulk?ids=${ids.join(',')}`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+        },
+    }).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        data.likes.forEach(function (d) {
+            const $count = counts[d.id];
+            $count.dataset.cnt = d.cnt;
+
+            if (d.cnt > 0) {
+                $count.textContent = $count.dataset.cnt;
+            }
+        });
+    });
+
     document.querySelectorAll('.likes-widget').forEach(function (el) {
         const $btn = el.querySelector('button');
         const $count = el.querySelector('.cnt');
@@ -273,21 +299,6 @@ function initLikeButtons() {
         if (localStorage.getItem('liked-' + el.dataset.uuid)) {
             $btn.classList.add('liked');
         }
-
-        fetch(el.getAttribute('action'), {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-            },
-        }).then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            $count.dataset.cnt = data.cnt;
-
-            if (data.cnt > 0) {
-                $count.textContent = $count.dataset.cnt;
-            }
-        });
 
         el.addEventListener('submit', function (e) {
             e.preventDefault();
