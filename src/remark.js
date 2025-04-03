@@ -22,6 +22,7 @@ const pipeline = unified()
     .use(remarkParseFrontmatter)
     .use(remarkDirective)
     .use(updateHtmlDirectives)
+    .use(tableWrapper)
     .use(collectImages)
     .use(updateRoute)
     .use(updateImagePath)
@@ -115,6 +116,36 @@ function updateYoutube(options = {width: 600, height: 300}) {
                             height="${options.height}"></iframe>
                     </div>`
                 }
+            }
+
+        })
+    }
+}
+
+function tableWrapper() {
+    return function (tree) {
+        visit(tree, "table", function (node, index, parent) {
+            let data = {};
+            if (node.data) {
+                data = node.data;
+            }
+            node.data = Object.assign({}, {
+                hProperties: {
+                    className: 'content-table'
+                }
+            }, data)
+
+            parent.children[index] = {
+                type: 'container',
+                children: [
+                    node
+                ],
+                data: {
+                    hName: 'div',
+                    hProperties: {
+                        className: 'content-table-wrapper'
+                    },
+                },
             }
 
         })
