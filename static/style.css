@@ -124,9 +124,12 @@ body {
     font-weight: 400;
     font-style: normal;
     word-break: keep-all;
-    margin: 1rem;
-    margin: max(1rem, 2.5vw);
-    margin-top: max(1.5rem, 2.5vw);
+
+    margin: 1.5rem 1rem;
+    margin-left: max(1rem, 2.5vw);
+    margin-right: max(1rem, 2.5vw);
+    margin-top: max(1.5rem, 4.2vw);
+    margin-bottom: max(1.5rem, 4.2vw);
     max-width: none;
 }
 
