@@ -52,7 +52,7 @@ Microsoft PowerShell은 Windows XP 이후로 꾸준히 탑재된 명령행 쉘�
 
 앞에서 생성한 토큰을 사용해서 텔레그램 봇에 정상적으로 접근할 수 있는지 확인하려 한다. 파워쉘은 `ps1`이라는 확장자를 사용한다. `status.ps1`라는 파일을 다음 내용으로 작성한 후에 저장한다.
 
-```powershell
+```
 $response = Invoke-WebRequest -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 echo $response.RawContent
 pause
@@ -90,7 +90,7 @@ pause
 
 응답 헤더와 json 형식의 응답 내용을 확인할 수 있다. `pause`로 인해 창이 닫히지 않고 엔터를 입력하면 그제서야 닫힌다.
 
-```powershell
+```
 $info = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 echo $info.ok
 ```
@@ -101,7 +101,7 @@ echo $info.ok
 
 앞 응답 내용에서 first_name, username처럼 `result` 내에 있는 데이터는 어떻게 확인할 수 있을까? 다음과 같은 코드를 추가하면 쉽게 확인할 수 있다.
 
-```powershell
+```
 $info = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getMe"
 
 if ($info.ok) {
@@ -120,7 +120,7 @@ if ($info.ok) {
 
 지금까지 텔레그램에 등록한 봇을 API로 접근할 수 있다는 점을 확인했다. 이제 텔레그램에 메시지를 전송하기 전에 사용자의 chatId를 알아내야 한다. 이 chatId를 알아내려면 어떻게 해야 할까? 봇이 받은 메시지를 확인하면 그 메시지를 보낸 사용자의 chatId를 찾을 수 있다. 받은 메시지는 [getUpdates 메서드][8]를 사용해서 확인 가능하다. 다음 코드를 추가해보자.
 
-```powershell
+```
 $updates = Invoke-RestMethod -Uri "https://api.telegram.org/bot<API 토큰>/getUpdates"
 
 if ($updates.ok) {
@@ -134,7 +134,7 @@ if ($updates.ok) {
 
 이제 이 코드를 실행해보면 빈 표가 출력되거나 에러가 발생한다. 그 이유는 봇과 텔레그램을 통해 메시지를 전송한 적이 없기 때문이다. 스팸 문제 때문인지 이 chatId는 실제로 해당 봇과 대화를 한 적이 있는 경우에만 얻을 수 있다. 텔레그램 봇 생성하기에서 받은 봇 링크(http://telegram.me/<생성한 Bot ID>)를 클릭한 다음에 `/start` 또는 아무 내용이나 메시지를 작성해서 전송한다. 전송한 다음에 스크립트를 실행하면 다음과 같은 결과를 확인할 수 있을 것이다.
 
-```powershell
+```
        id first_name last_name username  text  
        -- ---------- --------- --------  ----  
 138389563 Edward     Kim       haruair   /start
@@ -145,7 +145,7 @@ if ($updates.ok) {
 
 지금까지 작성한 `status.ps1`을 정리하면 다음과 같다.
 
-```powershell
+```
 $info = Invoke-RestMethod -Uri "https://api.telegram.org/bot$($config.token)/getMe"
 
 if ($info.ok) {
@@ -173,7 +173,7 @@ Bot API를 호출할 때 사용하는 토큰과 chatId는 별도의 설정 파�
 
 이 json 파일을 사용하도록 `status.ps1`을 다음 코드를 추가한다.
 
-```powershell
+```
 $config = Get-Content .\config.json | ConvertFrom-Json
 ```
 
@@ -181,7 +181,7 @@ $config = Get-Content .\config.json | ConvertFrom-Json
 
 이제 토큰은 `$config.token` 식으로 접근해서 사용할 수 있다. 이제 코드를 수정해보자. 파워쉘의 문자열 내에서는 `$(변수)` 형식으로 문자열 보간(String Interpolation)이 가능하다. 여기까지 진행한 `status.ps1`은 다음과 같다.
 
-```powershell
+```
 $config = Get-Content .\config.json | ConvertFrom-Json
 
 $info = Invoke-RestMethod -Uri "https://api.telegram.org/bot$($config.token)/getMe"
@@ -201,7 +201,7 @@ pause
 
 `Get-Content`를 사용할 때 주의해야 하는 점은 기본 인코딩이 따로 지정되어 있지 않다는 부분이다. 인코딩을 지정하지 않아도 큰 문제가 되지 않는 범위의 내용을 저장한다면 문제가 없지만 한글은 제대로 불러오지 못한다. 그래서 `-encoding` 매개 변수를 이용해서 `utf8`로 불러오면 문제 없이 불러올 수 있게 된다. 다음 코드를 참고하자.
 
-```powershell
+```
 $config = Get-Content .\config.json -Encoding utf8 | ConvertFrom-Json
 ```
 
@@ -209,7 +209,7 @@ $config = Get-Content .\config.json -Encoding utf8 | ConvertFrom-Json
 
 이제 본격적으로 메시지를 통해 보낼 데이터를 가공하려고 한다. `message.ps1`을 생성해서 다음 내용을 작성한다.
 
-```powershell
+```
 $haruair = Invoke-WebRequest -Uri "http://haruair.com/blog/"
 $titles = $haruair.ParsedHtml.getElementsByTagName("h2") | Where-Object { $_.className -eq "entry-title" }
 $links = $titles.getElementsByTagName("a") | Select-Object innerText, href
@@ -225,7 +225,7 @@ $links = $titles.getElementsByTagName("a") | Select-Object innerText, href
 
 이제 텔레그램으로 메시지를 전송하려고 한다. `message.ps1`에 다음 내용을 추가한다.
 
-```powershell
+```
 foreach ($link in $links) {
     $message = "New Post! $($link.innerText) $($link.href)"
     $encodedMessage = [System.Web.HttpUtility]::UrlEncode($message)
@@ -241,7 +241,7 @@ foreach ($link in $links) {
 
 지금까지 작성한 `message.ps1`을 종합하면 아래 코드와 같다.
 
-```powershell
+```
 $config = Get-Content .\config.json -Encoding utf8 | ConvertFrom-Json
 
 $haruair = Invoke-WebRequest -Uri "http://haruair.com/blog/"
@@ -265,7 +265,7 @@ foreach ($link in $links) {
 
 아래는 최종적인 `message.ps1` 코드 내용이다.
 
-```powershell
+```
 $config = Get-Content .\config.json -raw -encoding utf8 | ConvertFrom-Json
 
 $haruair = Invoke-WebRequest -Uri "http://haruair.com/blog/"
@@ -295,7 +295,7 @@ if ($measure.Count -ne 0) {
 
 [`Measure-Object`][15]는 개체의 수를 셀 때 사용한다. `measure`로 줄여서 사용할 수 있다. 위 코드에서는 다소 장황하게 사용했는데 다른 방식으로 작성하는 방법도 존재한다. 아래 코드처럼 [`ForEach-Object` cmdlet][16]도 사용할 수 있다. `ForEach-Object`의 축약은 `%`로도 줄여서 사용 가능하다. 가장 간단한 방법은 괄호를 이용한 마지막 방법이다.
 
-```powershell
+```
 $measure = $diff | Measure-Object
 if ($measure.Count -ne 0) {
     // do something
@@ -341,13 +341,13 @@ if (($diff | measure).Count -ne 0) {
 
 서명되지 않은 스크립트 파일은 보안상 기본적으로 실행할 수 없다. 현재 실행 정책은 `Get-ExecutionPolicy`로 확인할 수 있고 `Set-ExcutionPolicy` cmdlet으로 조정할 수 있다. 기본 정책은 _Restricted_인데 다음 명령을 사용하면 정책 수준을 낮출 수 있다.
 
-```powershell
+```
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
 테스트를 모두 완료한 다음에는 보안을 위해 다시 원래대로 돌려놓도록 하자.
 
-```powershell
+```
 Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
 ```
 

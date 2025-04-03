@@ -40,7 +40,9 @@ curl로도 설치할 수 있다.
     $ export GHI_TOKEN=<재생성한 access token>
     
 
-이제 `ghi`를 입력하면 현재 배정된 이슈 목록이 출력되며 전체 목록은 필터 플래그를 이용해 `ghi list -f 'all'`로 확인할 수 있다. `ghi help` 및 `ghi help <명령어>`로 도움말을 확인하자.<figure style="width: 1024px" class="wp-caption alignnone">
+이제 `ghi`를 입력하면 현재 배정된 이슈 목록이 출력되며 전체 목록은 필터 플래그를 이용해 `ghi list -f 'all'`로 확인할 수 있다. `ghi help` 및 `ghi help <명령어>`로 도움말을 확인하자.
+
+<figure class="wp-caption alignnone">
 
 <img src="https://farm2.staticflickr.com/1628/26044845926_e37bdf7682_b.jpg?resize=660%2C345&#038;ssl=1" width="660" height="345" class data-recalc-dims="1" /><figcaption class="wp-caption-text">이제 웹브라우저 없이도 GitHub 이슈를 추적할 수 있다!</figcaption></figure> 
 

@@ -32,7 +32,7 @@ Windows에 Hyper-V로 Ubuntu를 설치한 후에 제공하는 도구로 접속�
 4. 설치가 완료되면 VM을 종료한다.
 5. Windows PowerShell을 관리자 권한으로 실행한 후에 다음 명령으로 해당 VM의 고급 세션 모드를 활성화한다. `<VM_NAME>`은 VM 이름으로 바꿔야 한다.
 
-   ```powershell
+   ```bash
    Set-VM -VMName "<VM_NAME>" -EnhancedSessionTransportType HvSocket
    ```
 6. Hyper-V 관리자에서 VM을 실행하면 VM이 구동된 후 해상도 선택 화면이 나온다. 선택 후 접속한다.

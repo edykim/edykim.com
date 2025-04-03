@@ -23,7 +23,7 @@ tags:
 
 `#REQUIRES`문을 다음과 같이 추가해서 사용할 버전을 지정할 수 있다.
 
-```powershell
+```
 #REQUIRES -version 5
 ```
 
@@ -40,7 +40,7 @@ tags:
 
 현재 구동하고 있는 파워쉘의 버전은 `$PSVersionTable`에서 확인할 수 있다.
 
-```powershell
+```
 PS> $PSVersionTable.PSVersion
 
 Major  Minor  Build  Revision

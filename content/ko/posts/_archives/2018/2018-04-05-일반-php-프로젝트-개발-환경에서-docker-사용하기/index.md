@@ -156,13 +156,13 @@ services:
 
 앞서 설정에서 작성했던 내용대로 web에 사용하기로 한 `Dockerfile`을 작성해야 한다. 여기서는 php의 공식 이미지를 기반으로 사용한다. 파일에 다음 내용을 추가하자.
 
-```Dockerfile
+```
 FROM php:5.6-apache
 ```
 
 php:5.6-apache를 기반 이미지로 사용했다. Docker hub에 php:5.6-apache로 지정되어 있는 Dockerfile의 내용을 그대로 상속하게 된다. 이제 필요한 패키지와 확장을 설치한다. Dockerfile로 이미지를 생성하면 매 명령마다 중간 이미지를 생성하기 때문에 필수적인 패키지와 확장을 우선순위로 두면 나중에 비슷한 이미지를 생성할 때 더 빠르게 동작한다.
 
-```Dockerfile
+```
 # ...
 RUN apt-get update
 RUN apt-get install -y git zip
@@ -187,7 +187,7 @@ RUN apt-get clean \
 
 이제 apache의 모드를 활성화하고 웹서버에 반영하는 부분을 추가한다.
 
-```Dockerfile
+```
 # ...
 RUN a2enmod rewrite
 RUN a2enmod headers
@@ -196,7 +196,7 @@ RUN apache2ctl -k graceful
 
 여기서 작성한 Dockerfile의 전체 내용은 다음과 같다.
 
-```Dockerfile
+```
 FROM php:5.6-apache
 
 RUN apt-get update

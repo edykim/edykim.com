@@ -14,6 +14,8 @@ tags:
 slug: "the-super-tiny-compiler"
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/lisp.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 프로그래밍을 한다면 컴파일러는 빼놓을 수 없는 부분입니다. 항상 사용하지만
 어떻게 내부적으로 구현되어 있는지는 잘 알기 어려울 수 있습니다. 이 글은
 작은 컴파일러를 직접 만들어보는 과정을 통해서 현대적인 컴파일러가 어떤 방식으로

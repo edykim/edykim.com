@@ -11,6 +11,8 @@ tags:
 slug: "subtyping"
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/lisp.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 Oleg Kiselyov의 글, [Subtyping, Subclassing, and Trouble with OOP](https://okmij.org/ftp/Computation/Subtyping/)를 번역했습니다.
 
 ---

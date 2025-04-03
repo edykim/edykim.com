@@ -16,6 +16,9 @@ tags:
   - spring
 
 ---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/groovy.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 [spring의 gradle로 프로젝트 시작하기][1]를 따라하며 정리한 글이다.
 
 먼저 brew로 java와 의존성 및 빌드 관리/자동화 도구인 [gradle][2]을 설치한다.

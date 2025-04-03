@@ -16,6 +16,9 @@ tags:
   - oop
 
 ---
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/haskell.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 상속에 관한 포스트를 읽다가 레퍼런스로 c2의 [Expression Problem][1] 페이지를 보게 되었는데 내용이 좋아 짧게 번역했다. 원문은 wiki로 작성되어 있으므로 자세한 내용이 궁금하다면 해당 페이지를 참고하자.
 
 * * *

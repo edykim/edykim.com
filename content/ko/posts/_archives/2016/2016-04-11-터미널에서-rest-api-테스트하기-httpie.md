@@ -41,7 +41,8 @@ REST API를 테스트하는데 curl과 wget을 사용할 수 있겠지만 좀 �
     $ http -f POST example.org hello=World
     # request 출력
     $ http -v example.org
-    <figure style="width: 722px" class="wp-caption alignnone">
+
+<figure class="wp-caption alignnone">
 
 <figure><img src="https://farm2.staticflickr.com/1578/26005228831_21b2563ccf_b.jpg?resize=660%2C936&#038;ssl=1" width="660" height="936" class data-recalc-dims="1" /><figcaption class="wp-caption-text">cURL보다 간단하게 사용할 수 있다. 별 내용 아니지만 색깔 이쁘면 보기 좋지 않습니까.</figcaption></figure> 
 

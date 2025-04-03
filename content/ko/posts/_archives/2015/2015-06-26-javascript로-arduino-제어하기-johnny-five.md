@@ -35,8 +35,9 @@ Johnny-Five는 JavaScript 로봇공학 프로그래밍 프레임워크로, 이�
 
 OSX에서는 Node.js, Xcode, node-gyp가 필요하고 Windows에서는 Node.js, [VS Express][7], Python 2.7, node-gyp가 필요하다.
 
-    $ npm install --global node-gyp
-    
+```
+$ npm install --global node-gyp
+``` 
 
 요구 사항은 [Getting Started 페이지][8]에서 확인할 수 있다.
 
@@ -48,29 +49,33 @@ Arduino IDE를 사용하고 있다면 아두이노를 연결한 후, `File > Exa
 
 CLI 환경에서 작업하고 있는 경우에는 Firmata 코드를 받아 ino로 빌드 후 업로드할 수 있다. 여기서는 v2.4.3 이지만 [Firmata github][9]에서 최신인지 확인하자.
 
-    $ wget https://github.com/firmata/arduino/releases/download/v2.4.3/Arduino-1.6.x-Firmata-2.4.3.zip
-    $ unzip Arduino-1.6.x-Firmata-2.4.3.zip
-    $ cd ./Firmata/
-    
-    # StandardFirmata.ino를 복사해서 빌드에 포함시킴
-    $ cp ./examples/StandardFirmata/StandardFirmata.ino ./src
-    
+```
+$ wget https://github.com/firmata/arduino/releases/download/v2.4.3/Arduino-1.6.x-Firmata-2.4.3.zip
+$ unzip Arduino-1.6.x-Firmata-2.4.3.zip
+$ cd ./Firmata/
+
+# StandardFirmata.ino를 복사해서 빌드에 포함시킴
+$ cp ./examples/StandardFirmata/StandardFirmata.ino ./src
+``` 
 
 이 상황에서 바로 빌드하면 에러가 난다. `StandardFirmata.ino`를 에디터로 열어 다음 코드를 찾는다.
 
-    #include <Firmata.h>
-    
+```
+#include <Firmata.h>
+``` 
 
 그리고 다음처럼 `Firmata.h` 파일을 폴더 내에서 찾도록 수정한다.
 
-    #include "./Firmata.h"
-    
+```
+#include "./Firmata.h"
+```    
 
 모든 준비가 끝났다. USB로 연결한 후, `ino`로 빌드와 업로드를 진행한다.
 
-    $ ino build
-    $ ino upload
-    
+```
+$ ino build
+$ ino upload
+```
 
 Firmware를 생성하고 업로드하는 과정을 화면에서 바로 확인할 수 있다. 이제 Johnny-five를 시작하기 위한 준비가 끝났다.
 
@@ -78,32 +83,35 @@ Firmware를 생성하고 업로드하는 과정을 화면에서 바로 확인할
 
 앞서 과정은 좀 복잡했지만 johnny-five를 사용하는건 정말 간단하다. 먼저 nodejs가 설치되어 있어야 한다. 프로젝트를 만들고 johnny-five를 npm으로 설치한다.
 
-    $ mkdir helloBlinkWorld
-    $ cd helloBlinkWorld
-    $ npm init # 프로젝트 정보를 입력
-    $ npm install --save johnny-five
-    
+```
+$ mkdir helloBlinkWorld
+$ cd helloBlinkWorld
+$ npm init # 프로젝트 정보를 입력
+$ npm install --save johnny-five
+``` 
 
 설치가 모두 완료되면 `blink.js`를 생성해 다음 JavaScript 코드를 입력한다.
 
-    var five = require("johnny-five"),
-        board = new five.Board();
-    
-    board.on("ready", function () {
-    
-      // 13은 보드에 설치된 LED 핀 번호
-      var led = new five.Led(13);
-    
-      // 500ms으로 깜빡임
-      led.blink(500);
-    
-    });
-    
+```
+var five = require("johnny-five"),
+    board = new five.Board();
+
+board.on("ready", function () {
+
+    // 13은 보드에 설치된 LED 핀 번호
+    var led = new five.Led(13);
+
+    // 500ms으로 깜빡임
+    led.blink(500);
+
+});
+``` 
 
 정말 js다운 코드다. 위 파일을 저장하고 `node`로 실행하면 보드와 연동되는 것을 확인할 수 있다. (아쉽게도 동영상은 만들지 않았다 🙂 더 재미있는 예제를 기약하며)
 
-    $ node blink.js
-    
+```
+$ node blink.js
+``` 
 
 * * *
 

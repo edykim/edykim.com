@@ -22,7 +22,7 @@ tags:
 
 세금 환급 중 내용을 잘못 기재해서 수정해야 하거나 추가해야 하는 경우에는 [내용 정정 신청][1] (Amendment request)를 하면 된다. 정정 신청은 [요청 양식][2]을 출력해 각 항목을 작성한 후 ATO로 우편으로 발송하거나 팩스로 보내면 된다.
 
-양식을 작성할 때 다른 부분은 개인 정보 적는 난이라 복잡한 부분이 없고 8번 왜 정정을 요청하는가에 대해서는 구구절절 쓰면 되고 10번 항목 정도가 막막한 부분이다. Qustion number from tax return, Alpha label on tax return 두 항목은 종이 양식에 나온 레이블을 참고해서 작성하면 된다. 내 경우에는 다음과 같이 작성했다.<figure id="flicker-15986968145_2164e0f73a" style="width: 500px" class="wp-caption aligncenter">
+양식을 작성할 때 다른 부분은 개인 정보 적는 난이라 복잡한 부분이 없고 8번 왜 정정을 요청하는가에 대해서는 구구절절 쓰면 되고 10번 항목 정도가 막막한 부분이다. Qustion number from tax return, Alpha label on tax return 두 항목은 종이 양식에 나온 레이블을 참고해서 작성하면 된다. 내 경우에는 다음과 같이 작성했다.<figure id="flicker-15986968145_2164e0f73a" class="wp-caption aligncenter">
 
 [<img src="https://farm9.staticflickr.com/8648/15986968145_2164e0f73a.jpg?w=660&#038;ssl=1" alt="Tax Amendment Request" class="aligncenter " data-recalc-dims="1" />][3]<figcaption class="wp-caption-text">글씨가&#8230; 아하하하하핳</figcaption></figure> 
 

@@ -19,6 +19,8 @@ tags:
 
 ---
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/lisp.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <p>최근 emacs에 대한 유튜브를 보는데 전혀 IT쪽 일을 하지 않는 사람도 <a href="http://orgmode.org/">org-mode</a> 때문에 emacs를 사용한다는 얘기를 듣고 문서를 찾아보게 되었다.</p>
 
 <p>emacs는 아예 처음 사용해보는데 이 문서에 emacs 기능도 간략하게 설명하고 있어서 org-mode의 기능을 살펴보는데 불편함이 없었다. 각각 기능도 강력하고 일반 텍스트를 이렇게 멋지게 조작 가능한게 놀랍다. markdown이나 html로 내보내는 기능도 멋지다. 내보내는 포맷은 플러그인으로 추가도 가능하다. 익숙해지면 정말 유용할 것 같다.</p>
@@ -130,7 +132,7 @@ tags:
 
 <p>Emacs가 org-mode 문서를 인식하도록 다음 내용을 문서 <b>상단</b> 에 추가합니다.</p>
 
-<pre><code class="language-org">MY PROJECT -*- mode: org -*-</code></pre>
+<pre><code class="language-bash">MY PROJECT -*- mode: org -*-</code></pre>
 
 
 <p>여기에 사용한건 뺄셈 기호며 밑줄이 <i>아닙니다</i>. MY PROJECT는 문서의 제목이며 마음대로 지정할 수 있습니다.</p>
@@ -189,7 +191,7 @@ tags:
 
 <p>이제 org-mode 문서를 사용할 수 있도록 설정한 Emacs가 있으니 이제 시작하기만 하면 됩니다. org-mode를 시작하는데 도움이 될 개요를 적는 것으로 시작합니다. 새 문서를 열고 (<b>C-x b</b>) 2.org를 입력한 다음에 아래 내용을 복사해서 붙여넣습니다.</p>
 
-<pre><code class="language-org">#-*- mode: org -*-
+<pre><code class="language-bash">#-*- mode: org -*-
 #+STARTUP: showall
 
 * org-mode 시작을 환영합니다
@@ -229,7 +231,7 @@ tags:
 
 <p>목록은 순서 없는 목록과 순서 있는 목록이 있습니다. 다음을 확인하세요.</p>
 
-<pre><code class="language-org">** 반지의 제왕
+<pre><code class="language-bash">** 반지의 제왕
    가장 좋아하는 장면 (순서대로)
    1. 로히림 전투
    2. 에오윈과 마술사왕의 싸움
@@ -291,7 +293,7 @@ tags:
 
 <p>org-mode를 사용하는 가장 큰 이유는 할 일을 관리하는데 사용하기 위해서 입니다. 먼저 할 일 기능을 사용하기 위해서는 특별히 해야 하는 작업 없이 TODO 키워드를 제목행에 추가하면 됩니다.</p>
 
-<pre><code class="language-org">** TODO 비행기 구입하기
+<pre><code class="language-bash">** TODO 비행기 구입하기
 </code></pre>
 
 
@@ -316,7 +318,7 @@ tags:
 <p>Org-mode 파일에서는 워크플로 상태를 파일 시작 위치에서 설정할 수 있습니다. 다음과 같이 파일 시작부에 작성합니다.
 </p>
 
-<pre><code class="language-org">#+TODO: TODO IN-PROGRESS WAITING DONE
+<pre><code class="language-bash">#+TODO: TODO IN-PROGRESS WAITING DONE
 </code></pre>
 
 
@@ -463,7 +465,7 @@ t List of all TODO entries</code></pre>
 
 <p>태그를 추가하기 위해서 다음 설정을 문서 상단에 추가합니다.</p>
 
-<pre><code class="language-org">#+TAGS: { @OFFICE(o) @HOME(h) } COMPUTER(c) PHONE(p) READING(r)</code></pre>
+<pre><code class="language-bash">#+TAGS: { @OFFICE(o) @HOME(h) } COMPUTER(c) PHONE(p) READING(r)</code></pre>
 
 
 <p>문서를 다시 불러오거나 #으로 시작하는 곳에서 <b>C-c C-c</b> 를 입력합니다.</p>
