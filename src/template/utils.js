@@ -1,6 +1,7 @@
 import {taxRoute} from './../tag.js'
 import {latestFirst} from './../sort.js'
 import components from './../../config/components.js'
+import {getTagTree} from './../../config/tag.js'
 
 function displayTitle(data) {
     return data.frontmatter.title;
@@ -47,11 +48,25 @@ function createDisplayContent(node, nodes, {partial}) {
     }
 }
 
+function isActive(data, url, startsWith) {
+    startsWith = startsWith || false;
+    // remove leading slash and trailing slash
+    url = url.replace(/^\//, '').replace(/\/$/, '');
+    return startsWith ? data.fields.url.startsWith(url) : data.fields.url === url;
+}
+
+function helloWorld(message) {
+    return 'Hello world' + message;
+}
+
 const utils = {
+    helloWorld,
     createDisplayContent,
     displayTitle,
     latestFirst,
     taxRoute,
+    isActive,
+    getTagTree,
 };
 
 export default utils;

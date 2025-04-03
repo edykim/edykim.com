@@ -1,9 +1,14 @@
 ${template('header-nav.html', {nav: `
     <span class="site-title"><a href="/ko/">용균의 웹페이지</a></span>
     <nav>
-        <a href="/ko/">앞장</a>
-        <a href="/ko/post/">글목록</a>
-        <a href="/ko/notes/">노트</a>
+        <a ${utils.isActive(data, "/ko/") ? 'class="active"' : ''} href="/ko/">앞장</a>
+        <a ${utils.isActive(data, "/ko/post/")
+            || utils.isActive(data, "/ko/post/page/", true)
+            || utils.isActive(data, "/ko/post/list/", true)
+            || utils.isActive(data, "/ko/tag/", true)
+            || utils.isActive(data, "/ko/archives/", true)
+            ? 'class="active"' : ''} href="/ko/post/">글목록</a>
+        <a ${utils.isActive(data, "/ko/notes/") ? 'class="active"' : ''} href="/ko/notes/">노트</a>
     </nav>
 `})}
 

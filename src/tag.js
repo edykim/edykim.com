@@ -79,6 +79,13 @@ export function fetchTaxonomies(nodes, lang) {
         })
     });
 
+
+    for (const node of nodes) {
+        if (node.value.includes('<!-- @template posts-nav -->')) {
+            node.data.fields.years = yearSummary
+        }
+    }
+
     Array.from(collection.keys()).forEach(tag => {
         const posts = collection.get(tag);
         let prechunk = latestFirst(posts);

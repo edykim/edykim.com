@@ -1,0 +1,39 @@
+<div class="list-page-nav">
+    <div class="dropdown-nav">
+        <a class="label" href="#">아카이브</a>
+        <ul>
+            <li><a href="/ko/post/list/">일자별</a></li>
+            <li><a href="/ko/post/list/tags/">태그별</a></li>
+        </ul>
+    </div>
+    <div class="dropdown-nav">
+        <a class="label" href="#">연도별</a>
+        <span id="section--years" class="anchor"></span>
+        <ul>
+        ${(({data: {fields}}) => {
+            const {years} = fields;
+            return years.map(year => {
+                return `<li><a href="/${year.link}">${year.label} <span>(${year.count})</span></a></li>`
+            }).join('\n');
+        })(data.node)}
+        </ul>
+    </div>
+    
+    ${(items => {
+        function templateTag(item) {
+            if (item.hidden) {
+                return '';
+            }
+
+            if (item.children) {
+                return `<div class="dropdown-nav"><a class="label" href="#">${item.key}</a>
+                    <span id="section--${item.key}" class="anchor"></span>
+                    <ul>${item.children.map(c => templateTag(c)).join('\n')}</ul></div>`;
+            }
+
+            return `<li><a href="/ko/tag/${item.url}">${item.key}</a></li>`;
+        }
+
+        return items.map(templateTag).join('\n');
+    })(utils.getTagTree().children)}
+</div>

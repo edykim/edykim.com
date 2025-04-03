@@ -1,134 +1,86 @@
 ---
-title: "Archive: 태그별"
+title: "보관함: 태그별"
 type: page
 lang: ko
 url: post/list/tags
 noIndex: true
+noInteraction: true
 ---
 
-<!-- @template list-nav -->
-
-## 사는 이야기
-
-<div class="with-details-toggle-button">
+<!-- @template posts-nav -->
 
 <details>
-<summary>미국 사는 이야기</summary>
+<summary>사는 이야기</summary>
+
+<h2 class="subtitle"><a href="/ko/tag/life-in-us/">미국 사는 이야기 →</a></h2>
 
 <!-- @template post-list {"tag": "미국 사는 이야기"} -->
 
-</details>
-
-<details>
-<summary>멜번 사는 이야기</summary>
+<h2 class="subtitle"><a href="/ko/tag/life-in-australia/">멜번 사는 이야기 →</a></h2>
 
 <!-- @template post-list {"tag": "멜번 사는 이야기"} -->
 
-</details>
-
-<details>
-<summary>내 이야기</summary>
+<h2 class="subtitle"><a href="/ko/tag/my-stories/">내 이야기 →</a></h2>
 
 <!-- @template post-list {"tag": "내 이야기"} -->
 
-</details>
-
-<details>
-<summary>부스러기</summary>
+<h2 class="subtitle"><a href="/ko/tag/memo/">부스러기 →</a></h2>
 
 <!-- @template post-list {"tag": "부스러기"} -->
 
 </details>
 
-</div>
-
-## 개발 이것저것
-
-
-<div class="with-details-toggle-button">
-
 <details>
-<summary>개발 이야기</summary>
+<summary>개발 이것저것</summary>
+
+<h2 class="subtitle"><a href="/ko/tag/dev-life/">개발 이야기 →</a></h2>
 
 <!-- @template post-list {"tag": "개발 이야기"} -->
 
-</details>
-
-<details>
-<summary>개발 잡동사니</summary>
+<h2 class="subtitle"><a href="/ko/tag/it/">개발 잡동사니 →</a></h2>
 
 <!-- @template post-list {"tag": "개발 잡동사니"} -->
 
-</details>
-
-<details>
-<summary>번역</summary>
+<h2 class="subtitle"><a href="/ko/tag/translations/">번역 →</a></h2>
 
 <!-- @template post-list {"tag": "번역"} -->
 
-</details>
+<h2 class="subtitle"><a href="/ko/tag/linux/">리눅스 →</a></h2>
 
-<details>
-<summary>리눅스</summary>
+<!-- @template post-list {"tag": "리눅스"} -->
 
-<!-- @template post-list {"tag": "linux"} -->
+<h2 class="subtitle"><a href="/ko/tag/js/">자바스크립트 →</a></h2>
 
-</details>
+<!-- @template post-list {"tag": "자바스크립트"} -->
 
-<details>
-<summary>자바스크립트</summary>
+<h2 class="subtitle"><a href="/ko/tag/php/">PHP →</a></h2>
 
-<!-- @template post-list {"tag": "js"} -->
+<!-- @template post-list {"tag": "PHP"} -->
 
 </details>
 
 <details>
-<summary>PHP</summary>
 
-<!-- @template post-list {"tag": "php"} -->
+<summary>이것저것</summary>
 
-</details>
-
-</div>
-
-## 이것저것
-
-<div class="with-details-toggle-button">
-
-<details>
-<summary>책</summary>
+<h2 class="subtitle"><a href="/ko/tag/book/">책 →</a></h2>
 
 <!-- @template post-list {"tag": "책"} -->
 
-</details>
-
-<details>
-<summary>리뷰</summary>
+<h2 class="subtitle"><a href="/ko/tag/review/">리뷰 →</a></h2>
 
 <!-- @template post-list {"tag": "리뷰"} -->
 
-</details>
-
-<details>
-<summary>요리 레시피</summary>
+<h2 class="subtitle"><a href="/ko/tag/recipe/">요리 레시피 →</a></h2>
 
 <!-- @template post-list {"tag": "요리 레시피"} -->
 
-</details>
-
-<details>
-<summary>사진</summary>
+<h2 class="subtitle"><a href="/ko/tag/photography/">사진 →</a></h2>
 
 <!-- @template post-list {"tag": "사진"} -->
 
-</details>
-
-<details>
-<summary>음악</summary>
+<h2 class="subtitle"><a href="/ko/tag/music/">음악 →</a></h2>
 
 <!-- @template post-list {"tag": "음악"} -->
 
 </details>
-
-
-</div>

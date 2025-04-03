@@ -85,7 +85,15 @@ const components = [
             node,
             nodes: nodes.filter(n => !n.data.frontmatter.noInteraction),
         })
-    }
+    },
+    {
+        key: 'posts-nav',
+        template: '_insert/posts-nav.html',
+        props: (node, nodes) => ({
+            node,
+            nodes: publicPostOnly(nodes, node.data.frontmatter.lang)
+        })
+    },
 ];
 
 export default components;
