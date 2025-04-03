@@ -78,6 +78,14 @@ const components = [
             node,
         })
     },
+    {
+        key: 'liked',
+        template: '_insert/liked.html',
+        props: (node, nodes) => ({
+            node,
+            nodes: nodes.filter(n => !n.data.frontmatter.noInteraction),
+        })
+    }
 ];
 
 export default components;

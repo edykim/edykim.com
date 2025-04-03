@@ -6,7 +6,9 @@
                 const data = node.data;
                 return `<li>
                     <time datetime="${data.frontmatter.date}">${moment(data.frontmatter.date).format('YYYY-MM-DD')}</time>
-                    <a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a>
+                    <span>
+                        <a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a>
+                    </span>
                 </li>`
             }).join('')
             }

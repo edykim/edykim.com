@@ -1,0 +1,68 @@
+<ul class="post-title-list liked-list post-title-list--init">
+</ul>
+<ul class="all-list" style="display: none;">
+    ${
+    data.nodes.map(node => {
+        const data = node.data;
+        return `<li id="liked-item-${data.fields.urlUuid}">
+            <time datetime="${data.frontmatter.date}">${moment(data.frontmatter.date).format('YYYY-MM-DD')}</time>
+            <span>
+                <a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}
+                    <span class="liked"><span class="label" aria-label="Like this post"></span> <span class="liked-count"></span></span>
+                </a>
+            </span>
+        </li>`
+    }).join('')
+    }
+</ul>
+
+<script>
+    fetch('https://likes.poup.us/likes/edykim.com', {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+        },
+    }).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+
+        for (const like of data.likes) {
+            const $item = document.querySelector('#liked-item-' + like.id);
+            if ($item) {
+                document.querySelector('.liked-list').appendChild($item);
+                const $count = $item.querySelector('.liked-count');
+                if ($count) {
+                    $count.innerText = like.cnt;
+                }
+            }
+        }
+
+        document.querySelector('.all-list').remove();
+        document.querySelector('.post-title-list').classList.remove('post-title-list--init');
+    });
+</script>
+
+<style>
+    .post-title-list--init:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        max-width: 300px;
+        height: 10px;
+        background-color: var(--color-border);
+        box-shadow: 0 30px 10px var(--color-border),
+            0 60px 10px var(--color-border),
+            0 90px 10px var(--color-border);
+    }
+    .liked {
+        font-size: 0.8rem;
+    }
+    .liked-count {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .post-title-list {
+        min-height: 150px;
+    }
+</style>
