@@ -274,6 +274,10 @@ function initLikeButtons() {
         counts[widget.dataset.uuid] = widget.querySelector('.cnt');
     }
 
+    if (ids.length === 0) {
+        return;
+    }
+
     fetch(`https://likes.poup.us/likes/edykim.com/bulk?ids=${ids.join(',')}`, {
         method: 'GET',
         headers: {
