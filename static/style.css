@@ -1,7 +1,7 @@
 :root {
     --color-day-background-color: #f8f8f2;
     --color-day-text: #1d1d1f;
-    --color-day-shadow: #e4efdb;
+    --color-day-shadow: #f1f1e0;
     --color-day-gray: #555555;
     --color-day-border: #eee;
     --color-day-code-background-color: #fcfdff;
@@ -126,7 +126,7 @@ body {
     font-style: normal;
     word-break: keep-all;
     margin: 1rem;
-    margin: max(1rem, 2vw);
+    margin: max(1rem, 2.5vw);
     max-width: none;
 }
 
@@ -228,8 +228,8 @@ table td {
 
 .setting-btn {
     position: absolute;
-    top: max(1rem, 2vw);
-    right: max(1rem, 2vw);
+    top: max(1rem, 2.5vw);
+    right: max(1rem, 2.5vw);
     appearance: none;
     border: 0;
     background-color: transparent;
@@ -259,10 +259,12 @@ table td {
 }
 
 .page-header h1 {
-    font-size: 2.5rem;
+    margin-top: calc(1rem + 3vw);
+    font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: -0.05rem;
 }
+
 .page-header h1 a {
     color: inherit;
     text-decoration: none;
