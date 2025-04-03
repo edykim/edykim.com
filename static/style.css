@@ -682,6 +682,10 @@ details[open] {
     grid-template-columns: auto 1fr;
 }
 
+.post-title-list li + li {
+    margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 340px) {
     .post-title-list li {
         grid-template-columns: 1fr;
