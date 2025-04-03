@@ -683,7 +683,7 @@ details[open] {
 }
 
 .post-title-list li + li {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 @media screen and (max-width: 340px) {
