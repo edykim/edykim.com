@@ -862,3 +862,11 @@ details[open] {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
 }
+
+.flat-list > ul {
+    padding-left: 20px;
+}
+
+.flat-list li {
+    margin-top: 0.5rem;
+}
