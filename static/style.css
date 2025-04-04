@@ -37,7 +37,7 @@
     --color-dark-shadow: #444;
     --color-dark-gray: #6d6d6d;
     --color-dark-border: #444444;
-    --color-dark-button: #444444;
+    --color-dark-button: #282828;
     --color-dark-code-background-color: #28282a;
     --color-dark-link: #ff953e;
     --color-dark-link-visited: #eb58ad;
@@ -49,7 +49,7 @@
     --color-tumblr-shadow: #3d4c62;
     --color-tumblr-gray: #858a8e;
     --color-tumblr-border: #303b47;
-    --color-tumblr-button: #303b47;
+    --color-tumblr-button: #16222f;
     --color-tumblr-code-background-color: #151d26;
     --color-tumblr-link: #529ecc;
     --color-tumblr-link-visited: #bfb3ff;
@@ -795,7 +795,7 @@ details[open] {
     gap: 0.3rem;
     appearance: none;
     border: none;
-    background-color: var(--color-border);
+    background-color: var(--color-button);
     color: var(--color-text);
     border-radius: 8px;
     padding: 0.3rem 0.6rem;
