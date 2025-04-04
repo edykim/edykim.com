@@ -4,6 +4,7 @@
     --color-day-shadow: #f1f1e0;
     --color-day-gray: #555555;
     --color-day-border: #eee;
+    --color-day-button: #eee;
     --color-day-code-background-color: #fcfdff;
     --color-day-link: #301eb5;
     --color-day-link-visited: #551A8B;
@@ -14,6 +15,7 @@
     --color-night-shadow: #1c1c51;
     --color-night-gray: #7d80c2;
     --color-night-border: #151748;
+    --color-night-button: #151748;
     --color-night-code-background-color: #080920;
     --color-night-link: #79e0ff;
     --color-night-link-visited: #c579ff;
@@ -24,6 +26,7 @@
     --color-sepia-shadow: #e2d5b0;
     --color-sepia-gray: #6d5e2e;
     --color-sepia-border: #e4d8b4;
+    --color-sepia-button: #e4d8b4;
     --color-sepia-code-background-color: #fff3dc;
     --color-sepia-link: #4147a1;
     --color-sepia-link-visited: #7a3d5e;
@@ -34,6 +37,7 @@
     --color-dark-shadow: #444;
     --color-dark-gray: #6d6d6d;
     --color-dark-border: #444444;
+    --color-dark-button: #444444;
     --color-dark-code-background-color: #28282a;
     --color-dark-link: #ff953e;
     --color-dark-link-visited: #eb58ad;
@@ -45,10 +49,23 @@
     --color-tumblr-shadow: #3d4c62;
     --color-tumblr-gray: #858a8e;
     --color-tumblr-border: #303b47;
+    --color-tumblr-button: #303b47;
     --color-tumblr-code-background-color: #151d26;
     --color-tumblr-link: #529ecc;
     --color-tumblr-link-visited: #bfb3ff;
     --color-tumblr-link-active: #6a52cc;
+
+
+    --color-maple-background-color: #3c251d;
+    --color-maple-text: #eee4d4;
+    --color-maple-shadow: #533830;
+    --color-maple-gray: #9f6552;
+    --color-maple-border: #4d3026;
+    --color-maple-button: #2c1b15;
+    --color-maple-code-background-color: #271813;
+    --color-maple-link: #ed7b00;
+    --color-maple-link-visited: #ce6021;
+    --color-maple-link-active: #ed5b00;
 }
 
 .mode--night  {
@@ -56,6 +73,7 @@
     --color-text: var(--color-night-text);
     --color-gray: var(--color-night-gray);
     --color-border: var(--color-night-border);
+    --color-button: var(--color-night-button);
     --color-shadow: var(--color-night-shadow);
     --color-code-background-color: var(--color-night-code-background-color);
     --color-link: var(--color-night-link);
@@ -68,6 +86,7 @@
     --color-text: var(--color-day-text);
     --color-gray: var(--color-day-gray);
     --color-border: var(--color-day-border);
+    --color-button: var(--color-day-button);
     --color-shadow: var(--color-day-shadow);
     --color-code-background-color: var(--color-day-code-background-color);
     --color-link: var(--color-day-link);
@@ -80,6 +99,7 @@
     --color-text: var(--color-sepia-text);
     --color-gray: var(--color-sepia-gray);
     --color-border: var(--color-sepia-border);
+    --color-button: var(--color-sepia-button);
     --color-shadow: var(--color-sepia-shadow);
     --color-code-background-color: var(--color-sepia-code-background-color);
     --color-link: var(--color-sepia-link);
@@ -92,6 +112,7 @@
     --color-text: var(--color-dark-text);
     --color-gray: var(--color-dark-gray);
     --color-border: var(--color-dark-border);
+    --color-button: var(--color-dark-button);
     --color-shadow: var(--color-dark-shadow);
     --color-code-background-color: var(--color-dark-code-background-color);
     --color-link: var(--color-dark-link);
@@ -104,11 +125,25 @@
     --color-text: var(--color-tumblr-text);
     --color-gray: var(--color-tumblr-gray);
     --color-border: var(--color-tumblr-border);
+    --color-button: var(--color-tumblr-button);
     --color-shadow: var(--color-tumblr-shadow);
     --color-code-background-color: var(--color-tumblr-code-background-color);
     --color-link: var(--color-tumblr-link);
     --color-link-visited: var(--color-tumblr-link-visited);
     --color-link-active: var(--color-tumblr-link-active);
+}
+
+.mode--maple {
+    --color-background-color: var(--color-maple-background-color);
+    --color-text: var(--color-maple-text);
+    --color-gray: var(--color-maple-gray);
+    --color-border: var(--color-maple-border);
+    --color-button: var(--color-maple-button);
+    --color-shadow: var(--color-maple-shadow);
+    --color-code-background-color: var(--color-maple-code-background-color);
+    --color-link: var(--color-maple-link);
+    --color-link-visited: var(--color-maple-link-visited);
+    --color-link-active: var(--color-maple-link-active);
 }
 
 html {
@@ -143,6 +178,7 @@ a:active { color: var(--color-link-active); }
 
 .mode--night,
 .mode--sepia,
+.mode--maple,
 .mode--tumblr,
 .mode--dark {
     scrollbar-color: var(--color-text) var(--color-shadow);
@@ -366,7 +402,7 @@ body > .comments {
     color: inherit;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--color-border);
+    border: 2px solid var(--color-button);
     border-radius: 10px;
 }
 
@@ -442,7 +478,7 @@ footer.page-footer .updated-on {
     display: block;
     text-decoration: none;
     padding: 1rem;
-    background: var(--color-border);
+    background: var(--color-button);
     border-radius: 5px;
     flex: 1;
 }
@@ -577,6 +613,11 @@ hr {
 #website-setting .color-select-sepia:before {
     background-color: var(--color-sepia-background-color);
     color: var(--color-sepia-text);
+}
+
+#website-setting .color-select-maple:before {
+    background-color: var(--color-maple-background-color);
+    color: var(--color-maple-text);
 }
 
 #website-setting .color-select-dark:before {
@@ -746,6 +787,10 @@ details[open] {
 
 .mode--dark .headpiece img {
     filter: invert(1) grayscale(1);
+}
+
+.mode--maple .headpiece img {
+    filter: invert(1) hue-rotate(330deg);
 }
 
 .likes-widget {
