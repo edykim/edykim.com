@@ -70,6 +70,7 @@ noIndex: true
 - [Dead Simple Sites](https://deadsimplesites.com/)
 - [The Pudding](https://pudding.cool/)
 - [LIFE LABEL](https://lifelabel.jp/)
+- [Achim](https://have-achim.com/)
 
 :::
 
