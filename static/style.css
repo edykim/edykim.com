@@ -184,15 +184,6 @@ a:active { color: var(--color-link-active); }
     scrollbar-color: var(--color-text) var(--color-shadow);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-table th {
-    font-family: -system-ui, sans-serif;
-}
-
 img {
     max-width: 100%;
     margin-left: auto;
