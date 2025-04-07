@@ -1,238 +1,348 @@
 <div class="photobooth--wrapper">
+    <div class="photobooth--header-wrapper">
+        <div class="photobooth--header">
+            PHOTOBOOTH
+        </div>
+    </div>
     <div class="photobooth--screen">
         <div class="photobooth--overlay"></div>
         <video autoplay muted playsinline></video>
     </div>
-    
-</div>
-
-<div class="photobooth--actions">
-    <button id="take-a-photo" class="photobooth-button">📷 촬영하기</button>
+    <div class="photobooth--instructions">
+        <div class="photobooth--desc">
+            <h2>INSTRUCTIONS</h2>
+            <ul>
+                <li>촬영하기 버튼을 누르면 시작되요.</li>
+                <li>사진은 2초 간격으로 4장 연속 촬영합니다.</li>
+                <li>촬영이 끝나면 사진을 클릭하여 저장할 수 있어요.</li>
+            </ul>
+        </div>
+        <div class="photobooth--actions">
+            <button id="take-a-photo" class="photobooth-button">📷 촬영하기</button>
+        </div>
+    </div>
+    <div class="photobooth--output-wrapper">
+        <div class="photobooth--output">
+            <canvas id="result" width="1200" height="1800"></canvas>
+            <small>클릭하면 저장할 수 있어요.</small>
+        </div>
+    </div>
 </div>
 
 <canvas id="canvas"></canvas>
 
-<div class="output">
-    <canvas id="result" width="1200" height="1800"></canvas>
-
-    <small>출력물을 클릭하면 저장할 수 있습니다.</small>
-</div>
-
 <style>
-.photobooth--wrapper {
-    text-align: center;
-}
-.photobooth--screen {
-    border: 1px solid var(--color-text);
-    padding: 2rem;
-    display: inline-block;
-    line-height: 1;
-    position: relative;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
-@keyframes flashOnce {
-    0% { background: rgba(255,255,255,1);}
-    100% { background: rgba(255,255,255,0); }
-}
+    .photobooth--wrapper {
+        display: grid;
+        grid-template-areas: "header header header"
+            "instructions view output";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+    }
 
-.flash-once {
-    animation: flashOnce 0.5s ease-in-out 1;
-}
+    @media screen and (max-width: 768px) {
+        .photobooth--wrapper {
+            grid-template-areas: "header header" "instructions view" "output output";
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+    }
 
-.photobooth--overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
-}
+    @media screen and (max-width: 460px) {
+        .photobooth--wrapper {
+            grid-template-areas: "header" "instructions" "view" "output";
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+    }
 
-.photobooth--screen video {
-    width: 200px;
-    height: 200px;
-}
+    .photobooth--header-wrapper {
+        grid-area: header;
+        background-color: var(--color-text);
+    }
 
-.photobooth--actions {
-    text-align: center;
-    margin-top: 1rem;
-}
+    .photobooth--header {
+        font-family: 'Sen', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        border: 1px solid var(--color-text);
+        background-color: var(--color-background-color);
+        padding: 0.5rem 1rem;
+        letter-spacing: 0.2rem;
+        display: inline-block;
+    }
 
-.photobooth-button {
-    appearance: none;
-    border: none;
-    background-color: var(--color-button);
-    color: var(--color-text);
-    border-radius: 8px;
-    padding: 0.3rem 0.6rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-#canvas {
-    display: none;
-}
-
-.output {
-    position: relative;
-    height: 400px;
-    max-width: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.code--dark .output {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.output:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 10px;
-    background: var(--color-text);
-    z-index: 1;
-}
-
-#result {
-    width: 200px;
-    display: none;
-    cursor: pointer;
-}
-
-@keyframes done {
-    0% { top: -500px; }
-    95% { top: -20px; }
-    100% { top: 20px; }
-}
-
-.done {
-    left: 20px;
-    position: absolute;
-    animation: done 2s ease-in-out forwards;
-    z-index: 100;
-    display: block !important;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
-}
-
-.output small {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    left: 1rem;
-    text-align: center;
-    font-size: 0.8rem;
-}
-</style>
-<script>
-const width = 1024;
-const height = 1024;
-
-window.addEventListener('DOMContentLoaded', () => {
-  let config = {
-      video: {
-        width: { ideal: width },
-        height: { ideal: height },
-        frameRate: { ideal: 14, max: 14 },
-        facingMode: 'user'
-      },
-      audio: false,
-    };
-
-  function setupCamera(mode = null) {
-    navigator.mediaDevices
-      .getUserMedia(config)
-      .then((stream) => {
-        const video = document.querySelector('.photobooth--screen video');
-        video.srcObject = stream;
-        video.onloadedmetadata = function (e) {
-          video.play();
-        };
-      })
-      .catch((err) => {
-      });
-  }
-
-  setupCamera();
-
-    document.querySelector('#take-a-photo').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector('#result').classList.remove('done');
-        setTimeout(() => {takePicture(0)}, 1500);
-        setTimeout(() => {takePicture(1)}, 3000);
-        setTimeout(() => {takePicture(2)}, 4500);
-        setTimeout(() => {takePicture(3)}, 6000);
-        setTimeout(() => {takePicture(4)}, 7500);
-        setTimeout(() => {takePicture(5);
-            document.querySelector('#result').classList.add('done');
-        }, 9000);
-    });
-
-    document.querySelector("#result").addEventListener('click', function(e) {
-        e.preventDefault();
+    .photobooth--screen {
+        grid-area: view;
+        border: 1px solid var(--color-text);
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        position: relative;
         
-        const dataURL = result.toDataURL("image/png", 1);
-        const byteString = atob(dataURL.split(',')[1]);
-        const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+    }
 
-        const ab = new ArrayBuffer(byteString.length);
-        const ia = new Uint8Array(ab);
-        for (let i = 0; i < byteString.length; i++) {
-            ia[i] = byteString.charCodeAt(i);
+    @keyframes flashOnce {
+        0% {
+            background: rgba(255, 255, 255, 1);
         }
 
-        const blob = new Blob([ab], { type: mimeString });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = "photo.png";
-        
-        // Safari needs it added to the DOM and a delay sometimes
-        document.body.appendChild(a);
-        a.click();
-        
-        // Cleanup
-        setTimeout(() => {
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }, 100);
-    });
-})
-
-const video = document.querySelector('video')
-const canvas = document.querySelector('#canvas')
-const result = document.querySelector('#result')
-function takePicture(idx) {
-  document.querySelector('.photobooth--overlay').classList.add('flash-once');
-  setTimeout(() => {
-    document.querySelector('.photobooth--overlay').classList.remove('flash-once');
-  }, 1000);
-  const context = canvas.getContext("2d");
-  const resultContext = result.getContext("2d");
-  if (width && height) {
-    canvas.width = width;
-    canvas.height = height;
-    context.drawImage(video, 0, 0, width, height);
-    const col = idx % 2;
-    const row = (idx - col) / 2;
-    const offset = (result.width - (width + 10)) / 2;
-    if (idx === 0) {;
-        resultContext.fillStyle = 'white';
-        resultContext.fillRect(0, 0, result.width, result.height);
-        resultContext.font = "32px sans-serif";
-        resultContext.fillStyle = 'black';
-        resultContext.textAlign = "right";
-        const now = new Date();
-        const localeTimestamp = now.toLocaleString();
-        resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
-
+        100% {
+            background: rgba(255, 255, 255, 0);
+        }
     }
-    resultContext.drawImage(video, offset + col * (width / 2 + 10), offset + row * (width / 2 + 10), width / 2, width / 2);
-  } else {
-    clearPhoto();
-  }
-}
+
+    .flash-once {
+        animation: flashOnce 0.5s ease-in-out 1;
+    }
+
+    .photobooth--overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+
+    .photobooth--screen video {
+        width: 150px;
+        aspect-ratio: 3/4;
+        filter: grayscale(1) contrast(1.2) brightness(1.5);
+    }
+
+    .photobooth--instructions h2 {
+        font-family: 'Sen', sans-serif;
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.1rem;
+        margin-top: 0;
+    }
+    .photobooth--instructions {
+        grid-area: instructions;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photobooth--desc {
+        flex: 1;
+    }
+
+    .photobooth--desc ul {
+        padding-left: 20px;
+        list-style-type: "➤ ";
+    }
+
+    .photobooth--actions {
+        text-align: center;
+        border-radius: 2px;
+    }
+
+    .photobooth-button {
+        appearance: none;
+        border: none;
+        background-color: var(--color-link);
+        color: var(--color-background-color);
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0.5rem;
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    .photobooth--output-wrapper {
+        grid-area: output;
+    }
+
+    .photobooth--output {
+        position: relative;
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .photobooth--output {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .code--dark .photobooth--output {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .photobooth--output:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 10px;
+        background: var(--color-text);
+        z-index: 1;
+    }
+
+    #result {
+        width: 200px;
+        display: none;
+        cursor: pointer;
+    }
+
+    @keyframes done {
+        0% {
+            top: -500px;
+        }
+
+        95% {
+            top: -20px;
+        }
+
+        100% {
+            top: 20px;
+        }
+    }
+
+    .done {
+        position: absolute;
+        animation: done 2s ease-in-out forwards;
+        z-index: 100;
+        display: block !important;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .photobooth--output small {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+</style>
+<script>
+    const width = 1024;
+    const height = 1368;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        let config = {
+            video: {
+                width: { ideal: width },
+                height: { ideal: height },
+                frameRate: { ideal: 14, max: 14 },
+                facingMode: 'user'
+            },
+            audio: false,
+        };
+
+        function setupCamera(onReady) {
+            navigator.mediaDevices
+                .getUserMedia(config)
+                .then((stream) => {
+                    const video = document.querySelector('.photobooth--screen video');
+                    video.srcObject = stream;
+                    video.onloadedmetadata = function (e) {
+                        video.play();
+                        console.log("video loaded");
+                        onReady && onReady(video);
+                    };
+                })
+                .catch((err) => {
+                });
+        }
+
+        document.querySelector('#take-a-photo').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            setupCamera((video) => {
+                document.querySelector('#result').classList.remove('done');
+
+                setTimeout(() => { takePicture(0) }, 2000);
+                setTimeout(() => { takePicture(1) }, 4000);
+                setTimeout(() => { takePicture(2) }, 6000);
+                setTimeout(() => {
+                    takePicture(3);
+                    const left = 10 + Math.floor(Math.random() * 60);
+                    document.querySelector('#result').style.left = left + 'px';
+                    document.querySelector('#result').classList.add('done');
+                }, 8000);
+            });
+        });
+
+        document.querySelector("#result").addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const dataURL = result.toDataURL("image/png", 1);
+            const byteString = atob(dataURL.split(',')[1]);
+            const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+
+            const blob = new Blob([ab], { type: mimeString });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "photo.png";
+
+            // Safari needs it added to the DOM and a delay sometimes
+            document.body.appendChild(a);
+            a.click();
+
+            // Cleanup
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+        });
+    })
+
+    const video = document.querySelector('video')
+    const canvas = document.querySelector('#canvas')
+    const result = document.querySelector('#result')
+    function takePicture(idx) {
+        document.querySelector('.photobooth--overlay').classList.add('flash-once');
+        setTimeout(() => {
+            document.querySelector('.photobooth--overlay').classList.remove('flash-once');
+        }, 1000);
+        const context = canvas.getContext("2d");
+        const resultContext = result.getContext("2d");
+        if (width && height) {
+            canvas.width = width;
+            canvas.height = height;
+            context.drawImage(video, 0, 0, width, height);
+            const col = idx % 2;
+            const row = (idx - col) / 2;
+            const gap = 50;
+            const offset = (result.width - (width + gap)) / 2;
+            if (idx === 0) {
+                ;
+                resultContext.fillStyle = 'black';
+                resultContext.fillRect(0, 0, result.width, result.height);
+                resultContext.font = "32px sans-serif";
+                resultContext.fillStyle = 'white';
+                resultContext.textAlign = "right";
+                const now = new Date();
+                const localeTimestamp = now.toLocaleString();
+                resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
+                resultContext.textAlign = 'left';
+                resultContext.fillText("FOTOAUTOMAT", offset, result.height - offset);
+            }
+
+            resultContext.filter = "grayscale(1) contrast(1.2) brightness(1.5)";
+            resultContext.drawImage(video, offset + col * (width / 2 + gap), offset + row * (height / 2 + gap), width / 2, height / 2);
+        } else {
+            clearPhoto();
+        }
+    }
 </script>
