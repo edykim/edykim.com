@@ -233,6 +233,8 @@
     let width = 1024;
     let height = 1368;
 
+    let timestamp = null;
+
     const isPortrait = screen.orientation?.type.startsWith('portrait');
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -254,8 +256,6 @@
                     video.srcObject = stream;
                     video.onloadedmetadata = function (e) {
                         video.play();
-                        // update the global config size based on the actual video size
-                        console.log(video.videoWidth, video.videoHeight);
                         width = video.videoWidth;
                         height = video.videoHeight;
                         onReady && onReady(video);
@@ -301,7 +301,7 @@
 
             const a = document.createElement('a');
             a.href = url;
-            a.download = "photo.jpg";
+            a.download = "photobooth-" + timestamp + ".jpg";
 
             // Safari needs it added to the DOM and a delay sometimes
             document.body.appendChild(a);
@@ -342,6 +342,8 @@
                 resultContext.textAlign = "right";
                 const now = new Date();
                 const localeTimestamp = now.toLocaleString();
+                timestamp = now.toISOString().replace(/[:T]/gi, '-').replace(/\..+/, '');
+
                 resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
                 resultContext.textAlign = 'left';
                 resultContext.fillText("PHOTOBOOTH", offset, result.height - offset);
