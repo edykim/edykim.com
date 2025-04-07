@@ -1,3 +1,6 @@
+<!-- context filter polifill for safari -->
+<script src="https://cdn.jsdelivr.net/npm/context-filter-polyfill/dist/index.min.js"></script>
+
 <div class="photobooth--wrapper">
     <div class="photobooth--header-wrapper">
         <div class="photobooth--header">
@@ -230,11 +233,13 @@
     let width = 1024;
     let height = 1368;
 
+    const isPortrait = screen.orientation?.type.startsWith('portrait');
+
     window.addEventListener('DOMContentLoaded', () => {
         let config = {
             video: {
-                width: 1024,
-                height: 1368,
+                width: isPortrait ? 1368 : 1024,
+                height: isPortrait ? 1024 : 1368,
                 frameRate: { ideal: 14, max: 14 },
                 facingMode: 'user'
             },
@@ -281,7 +286,7 @@
         document.querySelector("#result").addEventListener('click', function (e) {
             e.preventDefault();
 
-            const dataURL = result.toDataURL("image/png", 1);
+            const dataURL = result.toDataURL("image/jpeg", 1);
             const byteString = atob(dataURL.split(',')[1]);
             const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
 
@@ -296,7 +301,7 @@
 
             const a = document.createElement('a');
             a.href = url;
-            a.download = "photo.png";
+            a.download = "photo.jpg";
 
             // Safari needs it added to the DOM and a delay sometimes
             document.body.appendChild(a);
