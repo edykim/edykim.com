@@ -342,7 +342,7 @@
                 resultContext.textAlign = "right";
                 const now = new Date();
                 const localeTimestamp = now.toLocaleString();
-                timestamp = now.toISOString().replace(/[:T]/gi, '-').replace(/\..+/, '');
+                timestamp = now.toISOString().replace(/[:T]/gi, '-');
 
                 resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
                 resultContext.textAlign = 'left';
