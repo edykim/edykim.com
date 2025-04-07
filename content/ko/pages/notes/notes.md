@@ -24,4 +24,5 @@ noTitle: true
 - 작은 튜토리얼
   - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
   - [아주 조그마한 컴파일러 만들기](/ko/post/the-super-tiny-compiler/) (번역)
+- [즉석사진](/ko/photobooth/)
 - [마음 받은 글](/ko/liked/)

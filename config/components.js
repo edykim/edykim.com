@@ -94,6 +94,13 @@ const components = [
             nodes: publicPostOnly(nodes, node.data.frontmatter.lang)
         })
     },
+    {
+        key: 'photobooth',
+        template: '_insert/photobooth.html',
+        props: (node, nodes) => ({
+            node,
+        })
+    },
 ];
 
 export default components;

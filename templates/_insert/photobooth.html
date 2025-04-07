@@ -1,0 +1,213 @@
+<div class="photobooth--wrapper">
+    <div class="photobooth--screen">
+        <div class="photobooth--overlay"></div>
+        <video autoplay muted playsinline></video>
+    </div>
+    
+</div>
+
+<div class="photobooth--actions">
+    <button id="take-a-photo" class="photobooth-button">📷 촬영하기</button>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<div class="output">
+    <canvas id="result" width="1200" height="1800"></canvas>
+
+    <small>출력물을 클릭하면 저장할 수 있습니다.</small>
+</div>
+
+<style>
+.photobooth--wrapper {
+    text-align: center;
+}
+.photobooth--screen {
+    border: 1px solid var(--color-text);
+    padding: 2rem;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+}
+
+@keyframes flashOnce {
+    0% { background: rgba(255,255,255,1);}
+    100% { background: rgba(255,255,255,0); }
+}
+
+.flash-once {
+    animation: flashOnce 0.5s ease-in-out 1;
+}
+
+.photobooth--overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.photobooth--screen video {
+    width: 200px;
+    height: 200px;
+}
+
+.photobooth--actions {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.photobooth-button {
+    appearance: none;
+    border: none;
+    background-color: var(--color-button);
+    color: var(--color-text);
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#canvas {
+    display: none;
+}
+
+.output {
+    position: relative;
+    height: 400px;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.output:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: var(--color-text);
+    z-index: 1;
+}
+
+#result {
+    width: 200px;
+    display: none;
+    cursor: pointer;
+}
+
+@keyframes done {
+    0% { top: -500px; }
+    95% { top: -20px; }
+    100% { top: 20px; }
+}
+
+.done {
+    left: 20px;
+    position: absolute;
+    animation: done 2s ease-in-out forwards;
+    z-index: 100;
+    display: block !important;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+}
+
+.output small {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+</style>
+<script>
+const width = 1024;
+const height = 1024;
+
+window.addEventListener('DOMContentLoaded', () => {
+  let config = {
+      video: {
+        width: { ideal: width },
+        height: { ideal: height },
+        frameRate: { ideal: 14, max: 14 },
+        facingMode: 'environment'
+      },
+      audio: false,
+    };
+
+  function setupCamera(mode = null) {
+    navigator.mediaDevices
+      .getUserMedia(config)
+      .then((stream) => {
+        const video = document.querySelector('.photobooth--screen video');
+        video.srcObject = stream;
+        video.onloadedmetadata = function (e) {
+          video.play();
+        };
+      })
+      .catch((err) => {
+      });
+  }
+
+  setupCamera();
+
+    document.querySelector('#take-a-photo').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#result').classList.remove('done');
+        setTimeout(() => {takePicture(0)}, 1500);
+        setTimeout(() => {takePicture(1)}, 3000);
+        setTimeout(() => {takePicture(2)}, 4500);
+        setTimeout(() => {takePicture(3)}, 6000);
+        setTimeout(() => {takePicture(4)}, 7500);
+        setTimeout(() => {takePicture(5);
+            document.querySelector('#result').classList.add('done');
+        }, 9000);
+    });
+
+    document.querySelector("#result").addEventListener('click', function(e) {
+        e.preventDefault();
+        const data = result.toDataURL("image/png", 1);
+        const a = document.createElement('a');
+        a.href = data;
+        a.download = "photo.png";
+        document.body.appendChild(a);
+        a.click();
+    });
+})
+
+const video = document.querySelector('video')
+const canvas = document.querySelector('#canvas')
+const result = document.querySelector('#result')
+function takePicture(idx) {
+  document.querySelector('.photobooth--overlay').classList.add('flash-once');
+  setTimeout(() => {
+    document.querySelector('.photobooth--overlay').classList.remove('flash-once');
+  }, 1000);
+  const context = canvas.getContext("2d");
+  const resultContext = result.getContext("2d");
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(video, 0, 0, width, height);
+    const col = idx % 2;
+    const row = (idx - col) / 2;
+    const offset = (result.width - (width + 10)) / 2;
+    if (idx === 0) {;
+        resultContext.fillStyle = 'white';
+        resultContext.fillRect(0, 0, result.width, result.height);
+        resultContext.font = "32px sans-serif";
+        resultContext.fillStyle = 'black';
+        resultContext.textAlign = "right";
+        const now = new Date();
+        const localeTimestamp = now.toLocaleString();
+        resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
+
+    }
+    resultContext.drawImage(video, offset + col * (width / 2 + 10), offset + row * (width / 2 + 10), width / 2, width / 2);
+  } else {
+    clearPhoto();
+  }
+}
+</script>
