@@ -227,14 +227,14 @@
     }
 </style>
 <script>
-    const width = 1024;
-    const height = 1368;
+    let width = 1024;
+    let height = 1368;
 
     window.addEventListener('DOMContentLoaded', () => {
         let config = {
             video: {
-                width: { min: 768, ideal: width },
-                height: { min: 1024, ideal: height },
+                width: { min: 768, ideal: 1024 },
+                height: { min: 1024, ideal: 1368 },
                 frameRate: { ideal: 14, max: 14 },
                 facingMode: 'user'
             },
@@ -249,7 +249,10 @@
                     video.srcObject = stream;
                     video.onloadedmetadata = function (e) {
                         video.play();
-                        console.log("video loaded");
+                        // update the global config size based on the actual video size
+                        console.log(video.videoWidth, video.videoHeight);
+                        width = video.videoWidth;
+                        height = video.videoHeight;
                         onReady && onReady(video);
                     };
                 })
