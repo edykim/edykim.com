@@ -168,12 +168,33 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector("#result").addEventListener('click', function(e) {
         e.preventDefault();
-        const data = result.toDataURL("image/png", 1);
+        
+        const dataURL = result.toDataURL("image/png", 1);
+        const byteString = atob(dataURL.split(',')[1]);
+        const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+
+        const ab = new ArrayBuffer(byteString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+
+        const blob = new Blob([ab], { type: mimeString });
+        const url = URL.createObjectURL(blob);
+
         const a = document.createElement('a');
-        a.href = data;
+        a.href = url;
         a.download = "photo.png";
+        
+        // Safari needs it added to the DOM and a delay sometimes
         document.body.appendChild(a);
         a.click();
+        
+        // Cleanup
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
     });
 })
 
