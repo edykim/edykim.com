@@ -117,7 +117,7 @@
     .photobooth--screen video {
         width: 150px;
         aspect-ratio: 3/4;
-        filter: grayscale(1) contrast(1.2) brightness(1.5);
+        filter: grayscale(1) contrast(1.05) brightness(1.1);
     }
 
     .photobooth--instructions h2 {
@@ -349,7 +349,7 @@
                 resultContext.fillText("PHOTOBOOTH", offset, result.height - offset);
             }
 
-            resultContext.filter = "grayscale(1) contrast(1.2) brightness(1.5)";
+            resultContext.filter = "grayscale(1) contrast(1.05) brightness(1.1)";
             resultContext.drawImage(video, offset + col * (width / 2 + gap), offset + row * (height / 2 + gap), width / 2, height / 2);
         } else {
             clearPhoto();
