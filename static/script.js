@@ -27,7 +27,7 @@ function setMode(name) {
     const current = getCurrentMode();
     cl.add(`mode--${name}`);
 
-    cl.remove(`code---light`);
+    cl.remove(`code--light`);
     cl.remove(`code--dark`);
 
     if (codeLight.includes(name)) {
