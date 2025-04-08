@@ -16,6 +16,7 @@ noTitle: true
 
 - [즐겨찾기](/ko/bookmarks/)
 - [지침서](/ko/guidance/)
+- [마음 받은 글](/ko/liked/)
 - 샌디에고
   - [샌디에고 커피](/ko/sd/coffee/)
 - 플레이리스트
@@ -24,5 +25,5 @@ noTitle: true
 - 작은 튜토리얼
   - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
   - [아주 조그마한 컴파일러 만들기](/ko/post/the-super-tiny-compiler/) (번역)
-- [즉석사진](/ko/photobooth/)
-- [마음 받은 글](/ko/liked/)
+- 작은 페이지
+  - [즉석사진](/ko/photobooth/)
