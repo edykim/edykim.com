@@ -299,6 +299,8 @@
                     };
                 })
                 .catch((err) => {
+                    alert("카메라를 사용할 수 없습니다. 카메라 권한을 허용해주세요.");
+                    console.error("Error accessing camera: ", err);
                 });
         }
 
