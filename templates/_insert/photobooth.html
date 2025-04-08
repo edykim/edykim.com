@@ -10,6 +10,7 @@
         </div>
     </div>
     <div class="photobooth--screen">
+        <div class="photobooth--countdown"></div>        
         <video autoplay muted playsinline></video>
     </div>
     <div class="photobooth--instructions">
@@ -92,8 +93,26 @@
         align-items: center;
         line-height: 1;
         position: relative;
-        
     }
+
+    .photobooth--countdown {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0.5rem;
+        font-size: 4rem;
+        font-family: 'Sen', sans-serif;
+        font-weight: 900;
+        color: var(--color-text);
+        opacity: 0.8;
+    }
+
 
     @keyframes flashOnce {
         0% {
@@ -111,7 +130,7 @@
     }
 
     .photobooth--overlay {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
@@ -272,19 +291,27 @@
 
         document.querySelector('#take-a-photo').addEventListener('click', function (e) {
             e.preventDefault();
+            const initialDelay = 8000;
+            let count = initialDelay / 1000;
+            const $countdown = document.querySelector('.photobooth--countdown');
 
             setupCamera((video) => {
                 document.querySelector('#result').classList.remove('done');
+                for (let c = 0; c <= count; c++) {
+                    setTimeout(() => {
+                        $countdown.textContent = count > 0 ? count-- : '';
+                    }, c * 1000);
+                }
 
-                setTimeout(() => { takePicture(0) }, 2000);
-                setTimeout(() => { takePicture(1) }, 4000);
-                setTimeout(() => { takePicture(2) }, 6000);
+                setTimeout(() => { takePicture(0) }, initialDelay);
+                setTimeout(() => { takePicture(1) }, initialDelay + 2000);
+                setTimeout(() => { takePicture(2) }, initialDelay + 4000);
                 setTimeout(() => {
                     takePicture(3);
                     const left = 10 + Math.floor(Math.random() * 60);
                     document.querySelector('#result').style.left = left + 'px';
                     document.querySelector('#result').classList.add('done');
-                }, 8000);
+                }, initialDelay + 6000);
             });
         });
 
