@@ -10,7 +10,8 @@
         </div>
     </div>
     <div class="photobooth--screen">
-        <div class="photobooth--countdown"></div>        
+        <div class="photobooth--count"></div>
+        <div class="photobooth--countdown"></div>
         <video autoplay muted playsinline></video>
     </div>
     <div class="photobooth--instructions">
@@ -18,7 +19,7 @@
             <h2>INSTRUCTIONS</h2>
             <ul>
                 <li>촬영하기 버튼을 눌러 시작합니다.</li>
-                <li>사진은 2초 간격으로 4장 연속 촬영합니다.</li>
+                <li>사진은 3초 간격으로 4장 연속 촬영합니다.</li>
                 <li>촬영이 끝나면 사진을 클릭해서 저장할 수 있어요.</li>
                 <li>모든 기능은 로컬에서 동작하며 서버로 전송되는 데이터는 전혀 없어요.</li>
             </ul>
@@ -95,22 +96,34 @@
         position: relative;
     }
 
+    .photobooth--count,
     .photobooth--countdown {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 100;
+        z-index: 50;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        padding: 0.5rem;
-        font-size: 4rem;
         font-family: 'Sen', sans-serif;
-        font-weight: 900;
         color: var(--color-text);
         opacity: 0.8;
+        padding: 0.5rem;
+    }
+
+    .photobooth--count {
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+
+    .photobooth--countdown {
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-size: 4rem;
+        font-weight: 900;
     }
 
 
@@ -289,29 +302,48 @@
                 });
         }
 
+        let countdownTimers = [];
+        function countdown(count) {
+            const $countdown = document.querySelector('.photobooth--countdown');
+            countdownTimers.forEach(timer => clearTimeout(timer));
+            countdownTimers = [];
+
+            for (let c = 0; c <= count; c++) {
+                countdownTimers[c] = setTimeout(() => {
+                    $countdown.textContent = count > 0 ? count-- : '';
+                }, c * 1000);
+            }
+        }
+        function showCount(count, max) {
+            document.querySelector('.photobooth--count').textContent = count + '/' + max;
+        }
+
+        let taking = false;
+
         document.querySelector('#take-a-photo').addEventListener('click', function (e) {
             e.preventDefault();
+            if (taking == true) {
+                return;
+            }
+            taking = true;
             const initialDelay = 8000;
             let count = initialDelay / 1000;
-            const $countdown = document.querySelector('.photobooth--countdown');
-
             setupCamera((video) => {
                 document.querySelector('#result').classList.remove('done');
-                for (let c = 0; c <= count; c++) {
-                    setTimeout(() => {
-                        $countdown.textContent = count > 0 ? count-- : '';
-                    }, c * 1000);
-                }
+                countdown(count);
+                showCount(0, 4);
 
-                setTimeout(() => { takePicture(0) }, initialDelay);
-                setTimeout(() => { takePicture(1) }, initialDelay + 2000);
-                setTimeout(() => { takePicture(2) }, initialDelay + 4000);
+                setTimeout(() => { takePicture(0); countdown(3); showCount(1, 4); }, initialDelay);
+                setTimeout(() => { takePicture(1); countdown(3); showCount(2, 4); }, initialDelay + 3000);
+                setTimeout(() => { takePicture(2); countdown(3); showCount(3, 4); }, initialDelay + 6000);
                 setTimeout(() => {
                     takePicture(3);
-                    const left = 10 + Math.floor(Math.random() * 60);
+                    showCount(4, 4);
+                    const left = 10 + Math.floor(Math.random() * 20);
                     document.querySelector('#result').style.left = left + 'px';
                     document.querySelector('#result').classList.add('done');
-                }, initialDelay + 6000);
+                    taking = false;
+                }, initialDelay + 9000);
             });
         });
 
