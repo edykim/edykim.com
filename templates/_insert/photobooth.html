@@ -30,6 +30,7 @@
     </div>
     <div class="photobooth--output-wrapper">
         <div class="photobooth--output">
+            <div class="photobooth--output-images"></div>
             <canvas id="result" width="1200" height="1800"></canvas>
             <small>클릭하면 저장할 수 있어요.</small>
         </div>
@@ -139,7 +140,7 @@
 
     .flash-once {
         animation: flashOnce 0.5s ease-in-out 1;
-        z-index: 100 !important;
+        z-index: 200 !important;
     }
 
     .photobooth--overlay {
@@ -232,6 +233,11 @@
     #result {
         width: 200px;
         display: none;
+        cursor: pointer;
+    }
+
+    .photobooth--image {
+        width: 200px;
         cursor: pointer;
     }
 
@@ -341,18 +347,28 @@
                 setTimeout(() => {
                     takePicture(3);
                     showCount(4, 4);
-                    const left = 10 + Math.floor(Math.random() * 20);
-                    document.querySelector('#result').style.left = left + 'px';
-                    document.querySelector('#result').classList.add('done');
-                    taking = false;
+                    setTimeout(() => {
+                        // finalize the result
+                        const left = 10 + Math.floor(Math.random() * 20);
+                        const top =  Math.floor(Math.random() * 30);
+                        const img = document.createElement('img');
+                        img.src = result.toDataURL("image/jpeg", 1);
+                        img.classList.add('photobooth--image');
+                        img.style.left = left + 'px';
+                        img.style.marginTop = top + 'px';
+
+                        document.querySelector('.photobooth--output-images').appendChild(img);
+                        img.classList.add('done');
+                        img.addEventListener('click', handleDownload);
+                        taking = false;
+                    }, 300);
                 }, initialDelay + 9000);
             });
         });
 
-        document.querySelector("#result").addEventListener('click', function (e) {
+        function handleDownload(e) {
             e.preventDefault();
-
-            const dataURL = result.toDataURL("image/jpeg", 1);
+            const dataURL = e.target.getAttribute('src');
             const byteString = atob(dataURL.split(',')[1]);
             const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
 
@@ -378,7 +394,7 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
             }, 100);
-        });
+        }
     })
 
     const video = document.querySelector('video')
