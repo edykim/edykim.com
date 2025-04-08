@@ -1,6 +1,8 @@
 <!-- context filter polifill for safari -->
 <script src="https://cdn.jsdelivr.net/npm/context-filter-polyfill/dist/index.min.js"></script>
 
+<div class="photobooth--overlay"></div>
+
 <div class="photobooth--wrapper">
     <div class="photobooth--header-wrapper">
         <div class="photobooth--header">
@@ -8,7 +10,6 @@
         </div>
     </div>
     <div class="photobooth--screen">
-        <div class="photobooth--overlay"></div>
         <video autoplay muted playsinline></video>
     </div>
     <div class="photobooth--instructions">
@@ -105,6 +106,7 @@
 
     .flash-once {
         animation: flashOnce 0.5s ease-in-out 1;
+        z-index: 100 !important;
     }
 
     .photobooth--overlay {
@@ -113,7 +115,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        z-index: 100;
+        z-index: -1;
     }
 
     .photobooth--screen video {
@@ -325,36 +327,38 @@
         setTimeout(() => {
             document.querySelector('.photobooth--overlay').classList.remove('flash-once');
         }, 1000);
-        const context = canvas.getContext("2d");
-        const resultContext = result.getContext("2d");
-        if (width && height) {
-            canvas.width = width;
-            canvas.height = height;
-            context.drawImage(video, 0, 0, width, height);
-            const col = idx % 2;
-            const row = (idx - col) / 2;
-            const gap = 50;
-            const offset = (result.width - (width + gap)) / 2;
-            if (idx === 0) {
-                ;
-                resultContext.fillStyle = 'black';
-                resultContext.fillRect(0, 0, result.width, result.height);
-                resultContext.font = "32px Sen";
-                resultContext.fillStyle = 'white';
-                resultContext.textAlign = "right";
-                const now = new Date();
-                const localeTimestamp = now.toLocaleString();
-                timestamp = now.toISOString().replace(/[:T]/gi, '-');
+        setTimeout(() => {
+            const context = canvas.getContext("2d");
+            const resultContext = result.getContext("2d");
+            if (width && height) {
+                canvas.width = width;
+                canvas.height = height;
+                context.drawImage(video, 0, 0, width, height);
+                const col = idx % 2;
+                const row = (idx - col) / 2;
+                const gap = 50;
+                const offset = (result.width - (width + gap)) / 2;
+                if (idx === 0) {
+                    ;
+                    resultContext.fillStyle = 'black';
+                    resultContext.fillRect(0, 0, result.width, result.height);
+                    resultContext.font = "32px Sen";
+                    resultContext.fillStyle = 'white';
+                    resultContext.textAlign = "right";
+                    const now = new Date();
+                    const localeTimestamp = now.toLocaleString();
+                    timestamp = now.toISOString().replace(/[:T]/gi, '-');
 
-                resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
-                resultContext.textAlign = 'left';
-                resultContext.fillText("PHOTOBOOTH", offset, result.height - offset);
+                    resultContext.fillText(localeTimestamp, result.width - offset, result.height - offset);
+                    resultContext.textAlign = 'left';
+                    resultContext.fillText("PHOTOBOOTH", offset, result.height - offset);
+                }
+
+                resultContext.filter = "grayscale(1) contrast(1.05) brightness(1.4)";
+                resultContext.drawImage(video, offset + col * (width / 2 + gap), offset + row * (height / 2 + gap), width / 2, height / 2);
+            } else {
+                clearPhoto();
             }
-
-            resultContext.filter = "grayscale(1) contrast(1.05) brightness(1.4)";
-            resultContext.drawImage(video, offset + col * (width / 2 + gap), offset + row * (height / 2 + gap), width / 2, height / 2);
-        } else {
-            clearPhoto();
-        }
+        }, 200);
     }
 </script>
