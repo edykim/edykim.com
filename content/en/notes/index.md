@@ -11,5 +11,7 @@ url: /notes
   theory related articles/pages
 - [Plants](/plants/): note for my plants, how to care
 - [Security Freeze](/note/security-freeze): what is about, how to apply
-- [Notes for San Diego](/sandiego/): habitual eating log in San Diego
+- San Diego Favorites
+  - [San Diego Coffee ☕️](/sd/coffee/)
+  - [San Diego Phở](/sd/pho/)
 
