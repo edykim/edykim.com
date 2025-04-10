@@ -907,3 +907,27 @@ details[open] {
 .flat-list li {
     margin-top: 0.5rem;
 }
+
+.tags a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    background-color: var(--color-shadow);
+    padding: 0.4rem 0.6rem;
+    color: var(--color-text);
+    border-radius: 3px;
+}
+
+.tags a:hover {
+    background-color: var(--color-link);
+    color: var(--color-background-color);
+}
+
+.page-meta {
+    display: flex;
+    font-size: 0.8rem;
+    font-style: italic;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: -0.8rem;
+    color: var(--color-gray);
+}

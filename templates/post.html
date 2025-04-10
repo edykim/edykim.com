@@ -7,6 +7,17 @@
         ${data.frontmatter.headline ? `<div class="headline">
             ${data.frontmatter.headline.join('')}
         </div>` : ''}
+
+        <div class="page-meta">
+            ${template('date.html', {
+                label: 'Updated on',
+                date: data.frontmatter.updatedOn,
+            })}
+            ${template('date.html', {
+                label: 'Published on',
+                date: data.frontmatter.date,
+            })}
+        </div>
     </header>`}
 
     ${data.fields.raw
@@ -20,15 +31,6 @@
     `: ''}
 
     <footer class="page-footer">
-        ${template('date.html', {
-            label: 'Published on',
-            date: data.frontmatter.date,
-        })}
-        ${template('date.html', {
-            label: 'Updated on',
-            date: data.frontmatter.updatedOn,
-        })}
-
         ${template('taxonomy.html', data)}
     </footer>
 </div>
