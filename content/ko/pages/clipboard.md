@@ -14,6 +14,7 @@ noIndex: true
 - [A Primer on Bézier Curves](https://pomax.github.io/bezierinfo/){data-lang=영문 data-tags=개발,그래픽} 베지어 곡선 이해와 구현
 - [WebGL2 Fundamentals](https://webgl2fundamentals.org/){data-lang=영문 data-tags=개발,그래픽}
 - [OSSU](https://github.com/ossu/computer-science){data-lang=영문 data-tags=개발} 오픈소스 CS 커리큘럼
+- [Dr. Alan Kay on the Meaning of “Object-Oriented Programming”](https://www.purl.org/stefan_ram/pub/doc_kay_oop_en){data-lang=영문 data-tags=개발} 메시징, 상태 은닉, 지연 바인딩
+- [Resource for Computer Graphics](https://kesen.realtimerendering.com/){data-lang=영문 data-tags=그래픽} SIGGRAPH 등 그래픽 연구 동향
 
 <!-- @template bookmarks -->
-
