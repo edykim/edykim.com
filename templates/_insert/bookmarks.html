@@ -7,6 +7,16 @@
         margin: 1rem 0 3rem;
     }
 
+    .bookmark-tags + ul {
+        columns: 2;
+    }
+
+    @media screen and (max-width: 620px) {
+        .bookmark-tags + ul {
+            columns: 1;
+        }
+    }
+
     .bookmark-tags a {
         display: inline-block;
         text-decoration: none;
