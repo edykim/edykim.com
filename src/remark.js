@@ -25,6 +25,7 @@ const pipeline = unified()
     .use(tableWrapper)
     .use(collectImages)
     .use(updateRoute)
+    .use(updateBookmark)
     .use(updateImagePath)
     .use(updateYoutube)
     .use(remarkGfm)
@@ -118,6 +119,60 @@ function updateYoutube(options = {width: 600, height: 300}) {
                 }
             }
 
+        })
+    }
+}
+
+function parseAttributes(attributeString) {
+  const result = {}
+  const classNames = []
+  // Match: .class, #id, or key=value
+  const regex = /([.#]?\w[\w-]*)(?:=(("[^"]*")|('[^']*')|([^'" ]+)))?/g
+  let match
+
+  while ((match = regex.exec(attributeString)) !== null) {
+    const [raw, key, , doubleQuoted, singleQuoted, unquoted] = match
+
+    if (key.startsWith('.')) {
+      classNames.push(key.slice(1))
+    } else if (key.startsWith('#')) {
+      result.id = key.slice(1)
+    } else {
+      let value = doubleQuoted || singleQuoted || unquoted || ''
+      value = value.replace(/^['"]|['"]$/g, '') // remove any surrounding quotes
+      result[key] = value
+    }
+  }
+
+  if (classNames.length > 0) {
+    result.class = classNames.join(' ')
+  }
+
+  return result
+}
+
+function updateBookmark() {
+    return (tree, file) => {
+        visit(tree, 'link', function (node, index, parent) {
+            if (!parent || !Array.isArray(parent.children)) return;
+
+            const next = parent.children[index + 1];
+            if (
+                next &&
+                next.type === 'text' &&
+                /^\{\s*[\w\-]+=[^}]+\s*\}$/.test(next.value)
+            ) {
+                const attrText = next.value.trim().slice(1, -1);
+                const attributes = parseAttributes(attrText);
+
+                node.data = node.data || {};
+                node.data.hProperties = {
+                    ...node.data.hProperties,
+                    ...attributes,
+                };
+
+                parent.children.splice(index + 1, 1);
+            }
         })
     }
 }
