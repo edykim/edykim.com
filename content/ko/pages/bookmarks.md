@@ -3,7 +3,7 @@ title: 즐겨찾기
 author: haruair
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-03-22T05:39:37"
+updatedOn: "2025-04-12T23:17:53"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -60,7 +60,7 @@ noIndex: true
 - [The Local Project](https://thelocalproject.com.au/){data-lang=영문 data-tags=정보}
 - [Dead Simple Sites](https://deadsimplesites.com/){data-lang=영문 data-tags=정보,아카이브}
 - [The Pudding](https://pudding.cool/){data-lang=영문 data-tags=정보,디자인,데이터}
-- [LIFE LABEL](https://lifelabel.jp/){data-lang=일문 data-tags=정보,생활,디자인}
+- [LIFE LABEL](https://lifelabel.jp/){data-lang=일문 data-tags=정보,웹진,디자인}
 - [Achim](https://have-achim.com/){data-lang=국문 data-tags=정보,웹진}
 - [흑심 BLACKHEART](https://blackheart.kr/){data-lang=국문 data-tags=상점,문구}
 - [콜렉토그라프](https://collectograph.com/){data-lang=국문 data-tags=상점,문구}
@@ -71,5 +71,9 @@ noIndex: true
 - [Topo Designs](https://topodesigns.com/){data-lang=영문 data-tags=상점,잡화}
 - [tomtoc](https://www.tomtoc.com/){data-lang=영문 data-tags=상점,잡화}
 - [WAKA-WAKA](https://wakawaka.world/){data-lang=영문 data-tags=상점,인테리어}
+- [akwiki](https://wiki.g15e.com/){data-lang=국문 data-tags=개인,개발}
+- [Mijeong(Rachel)](https://mjspring.medium.com/){data-lang=국문 data-tags=개인,개발}
+- [푸딩캠프 뉴스레터](https://puddingcamp.com/newsletters){data-lang=국문 data-tags=개발}
 
 <!-- @template bookmarks -->
+
