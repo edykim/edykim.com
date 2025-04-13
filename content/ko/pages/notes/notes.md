@@ -14,19 +14,30 @@ noTitle: true
 
 :::
 
-- 링크 정원
+<h2 class="subtitle">링크정원</h2>
+
+브라우저에 탭 늘려가는 대신 여기에 링크를 심어두기로 결심했어요.
+
   - [즐겨찾기](/ko/bookmarks/)
   - [클립보드](/ko/clipboard/)
-- 샌디에고
-  - [샌디에고 커피](/ko/sd/coffee/)
-- 플레이리스트
-  - [일단 들어보고](/ko/playlist/let-me-listen-first)
-  - [ambient 01](/ko/playlist/ambient-01)
-- 작은 튜토리얼
-  - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
-  - [아주 조그마한 컴파일러 만들기](/ko/post/the-super-tiny-compiler/) (번역)
-- 작은 웹앱
-  - [즉석사진](/ko/photobooth/)
+
+<h2 class="subtitle">작은 페이지</h2>
+
+- [샌디에고 커피](/ko/sd/coffee/)
 - [지침서](/ko/guidance/)
 - [마음 받은 글](/ko/liked/)
 
+<h2 class="subtitle">플레이리스트</h2>
+
+- [일단 들어보고](/ko/playlist/let-me-listen-first)
+- [ambient 01](/ko/playlist/ambient-01)
+
+<h2 class="subtitle">작은 튜토리얼</h2>
+
+- [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
+- [아주 조그마한 컴파일러 만들기](/ko/post/the-super-tiny-compiler/) (번역)
+
+
+<h2 class="subtitle">작은 웹앱</h2>
+
+- [즉석사진](/ko/photobooth/)
