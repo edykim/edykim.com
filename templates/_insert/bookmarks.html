@@ -64,7 +64,12 @@
 
     function bookmarkHashChange(event) {
         const hash = location.hash.slice(1)
-        const tag = decodeURIComponent(hash) || '*'
+        let tag = decodeURIComponent(hash) || '*'
+        const tagLink = document.querySelector('a[data-tag="' + tag + '"]')
+        if (!tagLink) {
+            location.hash = '';
+            return;
+        }
         if (tag !== '*')
             for (const link of collection['*']) link.style.display = 'none';
         for (const link of collection[tag]) link.style.display = '';
