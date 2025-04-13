@@ -1,0 +1,78 @@
+<style>
+    .bookmark-tags {
+        display: flex;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 1rem 0 3rem;
+    }
+
+    .bookmark-tags a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--color-button);
+        border-radius: 10px;
+        line-height: 1;
+    }
+
+    .bookmark-tags a.active {
+        border-color: var(--color-link);
+    }
+
+    .bookmark-tags a span {
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+        opacity: 0.7;
+    }
+
+    a[data-lang]:not(a[data-lang='국문']):after {
+        content: attr(data-lang);
+        font-size: 0.8rem;
+        margin-left: 0.3rem;
+        color: var(--color-text);
+        opacity: 0.8;
+        text-decoration: none;
+    }
+</style>
+<script>
+    const collection = { '*': [] }
+    for (const link of document.querySelectorAll("a[data-tags]")) {
+        collection['*'].push(link.parentNode)
+        for (const tag of link.dataset.tags.split(',')) {
+            collection[tag] = collection[tag] || []
+            collection[tag].push(link.parentNode)
+        }
+    }
+
+    const tags = document.querySelector('.bookmark-tags')
+
+    for (const tag of Object.keys(collection).sort()) {
+        const _tag = tag === '*' ? '전체' : tag
+        const _link = tag === '*' ? '' : tag
+
+        const anchor = document.createElement('a')
+        anchor.setAttribute('href', '#' + _link)
+        const count = document.createElement('span')
+        count.textContent = collection[tag].length
+        anchor.textContent = _tag
+        anchor.dataset.tag = tag
+        anchor.appendChild(count)
+        tags.appendChild(anchor)
+    }
+
+    function bookmarkHashChange(event) {
+        const hash = location.hash.slice(1)
+        const tag = decodeURIComponent(hash) || '*'
+        if (tag !== '*')
+            for (const link of collection['*']) link.style.display = 'none';
+        for (const link of collection[tag]) link.style.display = '';
+
+        document.querySelector('.bookmark-tags a.active')?.classList.remove('active');
+        document.querySelector('a[data-tag="' + tag + '"]')?.classList.add('active');
+    }
+
+    window.addEventListener("hashchange", bookmarkHashChange);
+    bookmarkHashChange();
+</script>

@@ -160,18 +160,29 @@ function updateBookmark() {
             if (
                 next &&
                 next.type === 'text' &&
-                /^\{\s*[\w\-]+=[^}]+\s*\}$/.test(next.value)
+                next.value.trim().startsWith('{')
             ) {
-                const attrText = next.value.trim().slice(1, -1);
-                const attributes = parseAttributes(attrText);
+                const full = next.value.trim();
+                const closingIndex = full.indexOf('}');
+                if (closingIndex !== -1) {
+                    const attrText = full.slice(1, closingIndex).trim();
+                    const remainingText = full.slice(closingIndex + 1).trim();
 
-                node.data = node.data || {};
-                node.data.hProperties = {
-                    ...node.data.hProperties,
-                    ...attributes,
-                };
+                    const attributes = parseAttributes(attrText);
 
-                parent.children.splice(index + 1, 1);
+                    node.data = node.data || {};
+                    node.data.hProperties = {
+                        ...node.data.hProperties,
+                        ...attributes,
+                    };
+
+                    if (remainingText) {
+                        next.value = ' ' + remainingText;
+                    } else {
+                        parent.children.splice(index + 1, 1);
+                    }
+                }
+
             }
         })
     }

@@ -926,8 +926,14 @@ details[open] {
     display: flex;
     font-size: 0.8rem;
     font-style: italic;
-    gap: 0.8rem;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
     margin-top: -0.8rem;
     color: var(--color-gray);
+}
+
+.page-meta:has(.published-on) .updated-on:after {
+    content: ',';
+    text-transform: italic;
+    margin-left: -0.1rem;
 }

@@ -101,6 +101,13 @@ const components = [
             node,
         })
     },
+    {
+        key: 'bookmarks',
+        template: '_insert/bookmarks.html',
+        props: (node, nodes) => ({
+            node,
+        })
+    }
 ];
 
 export default components;
