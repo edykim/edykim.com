@@ -7,9 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node src/app.js",
-    "watch": "npx chokidar-cli \"{src,content,config,templates,static}/**/*\" -c \"npm run build\"",
+    "watch": "npx chokidar-cli \"{src,content,config,templates,static}/**/*\" -c \"npm run uuid && npm run build\"",
     "serve": "npx serve public",
-    "dev": "npm run build && npx concurrently \"npm run watch\" \"npm run serve\" -n \"watch,serve\" -c \"auto\""
+    "uuid": "node bin/check-uuid.js",
+    "dev": "npm run uuid && npm run build && npx concurrently \"npm run watch\" \"npm run serve\" -n \"watch,serve\" -c \"auto\""
   },
   "keywords": [],
   "author": "",
