@@ -1,6 +1,7 @@
 ---
 title: React에서 Redux 전에 배워야 할 8가지
 author: haruair
+uuid: "5201a171-4b11-4806-97ba-5045fe0b391c"
 type: post
 date: "2018-11-04T20:52:00"
 lang: ko

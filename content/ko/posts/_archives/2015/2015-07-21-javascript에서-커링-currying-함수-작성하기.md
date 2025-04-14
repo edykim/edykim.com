@@ -1,6 +1,7 @@
 ---
 title: JavaScript에서 커링 currying 함수 작성하기
 author: haruair
+uuid: "3fce4873-f5ed-4c1c-bd98-c55ae71dfbbe"
 type: post
 date: "2015-07-21T04:37:25"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 당신의 Pull Request를 “떠넘기지” 말라
 author: haruair
+uuid: "4cd58c31-bdc2-4ee2-a351-6723b332f02e"
 type: post
 date: "2015-04-07T23:30:28"
 history:

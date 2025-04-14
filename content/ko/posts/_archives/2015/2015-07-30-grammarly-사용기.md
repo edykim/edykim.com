@@ -1,6 +1,7 @@
 ---
 title: 영어 맞춤법, 문법 검사 서비스 grammarly 사용기
 author: haruair
+uuid: "007b0495-a062-4d24-b778-0403c37e25e2"
 type: post
 date: "2015-07-30T07:09:31"
 history:

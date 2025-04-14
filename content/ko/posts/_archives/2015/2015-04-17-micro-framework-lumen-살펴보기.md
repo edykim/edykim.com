@@ -1,6 +1,7 @@
 ---
 title: Micro-Framework, Lumen 살펴보기
 author: haruair
+uuid: "c602e14a-8c2f-4eb6-a6ba-f03bd91afe91"
 type: post
 date: "2015-04-17T13:26:52"
 history:

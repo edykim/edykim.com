@@ -1,6 +1,7 @@
 ---
 title: Mac에서 PDF 다크 모드로 보기
 author: haruair
+uuid: "9ac12e24-5339-4c3e-9d81-efa65a7896ed"
 type: post
 date: 2024-11-26T14:29:48
 lang: ko

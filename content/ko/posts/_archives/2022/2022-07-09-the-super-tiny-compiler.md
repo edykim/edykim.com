@@ -1,6 +1,7 @@
 ---
 title: "아주 조그마한 컴파일러 만들기"
 author: haruair
+uuid: "8a1301da-62ed-4a53-b90c-2de819ea4417"
 type: post
 date: "2022-07-09T18:16:12.847Z"
 lang: ko

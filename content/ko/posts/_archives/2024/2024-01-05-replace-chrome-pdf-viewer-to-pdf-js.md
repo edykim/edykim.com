@@ -1,6 +1,7 @@
 ---
 title: Google Chrome PDF 뷰어를 Mozilla PDF.js로 교체하기
 author: haruair
+uuid: "2453467d-dc17-4515-bf65-9af8b1e60b9b"
 type: post
 date: 2024-01-05T15:01:47
 lang: ko

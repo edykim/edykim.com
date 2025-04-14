@@ -1,6 +1,7 @@
 ---
 title: Thinkpad 블루투스 키보드 구입 및 사용기
 author: haruair
+uuid: "491ab25b-741a-443c-adfc-856550c04faa"
 type: post
 date: "2018-02-03T11:13:27"
 history:

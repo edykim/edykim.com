@@ -1,6 +1,7 @@
 ---
 title: "Laravel beyond CRUD 노트"
 author: haruair
+uuid: "803f87c1-f9e4-474e-9a2a-c483279f0024"
 type: post
 date: "2022-07-17T14:00:24.520Z"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: 웹에서 svg 이미지로 레티나 지원하기
 author: haruair
+uuid: "45d74e3b-14b3-4a5e-8b71-ba38babddb9b"
 type: post
 date: "2013-12-17T04:29:30"
 history:

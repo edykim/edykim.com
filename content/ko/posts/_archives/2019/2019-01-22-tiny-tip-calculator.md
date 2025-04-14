@@ -1,6 +1,7 @@
 ---
 title: Tiny Tip Calculator 개발기
 author: haruair
+uuid: "a2f69303-c152-4515-ae67-6f5fe0e9f725"
 type: post
 date: "2019-01-22T11:52:00"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: 범상치 않은 제주 날씨
 author: haruair
+uuid: "f43d6d1a-65c9-4d72-ad5d-3d72bc381bd7"
 type: post
 date: "2011-06-26T02:29:52"
 history:

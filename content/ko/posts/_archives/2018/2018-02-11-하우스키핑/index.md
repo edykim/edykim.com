@@ -1,6 +1,7 @@
 ---
 title: 하우스키핑
 author: haruair
+uuid: "6ba513f9-1cd3-4fe9-b8e0-2b7fcbab89de"
 type: post
 date: "2018-02-11T04:39:17"
 history:

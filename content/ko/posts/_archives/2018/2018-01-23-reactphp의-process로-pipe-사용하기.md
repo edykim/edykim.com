@@ -1,6 +1,7 @@
 ---
 title: ReactPHP의 Process로 pipe 사용하기
 author: haruair
+uuid: "ca8da9c5-72bd-47f3-b811-a45530d062b9"
 type: post
 date: "2018-01-23T10:47:14"
 history:

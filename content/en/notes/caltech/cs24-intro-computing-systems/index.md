@@ -1,6 +1,7 @@
 ---
 title: "CS24 Introduction to Computing Systems"
 author: haruair
+uuid: "c71a9683-4309-43f6-bf01-6e48904cd11b"
 type: page
 date: "2020-05-22T06:33:00"
 lang: en

@@ -1,6 +1,7 @@
 ---
 title: "JetBrains TV의 PhpStorm Tips 요약 노트"
 author: haruair
+uuid: "d1b600cc-e69a-49fe-b9ff-2a179a1cf04d"
 type: post
 date: "2022-08-21T15:25:44.687Z"
 lang: ko

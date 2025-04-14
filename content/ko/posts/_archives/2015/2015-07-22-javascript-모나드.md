@@ -1,6 +1,7 @@
 ---
 title: JavaScript 모나드
 author: haruair
+uuid: "4d9ea8fb-c53e-4897-942c-fc5db48c4681"
 type: post
 date: "2015-07-22T10:55:46"
 history:

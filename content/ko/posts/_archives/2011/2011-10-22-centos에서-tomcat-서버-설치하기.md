@@ -1,6 +1,7 @@
 ---
 title: centOS에서 tomcat 서버 설치하기
 author: haruair
+uuid: "a8865a2a-4fec-40b3-8813-1b98c0255948"
 type: post
 date: "2011-10-22T05:52:16"
 history:

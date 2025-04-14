@@ -1,6 +1,7 @@
 ---
 title: 요즘 페이스북이 최악인 이유
 author: haruair
+uuid: "c4df62b6-be9f-4060-9a5c-1c902cf9b242"
 type: post
 date: "2013-01-16T06:45:39"
 history:

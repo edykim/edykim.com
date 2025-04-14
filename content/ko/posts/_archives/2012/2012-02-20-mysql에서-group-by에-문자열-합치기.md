@@ -1,6 +1,7 @@
 ---
 title: mysql에서 group by에 문자열 합치기
 author: haruair
+uuid: "76e2c04a-7dff-4a0a-8cc8-55c242fbe85b"
 type: post
 date: "2012-02-19T16:09:45"
 history:

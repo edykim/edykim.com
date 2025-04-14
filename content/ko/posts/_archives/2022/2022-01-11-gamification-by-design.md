@@ -1,6 +1,7 @@
 ---
 title: "게이미피케이션: 웹과 모바일 앱에 게임 기법 불어넣기"
 author: haruair
+uuid: "9157e1cd-547f-4968-b22b-480367459044"
 type: post
 date: "2022-01-11T17:17:33.501Z"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: FP in Elm 노트 – Intro to FRP in Elm
 author: haruair
+uuid: "a33d1117-72a8-4468-a547-f6a812dff11b"
 type: post
 date: "2015-09-01T23:14:56"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 리액트 quick start 노트
 author: haruair
+uuid: "61837d42-e61b-42da-8f82-22d2e4642e5f"
 type: post
 date: "2018-02-11T11:49:07"
 history:

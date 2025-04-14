@@ -1,6 +1,7 @@
 ---
 title: Terminal에서 MAMP의 php 사용하기
 author: haruair
+uuid: "8f1170c3-b9fb-4c1f-9cc8-f4b534aeb03f"
 type: post
 date: "2015-01-02T01:33:14"
 history:

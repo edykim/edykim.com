@@ -1,6 +1,7 @@
 ---
 title: "달매소스"
 author: mindymkkim
+uuid: "a19143a8-783f-4a71-aedc-8583b7ced18a"
 type: post
 date: "2020-10-25T08:41:41"
 lang: ko

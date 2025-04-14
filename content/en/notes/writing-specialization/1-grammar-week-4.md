@@ -1,6 +1,7 @@
 ---
 title: "Week 4: More Commas, Parallel Structure, and Sentence Variety" 
 author: haruair
+uuid: "19189441-0dea-4817-8ad7-eddf27fc53ae"
 type: page
 date: "2019-07-24T03:12:17"
 lang: en

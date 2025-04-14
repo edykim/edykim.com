@@ -1,6 +1,7 @@
 ---
 title: "개발자 동무, 철의 장막 뒤에서 디버깅 하기"
 author: haruair
+uuid: "14005c43-a3aa-4242-8aae-d7c8d8e335d2"
 type: post
 date: "2021-11-04T16:15:55.626Z"
 lang: ko

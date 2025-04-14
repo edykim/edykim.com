@@ -1,6 +1,7 @@
 ---
 title: 아이리버 story K 리뷰
 author: haruair
+uuid: "dff5137f-ffec-40c8-addb-2315810575a0"
 type: post
 date: "2012-01-22T07:08:37"
 history:

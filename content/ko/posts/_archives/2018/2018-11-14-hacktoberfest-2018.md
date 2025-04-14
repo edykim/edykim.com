@@ -1,6 +1,7 @@
 ---
 title: Hacktoberfest 2018 후기
 author: haruair
+uuid: "4dd2b0dc-bce6-4b4a-9365-065ab0e3db46"
 type: post
 date: "2018-11-14T17:02:00"
 lang: ko

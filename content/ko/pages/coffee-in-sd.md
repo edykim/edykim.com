@@ -1,6 +1,7 @@
 ---
 title: 샌디에고 커피
 author: haruair
+uuid: "99897d38-5b1f-414b-bf65-8c784c3556fb"
 type: page
 date: 2024-08-02T17:40:11
 updatedOn: 2025-02-15T15:58:10

@@ -1,6 +1,7 @@
 ---
 title: 캐논 EOS 6D 영입
 author: haruair
+uuid: "1b25a892-635b-4e89-afb3-5c5160d2d6f1"
 type: post
 date: "2013-08-30T04:04:59"
 history:

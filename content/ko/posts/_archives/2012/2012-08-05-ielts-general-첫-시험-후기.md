@@ -1,6 +1,7 @@
 ---
 title: ielts general 첫 시험 후기
 author: haruair
+uuid: "ea4dc6c5-d435-4dd1-bf1b-910b06edd173"
 type: post
 date: "2012-08-05T13:11:09"
 history:

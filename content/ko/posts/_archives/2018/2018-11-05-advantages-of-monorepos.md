@@ -1,6 +1,7 @@
 ---
 title: 단일 리포지터리의 좋은 점
 author: haruair
+uuid: "abf7bb8d-b8a4-4994-83f7-c9f34fa9df88"
 type: post
 date: "2018-11-06T14:52:00"
 lang: ko

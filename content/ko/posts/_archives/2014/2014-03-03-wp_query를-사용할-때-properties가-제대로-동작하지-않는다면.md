@@ -1,6 +1,7 @@
 ---
 title: WP_Query를 사용할 때 Properties가 제대로 동작하지 않는다면
 author: haruair
+uuid: "04c9ad50-59b5-4e76-9dbf-09ec60b96538"
 type: post
 date: "2014-03-03T10:48:37"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 이벤트 소싱 event-sourcing 패턴 JavaScript로 구현하기
 author: haruair
+uuid: "85ecbcd8-d3d4-4cbd-81d0-3e6a5a44c084"
 type: post
 date: "2017-10-18T00:52:04"
 history:

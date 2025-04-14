@@ -1,6 +1,7 @@
 ---
 title: 내가 Google Chrome을 떠나지 못하는 이유
 author: haruair
+uuid: "dd00f5f3-3e13-4277-9e12-095732d37642"
 type: post
 date: "2016-01-05T23:54:40"
 history:

@@ -2,6 +2,7 @@
 title: 일단 들어보고
 metaTitle: 일단 들어보고
 author: haruair
+uuid: "8a5adde0-fd9d-4e4c-9372-3df7b64bf120"
 type: page
 lang: ko
 url: playlist/let-me-listen-first

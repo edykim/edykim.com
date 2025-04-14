@@ -1,6 +1,7 @@
 ---
 title: MS PowerShell 버전과 확장자 ps1
 author: haruair
+uuid: "a6ac3cf7-4dc0-4d92-901b-4796b679a20f"
 type: post
 date: "2016-07-17T12:30:52"
 history:

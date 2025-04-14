@@ -1,6 +1,7 @@
 ---
 title: VMFusion에서 Windows 8.1 업데이트 이후 공유 폴더 문제 해결 방법
 author: haruair
+uuid: "d6bfe4dd-d186-4b4e-b13b-7a4062cedc79"
 type: post
 date: "2014-04-15T00:04:23"
 history:

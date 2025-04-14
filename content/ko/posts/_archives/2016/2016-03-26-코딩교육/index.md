@@ -1,6 +1,7 @@
 ---
 title: 코딩교육
 author: haruair
+uuid: "f7a0b08d-84ef-4c9b-9eca-4551c466b426"
 type: post
 date: "2016-03-26T13:30:53"
 history:

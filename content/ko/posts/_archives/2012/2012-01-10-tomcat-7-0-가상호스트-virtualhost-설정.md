@@ -1,6 +1,7 @@
 ---
 title: tomcat 7.0 가상호스트 virtualhost 설정
 author: haruair
+uuid: "79c53c5f-543a-4df5-b96b-76c1cd42994c"
 type: post
 date: "2012-01-10T02:44:27"
 history:

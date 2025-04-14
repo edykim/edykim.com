@@ -1,6 +1,7 @@
 ---
 title: "CS11 Intro C++: Lecture 2"
 author: haruair
+uuid: "e51bd14b-790f-4825-9c42-66dfe492e93b"
 type: page
 date: "2020-05-18T11:28:00"
 lang: en

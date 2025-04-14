@@ -1,6 +1,7 @@
 ---
 title: TP-Link Kasa Wifi 벽 스위치 설치기
 author: haruair
+uuid: "0b18c9a1-8f1e-4499-99fb-a863d66d19f4"
 type: post
 date: "2020-07-23T13:37:23"
 headline:

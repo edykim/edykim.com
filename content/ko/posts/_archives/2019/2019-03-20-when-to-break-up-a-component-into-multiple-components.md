@@ -1,6 +1,7 @@
 ---
 title: 컴포넌트를 여러 컴포넌트로 나눠야 할 때
 author: haruair
+uuid: "c0e2a5e3-213b-47a2-919a-d76daf261bed"
 type: post
 date: "2019-03-20T16:52:00"
 lang: ko

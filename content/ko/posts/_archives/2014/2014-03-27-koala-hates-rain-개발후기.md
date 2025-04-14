@@ -1,6 +1,7 @@
 ---
 title: Koala Hates Rain 개발후기
 author: haruair
+uuid: "3772e6fa-2a40-4e21-b357-6893758b6b03"
 type: post
 date: "2014-03-27T03:00:53"
 history:

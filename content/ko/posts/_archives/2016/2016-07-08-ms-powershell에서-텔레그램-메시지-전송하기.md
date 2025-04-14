@@ -1,6 +1,7 @@
 ---
 title: MS PowerShell에서 텔레그램 메시지 전송하기
 author: haruair
+uuid: "88b1f93d-6272-4c83-87a4-05e84484bb58"
 type: post
 date: "2016-07-08T13:46:50"
 history:

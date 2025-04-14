@@ -1,6 +1,7 @@
 ---
 title: '테스트 주도 개발 : Test-Driven Development by Example'
 author: haruair
+uuid: "45c7f141-67e0-4944-b09c-64882bdf3e0d"
 type: post
 date: "2017-06-13T00:00:21"
 history:

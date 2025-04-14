@@ -1,6 +1,7 @@
 ---
 title: 새해에는 할일을 차곡차곡 Any.DO
 author: haruair
+uuid: "d5ebce90-8cf6-4459-8bef-05797c83a9cd"
 type: post
 date: "2013-01-09T01:34:28"
 history:

@@ -1,6 +1,7 @@
 ---
 title: suckless st 한글 띄어쓰기 문제 수정하기
 author: haruair
+uuid: "aa8a6871-d6b6-4ac3-b9b9-9211b0e20e8c"
 type: post
 date: "2020-03-18T20:27:00"
 lang: ko

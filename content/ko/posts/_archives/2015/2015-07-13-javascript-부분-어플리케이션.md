@@ -1,6 +1,7 @@
 ---
 title: JavaScript 부분 어플리케이션
 author: haruair
+uuid: "1d2f2cac-8a4e-47dc-84fd-97a6857c53ba"
 type: post
 date: "2015-07-13T13:50:05"
 history:

@@ -1,6 +1,7 @@
 ---
 title: "코드 커버리지 모범 사례"
 author: haruair
+uuid: "0472f970-6107-46aa-af41-ae2bbc3f719a"
 type: post
 date: "2022-07-24T18:48:48.638Z"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: PHP에서 Codeigniter 옮겨타기 1
 author: haruair
+uuid: "0f5fec91-ec12-4dcd-96d0-15cf13f798ef"
 type: post
 date: "2012-08-08T13:35:58"
 history:

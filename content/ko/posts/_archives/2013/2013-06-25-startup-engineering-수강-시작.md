@@ -1,6 +1,7 @@
 ---
 title: Startup Engineering 수강 시작
 author: haruair
+uuid: "f2573454-7c03-4d66-b7b0-ed08b8c1ea72"
 type: post
 date: "2013-06-24T15:47:51"
 history:

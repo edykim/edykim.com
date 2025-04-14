@@ -1,6 +1,7 @@
 ---
 title: FP in Elm 노트 – Intro to ML in Elm
 author: haruair
+uuid: "6ad19755-cdd3-46e3-807a-ac6e2704eb26"
 type: post
 date: "2015-08-25T14:36:23"
 history:

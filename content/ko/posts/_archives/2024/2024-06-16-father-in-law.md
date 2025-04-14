@@ -1,6 +1,7 @@
 ---
 title: 장인어른
 author: haruair
+uuid: "ad8f3c90-9b79-408f-82d8-0ba4fdfcd415"
 type: post
 date: 2024-06-16T22:24:35
 lang: ko

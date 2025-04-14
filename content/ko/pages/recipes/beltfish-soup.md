@@ -1,6 +1,7 @@
 ---
 title: 갈치국
 author: mindymkkim
+uuid: "d1fc0a99-36f5-4c46-882e-0d446d633df7"
 type: post
 date: "2020-10-25T08:30:41"
 lang: ko

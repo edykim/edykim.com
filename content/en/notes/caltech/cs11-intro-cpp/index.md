@@ -1,6 +1,7 @@
 ---
 title: "CS11 Intro C++"
 author: haruair
+uuid: "672fdabd-e589-45dd-9c19-d339ccbb21c8"
 type: page
 date: "2020-05-18T11:28:00"
 lang: en

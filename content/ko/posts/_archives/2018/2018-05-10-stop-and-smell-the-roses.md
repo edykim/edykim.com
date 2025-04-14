@@ -1,6 +1,7 @@
 ---
 title: Stop and smell the roses 🌹
 author: haruair
+uuid: "008a2002-d6a6-4d17-b9c5-83e2a208552b"
 type: post
 date: "2018-05-10T06:46:12"
 history:

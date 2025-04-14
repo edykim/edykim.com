@@ -1,6 +1,7 @@
 ---
 title: Google Chrome에서 자가서명 인증서에 missing_subjectAltName 문제가 발생하는 경우
 author: haruair
+uuid: "692edf0f-d156-436e-98fd-373b7a4f2b8b"
 type: post
 date: "2017-05-02T05:25:11"
 history:

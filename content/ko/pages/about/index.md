@@ -2,6 +2,7 @@
 metaTitle: 안녕하세요, 김용균입니다
 title: 안녕하세요, 김용균입니다
 author: haruair
+uuid: "ab6a78c6-6b8b-45b9-90f2-9aba11fb6b3a"
 type: page
 lang: ko
 url: about

@@ -1,6 +1,7 @@
 ---
 title: 지침서
 author: haruair
+uuid: "942c522f-55b6-4b7c-b5db-24b5ae864d47"
 type: page
 date: 2024-03-07T08:43:29
 lang: ko

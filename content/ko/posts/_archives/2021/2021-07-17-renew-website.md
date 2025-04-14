@@ -1,6 +1,7 @@
 ---
 title: Gatsby v3 마이그레이션 후기
 author: haruair
+uuid: "752e260e-261c-4b0f-b9ae-945505db1016"
 type: post
 date: "2021-07-17T10:02:23"
 lang: ko

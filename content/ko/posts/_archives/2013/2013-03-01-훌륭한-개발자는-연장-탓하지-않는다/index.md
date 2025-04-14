@@ -1,6 +1,7 @@
 ---
 title: 훌륭한 개발자는 연장 탓하지 않는다
 author: haruair
+uuid: "757f4d25-5612-4592-8911-9437459a047f"
 type: post
 date: "2013-03-01T04:45:06"
 history:

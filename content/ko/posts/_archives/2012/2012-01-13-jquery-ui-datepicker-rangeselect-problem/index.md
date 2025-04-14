@@ -1,6 +1,7 @@
 ---
 title: jQuery UI datepicker rangeSelect problem
 author: haruair
+uuid: "58a0b2a4-5a93-48e9-9ab0-a455b3f7a289"
 type: post
 date: "2012-01-13T05:50:05"
 history:

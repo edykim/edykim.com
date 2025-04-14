@@ -1,6 +1,7 @@
 ---
 title: "서브타이핑, 서브클래스, 개체 지향 프로그래밍의 문제"
 author: haruair
+uuid: "e1eee3cc-85bd-4a04-90f7-14e75358777d"
 type: post
 date: "2022-07-24T14:12:51.963Z"
 lang: ko

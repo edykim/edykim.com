@@ -1,6 +1,7 @@
 ---
 title: "Lenovo ThinkPad X1 Carbon 6세대 디스플레이 교체기"
 author: haruair
+uuid: "08d5da35-23c2-4c91-9acb-36ed898ea0e9"
 type: post
 date: "2021-06-18T13:02:23"
 lang: ko

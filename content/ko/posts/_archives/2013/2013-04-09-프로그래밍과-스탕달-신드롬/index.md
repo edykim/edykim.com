@@ -1,6 +1,7 @@
 ---
 title: 프로그래밍 스탕달 신드롬
 author: haruair
+uuid: "14085fbc-0e97-4a36-b2e9-f6325108b179"
 type: post
 date: "2013-04-09T14:00:59"
 history:

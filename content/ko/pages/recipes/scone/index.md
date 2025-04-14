@@ -1,6 +1,7 @@
 ---
 title: 스콘
 author: haruair
+uuid: "3f17f86d-0ac9-4467-85a4-ceaa9cc74fab"
 type: post
 date: "2021-04-03T03:08:41"
 lang: ko

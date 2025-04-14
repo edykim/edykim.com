@@ -1,6 +1,7 @@
 ---
 title: 비주얼 타이머
 author: haruair
+uuid: "e57e35fd-28a2-47a5-8154-9507eb8069e9"
 type: page
 date: "2019-05-17T05:28:41"
 url: /app/visual-timer

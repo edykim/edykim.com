@@ -1,6 +1,7 @@
 ---
 title: "이야기클럽 인터뷰: 새로운 길을 여행하며"
 author: haruair
+uuid: "c13261f2-b7b0-4a6e-aa81-8c88fddba1c7"
 type: post
 date: "2023-02-14T06:12:01.508Z"
 lang: ko

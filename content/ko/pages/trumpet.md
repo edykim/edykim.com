@@ -1,6 +1,7 @@
 ---
 title: 트럼펫 🎺
 author: haruair
+uuid: "5a936cf4-472c-4d1e-b8c4-c6c01a51965d"
 type: post
 date: "2021-04-26T19:39:11.197Z"
 lang: ko

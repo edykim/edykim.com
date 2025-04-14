@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 상태 관리
+uuid: "998f47d7-8889-4e8d-adac-ab3bf7b92933"
 type: post
 date: "2019-03-20T20:52:00"
 lang: ko

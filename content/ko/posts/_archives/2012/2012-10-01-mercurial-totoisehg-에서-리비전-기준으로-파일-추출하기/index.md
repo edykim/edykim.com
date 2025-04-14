@@ -1,6 +1,7 @@
 ---
 title: Mercurial, totoiseHg 에서 리비전 기준으로 파일 추출하기
 author: haruair
+uuid: "13a65ea7-9c13-48f6-830f-0b5481858e48"
 type: post
 date: "2012-10-01T05:34:57"
 history:

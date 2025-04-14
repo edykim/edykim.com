@@ -1,6 +1,7 @@
 ---
 title: 크로스플랫폼에서 ASP.NET Core 애플리케이션 개발하기 발표 자료
 author: haruair
+uuid: "cdbf80f1-f99c-47af-aedb-d28a94a8e308"
 type: post
 date: "2016-04-14T03:47:18"
 history:

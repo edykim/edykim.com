@@ -1,6 +1,7 @@
 ---
 title: 인지과학개론 노트
 author: haruair
+uuid: "e7f2e917-d1f3-458e-88ca-fa66c2275eac"
 type: page
 date: "2022-01-12T12:53:11.239Z"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: Temperature Quiz!
 author: haruair
+uuid: "73b61c6e-6f85-46a8-87c1-8807e1d5d203"
 type: page
 date: "2019-07-02T05:28:41"
 url: /app/temperature-quiz

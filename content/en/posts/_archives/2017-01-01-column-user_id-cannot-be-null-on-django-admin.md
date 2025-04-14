@@ -2,6 +2,7 @@
 title: "column `user_id` cannot be null on django admin"
 author: haruair
 date: "2017-01-24T19:11:45"
+uuid: "d4c8ac78-5247-4534-908f-700ac70d586c"
 type: post
 lang: en
 slug: column-user_id-cannot-be-null-on-django-admin

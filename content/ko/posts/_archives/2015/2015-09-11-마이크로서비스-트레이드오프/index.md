@@ -1,6 +1,7 @@
 ---
 title: 마이크로서비스 트레이드오프
 author: haruair
+uuid: "7abaec0a-38d5-4542-96f4-c104cc43881a"
 type: post
 date: "2015-09-11T07:24:52"
 history:

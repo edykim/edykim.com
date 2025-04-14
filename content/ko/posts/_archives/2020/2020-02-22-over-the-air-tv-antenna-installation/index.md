@@ -3,6 +3,7 @@ title: 공중파 TV 안테나 설치기
 headline:
  - 남캘리포니아에서 케이블TV 해지하고 공중파(OTA) 설치 기록
 author: haruair
+uuid: "27a3e1f6-ea89-4bd3-8914-6678b0506596"
 type: post
 date: "2020-02-22T13:02:23"
 lang: ko

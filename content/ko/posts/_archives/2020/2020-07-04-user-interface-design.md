@@ -1,6 +1,7 @@
 ---
 title: 사용자 인터페이스 디자인 기초
 author: haruair
+uuid: "a333e852-fb7d-414d-af95-0027ad7fbd2a"
 type: post
 date: "2020-07-04T13:02:23"
 lang: ko

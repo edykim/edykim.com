@@ -1,6 +1,7 @@
 ---
 title: Django Girls 튜토리얼 정리
 author: haruair
+uuid: "9e474e7d-7cfa-4f81-8611-a1a4b5fa2d07"
 type: post
 date: "2016-01-30T02:09:59"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 레거시 php 프로젝트를 composer 패키지로 바꾸기
 author: haruair
+uuid: "6f253217-3d63-43e9-8b13-cd518270862e"
 type: post
 date: "2017-07-13T08:41:27"
 history:

@@ -1,5 +1,6 @@
 ---
 author: haruair
+uuid: "693920b0-2587-452a-a076-3765df41572b"
 type: post
 date: "2021-11-21T23:52:50.365Z"
 lang: ko

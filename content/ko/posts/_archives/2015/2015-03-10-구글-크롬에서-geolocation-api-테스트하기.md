@@ -1,6 +1,7 @@
 ---
 title: 구글 크롬에서 Geolocation API 테스트하기
 author: haruair
+uuid: "09feb9f5-ff92-4dc1-9734-94a465f13b31"
 type: post
 date: "2015-03-10T05:08:20"
 history:

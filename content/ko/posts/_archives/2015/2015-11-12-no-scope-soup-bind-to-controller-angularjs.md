@@ -1,6 +1,7 @@
 ---
 title: "$scope은 이제 그만, Angular에서 bindToController 활용하기"
 author: haruair
+uuid: "058e8e87-1858-431a-9095-b40b14a0e992"
 type: post
 date: "2015-11-12T08:14:00"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: 워드프레스 유지보수 모드 (Maintenance mode)
 author: haruair
+uuid: "00d90326-07e1-4229-af70-8bca5a955b74"
 type: post
 date: "2015-03-16T22:36:30"
 history:

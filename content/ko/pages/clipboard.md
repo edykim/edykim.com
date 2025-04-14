@@ -1,6 +1,7 @@
 ---
 title: 클립보드
 author: haruair
+uuid: "9b89604c-90fe-4622-9bd6-cae49b7c5b8a"
 type: page
 date: "2025-04-13T03:59:37"
 lang: ko

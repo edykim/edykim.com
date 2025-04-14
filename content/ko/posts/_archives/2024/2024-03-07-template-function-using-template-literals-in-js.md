@@ -1,6 +1,7 @@
 ---
 title: js 템플릿 리터럴을 이용한 템플릿 함수 만들기
 author: haruair
+uuid: "7c2830b2-e487-4570-a140-7edcbac0e27c"
 type: post
 date: 2024-03-07T11:40:54
 lang: ko

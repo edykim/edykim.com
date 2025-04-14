@@ -1,6 +1,7 @@
 ---
 title: simpson Tapped Out – 심슨을 게임에서 만나다
 author: haruair
+uuid: "c4223349-674b-4dce-b330-ed3ac37e933f"
 type: post
 date: "2012-10-05T23:10:22"
 history:

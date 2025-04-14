@@ -1,6 +1,7 @@
 ---
 title: "Angular 디렉티브 때려잡기: 구조와 MVVM"
 author: haruair
+uuid: "cc7e188e-2748-419b-a4db-db415f20f057"
 type: post
 date: "2015-11-12T08:14:00"
 lang: ko

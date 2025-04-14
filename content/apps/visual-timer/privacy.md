@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Visual Timer
 author: haruair
+uuid: "a805e2d5-449c-4879-8d39-889e9e62f6a8"
 type: page
 date: "2019-02-05T05:28:41"
 url: /app/visual-timer/privacy-policy

@@ -1,6 +1,7 @@
 ---
 title: AngularJS의 서비스와 팩토리
 author: haruair
+uuid: "b036d14b-9579-464a-9187-5e0e2dd3191d"
 type: post
 date: "2015-11-17T23:00:58"
 history:

@@ -1,6 +1,7 @@
 ---
 title: Want to buy it
 author: haruair
+uuid: "f2f72b0c-c821-47a5-8659-205d100e82b1"
 type: page
 date: "2014-10-14T23:32:55"
 lang: ko

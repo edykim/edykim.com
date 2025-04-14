@@ -1,6 +1,7 @@
 ---
 title: node.js의 module.exports와 exports
 author: haruair
+uuid: "b20542ff-57c3-4d3f-a313-bb9109dfe860"
 type: post
 date: "2018-07-02T22:35:48"
 history:

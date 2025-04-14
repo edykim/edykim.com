@@ -1,6 +1,7 @@
 ---
 title: httpd -k graceful
 author: haruair
+uuid: "5d45fe46-19dd-4fd6-a79c-18ed5bd6a6b9"
 type: post
 date: "2011-08-16T02:45:53"
 history:

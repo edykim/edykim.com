@@ -1,6 +1,7 @@
 ---
 title: Melbourne, Australia
 author: haruair
+uuid: "a12ed9d7-12c6-4701-95d4-5e77061feec6"
 type: post
 date: "2022-02-02T18:42:11.239Z"
 headline:

@@ -1,6 +1,7 @@
 ---
 title: 방명록
 author: haruair
+uuid: "767761ee-e1c1-475b-adbd-6cb91e2266a8"
 type: page
 lang: ko
 url: guestbook

@@ -1,6 +1,7 @@
 ---
 title: PHP 기반의 Micro Frameworks 정리
 author: haruair
+uuid: "37e03acf-69f3-48c6-97b0-bb59e3965225"
 type: post
 date: "2013-10-29T06:24:34"
 history:

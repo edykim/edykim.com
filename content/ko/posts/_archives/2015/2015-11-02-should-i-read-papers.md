@@ -1,6 +1,7 @@
 ---
 title: 제가 논문을 읽어야 하나요?
 author: haruair
+uuid: "b2fb4390-7be6-4e94-b3f9-ea3ef9ef1088"
 type: post
 date: "2015-11-02T08:14:00"
 lang: ko

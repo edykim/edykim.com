@@ -1,6 +1,7 @@
 ---
 title: "$scope를 사용하는 더 나은 방법, angular.extend()"
 author: haruair
+uuid: "3dc7a994-24d8-44a6-9a50-23f445ecb997"
 type: post
 date: "2015-11-08T08:14:00"
 lang: ko

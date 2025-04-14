@@ -1,6 +1,7 @@
 ---
 title: 기계식키보드 Leopold FC700RT 갈축 사용기
 author: haruair
+uuid: "74d0c73e-e19a-438c-95e9-c11c128cf4e2"
 type: post
 date: "2014-05-28T00:31:13"
 history:

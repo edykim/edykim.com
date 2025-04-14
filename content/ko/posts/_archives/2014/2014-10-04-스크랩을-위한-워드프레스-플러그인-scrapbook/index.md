@@ -1,6 +1,7 @@
 ---
 title: Scrapbook – 스크랩을 위한 워드프레스 플러그인
 author: haruair
+uuid: "fdc258ac-8559-4c0b-9e35-cd1a203105a0"
 type: post
 date: "2014-10-04T14:41:56"
 history:

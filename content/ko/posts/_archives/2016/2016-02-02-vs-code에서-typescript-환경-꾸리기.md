@@ -1,6 +1,7 @@
 ---
 title: VS Code에서 TypeScript 환경 꾸리기
 author: haruair
+uuid: "40dfa821-7e93-45fb-922e-05acfeff842a"
 type: post
 date: "2016-02-02T04:00:59"
 history:

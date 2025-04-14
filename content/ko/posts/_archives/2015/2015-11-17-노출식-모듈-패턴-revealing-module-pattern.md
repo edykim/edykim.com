@@ -1,6 +1,7 @@
 ---
 title: 노출식 모듈 패턴 Revealing Module Pattern
 author: haruair
+uuid: "af8a9ddb-71b2-467c-a6c9-001a2c7afaee"
 type: post
 date: "2015-11-17T07:59:55"
 history:

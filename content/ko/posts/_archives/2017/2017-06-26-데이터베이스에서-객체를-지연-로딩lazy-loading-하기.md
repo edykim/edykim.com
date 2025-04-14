@@ -1,6 +1,7 @@
 ---
 title: 데이터베이스에서 객체를 지연 로딩(lazy loading) 하기
 author: haruair
+uuid: "15ddcc25-66b4-4bff-a196-01e57a618c2a"
 type: post
 date: "2017-06-26T00:03:40"
 history:

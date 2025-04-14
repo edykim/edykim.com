@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Temperature Quiz!
 author: haruair
+uuid: "8289bc2a-79ca-4c23-9942-cb1383beeb55"
 type: page
 date: "2019-01-02T05:28:41"
 url: /app/temperature-quiz/privacy-policy

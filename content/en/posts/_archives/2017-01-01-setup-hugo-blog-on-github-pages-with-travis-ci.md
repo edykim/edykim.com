@@ -2,6 +2,7 @@
 title: "Setup Hugo blog on GitHub Pages with Travis CI"
 author: haruair
 date: "2017-02-04T11:10:12"
+uuid: "85a496a2-30f0-4639-89ff-5b3c01d68877"
 type: post
 lang: en
 slug: setup-hugo-blog-on-github-pages-with-travis-ci

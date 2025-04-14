@@ -1,6 +1,7 @@
 ---
 title: Angular의 constructor와 ngOnInit 차이점
 author: haruair
+uuid: "e8957486-5424-452b-ae08-00e93a2de53f"
 type: post
 date: "2017-08-15T10:38:24"
 history:

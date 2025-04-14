@@ -1,6 +1,7 @@
 ---
 title: UCSD
 author: haruair
+uuid: "b7833474-955c-44d1-b16f-1fe21e42ecdb"
 type: page
 date: "2025-04-10T09:36:47"
 lang: ko

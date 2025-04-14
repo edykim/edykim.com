@@ -1,6 +1,7 @@
 ---
 title: Bad piggies – 요절복통기계와 앵그리버드의 만남
 author: haruair
+uuid: "577d90e7-1d96-47bf-b320-bca41de0e99d"
 type: post
 date: "2012-12-04T00:02:24"
 history:

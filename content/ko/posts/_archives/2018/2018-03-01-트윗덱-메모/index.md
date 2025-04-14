@@ -1,6 +1,7 @@
 ---
 title: 트윗덱 메모
 author: haruair
+uuid: "de693cfe-95a7-4a7f-8f38-5dd28212a8ff"
 type: post
 date: "2018-03-01T10:47:08"
 history:

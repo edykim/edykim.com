@@ -1,6 +1,7 @@
 ---
 title: "Xcode의 기기 USB 연결 문제 해결하기"
 author: haruair
+uuid: "c97f85d3-c09f-4c21-a928-48d69c5acca8"
 type: post
 date: "2021-12-30T19:27:44.898Z"
 lang: ko

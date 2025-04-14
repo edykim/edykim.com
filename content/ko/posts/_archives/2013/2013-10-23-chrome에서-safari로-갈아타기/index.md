@@ -1,6 +1,7 @@
 ---
 title: Chrome에서 Safari로 갈아타기
 author: haruair
+uuid: "d366df02-f8c3-486b-b35b-93ea12413147"
 type: post
 date: "2013-10-23T14:45:28"
 history:

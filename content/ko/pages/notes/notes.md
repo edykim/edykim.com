@@ -2,6 +2,7 @@
 title: 노트
 metaTitle: 노트
 author: haruair
+uuid: "66f8f0f6-3db2-479d-8088-6643175855cb"
 type: page
 lang: ko
 url: notes

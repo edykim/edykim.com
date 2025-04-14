@@ -1,6 +1,7 @@
 ---
 title: Sublime Text 3의 untitled 탭에 첫 행 표시하기
 author: haruair
+uuid: "4d1b7db3-bb33-4ccb-9518-6fd7009d0b3b"
 type: post
 date: "2018-01-14T01:26:16"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 이벤트 소싱 event-sourcing 패턴 정리
 author: haruair
+uuid: "7332e105-57f9-4098-aac7-2a315eaf74e5"
 type: post
 date: "2017-10-17T04:35:55"
 history:

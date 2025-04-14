@@ -1,6 +1,7 @@
 ---
 title: "Canon PowerShoot ELPH 300 HS 짧은 사용기"
 author: haruair
+uuid: "6a00a991-e046-47da-b32e-f3d559aade5f"
 type: post
 date: "2023-07-11T05:07:25.576Z"
 lang: ko

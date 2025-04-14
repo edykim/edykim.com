@@ -1,6 +1,7 @@
 ---
 title: Tip Calculator by Yong
 author: haruair
+uuid: "7e41a024-20a1-4c9d-bd7c-6cc2cc0ed6de"
 type: page
 date: "2019-01-02T05:28:41"
 url: /app/tip-calculator-by-yong

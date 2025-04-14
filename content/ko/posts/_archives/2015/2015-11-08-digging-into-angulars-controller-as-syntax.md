@@ -1,6 +1,7 @@
 ---
 title: "Angular의 Controller As 문법 살펴보기"
 author: haruair
+uuid: "bdea9cd3-41af-407a-90c4-c74bdc3ffb97"
 type: post
 date: "2015-11-08T08:14:00"
 lang: ko

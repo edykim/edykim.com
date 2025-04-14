@@ -1,6 +1,7 @@
 ---
 title: PHP에서 커링 currying 함수 작성하기
 author: haruair
+uuid: "3761ed3b-5d82-487b-91d1-a6c45397d29c"
 type: post
 date: "2018-01-27T01:55:11"
 history:

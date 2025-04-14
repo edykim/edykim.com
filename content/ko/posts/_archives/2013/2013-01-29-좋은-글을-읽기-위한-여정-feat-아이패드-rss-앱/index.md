@@ -1,6 +1,7 @@
 ---
 title: 좋은 글을 읽기 위한 여정 feat. 아이패드 RSS 앱
 author: haruair
+uuid: "b3e21299-bbd7-458a-970b-8c324cbe70ad"
 type: post
 date: '2013-01-29T06:00:25'
 history:

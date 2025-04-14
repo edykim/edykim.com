@@ -1,6 +1,7 @@
 ---
 title: "리액트 훅(Hooks): 제 테스트는 어떻게 되나요?"
 author: haruair
+uuid: "41eb3ac6-90c4-4b27-b357-2249435e254b"
 type: post
 date: "2019-03-21T16:52:00"
 lang: ko

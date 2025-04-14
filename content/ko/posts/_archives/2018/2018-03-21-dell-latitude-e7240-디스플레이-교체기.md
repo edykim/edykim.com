@@ -1,6 +1,7 @@
 ---
 title: Dell Latitude E7240 디스플레이 교체기
 author: haruair
+uuid: "3c092849-9579-40cf-b126-f3fb637aeec6"
 type: post
 date: "2018-03-21T07:47:39"
 history:

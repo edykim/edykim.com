@@ -1,6 +1,7 @@
 ---
 title: Fuji Xerox 레이저 프린터 구입기
 author: haruair
+uuid: "db2e0e9f-ba47-4870-b809-322b9cbfb1c2"
 type: post
 date: "2016-01-30T04:45:45"
 history:

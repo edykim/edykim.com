@@ -1,6 +1,7 @@
 ---
 title: 기술 업계의 독성 말투 문제, 고칩시다!
 author: haruair
+uuid: "1fb444a2-8ba9-4534-b5cf-aaf252f25692"
 type: post
 date: "2018-12-12T14:52:00"
 lang: ko

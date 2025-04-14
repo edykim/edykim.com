@@ -1,6 +1,7 @@
 ---
 title: Angular의 의존성 주입 이해하기 – @Inject, @Injectable, 토큰과 프로바이더
 author: haruair
+uuid: "db7ecc6a-fe8a-4756-92de-87225bdf4619"
 type: post
 date: "2017-08-18T11:50:14"
 history:

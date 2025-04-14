@@ -1,6 +1,7 @@
 ---
 title: "PHPStan으로 PHP 제네릭 활용하기"
 author: haruair
+uuid: "c2fe85b2-9770-4bda-bc0a-aee09c0a9270"
 type: post
 date: "2022-08-29T02:42:22.879Z"
 lang: ko

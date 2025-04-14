@@ -1,6 +1,7 @@
 ---
 title: 어떻게 학술 논문을 읽어야 하는가
 author: haruair
+uuid: "680f907e-efbb-43b8-b726-5fc155382fb2"
 type: post
 date: "2015-09-29T08:14:00"
 lang: ko

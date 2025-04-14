@@ -1,6 +1,7 @@
 ---
 title: History
 author: haruair
+uuid: "3b13c8fc-9153-4424-9315-8d4c11be61ae"
 type: page
 date: "2012-01-12T23:52:32"
 lang: ko

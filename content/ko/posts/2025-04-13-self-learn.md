@@ -1,6 +1,7 @@
 ---
 title: 혼돈 대신 질서있게, 체계적으로 독학하기 요약
 author: haruair
+uuid: "a7ed3d8c-7753-48c7-8a7c-497522c9bf6e"
 type: post
 date: 2025-04-13T06:46:59
 lang: ko

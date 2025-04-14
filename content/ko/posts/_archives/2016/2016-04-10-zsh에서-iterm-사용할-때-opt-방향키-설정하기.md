@@ -1,6 +1,7 @@
 ---
 title: iterm에서 zsh 사용할 때 `Opt + 방향키` 설정하기
 author: haruair
+uuid: "f2328aa7-dc4b-4a0a-b814-aed0f48b5402"
 type: post
 date: "2016-04-10T00:08:18"
 history:

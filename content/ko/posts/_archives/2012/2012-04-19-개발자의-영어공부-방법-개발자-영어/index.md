@@ -1,6 +1,7 @@
 ---
 title: 개발자의 영어공부 방법, 개발자 영어!
 author: haruair
+uuid: "dd794a53-89ce-4f0e-865b-b54e9ce062b8"
 type: post
 date: "2012-04-18T22:38:24"
 history:

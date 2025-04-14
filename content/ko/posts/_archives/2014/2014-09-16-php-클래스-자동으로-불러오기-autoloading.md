@@ -1,6 +1,7 @@
 ---
 title: PHP 클래스 자동으로 불러오기 (Autoloading)
 author: haruair
+uuid: "5493788a-4730-4b6e-91ae-73f1a2fc889c"
 type: post
 date: "2014-09-15T22:51:33"
 history:

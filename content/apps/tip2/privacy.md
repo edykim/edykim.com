@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Tip Calculator by Yong
 author: haruair
+uuid: "63ea27bc-ec1b-4fee-909c-935111df51ff"
 type: page
 date: "2019-01-02T05:28:41"
 url: /app/tip-calculator-by-yong/privacy-policy

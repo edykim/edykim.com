@@ -1,6 +1,7 @@
 ---
 title: "Vim Remote 기능 활용하기"
 author: haruair
+uuid: "7c6a883c-dfe7-4704-a2b6-d5d14015a844"
 type: post
 date: "2023-01-18T15:16:21.460Z"
 lang: ko

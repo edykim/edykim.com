@@ -2,6 +2,7 @@
 metaTitle: About
 title: Hello 👋
 author: haruair
+uuid: "cdf6072b-a8bd-4f3d-a8ab-ea103afab790"
 type: page
 url: /about
 lang: en

@@ -1,6 +1,7 @@
 ---
 title: Org-mode 기초부터 시작하기
 author: haruair
+uuid: "f188cf8b-9b47-4db1-9eb0-a02a0f164a42"
 type: post
 date: "2018-03-22T05:24:14"
 history:

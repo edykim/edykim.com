@@ -1,6 +1,7 @@
 ---
 title: 저작권에 관해
 author: haruair
+uuid: "efa42ce5-5442-4958-aa70-7fe9b8608a8d"
 type: page
 date: "2016-06-10T05:49:12"
 lang: ko

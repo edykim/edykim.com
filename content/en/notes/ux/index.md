@@ -1,6 +1,7 @@
 ---
 title: "UX Study Research"
 author: haruair
+uuid: "8070a851-dec5-4918-94cf-207a52f7b56a"
 type: page
 date: "2020-07-04T11:28:00"
 lang: en

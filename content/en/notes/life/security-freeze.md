@@ -1,6 +1,7 @@
 ---
 title: Security Freeze
 author: haruair
+uuid: "71a7c09a-9136-4516-9697-463f475d8184"
 type: page
 date: "2022-01-26T16:20:30"
 lang: en

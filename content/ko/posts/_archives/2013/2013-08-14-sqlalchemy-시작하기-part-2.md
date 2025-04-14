@@ -1,6 +1,7 @@
 ---
 title: SQLAlchemy 시작하기 – Part 2
 author: haruair
+uuid: "9ca8c05d-947d-4886-8f50-222dba050365"
 type: post
 date: "2013-08-14T01:00:00"
 history:

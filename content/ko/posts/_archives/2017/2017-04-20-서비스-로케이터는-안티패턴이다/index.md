@@ -1,6 +1,7 @@
 ---
 title: 서비스 로케이터는 안티패턴입니다
 author: haruair
+uuid: "07c8b2e4-380d-46f1-9145-25bef634422b"
 type: post
 date: "2017-04-20T13:28:39"
 history:

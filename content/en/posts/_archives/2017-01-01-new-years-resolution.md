@@ -2,6 +2,7 @@
 title: "New Year's Resolution"
 author: haruair
 date: "2017-01-02T04:11:00"
+uuid: "4e3eef8d-f1c9-4b8b-ac81-6bc25f1d4b32"
 type: post
 lang: en
 slug: new-years-resolution

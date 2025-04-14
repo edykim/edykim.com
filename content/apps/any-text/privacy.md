@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Any Text
 author: haruair
+uuid: "b3aff44e-c459-4fd3-b95c-ef73c6eef8aa"
 type: page
 date: "2020-06-21T05:28:41"
 url: /app/any-text/privacy-policy

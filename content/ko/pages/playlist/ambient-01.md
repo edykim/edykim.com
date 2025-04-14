@@ -2,6 +2,7 @@
 title: ambient 01
 metaTitle: ambient 01
 author: haruair
+uuid: "b5a2d0fd-231c-4874-bb6c-41ed9f4dc9f6"
 type: page
 lang: ko
 url: playlist/ambient-01

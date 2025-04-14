@@ -1,6 +1,7 @@
 ---
 title: wordpress plugin 개발 후기
 author: haruair
+uuid: "2634e43c-5723-4e6a-a051-b4f5c369a9d7"
 type: post
 date: "2012-08-20T13:33:17"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 마이크로소프트 유니버셜 폴더블 키보드
 author: haruair
+uuid: "c275c097-8e57-49ba-8814-50bbaec5268e"
 type: post
 date: "2018-05-14T06:08:56"
 history:

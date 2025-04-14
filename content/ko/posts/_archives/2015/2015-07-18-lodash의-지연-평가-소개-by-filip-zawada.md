@@ -1,6 +1,7 @@
 ---
 title: Lodash의 지연 평가 소개 by Filip Zawada
 author: haruair
+uuid: "5f96ab63-0ad3-4139-be4b-4bb8a033a848"
 type: post
 date: "2015-07-18T12:47:45"
 history:

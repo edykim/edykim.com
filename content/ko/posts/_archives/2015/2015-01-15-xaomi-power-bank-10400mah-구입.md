@@ -1,6 +1,7 @@
 ---
 title: Xaomi Power Bank 10400mAh 구입
 author: haruair
+uuid: "348f60ee-9560-4abe-9a4f-04a11391ccef"
 type: post
 date: "2015-01-14T22:51:10"
 history:

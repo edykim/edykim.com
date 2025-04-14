@@ -1,6 +1,7 @@
 ---
 title: PHP에서 DateTime Class 사용하기
 author: haruair
+uuid: "1365cf6f-5086-4ab1-97d8-d7da7d0cbe45"
 type: post
 date: "2013-11-02T12:07:22"
 history:

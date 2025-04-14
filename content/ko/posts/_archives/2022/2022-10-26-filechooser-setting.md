@@ -1,6 +1,7 @@
 ---
 title: "FileChooser Dialog 크기 설정하기"
 author: haruair
+uuid: "90f58bef-1cbc-4ba4-b7ac-7043dffdbf5c"
 type: post
 date: "2022-10-26T22:24:05.141Z"
 lang: ko

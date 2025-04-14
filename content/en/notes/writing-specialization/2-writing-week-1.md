@@ -1,6 +1,7 @@
 ---
 title: "Week 1: Course Introduction and Essay Writing"
 author: haruair
+uuid: "18db5aa5-eb91-488d-8ff3-300a0f5457b0"
 type: page
 date: "2019-07-25T03:12:17"
 lang: en

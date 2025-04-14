@@ -1,6 +1,7 @@
 ---
 title: "PHP 테스팅 관련 도구 메모"
 author: haruair
+uuid: "afa32a27-955d-4560-b315-9b0470d32518"
 type: post
 date: "2022-08-05T23:36:06.081Z"
 lang: ko

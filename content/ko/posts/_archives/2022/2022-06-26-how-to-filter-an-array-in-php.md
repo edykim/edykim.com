@@ -1,6 +1,7 @@
 ---
 title: "PHP에서 callable로 배열 필터하기"
 author: haruair
+uuid: "eb3971ae-0e79-417f-b5a2-22022b9e770f"
 type: post
 date: "2022-06-27T03:36:10.811Z"
 headline:

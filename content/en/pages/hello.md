@@ -1,6 +1,7 @@
 ---
 title: Hello from Edward
 author: haruair
+uuid: "4335c9e8-6143-40e3-ab7c-d3677b7dc7d9"
 type: mini
 date: "2022-05-16T10:40:41"
 url: /hello

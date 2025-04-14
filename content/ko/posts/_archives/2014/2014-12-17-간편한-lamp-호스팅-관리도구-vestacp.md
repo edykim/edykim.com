@@ -1,6 +1,7 @@
 ---
 title: 간편한 LAMP 호스팅 관리도구 VestaCP
 author: haruair
+uuid: "d5b1b776-4193-4676-906d-2693bbcdc051"
 type: post
 date: "2014-12-17T02:46:06"
 history:

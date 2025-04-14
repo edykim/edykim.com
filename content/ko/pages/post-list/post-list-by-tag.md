@@ -1,5 +1,6 @@
 ---
 title: "보관함: 태그별"
+uuid: "39cd6b3a-d423-4369-b7a2-bfe20a4b1145"
 type: page
 lang: ko
 url: post/list/tags

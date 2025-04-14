@@ -1,6 +1,7 @@
 ---
 title: Nginx 설정으로 robots.txt 덮어쓰기
 author: haruair
+uuid: "abb91d34-48ff-42f4-b640-e0fad781ff13"
 type: post
 date: "2016-01-28T06:25:47"
 history:

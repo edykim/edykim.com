@@ -1,6 +1,7 @@
 ---
 title: NameValueCollection을 JSON으로 Serialize 하기
 author: haruair
+uuid: "84e1ba45-be6b-4e2e-bdbd-670a8dd1b5c3"
 type: post
 date: "2014-12-03T04:04:11"
 history:

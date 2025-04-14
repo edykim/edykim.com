@@ -1,6 +1,7 @@
 ---
 title: Logitech Wireless Solar Keyboard K760 사용기
 author: haruair
+uuid: "26ef54c9-e2a4-4438-957d-c3a3549227ac"
 type: post
 date: "2014-01-31T11:15:22"
 history:

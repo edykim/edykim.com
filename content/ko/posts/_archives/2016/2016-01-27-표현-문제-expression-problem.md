@@ -1,6 +1,7 @@
 ---
 title: 표현 문제 (Expression problem)
 author: haruair
+uuid: "4341b62f-8daf-49d4-b1c2-1493cba29495"
 type: post
 date: "2016-01-26T23:06:00"
 history:

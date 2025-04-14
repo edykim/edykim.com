@@ -1,6 +1,7 @@
 ---
 title: pytz – 세계 시간대 정의를 위한 Python 라이브러리
 author: haruair
+uuid: "eb9e683b-9ebd-43d0-9483-6eb5327a3364"
 type: post
 date: "2013-09-08T09:17:57"
 history:

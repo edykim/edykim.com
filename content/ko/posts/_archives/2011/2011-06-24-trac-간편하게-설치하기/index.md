@@ -1,6 +1,7 @@
 ---
 title: trac 간편하게 설치하기
 author: haruair
+uuid: "90342659-0b39-49b5-8c3c-1d541001d216"
 type: post
 date: "2011-06-24T10:53:50"
 history:

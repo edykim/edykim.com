@@ -1,6 +1,7 @@
 ---
 title: 코드에서 macOS 노티피케이션 센터 띄우기
 author: haruair
+uuid: "7a92de83-6938-4c37-943c-b503e3dddeb7"
 type: post
 date: "2018-02-19T00:58:52"
 history:

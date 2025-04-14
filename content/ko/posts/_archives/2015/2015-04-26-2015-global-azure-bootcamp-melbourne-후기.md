@@ -1,6 +1,7 @@
 ---
 title: 2015 Global Azure Bootcamp Melbourne 후기
 author: haruair
+uuid: "42ae7406-dc36-4ab8-80cb-3e42ba7d06bd"
 type: post
 date: "2015-04-25T23:09:44"
 history:

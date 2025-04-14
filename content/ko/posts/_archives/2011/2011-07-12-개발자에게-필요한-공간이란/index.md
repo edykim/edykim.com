@@ -1,6 +1,7 @@
 ---
 title: 사무실 이사
 author: haruair
+uuid: "3ce9be0d-4049-4692-b9c8-0abbcd295d8f"
 type: post
 date: "2011-07-12T12:05:41"
 history:

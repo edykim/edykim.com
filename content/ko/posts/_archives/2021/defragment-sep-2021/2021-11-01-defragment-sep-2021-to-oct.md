@@ -1,6 +1,7 @@
 ---
 title: "조각모음: 2021년 9월, 10월"
 author: haruair
+uuid: "5a7de460-fccc-49a3-8d75-12bc121b0454"
 type: post
 date: "2021-11-01T07:32:26.786Z"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: 부트캠프로 thunderbolt 외장 하드에 Windows 8 설치하기
 author: haruair
+uuid: "1c7958ca-1388-4d1c-830e-42c0199381e2"
 type: post
 date: "2013-12-19T00:33:51"
 history:

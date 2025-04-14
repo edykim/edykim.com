@@ -1,6 +1,7 @@
 ---
 title: 잘가세요, 스티브 잡스!
 author: haruair
+uuid: "359eb94a-fb78-488d-8f3e-e9688f3f26ee"
 type: post
 date: "2011-10-12T01:39:17"
 history:

@@ -1,6 +1,7 @@
 ---
 title: Gradle로 Java 프로젝트 시작하기 요약
 author: haruair
+uuid: "03888acb-4f5d-46dc-85a3-0a31cc344379"
 type: post
 date: "2016-04-02T13:44:20"
 history:

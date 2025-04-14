@@ -1,6 +1,7 @@
 ---
 title: php callable 살펴보기
 author: haruair
+uuid: "8a740907-dde4-4adb-9a41-36b78dc9024b"
 type: post
 date: "2018-04-05T02:59:00"
 history:

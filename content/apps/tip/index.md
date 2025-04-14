@@ -1,6 +1,7 @@
 ---
 title: Tiny Tip Calculator
 author: haruair
+uuid: "89b834bd-aaa7-4cc2-9568-beade4c408cd"
 type: page
 date: "2019-01-02T05:28:41"
 url: /app/tip-calculator

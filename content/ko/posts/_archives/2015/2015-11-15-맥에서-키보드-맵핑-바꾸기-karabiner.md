@@ -1,6 +1,7 @@
 ---
 title: 맥에서 키보드 맵핑 바꾸기, Karabiner
 author: haruair
+uuid: "e9d4722b-56a4-4f1a-97d3-34fb2cfe7ce6"
 type: post
 date: "2015-11-15T10:44:48"
 history:

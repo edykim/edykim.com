@@ -1,6 +1,7 @@
 ---
 title: 워드프레스 북마클릿 Press This 활용하기
 author: haruair
+uuid: "d8713aa7-0ad1-483e-952f-76a3591e817c"
 type: post
 date: "2014-10-07T02:32:04"
 history:

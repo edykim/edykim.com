@@ -1,6 +1,7 @@
 ---
 title: ssh config로 ssh 접속 간편하게 하기
 author: haruair
+uuid: "1b712ef4-692c-45fa-936f-50044533ea05"
 type: post
 date: "2014-06-30T23:52:36"
 history:

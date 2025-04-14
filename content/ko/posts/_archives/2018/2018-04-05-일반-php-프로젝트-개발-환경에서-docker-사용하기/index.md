@@ -1,6 +1,7 @@
 ---
 title: 일반 PHP 프로젝트 개발 환경에서 docker 사용하기
 author: haruair
+uuid: "f04e438a-bfd5-479d-a2ec-7e10ab742ed2"
 type: post
 date: "2018-04-05T09:54:21"
 history:

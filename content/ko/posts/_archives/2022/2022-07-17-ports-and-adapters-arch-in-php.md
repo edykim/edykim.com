@@ -1,6 +1,7 @@
 ---
 title: "포트와 어댑터 아키텍처: PHP 예제"
 author: haruair
+uuid: "fcb1391f-7cdf-4992-be6b-db2d3f0a1f44"
 type: post
 date: "2022-07-17T15:08:49.885Z"
 lang: ko

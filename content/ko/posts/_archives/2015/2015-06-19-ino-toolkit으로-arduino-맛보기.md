@@ -1,6 +1,7 @@
 ---
 title: ino toolkit으로 Arduino 맛보기
 author: haruair
+uuid: "0dfe6300-4e43-41fd-89d1-737c5346b049"
 type: post
 date: "2015-06-19T11:57:37"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 세금 정정 신청 Amendment requests 후기
 author: haruair
+uuid: "8173bd06-f801-4ddd-9011-6cf91d31023c"
 type: post
 date: "2014-12-10T00:40:37"
 history:

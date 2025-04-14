@@ -1,5 +1,6 @@
 ---
 title: 작은 웹사이트 뚝딱 만들기
+uuid: "7cb26091-328b-42dd-9c3c-37d7641a5c50"
 type: page
 date: 2024-03-06T15:52:23
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: 디지털 미니멀리즘
 author: haruair
+uuid: "04c15511-c0bc-4d6f-a256-35c5b0a4d610"
 type: post
 date: "2020-07-05T13:02:23"
 lang: ko

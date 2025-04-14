@@ -1,6 +1,7 @@
 ---
 title: "샌 안토니오 여행 (+ 오스틴 조금)"
 author: haruair
+uuid: "9391cb05-2d7c-4f21-8a44-afd9b2f7f227"
 type: post
 date: "2019-09-03T01:50:00"
 lang: ko

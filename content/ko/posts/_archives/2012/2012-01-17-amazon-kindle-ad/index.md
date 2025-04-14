@@ -1,6 +1,7 @@
 ---
 title: Amazon Kindle의 광고
 author: haruair
+uuid: "b90fb3d2-9655-4ec2-9b3c-f17a6a804af0"
 type: post
 date: "2012-01-17T05:40:20"
 history:

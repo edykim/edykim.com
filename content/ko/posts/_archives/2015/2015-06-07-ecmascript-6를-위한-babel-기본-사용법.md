@@ -1,6 +1,7 @@
 ---
 title: ECMAScript 6를 위한 Babel 기본 사용법
 author: haruair
+uuid: "bbe7cb48-e178-4175-a568-c9d7ec4c5dd4"
 type: post
 date: "2015-06-07T10:59:59"
 history:

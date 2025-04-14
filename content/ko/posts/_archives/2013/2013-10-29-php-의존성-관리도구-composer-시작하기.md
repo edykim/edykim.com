@@ -1,6 +1,7 @@
 ---
 title: PHP 의존성 관리도구 – Composer 시작하기
 author: haruair
+uuid: "c6c29be3-9042-4568-add4-995868fc20ac"
 type: post
 date: "2013-10-29T06:14:30"
 history:

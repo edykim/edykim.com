@@ -1,6 +1,7 @@
 ---
 title: 레거시 PHP에서 모던 PHP로 – 뷰 분리하기
 author: haruair
+uuid: "3ba03c73-abbf-41e4-9a61-fb9f54446e9a"
 type: post
 date: "2016-10-12T23:30:55"
 history:

@@ -1,6 +1,7 @@
 ---
 title: "Week 2: Writing Compare/Contrast Essays"
 author: haruair
+uuid: "a305bfc3-508e-46be-b160-739237d72a4a"
 type: page
 date: "2019-07-25T03:12:17"
 lang: en

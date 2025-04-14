@@ -1,6 +1,7 @@
 ---
 title: Cufon에서 hover 사용하기
 author: haruair
+uuid: "ceb317c8-c75a-41ab-88a2-5a3462bf1590"
 type: post
 date: "2011-10-24T00:08:31"
 history:

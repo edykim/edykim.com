@@ -1,6 +1,7 @@
 ---
 title: Angular 컨트롤러를 작성하는 두가지 방법
 author: haruair
+uuid: "768d473a-e0d8-4fcd-8fc5-241ed437e34f"
 type: post
 date: "2015-11-08T08:14:00"
 lang: ko

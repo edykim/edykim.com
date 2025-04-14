@@ -1,6 +1,7 @@
 ---
 title: 'TypeScript에서 <reference> 없이 쓰기'
 author: haruair
+uuid: "d9827e5a-5801-478f-a274-1eb28f4538d0"
 type: post
 date: "2015-11-30T00:00:08"
 history:

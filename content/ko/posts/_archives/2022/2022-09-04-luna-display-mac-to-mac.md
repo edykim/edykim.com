@@ -1,6 +1,7 @@
 ---
 title: "루나 디스플레이 mac-to-mac 모드 짧은 사용기"
 author: haruair
+uuid: "f0d4863a-430d-425a-8f5a-6b273d2078c8"
 type: post
 date: "2022-09-04T23:13:53.735Z"
 lang: ko

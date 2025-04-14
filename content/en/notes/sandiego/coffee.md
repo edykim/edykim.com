@@ -1,6 +1,7 @@
 ---
 title: Coffee in San Diego
 author: haruair
+uuid: "eb7fa82b-c34e-45ff-9c4e-b2585f0e0738"
 type: page 
 date: "2024-03-04T18:22:43"
 updatedOn: 2025-02-15T15:58:10

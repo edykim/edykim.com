@@ -1,6 +1,7 @@
 ---
 title: Adobe Digital Editions
 author: haruair
+uuid: "475fa5ef-9d23-4f93-bedc-7ce13959eda1"
 type: post
 date: "2012-01-19T00:25:44"
 history:

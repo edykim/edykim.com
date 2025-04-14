@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Tiny Tip Calculator
 author: haruair
+uuid: "3f287ded-e1ff-4c33-80fb-4022cff03285"
 type: page
 date: "2019-01-02T05:28:41"
 url: /app/tip-calculator/privacy-policy

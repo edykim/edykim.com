@@ -1,6 +1,7 @@
 ---
 title: Node.js의 Events `EventEmitter` 번역
 author: haruair
+uuid: "7839d060-2e0d-41d3-aacf-39727598ba96"
 type: post
 date: "2016-02-09T05:00:57"
 history:

@@ -1,6 +1,7 @@
 ---
 title: JavaScript의 Generator와 Koa.js 소개
 author: haruair
+uuid: "b0998bd9-4a85-42ea-8979-517df6754e8c"
 type: post
 date: "2016-02-22T07:05:11"
 history:

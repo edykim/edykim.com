@@ -1,6 +1,7 @@
 ---
 title: Aptana Studio 3.0 에서 SVN 사용하기
 author: haruair
+uuid: "766c9000-493e-47de-bd75-0419dfd4b3c0"
 type: post
 date: "2011-10-12T00:25:53"
 history:

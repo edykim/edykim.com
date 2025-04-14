@@ -1,6 +1,7 @@
 ---
 title: Flask(uWSGI)를 nginx에 연결하기
 author: haruair
+uuid: "c30295aa-4d4f-4215-9b0c-fb466023a666"
 type: post
 date: "2013-12-01T10:35:09"
 history:

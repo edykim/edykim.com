@@ -1,6 +1,7 @@
 ---
 title: Any Text
 author: haruair
+uuid: "d949c815-4424-44d0-9704-2fb068f82c82"
 type: page
 date: "2020-06-21T05:28:41"
 url: /app/any-text

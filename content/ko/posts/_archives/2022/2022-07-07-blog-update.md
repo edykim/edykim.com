@@ -1,6 +1,7 @@
 ---
 title: "블로그 업데이트"
 author: haruair
+uuid: "6b02b16a-a528-4541-bf39-552743d86d79"
 type: post
 date: "2022-07-07T22:46:08.590Z"
 lang: ko

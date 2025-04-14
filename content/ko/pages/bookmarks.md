@@ -1,6 +1,7 @@
 ---
 title: 즐겨찾기
 author: haruair
+uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
 updatedOn: "2025-04-12T23:17:53"

@@ -1,6 +1,7 @@
 ---
 title: Crafts
 author: haruair
+uuid: "89253720-e08b-4863-8e5f-70e717c10551"
 type: page
 url: /crafts
 lang: en

@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy - Onepage
 author: haruair
+uuid: "5aa9a809-25b2-4d8c-908a-14203b0b36d5"
 type: page
 date: "2019-02-05T05:28:41"
 url: /app/onepage/privacy-policy

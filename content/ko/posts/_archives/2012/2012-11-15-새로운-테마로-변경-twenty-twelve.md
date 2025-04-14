@@ -1,6 +1,7 @@
 ---
 title: 새로운 테마로 변경 Twenty Twelve
 author: haruair
+uuid: "7ad2fe7d-4423-449d-9387-9202e5d99fe8"
 type: post
 date: "2012-11-14T23:20:31"
 history:

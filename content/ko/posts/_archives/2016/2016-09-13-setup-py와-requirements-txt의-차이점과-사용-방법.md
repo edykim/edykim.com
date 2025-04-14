@@ -1,6 +1,7 @@
 ---
 title: setup.py와 requirements.txt의 차이점과 사용 방법
 author: haruair
+uuid: "3bcda87d-e8a4-436f-a00b-5dded4495f41"
 type: post
 date: "2016-09-13T01:21:02"
 history:

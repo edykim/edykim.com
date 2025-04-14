@@ -1,6 +1,7 @@
 ---
 title: MS Certificate
 author: haruair
+uuid: "9cff0a22-6b6f-4b3c-92dc-e40b586ac712"
 type: page
 date: "2017-06-01T00:07:28"
 lang: ko

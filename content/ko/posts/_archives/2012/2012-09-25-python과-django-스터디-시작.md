@@ -1,6 +1,7 @@
 ---
 title: python과 django 스터디 시작
 author: haruair
+uuid: "48003c30-62cf-47f7-8fb4-08b0d4c50381"
 type: post
 date: "2012-09-25T00:49:58"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 터미널에서 트위터하기 rainbowstream
 author: haruair
+uuid: "b2800ca3-f08c-46c9-af5c-1425d3d59da6"
 type: post
 date: "2016-03-30T03:00:55"
 history:

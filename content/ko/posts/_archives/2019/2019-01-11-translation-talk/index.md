@@ -1,6 +1,7 @@
 ---
 title: 내가 보고 싶은 글 번역하기
 author: haruair
+uuid: "53560dc4-30f7-41c9-8e34-a1d479bd76e3"
 type: post
 date: "2019-01-11T11:52:00"
 lang: ko

@@ -1,6 +1,7 @@
 ---
 title: Notes
 author: haruair
+uuid: "b5089be1-1685-401d-b706-da8753bcd0b5"
 type: page
 lang: en
 url: /notes

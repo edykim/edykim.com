@@ -1,6 +1,7 @@
 ---
 title: 에어프라이어로 군고구마 굽기
 author: haruair
+uuid: "a3df7cf0-c44f-4889-ae7b-3d4966af5e35"
 type: post
 date: "2021-02-26T05:28:41"
 lang: ko

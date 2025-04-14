@@ -1,6 +1,7 @@
 ---
 title: "미국 커뮤니티 컬리지와 편입에 관해"
 author: haruair
+uuid: "96e8419f-f595-4a48-b4be-9b5a9407b3e8"
 type: post
 date: "2022-07-08T05:20:56.191Z"
 lang: ko

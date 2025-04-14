@@ -1,6 +1,7 @@
 ---
 title: "Creative Selection"
 author: haruair
+uuid: "2494c5fa-5c97-45e8-8442-2916d6e5652c"
 type: post
 date: "2022-03-11T18:35:04.515Z"
 lang: ko

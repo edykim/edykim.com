@@ -1,6 +1,7 @@
 ---
 title: Lenovo X1 Carbon 6세대 구입
 author: haruair
+uuid: "0396f46f-da57-4aef-8853-69c489021e31"
 type: post
 date: "2018-08-16T21:42:33"
 history:

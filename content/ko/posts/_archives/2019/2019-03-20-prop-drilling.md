@@ -1,6 +1,7 @@
 ---
 title: 프로퍼티 내리꽂기 (prop drilling)
 author: haruair
+uuid: "06dfc641-93c5-47b9-9898-d40d4fa772fd"
 type: post
 date: "2019-03-20T11:52:00"
 lang: ko

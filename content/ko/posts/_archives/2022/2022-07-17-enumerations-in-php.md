@@ -1,6 +1,7 @@
 ---
 title: "PHP 열거형(enumerations) 정리"
 author: haruair
+uuid: "92887556-7c91-4820-8718-ab4b0e41a2bb"
 type: post
 date: "2022-07-17T18:34:05.998Z"
 lang: ko

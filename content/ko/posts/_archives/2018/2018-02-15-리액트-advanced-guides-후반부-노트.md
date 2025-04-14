@@ -1,6 +1,7 @@
 ---
 title: 리액트 Advanced guides 후반부 노트
 author: haruair
+uuid: "3dd6cbc7-c961-4a37-bbe4-b168070b9be1"
 type: post
 date: "2018-02-15T01:50:12"
 history:

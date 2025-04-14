@@ -1,6 +1,7 @@
 ---
 title: 터미널에서 GitHub 이슈 관리하기 ghi
 author: haruair
+uuid: "8b312887-7948-447f-aa68-fc53f512fc6c"
 type: post
 date: "2016-04-04T00:00:55"
 history:

@@ -1,6 +1,7 @@
 ---
 title: 마트가서 우유 하나 사고 아보카도 있으면 6개 사와
 author: haruair
+uuid: "31013481-0046-4a2f-8191-bf3007dde555"
 type: post
 date: 2024-05-08T17:13:25
 lang: ko

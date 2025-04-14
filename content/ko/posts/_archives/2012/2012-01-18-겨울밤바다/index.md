@@ -1,6 +1,7 @@
 ---
 title: 겨울밤바다
 author: haruair
+uuid: "1f48a242-f6c4-4147-b497-1e45152d21c5"
 type: post
 date: "2012-01-17T17:47:49"
 history:

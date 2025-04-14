@@ -1,6 +1,7 @@
 ---
 title: 맥을 위한, Windows Live Writer의 대안을 찾아 떠나는 여행
 author: haruair
+uuid: "69b38718-fe58-48b8-9944-53d3b5db4efb"
 type: post
 date: "2012-07-30T11:20:15"
 history:

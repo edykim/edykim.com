@@ -1,6 +1,7 @@
 ---
 title: Lubuntu에서 우측 Alt키를 한영 전환키로 설정하기
 author: haruair
+uuid: "e17be659-20db-4b23-93a2-64db5145f2d8"
 type: post
 date: "2016-03-23T16:00:14"
 history:

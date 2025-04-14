@@ -1,6 +1,7 @@
 ---
 title: 닭갈비
 author: haruair
+uuid: "e7ccee58-5d8b-4d5c-8371-824d7e02c200"
 type: post
 date: "2020-10-10T05:28:41"
 lang: ko

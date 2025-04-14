@@ -1,6 +1,7 @@
 ---
 title: DefinitelyTyped와 `tsd` 정의 관리 도구
 author: haruair
+uuid: "95a8d8c0-c411-4196-b46b-8e8af7c959a8"
 type: post
 date: "2015-11-29T22:27:10"
 history:

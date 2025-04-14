@@ -1,6 +1,7 @@
 ---
 title: Hyper-V 상의 Ubuntu에 고급 세션 모드 사용하기
 author: haruair
+uuid: "1bfb1aaa-b549-494f-8dd0-ed2eebe78486"
 type: post
 date: "2020-01-24T13:02:23"
 lang: ko

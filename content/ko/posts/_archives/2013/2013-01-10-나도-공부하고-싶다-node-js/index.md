@@ -1,6 +1,7 @@
 ---
 title: 나도 공부하고 싶다 node.js
 author: haruair
+uuid: "d71da52f-0bab-4ea8-b591-04e49e7bb35e"
 type: post
 date: "2013-01-09T21:49:27"
 history:

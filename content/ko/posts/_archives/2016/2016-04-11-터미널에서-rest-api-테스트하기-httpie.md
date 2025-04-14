@@ -1,6 +1,7 @@
 ---
 title: 터미널에서 REST API 테스트하기 HTTPie
 author: haruair
+uuid: "296705f5-6f24-4d67-8c2d-c969f9d22870"
 type: post
 date: "2016-04-11T00:00:41"
 history:

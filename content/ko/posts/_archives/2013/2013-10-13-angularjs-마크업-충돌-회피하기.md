@@ -1,6 +1,7 @@
 ---
 title: AngularJS 마크업 충돌 회피하기
 author: haruair
+uuid: "9462499d-563c-44cd-969a-b5d27efb8d29"
 type: post
 date: "2013-10-13T08:55:11"
 history:

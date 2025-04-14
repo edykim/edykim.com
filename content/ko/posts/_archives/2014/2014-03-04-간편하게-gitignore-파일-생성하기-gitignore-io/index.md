@@ -1,6 +1,7 @@
 ---
 title: 간편하게 .gitignore 파일 생성하기 – gitignore.io
 author: haruair
+uuid: "0fa46e26-b864-4265-ad95-f31007c0ad33"
 type: post
 date: "2014-03-04T01:15:41"
 history:

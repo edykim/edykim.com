@@ -1,6 +1,7 @@
 ---
 title: 터미널에서 문자를 ASCIIArt로 출력하기 FIGlet
 author: haruair
+uuid: "5f03d991-a0c1-436c-abdd-a658c5de753d"
 type: post
 date: "2016-04-14T00:00:56"
 history:

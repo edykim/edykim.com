@@ -1,6 +1,7 @@
 ---
 title: Chrome 개발자도구 – 소소소한 팁
 author: haruair
+uuid: "2b75e4f9-d9fe-4be3-8d98-c15d2490b052"
 type: post
 date: "2014-07-13T12:00:40"
 history:
