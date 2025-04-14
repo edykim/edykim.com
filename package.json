@@ -36,6 +36,7 @@
     "unified": "^11.0.4",
     "unist-util-select": "^5.1.0",
     "unist-util-visit": "^5.0.0",
+    "uuid": "^11.1.0",
     "uuid-by-string": "^4.0.0"
   }
 }
