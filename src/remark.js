@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import remarkImages from 'remark-images'
+import remarkToc from 'remark-toc'
 import rehypeSlug from 'rehype-slug'
 import {unified} from 'unified'
 import {read} from 'to-vfile'
@@ -21,6 +22,7 @@ const pipeline = unified()
     .use(remarkFrontmatter)
     .use(remarkParseFrontmatter)
     .use(remarkDirective)
+    .use(remarkToc, {heading: '(table[ -]of[ -])?contents?|toc|목차|차례'})
     .use(updateHtmlDirectives)
     .use(tableWrapper)
     .use(collectImages)
