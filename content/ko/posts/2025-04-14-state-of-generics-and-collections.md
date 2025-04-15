@@ -9,7 +9,7 @@ slug: state-of-generics-and-collections
 tags:
   - 개발 이야기
   - 번역
-  - PHP
+  - php
 ---
 
 The PHP Foundationd에서 게시한 [State of Generics and Collections][1]를
