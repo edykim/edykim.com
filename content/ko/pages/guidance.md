@@ -4,6 +4,7 @@ author: haruair
 uuid: "942c522f-55b6-4b7c-b5db-24b5ae864d47"
 type: page
 date: 2024-03-07T08:43:29
+updatedOn: "2025-04-15T05:49:00"
 lang: ko
 slug: guidance
 ---
@@ -88,6 +89,21 @@ slug: guidance
 - Engagement: 진정성을 갖고 적극적으로 참여하기
 - Purposefulness: 향상하고 싶은 기술과 직접적으로 영향 받음
 - strong, speedy feedback: 즉각적이고 지속적인 피드백
+
+# 끈기의 중요성
+
+대담하고 끈기 있게 과정을 받아들이는 것이 중요.
+
+1. 탄력을 얻기 위해 작은 행동으로 시작하기: 마음속 저항을 극복하고 탄력을
+   얻으려면 작은 행동부터 시작하세요.
+1. 지루함을 받아들이기: 성공은 종종 반복적인 노력을 필요로 하므로, 지루함을
+   감수하고 꾸준히 노력하세요.
+1. 고통을 받아들이기: 거절, 실패, 그리고 열심히 노력해도 부족함을 느끼는 고통을
+   예상하세요. 어려움을 성공 과정의 일부로 받아들이세요.
+1. 판단을 무시하기: 다른 사람들이 판단할까봐 두려워하지 말고, 자신의 창의성을
+   표현하고 당당하게 나서세요.
+  
+-- [Get everything you want by being persistent and never giving up](https://www.youtube.com/watch?v=qYtD_hmYiFk)
 
 # 스크랩
 
