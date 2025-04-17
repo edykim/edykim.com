@@ -21,7 +21,6 @@ noIndex: true
 - [Today yurim felt](https://milooy.github.io/){data-lang=국문 data-tags=개인,개발}
 - [Hyeseong's Blog](https://blog.cometkim.kr/){data-lang=국문 data-tags=개인,개발}
 - [Wonny Log](https://wonny.space/writing){data-lang=국문 data-tags=개인,개발}
-- [mov eax, 4](https://www.leonkim.net/){data-lang=국문 data-tags=개인,개발}
 - [KODINGWARRIOR QUEST](https://kodingwarrior.github.io/posts/){data-lang=국문 data-tags=개인,개발}
 - [yuza🍊](https://nvrtmd.hashnode.dev/){data-lang=국문 data-tags=개인,개발}
 - [기억보다 기록을](https://jojoldu.tistory.com/){data-lang=국문 data-tags=개인,개발}
