@@ -34,18 +34,18 @@ tags:
 
 2대의 기기까지 페어링을 지원하고 운영체제를 변경할 수 있는 키도 붙어 있다. USB 케이블도 동봉되어 있고 한 번 충전으로 꽤 오래 사용할 수 있다고 한다. 충전이 얼마나 되었는지 표시가 없는건 아쉽지만 충전하면서도 사용하는데는 전혀 문제 없었다.
 
-<img src="https://farm1.staticflickr.com/975/41378075334_a80d545a3e_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
+<img src="https://live.staticflickr.com/975/41378075334_a80d545a3e_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
 
 타이핑하는 느낌은 애플 블루투스 키보드를 눌렀을 때와 가장 비슷하며 좀 더 정숙하다. 키 피치는 높지 않아서 스마트 키보드 보다는 나은 경험이지만 일반적인 블루투스 키보드보다는 얕은 느낌이 든다. 서피스 키보드와도 유사하게 느껴진다.
 
-<img src="https://farm1.staticflickr.com/962/27227508097_0f21bb7bf0_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
+<img src="https://live.staticflickr.com/962/27227508097_0f21bb7bf0_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
 
 키보드 레이아웃도 전혀 작다고 느껴지지 않고 키도 마음에 든다. 다만 오른쪽에는 키를 좀 더 오밀하게 배치한 탓에 특수 문자를 입력할 때 잘못 누르는 경우가 좀 있다. 더불어 방향키도 작은 편이다. 탐색을 터치 스크린으로 한다면 큰 문제는 아니다. 그리고 B키가 왼쪽에 위치하고 있다. 나는 B는 왼손으로 누르는데 ㅠ는 오른손으로 누르고 있었다. 익숙해질 때까지 좀 시간이 걸렸는데 쉽게 고칠 수 없다면 이 키보드에서 가장 큰 단점이지 않을까 싶다.
 
-<img src="https://farm1.staticflickr.com/944/40290497560_b04b73ddaa_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
+<img src="https://live.staticflickr.com/944/40290497560_b04b73ddaa_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
 
 장점은 역시 접을 수 있다는 점이다. 평소 들고 다니는 수첩과 큰 차이가 없다. 재질도 부드러워서 가방 안 다른 물건에 손상을 주는 일도 없다. 휴대성에 있어서는 최고다.
 
-<img src="https://farm1.staticflickr.com/946/41378060974_7103287d5d_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
+<img src="https://live.staticflickr.com/946/41378060974_7103287d5d_o.jpg" alt="Microsoft Universal Foldable Keyboard" />
 
 가끔 뭔가 잘 안되면 지름으로 해결하려는 경향이 있는데 아마 글이 잘 안쓰여지니 또 키보드를 질러서 풀어보려는 모양이다. 그래도 생각했던 용도대로 가방에 수첩과 함께 넣어두고 지내다가 필요할 때 언제든 꺼내서 쓸 수 있는 좋은 키보드다. 부지런히 사용해서 본전 찾아야겠다.

@@ -22,7 +22,7 @@ tags:
 
 # 게임 소개
 
-<img src="https://farm8.staticflickr.com/7099/13430562365_630b1c794b_o.png?w=660&#038;ssl=1" alt="Koala Hates Rain Screenshot" class="alignright" data-recalc-dims="1" />
+<img src="https://live.staticflickr.com/7099/13430562365_630b1c794b_o.png?w=660&#038;ssl=1" alt="Koala Hates Rain Screenshot" class="alignright" data-recalc-dims="1" />
 
 [Koala hates rain][1]은 코알라가 하늘서 떨어지는 비를 피하는 내용으로 짧은 시간에도 즐길 수 있는 미니게임이다.
 
@@ -54,7 +54,7 @@ SpriteKit를 선택한 만큼 장점도 있지만 단점도 많았다. 애플에
 
 릴리즈 이후 전략이 딱히 없었다. 미리 게임 업데이트의 방향도 잡아두고 미리 구성도 해놔야 했는데, 첫게임이니까 라는 이유로 전혀 생각해보지 않았다. 피드백 중 대부분의 내용도 반영하질 못했는데 차후 버전을 위해 잘 고민해서 방향 잡고 개발해보고 싶다.
 
-<img src="https://farm3.staticflickr.com/2823/13431123395_326d352594_o.jpg?w=660&#038;ssl=1" alt="작업노트" data-recalc-dims="1" />
+<img src="https://live.staticflickr.com/2823/13431123395_326d352594_o.jpg?w=660&#038;ssl=1" alt="작업노트" data-recalc-dims="1" />
 
 # 결론
 

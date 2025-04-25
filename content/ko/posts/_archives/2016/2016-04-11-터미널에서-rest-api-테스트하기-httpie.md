@@ -45,7 +45,7 @@ REST API를 테스트하는데 curl과 wget을 사용할 수 있겠지만 좀 �
 
 <figure class="wp-caption alignnone">
 
-<figure><img src="https://farm2.staticflickr.com/1578/26005228831_21b2563ccf_b.jpg?resize=660%2C936&#038;ssl=1" width="660" height="936" class data-recalc-dims="1" /><figcaption class="wp-caption-text">cURL보다 간단하게 사용할 수 있다. 별 내용 아니지만 색깔 이쁘면 보기 좋지 않습니까.</figcaption></figure> 
+<figure><img src="https://live.staticflickr.com/1578/26005228831_21b2563ccf_b.jpg?resize=660%2C936&#038;ssl=1" width="660" height="936" class data-recalc-dims="1" /><figcaption class="wp-caption-text">cURL보다 간단하게 사용할 수 있다. 별 내용 아니지만 색깔 이쁘면 보기 좋지 않습니까.</figcaption></figure> 
 
 이외에도 세션과 같은 다양한 기능을 제공한다. auth는 [auth 플러그인][2]으로 제공하고 있고 외부 json 파일이나 바이너리 파일을 전송하는 기능도 있다. curl만큼 방대한 기능을 제공하고 있으니 [HTTPie 리포지터리][1]를 확인해서 어떤 유용한 기능이 있는지 살펴보는 것도 좋겠다.
 
