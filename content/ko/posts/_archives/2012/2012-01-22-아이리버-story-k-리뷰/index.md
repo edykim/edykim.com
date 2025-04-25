@@ -23,7 +23,7 @@ tags:
 
 여튼 아이리버 story K의 리뷰를 시작하겠습니다. 스펙에서 눈에 띄는 점은&#8230; 특별히 없네요. 그냥 타 기종과 비교해서는 무난한 것 같습니다. 
 
-<a href="https://www.iriver.co.kr/down/product/detail_description/357965_spec.jpg"><img title="아이리버 스토리 K spec." src="https://www.iriver.co.kr/down/product/detail_description/357965_spec.jpg?w=583" alt="" data-recalc-dims="1" /></a></p> 
+<a href="https://www.iriver.co.kr/down/product/detail_description/357965_spec.jpg"><img title="아이리버 스토리 K spec." src="https://www.iriver.co.kr/down/product/detail_description/357965_spec.jpg?w=583" alt="" /></a></p> 
 
 
 <p>

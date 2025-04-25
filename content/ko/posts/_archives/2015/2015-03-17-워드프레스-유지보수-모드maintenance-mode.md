@@ -24,7 +24,7 @@ tags:
 
 만약 업데이트 중에 페이지를 벗어나게 된다면 유지보수 모드가 해제되지 않아 사이트가 닫힌 상태로 유지된다. 이럴 때에는 직접 유지보수 모드를 직접 해제해야 한다.
 
-<img src="https://live.staticflickr.com/7639/16812310856_69276d5fb2_o.png?w=660&#038;ssl=1" alt="maintenance mode" class="aligncenter" data-recalc-dims="1" />
+<img src="https://live.staticflickr.com/7639/16812310856_69276d5fb2_o.png?w=660&#038;ssl=1" alt="maintenance mode" class="aligncenter" />
 
 워드프레스 웹사이트에서 다음과 같은 화면을 본다면 유지보수 모드가 켜져있는 상태다.
 
@@ -32,7 +32,7 @@ tags:
 
 유지보수 모드는 워드프레스 최상위 폴더에 `.maintenance`라는 이름으로 빈 텍스트 파일을 생성하면 활성화 된다. 유지보수 모드를 끄려면 이 파일을 지우면 된다.
 
-<img src="https://live.staticflickr.com/7628/16812306596_71c7bb2dc0_o.png?w=660&#038;ssl=1" alt=".Maintenance file" class="aligncenter" data-recalc-dims="1" />
+<img src="https://live.staticflickr.com/7628/16812306596_71c7bb2dc0_o.png?w=660&#038;ssl=1" alt=".Maintenance file" class="aligncenter" />
 
 ## 유지보수 페이지 변경하기
 

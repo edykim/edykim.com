@@ -23,7 +23,7 @@ tags:
 
 <figure class="wp-caption aligncenter">
 
-<img src="https://i.giphy.com/xTiTnfNthWH7DWPiKI.gif?w=660" style="width:100%; max-width: 600px;" class="aligncenter" scale="0" data-recalc-dims="1" /><figcaption class="wp-caption-text"> 
+<img src="https://i.giphy.com/xTiTnfNthWH7DWPiKI.gif?w=660" style="width:100%; max-width: 600px;" class="aligncenter" scale="0" /><figcaption class="wp-caption-text"> 
 
 <div>
   A: 팀장님 모던 PHP 도입합시다 +_+
@@ -148,7 +148,7 @@ PHP에서는 결과를 출력하는데 수고가 전혀 필요 없다. 위 코�
 
 앞에서 확인한 예제처럼 작성한 PHP 코드가 점점 관리하기 어렵게 변하는 이유는 바로 **출력되는 결과를 예측하는 것이 불가능하다는 점** 에서 기인한다. (물론 e2e 테스트를 수행할 수 있지만 이런 코드를 작성하는 곳에서 e2e 테스트를 사용한다면 특수한 경우다.) 두 파일에서 출력하는 내용은 변수로 받은 후 출력 여부를 결정하는 흐름이 존재하지 않는다. 전자는 데이터를 직접 가져와서 바로 출력하고 있고 후자는 가져올 데이터를 전역 변수를 통해 접근하고 있다. 개발자의 의도에 따라서 통제되는 방식이라고 하기 어렵다. 오히려 물감을 가져와서 종이 위에 어떻게 뿌려지는지 쏟아놓고 보는 방식에 가깝다. 이전 코드를 사용하는 PHP는 대부분 일단 코드를 쏟은 후에 눈과 손으로 직접 확인하는 경우가 많다. 이는 코드가 적을 경우에 문제 없지만 커지면 그만큼 번거로운 일이 된다. 결국에는 통제가 안되는 코드를 수정하는 일은 꺼림칙하고 두려운 작업이 되고 만다.
 
-<img src="https://i.giphy.com/Mn3N0uOhS5pRK.gif?w=660" alt="페이지를 열기 전까지 알 수 없는 결과물" style="margin: 0 auto; display: block;" data-recalc-dims="1" />
+<img src="https://i.giphy.com/Mn3N0uOhS5pRK.gif?w=660" alt="페이지를 열기 전까지 알 수 없는 결과물" style="margin: 0 auto; display: block;" />
 
 함수에 대해 생각해보자. 프로그래밍을 하게 되면 필연적으로 함수를 작성하게 된다. 함수는 인자로 값을 입력하고, 가공한 후에 결과를 반환한다. 대부분의 함수는 특수한 용도가 아닌 이상에는 같은 값을 넣었을 때 항상 같은 결과를 반환한다. 수학에서는 함수에 인자로 전달할 수 있는 값의 집합을 정의역으로, 결과로 받을 수 있는 값의 집합을 치역으로 정의한다. 프로그래밍에서의 함수도 동일하게 입력으로 사용할 수 있는 집합과 그 입력으로 출력되는 결과 값 집합이 존재한다. 즉, 입력의 범위를 명확히 알면 출력되는 결과물도 명확하게 알 수 있다는 뜻이다.
 

@@ -19,7 +19,7 @@ tags:
 ---
 얼마 전에 Windows 환경이 필요해 lubuntu 설치해서 사용하던 노트북을 Windows 10으로 전환했다. 이 노트북은 32GB eMMC 내장이라 사실 공간이 엄청 부족한 편이다. Windows 10을 설치하고 나니 5GB만 남아서 Visual Studio는 설치할 엄두조차 내지 못했다. 때마침 Microsoft PowerShell이 정말 좋다는 이야기를 계속 들었던 것이 생각나서 잠깐 살펴보게 되었다. 이런 강력한 쉘이 Windows에 기본 내장인걸 이제야 알았다는 게 분할 정도로 많은 기능이 기본으로 제공되고 있었다. 그래서 몇 가지 간단한 도구를 공부 삼아 만들어봤고 정말 만족스러웠다.
 
-<img src="https://c2.staticflickr.com/8/7287/28094262431_05df2d93d9_o.png?w=660&#038;ssl=1" style="max-width: 800px; width: 100%;" alt="PowerShell Website" class="aligncenter" data-recalc-dims="1" />
+<img src="https://c2.staticflickr.com/8/7287/28094262431_05df2d93d9_o.png?w=660&#038;ssl=1" style="max-width: 800px; width: 100%;" alt="PowerShell Website" class="aligncenter" />
 
 Microsoft PowerShell은 Windows XP 이후로 꾸준히 탑재된 명령행 쉘로 .Net Framework으로 개발된 스크립트 언어가 내장되어 있다. 이전에도 JScript나 VBScript가 있었지만 쉘과 연동하기 어려운 문제와 보안 등의 이유로 인해 문제가 계속 제기되었고 그 대안으로 개발된 것이 이 PowerShell이다. .Net Framework과 연동해 다양한 기능을 제공하는 cmdlet과 스크립트, 기본 함수 등은 정말 이 파워쉘 하나만 갖고도 수많은 작업을 쉽게 처리할 수 있을 정도로 탄탄하며 세세하면서도 넓은 영역의 기능을 제공하고 있다. PowerShell Gallery라는 별도의 모듈 관리자도 존재한다. 심지어 dll을 불러서 호출하는 것도 가능하기 때문에 스크립트 언어가 제공하는 기능에 제한받지 않는다는 점이 인상적이다. 너무 자랑만 한 것 같아서 단점은 Windows에서만 제대로 돌아간다는 정도<sup id="fnref-3664-1"><a href="#fn-3664-1">1</a></sup>가 아닐까 싶다. 😛
 
@@ -45,7 +45,7 @@ Microsoft PowerShell은 Windows XP 이후로 꾸준히 탑재된 명령행 쉘�
 
 @BotFather에게 `/newBot`을 입력하면 새로운 봇 이름과 봇 계정명을 순서대로 입력하라고 안내한다. 순서대로 입력하고 나면 API 토큰과 해당 봇 링크를 알려준다.
 
-<img src="https://c2.staticflickr.com/8/7508/28138173196_8ed5ea9481_o.png?w=400&#038;ssl=1" class="aligncenter" alt="botfather" data-recalc-dims="1" />
+<img src="https://c2.staticflickr.com/8/7508/28138173196_8ed5ea9481_o.png?w=400&#038;ssl=1" class="aligncenter" alt="botfather" />
 
 이 토큰을 이용해서 API를 사용하는 방법은 [Telegram Bots][4]에서 자세히 확인할 수 있다. (참고로, 위 이미지의 API 토큰은 더이상 동작하지 않는다.)
 
@@ -317,7 +317,7 @@ if (($diff | measure).Count -ne 0) {
 
 이제 `message.ps1`을 실행하면 `data.csv`에 파일이 생성되고 새 글이 올라오지 않는 경우에는 메시지를 전송하지 않는다. `data.csv`를 열어보면 개체 목록이 csv로 변환된 내용을 확인할 수 있다. 모든 과정이 끝났다. 필요에 따라서 `message.ps1`을 Windows 작업 스케줄러를 사용해 반복적으로 호출하면 최신의 업데이트 상황을 수시로 확인해서 메시지로 전송받을 수 있다.
 
-<img src="https://c2.staticflickr.com/8/7281/28172339985_217d47feb4_o.png?w=600&#038;ssl=1" class="aligncenter"  data-recalc-dims="1" />
+<img src="https://c2.staticflickr.com/8/7281/28172339985_217d47feb4_o.png?w=600&#038;ssl=1" class="aligncenter"  />
 
 위 스크린샷에서 메시지를 전송 받은 결과를 볼 수 있다.
 

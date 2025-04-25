@@ -20,7 +20,7 @@ tags:
   - 마이크로서비스
 
 ---
-원문: [Microservice Trade-Offs][1] By  <img src="https://martinfowler.com/mf.jpg?w=660" style="border-radius: 50%; width:40px;" alt="martin Fowler" data-recalc-dims="1" />Martin Fowler (July 1, 2015)
+원문: [Microservice Trade-Offs][1] By  <img src="https://martinfowler.com/mf.jpg?w=660" style="border-radius: 50%; width:40px;" alt="martin Fowler" />Martin Fowler (July 1, 2015)
 
 * * *
 

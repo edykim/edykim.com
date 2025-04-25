@@ -42,7 +42,7 @@ Obfuscation은 코드를 읽기 어렵게 만들어서 내부 로직을 쉽게 �
 
 Obfuscate하는 도구는 시중에 엄청 많이 나와 있는데 Visual Studio 2012를 설치하면 포함되어 있는 [Dotfuscator][4]를 사용했다. Dotfuscator의 사용 방법은 파일 추가 > 결과물 위치 지정 > 실행, 3단계로 아주 단순하다.
 
-[<img src="https://live.staticflickr.com/7532/15446515934_7a88773077_o.png?w=660&#038;ssl=1" alt="dotfuscator" class="alignnone " data-recalc-dims="1" />][5]
+<img src="https://live.staticflickr.com/7532/15446515934_7a88773077_o.png?w=660&#038;ssl=1" alt="dotfuscator" class="alignnone " />
 
 다만 Dotfuscator를 하게 되면 모든 클래스, 메소드 등 대부분의 명칭이 a, b, c 와 같이 변하기 때문에 문제가 되는 부분이 있을 수 있다. 가령 JSON을 사용하는 경우라면 Serialize 될 때 해당 멤버변수명을 그대로 사용해야 한다. 그런 경우 다음과 같이 attribute로 예외를 지정해주면 된다.
 
@@ -59,5 +59,4 @@ Obfuscate하는 도구는 시중에 엄청 많이 나와 있는데 Visual Studio
  [2]: http://msdn.microsoft.com/en-us/library/ms236403.aspx
  [3]: http://msdn.microsoft.com/en-us/library/xcd8txaw(v=vs.110).aspx
  [4]: http://www.preemptive.com/products/dotfuscator/overview
- [5]: http://www.flickr.com/photos/90112078@N08/15446515934 "dotfuscator"
  [6]: http://msdn.microsoft.com/en-us/library/system.reflection.obfuscationattribute.aspx

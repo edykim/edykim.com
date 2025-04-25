@@ -25,7 +25,7 @@ tags:
 
 양식을 작성할 때 다른 부분은 개인 정보 적는 난이라 복잡한 부분이 없고 8번 왜 정정을 요청하는가에 대해서는 구구절절 쓰면 되고 10번 항목 정도가 막막한 부분이다. Qustion number from tax return, Alpha label on tax return 두 항목은 종이 양식에 나온 레이블을 참고해서 작성하면 된다. 내 경우에는 다음과 같이 작성했다.<figure id="flicker-15986968145_2164e0f73a" class="wp-caption aligncenter">
 
-[<img src="https://live.staticflickr.com/8648/15986968145_2164e0f73a.jpg?w=660&#038;ssl=1" alt="Tax Amendment Request" class="aligncenter " data-recalc-dims="1" />][3]<figcaption class="wp-caption-text">글씨가&#8230; 아하하하하핳</figcaption></figure> 
+<img src="https://live.staticflickr.com/8648/15986968145_2164e0f73a.jpg?w=660&#038;ssl=1" alt="Tax Amendment Request" class="aligncenter " /><figcaption class="wp-caption-text">글씨가&#8230; 아하하하하핳</figcaption></figure> 
 
 세금 환급 메뉴얼에는 자국민이 아닌 사람의 Medicare levy exemption에는 추가적인 정보를 요구하지 않는데 나는 혹시나 하는 마음에 내 [VEVO Entitlement Check][4]를 출력해 위에서 작성한 양식과 같이 우편으로 보냈다.
 
@@ -35,6 +35,5 @@ tags:
 
  [1]: https://www.ato.gov.au/Individuals/Tax-return/2014/Supporting-information/Amendment-requests/
  [2]: https://www.ato.gov.au/Forms/Amendment-of-income-tax-return-for-individuals/
- [3]: http://www.flickr.com/photos/90112078@N08/15986968145 "Tax Amendment Request"
  [4]: http://www.immi.gov.au/Services/Pages/vevo/vevo-overview.aspx
  [5]: https://www.ato.gov.au/General/Correct-a-mistake-or-dispute-a-decision/Correct-(amend)-an-income-tax-return/Amendments/How-we-process-your-amendment-request/

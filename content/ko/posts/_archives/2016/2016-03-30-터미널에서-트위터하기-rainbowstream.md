@@ -21,7 +21,7 @@ tags:
 
 이 클라이언트는 현존하는 어떤 클라이언트보다 가장 힙스터스러운 트위터 환경을 구축해준다. 쇼케이스 보면 반하지 않을 수 없다.
 
-<img src="https://raw.githubusercontent.com/DTVD/rainbowstream/master/screenshot/rs.gif?w=660&#038;ssl=1" alt="" data-recalc-dims="1" />
+<img src="https://raw.githubusercontent.com/DTVD/rainbowstream/master/screenshot/rs.gif?w=660&#038;ssl=1" alt="" />
 
 이 툴은 pip를 통해서 설치할 수 있다. 전역 설치를 하고 싶다면 그냥 설치하면 된다.
 
@@ -45,7 +45,7 @@ tags:
 
 <figure class="wp-caption alignnone">
 
-<img src="https://live.staticflickr.com/1508/25464896044_5f7513515e_b.jpg?resize=660%2C660&#038;ssl=1" width="660" height="660" class data-recalc-dims="1" /><figcaption class="wp-caption-text">이렇게까지 트위터 해야하냐고 그만 물어보세요&#8230;</figcaption></figure> 
+<img src="https://live.staticflickr.com/1508/25464896044_5f7513515e_b.jpg?resize=660%2C660&#038;ssl=1" width="660" height="660" class /><figcaption class="wp-caption-text">이렇게까지 트위터 해야하냐고 그만 물어보세요&#8230;</figcaption></figure> 
 
 심지어 테마도 지원하니 취향에 맞게 컬러 스킴도 지정해보자. `theme`으로 사용 가능한 테마 목록을 확인하고 `theme <테마명>`으로 변경할 수 있다.
 

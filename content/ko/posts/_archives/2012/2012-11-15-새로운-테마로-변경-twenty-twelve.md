@@ -19,7 +19,7 @@ tags:
 ---
 오랜만에 wp 사이트에 들어가서 좋은 테마 없나 찾자마자 튀어나온 새로운 테마 Twenty Twelve. 2012년 9월부터 제공했는데 여태껏 보지 못했다니 내가 너무 소홀했나보다.
 
-<img src="https://wp-themes.com/wp-content/themes/twentytwelve/screenshot.png?w=660" alt="" data-recalc-dims="1" />
+<img src="https://wp-themes.com/wp-content/themes/twentytwelve/screenshot.png?w=660" alt="" />
 
 이전 Twenty Eleven 과 같이 Responsive Design이 적용되어 있으며 테스트해본 결과 상당히 Twenty Eleven에 비해 훨씬 깔끔하고 이쁘다. 기본 글꼴도 Open sans로 설정되어 미려함을 더해준다.
 

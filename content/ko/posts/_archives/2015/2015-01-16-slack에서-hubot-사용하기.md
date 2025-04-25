@@ -47,7 +47,7 @@ Slack에서 Integration을 통해 Hubot을 추가하면 API키를 발급해줘�
 
 `[yeoman](http://yeoman.io/)` 제너레이터로 hubot을 생성할 수 있다. `yo hubot` 명령어를 입력하면 봇을 생성하는 인터프리터가 나타나는데 내용에 맞게 작성자, 봇 이름, 설명 등을 순차적으로 입력하면 된다. 여기서는 IRC Gateway를 사용하므로 adapter에는 irc을 입력하면 된다. 그러면 알아서 irc에 맞는 어뎁터가 설치된다.
 
-[<img src="https://live.staticflickr.com/7473/15670711134_26db71c303_o.png?w=660&#038;ssl=1" alt="yo hubot" class="aligncenter " data-recalc-dims="1" />][6]
+<img src="https://live.staticflickr.com/7473/15670711134_26db71c303_o.png?w=660&#038;ssl=1" alt="yo hubot" class="aligncenter " />
 
 여기서 `unicode/ucsdet.h`를 찾을 수 없다는 에러가 나타나면 다음 명령어로 command line developer tool을 설치한다.
 
@@ -119,7 +119,6 @@ Slack에서 Integration을 통해 Hubot을 추가하면 API키를 발급해줘�
  [3]: https://hubot.github.com
  [4]: http://slack.com
  [5]: https://github.com/github/hubot/tree/master/docs/index.md
- [6]: http://www.flickr.com/photos/90112078@N08/15670711134 "yo hubot"
  [7]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
  [8]: https://www.heroku.com/
  [9]: https://toolbelt.heroku.com/

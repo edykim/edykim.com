@@ -313,7 +313,7 @@ console.log(bankAccount.name, bankAccount.balance, bankAccount.closed ? 'closed'
 console.log(eventStore.data)
 ```
 
-<img src="https://user-images.githubusercontent.com/1009457/31695810-79fa95e2-b3f8-11e7-86d1-bab9752efab4.png?w=660&#038;ssl=1" alt="eventStore.data" data-recalc-dims="1" />
+<img src="https://user-images.githubusercontent.com/1009457/31695810-79fa95e2-b3f8-11e7-86d1-bab9752efab4.png?w=660&#038;ssl=1" alt="eventStore.data" />
 
 * * *
 

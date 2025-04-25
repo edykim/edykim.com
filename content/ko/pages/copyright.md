@@ -20,7 +20,7 @@ edykim.com에 게시된 글 중 번역된 글은 대부분 각각 저자에게 �
 
 ### 그 외의 게시
 
-edykim.com 내 컨텐츠 중 앞에서 언급하지 않은 범위의 저작물은 별도의 표기가 없다면 [크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스][2] <img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png?w=660&#038;ssl=1" data-recalc-dims="1" />에 따라 이용할 수 있습니다.
+edykim.com 내 컨텐츠 중 앞에서 언급하지 않은 범위의 저작물은 별도의 표기가 없다면 [크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스][2] <img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png?w=660&#038;ssl=1" />에 따라 이용할 수 있습니다.
 
 저작권에 관한 별도의 표기가 있는 저작물은 해당 표기에 따라 저작권이 적용됩니다.
 

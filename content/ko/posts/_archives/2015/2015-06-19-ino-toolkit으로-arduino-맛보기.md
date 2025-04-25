@@ -20,13 +20,13 @@ tags:
 ---
 지난번 구입한 Raspberry Pi에 이어 이번엔 Arduino가 도착했다. 첫인상으로 비교했을 땐 Raspberry Pi는 똑똑하고 Arduino는 우직한 기분이 든다. 🙂 Arduino는 모든 정보가 오픈소스로 공개되어 있어서 훨씬 다양한 종류의 보드가 존재한다. Arduino가 적혀 있는 공식 보드도 있지만 자체 브랜드가 적혀있거나 아예 아무 내용도 적혀있지 않은, 저렴한 보드도 있다.
 
-<a href="https://www.flickr.com/photos/90112078@N08/18952687015/" target="_blank"><img src="https://live.staticflickr.com/502/18952687015_72f25b8ffe_b.jpg?w=660&#038;ssl=1" alt="Arduino의 모습" data-recalc-dims="1" /></a>
+<img src="https://live.staticflickr.com/502/18952687015_72f25b8ffe_b.jpg?w=660&#038;ssl=1" alt="Arduino의 모습" />
 
 ebay를 통해서 5달러로 ATmega328P가 탑재된 아두이노 호환 보드를 구입했다. 이외에도 소켓 브레드보드, ESP8266 WIFI 무선 송수신 모듈, Servo를 위한 모듈을 구입했는데 오늘 보드가 먼저 도착했다. 저항도 구입해야 하는데&#8230; 낱개로는 저렴하지만 결국 비싼 취미가 되고 있는 느낌이다.
 
 별도 모듈 없이 보드 자체만 가지고서는 보드에 있는 LED를 껐다 켰다 하는 것이 할 수 있는 전부다. 기본적으로 보드 메모리에 설치되어 나오는 것도 이 LED를 껐다 켰다 하는 _blink_인데 전원을 넣으면 LED가 깜빡이는 것을 확인할 수 있다. 다음 사진에서 빨간 LED는 전원이고 초록색은 조작할 수 있는 LED다.
 
-[<img src="https://live.staticflickr.com/3854/18331999193_46157d9096_b.jpg?w=660&#038;ssl=1" data-recalc-dims="1" />][1]
+<img src="https://live.staticflickr.com/3854/18331999193_46157d9096_b.jpg?w=660&#038;ssl=1" />
 
 이 포스트에서는 Raspberry Pi에 Arduino를 USB로 연결해 진행했다. 여기서 사용한 ino 툴킷은 아쉽게도 맥과 리눅스 환경에서만 구동 가능하다. 만약 윈도우 환경이라면 Arduino IDE를 사용하자.
 
@@ -99,5 +99,4 @@ lib 디렉토리와 src 디렉토리, 그리고 src/sketch.ino 가 생성된 것
 
 아직 다양한 모듈이 없어서 맛보기만 했지만 LED 깜빡이는 것만 봐도 신기하다. 조만간 다른 모듈이 오면 더 재미있는 Thing을 만들 생각에 기대된다.
 
- [1]: https://www.flickr.com/photos/90112078@N08/18331999193/
  [2]: https://github.com/amperka/ino

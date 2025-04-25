@@ -21,7 +21,7 @@ tags:
 
 VMWare Tools를 다시 설치하면 된다.
 
-<img src="https://24.media.tumblr.com/07b58612fca6accaaa64293e1176e4b2/tumblr_n41pcuuAC21tyfpkyo1_500.png?resize=430%2C494&#038;ssl=1" width="430" height="494" alt='VMWare Tools 재설치하기' data-recalc-dims="1" />
+<img src="https://24.media.tumblr.com/07b58612fca6accaaa64293e1176e4b2/tumblr_n41pcuuAC21tyfpkyo1_500.png?resize=430%2C494&#038;ssl=1" width="430" height="494" alt='VMWare Tools 재설치하기' />
 
 ## 문제
 
