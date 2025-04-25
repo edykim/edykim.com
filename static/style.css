@@ -956,3 +956,30 @@ details[open] {
     text-decoration-style: dotted;
     color: inherit;
 }
+
+.footnotes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+}
+
+.footnotes > * {
+    padding-left: 20px;
+}
+
+.data-footnote-backref {
+    text-decoration: none;
+    font-family: monospace;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
