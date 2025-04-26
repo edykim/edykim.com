@@ -23,7 +23,7 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53038166108_4fea48bcd2_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53038166108_4fea48bcd2_o.webp" loading="lazy" />
 
 <figcaption>작은 카메라가 대부분 그렇듯 날씨가 쨍하게 맑은 날에는 풍경이 이쁘게 잘 담긴다.</figcaption>
 
@@ -31,7 +31,7 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037104692_836496b991_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037104692_836496b991_o.webp" loading="lazy" />
 
 
 <figcaption>조금이라도 어두운 환경에서는 너무나도 쉽게 흔들린다. 꼭 어디 올려두고 찍어야 함.</figcaption>
@@ -42,7 +42,7 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure>
 
-<img src="https://live.staticflickr.com/65535/53038072825_fa7787a2dd_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53038072825_fa7787a2dd_o.webp" loading="lazy" />
 
 <figcaption>색이 중요한 사진은 생각처럼 잘 안담긴다.</figcaption>
 
@@ -50,7 +50,7 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure>
 
-<img src="https://live.staticflickr.com/65535/53037866249_9767fc23fc_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037866249_9767fc23fc_o.webp" loading="lazy" />
 
 </figure>
 
@@ -58,13 +58,13 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037679971_4d7d2b6ff1_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037679971_4d7d2b6ff1_o.webp" loading="lazy" />
 
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037679931_c367b58361_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037679931_c367b58361_o.webp" loading="lazy" />
 
 <figcaption>렌즈 왜곡이 잔잔하게 보인다. 그냥 그런 재미.</figcaption>
 
@@ -72,33 +72,33 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53038166068_e0ab51dd4b_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53038166068_e0ab51dd4b_o.webp" loading="lazy" />
 
 </figure>
 
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037104687_3cc89e0ed9_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037104687_3cc89e0ed9_o.webp" loading="lazy" />
 
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037679961_3e62c84b67_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037679961_3e62c84b67_o.webp" loading="lazy" />
 
 </figure>
 
 <div class="columns">
 <figure>
 
-<img src="https://live.staticflickr.com/65535/53037104647_d26a9ba55a_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037104647_d26a9ba55a_o.webp" loading="lazy" />
 
 </figure>
 
 <figure>
 
-<img src="https://live.staticflickr.com/65535/53038166093_3bb26c919d_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53038166093_3bb26c919d_o.webp" loading="lazy" />
 
 </figure>
 </div>
@@ -106,18 +106,18 @@ jpg로도 충분하지만 CHDK를 설치하면 raw로도 촬영 가능하다. �
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037104627_5c1088c4ae_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037104627_5c1088c4ae_o.webp" loading="lazy" />
 
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037104632_1a758e9d31_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037104632_1a758e9d31_o.webp" loading="lazy" />
 
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/53037679921_25195b5a27_o.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/53037679921_25195b5a27_o.webp" loading="lazy" />
 
 </figure>

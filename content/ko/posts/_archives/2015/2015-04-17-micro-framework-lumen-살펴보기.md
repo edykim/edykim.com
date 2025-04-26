@@ -21,7 +21,7 @@ tags:
 ---
 Micro-framework의 전성기라고 할 만큼 다양한 환경과 언어로 프레임워크가 쏟아지고 있다. PHP에도 micro-framework가 많이 나와 있는데<sup id="fnref-2852-1"><a href="#fn-2852-1" rel="footnote">1</a></sup> 최근 Laravel에서 [Lumen을 발표][1]했다. 발표 자료에서는 symfony2 기반인 silex보다 1.9배 빠르다고 하는데 문법적으로는 Silm과 상당히 유사한 느낌도 든다. 기존에 나왔던 프레임워크와 엄청나게 큰 구조 차이를 가지고 있는 것은 아니지만 Laravel과의 호환을 염두한 부분도 많다는 느낌을 받았다. 또한 구조적으로도 silex나 여타 기존에 나온 micro-framework 보다 훨씬 깔끔하고 미려하다는 느낌을 받았다.
 
-<img src="https://live.staticflickr.com/8775/16989608218_e72f01ed82_o.png?w=660&#038;ssl=1" alt="lumen logo" class="aligncenter" />
+<img src="/resources/live.staticflickr.com/8775/16989608218_e72f01ed82_o.webp?w=660&#038;ssl=1" alt="lumen logo" class="aligncenter" />
 
 이 포스트는 lumen 문서에서 쉽게 볼 수 있는 부분만 다뤘고 더 깊은 내용을 보고 싶다면 Lumen 공식 문서를 보는게 도움이 된다. Lumen는 `PHP >= 5.4`를 요구하며 Mcrypt, OpenSSL, mbstring, tokenizer 확장을 필요로 한다.
 
@@ -47,7 +47,7 @@ lumen을 사용해 프로젝트를 시작하는 방법은 lumen installer를 사
 
 다음과 같이 프로젝트가 생성된 것을 확인할 수 있다.
 
-<img src="https://live.staticflickr.com/8767/16969965647_cf6c74cae3_c.jpg?w=660&#038;ssl=1" alt="lumen init" class="aligncenter" />
+<img src="/resources/live.staticflickr.com/8767/16969965647_cf6c74cae3_c.webp?w=660&#038;ssl=1" alt="lumen init" class="aligncenter" />
 
 ### composer
 

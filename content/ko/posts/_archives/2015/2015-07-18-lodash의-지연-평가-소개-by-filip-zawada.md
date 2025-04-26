@@ -56,11 +56,11 @@ Lo-Dash와 같은 라이브러리는 더이상 빨라질 수 없을 정도로 �
 
 $10보다 작은 가격의 보석 3개를 고르려고 한다. 일반적인 Lodash 접근인 엄격한 평가에서는 8개의 보석을 모두 걸러낸 후 앞 3개를 골라낸다:
 
-<img src="https://live.staticflickr.com/546/19798213575_6b7b069dff_o.gif?w=660&#038;ssl=1" alt="Lodash naïve approach" />
+<img src="/resources/live.staticflickr.com/546/19798213575_6b7b069dff_o.gif?w=660&#038;ssl=1" alt="Lodash naïve approach" />
 
 충분히 쿨하지 않다. 이 방식은 8개의 모든 요소를 처리하지만 사실 필요로 하는 것은 그 중 5개 뿐이다. 지연 평가 알고리즘에서는 이 방식과 대조적으로, 배열에서 적은 숫자의 요소를 가져와 올바른 결과를 얻는다. 다음을 살펴보자:
 
-<img src="https://live.staticflickr.com/499/19802991361_f410fb2ae6_o.gif?w=660&#038;ssl=1" alt="Lo-Dash regular approach" />
+<img src="/resources/live.staticflickr.com/499/19802991361_f410fb2ae6_o.gif?w=660&#038;ssl=1" alt="Lo-Dash regular approach" />
 
 이 방식으로 쉽게 37.5% 성능 향상을 만들었다. 이는 단순한 예시이며 사실 1000+배 성능 향상이 있는 예도 들 수 있다. 다음을 보자:
 
@@ -76,7 +76,7 @@ $10보다 작은 가격의 보석 3개를 고르려고 한다. 일반적인 Loda
 
 이 예제에서 99,999개의 요소를 검사하게 되는데, 이 모두를 다 실행하지 않고 예를 들어 1,000개의 요소만 검사해도 결과를 얻을 수 있게 된다. [벤치마크][4]에서 이 엄청난 성능 향상을 확인할 수 있다:
 
-<img src="https://live.staticflickr.com/364/19175603254_2f9dd00382_o.jpg?w=660&#038;ssl=1" alt="benchmark" />
+<img src="/resources/live.staticflickr.com/364/19175603254_2f9dd00382_o.webp?w=660&#038;ssl=1" alt="benchmark" />
 
 ## 파이프라이닝
 

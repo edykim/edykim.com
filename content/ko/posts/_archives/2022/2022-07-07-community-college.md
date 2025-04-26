@@ -15,17 +15,17 @@ slug: "community-college"
 2019년 가을에 커뮤니티 컬리지를 다니기 시작해서 2021년 가을 학기를 마지막으로 졸업하고 편입을 하게 되었다. 여름 학기를 꽉 채워 들었던 덕분에 학기 하나를 빨리 끝내고 학기 시작 전까지 쉬게 되었다. 편입하게 되는 학교는 쿼터제로 운영되는 곳이라서 생각보다 학업이 비는 기간이 길어진 것이 조금 걱정이긴 하지만. 커뮤니티 컬리지와 편입 과정을 거치면서 알게 된 부분을 기록 삼아 남긴다.
 
 <figure>
-<img src="https://live.staticflickr.com/65535/52201724758_79b464ed4c_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/52201724758_79b464ed4c_h.webp" loading="lazy" />
 <figcaption>첫 학기 시작. 늘 풀냄새 났다.</figcaption>
 </figure>
 
 <figure>
-<img src="https://live.staticflickr.com/65535/52202199725_6cbf4fac39_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/52202199725_6cbf4fac39_h.webp" loading="lazy" />
 <figcaption>날 좋으면 멀리까지 보이는 계단에서. 항상 저 밑 주차장 밖에 자리가 없었다.</figcaption>
 </figure>
 
 <figure>
-<img src="https://live.staticflickr.com/65535/52201971824_8652b02f61_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/52201971824_8652b02f61_h.webp" loading="lazy" />
 <figcaption>학교 뒤가 바로 산이라 겨울에 구경도 할 수 있었다.</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ IGETC를 채우기 위해서 이런 저런 교양을 듣게 되는데 어떤 수
 
 
 <figure>
-<img src="https://live.staticflickr.com/65535/52201724773_3f3d720a6d_z.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/52201724773_3f3d720a6d_z.webp" loading="lazy" />
 <figcaption>마지막 학기는 마스크 쓰고 오프라인 수업해서 덥고 피곤했다</figcaption>
 </figure>
 

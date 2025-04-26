@@ -42,6 +42,6 @@ tags:
 
 기존 블루투스 키보드와 거의 일치하는 크기라서 따로 적응한다고 시간을 쓰지 않아 좋았다. F1~f3을 별도키로 구성했으면 좀 더 편하게 쓸 수 있을듯 싶다. 기기에 대한 자세한 사항은 [로지텍 공식 사이트][1]에서 확인할 수 있다.
 
-<img src="https://live.staticflickr.com/5502/12234593486_abbcc24472_c.jpg?w=660" alt="애플 블루투스 키보드와의 비교" />
+<img src="/resources/live.staticflickr.com/5502/12234593486_abbcc24472_c.webp?w=660" alt="애플 블루투스 키보드와의 비교" />
 
  [1]: http://www.logitech.com/en-au/product/wireless-solar-keyboard-k760-for-mac

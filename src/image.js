@@ -6,7 +6,7 @@ export async function copyImages(nodes, outputDir) {
     for (const node of nodes) {
         if (! node.data.images) continue;
         for (const image of node.data.images) {
-            if (image.url.indexOf(':') !== -1) {
+            if (image.url.indexOf(':') !== -1 || image.url.indexOf('/resources/') === 0) {
                 continue;
             }
             const dir = path.join(outputDir, node.data.fields.url)

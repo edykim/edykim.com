@@ -20,8 +20,8 @@ HTML5에서 추가된 Geolocation API는 웹 브라우저에서 사용자 위치
 
 개발자 도구에서 스마트폰 모양 아이콘을 클릭해 emulation 모드를 활성화 한 후, 하단 emulation 탭에서 좌측 Sensors 항목을 클릭하면 Emulate geolocation coordinates 항목을 확인할 수 있다.
 
-<img src="https://live.staticflickr.com/8678/16584287368_cd7866943e_o.png?w=660&#038;ssl=1" alt="emulate geolcation coordinates" class="aligncenter" />
+<img src="/resources/live.staticflickr.com/8678/16584287368_cd7866943e_o.webp?w=660&#038;ssl=1" alt="emulate geolcation coordinates" class="aligncenter" />
 
 좌표를 입력하면 API에서의 좌표가 변경된 것을 볼 수 있다.
 
-<img src="https://live.staticflickr.com/8599/16584457060_7c70645024_o.png?w=660&#038;ssl=1" alt="geolocation result" class="aligncenter" />
+<img src="/resources/live.staticflickr.com/8599/16584457060_7c70645024_o.webp?w=660&#038;ssl=1" alt="geolocation result" class="aligncenter" />

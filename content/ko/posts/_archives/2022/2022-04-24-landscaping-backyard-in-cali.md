@@ -92,7 +92,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52027428303_bb8ab46db0_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027428303_bb8ab46db0_o.webp)
 
 <figcaption>잡초 제거로 프로젝트가 시작되었다!</figcaption>
 
@@ -100,7 +100,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52026346482_34f0d18229_o.jpg)
+![](/resources/live.staticflickr.com/65535/52026346482_34f0d18229_o.webp)
 
 <figcaption>잡초 제거 후 모습. 이후 틸러로 땅을 뒤집었다.</figcaption>
 
@@ -108,7 +108,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52026346607_5f42b88752_o.jpg)
+![](/resources/live.staticflickr.com/65535/52026346607_5f42b88752_o.webp)
 
 <figcaption>경계석도 꼼꼼하게 닦아준다. 한 톨의 흙이라도 있으면 잡초가 다시 생긴다고.</figcaption>
 
@@ -116,7 +116,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52027636339_5715d5091b_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027636339_5715d5091b_o.webp)
 
 <figcaption>처음 배송받은 5 cu. yd.의 Arizona River Rock. 배수로와 일부 구역 조경에 사용했다.</figcaption>
 
@@ -125,17 +125,17 @@ slug: "landscaping-backyard-in-california"
 
 <div class="columns"> <figure>
 
-![](https://live.staticflickr.com/65535/52027390276_dece414aa6_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027390276_dece414aa6_o.webp)
 
 <figcaption>기존 배수관을 제거하고 배수로를 정비했다.</figcaption> </figure> <figure>
 
-![](https://live.staticflickr.com/65535/52026346552_6027a87558_o.jpg)
+![](/resources/live.staticflickr.com/65535/52026346552_6027a87558_o.webp)
 
 <figcaption>배수로에 천을 설치한 후 자갈을 놓고 천을 김밥처럼 말아서 핀을 꽂았다.</figcaption> </figure> </div>
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52026346497_0998c03639_o.jpg)
+![](/resources/live.staticflickr.com/65535/52026346497_0998c03639_o.webp)
 
 <figcaption>두 번째 배달. Lava rock도 5 cu. yd.를 주문했는데 리버락보다 훨씬 적게 느껴졌고 나르기도 수월했다.</figcaption>
 
@@ -144,7 +144,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52027902870_c03be7e5c0_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027902870_c03be7e5c0_o.webp)
 
 <figcaption>조경 천을 놓은 후에 돌을 깔기 시작.</figcaption>
 
@@ -154,7 +154,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure>
 
-![](https://live.staticflickr.com/65535/52027428203_f887278ca1_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027428203_f887278ca1_o.webp)
 
 <figcaption>돌도 정돈하고 부직포도 길에 맞게 잘라서 정리</figcaption>
 
@@ -162,7 +162,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure>
 
-![](https://live.staticflickr.com/65535/52027428233_a17417f353_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027428233_a17417f353_o.webp)
 
 <figcaption>처마 밑에 있던 화분도 한 쪽으로 모았다.</figcaption>
 
@@ -172,7 +172,7 @@ slug: "landscaping-backyard-in-california"
 
 <figure class="wide">
 
-![](https://live.staticflickr.com/65535/52027636389_4fa4c1c682_o.jpg)
+![](/resources/live.staticflickr.com/65535/52027636389_4fa4c1c682_o.webp)
 
 <figcaption>태양광으로 충전되는 조명을 설치했다. 구멍난 잔디에는 씨를 잔뜩 뿌렸다.</figcaption>
 

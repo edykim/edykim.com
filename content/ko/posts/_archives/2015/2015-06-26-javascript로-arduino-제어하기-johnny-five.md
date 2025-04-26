@@ -22,11 +22,11 @@ tags:
 ---
 요즘 출퇴근 하는 시간에는 눈도 쉴 겸 팟캐스트를 자주 듣는다. 그 중 Hanselminutes을 애청하고 있는데 Scott Hanselman이 여러 분야 사람들을 인터뷰하는 방식으로 진행되는 팟캐스트다. 이 팟캐스트에서 진행한 [Getting started making NodeBots and Wearables][1] 에피소드에서 [NodeBots 프로젝트][2]와 [Johnny-Five.io][3]에 대해 알게 되어 살펴보게 되었다.
 
-<img src="https://live.staticflickr.com/552/19171356032_564ff4e9b0_b.jpg?w=660&#038;ssl=1" alt="NodeBots" />
+<img src="/resources/live.staticflickr.com/552/19171356032_564ff4e9b0_b.webp?w=660&#038;ssl=1" alt="NodeBots" />
 
 NodeBots 프로젝트는 말 그대로 JavaScript를 이용해 로봇공학을 배우는 프로젝트로 세계 각지에서 진행되고 있다고 한다. JS를 사용할 수 있는 이점을 살려 쉽고 재미있는 과정을 제공하고 있는데 2015년 7월 25일은 국제 NodeBots의 날로 각 지역별로 프로그램이 진행된다.([멜번에서도!][4]) 아쉽게도 한국에는 아직 오거나이저가 없는 것 같다.
 
-<img src="https://live.staticflickr.com/386/18990998609_e7626f5ef1_b.jpg?w=660&#038;ssl=1" alt="Johnny-Five는" />
+<img src="/resources/live.staticflickr.com/386/18990998609_e7626f5ef1_b.webp?w=660&#038;ssl=1" alt="Johnny-Five는" />
 
 Johnny-Five는 JavaScript 로봇공학 프로그래밍 프레임워크로, 이전 포스트인 [ino toolkit으로 Arduino 맛보기][5]에서 C 문법 스타일의 sketch를 사용한 반면 이 프레임워크로 JavaScript를 이용해 제어할 수 있다. 그리고 REPL을 제공하고 있어서 실시간으로 데이터를 확인하거나 nodejs의 다양한 라이브러리도 활용할 수 있다. NodeBots 세션에서는 손쉽게 웹API로 만들어 브라우저를 통해 제어하는 등 이전 환경에서는 만들기 까다로웠던 부분을 재미있게 풀어가는데 활용하고 있다. 게다가 이 프레임워크는 아두이노에만 국한된 것이 아니라 [다양한 개발 보드를 지원][6]하고 있는 것도 장점이다.
 

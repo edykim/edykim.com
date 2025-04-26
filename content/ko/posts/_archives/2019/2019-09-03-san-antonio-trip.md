@@ -23,33 +23,33 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672674882_dc0054a1e5_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672674882_dc0054a1e5_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672679487_40997f11fa_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672679487_40997f11fa_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672151958_735ec3525f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672151958_735ec3525f_h.webp" loading="lazy" />
 
 <figcaption>LAX는 올 때마다 복잡하다!</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672155598_73ed7035cd_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672155598_73ed7035cd_h.webp" loading="lazy" />
 
 <figcaption>그런데 Urth 카페도 생기고 🥰</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672505936_3c2cf1bbec_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672505936_3c2cf1bbec_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672679802_a9aac633c1_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672679802_a9aac633c1_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672170723_6f2c5f1395_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672170723_6f2c5f1395_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672500351_32f1db079f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672500351_32f1db079f_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672154223_eebd48abcb_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672154223_eebd48abcb_h.webp" loading="lazy" />
 
 <figcaption>처음 겪은 출발 지연. 지루했지만 잘 이겨냈다! 다만 같이 탄 아이들이 다 울어서 잠도 못자고.</figcaption>
 </figure>
@@ -57,23 +57,23 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672497206_2cfd829747_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672497206_2cfd829747_h.webp" loading="lazy" />
 
 <figcaption>새벽에 도착했는데 지연 탓인지 공항에 아무도 없었다. 다들 청소중이고.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672162458_5f48a08534_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672162458_5f48a08534_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672497951_f1f80ac438_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672497951_f1f80ac438_h.webp" loading="lazy" />
 
 <figcaption>숙소로 가자마자 쓰러졌다..</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672169798_af0b7b7b25_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672169798_af0b7b7b25_h.webp" loading="lazy" />
 
 <figcaption>아침에 일어나서 보니 숙소도 독특했다</figcaption>
 </figure>
@@ -81,20 +81,20 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672496311_d2690778d9_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672496311_d2690778d9_h.webp" loading="lazy" />
 
 <figcaption>아침부터 라면 먹는 것 여행 모먼트</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672670527_192f9bb4a7_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672670527_192f9bb4a7_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672168953_94b3d8a643_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672168953_94b3d8a643_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672164883_d7007c5007_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672164883_d7007c5007_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672501031_9faff8ddc3_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672501031_9faff8ddc3_h.webp" loading="lazy" />
 
 <figcaption>밖에 나와서 깜짝 놀랐다. 아침 일찍부터 습하고 찜질방.</figcaption>
 </figure>
@@ -103,17 +103,17 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672153328_a92ae0e926_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672153328_a92ae0e926_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672496691_eeda7ec2d4_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672496691_eeda7ec2d4_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672672807_7363b6fab6_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672672807_7363b6fab6_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672162293_244a6d37fd_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672162293_244a6d37fd_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672681827_28aa177572_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672681827_28aa177572_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672492151_22a3c528e5_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672492151_22a3c528e5_h.webp" loading="lazy" />
 
 <figcaption>많은 사람들이 이미 기다리고 있었다. 한국서도 어떤 프로에서 와서 촬영했다는, 바베큐로 유명한 곳.</figcaption>
 </figure>
@@ -122,20 +122,20 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672681137_5f21c4926f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672681137_5f21c4926f_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672670827_7d7c189ccb_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672670827_7d7c189ccb_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672666727_c2088ae07b_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672666727_c2088ae07b_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672159603_beb74d87aa_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672159603_beb74d87aa_h.webp" loading="lazy" />
 
 <figcaption>고기 굽는 곳은 너무 비현실적이고 징그러워서 좀 놀랐는데.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672157163_7c30de0454_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672157163_7c30de0454_h.webp" loading="lazy" />
 
 <figcaption>바베큐, 브리스킷, 소세지, 빵, 콘슬로까지 전부 다 대박, 정말 배부르게 먹었다. 최고였고 왜 다들 바베큐 노래를 부르는지 배웠다.</figcaption>
 </figure>
@@ -144,62 +144,62 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672504071_91ffa335e7_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672504071_91ffa335e7_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672673002_fd79775d6d_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672673002_fd79775d6d_h.webp" loading="lazy" />
 
 <figcaption>배부르게 먹고 양조장으로 향했다. </figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672666022_915ca4e7a4_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672666022_915ca4e7a4_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672494221_da5e3f048b_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672494221_da5e3f048b_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672156003_ab44053869_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672156003_ab44053869_h.webp" loading="lazy" />
 
 <figcaption>같이 투어한 멍뭉이</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672507241_102daefa6a_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672507241_102daefa6a_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672160118_67c14a4773_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672160118_67c14a4773_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672168768_aaf5c88fcd_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672168768_aaf5c88fcd_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672500541_4f28d45461_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672500541_4f28d45461_h.webp" loading="lazy" />
 
 <figcaption>영화에서나 봤던 그런 분위기</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672166233_3cf833ba62_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672166233_3cf833ba62_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672674762_c0d3a45136_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672674762_c0d3a45136_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672502206_572e618421_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672502206_572e618421_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672676802_cc5bb26b9d_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672676802_cc5bb26b9d_h.webp" loading="lazy" />
 
 <figcaption>양조 과정을 설명해줘서 재미있었다. 위스키와 진의 차이라든지, 숙성 과정이라든지, 등등.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672166813_d966a49b93_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672166813_d966a49b93_h.webp" loading="lazy" />
 
 <figcaption>아 네, 칵테일과 샷 몇 잔에 얼굴이 시뻘개졌습니다. 심지어 빨간 티셔츠 입고 갔는데 진정 홍인이 되었다.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672169133_067641f67f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672169133_067641f67f_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672503026_d78b8b1123_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672503026_d78b8b1123_h.webp" loading="lazy" />
 
 <figcaption>너무 평화롭고.</figcaption>
 </figure>
@@ -208,33 +208,33 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672496041_f7b0db23e2_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672496041_f7b0db23e2_h.webp" loading="lazy" />
 
 <figcaption>호수 옆에 있던 귀여운 카페인데 호수는 정작 사진도 안남겼다.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672677232_f347b12c83_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672677232_f347b12c83_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672500171_d244986e0f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672500171_d244986e0f_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672673942_122875c115_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672673942_122875c115_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672674612_247d8d34b2_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672674612_247d8d34b2_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672163503_e0357b0c58_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672163503_e0357b0c58_h.webp" loading="lazy" />
 
 <figcaption>학생이 많은 것 같아서 물어봤더니 근처에 학교가 있다고. 연휴에 다들 이렇게 폭풍 공부하는데 저는 놀러왔습니다. 흑흐겋그흑..</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672152833_ebca207177_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672152833_ebca207177_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672665127_ffb35e7e40_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672665127_ffb35e7e40_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672167773_9af8db3790_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672167773_9af8db3790_h.webp" loading="lazy" />
 
 <figcaption>커피 굿, 브라우니 굿, 분위기 너무 좋고, 여기서 공부하면 만점 나오겠다.</figcaption>
 </figure>
@@ -243,13 +243,13 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672155388_a3803db5c7_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672155388_a3803db5c7_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672156593_5f28df1563_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672156593_5f28df1563_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672671162_2dfe9541ba_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672671162_2dfe9541ba_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672163898_77e0baecfc_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672163898_77e0baecfc_h.webp" loading="lazy" />
 
 <figcaption>벽화 있는 곳에서 사진 찍으려고 잠시 내렸는데 동네 분위기 너무 평화롭고 좋았다.</figcaption>
 </figure>
@@ -257,7 +257,7 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672164713_6919f11a5b_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672164713_6919f11a5b_h.webp" loading="lazy" />
 
 <figcaption>샌안토니오로 다시 이동</figcaption>
 </figure>
@@ -266,21 +266,21 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672153513_9b25f2ac48_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672153513_9b25f2ac48_h.webp" loading="lazy" />
 
 <figcaption>왼쪽엔 비가 오고 오른쪽은 맑은 날씨.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672677657_0307fd91a4_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672677657_0307fd91a4_h.webp" loading="lazy" />
 
 <figcaption>다음 날.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672170353_263a492ea6_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672170353_263a492ea6_h.webp" loading="lazy" />
 
 <figcaption>주일 아침 예배. 화에 대해서.</figcaption>
 </figure>
@@ -288,15 +288,15 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672165248_330bd92a5f_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672165248_330bd92a5f_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672499971_ab2ae8cde5_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672499971_ab2ae8cde5_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672678167_06172a68bb_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672678167_06172a68bb_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672670437_b8c5587173_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672670437_b8c5587173_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672675982_071b406427_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672675982_071b406427_h.webp" loading="lazy" />
 
 
 <figcaption>점심 타코... 택사스 타코랑 캘리포니아 타코랑 너무 다르다. 그리고 너무 맛있다. 울면서 먹었네.</figcaption>
@@ -304,38 +304,38 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672170233_6ef3b0bd46_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672170233_6ef3b0bd46_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672155023_bceff224a1_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672155023_bceff224a1_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672497696_fb00ca938d_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672497696_fb00ca938d_h.webp" loading="lazy" />
 
 <figcaption>다들 코스트코 간 사이에 아내와 데이트했다. 식물 많은 카페 너무 이쁘다. 커피도 맛있고.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672490556_5b17038586_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672490556_5b17038586_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672166038_b7e9c8f142_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672166038_b7e9c8f142_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672498391_daedfe2ff3_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672498391_daedfe2ff3_h.webp" loading="lazy" />
 
 <figcaption>온실처럼 꾸며놔서 조금 덥긴 했다 😅 커피 맛있었고, 분위기도 좋았고.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672166588_fdd72c2082_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672166588_fdd72c2082_h.webp" loading="lazy" />
 
 <figcaption>대체로 맑고 구름 많고 습한 날씨.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672158048_481b022304_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672158048_481b022304_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672664462_95fa661b13_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672664462_95fa661b13_h.webp" loading="lazy" />
 
 <figcaption>샌 안토니오 여행 오면 꼭 가야 한다는 리버워크인데, 귀여운데 사람 엄청 많고... 모기 엄청 물렸다.</figcaption>
 </figure>
@@ -343,22 +343,22 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672675842_0818448e3c_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672675842_0818448e3c_h.webp" loading="lazy" />
 
 <figcaption>예전에 브루어리였던 곳을 꾸민 곳인데 너무 이뻤다.</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672492751_969ae4d4bd_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672492751_969ae4d4bd_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672156293_efcce4e9ef_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672156293_efcce4e9ef_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672672402_1b411b9c40_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672672402_1b411b9c40_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672506281_700dbc3797_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672506281_700dbc3797_h.webp" loading="lazy" />
 
-<img src="https://live.staticflickr.com/65535/48672506991_ecf8470fc6_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672506991_ecf8470fc6_h.webp" loading="lazy" />
 
 <figcaption>브루어리였던 건물은 호텔로, 주변에 먹을 곳도 많고, 우린 더워서 서둘러 보고 나왔다.</figcaption>
 </figure>
@@ -369,14 +369,14 @@ tags:
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672668832_8d7b0e1b71_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672668832_8d7b0e1b71_h.webp" loading="lazy" />
 
 <figcaption>한참 잠자다가 일어났는데 옆에서 엄청 공부하고 있어서 좀 뜨끔했고</figcaption>
 </figure>
 
 <figure class="wide">
 
-<img src="https://live.staticflickr.com/65535/48672664762_7e18166a85_h.jpg" loading="lazy" />
+<img src="/resources/live.staticflickr.com/65535/48672664762_7e18166a85_h.webp" loading="lazy" />
 
 <figcaption>아침 LAX는 복잡했다. 빨리 집으로.</figcaption>
 </figure>

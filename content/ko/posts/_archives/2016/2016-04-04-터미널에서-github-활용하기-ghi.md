@@ -45,7 +45,7 @@ curl로도 설치할 수 있다.
 
 <figure class="wp-caption alignnone">
 
-<img src="https://live.staticflickr.com/1628/26044845926_e37bdf7682_b.jpg?resize=660%2C345&#038;ssl=1" width="660" height="345" class /><figcaption class="wp-caption-text">이제 웹브라우저 없이도 GitHub 이슈를 추적할 수 있다!</figcaption></figure> 
+<img src="/resources/live.staticflickr.com/1628/26044845926_e37bdf7682_b.webp?resize=660%2C345&#038;ssl=1" width="660" height="345" class /><figcaption class="wp-caption-text">이제 웹브라우저 없이도 GitHub 이슈를 추적할 수 있다!</figcaption></figure> 
 
 다른 도구도 많이 있는데 대부분 v2이 deprecated 된 이후로 업데이트 되지 않거나 전혀 관리되지 않고 있어서 아쉽다.
 

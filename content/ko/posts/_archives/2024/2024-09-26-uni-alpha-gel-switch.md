@@ -45,5 +45,5 @@ tags:
 새로운 샤프 펜슬 사는 것에 또 지나치게 의미부여 하고 있는 나. 이번 학기도 즐겁게
 해보자.
 
-[1]: https://live.staticflickr.com/65535/54023173790_bef4ada5c9_h.jpg
+[1]: /resources/live.staticflickr.com/65535/54023173790_bef4ada5c9_h.webp
 

@@ -45,7 +45,7 @@ tags:
 
 <figure class="wp-caption alignnone">
 
-<img src="https://live.staticflickr.com/1508/25464896044_5f7513515e_b.jpg?resize=660%2C660&#038;ssl=1" width="660" height="660" class /><figcaption class="wp-caption-text">이렇게까지 트위터 해야하냐고 그만 물어보세요&#8230;</figcaption></figure> 
+<img src="/resources/live.staticflickr.com/1508/25464896044_5f7513515e_b.webp?resize=660%2C660&#038;ssl=1" width="660" height="660" class /><figcaption class="wp-caption-text">이렇게까지 트위터 해야하냐고 그만 물어보세요&#8230;</figcaption></figure> 
 
 심지어 테마도 지원하니 취향에 맞게 컬러 스킴도 지정해보자. `theme`으로 사용 가능한 테마 목록을 확인하고 `theme <테마명>`으로 변경할 수 있다.
 

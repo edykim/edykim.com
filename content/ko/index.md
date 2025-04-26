@@ -12,7 +12,7 @@ noInteraction: true
 
 <figure>
 
-<img src="https://live.staticflickr.com/65535/54428226020_f41a28378d_k.jpg" alt="San Diego, 2024" loading="lazy" style="border-radius: 4px;">
+<img src="/resources/live.staticflickr.com/65535/54428226020_f41a28378d_k.webp" alt="San Diego, 2024" loading="lazy" style="border-radius: 4px;">
 
 </figure>
 

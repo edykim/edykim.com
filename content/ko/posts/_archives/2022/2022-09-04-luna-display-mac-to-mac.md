@@ -10,7 +10,7 @@ tags:
 slug: "mac-to-mac-mode-on-luna-display"
 ---
 
-<figure><img src="https://live.staticflickr.com/65535/52334953349_4b3f7e5a7f_b.jpg" style="width: 100%; max-width: 720px" loading="lazy" /></figure>
+<figure><img src="/resources/live.staticflickr.com/65535/52334953349_4b3f7e5a7f_b.webp" style="width: 100%; max-width: 720px" loading="lazy" /></figure>
 
 그동안 아이맥 정말 잘 사용했지만 아쉽게도 타겟 디스플레이 모드가 지원되지 않는 2014년 레티나 5K 모델이다. 게다가 더 이상 macOS 업데이트도 해당이 없어서 최근 macOS에서 사용할 수 있다는 에어플레이 기능도 상관 없는 일이 되어버렸다. 그동안 회사 랩탑으로 일을 해야 하는 상황에서는 아이맥을 전혀 활용하지 못하는 상황이 계속 되었는데 [루나 디스플레이 (Luna Display)](https://astropad.com/product/lunadisplay/)의 [mac-to-mac 모드](https://astropad.com/luna-4-5/)를 알게 되었다. 이 모드에서 선더볼트 케이블 연결을 지원한다는 얘기에 그래도 무선보다는 안정적일 것이란 기대를 하고 구입했다. 맥북 프로 (16인치, 2019)와 함께 연결해서 사용해봤다.
 
