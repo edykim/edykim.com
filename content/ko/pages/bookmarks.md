@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-04-19T22:14:33"
+updatedOn: "2025-04-26T10:20:54"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -76,6 +76,7 @@ noIndex: true
 - [푸딩캠프 뉴스레터](https://puddingcamp.com/newsletters){data-lang=국문 data-tags=개발}
 - [hello.gayuna](https://gayuna.github.io/){data-lang=국문 data-tags=개인,개발}
 - [Tivoli Audio](https://tivoliaudio.com/){data-lang=영문 data-tags=상점,인테리어}
+- [Daybreaker Joongi Kim](https://daybreaker.info/){data-lang=국문 data-tags=개인,개발}
 
 <!-- @template bookmarks -->
 
