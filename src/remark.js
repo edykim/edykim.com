@@ -57,7 +57,7 @@ function updateImagePath() {
             if (node.type === 'image') {
                 return {
                     ...node,
-                    url: node.url.indexOf(':') !== -1
+                    url: node.url.indexOf(':') !== -1 || node.url.indexOf('/resources/') === 0
                     ? node.url
                     : ('/' + file.data.fields.url + '/' + node.url)
                 }
