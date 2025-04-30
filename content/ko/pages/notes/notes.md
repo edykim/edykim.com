@@ -42,3 +42,4 @@ noTitle: true
 <h2 class="subtitle">작은 웹앱</h2>
 
 - [즉석사진](/ko/photobooth/)
+- [신디사이저](/ko/synth/) 급하게 연주가 고플 때
