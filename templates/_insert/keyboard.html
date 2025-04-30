@@ -190,7 +190,7 @@
     document.addEventListener('keydown', onKeyDown);
     document.addEventListener('keyup', onKeyUp);
 
-    const keyboard = document.querySelector('.keyboard');
+    const keyboard = document.querySelector('.keyboard-body');
     keyboard.addEventListener('touchstart', proxyEvent(onKeyDown), { passive: false });
     keyboard.addEventListener('touchend', proxyEvent(onKeyUp), { passive: false });
     keyboard.addEventListener('touchcancel', proxyEvent(onKeyUp), { passive: false })
