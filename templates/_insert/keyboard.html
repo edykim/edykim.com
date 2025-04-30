@@ -1,0 +1,399 @@
+
+<div class="keyboard">
+    <div class="options">
+        <label>
+            Instrument:
+            <select id="keyboard-selector">
+                <option value="_custom">Keyboard</option>
+                <option value="sine">Xylophone</option>
+                <option value="square">Melodica</option>
+                <option value="sawtooth">Trumpet</option>
+                <option value="triangle">Blips</option>
+            </select>
+        </label>
+    </div>
+    <div class="keyboard-body">
+        <div class="keyboard-upper">
+            <div class="key-black key-cs4" data-key="w"><span class="label">w</span></div>
+            <div class="key-black key-ds4" data-key="e"><span class="label">e</span></div>
+            <div class="key-blank"></div>
+            <div class="key-black key-fs4" data-key="t"><span class="label">t</span></div>
+            <div class="key-black key-gs4" data-key="y"><span class="label">y</span></div>
+            <div class="key-black key-as4" data-key="u"><span class="label">u</span></div>
+            <div class="key-blank"></div>
+            <div class="key-black key-cs5" data-key="o"><span class="label">o</span></div>
+            <div class="key-black key-ds5" data-key="p"><span class="label">p</span></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+        </div>
+        <div class="keyboard-lower">
+            <div class="key-white key-c4" data-key="a"><span class="label">a</span></div>
+            <div class="key-white key-d4" data-key="s"><span class="label">s</span></div>
+            <div class="key-white key-e4" data-key="d"><span class="label">d</span></div>
+            <div class="key-white key-f4" data-key="f"><span class="label">f</span></div>
+            <div class="key-white key-g4" data-key="g"><span class="label">g</span></div>
+            <div class="key-white key-a4" data-key="h"><span class="label">h</span></div>
+            <div class="key-white key-b4" data-key="j"><span class="label">j</span></div>
+            <div class="key-white key-c5" data-key="k"><span class="label">k</span></div>
+            <div class="key-white key-d5" data-key="l"><span class="label">l</span></div>
+            <div class="key-white key-e5" data-key=";"><span class="label">;</span></div>
+            <div class="key-white key-f5" data-key="'"><span class="label">'</span></div>
+        </div>
+
+        <div class="keyboard-special">
+            <div class="key-special key-octave-up" data-key="z"><span class="label">z</span></div>
+            <div class="key-special key-octave-down" data-key="x"><span class="label">x</span></div>
+            <div class="octave-label">Octave: <span class="octave">0</span></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+            <div class="key-blank"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+<canvas id="waveEditorReal" width="600" height="200"></canvas>
+<canvas id="waveEditorImag" width="600" height="200"></canvas> -->
+
+
+<script>
+    function midiToFreq(midiNote) {
+        return 440 * Math.pow(2, (midiNote - 69) / 12);
+    }
+    let octave = 0;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const keyToMidi = {
+        'a': 60, // C4
+        'w': 61, // C#4
+        's': 62, // D4
+        'e': 63, // D#4
+        'd': 64, // E4
+        'f': 65, // F4
+        't': 66, // F#4
+        'g': 67, // G4
+        'y': 68, // G#4
+        'h': 69, // A4
+        'u': 70, // A#4
+        'j': 71, // B4
+        'k': 72, // C5
+        'o': 73, // C#5
+        'l': 74, // D5
+        'p': 75,
+        ';': 76,
+        "'": 77,
+    };
+
+    // Calculate the frequencies for each key using midiToFreq
+    const keyToFreq = {};
+
+    function updateOctave() {
+        for (let key in keyToMidi) {
+            keyToFreq[key] = midiToFreq(keyToMidi[key] + octave * 12);
+        }
+
+        document.querySelector('.octave').textContent = octave;
+    }
+    updateOctave();
+
+
+    const real = new Float32Array([0, 1, 0.5, 0.3]);
+    const imag = new Float32Array([0, 0, 0, 0]);
+    window._customWave = audioCtx.createPeriodicWave(real, imag);
+
+    const activeNotes = {};
+    const keys = document.querySelectorAll('.keyboard [data-key]');
+    const activeKeys = {};
+
+    let selectedKeyboard = '_custom';
+
+    for (const keyElement of keys) {
+        activeKeys[keyElement.dataset.key] = keyElement;
+    }
+
+    function onKeyDown(event) {
+        const key = event.key.toLowerCase();
+        activeKeys[key]?.classList.add('active');
+        if (key === 'z') {
+            if (octave <= -3) return;
+            octave -= 1;
+            updateOctave();
+        } else if (key === 'x') {
+            if (octave >= 3) return;
+            octave += 1;
+            updateOctave();
+        } else if (keyToFreq[key] && !activeNotes[key]) {
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            const now = audioCtx.currentTime;
+
+            if (selectedKeyboard === '_custom') {
+                osc.setPeriodicWave(window._customWave);
+            } else {
+                osc.type = selectedKeyboard;
+            }
+
+            osc.frequency.setValueAtTime(keyToFreq[key], now);
+
+            const newNow = audioCtx.currentTime + 0.01
+            gainNode.gain.setValueAtTime(0, newNow);
+            gainNode.gain.linearRampToValueAtTime(0.2, newNow + 0.02); // Quick attack
+
+            osc.connect(gainNode).connect(audioCtx.destination);
+            osc.start(newNow);
+
+            activeNotes[key] = { osc, gainNode };
+        }
+    }
+
+    function onKeyUp(event) {
+        const key = event.key.toLowerCase();
+        activeKeys[key]?.classList.remove('active');
+        const note = activeNotes[key];
+        if (note) {
+            const now = audioCtx.currentTime;
+
+            // Smooth exponential fade to 0
+            note.gainNode.gain.setTargetAtTime(0, now, 0.05); // fade over ~50ms
+            note.osc.stop(now + 0.2); // stop after fade comadpletes
+
+            setTimeout(() => {
+                note.osc.disconnect();
+                note.gainNode.disconnect();
+            }, 250);
+
+            delete activeNotes[key];
+        }
+    };
+
+    function proxyEvent(callback) {
+        return function (event) {
+            event.preventDefault();
+            const key = event.target.dataset.key;
+            if (key) {
+                callback({ key });
+            }
+        }
+    }
+
+    document.querySelector('#keyboard-selector').addEventListener('change', (event) => {
+        event.preventDefault();
+        selectedKeyboard = event.target.value;
+        console.log(selectedKeyboard)
+    })
+
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('keyup', onKeyUp);
+
+    const keyboard = document.querySelector('.keyboard');
+    keyboard.addEventListener('touchstart', proxyEvent(onKeyDown), { passive: false });
+    keyboard.addEventListener('touchend', proxyEvent(onKeyUp), { passive: false });
+    keyboard.addEventListener('touchcancel', proxyEvent(onKeyUp), { passive: false })
+    keyboard.addEventListener('touchmove', (ev) => {
+        ev.preventDefault()
+    }, { passive: false })
+
+    const harmonics = 5;
+    const pointRadius = 10;
+
+    function createDraw(canvas, callback = null) {
+        let gainNode = null;
+        const values = new Array(harmonics).fill(0).map((_, i) => 0.5); // default 0.5 strength
+        let dragging = null;
+        const ctx = canvas.getContext("2d");
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height);
+            for (let i = 0; i < harmonics; i++) {
+                const x = i * (canvas.width / (harmonics + 1));
+                const y = canvas.height - values[i] * canvas.height;
+                ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = "#007bff";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Draw points
+            for (let i = 0; i < harmonics; i++) {
+                const x = (i + 1) * (canvas.width / (harmonics + 1));
+                const y = canvas.height - values[i] * canvas.height;
+                ctx.beginPath();
+                ctx.arc(x, y, pointRadius, 0, Math.PI * 2);
+                ctx.fillStyle = "#ff4136";
+                ctx.fill();
+            }
+        }
+
+        function getHarmonicIndex(x, y) {
+            for (let i = 0; i < harmonics; i++) {
+                const px = (i + 1) * (canvas.width / (harmonics + 1));
+                const py = canvas.height - values[i] * canvas.height;
+                const dx = x - px, dy = y - py;
+                if (Math.sqrt(dx * dx + dy * dy) < pointRadius * 2) return i;
+            }
+            return null;
+        }
+
+        canvas.addEventListener("mousedown", (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const idx = getHarmonicIndex(x, y);
+            if (idx !== null) dragging = idx;
+        });
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (dragging !== null) {
+                const rect = canvas.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                const clamped = Math.max(0, Math.min(1, 1 - y / canvas.height));
+                values[dragging] = clamped;
+                draw();
+                callback && callback(values);
+            }
+        });
+
+        canvas.addEventListener("mouseup", () => dragging = null);
+        canvas.addEventListener("mouseleave", () => dragging = null);
+
+        return { draw };
+    }
+
+
+    let rvalues = new Array(harmonics).fill(0).map((_, i) => 0.5);
+    let ivalues = new Array(harmonics).fill(0).map((_, i) => 0.5);
+
+    function updateOscillator() {
+        const real = new Float32Array(harmonics + 1);
+        const imag = new Float32Array(harmonics + 1); // zero for simplicity
+
+        for (let i = 0; i < harmonics; i++) {
+            real[i + 1] = rvalues[i];
+            imag[i + 1] = ivalues[i];
+        }
+
+        window._customWave = audioCtx.createPeriodicWave(real, imag, { disableNormalization: false });
+    }
+
+    // @TODO
+    // createDraw(document.getElementById("waveEditorReal"), values => {
+    //     rvalues = values;
+    //     updateOscillator();
+    // }).draw();
+    // createDraw(document.getElementById("waveEditorImag"), values => {
+    //     ivalues = values;
+    //     updateOscillator();
+    // }).draw();
+    updateOscillator();
+</script>
+
+<style>
+    .keyboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        user-select: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .keyboard {
+            min-height: 600px;
+        }
+        .keyboard-body {
+            transform: rotate(90deg) translateX(170px);
+        }
+    }
+
+    .key-white,
+    .key-black,
+    .key-special {
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        border-radius: 5px;
+        width: 40px;
+    }
+
+    .keyboard .label {
+        margin: 3px 6px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .key-black .label {
+        color: #fff;
+    }
+
+    .key-white {
+        height: 110px;
+        background-color: #fff;
+    }
+
+    .key-special {
+        height: 30px;
+        background-color: #C89300;
+    }
+
+    .key-black {
+        height: 60px;
+        background-color: #000;
+    }
+
+    .key-blank {
+        width: 40px;
+    }
+
+    .keyboard {
+        background: rgba(0,0,0,0.2);
+        padding: 25px;
+        border-radius: 5px;
+    }
+
+    .keyboard-lower,
+    .keyboard-upper,
+    .keyboard-special {
+        display: flex;
+        gap: 2px;
+    }
+
+    .keyboard-upper {
+        position: absolute;
+        margin-left: 28px;
+    }
+
+    .key-white.active {
+        background: #eee;
+    }
+    .key-black.active {
+        background: #555;
+    }
+
+    .keyboard-special {
+        margin-top: 5px;
+    }
+
+    .octave-label {
+        color: inherit;
+        font-size: 0.85rem;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .octave-label span {
+        font-weight: bold;
+    }
+
+    .keyboard .options {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        color: inherit;
+    }
+</style>

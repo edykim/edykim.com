@@ -107,6 +107,13 @@ const components = [
         props: (node, nodes) => ({
             node,
         })
+    },
+    {
+        key: 'keyboard',
+        template: '_insert/keyboard.html',
+        props: (node, nodes) => ({
+            node,
+        })
     }
 ];
 
