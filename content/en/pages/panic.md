@@ -1,5 +1,5 @@
 ---
-title: Panic
+title: "Don't Panic"
 author: haruair
 uuid: "eaaea9c2-716f-4997-8065-e808652bede2"
 type: page
