@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-04-26T10:20:54"
+updatedOn: "2025-05-17T13:38:34"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -77,6 +77,7 @@ noIndex: true
 - [hello.gayuna](https://gayuna.github.io/){data-lang=국문 data-tags=개인,개발}
 - [Tivoli Audio](https://tivoliaudio.com/){data-lang=영문 data-tags=상점,인테리어}
 - [Daybreaker Joongi Kim](https://daybreaker.info/){data-lang=국문 data-tags=개인,개발}
+- [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
 
 <!-- @template bookmarks -->
 
