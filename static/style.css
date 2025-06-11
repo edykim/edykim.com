@@ -221,6 +221,10 @@ body > .comments {
     margin: 1rem 0 2rem;
 }
 
+.page .content figure p {
+    margin: 0;
+}
+
 .page .content hr {
     width: 100px;
     margin: 2rem 0;
