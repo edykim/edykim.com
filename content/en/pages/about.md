@@ -14,7 +14,7 @@ noTitle: true
 
 Hey, I'm Edward! I'm a web developer passionate about tackling challenges and building rapid prototypes. I enjoy discussing web technology, software architecture, and community.
 
-Currently, I'm studying computer science at UC San Diego. Previously, I have worked with [Greenleaf Media](https://greenleafmedia.com/), [Swinburne University](https://www.swinburne.edu.au/), and [Kobe Creations](https://kobecreations.com/). You can find more details on [this page](https://www.linkedin.com/in/edwardykim/).
+Currently, I am working at [Greenleaf Media](https://greenleafmedia.com/) as a web developer. Previously, I have worked with [Swinburne University](https://www.swinburne.edu.au/), and [Kobe Creations](https://kobecreations.com/). You can find more details on [this page](https://www.linkedin.com/in/edwardykim/).
 
 <hr />
 
