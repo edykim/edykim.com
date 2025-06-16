@@ -32,16 +32,16 @@
     --color-sepia-link-visited: #7a3d5e;
     --color-sepia-link-active: #ec341c;
 
-    --color-dark-background-color: #222222;
+    --color-dark-background-color: #1c1c1c;
     --color-dark-text: #c4c4c4;
     --color-dark-shadow: #444;
     --color-dark-gray: #6d6d6d;
     --color-dark-border: #444444;
     --color-dark-button: #282828;
     --color-dark-code-background-color: #28282a;
-    --color-dark-link: #ff953e;
-    --color-dark-link-visited: #eb58ad;
-    --color-dark-link-active: #ffa290;
+    --color-dark-link: #197fda;
+    --color-dark-link-visited: #af6ac9;
+    --color-dark-link-active: #ff5f37;
 
 
     --color-tumblr-background-color: #1a2735;
@@ -315,6 +315,11 @@ body > .comments {
 .site-footer {
     margin-top: 2rem;
     margin-bottom: 4rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: var(--color-gray);
 }
 
 .setting-btn {
