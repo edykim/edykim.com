@@ -318,7 +318,6 @@ body > .comments {
 }
 
 .site-footer a {
-    text-decoration: none;
     color: var(--color-gray);
 }
 
