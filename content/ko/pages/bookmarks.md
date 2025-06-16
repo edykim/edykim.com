@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-05-17T13:38:34"
+updatedOn: "2025-06-15T21:41:17"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -42,6 +42,7 @@ noIndex: true
 - [민소네](https://minsone.github.io/){data-lang=국문 data-tags=개인,개발}
 - [이형주 블로그](https://www.hyungjoo.me/){data-lang=국문 data-tags=개인,개발}
 - [사색송어](https://ahnheejong.name/){data-lang=국문 data-tags=개인,개발}
+- [Outsider's Dev Story](https://blog.outsider.ne.kr/){data-lang=국문 data-tags=개인,개발}
 - [작은배](https://jagunbae.com/){data-lang=국문 data-tags=창작}
 - [강단 블로그](https://kangminsuk.com/ko/){data-lang=국문 data-tags=개인,창작}
 - [로그아웃아일랜드](https://www.logoutisland.com/){data-lang=국문 data-tags=창작}
@@ -78,6 +79,8 @@ noIndex: true
 - [Tivoli Audio](https://tivoliaudio.com/){data-lang=영문 data-tags=상점,인테리어}
 - [Daybreaker Joongi Kim](https://daybreaker.info/){data-lang=국문 data-tags=개인,개발}
 - [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
+- [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
+- [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 
 <!-- @template bookmarks -->
 
