@@ -15,7 +15,7 @@ tags:
 
 ---
 
-<img src="https://c2.staticflickr.com/8/7857/45926354015_c7ec87b7cf_h.jpg" alt="App Screenshot" />
+<img src="/resources/live.staticflickr.com/8/7857/45926354015_c7ec87b7cf_h.webp" alt="App Screenshot" />
 
 iOS 앱 [Tiny Tip Calculator](https://itunes.apple.com/app/tiny-tip-calculator/id1448227957?mt=8)를 만들었다.
 
