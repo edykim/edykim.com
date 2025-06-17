@@ -66,6 +66,8 @@
     --color-maple-link: #ed7b00;
     --color-maple-link-visited: #ce6021;
     --color-maple-link-active: #ed5b00;
+
+    --color-inline-code-background-color: rgba(255, 255, 255, 0.5);
 }
 
 .mode--night  {
@@ -177,11 +179,11 @@ a:visited { color: var(--color-link-visited); }
 a:active { color: var(--color-link-active); }
 
 .mode--night,
-.mode--sepia,
 .mode--maple,
 .mode--tumblr,
 .mode--dark {
     scrollbar-color: var(--color-text) var(--color-shadow);
+    --color-inline-code-background-color: rgba(255, 255, 255, 0.08);
 }
 
 img {
@@ -241,6 +243,14 @@ body > .comments {
 
 .page .content > pre > code {
     font-size: 0.9rem;
+}
+
+.page .content :not(pre) > code {
+    background-color: var(--color-inline-code-background-color);
+    font-size: 0.9rem;
+    padding: 0.02rem 0.3rem;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 
