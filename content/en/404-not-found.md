@@ -6,6 +6,7 @@ type: page
 lang: en
 url: /404
 noIndex: true
+noInteraction: true
 ---
 
 Not found... sorry!
