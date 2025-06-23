@@ -641,6 +641,7 @@ hr {
 
 html .hljs {
     background: var(--color-code-background-color);
+    font-size: 0.9rem;
 }
 
 .font-size-extra-large {
@@ -768,6 +769,15 @@ details[open] {
 
 .content > .narrow {
     max-width: 30rem;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+    margin-top: 1.5em;
+    margin-bottom: 0.67em;
 }
 
 .subtitle {
