@@ -265,36 +265,58 @@ function pageMarkApp() {
     })
 }
 
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
 function initLikeButtons() {
     const widgets = document.querySelectorAll('.likes-widget');
-    const ids = [];
     const counts = {};
+    let queue = [];
+
+    const _requestBulkUpdates = debounce(requestBulkUpdates, 160);
+
+    const intersectionObserver = new IntersectionObserver((entries) => {
+        for(const entry of entries) {
+            if (entry.intersectionRatio <= 0) continue;
+            intersectionObserver.unobserve(entry.target)
+            queue.push(entry.target.dataset.uuid)
+            _requestBulkUpdates()
+        }
+    });
+
     for(const widget of widgets) {
-        ids.push(widget.dataset.uuid);
+        intersectionObserver.observe(widget);
         counts[widget.dataset.uuid] = widget.querySelector('.cnt');
     }
 
-    if (ids.length === 0) {
-        return;
-    }
+    function requestBulkUpdates() {
+        const ids = queue.join(',')
+        queue = []
+        fetch(`https://likes.poup.us/likes/edykim.com/bulk?ids=${ids}`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+            },
+        }).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            data.likes.forEach(function (d) {
+                const $count = counts[d.id];
+                $count.dataset.cnt = d.cnt;
 
-    fetch(`https://likes.poup.us/likes/edykim.com/bulk?ids=${ids.join(',')}`, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-        },
-    }).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        data.likes.forEach(function (d) {
-            const $count = counts[d.id];
-            $count.dataset.cnt = d.cnt;
-
-            if (d.cnt > 0) {
-                $count.textContent = $count.dataset.cnt;
-            }
+                if (d.cnt > 0) {
+                    $count.textContent = $count.dataset.cnt;
+                }
+            });
         });
-    });
+    }
 
     document.querySelectorAll('.likes-widget').forEach(function (el) {
         const $btn = el.querySelector('button');
