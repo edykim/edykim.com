@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-06-15T21:41:17"
+updatedOn: "2025-07-18T23:08:42"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -57,7 +57,7 @@ noIndex: true
 - [GeekNews](https://news.hada.io/){data-lang=국문 data-tags=정보,개발}
 - [스타트업 바이블](https://www.thestartupbible.com/){data-lang=국문 data-tags=정보,프로덕트}
 - [People and Blogs](https://peopleandblogs.com/){data-lang=영문 data-tags=정보,웹진}
-- [WriterDeck.org](http://www.writerdeck.org/){data-lang=영문 data-tags=정보}
+- [WriterDeck.org](http://www.writerdeck.org/){data-lang=영문 data-tags=키보드,정보}
 - [The Local Project](https://thelocalproject.com.au/){data-lang=영문 data-tags=정보}
 - [Dead Simple Sites](https://deadsimplesites.com/){data-lang=영문 data-tags=정보,아카이브}
 - [The Pudding](https://pudding.cool/){data-lang=영문 data-tags=정보,디자인,데이터}
@@ -81,6 +81,7 @@ noIndex: true
 - [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
 - [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
+- [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
 
 <!-- @template bookmarks -->
 
