@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-07-18T23:08:42"
+updatedOn: "2025-07-20T15:16:47"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -82,6 +82,7 @@ noIndex: true
 - [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 - [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
+- [cat-v.org](https://cat-v.org/){data-lang=영문 data-tags=개인,개발}
 
 <!-- @template bookmarks -->
 
