@@ -18,8 +18,11 @@ https://www.haruair.com/ng https://edykim.com/ko/tag/angularjs/ 301!
 # generated redirection from the files
 ## generated 
 
+
+# colander for missing ones
+https://www.haruair.com/* https://edykim.com/ko/:splat 301!
+
 # fallback for 404
 
 /ko/* /ko/404/ 404
 /* /404/ 404
-
