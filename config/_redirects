@@ -20,7 +20,7 @@ https://www.haruair.com/ng https://edykim.com/ko/tag/angularjs/ 301!
 
 
 # colander for missing ones
-https://www.haruair.com/* https://edykim.com/ko/:splat 301!
+https://www.haruair.com/* https://edykim.com/:splat 301!
 
 # fallback for 404
 
