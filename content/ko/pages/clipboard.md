@@ -4,7 +4,7 @@ author: haruair
 uuid: "9b89604c-90fe-4622-9bd6-cae49b7c5b8a"
 type: page
 date: "2025-04-13T03:59:37"
-updatedOn: "2025-07-20T14:59:25"
+updatedOn: "2025-08-04T07:40:17"
 lang: ko
 url: clipboard
 noIndex: true
@@ -26,5 +26,6 @@ noIndex: true
 - [Ask HN: "앱"이 아니라면 당신의 코드로 어떻게 수익을 내나요?](https://news.hada.io/topic?id=20330){data-lang=국문 data-tags=개발}
 - [YouTube: Neovim conf 2024](https://www.youtube.com/playlist?list=PLhlaLyAlbLlq9xWf2xm_9p422GgqvATXk){data-lang=영문 data-tags=vim}
 - [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/){data-lang=영문 data-tags=NLP}
+- [Choose Boring Technology](https://mcfunley.com/choose-boring-technology){data-lang=영문 data-tags=스택}
 
 <!-- @template bookmarks -->
