@@ -340,7 +340,7 @@ function initLikeButtons() {
 
             localStorage.setItem('liked-' + el.dataset.uuid, '1');
             $btn.classList.add('liked');
-            $count.dataset.cnt = parseInt($count.dataset.cnt) + 1;
+            $count.dataset.cnt = parseInt($count.dataset.cnt ?? 0) + 1;
             $count.textContent = $count.dataset.cnt;
             return false;
         });
