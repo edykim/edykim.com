@@ -28,11 +28,6 @@ noTitle: true
 - [지침서](/ko/guidance/)
 - [마음 받은 글](/ko/liked/)
 
-<h2 class="subtitle">플레이리스트</h2>
-
-- [일단 들어보고](/ko/playlist/let-me-listen-first)
-- [ambient 01](/ko/playlist/ambient-01)
-
 <h2 class="subtitle">작은 튜토리얼</h2>
 
 - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
