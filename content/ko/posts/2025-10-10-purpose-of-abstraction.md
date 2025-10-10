@@ -10,11 +10,11 @@ tags:
   - 개발 이야기
 ---
 
-> The purpose of abstraction is not to be vague, but to create a new semantic
-> level in which one can be absolutely precise. — Edsger Dijkstra
->
 > 추상화의 목적은 모호하게 하려는 것이 아니라, 오히려 더 정확하게 말할 수 있는,
 > 새로운 의미적 층위를 만드는 데 있다. — 에츠허르 다익스트라
+>
+> The purpose of abstraction is not to be vague, but to create a new semantic
+> level in which one can be absolutely precise. — Edsger Dijkstra
 
 바이브코딩이란 말도 벌써 낡은 느낌이다. 얼마나 빠르게 새로운 프로덕트, 서비스,
 아이디어가 쏟아지는지 따라가기에도 바쁘다. "가끔 똑똑한" 자동 완성에 그치지 않고
