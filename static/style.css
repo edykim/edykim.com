@@ -1011,3 +1011,12 @@ details[open] {
   width: 1px;
 }
 
+blockquote {
+    border-left: 2px solid;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+blockquote + blockquote {
+    margin-top: 0.5rem;
+}
