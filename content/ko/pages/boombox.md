@@ -8,6 +8,8 @@ lang: ko
 url: /mini-boombox/
 ---
 
+**작성중**
+
 ## 자재 명세서
 
 <div class="table--left">
@@ -43,8 +45,6 @@ url: /mini-boombox/
 | 케이스 뚜껑                 | 1    |
 
 </div>
-
-TBD.
 
 ## DFPlayer Mini 모듈
 

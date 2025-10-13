@@ -28,6 +28,10 @@ noTitle: true
 - [지침서](/ko/guidance/)
 - [마음 받은 글](/ko/liked/)
 
+<h2 class="subtitle">공방</h2>
+
+- [미니 붐박스](/ko/mini-boombox)
+
 <h2 class="subtitle">작은 튜토리얼</h2>
 
 - [작은 웹사이트 뚝딱 만들기](/ko/how-to/tiny-website/)
