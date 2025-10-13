@@ -198,6 +198,10 @@ table {
     margin-right: auto;
 }
 
+.table--left table {
+    margin-left: 0;
+}
+
 table th,
 table td {
     border: 1px solid var(--color-border);
