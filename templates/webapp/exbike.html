@@ -41,6 +41,8 @@
         flex: 1;
         align-items: center;
         justify-content: space-around;
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
       .status-item {
         min-width: 300px;
@@ -58,7 +60,7 @@
       }
 
       .status-item .num-value {
-        font-size: 80px;
+        font-size: 120px;
         font-weight: bold;
         font-variant-numeric: tabular-nums;
       }
@@ -83,37 +85,56 @@
       .app {
         position: relative;
       }
-      .connect-actions {
+      .full-actions {
         display: none;
-      }
-      .app--connection-before .connect-actions {
-        display: flex;
         position: fixed;
-        inset: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: #000;
         z-index: 1000;
       }
-      .app--connection-before .connect-actions p {
+      .app--connection-before .connect-actions,
+      .app--connecting .connecting-actions {
+        display: flex;
+      }
+
+      .full-actions p {
         font-size: 38px;
         opacity: 0.6;
         color: #fff;
         text-align: center;
       }
-      .app--connection-before .connect-actions button {
+
+      .full-actions .status-msg {
+        font-size: 52px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .full-actions button {
         text-transform: uppercase;
         font-size: 70px;
       }
       .set-r-btn {
         aspect-ratio: 1;
+        width: 120px;
+      }
+
+      .action-label {
+        display: inline-block;
+        margin-bottom: 0.75rem;
+        font-size: 22px;
       }
     </style>
   </head>
   <body>
     <div class="app app--connection-before">
-      <div class="connect-actions">
+      <div class="connect-actions full-actions">
         <button id="start-btn">Start</button>
         <p>
           If it doesn't appear on the list,<br />
@@ -121,6 +142,10 @@
         </p>
       </div>
 
+      <div class="connecting-actions full-actions">
+        <p>The bike will be ready soon. Please be prepared.</p>
+        <span class="status-msg"></span>
+      </div>
       <div class="top-actions action-line">
         <span></span>
         <button id="fullscreen-toggle-btn">Fullscreen</button>
@@ -146,7 +171,7 @@
       </div>
 
       <div class="bottom-actions action-line">
-        <span>Resistance</span>
+        <div><span class="action-label">Resistance</span></div>
         <button class="set-r-btn" data-resistance="25">25</button>
         <button class="set-r-btn" data-resistance="20">20</button>
         <button class="set-r-btn" data-resistance="15">15</button>
@@ -205,16 +230,26 @@
             optionalServices: [connectUUID],
           })
 
+          document
+            .querySelector(".app--connection-before")
+            ?.classList.remove("app--connection-before")
+
+          document.querySelector(".app")?.classList.add("app--connecting")
+
+          setStatusMessage("Loading...")
+
           const server = await device.gatt.connect()
           console.log("Connected:", device.name)
 
+          setStatusMessage("Loading....")
           const service = await server.getPrimaryService(connectUUID)
           console.log("Got service:", connectUUID)
 
+          setStatusMessage("Loading....")
           const characteristics = await service.getCharacteristics()
           for (const c of characteristics)
             console.log("Characteristic:", c.uuid)
-
+          setStatusMessage("Loading.....")
           // Try writing an initialization command first
           const writeChar = await service.getCharacteristic(writeUUID)
           const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00])
@@ -229,6 +264,7 @@
           const sensorChar = await service.getCharacteristic(sensorUUID)
 
           await sensorChar.startNotifications()
+          setStatusMessage("Loading......")
 
           let started = false
 
@@ -240,6 +276,7 @@
             const sdata = parseSensorData(data)
             console.log("Sensor data:", sdata)
 
+            clearStatusMessage("")
             updateValueOnElement(sdata.cadence, ".value--cadence")
             updateValueOnElement(sdata.resistance, ".value--resistance")
             updateValueOnElement(sdata.power, ".value--power")
@@ -249,7 +286,10 @@
               startTimer()
               document
                 .querySelector(".app--connection-before")
-                .classList.remove("app--connection-before")
+                ?.classList.remove("app--connection-before")
+              document
+                .querySelector(".app--connecting")
+                ?.classList.remove("app--connecting")
             }
           })
 
@@ -338,7 +378,8 @@
         if (isRunning) {
           elapsed += (Date.now() - startTime) / 1000
         }
-        document.querySelector(".value--time").textContent = formatElapsedTime(elapsed)
+        document.querySelector(".value--time").textContent =
+          formatElapsedTime(elapsed)
       }
 
       function startTimer() {
@@ -364,6 +405,14 @@
         elapsedBeforePause = 0
         startTime = null
         updateDisplay()
+      }
+
+      function setStatusMessage(msg) {
+        document.querySelector(".status-msg").textContent = msg
+      }
+
+      function clearStatusMessage() {
+        document.querySelector(".status-msg").textContent = ""
       }
 
       document
