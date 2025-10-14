@@ -2,50 +2,157 @@
 <html lang="en">
   <head>
     <title>exbike</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-      }
+    <link rel="manifest" href="/webapp/bike/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+      rel="stylesheet"
+    />
 
-      .status {
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #222;
+        color: #fff;
+        font-family: "Jersey 25", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
         display: flex;
       }
+
+      .app {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+      .status {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-around;
+      }
       .status-item {
-        min-width: 200px;
+        min-width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       .status-item .num-label {
-        font-size: 16px;
+        font-size: 32px;
         font-weight: bold;
         display: block;
+        opacity: 0.5;
       }
 
       .status-item .num-value {
-        font-size: 55px;
+        font-size: 80px;
         font-weight: bold;
         font-variant-numeric: tabular-nums;
+      }
+
+      button {
+        appearance: none;
+        background-color: transparent;
+        border: 4px solid #eee;
+        color: #eee;
+        font-family: inherit;
+        font-size: 40px;
+        padding: 2rem;
+        border-radius: 20px;
+      }
+      .action-line {
+        padding: 1rem;
+      }
+      .top-actions {
+        display: flex;
+        justify-content: space-between;
+      }
+      .app {
+        position: relative;
+      }
+      .connect-actions {
+        display: none;
+      }
+      .app--connection-before .connect-actions {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        z-index: 1000;
+      }
+      .app--connection-before .connect-actions p {
+        font-size: 38px;
+        opacity: 0.6;
+        color: #fff;
+        text-align: center;
+      }
+      .app--connection-before .connect-actions button {
+        text-transform: uppercase;
+        font-size: 70px;
+      }
+      .set-r-btn {
+        aspect-ratio: 1;
       }
     </style>
   </head>
   <body>
-    <button id="start-btn">Start</button>
-    <button id="set-10-r-btn">Set 10</button>
-    <button id="set-5-r-btn">Set 5</button>
-    <button id="set-1-r-btn">Set 1</button>
+    <div class="app app--connection-before">
+      <div class="connect-actions">
+        <button id="start-btn">Start</button>
+        <p>
+          If it doesn't appear on the list,<br />
+          try using a pedal on the exercise bike.
+        </p>
+      </div>
 
-    <div class="status">
-      <div class="status-item">
-        <span class="num-label">Cadence:</span>
-        <span class="num-value value--cadence">0</span>
+      <div class="top-actions action-line">
+        <span></span>
+        <button id="fullscreen-toggle-btn">Fullscreen</button>
       </div>
-      <div class="status-item">
-        <span class="num-label">Resistance:</span>
-        <span class="num-value value--resistance">0</span>
+
+      <div class="status">
+        <div class="status-item">
+          <span class="num-label">Time</span>
+          <span class="num-value value--time">00:00</span>
+        </div>
+        <div class="status-item">
+          <span class="num-label">Cadence</span>
+          <span class="num-value value--cadence">0</span>
+        </div>
+        <div class="status-item">
+          <span class="num-label">Resistance</span>
+          <span class="num-value value--resistance">0</span>
+        </div>
+        <div class="status-item">
+          <span class="num-label">Power</span>
+          <span class="num-value value--power">0</span>
+        </div>
       </div>
-      <div class="status-item">
-        <span class="num-label">Power:</span>
-        <span class="num-value value--power">0</span>
+
+      <div class="bottom-actions action-line">
+        <span>Resistance</span>
+        <button class="set-r-btn" data-resistance="25">25</button>
+        <button class="set-r-btn" data-resistance="20">20</button>
+        <button class="set-r-btn" data-resistance="15">15</button>
+        <button class="set-r-btn" data-resistance="10">10</button>
+        <button class="set-r-btn" data-resistance="5">5</button>
+        <button class="set-r-btn" data-resistance="1">1</button>
       </div>
     </div>
 
@@ -54,151 +161,234 @@
       // 1 - service
       // 2,3,4 - chars
 
-      const deviceUUID = "0bf669f0-45f2-11e7-9598-0800200c9a66";
-      const connectUUID = "0bf669f1-45f2-11e7-9598-0800200c9a66";
-      const writeUUID = "0bf669f2-45f2-11e7-9598-0800200c9a66";
-      const sensorUUID = "0bf669f4-45f2-11e7-9598-0800200c9a66";
+      const deviceUUID = "0bf669f0-45f2-11e7-9598-0800200c9a66"
+      const connectUUID = "0bf669f1-45f2-11e7-9598-0800200c9a66"
+      const writeUUID = "0bf669f2-45f2-11e7-9598-0800200c9a66"
+      const sensorUUID = "0bf669f4-45f2-11e7-9598-0800200c9a66"
 
-      let cadence = 0;
-      let resistance = 0;
-      let power = 0;
+      let cadence = 0
+      let resistance = 0
+      let power = 0
 
       // Simple power function (replicates getPower in C)
       function getPower(cadence, resistance) {
         // Replace this with your actual formula if known
-        return cadence * resistance;
+        return cadence * resistance
       }
 
       function parseSensorData(data) {
         // data is Uint8Array
         switch (data[1]) {
           case 0xd1: // Cadence notification
-            cadence = (data[9] << 8) + data[10];
-            power = getPower(cadence, resistance);
-            break;
+            cadence = (data[9] << 8) + data[10]
+            power = getPower(cadence, resistance)
+            break
 
           case 0xd2: // Resistance notification
-            resistance = data[3];
-            power = getPower(cadence, resistance);
-            break;
+            resistance = data[3]
+            power = getPower(cadence, resistance)
+            break
 
           default:
             // Other notifications can be ignored or logged
-            console.warn("Unknown notification type:", data[1]);
+            console.warn("Unknown notification type:", data[1])
         }
 
-        return { cadence, resistance, power };
+        return { cadence, resistance, power }
       }
 
       async function connect() {
         try {
-          console.log("Requesting bike…");
+          console.log("Requesting bike…")
           const device = await navigator.bluetooth.requestDevice({
             filters: [{ services: [deviceUUID] }],
             optionalServices: [connectUUID],
-          });
+          })
 
-          const server = await device.gatt.connect();
-          console.log("Connected:", device.name);
+          const server = await device.gatt.connect()
+          console.log("Connected:", device.name)
 
-          const service = await server.getPrimaryService(connectUUID);
-          console.log("Got service:", connectUUID);
+          const service = await server.getPrimaryService(connectUUID)
+          console.log("Got service:", connectUUID)
 
-          const characteristics = await service.getCharacteristics();
+          const characteristics = await service.getCharacteristics()
           for (const c of characteristics)
-            console.log("Characteristic:", c.uuid);
+            console.log("Characteristic:", c.uuid)
 
           // Try writing an initialization command first
-          const writeChar = await service.getCharacteristic(writeUUID);
-          const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00]);
-          await writeChar.writeValue(initCommand);
-          console.log("Sent handshake/init command");
+          const writeChar = await service.getCharacteristic(writeUUID)
+          const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00])
+          await writeChar.writeValue(initCommand)
+          console.log("Sent handshake/init command")
 
           await writeChar.writeValue(
             new Uint8Array([0xf0, 0xb0, 0x01, 0x01, 0xa2])
-          );
+          )
 
           // Now subscribe to notifications
-          const sensorChar = await service.getCharacteristic(sensorUUID);
+          const sensorChar = await service.getCharacteristic(sensorUUID)
 
-          await sensorChar.startNotifications();
-          sensorChar.addEventListener("characteristicvaluechanged", (event) => {
-            const value = event.target.value;
-            const data = [];
+          await sensorChar.startNotifications()
+
+          let started = false
+
+          sensorChar.addEventListener("characteristicvaluechanged", event => {
+            const value = event.target.value
+            const data = []
             for (let i = 0; i < value.byteLength; i++)
-              data.push(value.getUint8(i));
-            const sdata = parseSensorData(data);
-            console.log("Sensor data:", sdata);
+              data.push(value.getUint8(i))
+            const sdata = parseSensorData(data)
+            console.log("Sensor data:", sdata)
 
-            updateValueOnElement(sdata.cadence, ".value--cadence");
-            updateValueOnElement(sdata.resistance, ".value--resistance");
-            updateValueOnElement(sdata.power, ".value--power");
-          });
+            updateValueOnElement(sdata.cadence, ".value--cadence")
+            updateValueOnElement(sdata.resistance, ".value--resistance")
+            updateValueOnElement(sdata.power, ".value--power")
 
-          console.log("Listening for notifications...");
-          return writeChar;
+            if (!started) {
+              started = true
+              startTimer()
+              document
+                .querySelector(".app--connection-before")
+                .classList.remove("app--connection-before")
+            }
+          })
+
+          console.log("Listening for notifications...")
+          return writeChar
         } catch (err) {
-          console.error("Error:", err);
+          console.error("Error:", err)
         }
       }
 
       async function forceResistance(requestResistance, wchar) {
         // Clamp resistance between 0–255 (typical uint8 range)
-        const resistance = Math.max(0, Math.min(255, requestResistance));
+        const resistance = Math.max(0, Math.min(255, requestResistance))
 
         // Build packet: f0 b1 01 <resistance> 00
-        const cmd = new Uint8Array([0xf0, 0xb1, 0x01, resistance, 0x00]);
+        const cmd = new Uint8Array([0xf0, 0xb1, 0x01, resistance, 0x00])
 
         // Compute checksum (sum of first 4 bytes, overflow at 8 bits)
         for (let i = 0; i < cmd.length - 1; i++) {
-          cmd[4] = (cmd[4] + cmd[i]) & 0xff;
+          cmd[4] = (cmd[4] + cmd[i]) & 0xff
         }
 
         console.log(
           "Sending forceResistance packet:",
           Array.from(cmd)
-            .map((b) => b.toString(16).padStart(2, "0"))
+            .map(b => b.toString(16).padStart(2, "0"))
             .join(" ")
-        );
+        )
 
         try {
-          await wchar.writeValue(cmd);
-          console.log("✅ Force resistance sent:", resistance);
+          await wchar.writeValue(cmd)
+          console.log("✅ Force resistance sent:", resistance)
         } catch (err) {
-          console.error("❌ Failed to send force resistance:", err);
+          console.error("❌ Failed to send force resistance:", err)
         }
       }
 
       function updateValueOnElement(value, selector) {
-        const els = document.querySelectorAll(selector);
+        const els = document.querySelectorAll(selector)
         for (const el of els) {
-          el.textContent = value;
+          el.textContent = value
         }
       }
 
-      // connect();
+      function toggleFullScreen(video) {
+        if (!document.fullscreenElement) {
+          // If the document is not in full screen mode
+          // make the video full screen
+          video.requestFullscreen()
+        } else {
+          // Otherwise exit the full screen
+          document.exitFullscreen?.()
+        }
+      }
+
+      var timerInterval
+      var startTime = null
+      var elapsedBeforePause = 0
+      var isRunning = false
+
+      function formatElapsedTime(seconds) {
+        seconds = Math.floor(seconds)
+        var hours = Math.floor(seconds / 3600)
+        var minutes = Math.floor((seconds % 3600) / 60)
+        var secs = seconds % 60
+
+        if (hours > 0) {
+          return (
+            hours +
+            ":" +
+            (minutes < 10 ? "0" + minutes : minutes) +
+            ":" +
+            (secs < 10 ? "0" + secs : secs)
+          )
+        } else {
+          return (
+            (minutes < 10 ? "0" + minutes : minutes) +
+            ":" +
+            (secs < 10 ? "0" + secs : secs)
+          )
+        }
+      }
+
+      function updateDisplay() {
+        var elapsed = elapsedBeforePause
+        if (isRunning) {
+          elapsed += (Date.now() - startTime) / 1000
+        }
+        document.querySelector(".value--time").textContent = formatElapsedTime(elapsed)
+      }
+
+      function startTimer() {
+        if (!isRunning) {
+          startTime = Date.now()
+          isRunning = true
+          timerInterval = setInterval(updateDisplay, 200)
+        }
+      }
+
+      function pauseTimer() {
+        if (isRunning) {
+          elapsedBeforePause += (Date.now() - startTime) / 1000
+          clearInterval(timerInterval)
+          isRunning = false
+          updateDisplay()
+        }
+      }
+
+      function stopTimer() {
+        clearInterval(timerInterval)
+        isRunning = false
+        elapsedBeforePause = 0
+        startTime = null
+        updateDisplay()
+      }
+
       document
         .querySelector("#start-btn")
         .addEventListener("click", async () => {
-          const wchar = await connect();
-          window.wchar = wchar;
-          
-          document
-            .querySelector("#set-10-r-btn")
-            .addEventListener("click", async () => {
-              await forceResistance(10, wchar);
-            });
-          document
-            .querySelector("#set-5-r-btn")
-            .addEventListener("click", async () => {
-              await forceResistance(5, wchar);
-            });
-          document
-            .querySelector("#set-1-r-btn")
-            .addEventListener("click", async () => {
-              await forceResistance(1, wchar);
-            });
-        });
+          const wchar = await connect()
+          window.wchar = wchar
+
+          const els = document.querySelectorAll(".set-r-btn")
+          for (const el of els) {
+            el.addEventListener("click", async () => {
+              await forceResistance(parseInt(el.dataset.resistance), wchar)
+            })
+          }
+        })
+
+      document
+        .querySelector("#fullscreen-toggle-btn")
+        .addEventListener("click", async () => {
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen()
+          } else {
+            document.exitFullscreen()
+          }
+        })
     </script>
   </body>
 </html>
