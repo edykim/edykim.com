@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>exbike</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .status {
+        display: flex;
+      }
+      .status-item {
+        min-width: 200px;
+      }
+      .status-item .num-label {
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+      }
+
+      .status-item .num-value {
+        font-size: 55px;
+        font-weight: bold;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="start-btn">Start</button>
+    <button id="set-10-r-btn">Set 10</button>
+    <button id="set-5-r-btn">Set 5</button>
+    <button id="set-1-r-btn">Set 1</button>
+
+    <div class="status">
+      <div class="status-item">
+        <span class="num-label">Cadence:</span>
+        <span class="num-value value--cadence">0</span>
+      </div>
+      <div class="status-item">
+        <span class="num-label">Resistance:</span>
+        <span class="num-value value--resistance">0</span>
+      </div>
+      <div class="status-item">
+        <span class="num-label">Power:</span>
+        <span class="num-value value--power">0</span>
+      </div>
+    </div>
+
+    <script>
+      // 0 - device
+      // 1 - service
+      // 2,3,4 - chars
+
+      const deviceUUID = "0bf669f0-45f2-11e7-9598-0800200c9a66";
+      const connectUUID = "0bf669f1-45f2-11e7-9598-0800200c9a66";
+      const writeUUID = "0bf669f2-45f2-11e7-9598-0800200c9a66";
+      const sensorUUID = "0bf669f4-45f2-11e7-9598-0800200c9a66";
+
+      let cadence = 0;
+      let resistance = 0;
+      let power = 0;
+
+      // Simple power function (replicates getPower in C)
+      function getPower(cadence, resistance) {
+        // Replace this with your actual formula if known
+        return cadence * resistance;
+      }
+
+      function parseSensorData(data) {
+        // data is Uint8Array
+        switch (data[1]) {
+          case 0xd1: // Cadence notification
+            cadence = (data[9] << 8) + data[10];
+            power = getPower(cadence, resistance);
+            break;
+
+          case 0xd2: // Resistance notification
+            resistance = data[3];
+            power = getPower(cadence, resistance);
+            break;
+
+          default:
+            // Other notifications can be ignored or logged
+            console.warn("Unknown notification type:", data[1]);
+        }
+
+        return { cadence, resistance, power };
+      }
+
+      async function connect() {
+        try {
+          console.log("Requesting bike…");
+          const device = await navigator.bluetooth.requestDevice({
+            filters: [{ services: [deviceUUID] }],
+            optionalServices: [connectUUID],
+          });
+
+          const server = await device.gatt.connect();
+          console.log("Connected:", device.name);
+
+          const service = await server.getPrimaryService(connectUUID);
+          console.log("Got service:", connectUUID);
+
+          const characteristics = await service.getCharacteristics();
+          for (const c of characteristics)
+            console.log("Characteristic:", c.uuid);
+
+          // Try writing an initialization command first
+          const writeChar = await service.getCharacteristic(writeUUID);
+          const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00]);
+          await writeChar.writeValue(initCommand);
+          console.log("Sent handshake/init command");
+
+          await writeChar.writeValue(
+            new Uint8Array([0xf0, 0xb0, 0x01, 0x01, 0xa2])
+          );
+
+          // Now subscribe to notifications
+          const sensorChar = await service.getCharacteristic(sensorUUID);
+
+          await sensorChar.startNotifications();
+          sensorChar.addEventListener("characteristicvaluechanged", (event) => {
+            const value = event.target.value;
+            const data = [];
+            for (let i = 0; i < value.byteLength; i++)
+              data.push(value.getUint8(i));
+            const sdata = parseSensorData(data);
+            console.log("Sensor data:", sdata);
+
+            updateValueOnElement(sdata.cadence, ".value--cadence");
+            updateValueOnElement(sdata.resistance, ".value--resistance");
+            updateValueOnElement(sdata.power, ".value--power");
+          });
+
+          console.log("Listening for notifications...");
+          return writeChar;
+        } catch (err) {
+          console.error("Error:", err);
+        }
+      }
+
+      async function forceResistance(requestResistance, wchar) {
+        // Clamp resistance between 0–255 (typical uint8 range)
+        const resistance = Math.max(0, Math.min(255, requestResistance));
+
+        // Build packet: f0 b1 01 <resistance> 00
+        const cmd = new Uint8Array([0xf0, 0xb1, 0x01, resistance, 0x00]);
+
+        // Compute checksum (sum of first 4 bytes, overflow at 8 bits)
+        for (let i = 0; i < cmd.length - 1; i++) {
+          cmd[4] = (cmd[4] + cmd[i]) & 0xff;
+        }
+
+        console.log(
+          "Sending forceResistance packet:",
+          Array.from(cmd)
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join(" ")
+        );
+
+        try {
+          await wchar.writeValue(cmd);
+          console.log("✅ Force resistance sent:", resistance);
+        } catch (err) {
+          console.error("❌ Failed to send force resistance:", err);
+        }
+      }
+
+      function updateValueOnElement(value, selector) {
+        const els = document.querySelectorAll(selector);
+        for (const el of els) {
+          el.textContent = value;
+        }
+      }
+
+      // connect();
+      document
+        .querySelector("#start-btn")
+        .addEventListener("click", async () => {
+          const wchar = await connect();
+          window.wchar = wchar;
+          
+          document
+            .querySelector("#set-10-r-btn")
+            .addEventListener("click", async () => {
+              await forceResistance(10, wchar);
+            });
+          document
+            .querySelector("#set-5-r-btn")
+            .addEventListener("click", async () => {
+              await forceResistance(5, wchar);
+            });
+          document
+            .querySelector("#set-1-r-btn")
+            .addEventListener("click", async () => {
+              await forceResistance(1, wchar);
+            });
+        });
+    </script>
+  </body>
+</html>
