@@ -141,6 +141,15 @@
         margin-bottom: 0.75rem;
         font-size: 22px;
       }
+
+      .paused {
+        animation: blink-fade 1s steps(1, end) infinite;
+      }
+
+      @keyframes blink-fade {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0.5; }
+      }
     </style>
   </head>
   <body>
@@ -158,7 +167,8 @@
         <span class="status-msg"></span>
       </div>
       <div class="top-actions action-line">
-        <span></span>
+        <button id="pause-btn">PAUSE</button>
+        <button id="stop-btn">STOP</button>
         <!-- <button id="fullscreen-toggle-btn">Fullscreen</button> -->
       </div>
 
@@ -390,6 +400,9 @@
         var elapsed = elapsedBeforePause
         if (isRunning) {
           elapsed += (Date.now() - startTime) / 1000
+          document.querySelector(".value--time").classList?.remove('paused')
+        } else {
+          document.querySelector(".value--time").classList?.add('paused')
         }
         document.querySelector(".value--time").textContent =
           formatElapsedTime(elapsed)
@@ -412,6 +425,14 @@
         }
       }
 
+      function resumeTimer() {
+        if (!isRunning) {
+          startTime = Date.now()
+          isRunning = true
+          timerInterval = setInterval(updateDisplay, 200)
+        }
+      }
+
       function stopTimer() {
         clearInterval(timerInterval)
         isRunning = false
@@ -427,6 +448,27 @@
       function clearStatusMessage() {
         document.querySelector(".status-msg").textContent = ""
       }
+
+      document.querySelector('#pause-btn').addEventListener('click', (e) => {
+        if (isRunning) {
+          pauseTimer();
+          e.target.textContent = 'RESUME';
+        } else {
+          resumeTimer();
+          e.target.textContent = 'PAUSE';
+        }
+      })
+
+      document.querySelector('#stop-btn').addEventListener('click', (e) => {
+        if (startTime === null && elapsedBeforePause === 0) {
+          startTimer();
+          e.target.textContent = 'STOP';
+        } else {
+          
+          stopTimer();
+          e.target.textContent = 'START';
+        }
+      })
 
       document
         .querySelector("#start-btn")
@@ -444,7 +486,7 @@
 
       document
         .querySelector("#fullscreen-toggle-btn")
-        .addEventListener("click", async () => {
+        ?.addEventListener("click", async () => {
           if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen()
           } else {
