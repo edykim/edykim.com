@@ -13,7 +13,6 @@
       }
       html,
       body {
-        min-height: 100vh;
         padding: 0;
         margin: 0;
       }
@@ -29,6 +28,11 @@
       }
 
       .app {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -36,15 +40,15 @@
         justify-content: stretch;
       }
       .status {
-        display: flex;
         flex: 1;
-        align-items: center;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
         padding-left: 2rem;
         padding-right: 2rem;
       }
+
       .status-item {
-        min-width: 300px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -64,6 +68,17 @@
         font-variant-numeric: tabular-nums;
       }
 
+      @media screen and (max-width: 1200px) {
+        .status {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto auto;
+        }
+        .status--time {
+          grid-column-start: 1;
+          grid-column-end: 5;
+        }
+      }
+
       button {
         appearance: none;
         background-color: transparent;
@@ -80,9 +95,6 @@
       .top-actions {
         display: flex;
         justify-content: space-between;
-      }
-      .app {
-        position: relative;
       }
       .full-actions {
         display: none;
@@ -147,11 +159,11 @@
       </div>
       <div class="top-actions action-line">
         <span></span>
-        <button id="fullscreen-toggle-btn">Fullscreen</button>
+        <!-- <button id="fullscreen-toggle-btn">Fullscreen</button> -->
       </div>
 
       <div class="status">
-        <div class="status-item">
+        <div class="status-item status--time">
           <span class="num-label">Time</span>
           <span class="num-value value--time">00:00</span>
         </div>
@@ -170,13 +182,15 @@
       </div>
 
       <div class="bottom-actions action-line">
-        <div><span class="action-label">Resistance</span></div>
-        <button class="set-r-btn" data-resistance="25">25</button>
-        <button class="set-r-btn" data-resistance="20">20</button>
-        <button class="set-r-btn" data-resistance="15">15</button>
-        <button class="set-r-btn" data-resistance="10">10</button>
-        <button class="set-r-btn" data-resistance="5">5</button>
-        <button class="set-r-btn" data-resistance="1">1</button>
+        <div>
+          <div><span class="action-label">Resistance</span></div>
+
+          <button class="set-r-btn" data-resistance="5">5</button>
+          <button class="set-r-btn" data-resistance="10">10</button>
+          <button class="set-r-btn" data-resistance="15">15</button>
+          <button class="set-r-btn" data-resistance="20">20</button>
+          <button class="set-r-btn" data-resistance="25">25</button>
+        </div>
       </div>
     </div>
 
