@@ -152,6 +152,7 @@ html {
     background-color: var(--color-background-color);
     color: var(--color-text);
     font-size: 16px;
+        font-size: min(max(14px, calc(12px + .3vw)), 16px);
 }
 
 body {
