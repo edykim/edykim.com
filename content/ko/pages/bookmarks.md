@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-07-20T15:16:47"
+updatedOn: "2025-11-15T23:15:23"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -83,6 +83,7 @@ noIndex: true
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 - [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
 - [cat-v.org](https://cat-v.org/){data-lang=영문 data-tags=개인,개발}
+- [괜스레 저렇게](https://gwenzhir.kim/){data-lang=국문 data-tags=개인}
 
 <!-- @template bookmarks -->
 
