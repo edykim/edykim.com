@@ -12,9 +12,9 @@ noTitle: true
 
 :::div{.narrow}
 
-Hey, I'm Edward! I'm a web developer passionate about tackling challenges and building rapid prototypes. I enjoy discussing web technology, software architecture, and community.
+Hey, I’m Edward! I’m a web developer who enjoys tackling challenging problems and building rapid prototypes. I’m particularly interested in web technologies, software architecture, and the communities that grow around them.
 
-Currently, I am working at [Greenleaf Media](https://greenleafmedia.com/) as a web developer. Previously, I have worked with [Swinburne University](https://www.swinburne.edu.au/), and [Kobe Creations](https://kobecreations.com/). You can find more details on [this page](https://www.linkedin.com/in/edwardykim/).
+I’ve worked across a range of environments, from educational institutions to creative web agencies. More details about my professional background can be found on [this page](https://www.linkedin.com/in/edwardykim/).
 
 <hr />
 
