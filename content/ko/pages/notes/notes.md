@@ -31,6 +31,7 @@ noTitle: true
 <h2 class="subtitle">공방</h2>
 
 - [미니 붐박스](/ko/mini-boombox)
+- [namul34](/ko/keyboard/namul34) 30% 키보드
 
 <h2 class="subtitle">작은 튜토리얼</h2>
 
