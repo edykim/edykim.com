@@ -1,9 +1,9 @@
 ${template('header-nav.html', {nav: `
     <span class="site-title"><a href="/">edykim</a></span>
     <nav>
-        <a href="/crafts/">crafts</a>
-        <a href="/notes/">notes</a>
-        <a href="/about/">about</a>
+        <a ${utils.isActive(data, "/crafts/") ? 'class="active"' : ''} href="/crafts/">crafts</a>
+        <a ${utils.isActive(data, "/notes/") ? 'class="active"' : ''} href="/notes/">notes</a>
+        <a ${utils.isActive(data, "/about/") ? 'class="active"' : ''} href="/about/">about</a>
     </nav>
 `})}
 

@@ -1,10 +1,10 @@
 :root {
     --color-day-background-color: #f8f8f2;
     --color-day-text: #1d1d1f;
-    --color-day-shadow: #f1f1e0;
+    --color-day-shadow: #efebe7;
     --color-day-gray: #555555;
     --color-day-border: #eee;
-    --color-day-button: #eee;
+    --color-day-button: #ede6de;
     --color-day-code-background-color: #fcfdff;
     --color-day-link: #301eb5;
     --color-day-link-visited: #551A8B;
@@ -152,7 +152,6 @@ html {
     background-color: var(--color-background-color);
     color: var(--color-text);
     font-size: 16px;
-        font-size: min(max(14px, calc(12px + .3vw)), 16px);
 }
 
 body {
@@ -162,11 +161,9 @@ body {
     font-style: normal;
     word-break: keep-all;
 
-    margin: 1.5rem 1rem;
-    margin-left: max(1rem, 2.5vw);
-    margin-right: max(1rem, 2.5vw);
-    margin-top: max(1.5rem, 4.2vw);
-    margin-bottom: max(1.5rem, 4.2vw);
+    margin: 1rem;
+    margin-top: max(1rem, 1.2vw);
+    margin-bottom: max(1rem, 1.2vw);
     max-width: none;
 }
 
@@ -297,14 +294,14 @@ body > .comments {
     display: block;
 }
 
+.site-nav {
+    display: flex;
+    gap: 1rem;
+}
+
 .site-header nav {
     display: flex;
     gap: 0.5rem;
-}
-
-.site-header .site-title {
-    display: block;
-    margin-bottom: 0.25rem;
 }
 
 .site-header .site-title a {
@@ -344,17 +341,30 @@ body > .comments {
     background-color: transparent;
     padding: 0.6rem;
     cursor: pointer;
-    border-radius: 100%;
-    font-size: 0.8rem;
+    border-radius: 3px;
+    font-size: 0;
+    line-height: 1;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: -0.5rem;
-    margin-right: -0.5rem;
+    border: 1px solid var(--color-link);
+}
+.setting-btn:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-link);
+    border-radius: 100%;
+    content: "";
 }
 
 .setting-btn:hover,
 .setting-btn:active { background-color: var(--color-link); }
+.setting-btn:hover:after,
+.setting-btn:active:after { background-color: var(--color-background-color); }
 
 .setting-btn svg {
     width: 1rem;
@@ -368,7 +378,7 @@ body > .comments {
 }
 
 .page-header h1 {
-    margin-top: calc(1rem + 3vw);
+    margin-top: 2rem;
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: -0.05rem;
@@ -552,9 +562,17 @@ hr {
 }
 
 #website-setting {
+    font-family: monospace;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 0;
+    border: 6px solid #04009a;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#website-setting .modal-outer {
+    border: 1px solid #fff;
+    border-top: 0;
+    border-bottom: 0;
 }
 
 #website-setting h1 {
@@ -567,19 +585,33 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #eee;
+    background: #04009a;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    border-top: 1px solid #fff;
+    position: sticky;
+    top: 0;
 }
 
 #website-setting .header button {
     appearance: none;
-    background: transparent;
+    background: #c0c0c0;
     border: 0;
     width: 50px;
     height: 50px;
     cursor: pointer;
-    color: black;
+    color: #fff;
     font-size: 1rem;
-    
+    border-left: 3px solid #000;
+    -webkit-text-stroke: 4px black; /* outline */
+    paint-order: stroke fill;
+    text-shadow: 3px 3px 3px #000;
+}
+
+#website-setting .header button:hover,
+#website-setting .header button:active {
+    background: #d0d0d0;
 }
 
 #website-setting p {
