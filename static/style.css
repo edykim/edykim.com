@@ -312,7 +312,6 @@ body > .comments {
 
 .site-header nav a {
     color: inherit;
-    border-bottom: 2px solid var(--color-border);
     text-decoration: none;
 }
 
@@ -320,7 +319,7 @@ body > .comments {
 .site-header nav a:active,
 .site-header nav a:focus,
 .site-header nav a.active {
-    border-bottom-color: var(--color-text);
+    border-bottom: 2px solid var(--color-text);
 }
 
 .site-footer {
