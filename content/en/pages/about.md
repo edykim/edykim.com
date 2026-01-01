@@ -7,6 +7,7 @@ type: page
 url: /about
 lang: en
 noTitle: true
+noInteraction: true
 ---
 
 
