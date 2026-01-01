@@ -24,11 +24,6 @@ noInteraction: true
 
 이 공간은 저에게 흥미 있는 주제들을 모아둔 개인 웹사이트입니다. 웹, 오픈소스, 사진, 커피 얘기하기 좋아합니다. 잡다하게 기록을 남기는 것과 이것저것 만사에 관심이 많아요. 오늘도 즐거운 웹생활 보내시길 바랄게요 ✨
 
-요즘은 이 페이지를 자주 업데이트 하고 있어요.
-
-- [즐겨찾기](/ko/bookmarks/)
-- [샌디에고 커피](/ko/sd/coffee/)
-
 <h2 class="subtitle"><a href="/ko/post/list">최근 글 →</a></h2>
 
 <!-- @template post-list {"publicOnly": true, "limit": 5} -->

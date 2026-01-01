@@ -15,13 +15,6 @@ noTitle: true
 
 :::
 
-<h2 class="subtitle">링크정원</h2>
-
-브라우저에 탭 늘려가는 대신 여기에 링크를 심어두기로 결심했어요.
-
-  - [즐겨찾기](/ko/bookmarks/)
-  - [클립보드](/ko/clipboard/)
-
 <h2 class="subtitle">작은 페이지</h2>
 
 - [샌디에고 커피](/ko/sd/coffee/)
