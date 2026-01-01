@@ -2,7 +2,7 @@
     ${data.frontmatter.noTitle
         ? ''
         : `<header class="page-header">
-        ${utils.displayTitle(data) !== '글목록' ? `<h1><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a></h1>` : ``}
+        <h1 ${utils.displayTitle(data) === '글목록' ? 'class="header--posts"' : ''}><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a></h1>
 
         ${data.frontmatter.headline ? `<div class="headline">
             ${data.frontmatter.headline.join('')}

@@ -395,6 +395,10 @@ body > .comments {
     text-decoration: none;
 }
 
+.page-header .header--posts a {
+    display: none;
+}
+
 .list-page .page-header h1 {
     font-size: 1.5rem;
     max-width: 52rem;
