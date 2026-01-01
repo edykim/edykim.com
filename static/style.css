@@ -151,7 +151,13 @@
 html {
     background-color: var(--color-background-color);
     color: var(--color-text);
-    font-size: 1rem;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 14px;
+    }
 }
 
 body {
@@ -595,6 +601,7 @@ hr {
 
 #website-setting .header button {
     appearance: none;
+    outline: none;
     background: #c0c0c0;
     border: 0;
     width: 50px;
@@ -608,7 +615,8 @@ hr {
 }
 
 #website-setting .header button:hover,
-#website-setting .header button:active {
+#website-setting .header button:active,
+#website-setting .header button:focus {
     background: #d0d0d0;
 }
 
