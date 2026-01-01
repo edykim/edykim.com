@@ -8,8 +8,18 @@ ${((nodes, node) => {
         <div class="pagination">
             <div class="status">${data.fields.current + 1}/${data.fields.total} ${data.frontmatter.lang == 'ko' ? '페이지' : 'Pages'}</div>
             <div class="tag-nav">
-                ${data.fields.olderUrl !== null ? `<a href="/${data.fields.olderUrl}">${data.frontmatter.lang == 'ko' ? '이전 포스트' : 'Older Posts'}</a>` : ''}
-                ${data.fields.newerUrl !== null ? `<a href="/${data.fields.newerUrl}">${data.frontmatter.lang == 'ko' ? '최근 포스트' : 'Newer Posts'}</a>` : ''}
+                ${data.fields.olderUrl === null && data.fields.newerUrl !== null ? "<span></span>" : ""}
+                ${data.fields.olderUrl !== null ? `<a href="/${data.fields.olderUrl}">
+                    <span aria-hidden="true">←</span><span class="sr-only">
+                        ${data.frontmatter.lang == 'ko' ? '이전 포스트' : 'Older Posts'}</a>` : ''}
+                    </span>
+                </a>
+                ${data.fields.newerUrl !== null ? `<a href="/${data.fields.newerUrl}">
+                    <span aria-hidden="true">→</span>
+                    <span class="sr-only">
+                        ${data.frontmatter.lang == 'ko' ? '최근 포스트' : 'Newer Posts'}
+                    </span>
+                </a>` : ''}
             </div>
         </div>
         `

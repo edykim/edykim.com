@@ -499,22 +499,33 @@ footer.page-footer .updated-on {
 .neighbor-links, .tag-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
     padding: 2rem 0;
-    font-size: 0.9rem;
-    max-width: 52rem;
     gap: 0.5rem;
 }
 
-.neighbor-links a,
-.tag-nav a {
+.neighbor-links {
+    justify-content: space-between;
+    font-size: 0.9rem;
+    max-width: 52rem;
+}
+
+.tag-nav {
+    justify-content: center;
+    font-size: 1.5rem;
+    max-width: 5rem;
+    margin: 0 auto;
+}
+
+.neighbor-links a {
     display: block;
     text-decoration: none;
     padding: 1rem;
     background: var(--color-button);
     border-radius: 5px;
     flex: 1;
+    padding: 1rem;
 }
+
 .neighbor-links a span {
     font-weight: bold;
     display: block;
@@ -523,9 +534,14 @@ footer.page-footer .updated-on {
     display: block;
     margin-bottom: 0.25rem;
 }
-.neighbor-links a + a,
-.tag-nav a + a {
+.neighbor-links a + a {
     text-align: right;
+}
+
+.tag-nav a {
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
 }
 
 .post-title-list time {
@@ -1046,6 +1062,15 @@ details[open] {
 .data-footnote-backref {
     text-decoration: none;
     font-family: monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 .sr-only:not(:focus):not(:active) {
