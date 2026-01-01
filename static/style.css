@@ -151,7 +151,7 @@
 html {
     background-color: var(--color-background-color);
     color: var(--color-text);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 body {
@@ -606,7 +606,6 @@ hr {
     border-left: 3px solid #000;
     -webkit-text-stroke: 4px black; /* outline */
     paint-order: stroke fill;
-    text-shadow: 3px 3px 3px #000;
 }
 
 #website-setting .header button:hover,

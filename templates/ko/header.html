@@ -1,7 +1,6 @@
 ${template('header-nav.html', {nav: `
-    <span class="site-title"><a href="/ko/">용균의 웹페이지</a></span>
+    <span class="site-title"><a href="/ko/">용균</a></span>
     <nav>
-        <a ${utils.isActive(data, "/ko/") ? 'class="active"' : ''} href="/ko/">처음</a>
         <a ${utils.isActive(data, "/ko/post/")
             || utils.isActive(data, "/ko/post/page/", true)
             || utils.isActive(data, "/ko/post/list/", true)
