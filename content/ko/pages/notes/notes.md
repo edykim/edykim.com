@@ -9,11 +9,11 @@ url: notes
 noTitle: true
 ---
 
-:::div{.narrow.headpiece}
+<div class="pixelated full-image">
 
-![노트](note.webp)
+![노트](notes.png)
 
-:::
+</div>
 
 <h2 class="subtitle">작은 페이지</h2>
 
