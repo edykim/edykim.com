@@ -218,6 +218,7 @@ window.onload = () => {
 window.addEventListener('DOMContentLoaded', () => {
     pageMarkApp();
     initLikeButtons();
+    randomImage();
 });
 
 function pageMarkApp() {
@@ -345,4 +346,17 @@ function initLikeButtons() {
             return false;
         });
     });
+}
+
+function randomImage() {
+    const rs = document.querySelectorAll('.random-one');
+    for (const r of rs) {
+        const images = [... r.querySelectorAll('img')];
+        if (images.length < 2) continue;
+
+        const chosen = Math.floor(Math.random() * images.length);
+        for(const i in images) {
+            if (chosen != i) images[i].style.display = 'none';
+        }
+    }
 }

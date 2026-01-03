@@ -10,11 +10,19 @@ noTitle: true
 noInteraction: true
 ---
 
-<figure>
+<div class="pixelated full-image random-one">
 
-<img src="/resources/live.staticflickr.com/65535/54428226020_f41a28378d_k.webp" alt="San Diego, 2024" loading="lazy" style="border-radius: 4px;">
+<img src="/resources/home/san-diego-2025.png" alt="San Diego CA, 2025" loading="lazy">
 
-</figure>
+<img src="/resources/home/cloud-1.png" alt="Riverside CA, 2024" loading="lazy">
+
+<img src="/resources/home/cloud-2.png" alt="Riverside CA, 2024" loading="lazy">
+
+<img src="/resources/home/coffee.png" alt="San Diego CA, 2025" loading="lazy">
+
+<img src="/resources/home/night.png" alt="San Diego CA, 2025" loading="lazy">
+
+</div>
 
 :::div{.narrow}
 

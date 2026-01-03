@@ -1092,3 +1092,12 @@ blockquote {
 blockquote + blockquote {
     margin-top: 0.5rem;
 }
+
+.pixelated img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.full-image img {
+    width: 100%;
+}

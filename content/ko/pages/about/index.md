@@ -9,11 +9,13 @@ url: about
 noTitle: true
 ---
 
-<figure>
+<div class="pixelated full-image random-one">
 
-![김용균과 빨간 트위터 풍선 사진](me-with-a-red-bird.jpg)
+![2025년 하와이 Haleakalā 정상에서](/resources/profile/maui-1-2025.png)
 
-</figure>
+![2025년 하와이 Haleakalā 정상에서](/resources/profile/maui-2-2025.png)
+
+</div>
 
 :::div{.narrow}
 

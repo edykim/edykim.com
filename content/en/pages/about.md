@@ -10,6 +10,13 @@ noTitle: true
 noInteraction: true
 ---
 
+<div class="pixelated full-image random-one">
+
+![Haleakalā, HI 2025](/resources/profile/maui-1-2025.png)
+
+![Haleakalā, HI 2025](/resources/profile/maui-2-2025.png)
+
+</div>
 
 :::div{.narrow}
 
