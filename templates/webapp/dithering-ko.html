@@ -2,6 +2,31 @@
 <html lang="ko">
   <head>
     <title>이미지 디더링</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이미지 디더링" />
+    <meta
+      property="og:description"
+      content="제한된 색상 환경에서도 풍부한 색감을 만드는 고전적인 이미지 효과를 체험해보세요!"
+    />
+    <meta property="og:url" content="https://edykim.com/ko/dithering/" />
+    <meta
+      property="og:image"
+      content="https://edykim.com/ko/dithering/dithering-after.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="이미지 디더링" />
+    <meta
+      name="twitter:description"
+      content="제한된 색상 환경에서도 풍부한 색감을 만드는 고전적인 이미지 효과를 체험해보세요!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://edykim.com/ko/dithering/dithering-after.png"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/upng-js@2.1.0/UPNG.min.js"></script>
 
@@ -15,7 +40,10 @@
         background-color: #2d2d2d;
       }
       body {
-        font-family: sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+          "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+          "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", sans-serif;
       }
       img,
       canvas {
