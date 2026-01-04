@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>이미지 디더링</title>
+    <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/upng-js@2.1.0/UPNG.min.js"></script>
+
+    <style>
+      * {
+        word-break: keep-all;
+      }
+      html,
+      body {
+        margin: 0;
+        background-color: #2d2d2d;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      img,
+      canvas {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+
+      header {
+        background-color: #333;
+        padding: 1rem;
+      }
+
+      header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #fff;
+      }
+      #drop-area {
+        display: block;
+        border: 2px dashed #555;
+        border-radius: 15px;
+        padding: 4rem;
+        text-align: center;
+        color: #aaa;
+        margin: 1rem;
+      }
+      #drop-area.active {
+        border-color: #eee;
+      }
+
+      #drop-area.active .message {
+        color: #eee;
+      }
+
+      #uploader {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .item .title {
+        color: #aaa;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .item canvas {
+        max-width: 100%;
+      }
+
+      .download-link {
+        color: #4f4f4f;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        border: 1px solid #c9c9c9;
+        background: #eee;
+        border-radius: 5px;
+        background: linear-gradient(#ffffff, #acacac);
+      }
+
+      .item {
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid #222;
+        border-radius: 5px;
+        background-color: #222;
+      }
+
+      .item-header {
+        color: #fff;
+        padding-bottom: 1rem;
+      }
+
+      .images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .images img {
+        max-width: 600px;
+        width: 100%;
+      }
+      .meta {
+        color: #fff;
+      }
+      .control {
+        color: #fff;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 1rem;
+        background: #333;
+        padding: 1rem;
+        border-radius: 3px;
+      }
+      @media screen and (max-width: 800px) {
+        .control {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      .range-input {
+        display: block;
+      }
+
+      #intro {
+        display: none;
+        margin: 1.5rem auto;
+        padding: 1rem;
+        color: #eee;
+        max-width: 600px;
+        text-align: center;
+        line-height: 1.65;
+        font-size: 0.9rem;
+      }
+
+      #items:empty ~ #intro {
+        display: block;
+      }
+
+      .middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 2rem;
+        color: #555;
+        line-height: 1;
+      }
+
+      .file-size {
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: #ccc;
+      }
+
+      .further-info,
+      .further-info a {
+        color: #aaa;
+      }
+    </style>
+
+    <script>
+      function ditheringApp() {
+        dropUploader(
+          document.querySelector("#drop-area"),
+          document.querySelector("#uploader"),
+          onUploadedFiles
+        )
+
+        rangeInputs()
+      }
+
+      function onUploadedFiles(files) {
+        const template = document.querySelector("#item-template")
+        const container = document.querySelector("#items")
+        container.textContent = ""
+
+        for (const file of files) {
+          const item = template.content.cloneNode(true)
+          const original = item.querySelector(".original img")
+          const canvas = item.querySelector("canvas")
+
+          const strengthInput = item.querySelector(".strength")
+          const levelInput = item.querySelector(".level")
+          const widthInput = item.querySelector(".width")
+
+          const downloadLink = item.querySelector(".download-link")
+
+          item.querySelector(".filename").textContent = file.name
+          original.src = URL.createObjectURL(file)
+
+          const originalRes = item.querySelector(".original .resolution")
+          const editRes = item.querySelector(".edit .resolution")
+
+          displayResolution(original, originalRes)
+
+          const onChange = async () => {
+            await dither(
+              FloydSteinberg,
+              original,
+              canvas,
+              parseInt(widthInput.value ?? 600),
+              parseFloat(strengthInput.value),
+              parseInt(levelInput.value)
+            )
+            displayOutputResolution(canvas, editRes)
+          }
+
+          const onDownload = e => {
+            e.preventDefault()
+            downloadCanvasAsPNG(canvas, file.name)
+          }
+
+          strengthInput.addEventListener("change", onChange)
+          levelInput.addEventListener("change", onChange)
+          widthInput.addEventListener("blur", onChange)
+
+          downloadLink.addEventListener("click", onDownload)
+
+          onChange()
+
+          container.appendChild(item)
+        }
+      }
+
+      function downloadCanvasAsPNG(canvasElement, filename) {
+        const width = parseInt(canvasElement.getAttribute("width"))
+        const height = parseInt(canvasElement.getAttribute("height"))
+        const size = parseInt(canvasElement.dataset?.numOfColors ?? 256)
+
+        const ctx = canvasElement.getContext("2d")
+        const imgData = ctx.getImageData(0, 0, width, height)
+
+        const rgba = new Uint8Array(imgData.data.buffer)
+        const indexedPNG = UPNG.encode([rgba], width, height, size)
+        const blob = new Blob([indexedPNG], { type: "image/png" })
+        const url = URL.createObjectURL(blob)
+
+        const a = document.createElement("a")
+
+        a.href = url
+        a.download = convertFilenameToDownloadable(filename, size)
+        document.querySelector("body").appendChild(a)
+        a.click()
+
+        document.querySelector("body").removeChild(a)
+        URL.revokeObjectURL(url)
+      }
+
+      function convertFilenameToDownloadable(filename, size) {
+        const ss = filename.split(".")
+        ss.pop()
+        ss.push(size)
+        ss.push("png")
+        return ss.join(".")
+      }
+
+      async function displayResolution(imageElement, targetElement) {
+        await waitForImageLoaded(imageElement)
+        targetElement.textContent =
+          imageElement.naturalWidth + " x " + imageElement.naturalHeight
+      }
+
+      function displayOutputResolution(canvasElement, targetElement) {
+        const width = canvasElement.getAttribute("width")
+        const height = canvasElement.getAttribute("height")
+        const numOfColors = countColorOnCanvas(canvasElement)
+        canvasElement.dataset.numOfColors = numOfColors
+
+        targetElement.textContent =
+          width + " x " + height + ", " + numOfColors + " colors"
+      }
+
+      function countColorOnCanvas(canvasElement) {
+        const width = canvasElement.getAttribute("width")
+        const height = canvasElement.getAttribute("height")
+
+        const ctx = canvasElement.getContext("2d")
+        const imgData = ctx.getImageData(0, 0, width, height)
+        const data = imgData.data
+        const colors = {}
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            const i = (y * width + x) * 4
+            colors[rgbToHex(data[i], data[i + 1], data[i + 2])] = true
+          }
+        }
+
+        return Object.keys(colors).length
+      }
+
+      function rgbToHex(r, g, b) {
+        return (
+          "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+        )
+      }
+
+      async function dither(
+        dithering,
+        imageElement,
+        canvas,
+        targetWidth,
+        strength,
+        level
+      ) {
+        await waitForImageLoaded(imageElement)
+
+        const width = imageElement.naturalWidth
+        const height = imageElement.naturalHeight
+        const targetHeight = Math.floor((targetWidth / width) * height)
+        canvas.width = targetWidth
+        canvas.height = targetHeight
+
+        const ctx = canvas.getContext("2d")
+        ctx.imageSmoothingEnabled = false
+
+        function drawImage(ditheringMethod) {
+          ctx.drawImage(
+            imageElement,
+            0,
+            0,
+            width,
+            height,
+            0,
+            0,
+            targetWidth,
+            targetHeight
+          )
+
+          const imgData = ctx.getImageData(0, 0, targetWidth, targetHeight)
+          const data = imgData.data
+          ditheringMethod(
+            data,
+            targetWidth,
+            targetHeight,
+            parseFloat(strength),
+            parseFloat(level)
+          )
+          ctx.putImageData(imgData, 0, 0)
+        }
+
+        drawImage(dithering)
+      }
+
+      function FloydSteinberg(data, width, height, strength, levels) {
+        function quantize(value) {
+          return Math.round((value / 255) * (levels - 1)) * (255 / (levels - 1))
+        }
+
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            const i = (y * width + x) * 4
+            const oldR = data[i],
+              oldG = data[i + 1],
+              oldB = data[i + 2]
+
+            const newR = quantize(oldR)
+            const newG = quantize(oldG)
+            const newB = quantize(oldB)
+
+            const errR = oldR - newR
+            const errG = oldG - newG
+            const errB = oldB - newB
+
+            data[i] = newR
+            data[i + 1] = newG
+            data[i + 2] = newB
+
+            if (x + 1 < width) {
+              data[i + 4] += ((errR * 7) / 16) * strength
+              data[i + 5] += ((errG * 7) / 16) * strength
+              data[i + 6] += ((errB * 7) / 16) * strength
+            }
+            if (x - 1 >= 0 && y + 1 < height) {
+              let idx = i + (width - 1) * 4
+              data[idx] += ((errR * 3) / 16) * strength
+              data[idx + 1] += ((errG * 3) / 16) * strength
+              data[idx + 2] += ((errB * 3) / 16) * strength
+            }
+            if (y + 1 < height) {
+              let idx = i + width * 4
+              data[idx] += ((errR * 5) / 16) * strength
+              data[idx + 1] += ((errG * 5) / 16) * strength
+              data[idx + 2] += ((errB * 5) / 16) * strength
+            }
+            if (x + 1 < width && y + 1 < height) {
+              let idx = i + (width + 1) * 4
+              data[idx] += ((errR * 1) / 16) * strength
+              data[idx + 1] += ((errG * 1) / 16) * strength
+              data[idx + 2] += ((errB * 1) / 16) * strength
+            }
+          }
+        }
+      }
+
+      function waitForImageLoaded(element) {
+        return new Promise(resolve => {
+          if (
+            element.complete &&
+            element.naturalWidth > 0 &&
+            element.naturalHeight > 0
+          ) {
+            resolve()
+          } else {
+            element.addEventListener("load", () => resolve())
+          }
+        })
+      }
+
+      function dropUploader(dropAreaElement, fileInputElement, onFileInput) {
+        setDropArea(dropAreaElement, onDropFiles)
+        setFileInput(fileInputElement, onDropFiles)
+
+        function setDropArea(el, onDrop) {
+          let dragCounter = 0
+          el.addEventListener("dragover", dragoverHandler)
+          el.addEventListener("dragenter", dragenterHandler)
+          el.addEventListener("dragleave", dragleaveHandler)
+          el.addEventListener("drop", dropHandler)
+
+          function dragoverHandler(ev) {
+            ev.preventDefault()
+          }
+
+          function dragenterHandler() {
+            dragCounter++
+            el.classList.add("active")
+          }
+
+          function dragleaveHandler() {
+            dragCounter--
+            if (dragCounter === 0) {
+              el.classList.remove("active")
+            }
+          }
+
+          function dropHandler(ev) {
+            ev.preventDefault()
+            dragCounter = 0
+            el.classList.remove("active")
+            const files = [...ev.dataTransfer.items]
+              .filter(item => item.type.startsWith("image/"))
+              .map(item => item.getAsFile())
+              .filter(file => file)
+            onDrop && onDrop(files)
+          }
+        }
+
+        function setFileInput(el, onDrop) {
+          el.addEventListener("change", onChange)
+          function onChange(ev) {
+            onDrop && onDrop([...el.files])
+          }
+        }
+
+        function onDropFiles(files) {
+          onFileInput && onFileInput(files)
+        }
+      }
+
+      function rangeInputs() {
+        const rangeInputs = document.querySelectorAll("input[type=range]")
+
+        for (const input of rangeInputs) {
+          rangeInputHandler.apply(input)
+        }
+
+        document.addEventListener("input", function (e) {
+          if (e.target.matches("input[type=range]")) {
+            rangeInputHandler.apply(e.target)
+          }
+        })
+
+        function rangeInputHandler() {
+          this.parentNode.querySelector("output").value = this.value
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", ditheringApp)
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>이미지 디더링</h1>
+    </header>
+    <form>
+      <label id="drop-area">
+        <input type="file" id="uploader" accept="image/*" multiple />
+        <div class="message">
+          이미지를 여기에 드래그하거나, 클릭하여 이미지를 선택하세요.
+        </div>
+      </label>
+    </form>
+
+    <div id="items"></div>
+    <div id="intro">
+      <p>
+        <strong>이미지 디더링(Dithering)</strong>은 사용할 수 있는 색의 수가
+        제한된 환경에서 시각적인 색상 표현을 확장하기 위한 기법으로, 서로 다른
+        색의 픽셀을 규칙적이거나 불규칙하게 배치해 사람의 시각이 이를 하나의
+        중간색이나 음영으로 인식하게 합니다.
+      </p>
+      <div class="middle">
+        <div>
+          <img src="dithering-before.png" />
+          <div class="file-size">15 KB</div>
+        </div>
+        <span>→</span>
+        <div>
+          <img src="dithering-after.png" />
+          <div class="file-size">3 KB</div>
+        </div>
+      </div>
+      <p>
+        요즘은 인터넷이 빨라서 큰 이미지나 영상도 기다림 없이 볼 수 있습니다.
+        예전에는 네트워크가 느리고 컴퓨터 성능도 제한적이어서, 파일 크기를
+        최대한 줄이기 위한 다양한 방법이 필요했습니다. 디더링은 그런 환경에서
+        사용되던 기법 중 하나로, 1990년대 웹을 직접 경험했던 사람들에게는 그
+        시절의 기억과 향수를 떠올리게 합니다.
+      </p>
+      <p>
+        이 웹페이지에서는 복잡한 설정 없이, 이미지를 디더링 효과가 적용된
+        버전으로 간단히 변환해볼 수 있으니 한 번 직접 체험해보세요.
+      </p>
+      <p class="further-info">
+        이 변환기는
+        <a
+          href="https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%83%80%EC%9D%B8%EB%B2%84%EA%B7%B8_%EB%94%94%EB%8D%94%EB%A7%81"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          플로이드-스타인버그 디더링</a
+        >
+        알고리즘을 사용하고 있습니다.
+      </p>
+
+      <p class="further-info">
+        2026 <a href="https://edykim.com/ko" target="_blank">용균</a>.
+      </p>
+    </div>
+    <template id="item-template">
+      <div class="item">
+        <div class="item-header">
+          <div class="filename">unnamed.jpg</div>
+        </div>
+        <div class="control">
+          <label class="range-input">
+            강도:
+            <input
+              class="strength"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+            />
+            <output>0.5</output>
+          </label>
+          <label class="range-input">
+            레벨:
+            <input
+              class="level"
+              type="range"
+              min="0"
+              max="30"
+              step="1"
+              value="12"
+            />
+            <output>12</output>
+          </label>
+          <label class="size-input">
+            폭 (px):
+            <input class="width" type="number" min="0" step="1" value="600" />
+          </label>
+        </div>
+        <div class="images">
+          <div class="original">
+            <div class="title">원본</div>
+            <img />
+            <div class="meta">
+              <div class="resolution"></div>
+            </div>
+          </div>
+          <div class="edit">
+            <div class="title">편집본</div>
+            <canvas></canvas>
+            <div class="meta">
+              <div class="resolution"></div>
+              <div class="links">
+                <a class="download-link" href="#" aria-label="Download">⬇</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

@@ -36,3 +36,4 @@ noTitle: true
 
 - [즉석사진](/ko/photobooth/)
 - [신디사이저](/ko/synth/) 급하게 연주가 고플 때
+- [이미지 디더링](/ko/dithering/) 90년대 웹 감성의 이미지 만들기
