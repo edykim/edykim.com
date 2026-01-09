@@ -21,7 +21,7 @@ function getCurrentMode() {
     return 'day';
 }
 
-const codeLight = ['day', 'sepia'];
+const codeLight = ['day', 'sepia', 'retro'];
 
 function setMode(name) {
     const current = getCurrentMode();
@@ -219,6 +219,7 @@ window.addEventListener('DOMContentLoaded', () => {
     pageMarkApp();
     initLikeButtons();
     randomImage();
+    retroTitle();
 });
 
 function pageMarkApp() {
@@ -359,4 +360,11 @@ function randomImage() {
             if (chosen != i) images[i].style.display = 'none';
         }
     }
+}
+
+function retroTitle() {
+    const title = document.querySelector('head title');
+    const edited = title.textContent.split('|').filter(v => v.trim());
+    edited.pop();
+    document.querySelector('.site-title a').dataset.pageTitle = edited.join('|');
 }
