@@ -1326,3 +1326,16 @@ blockquote + blockquote {
 .mode--retro body > .container > .page::-webkit-scrollbar-corner {
   background: #c0c0c0;
 }
+
+
+.mode--retro .likes-widget button {
+    background-color: #cccbcb;
+    border-radius: 0;
+    padding: 0.3rem 0.6rem;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+}
+
+.mode--retro .likes-widget button:focus,
+.mode--retro .likes-widget button:active {
+    box-shadow: inset 1px 1px #b6b6b6, inset -1px -1px #dfdfdf, inset 2px 2px grey, inset -2px -2px #fff;
+}
