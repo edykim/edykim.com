@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>exbike</title>
     <link rel="manifest" href="/webapp/bike/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       * {
@@ -19,9 +22,19 @@
       body {
         background-color: #222;
         color: #fff;
-        font-family: "Figtree", system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-          "Helvetica Neue", sans-serif;
+        font-family:
+          "Figtree",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
         display: flex;
         font-optical-sizing: auto;
         font-style: normal;
@@ -66,6 +79,22 @@
         font-size: 120px;
         font-weight: bold;
         font-variant-numeric: tabular-nums;
+      }
+
+      .status--time {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #cadence-graph {
+        width: 100%;
+        height: 100px;
+        margin-top: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
       }
 
       @media screen and (max-width: 1200px) {
@@ -147,8 +176,14 @@
       }
 
       @keyframes blink-fade {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0.5; }
+        0%,
+        49% {
+          opacity: 1;
+        }
+        50%,
+        100% {
+          opacity: 0.5;
+        }
       }
     </style>
   </head>
@@ -167,8 +202,8 @@
         <span class="status-msg"></span>
       </div>
       <div class="top-actions action-line">
-        <button id="pause-btn">PAUSE</button>
-        <button id="stop-btn">STOP</button>
+        <button id="pause-btn" style="display: none">PAUSE</button>
+        <button id="stop-btn" style="display: none">FINISH</button>
         <!-- <button id="fullscreen-toggle-btn">Fullscreen</button> -->
       </div>
 
@@ -176,6 +211,7 @@
         <div class="status-item status--time">
           <span class="num-label">Time</span>
           <span class="num-value value--time">00:00</span>
+          <canvas id="cadence-graph"></canvas>
         </div>
         <div class="status-item">
           <span class="num-label">Cadence</span>
@@ -204,156 +240,419 @@
       </div>
     </div>
 
-    <script>
-      // 0 - device
-      // 1 - service
-      // 2,3,4 - chars
+    <script type="module">
+      export class BluetoothService {
+        constructor() {
+          this.onData = null;
+          this.onStatusChange = null;
+          this.onStarted = null;
+        }
 
-      const deviceUUID = "0bf669f0-45f2-11e7-9598-0800200c9a66"
-      const connectUUID = "0bf669f1-45f2-11e7-9598-0800200c9a66"
-      const writeUUID = "0bf669f2-45f2-11e7-9598-0800200c9a66"
-      const sensorUUID = "0bf669f4-45f2-11e7-9598-0800200c9a66"
+        async connect() {
+          throw new Error("Not implemented");
+        }
 
-      let cadence = 0
-      let resistance = 0
-      let power = 0
+        async setResistance(resistance) {
+          throw new Error("Not implemented");
+        }
+
+        setStatus(msg) {
+          if (this.onStatusChange) {
+            this.onStatusChange(msg);
+          }
+        }
+
+        emitData(data) {
+          if (this.onData) {
+            this.onData(data);
+          }
+        }
+
+        emitStarted() {
+          if (this.onStarted) {
+            this.onStarted();
+          }
+        }
+      }
+
+      export class WebBluetoothService extends BluetoothService {
+        constructor() {
+          super();
+          this.deviceUUID = "0bf669f0-45f2-11e7-9598-0800200c9a66";
+          this.connectUUID = "0bf669f1-45f2-11e7-9598-0800200c9a66";
+          this.writeUUID = "0bf669f2-45f2-11e7-9598-0800200c9a66";
+          this.sensorUUID = "0bf669f4-45f2-11e7-9598-0800200c9a66";
+          this.writeChar = null;
+          this.started = false;
+        }
+
+        async connect() {
+          try {
+            console.log("Requesting bike…");
+            const device = await navigator.bluetooth.requestDevice({
+              filters: [{ services: [this.deviceUUID] }],
+              optionalServices: [this.connectUUID],
+            });
+
+            this.setStatus("Loading...");
+            const server = await device.gatt.connect();
+            console.log("Connected:", device.name);
+
+            this.setStatus("Loading....");
+            const service = await server.getPrimaryService(this.connectUUID);
+            console.log("Got service:", this.connectUUID);
+
+            this.setStatus("Loading....");
+            const characteristics = await service.getCharacteristics();
+            for (const c of characteristics)
+              console.log("Characteristic:", c.uuid);
+
+            this.setStatus("Loading.....");
+            this.writeChar = await service.getCharacteristic(this.writeUUID);
+
+            const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00]);
+            await this.writeChar.writeValue(initCommand);
+            console.log("Sent handshake/init command");
+
+            await this.writeChar.writeValue(
+              new Uint8Array([0xf0, 0xb0, 0x01, 0x01, 0xa2]),
+            );
+
+            const sensorChar = await service.getCharacteristic(this.sensorUUID);
+            await sensorChar.startNotifications();
+            this.setStatus("Loading......");
+
+            sensorChar.addEventListener(
+              "characteristicvaluechanged",
+              (event) => {
+                const value = event.target.value;
+                const data = [];
+                for (let i = 0; i < value.byteLength; i++)
+                  data.push(value.getUint8(i));
+
+                this.emitData(data);
+
+                if (!this.started) {
+                  this.started = true;
+                  this.emitStarted();
+                }
+              },
+            );
+
+            console.log("Listening for notifications...");
+          } catch (err) {
+            console.error("Error:", err);
+            this.setStatus("Error: " + err.message);
+            throw err;
+          }
+        }
+
+        async setResistance(requestResistance) {
+          if (!this.writeChar) return;
+
+          const resistance = Math.max(0, Math.min(255, requestResistance));
+          const cmd = new Uint8Array([0xf0, 0xb1, 0x01, resistance, 0x00]);
+
+          for (let i = 0; i < cmd.length - 1; i++) {
+            cmd[4] = (cmd[4] + cmd[i]) & 0xff;
+          }
+
+          try {
+            await this.writeChar.writeValue(cmd);
+            console.log("✅ Force resistance sent:", resistance);
+          } catch (err) {
+            console.error("❌ Failed to send force resistance:", err);
+          }
+        }
+      }
+
+      export class MockBluetoothService extends BluetoothService {
+        constructor() {
+          super();
+          this.cadence = 0;
+          this.resistance = 10;
+          this.interval = null;
+          this.started = false;
+        }
+
+        async connect() {
+          this.setStatus("Mock: Connecting...");
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          this.setStatus("Mock: Connected");
+          await new Promise((resolve) => setTimeout(resolve, 500));
+
+          this.startMocking();
+        }
+
+        startMocking() {
+          this.interval = setInterval(() => {
+            // Simulate cadence fluctuations
+            this.cadence = Math.max(
+              0,
+              Math.min(120, this.cadence + (Math.random() * 10 - 5)),
+            );
+
+            // Cadence notification: f0 d1 ...
+            const cadenceData = new Uint8Array(11);
+            cadenceData[1] = 0xd1;
+            const cadenceValue = Math.round(this.cadence);
+            cadenceData[9] = (cadenceValue >> 8) & 0xff;
+            cadenceData[10] = cadenceValue & 0xff;
+            this.emitData(cadenceData);
+
+            // Resistance notification: f0 d2 ...
+            const resistanceData = new Uint8Array(4);
+            resistanceData[1] = 0xd2;
+            resistanceData[3] = this.resistance;
+            this.emitData(resistanceData);
+
+            if (!this.started && this.cadence > 0) {
+              this.started = true;
+              this.emitStarted();
+            }
+          }, 1000);
+
+          // Initial start to trigger UI
+          setTimeout(() => {
+            this.cadence = 60;
+          }, 2000);
+        }
+
+        async setResistance(resistance) {
+          console.log("Mock: Setting resistance to", resistance);
+          this.resistance = resistance;
+        }
+      }
+
+      class CadenceGraph {
+        constructor(canvasId) {
+          this.canvas = document.getElementById(canvasId);
+          this.ctx = this.canvas.getContext("2d");
+          this.data = [];
+          this.maxDataPoints = 300;
+          this.maxCadence = 200;
+          this.maxResistance = 40;
+
+          this.resize();
+          window.addEventListener("resize", () => this.resize());
+        }
+
+        resize() {
+          const rect = this.canvas.getBoundingClientRect();
+          this.canvas.width = rect.width * window.devicePixelRatio;
+          this.canvas.height = rect.height * window.devicePixelRatio;
+          this.ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+          this.draw();
+        }
+
+        addData(cadence, resistance) {
+          if (!isRunning) return; // Only record data while timer is running
+          this.data.push({ cadence, resistance });
+          if (this.data.length > this.maxDataPoints) {
+            this.data.shift();
+          }
+          this.draw();
+        }
+
+        reset() {
+          this.data = [];
+          this.draw();
+        }
+
+        drawGrid(ctx, width, height) {
+          ctx.beginPath();
+          ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+          ctx.lineWidth = 1;
+
+          const lines = [0, 50, 100, 150];
+          lines.forEach((val) => {
+            const y = height - (val / this.maxCadence) * height;
+            ctx.moveTo(0, y);
+            ctx.lineTo(width, y);
+          });
+          ctx.stroke();
+
+          // Add labels
+          ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+          ctx.font = "10px Figtree";
+          lines.forEach((val) => {
+            const y = height - (val / this.maxCadence) * height;
+            ctx.fillText(val, 5, y - 5);
+          });
+        }
+
+        drawPath(
+          ctx,
+          type,
+          color,
+          strokeStyle,
+          fillStyle,
+          width,
+          height,
+          startX,
+          stepX,
+        ) {
+          ctx.beginPath();
+          ctx.strokeStyle = strokeStyle;
+          ctx.lineWidth = 3;
+          ctx.lineCap = "round";
+          ctx.lineJoin = "round";
+
+          const maxValue =
+            type === "cadence" ? this.maxCadence : this.maxResistance;
+
+          for (let i = 0; i < this.data.length; i++) {
+            const x = startX + i * stepX;
+            const val = this.data[i][type];
+            const y = height - (val / maxValue) * height;
+
+            if (i === 0) {
+              ctx.moveTo(x, y);
+            } else {
+              ctx.lineTo(x, y);
+            }
+          }
+          ctx.stroke();
+
+          // Fill area
+          ctx.lineTo(width, height);
+          ctx.lineTo(startX, height);
+          ctx.closePath();
+          const gradient = ctx.createLinearGradient(0, 0, 0, height);
+          gradient.addColorStop(0, fillStyle[0]);
+          gradient.addColorStop(1, fillStyle[1]);
+          ctx.fillStyle = gradient;
+          ctx.fill();
+        }
+
+        draw() {
+          const { width, height } = this.canvas.getBoundingClientRect();
+          const ctx = this.ctx;
+
+          ctx.clearRect(0, 0, width, height);
+
+          this.drawGrid(ctx, width, height);
+
+          if (this.data.length < 2) return;
+
+          const stepX = width / (this.maxDataPoints - 1);
+          const startX = width - (this.data.length - 1) * stepX;
+
+          // Draw Resistance (Red) first - lower layer
+          this.drawPath(
+            ctx,
+            "resistance",
+            "#F44336",
+            "#F44336",
+            ["rgba(244, 67, 54, 0.3)", "rgba(244, 67, 54, 0)"],
+            width,
+            height,
+            startX,
+            stepX,
+          );
+
+          // Draw Cadence (Green) second - upper layer
+          this.drawPath(
+            ctx,
+            "cadence",
+            "#4CAF50",
+            "#4CAF50",
+            ["rgba(76, 175, 80, 0.3)", "rgba(76, 175, 80, 0)"],
+            width,
+            height,
+            startX,
+            stepX,
+          );
+        }
+      }
+
+      const cadenceGraph = new CadenceGraph("cadence-graph");
+      const urlParams = new URLSearchParams(window.location.search);
+      const isMock = urlParams.has("mock");
+
+      const bluetoothService = isMock
+        ? new MockBluetoothService()
+        : new WebBluetoothService();
+
+      let cadence = 0;
+      let resistance = 0;
+      let power = 0;
 
       // Simple power function (replicates getPower in C)
       function getPower(cadence, resistance) {
         // Replace this with your actual formula if known
-        return cadence * resistance
+        return cadence * resistance;
       }
 
       function parseSensorData(data) {
         // data is Uint8Array
         switch (data[1]) {
           case 0xd1: // Cadence notification
-            cadence = (data[9] << 8) + data[10]
-            power = getPower(cadence, resistance)
-            break
+            cadence = (data[9] << 8) + data[10];
+            power = getPower(cadence, resistance);
+            break;
 
           case 0xd2: // Resistance notification
-            resistance = data[3]
-            power = getPower(cadence, resistance)
-            break
+            resistance = data[3];
+            power = getPower(cadence, resistance);
+            break;
 
           default:
             // Other notifications can be ignored or logged
-            console.warn("Unknown notification type:", data[1])
+            console.warn("Unknown notification type:", data[1]);
         }
 
-        return { cadence, resistance, power }
+        return { cadence, resistance, power };
       }
+
+      bluetoothService.onStatusChange = (msg) => {
+        setStatusMessage(msg);
+      };
+
+      bluetoothService.onData = (data) => {
+        const sdata = parseSensorData(data);
+        console.log("Sensor data:", sdata);
+
+        clearStatusMessage("");
+        updateValueOnElement(sdata.cadence, ".value--cadence");
+        updateValueOnElement(sdata.resistance, ".value--resistance");
+        updateValueOnElement(sdata.power, ".value--power");
+
+        cadenceGraph.addData(sdata.cadence, sdata.resistance);
+      };
+
+      bluetoothService.onStarted = () => {
+        startTimer();
+        document.querySelector("#pause-btn").style.display = "inline-block";
+        document.querySelector("#stop-btn").style.display = "inline-block";
+        document.querySelector("#stop-btn").textContent = "FINISH";
+
+        document
+          .querySelector(".app--connection-before")
+          ?.classList.remove("app--connection-before");
+        document
+          .querySelector(".app--connecting")
+          ?.classList.remove("app--connecting");
+      };
 
       async function connect() {
         try {
-          console.log("Requesting bike…")
-          const device = await navigator.bluetooth.requestDevice({
-            filters: [{ services: [deviceUUID] }],
-            optionalServices: [connectUUID],
-          })
-
           document
             .querySelector(".app--connection-before")
-            ?.classList.remove("app--connection-before")
+            ?.classList.remove("app--connection-before");
 
-          document.querySelector(".app")?.classList.add("app--connecting")
+          document.querySelector(".app")?.classList.add("app--connecting");
 
-          setStatusMessage("Loading...")
-
-          const server = await device.gatt.connect()
-          console.log("Connected:", device.name)
-
-          setStatusMessage("Loading....")
-          const service = await server.getPrimaryService(connectUUID)
-          console.log("Got service:", connectUUID)
-
-          setStatusMessage("Loading....")
-          const characteristics = await service.getCharacteristics()
-          for (const c of characteristics)
-            console.log("Characteristic:", c.uuid)
-          setStatusMessage("Loading.....")
-          // Try writing an initialization command first
-          const writeChar = await service.getCharacteristic(writeUUID)
-          const initCommand = new Uint8Array([0xf0, 0xb0, 0x01, 0x00, 0x00])
-          await writeChar.writeValue(initCommand)
-          console.log("Sent handshake/init command")
-
-          await writeChar.writeValue(
-            new Uint8Array([0xf0, 0xb0, 0x01, 0x01, 0xa2])
-          )
-
-          // Now subscribe to notifications
-          const sensorChar = await service.getCharacteristic(sensorUUID)
-
-          await sensorChar.startNotifications()
-          setStatusMessage("Loading......")
-
-          let started = false
-
-          sensorChar.addEventListener("characteristicvaluechanged", event => {
-            const value = event.target.value
-            const data = []
-            for (let i = 0; i < value.byteLength; i++)
-              data.push(value.getUint8(i))
-            const sdata = parseSensorData(data)
-            console.log("Sensor data:", sdata)
-
-            clearStatusMessage("")
-            updateValueOnElement(sdata.cadence, ".value--cadence")
-            updateValueOnElement(sdata.resistance, ".value--resistance")
-            updateValueOnElement(sdata.power, ".value--power")
-
-            if (!started) {
-              started = true
-              startTimer()
-              document
-                .querySelector(".app--connection-before")
-                ?.classList.remove("app--connection-before")
-              document
-                .querySelector(".app--connecting")
-                ?.classList.remove("app--connecting")
-            }
-          })
-
-          console.log("Listening for notifications...")
-          return writeChar
+          await bluetoothService.connect();
         } catch (err) {
-          console.error("Error:", err)
-        }
-      }
-
-      async function forceResistance(requestResistance, wchar) {
-        // Clamp resistance between 0–255 (typical uint8 range)
-        const resistance = Math.max(0, Math.min(255, requestResistance))
-
-        // Build packet: f0 b1 01 <resistance> 00
-        const cmd = new Uint8Array([0xf0, 0xb1, 0x01, resistance, 0x00])
-
-        // Compute checksum (sum of first 4 bytes, overflow at 8 bits)
-        for (let i = 0; i < cmd.length - 1; i++) {
-          cmd[4] = (cmd[4] + cmd[i]) & 0xff
-        }
-
-        console.log(
-          "Sending forceResistance packet:",
-          Array.from(cmd)
-            .map(b => b.toString(16).padStart(2, "0"))
-            .join(" ")
-        )
-
-        try {
-          await wchar.writeValue(cmd)
-          console.log("✅ Force resistance sent:", resistance)
-        } catch (err) {
-          console.error("❌ Failed to send force resistance:", err)
+          console.error("Error:", err);
         }
       }
 
       function updateValueOnElement(value, selector) {
-        const els = document.querySelectorAll(selector)
+        const els = document.querySelectorAll(selector);
         for (const el of els) {
-          el.textContent = value
+          el.textContent = Math.round(value);
         }
       }
 
@@ -361,23 +660,23 @@
         if (!document.fullscreenElement) {
           // If the document is not in full screen mode
           // make the video full screen
-          video.requestFullscreen()
+          video.requestFullscreen();
         } else {
           // Otherwise exit the full screen
-          document.exitFullscreen?.()
+          document.exitFullscreen?.();
         }
       }
 
-      var timerInterval
-      var startTime = null
-      var elapsedBeforePause = 0
-      var isRunning = false
+      var timerInterval;
+      var startTime = null;
+      var elapsedBeforePause = 0;
+      var isRunning = false;
 
       function formatElapsedTime(seconds) {
-        seconds = Math.floor(seconds)
-        var hours = Math.floor(seconds / 3600)
-        var minutes = Math.floor((seconds % 3600) / 60)
-        var secs = seconds % 60
+        seconds = Math.floor(seconds);
+        var hours = Math.floor(seconds / 3600);
+        var minutes = Math.floor((seconds % 3600) / 60);
+        var secs = seconds % 60;
 
         if (hours > 0) {
           return (
@@ -386,113 +685,117 @@
             (minutes < 10 ? "0" + minutes : minutes) +
             ":" +
             (secs < 10 ? "0" + secs : secs)
-          )
+          );
         } else {
           return (
             (minutes < 10 ? "0" + minutes : minutes) +
             ":" +
             (secs < 10 ? "0" + secs : secs)
-          )
+          );
         }
       }
 
       function updateDisplay() {
-        var elapsed = elapsedBeforePause
+        var elapsed = elapsedBeforePause;
         if (isRunning) {
-          elapsed += (Date.now() - startTime) / 1000
-          document.querySelector(".value--time").classList?.remove('paused')
+          elapsed += (Date.now() - startTime) / 1000;
+          document.querySelector(".value--time").classList?.remove("paused");
         } else {
-          document.querySelector(".value--time").classList?.add('paused')
+          document.querySelector(".value--time").classList?.add("paused");
         }
         document.querySelector(".value--time").textContent =
-          formatElapsedTime(elapsed)
+          formatElapsedTime(elapsed);
       }
 
       function startTimer() {
         if (!isRunning) {
-          startTime = Date.now()
-          isRunning = true
-          timerInterval = setInterval(updateDisplay, 200)
+          startTime = Date.now();
+          isRunning = true;
+          timerInterval = setInterval(updateDisplay, 200);
         }
       }
 
       function pauseTimer() {
         if (isRunning) {
-          elapsedBeforePause += (Date.now() - startTime) / 1000
-          clearInterval(timerInterval)
-          isRunning = false
-          updateDisplay()
+          elapsedBeforePause += (Date.now() - startTime) / 1000;
+          clearInterval(timerInterval);
+          isRunning = false;
+          updateDisplay();
         }
       }
 
       function resumeTimer() {
         if (!isRunning) {
-          startTime = Date.now()
-          isRunning = true
-          timerInterval = setInterval(updateDisplay, 200)
+          startTime = Date.now();
+          isRunning = true;
+          timerInterval = setInterval(updateDisplay, 200);
         }
       }
 
       function stopTimer() {
-        clearInterval(timerInterval)
-        isRunning = false
-        elapsedBeforePause = 0
-        startTime = null
-        updateDisplay()
+        clearInterval(timerInterval);
+        isRunning = false;
+        elapsedBeforePause = 0;
+        startTime = null;
+        updateDisplay();
       }
 
       function setStatusMessage(msg) {
-        document.querySelector(".status-msg").textContent = msg
+        document.querySelector(".status-msg").textContent = msg;
       }
 
       function clearStatusMessage() {
-        document.querySelector(".status-msg").textContent = ""
+        document.querySelector(".status-msg").textContent = "";
       }
 
-      document.querySelector('#pause-btn').addEventListener('click', (e) => {
+      document.querySelector("#pause-btn").addEventListener("click", (e) => {
         if (isRunning) {
           pauseTimer();
-          e.target.textContent = 'RESUME';
+          e.target.textContent = "RESUME";
         } else {
           resumeTimer();
-          e.target.textContent = 'PAUSE';
+          e.target.textContent = "PAUSE";
         }
-      })
+      });
 
-      document.querySelector('#stop-btn').addEventListener('click', (e) => {
+      document.querySelector("#stop-btn").addEventListener("click", (e) => {
         if (startTime === null && elapsedBeforePause === 0) {
+          cadenceGraph.reset(); // Clear graph for new session
           startTimer();
-          e.target.textContent = 'STOP';
+          e.target.textContent = "FINISH";
+          document.querySelector("#pause-btn").style.display = "inline-block";
         } else {
-          
           stopTimer();
-          e.target.textContent = 'START';
+          e.target.textContent = "START";
+          document.querySelector("#pause-btn").style.display = "none";
         }
-      })
+      });
 
       document
         .querySelector("#start-btn")
         .addEventListener("click", async () => {
-          const wchar = await connect()
-          window.wchar = wchar
+          await connect();
 
-          const els = document.querySelectorAll(".set-r-btn")
+          const els = document.querySelectorAll(".set-r-btn");
           for (const el of els) {
             el.addEventListener("click", async () => {
-              await forceResistance(parseInt(el.dataset.resistance), wchar)
-            })
+              await bluetoothService.setResistance(
+                parseInt(el.dataset.resistance),
+              );
+            });
           }
-        })
+        });
 
       document
         .querySelector("#fullscreen-toggle-btn")
         ?.addEventListener("click", async () => {
           if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen()
+            document.documentElement.requestFullscreen();
           } else {
-            document.exitFullscreen()
+            document.exitFullscreen();
           }
-        })
+        });
     </script>
   </body>
 </html>
+
