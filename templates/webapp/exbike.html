@@ -55,7 +55,7 @@
       .status {
         flex: 1;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -89,23 +89,17 @@
         align-items: center;
       }
 
+      .graph-wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
       #cadence-graph {
         width: 100%;
         height: 100px;
         margin-top: 1rem;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-      }
-
-      @media screen and (max-width: 1200px) {
-        .status {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: auto auto;
-        }
-        .status--time {
-          grid-column-start: 1;
-          grid-column-end: 5;
-        }
       }
 
       button {
@@ -229,7 +223,7 @@
         <h3>Mock Controller</h3>
         <div class="mock-status">Status: <span id="mock-status-text">Stopped</span></div>
         <button id="mock-run-btn">RUN (60)</button>
-        <button id="mock-fast-btn">FAST (160)</button>
+        <button id="mock-fast-btn">FAST (100)</button>
         <button id="mock-stop-btn">STOP</button>
       </div>
 
@@ -255,7 +249,6 @@
         <div class="status-item status--time">
           <span class="num-label">Time</span>
           <span class="num-value value--time">00:00</span>
-          <canvas id="cadence-graph"></canvas>
         </div>
         <div class="status-item">
           <span class="num-label">Cadence</span>
@@ -269,6 +262,10 @@
           <span class="num-label">Power</span>
           <span class="num-value value--power">0</span>
         </div>
+      </div>
+
+      <div class="graph-wrapper">
+        <canvas id="cadence-graph"></canvas>
       </div>
 
       <div class="bottom-actions action-line">
@@ -505,7 +502,7 @@
           this.ctx = this.canvas.getContext("2d");
           this.data = [];
           this.maxDataPoints = 300;
-          this.maxCadence = 200;
+          this.maxCadence = 150;
           this.maxResistance = 40;
 
           this.resize();
@@ -657,7 +654,7 @@
         document
           .getElementById("mock-fast-btn")
           .addEventListener("click", () => {
-            if (isMock) bluetoothService.startMocking(160);
+            if (isMock) bluetoothService.startMocking(100);
           });
         document
           .getElementById("mock-stop-btn")
