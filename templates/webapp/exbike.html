@@ -175,6 +175,42 @@
         animation: blink-fade 1s steps(1, end) infinite;
       }
 
+      .mock-controller {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid #4caf50;
+        padding: 1rem;
+        border-radius: 10px;
+        z-index: 2000;
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        cursor: move;
+        user-select: none;
+      }
+
+      .mock-controller h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 16px;
+        color: #4caf50;
+        text-transform: uppercase;
+      }
+
+      .mock-controller .mock-status {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+
+      .mock-controller button {
+        font-size: 18px;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border-width: 2px;
+      }
+
       @keyframes blink-fade {
         0%,
         49% {
@@ -189,8 +225,16 @@
   </head>
   <body>
     <div class="app app--connection-before">
+      <div id="mock-controller" class="mock-controller">
+        <h3>Mock Controller</h3>
+        <div class="mock-status">Status: <span id="mock-status-text">Stopped</span></div>
+        <button id="mock-run-btn">RUN (60)</button>
+        <button id="mock-fast-btn">FAST (160)</button>
+        <button id="mock-stop-btn">STOP</button>
+      </div>
+
       <div class="connect-actions full-actions">
-        <button id="start-btn">Start</button>
+        <button id="connect-btn">Connect</button>
         <p>
           If it doesn't appear on the list,<br />
           try using a pedal on the exercise bike.
@@ -203,7 +247,7 @@
       </div>
       <div class="top-actions action-line">
         <button id="pause-btn" style="display: none">PAUSE</button>
-        <button id="stop-btn" style="display: none">FINISH</button>
+        <button id="stop-btn" style="display: none">START</button>
         <!-- <button id="fullscreen-toggle-btn">Fullscreen</button> -->
       </div>
 
@@ -373,6 +417,7 @@
           this.resistance = 10;
           this.interval = null;
           this.started = false;
+          this.isMocking = false;
         }
 
         async connect() {
@@ -381,15 +426,24 @@
           this.setStatus("Mock: Connected");
           await new Promise((resolve) => setTimeout(resolve, 500));
 
-          this.startMocking();
+          // In standby mode, we don't start mocking automatically
+          this.updateMockStatusUI();
         }
 
-        startMocking() {
+        startMocking(baseCadence = 60) {
+          if (this.isMocking) {
+            // If already mocking, just update the cadence immediately
+            this.cadence = baseCadence;
+            return;
+          }
+          this.isMocking = true;
+          this.updateMockStatusUI();
+
           this.interval = setInterval(() => {
             // Simulate cadence fluctuations
             this.cadence = Math.max(
               0,
-              Math.min(120, this.cadence + (Math.random() * 10 - 5)),
+              Math.min(200, this.cadence + (Math.random() * 10 - 5)),
             );
 
             // Cadence notification: f0 d1 ...
@@ -414,8 +468,29 @@
 
           // Initial start to trigger UI
           setTimeout(() => {
-            this.cadence = 60;
-          }, 2000);
+            if (this.isMocking) this.cadence = baseCadence;
+          }, 500);
+        }
+
+        stopMocking() {
+          this.isMocking = false;
+          if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+          }
+          this.cadence = 0;
+          this.updateMockStatusUI();
+
+          // Reset UI values
+          this.emitData(new Uint8Array([0xf0, 0xd1, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
+        }
+
+        updateMockStatusUI() {
+          const statusText = document.getElementById("mock-status-text");
+          if (statusText) {
+            statusText.textContent = this.isMocking ? "Running" : "Stopped";
+            statusText.style.color = this.isMocking ? "#4caf50" : "#f44336";
+          }
         }
 
         async setResistance(resistance) {
@@ -570,6 +645,60 @@
       const urlParams = new URLSearchParams(window.location.search);
       const isMock = urlParams.has("mock");
 
+      if (isMock) {
+        const mockController = document.getElementById("mock-controller");
+        mockController.style.display = "flex";
+
+        document
+          .getElementById("mock-run-btn")
+          .addEventListener("click", () => {
+            if (isMock) bluetoothService.startMocking(60);
+          });
+        document
+          .getElementById("mock-fast-btn")
+          .addEventListener("click", () => {
+            if (isMock) bluetoothService.startMocking(160);
+          });
+        document
+          .getElementById("mock-stop-btn")
+          .addEventListener("click", () => {
+            if (isMock) bluetoothService.stopMocking();
+          });
+
+        // Draggable logic
+        let pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        mockController.onmousedown = (e) => {
+          if (e.target.tagName === "BUTTON") return;
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = () => {
+            document.onmouseup = null;
+            document.onmousemove = null;
+          };
+          document.onmousemove = (e) => {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+
+            // Reset transform and other fixed positions
+            mockController.style.transform = "none";
+            mockController.style.right = "auto";
+            mockController.style.bottom = "auto";
+
+            mockController.style.top = mockController.offsetTop - pos2 + "px";
+            mockController.style.left = mockController.offsetLeft - pos1 + "px";
+          };
+        };
+      }
+
       const bluetoothService = isMock
         ? new MockBluetoothService()
         : new WebBluetoothService();
@@ -618,21 +747,34 @@
         updateValueOnElement(sdata.resistance, ".value--resistance");
         updateValueOnElement(sdata.power, ".value--power");
 
+        // Auto start timer if cadence is detected and we are in standby (START button showing)
+        if (
+          sdata.cadence > 0 &&
+          !isRunning &&
+          startTime === null &&
+          document.querySelector("#stop-btn").textContent === "START"
+        ) {
+          startTimer();
+          document.querySelector("#stop-btn").textContent = "FINISH";
+          document.querySelector("#pause-btn").style.display = "inline-block";
+        }
+
         cadenceGraph.addData(sdata.cadence, sdata.resistance);
       };
 
       bluetoothService.onStarted = () => {
-        startTimer();
-        document.querySelector("#pause-btn").style.display = "inline-block";
-        document.querySelector("#stop-btn").style.display = "inline-block";
-        document.querySelector("#stop-btn").textContent = "FINISH";
-
+        // Just remove overlays if they are still there
         document
           .querySelector(".app--connection-before")
           ?.classList.remove("app--connection-before");
         document
           .querySelector(".app--connecting")
           ?.classList.remove("app--connecting");
+
+        document.querySelector("#stop-btn").style.display = "inline-block";
+        if (!isRunning && startTime === null) {
+          document.querySelector("#stop-btn").textContent = "START";
+        }
       };
 
       async function connect() {
@@ -644,8 +786,15 @@
           document.querySelector(".app")?.classList.add("app--connecting");
 
           await bluetoothService.connect();
+
+          // Connection successful, move to standby
+          document.querySelector(".app")?.classList.remove("app--connecting");
+          document.querySelector("#stop-btn").style.display = "inline-block";
+          document.querySelector("#stop-btn").textContent = "START";
         } catch (err) {
           console.error("Error:", err);
+          document.querySelector(".app")?.classList.add("app--connection-before");
+          document.querySelector(".app")?.classList.remove("app--connecting");
         }
       }
 
@@ -772,7 +921,7 @@
       });
 
       document
-        .querySelector("#start-btn")
+        .querySelector("#connect-btn")
         .addEventListener("click", async () => {
           await connect();
 
@@ -798,4 +947,3 @@
     </script>
   </body>
 </html>
-
