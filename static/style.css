@@ -133,3 +133,9 @@ figcaption {
     opacity: 0.1;
     margin: 1rem 0 1rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    pre code.hljs {
+        background-color: #333;
+    }
+}
