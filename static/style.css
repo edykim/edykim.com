@@ -142,6 +142,30 @@ figcaption {
     margin: 1rem 0 1rem;
 }
 
+.page .content > .columns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.page .content > .columns > * {
+    flex: 1;
+}
+
+figure p {
+    margin: 0;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+figcaption {
+    margin-top: 0.25rem;
+}
+
 table,
 table th,
 table td {
