@@ -106,7 +106,26 @@ figcaption {
 
 .likes-widget button {
     appearance: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    background-color: #ced0ce;
+    color: #000000;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    outline: none;
 }
+
+.likes-widget button:active {
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 5px 9px 3px 11px;
+}
+
 
 .site-footer:before {
     display: block;
