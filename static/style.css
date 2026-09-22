@@ -133,3 +133,25 @@ figcaption {
     opacity: 0.1;
     margin: 1rem 0 1rem;
 }
+
+table,
+table th,
+table td {
+    border: 1px solid currentColor;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9em;
+}
+
+pre code.hljs {
+    background-color: #ffd;
+}
+@media (prefers-color-scheme: dark) {
+    pre code.hljs {
+        background-color: #200;
+    }
+}
