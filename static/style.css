@@ -218,3 +218,8 @@ pre code.hljs {
     }
 }
 
+
+iframe {
+    max-width: 100%;
+}
+
