@@ -8,8 +8,6 @@ noIndex: true
 noInteraction: true
 ---
 
-<!-- @template posts-nav -->
-
 <details>
 <summary>사는 이야기</summary>
 

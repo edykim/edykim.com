@@ -4,7 +4,7 @@ import {publicPostOnly, publicListablePostOnly, hasTag} from './../src/filters.j
 const components = [
     {
         key: 'posts',
-        template: '_insert/posts.html',
+        template: '_insert/posts-list.html',
         props: (node, nodes) => ({
             node,
             nodes: publicPostOnly(nodes, node.data.frontmatter.lang)
@@ -12,7 +12,7 @@ const components = [
     },
     {
         key: 'tag',
-        template: '_insert/posts.html',
+        template: '_insert/posts-list.html',
         props: (node, nodes) => ({
             node,
             nodes: publicListablePostOnly(node.data.fields.rels, node.data.frontmatter.lang)

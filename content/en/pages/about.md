@@ -18,18 +18,8 @@ noInteraction: true
 
 </div>
 
-:::div{.narrow}
-
 Hey, I’m Edward! I’m a web developer who enjoys tackling challenging problems and building rapid prototypes. I’m particularly interested in web technologies, software architecture, and the communities that grow around them.
 
 I’ve worked across a range of environments, from educational institutions to creative web agencies. More details about my professional background can be found on [this page](https://www.linkedin.com/in/edwardykim/).
 
-<hr />
-
-### Get in touch
-
-- [edward@edykim.com](mailto:edward@edykim.com)
-- [twitter/itsedykim](https://twitter.com/itsedykim)
-- [@edykim.bsky.social (Korean)](https://bsky.app/profile/edykim.bsky.social)
-
-:::
+You can reach me at edward \[at\] this website domain.

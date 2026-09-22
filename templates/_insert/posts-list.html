@@ -1,8 +1,10 @@
 <div class="list-page">
     <div class="list-section">
         <ul class="post-title-list">
-            ${
-            data.nodes.map(node => {
+${((nodes, node) => {
+
+    function templateList(nodes) {
+        const list = nodes.map(node => {
                 const data = node.data;
                 return `<li>
                     <time class="date" datetime="${data.frontmatter.date}">${moment(data.frontmatter.date).format('YYYY-MM-DD')}</time>
@@ -10,8 +12,14 @@
                         <a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a>
                     </span>
                 </li>`
-            }).join('')
-            }
+            }).join('');
+        return list;
+    }
+
+    return templateList(nodes);
+
+})(data.nodes, data.node)}
+
         </ul>
     </div>
 </div>
