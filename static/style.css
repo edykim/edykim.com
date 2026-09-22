@@ -106,6 +106,10 @@ figcaption {
 
 }
 
+.likes-widget button {
+    appearance: none;
+}
+
 .site-footer:before {
     display: block;
     content: "::::::::::::::::::::::::::::::::::";
