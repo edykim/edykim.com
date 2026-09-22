@@ -24,9 +24,7 @@ body {
 }
 .site-nav a.active {
     font-weight: bold;
-    border: 2px dotted currentColor;
-    border-left: 0;
-    border-right: 0;
+    border-bottom: 2px dotted currentColor;
 }
 
 img {
