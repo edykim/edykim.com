@@ -10,7 +10,7 @@ url: bookmarks
 noIndex: true
 ---
 
-## 개인
+### 개인
 
 - [권혜정을 권해](https://kwonejeong.tistory.com/){data-lang=국문 data-tags=개인}
 - [Jayoung](https://jayoung.substack.com/){data-lang=국문 data-tags=개인,프로덕트}
@@ -21,7 +21,7 @@ noIndex: true
 - [고은비 블로그](https://eunbiko.com/){data-lang=국문 data-tags=개인,창작}
 - [괜스레 저렇게](https://gwenzhir.kim/){data-lang=국문 data-tags=개인}
 
-## 개인/개발
+### 개인/개발
 
 - [기계인간 John Grib](https://johngrib.github.io/){data-lang=국문 data-tags=개인,개발}
 - [Cojette의 Data Wonderland](https://cojette.github.io/){data-lang=국문 data-tags=개인,개발,데이터}
@@ -59,7 +59,7 @@ noIndex: true
 - [Daybreaker Joongi Kim](https://daybreaker.info/){data-lang=국문 data-tags=개인,개발}
 - [cat-v.org](https://cat-v.org/){data-lang=영문 data-tags=개인,개발}
 
-## 웹과 인터넷
+### 웹/인터넷
 
 - [People and Blogs](https://peopleandblogs.com/){data-lang=영문 data-tags=정보,웹진}
 - [WriterDeck.org](http://www.writerdeck.org/){data-lang=영문 data-tags=키보드,정보}
@@ -68,7 +68,7 @@ noIndex: true
 - [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 
-## 읽을거리와 미디어
+### 읽을거리/미디어
 
 - [민음사TV](https://www.youtube.com/@minumsaTV){data-lang=국문 data-tags=정보,미디어}
 - [월간 윤종신](https://yoonjongshin.com/){data-lang=국문 data-tags=정보,미디어}
@@ -82,11 +82,11 @@ noIndex: true
 - [Achim](https://have-achim.com/){data-lang=국문 data-tags=정보,웹진}
 - [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
 
-## 디자인
+### 디자인
 
 - [Dinamo Typefaces](https://abcdinamo.com/){data-lang=영문 data-tags=상점,디자인}
 
-## 문구와 물건
+### 문구/물건
 
 - [흑심 BLACKHEART](https://blackheart.kr/){data-lang=국문 data-tags=상점,문구}
 - [콜렉토그라프](https://collectograph.com/){data-lang=국문 data-tags=상점,문구}

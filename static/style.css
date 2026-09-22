@@ -81,6 +81,14 @@ img {
     margin-top: -0.5rem;
 }
 
+.updated-on, .published-on {
+    display: inline-block;
+}
+
+.updated-on:after {
+    content: '·';
+}
+
 blockquote {
     background: #ddd;
     padding: 0.25rem 1rem;
