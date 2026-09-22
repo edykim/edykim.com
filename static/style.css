@@ -163,3 +163,34 @@ pre code.hljs {
         background-color: #200;
     }
 }
+
+.bookmarks ul {
+    column-count: 3;
+    column-gap: 20px;
+    list-style: square;
+}
+
+.bookmarks h2 {
+    font-size: 1rem;
+}
+
+.bookmarks h2:before {
+    content: '';
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .bookmarks ul {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .bookmarks ul {
+        column-count: 1;
+    }
+}
+

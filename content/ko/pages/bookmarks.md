@@ -10,7 +10,48 @@ url: bookmarks
 noIndex: true
 ---
 
-### 개인
+:::div{.bookmarks}
+
+## 웹/인터넷
+
+- [People and Blogs](https://peopleandblogs.com/){data-lang=영문 data-tags=정보,웹진}
+- [WriterDeck.org](http://www.writerdeck.org/){data-lang=영문 data-tags=키보드,정보}
+- [Dead Simple Sites](https://deadsimplesites.com/){data-lang=영문 data-tags=정보,아카이브}
+- [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
+- [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
+- [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
+
+## 읽을거리/미디어
+
+- [민음사TV](https://www.youtube.com/@minumsaTV){data-lang=국문 data-tags=정보,미디어}
+- [월간 윤종신](https://yoonjongshin.com/){data-lang=국문 data-tags=정보,미디어}
+- [디에디트](https://the-edit.co.kr/){data-lang=국문 data-tags=정보,미디어}
+- [듀나의 영화낙서판](http://www.djuna.kr/xe/review){data-lang=국문 data-tags=정보,미디어}
+- [GeekNews](https://news.hada.io/){data-lang=국문 data-tags=정보,개발}
+- [스타트업 바이블](https://www.thestartupbible.com/){data-lang=국문 data-tags=정보,프로덕트}
+- [The Local Project](https://thelocalproject.com.au/){data-lang=영문 data-tags=정보}
+- [The Pudding](https://pudding.cool/){data-lang=영문 data-tags=정보,디자인,데이터}
+- [LIFE LABEL](https://lifelabel.jp/){data-lang=일문 data-tags=정보,웹진,디자인}
+- [Achim](https://have-achim.com/){data-lang=국문 data-tags=정보,웹진}
+- [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
+
+## 디자인
+
+- [Dinamo Typefaces](https://abcdinamo.com/){data-lang=영문 data-tags=상점,디자인}
+
+## 문구/물건
+
+- [흑심 BLACKHEART](https://blackheart.kr/){data-lang=국문 data-tags=상점,문구}
+- [콜렉토그라프](https://collectograph.com/){data-lang=국문 data-tags=상점,문구}
+- [오롤리데이](https://www.oh-lolly-day.com/){data-lang=국문 data-tags=상점,문구}
+- [OMOI](https://omoionline.com/){data-lang=영문 data-tags=상점,문구,잡화}
+- [Crumpler](https://www.crumpler.com/){data-lang=영문 data-tags=상점,잡화}
+- [Topo Designs](https://topodesigns.com/){data-lang=영문 data-tags=상점,잡화}
+- [tomtoc](https://www.tomtoc.com/){data-lang=영문 data-tags=상점,잡화}
+- [WAKA-WAKA](https://wakawaka.world/){data-lang=영문 data-tags=상점,인테리어}
+- [Tivoli Audio](https://tivoliaudio.com/){data-lang=영문 data-tags=상점,인테리어}
+
+## 개인
 
 - [권혜정을 권해](https://kwonejeong.tistory.com/){data-lang=국문 data-tags=개인}
 - [Jayoung](https://jayoung.substack.com/){data-lang=국문 data-tags=개인,프로덕트}
@@ -21,7 +62,7 @@ noIndex: true
 - [고은비 블로그](https://eunbiko.com/){data-lang=국문 data-tags=개인,창작}
 - [괜스레 저렇게](https://gwenzhir.kim/){data-lang=국문 data-tags=개인}
 
-### 개인/개발
+## 개인/개발
 
 - [기계인간 John Grib](https://johngrib.github.io/){data-lang=국문 data-tags=개인,개발}
 - [Cojette의 Data Wonderland](https://cojette.github.io/){data-lang=국문 data-tags=개인,개발,데이터}
@@ -59,42 +100,4 @@ noIndex: true
 - [Daybreaker Joongi Kim](https://daybreaker.info/){data-lang=국문 data-tags=개인,개발}
 - [cat-v.org](https://cat-v.org/){data-lang=영문 data-tags=개인,개발}
 
-### 웹/인터넷
-
-- [People and Blogs](https://peopleandblogs.com/){data-lang=영문 data-tags=정보,웹진}
-- [WriterDeck.org](http://www.writerdeck.org/){data-lang=영문 data-tags=키보드,정보}
-- [Dead Simple Sites](https://deadsimplesites.com/){data-lang=영문 data-tags=정보,아카이브}
-- [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
-- [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
-- [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
-
-### 읽을거리/미디어
-
-- [민음사TV](https://www.youtube.com/@minumsaTV){data-lang=국문 data-tags=정보,미디어}
-- [월간 윤종신](https://yoonjongshin.com/){data-lang=국문 data-tags=정보,미디어}
-- [디에디트](https://the-edit.co.kr/){data-lang=국문 data-tags=정보,미디어}
-- [듀나의 영화낙서판](http://www.djuna.kr/xe/review){data-lang=국문 data-tags=정보,미디어}
-- [GeekNews](https://news.hada.io/){data-lang=국문 data-tags=정보,개발}
-- [스타트업 바이블](https://www.thestartupbible.com/){data-lang=국문 data-tags=정보,프로덕트}
-- [The Local Project](https://thelocalproject.com.au/){data-lang=영문 data-tags=정보}
-- [The Pudding](https://pudding.cool/){data-lang=영문 data-tags=정보,디자인,데이터}
-- [LIFE LABEL](https://lifelabel.jp/){data-lang=일문 data-tags=정보,웹진,디자인}
-- [Achim](https://have-achim.com/){data-lang=국문 data-tags=정보,웹진}
-- [Keyboard Builders' Digest](https://kbd.news/){data-lang=영문 data-tags=웹진,키보드}
-
-### 디자인
-
-- [Dinamo Typefaces](https://abcdinamo.com/){data-lang=영문 data-tags=상점,디자인}
-
-### 문구/물건
-
-- [흑심 BLACKHEART](https://blackheart.kr/){data-lang=국문 data-tags=상점,문구}
-- [콜렉토그라프](https://collectograph.com/){data-lang=국문 data-tags=상점,문구}
-- [오롤리데이](https://www.oh-lolly-day.com/){data-lang=국문 data-tags=상점,문구}
-- [OMOI](https://omoionline.com/){data-lang=영문 data-tags=상점,문구,잡화}
-- [Crumpler](https://www.crumpler.com/){data-lang=영문 data-tags=상점,잡화}
-- [Topo Designs](https://topodesigns.com/){data-lang=영문 data-tags=상점,잡화}
-- [tomtoc](https://www.tomtoc.com/){data-lang=영문 data-tags=상점,잡화}
-- [WAKA-WAKA](https://wakawaka.world/){data-lang=영문 data-tags=상점,인테리어}
-- [Tivoli Audio](https://tivoliaudio.com/){data-lang=영문 data-tags=상점,인테리어}
-
+:::
