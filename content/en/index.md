@@ -14,6 +14,4 @@ noInteraction: true
 
 This website is a small collection of my writings, interests, and a bunch of memos.
 
-I enjoy talking about the web, open source, photography, and coffee.
-
 If you prefer, you can check out [the Korean pages](/ko).

@@ -11,7 +11,3 @@ noInteraction: true
 ---
 
 <p><img src="/resources/home/coffee.png" alt="San Diego CA, 2025" loading="lazy"></p>
-
-안녕하세요, 이 공간은 저에게 흥미 있는 주제들을 모아둔 개인 웹사이트입니다.
-
-웹, 오픈소스, 사진, 커피 얘기하기 좋아합니다.
