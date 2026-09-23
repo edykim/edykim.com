@@ -11,3 +11,6 @@ noInteraction: true
 ---
 
 <p><img src="/resources/home/coffee.png" alt="San Diego CA, 2025" loading="lazy"></p>
+
+여기는 제가 쓴 글과 관심사, 이런저런 메모를 모아둔 작은 공간입니다.
+
