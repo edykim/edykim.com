@@ -2,7 +2,7 @@ import chunk from 'lodash.chunk'
 import {latestFirst} from './sort.js'
 import {getMappedTags} from './../config/tag.js'
 
-const POST_PER_PAGE = 10;
+const POST_PER_PAGE = 1000000;
 
 const mapped = getMappedTags()
     .reduce((carry, value) => {
@@ -63,7 +63,7 @@ export function fetchTaxonomies(nodes, lang) {
             // skip it from the main list page...
             // and still appear on each tag page
         } else {
-            insertIntoTag('posts', node);
+            // insertIntoTag('posts', node);
         }
     }
 
@@ -131,7 +131,7 @@ export function fetchTaxonomies(nodes, lang) {
                         raw: true,
                     }
                 },
-                value: '<!-- @template tag -->',
+                value: '<!-- @template posts-nav --><!-- @template tag -->',
             }
             pages.push(p);
         });

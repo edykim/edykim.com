@@ -7,7 +7,7 @@ const components = [
         template: '_insert/posts-list.html',
         props: (node, nodes) => ({
             node,
-            nodes: publicPostOnly(nodes, node.data.frontmatter.lang)
+            nodes: publicListablePostOnly(nodes, node.data.frontmatter.lang)
         })
     },
     {

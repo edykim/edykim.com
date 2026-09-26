@@ -27,6 +27,12 @@ body {
     border-bottom: 2px dotted currentColor;
 }
 
+.site-title:after {
+    content: '·';
+    margin: 0 0.15rem 0 0.25rem;
+    opacity: 0.2;
+}
+
 img {
     max-width: 100%;
 }
@@ -115,23 +121,28 @@ figcaption {
 .likes-widget button {
     appearance: none;
     cursor: pointer;
+    font-family: "ChicagoFLF", "Chicago", "Charcoal", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
     font-size: 0.8rem;
-    padding: 4px 10px;
-    background-color: #ced0ce;
-    color: #000000;
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #808080;
-    border-bottom: 2px solid #808080;
+    padding: 0.2rem 0.75rem;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    box-shadow: 1px 1px 0 #000;
     outline: none;
 }
 
+.likes-widget button:focus-visible {
+    outline: 1px dotted #000;
+    outline-offset: 2px;
+}
+
+/* inverted and pressed into its shadow, like a classic Mac button click */
 .likes-widget button:active {
-    border-top: 2px solid #808080;
-    border-left: 2px solid #808080;
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding: 5px 9px 3px 11px;
+    color: #fff;
+    background-color: #000;
+    box-shadow: none;
+    transform: translate(1px, 1px);
 }
 
 
@@ -223,3 +234,158 @@ iframe {
     max-width: 100%;
 }
 
+.tags {
+    font-size: 0.8rem;
+}
+
+.list-page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    font-family: "ChicagoFLF", "Chicago", "Charcoal", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+    font-size: 0.85rem;
+}
+
+.dropdown-nav {
+    position: relative;
+}
+
+/* popup menu button: white box, 1px black border and hard drop shadow */
+.dropdown-nav > .label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 0 #000;
+}
+
+.dropdown-nav > .label:after {
+    content: '▼';
+    margin-left: 0.5rem;
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+
+/* highlighted like a selected menu bar title while open */
+.dropdown-nav:hover > .label,
+.dropdown-nav:focus-within > .label {
+    color: #fff;
+    background-color: #000;
+}
+
+.dropdown-nav .anchor {
+    display: none;
+}
+
+.dropdown-nav > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 10rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0.2rem 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.dropdown-nav:hover > ul,
+.dropdown-nav:focus-within > ul,
+.dropdown-nav > .anchor:target + ul {
+    display: block;
+}
+
+.dropdown-nav li a {
+    display: block;
+    padding: 0.15rem 1rem;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-nav li a:hover,
+.dropdown-nav li a:focus {
+    color: #fff;
+    background-color: #000;
+    outline: none;
+}
+
+.dropdown-nav li a span {
+    opacity: 0.6;
+    font-size: 0.85em;
+}
+
+/* nested groups: dotted separator + dimmed title like a disabled menu item */
+.dropdown-nav ul .dropdown-nav {
+    margin-top: 0.2rem;
+    padding-top: 0.2rem;
+    border-top: 1px dotted #000;
+}
+
+.dropdown-nav ul .dropdown-nav:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.dropdown-nav ul .dropdown-nav > .label,
+.dropdown-nav ul .dropdown-nav:hover > .label,
+.dropdown-nav ul .dropdown-nav:focus-within > .label {
+    display: block;
+    padding: 0.15rem 0.5rem;
+    color: #888;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.dropdown-nav ul .dropdown-nav > .label:after {
+    content: none;
+}
+
+.dropdown-nav ul .dropdown-nav > ul {
+    display: block;
+    position: static;
+    min-width: 0;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+
+@media screen and (max-width: 540px) {
+    .list-page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dropdown-nav > .label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .dropdown-nav > ul {
+        position: static;
+        min-width: 0;
+        max-height: 50vh;
+        border-top: 0;
+    }
+
+    .dropdown-nav li a {
+        padding: 0.5rem 1rem;
+        white-space: normal;
+    }
+}

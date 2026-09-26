@@ -2,7 +2,7 @@ const taxonomies = {
   key: `블로그`,
   children: [
     {
-      key: `사는 이야기`,
+      key: `일상`,
       children: [
         {
           key: `미국 사는 이야기`,
@@ -28,7 +28,7 @@ const taxonomies = {
       ],
     },
     {
-      key: `개발 이것저것`,
+      key: `개발`,
       children: [
         {
           key: `개발 이야기`,
