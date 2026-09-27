@@ -1,0 +1,18 @@
+${((data) => `<header class="page-header">
+    <h1 ${utils.displayTitle(data) === '글목록' ? 'class="header--posts"' : ''}><a href="/${!data.fields.url ? '' : `${data.fields.url}/`}">${utils.displayTitle(data)}</a></h1>
+
+    ${data.frontmatter.headline ? `<div class="headline">
+        ${data.frontmatter.headline.join('')}
+    </div>` : ''}
+
+    <div class="page-meta">
+        ${template('date.html', {
+            label: 'Updated on',
+            date: data.frontmatter.updatedOn,
+        })}
+        ${template('date.html', {
+            label: 'Published on',
+            date: data.frontmatter.date,
+        })}
+    </div>
+</header>`)(data.node.data)}

@@ -72,6 +72,13 @@ const components = [
         },
     },
     {
+        key: 'post-title',
+        template: '_insert/post-title.html',
+        props: (node, nodes) => ({
+            node,
+        })
+    },
+    {
         key: 'list-nav',
         template: '_insert/list-nav.html',
         props: (node, nodes) => ({

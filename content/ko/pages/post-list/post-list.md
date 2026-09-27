@@ -6,8 +6,11 @@ lang: ko
 url: post
 noIndex: true
 noInteraction: true
+noTitle: true
 ---
 
 <!-- @template posts-nav -->
+
+<!-- @template post-title -->
 
 <!-- @template post-list -->

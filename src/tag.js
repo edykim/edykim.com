@@ -118,6 +118,7 @@ export function fetchTaxonomies(nodes, lang) {
                         title,
                         type: 'tag',
                         noIndex: true,
+                        noTitle: true,
                         lang,
                     },
                     fields: {
@@ -131,7 +132,7 @@ export function fetchTaxonomies(nodes, lang) {
                         raw: true,
                     }
                 },
-                value: '<!-- @template posts-nav --><!-- @template tag -->',
+                value: '<!-- @template posts-nav --><!-- @template post-title --><!-- @template tag -->',
             }
             pages.push(p);
         });
