@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2025-11-15T23:15:23"
+updatedOn: "2026-09-29T16:56:53"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -20,6 +20,7 @@ noIndex: true
 - [Workspaces.xyz](https://www.workspaces.xyz/){data-lang=영문 data-tags=정보,웹진}
 - [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
+- [Naive Weekly](https://naiveweekly.com/)
 
 ## 읽을거리/미디어
 
