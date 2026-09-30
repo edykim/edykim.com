@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2026-09-29T16:56:53"
+updatedOn: "2026-09-29T21:52:42"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -22,6 +22,7 @@ noIndex: true
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 - [Naive Weekly](https://naiveweekly.com/)
 - [connie surf index](https://connie.surf)
+- [Publish Something Online](https://publishsomethingonline.com/)
 
 ## 읽을거리/미디어
 
