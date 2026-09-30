@@ -7,7 +7,8 @@ body {
     text-underline-offset: 2px;
     text-decoration-skip-ink: auto;
     margin: 0;
-    background-color: #f4f3f0;
+    background-color: #f1f1ee;
+    color: #333333;
 }
 
 .container {
@@ -21,6 +22,7 @@ body {
 
 .site-nav a {
     text-decoration: none;
+    color: inherit;
 }
 .site-nav a.active {
     font-weight: bold;
@@ -203,6 +205,11 @@ pre code.hljs {
     column-count: 3;
     column-gap: 20px;
     list-style: square;
+}
+
+.bookmarks ul li {
+  break-inside: avoid;
+  min-height: 1.5rem;
 }
 
 .bookmarks h2 {
