@@ -21,6 +21,7 @@ noIndex: true
 - [사이드프로젝트](https://sideproject.co.kr/){data-lang=국문 data-tags=인터뷰,웹진}
 - [요즘것들의사생활](https://yozmsa.com/){data-lang=국문 data-tags=인터뷰,웹진}
 - [Naive Weekly](https://naiveweekly.com/)
+- [connie surf index](https://connie.surf)
 
 ## 읽을거리/미디어
 
