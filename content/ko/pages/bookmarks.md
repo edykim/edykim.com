@@ -23,6 +23,7 @@ noIndex: true
 - [Naive Weekly](https://naiveweekly.com/)
 - [connie surf index](https://connie.surf)
 - [Publish Something Online](https://publishsomethingonline.com/)
+- [meta-archives](https://meta-archives.xyz/)
 
 ## 읽을거리/미디어
 
