@@ -1,14 +1,14 @@
 ${template('header-nav.html', {nav: `
     <span class="site-title"><a href="/ko/">용균</a></span>
     <nav>
-        <a ${utils.isActive(data, "/ko/notes/") ? 'class="active"' : ''} href="/ko/notes/">노트</a>
+        <a ${utils.isActive(data, "/ko/notes/") ? 'class="active"' : ''} href="/ko/notes/"><span>노트</span></a>
         <a ${utils.isActive(data, "/ko/post/")
             || utils.isActive(data, "/ko/post/page/", true)
             || utils.isActive(data, "/ko/post/list/", true)
             || utils.isActive(data, "/ko/tag/", true)
             || utils.isActive(data, "/ko/archives/", true)
-            ? 'class="active"' : ''} href="/ko/post/">글</a>
-        <a ${utils.isActive(data, "/ko/about/", true) ? 'class="active"' : ''} href="/ko/about/">소개</a>
+            ? 'class="active"' : ''} href="/ko/post/"><span>글</span></a>
+        <a ${utils.isActive(data, "/ko/about/", true) ? 'class="active"' : ''} href="/ko/about/"><span>소개</span></a>
     </nav>
 `})}
 
