@@ -1,5 +1,5 @@
 ---
-title: "글목록"
+title: "글"
 uuid: "4bca83de-653b-49ce-8b3d-4f9ed74f1c18"
 type: page
 lang: ko
@@ -11,6 +11,10 @@ noTitle: true
 
 <!-- @template posts-nav -->
 
-<!-- @template post-title -->
+<h2 class="subtitle"><a href="/ko/post/list/">최근 글 →</a></h2>
 
-<!-- @template post-list -->
+<!-- @template post-list {"publicOnly": true, "limit": 5} -->
+
+<h2 class="subtitle"><a href="/ko/tag/memo/">작은 글 →</a></h2>
+
+<!-- @template post-list {"tag": "부스러기", "limit": 5} -->

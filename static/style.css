@@ -64,6 +64,7 @@ img {
 .subtitle a {
     color: inherit;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .page-header h1 a {
