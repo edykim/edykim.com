@@ -4,7 +4,7 @@ author: haruair
 uuid: "2c0c3c79-5461-4d5d-88ca-042fe64ac0e2"
 type: page
 date: "2024-03-06T09:35:31"
-updatedOn: "2026-09-29T21:52:42"
+updatedOn: "2026-10-05T00:31:54"
 lang: ko
 url: bookmarks 
 noIndex: true
@@ -24,6 +24,7 @@ noIndex: true
 - [connie surf index](https://connie.surf)
 - [Publish Something Online](https://publishsomethingonline.com/)
 - [meta-archives](https://meta-archives.xyz/)
+- [Michael Nielsen's notebook](https://michaelnotebook.com/)
 
 ## 읽을거리/미디어
 
