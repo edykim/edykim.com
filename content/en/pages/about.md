@@ -20,6 +20,4 @@ noInteraction: true
 
 Hello, I am Edward, a web developer who enjoys tackling challenging problems and building rapid prototypes. I am particularly interested in web technologies, software architecture, and the communities that grow around them.
 
-[this page](https://www.linkedin.com/in/edwardykim/).
-
 You can reach me at edward \[at\] this website domain.
