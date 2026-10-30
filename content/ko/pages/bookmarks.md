@@ -62,7 +62,7 @@ noIndex: true
 - [Jayoung](https://jayoung.substack.com/){data-lang=국문 data-tags=개인,프로덕트}
 - [starla's trash can](https://starlakim.wordpress.com/){data-lang=국문 data-tags=정보,개인}
 - [작은배](https://jagunbae.com/){data-lang=국문 data-tags=창작}
-- [강단 블로그](https://kangminsuk.com/ko/){data-lang=국문 data-tags=개인,창작}
+- [강단 블로그](https://kangminsuk.com/){data-lang=국문 data-tags=개인,창작}
 - [로그아웃아일랜드](https://www.logoutisland.com/){data-lang=국문 data-tags=창작}
 - [고은비 블로그](https://eunbiko.com/){data-lang=국문 data-tags=개인,창작}
 - [괜스레 저렇게](https://gwenzhir.kim/){data-lang=국문 data-tags=개인}
