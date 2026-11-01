@@ -25,6 +25,9 @@ slug: sd/coffee
   ([지도](https://maps.app.goo.gl/PSo1YsgKmk4ikUdL7)):
   다양한 브루와 에스프레소 메뉴를 즐길 수 있는 카페. 커피도 맛있고 분위기도
   좋다.
+- [Relic Bakery & Kitchen](https://relicbakery.com/) ([지도](https://maps.app.goo.gl/ekpnzNxMy8hJk8eLA)):
+  아주 수준 높은 베이커리로 다양한 식사용 페이스트리를 제공하고 있다. 커피와
+  페어링이 좋다.
 - [Wayfarer Bread & Pastry](https://www.wayfarerbread.com/)
   ([지도](https://maps.app.goo.gl/F4vumjC5AzVfsiVX6)):
   오픈 전부터 줄서는 유명한 빵집인데 Sightglass 커피도 준비되어 있다. 커피
