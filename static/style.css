@@ -83,13 +83,42 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 0.25rem;
 }
 
+@media screen and (max-width: 400px) {
+    .post-title-list {
+        gap: 0.5rem;
+    }
+
+    .post-title-list li {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.post-title-list li span {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-title-list li span:after {
+    content: '';
+    display: inline-block;
+    flex: 1;
+    height: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+}
+
 .post-title-list .date {
-    order: 2;
-    opacity: 0.75;
-    font-size: 0.5em;
+    order: 1;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
 }
 
 .likes-widget {
