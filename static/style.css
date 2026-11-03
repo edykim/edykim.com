@@ -99,13 +99,13 @@ img {
     }
 }
 
-.post-title-list li span {
+.post-title-list li > span {
     flex: 1;
     display: inline-flex;
     align-items: center;
 }
 
-.post-title-list li span:after {
+.post-title-list li > span:after {
     content: '';
     display: inline-block;
     flex: 1;
@@ -115,10 +115,22 @@ img {
     border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
 }
 
-.post-title-list .date {
+.post-title-list .date,
+.post-title-list time {
     order: 1;
     font-variant-numeric: tabular-nums;
     text-align: right;
+}
+
+.post-title-list a {
+    color: inherit;
+    text-decoration-color: #ddd;
+}
+
+.post-title-list a:hover,
+.post-title-list a:active,
+.post-title-list a:focus {
+    background: #ffff9e;
 }
 
 .likes-widget {
