@@ -11,11 +11,4 @@
   "build": {
     "command": "npm run build"
   },
-
-  "r2_buckets": [
-    {
-      "binding": "ASSETS",
-      "bucket_name": "edykim-assets"
-    }
-  ]
 }
