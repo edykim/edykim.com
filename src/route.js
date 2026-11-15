@@ -15,9 +15,14 @@ export function parseRoute(file) {
         ps.push(frontmatter.slug);
     }
 
-    return ps.filter(v => v).join('/')
+    let result = ps.filter(v => v).join('/')
         .replace(/\/[\/]+/gi, '/')
-        .replace(/\./gi, '-')
         .replace(/(^\/|\/$)/gi, '');
+
+    if (! /\.html/.test(result)) {
+        result = result.replace(/\./gi, '-');
+    }
+
+    return result;
 }
 

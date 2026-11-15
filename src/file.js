@@ -28,10 +28,20 @@ export async function loadNodesFromGlob(globPath) {
 export function createPages({nodes, template}) {
     return async (_nodes, outputDir) => {
         for (const node of _nodes) {
-            const dir = path.join(outputDir, node.data.fields.url);
-            await mkdirp(dir);
+            const nodeUrl = node.data.fields.url;
+            let targetFileName;
 
-            fs.writeFile(`${dir}/index.html`, template(node, nodes), err => {
+            if (/\.html$/.test(nodeUrl)) {
+                const filePath = path.join(outputDir, nodeUrl);
+                targetFileName = filePath;
+                await mkdirp(path.dirname(filePath));
+            } else {
+                const dir = path.join(outputDir, nodeUrl);
+                targetFileName = `${dir}/index.html`;
+                await mkdirp(dir);
+            }
+
+            fs.writeFile(targetFileName, template(node, nodes), err => {
                 if (err) {
                     console.error(err);
                 }

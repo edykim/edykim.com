@@ -40,5 +40,8 @@
     "unist-util-visit": "^5.0.0",
     "uuid": "^14.0.2",
     "uuid-by-string": "^4.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.162.0"
   }
 }
