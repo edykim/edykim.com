@@ -12,6 +12,18 @@ body {
     line-height: 1.5;
 }
 
+a:link {
+    color: #0065ee;
+}
+
+a:visited {
+    color: #421a8b;
+}
+
+a:active {
+    color: #c60073;
+}
+
 .container {
     max-width: 600px;
     padding: 1rem;
