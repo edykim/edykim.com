@@ -1,0 +1,90 @@
+<script src="https://unpkg.com/turndown/dist/turndown.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.createElement("button")
+    button.setAttribute("type", "button")
+    button.textContent = "copy as markdown"
+    const span = document.createElement('span')
+    span.className = 'copied-message'
+
+    document.querySelector(".site-footer .site-container").append(button)
+    document.querySelector(".site-footer .site-container").append(span)
+
+    let spanTimeout = null;
+    button.addEventListener("click", function () {
+      const turndownService = new TurndownService()
+      const markdown = turndownService.turndown(
+        "<h1>" +
+          localStorage.getItem("draft-title") +
+          "</h1>" +
+          "\\n" +
+          localStorage.getItem("draft-content"),
+      )
+      copyText(markdown)
+
+      span.textContent = 'Copied!';
+
+      spanTimeout = setTimeout(() => {
+        clearTimeout(spanTimeout);
+        span.textContent = '';
+      }, 3000);
+    })
+
+    if (localStorage.getItem("draft-content")) {
+      document.querySelector(".content").innerHTML =
+        localStorage.getItem("draft-content")
+    }
+    if (localStorage.getItem("draft-title")) {
+      document.querySelector(".page-header h1 a").innerHTML =
+        localStorage.getItem("draft-title")
+    }
+
+    document
+      .querySelector(".page-header h1 a")
+      .setAttribute("contenteditable", "true")
+
+    document
+      .querySelector(".page-header h1 a")
+      .addEventListener("keyup", event => {
+        localStorage.setItem(
+          "draft-title",
+          document.querySelector(".page-header h1 a").innerHTML,
+        )
+      })
+    document.querySelector(".content").setAttribute("contenteditable", "true")
+
+    function persistContent(data) {
+      localStorage.setItem(
+        "draft-content",
+        document.querySelector(".content").innerHTML,
+      );
+    }
+
+    const _persistContent = debounce(persistContent, 500);
+    document.querySelector(".content").addEventListener("keyup", _persistContent);
+  })
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text)
+      console.log("Copied to clipboard!")
+    } catch (err) {
+      console.error("Failed to copy: ", err)
+    }
+  }
+</script>
+<style>
+  .page-header h1 a {
+    display: block;
+    min-height: 2rem;
+  }
+
+  .page-header h1 a:focus,
+  .content:focus {
+    outline: none;
+  }
+  .copied-message {
+    display: inline-block;
+    margin-left: 0.25rem;
+    font-size: 0.8rem;
+  }
+</style>
