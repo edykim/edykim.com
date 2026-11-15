@@ -9,7 +9,7 @@ history:
     from: https://www.haruair.com/blog/3880
     movedAt: 2018-09-13T22:02:42+00:00
   - 
-    from: https://edykim.com/ko/post/the-service-locator-is-an-antipattern/
+    from: /ko/post/the-service-locator-is-an-antipattern/
     movedAt: 2022-09-05T23:14:32+00:00
 lang: ko
 slug: service-locator-is-an-antipattern

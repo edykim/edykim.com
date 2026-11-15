@@ -19,6 +19,7 @@ export function createRedirects({baseUrl, templatePath, filename}) {
 
         // netlify format
         const output = redirects
+            .filter(v => ! v[0].startsWith('http://') && ! v[0].startsWith('https://'))
             .map(v => [...v, '302!'].join('\t'))
             .join('\n');
 
