@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "edykim-assets",
+  "compatibility_date": "2026-11-14",
+
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+
+  "build": {
+    "command": "npm run build"
+  },
+
+  "r2_buckets": [
+    {
+      "binding": "ASSETS",
+      "bucket_name": "edykim-assets"
+    }
+  ]
+}
