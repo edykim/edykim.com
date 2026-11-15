@@ -114,27 +114,27 @@ const head = document.querySelector('head');
 
 const loaded = {};
 window.onload = () => {
-    const modal = document.querySelector('#website-setting');
-    document.querySelector('#website-setting .close-btn')
-        .addEventListener('click', () => {
-            modal.close();
-        });
-    document.querySelectorAll('#website-setting .color-select input')
-        .forEach(ele => {
-            if (ele.value === getCurrentMode()) {
-                ele.setAttribute('checked', true);
-            }
-            ele.addEventListener('click', (e) => {
-                if (e.target.checked) {
-                    setMode(e.target.value);
-                }
-            })
-        });
+    // const modal = document.querySelector('#website-setting');
+    // document.querySelector('#website-setting .close-btn')
+    //     .addEventListener('click', () => {
+    //         modal.close();
+    //     });
+    // document.querySelectorAll('#website-setting .color-select input')
+    //     .forEach(ele => {
+    //         if (ele.value === getCurrentMode()) {
+    //             ele.setAttribute('checked', true);
+    //         }
+    //         ele.addEventListener('click', (e) => {
+    //             if (e.target.checked) {
+    //                 setMode(e.target.value);
+    //             }
+    //         })
+    //     });
 
-    document.querySelector('.setting-btn')
-        .addEventListener('click', () => {
-            modal.showModal();
-        });
+    // document.querySelector('.setting-btn')
+    //     .addEventListener('click', () => {
+    //         modal.showModal();
+    //     });
 
     const subnav = document.querySelector('.subnav')
     const subnavTitle = document.querySelector('.subnav-title a')
