@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import {mkdirp} from 'mkdirp'
+import redirectsConfig from './../config/redirects.js';
 
 export function createRedirects({baseUrl, templatePath, filename}) {
     const redirectsContent = fs.readFileSync(templatePath, {encoding: 'utf-8'});
@@ -28,6 +29,10 @@ export function createRedirects({baseUrl, templatePath, filename}) {
         fs.writeFileSync(path.join(outputDir, filename), generated);
 
         externalWebsiteRedirects(nodes, baseUrl, outputDir);
+
+        if (redirectsConfig.redirects.length > 0) {
+            externalWebsiteRedirects(redirectsConfig.redirects, baseUrl, outputDir);
+        }
     }
 }
 
