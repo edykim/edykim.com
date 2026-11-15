@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "edykim-assets",
+  "name": "edykim-main",
   "compatibility_date": "2026-11-14",
 
   "assets": {
