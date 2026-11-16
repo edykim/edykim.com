@@ -22,10 +22,11 @@ ext:
 :::div{.youtube-playlist}
 
 1. [Hiroshi Yoshimura - Time forest](https://www.youtube.com/watch?v=4DfKl7gIDRo) [10:48]
+1. [Sachi Kobayashi - Clouds in the Sky I](https://www.youtube.com/watch?v=6L27Ge44Dr4) [3:58]
 1. [Satoshi Ashikawa - Still Park - Ensemble](https://www.youtube.com/watch?v=nBgZNoKAgIQ) [12:07]
-1. [Green.house - Peperomia Seedling](https://www.youtube.com/watch?v=1GsQFn02RFI) [3:43]
+1. [Green.house - Peperomia Seedling](https://www.youtube.com/watch?v=dcPgLlW5w20) [3:43]
 1. [Yoshio Ojima - Sealed](https://www.youtube.com/watch?v=2fj4mEqO7C8) [5:51]
-1. [H.Takahashi - Spring](https://www.youtube.com/watch?v=X3adLfWWQ3w) [6:39]
+1. [H.Takahashi - Spring](https://www.youtube.com/watch?v=YD6NmmrUMlM) [6:39]
 
 :::
 
