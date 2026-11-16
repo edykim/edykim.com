@@ -1,0 +1,518 @@
+/* YouTube playlist music player */
+
+.ymp {
+  /* Hue/saturation are replaced at runtime with the cover's dominant color. */
+  --ymp-h: 220;
+  --ymp-s: 12%;
+  --ymp-bg: hsl(var(--ymp-h) var(--ymp-s) 27%);
+  --ymp-bg-list: hsl(var(--ymp-h) var(--ymp-s) 19%);
+  --ymp-fg: #fff;
+  --ymp-fg-2: rgb(255 255 255 / 0.7);
+  --ymp-fg-3: rgb(255 255 255 / 0.45);
+  --ymp-line: rgb(255 255 255 / 0.22);
+  --ymp-hover: rgb(255 255 255 / 0.07);
+  --ymp-radius: 14px;
+
+  container-type: inline-size;
+  box-sizing: border-box;
+  max-width: 720px;
+  margin: 1.5em 0;
+  overflow: hidden;
+  border-radius: var(--ymp-radius);
+  background: var(--ymp-bg-list);
+  color: var(--ymp-fg);
+  font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.6s ease;
+}
+
+.ymp *,
+.ymp *::before,
+.ymp *::after {
+  box-sizing: border-box;
+}
+
+.ymp button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ymp :focus-visible {
+  outline: 2px solid var(--ymp-fg);
+  outline-offset: 2px;
+}
+
+.ymp svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.ymp svg[fill="none"],
+.ymp svg [fill="none"] {
+  fill: none;
+}
+
+/* ---------- header ---------- */
+
+.ymp-head {
+  --ymp-cover: 152px;
+  display: grid;
+  grid-template-columns: var(--ymp-cover) minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px 22px 14px;
+  background: var(--ymp-bg);
+  transition: background-color 0.6s ease;
+}
+
+.ymp-art {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+}
+
+.ymp-video,
+.ymp-video iframe,
+.ymp-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ymp-cover {
+  z-index: 1;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+/* hqdefault thumbnails are 4:3 with letterbox bars; zoom past them. */
+.ymp-cover.is-thumb {
+  transform: scale(1.34);
+}
+
+.ymp.is-video .ymp-cover {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ymp-video-toggle {
+  position: absolute;
+  z-index: 2;
+  right: 6px;
+  bottom: 6px;
+  width: 30px;
+  height: 30px;
+  padding: 6px !important;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.55) !important;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ymp-art:hover .ymp-video-toggle,
+.ymp-video-toggle:focus-visible,
+.ymp.is-video .ymp-video-toggle {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .ymp-video-toggle {
+    opacity: 0.85;
+  }
+}
+
+.ymp-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ymp .ymp-title {
+  margin: 2px 0 0;
+  padding: 0;
+  overflow: hidden;
+  color: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ymp-meta {
+  margin: 6px 0 0;
+  color: var(--ymp-fg-2);
+  font-size: 0.875rem;
+}
+
+.ymp-now {
+  display: flex;
+  flex-direction: column;
+  min-height: 2.5em;
+  margin: auto 0 0;
+  padding-top: 12px;
+  font-size: 0.9rem;
+}
+
+.ymp-now-title,
+.ymp-now-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ymp-now-title {
+  font-weight: 600;
+}
+
+.ymp-now-artist {
+  color: var(--ymp-fg-2);
+  font-size: 0.85em;
+}
+
+/* ---------- controls ---------- */
+
+.ymp-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.ymp-spacer {
+  flex: 1;
+}
+
+.ymp-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 7px !important;
+  border-radius: 50%;
+  color: var(--ymp-fg) !important;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.ymp-btn:hover {
+  background: var(--ymp-hover);
+  opacity: 1;
+}
+
+.ymp-yt {
+  margin-left: -7px;
+  padding: 8px !important;
+  color: var(--ymp-fg-2);
+}
+
+.ymp-play {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  margin-left: 8px;
+  padding: 13px !important;
+  border-radius: 50%;
+  background: var(--ymp-fg) !important;
+  color: var(--ymp-bg) !important;
+  transition: transform 0.12s ease;
+}
+
+.ymp-play:hover {
+  transform: scale(1.05);
+}
+
+.ymp-play:active {
+  transform: scale(0.96);
+}
+
+.ymp-play::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid transparent;
+  border-top-color: var(--ymp-fg);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ymp.is-buffering .ymp-play::after {
+  opacity: 1;
+  animation: ymp-spin 0.8s linear infinite;
+}
+
+/* ---------- progress ---------- */
+
+.ymp-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 22px 16px;
+  background: var(--ymp-bg);
+  transition: background-color 0.6s ease;
+}
+
+.ymp-time {
+  flex: none;
+  min-width: 2.6em;
+  color: var(--ymp-fg-2);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ymp-duration {
+  text-align: right;
+}
+
+.ymp-seek {
+  flex: 1;
+  height: 16px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ymp-seek:disabled {
+  cursor: default;
+}
+
+.ymp-seek::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--ymp-fg) var(--p, 0%), var(--ymp-line) var(--p, 0%));
+}
+
+.ymp-seek::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--ymp-fg);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  -webkit-appearance: none;
+}
+
+.ymp-seek::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ymp-line);
+}
+
+.ymp-seek::-moz-range-progress {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ymp-fg);
+}
+
+.ymp-seek::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ymp-fg);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.ymp-progress:hover .ymp-seek:enabled::-webkit-slider-thumb,
+.ymp-seek:focus-visible::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.ymp-progress:hover .ymp-seek:enabled::-moz-range-thumb,
+.ymp-seek:focus-visible::-moz-range-thumb {
+  opacity: 1;
+}
+
+/* ---------- track list ---------- */
+
+.ymp-tracks {
+  position: relative;
+  max-height: 15.5rem;
+  margin: 0;
+  padding: 6px 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+  scrollbar-color: rgb(255 255 255 / 0.3) transparent;
+  scrollbar-width: thin;
+}
+
+.ymp-tracks li {
+  margin: 0;
+  padding: 0;
+}
+
+.ymp-tracks li::before,
+.ymp-tracks li::marker {
+  content: none;
+}
+
+.ymp-track {
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 22px !important;
+  text-align: left;
+  transition: background-color 0.12s ease;
+}
+
+.ymp-track:hover {
+  background: var(--ymp-hover) !important;
+}
+
+.ymp-track:focus-visible {
+  outline-offset: -2px;
+}
+
+.ymp-num {
+  display: flex;
+  justify-content: center;
+  color: var(--ymp-fg-2);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ymp-tt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ymp-track-title,
+.ymp-track-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ymp-track-title {
+  font-size: 0.975rem;
+}
+
+.ymp-track-artist {
+  margin-top: 1px;
+  color: var(--ymp-fg-2);
+  font-size: 0.8rem;
+}
+
+.ymp-track-dur {
+  color: var(--ymp-fg-2);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.ymp-track.is-current .ymp-track-title {
+  font-weight: 600;
+}
+
+.ymp-track.is-unavailable {
+  opacity: 0.45;
+}
+
+.ymp-track.is-unavailable .ymp-track-dur {
+  font-size: 0.75rem;
+}
+
+/* now-playing equalizer replaces the number */
+.ymp-eq {
+  display: none;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+
+.ymp-eq i {
+  width: 3px;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--ymp-fg);
+  transform-origin: bottom;
+  animation: ymp-eq 0.9s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+
+.ymp-eq i:nth-child(2) { animation-delay: -0.3s; animation-duration: 0.7s; }
+.ymp-eq i:nth-child(3) { animation-delay: -0.6s; animation-duration: 1.1s; }
+
+.ymp-track.is-current .ymp-n { display: none; }
+.ymp-track.is-current .ymp-eq { display: flex; }
+.ymp.is-playing .ymp-eq i { animation-play-state: running; }
+
+@keyframes ymp-eq {
+  from { transform: scaleY(0.25); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes ymp-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ymp-eq i { animation: none; transform: scaleY(0.7); }
+  .ymp.is-buffering .ymp-play::after { animation-duration: 2s; }
+}
+
+/* ---------- narrow ---------- */
+
+@container (max-width: 480px) {
+  .ymp-head {
+    --ymp-cover: 104px;
+    gap: 16px;
+    padding: 16px 16px 10px;
+  }
+
+  .ymp .ymp-title {
+    font-size: 1.2rem;
+  }
+
+  .ymp-meta {
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+
+  .ymp-now {
+    display: none;
+  }
+
+  .ymp-controls {
+    margin-top: auto;
+  }
+
+  .ymp-play {
+    width: 44px;
+    height: 44px;
+    padding: 11px !important;
+  }
+
+  .ymp-progress {
+    padding: 0 16px 12px;
+  }
+
+  .ymp-track {
+    padding: 7px 16px !important;
+  }
+}
