@@ -267,12 +267,9 @@ table td {
 }
 
 pre code.hljs {
-    background-color: #ffd;
-}
-@media (prefers-color-scheme: dark) {
-    pre code.hljs {
-        background-color: #200;
-    }
+    font-size: 0.7rem;
+    border-radius: 5px;
+    background-color: #1a1e25;
 }
 
 .bookmarks ul {
