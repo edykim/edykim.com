@@ -61,6 +61,21 @@ a:active {
   border-width: 0;
 } */
 
+.site-title {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+}
+.site-title:after {
+    content: '/';
+    font-weight: normal;
+    opacity: 0.2;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-left: 0.8rem;
+    margin-right: 0.6rem;
+}
+
 h1 {
     font-size: 1.3rem;
 }
