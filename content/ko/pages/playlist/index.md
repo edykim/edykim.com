@@ -6,6 +6,7 @@ uuid: "3a8b6aca-d4be-469f-9699-25d3a3021cb4"
 type: page
 lang: ko
 url: playlist
+noInteraction: true
 ---
 
 - [느려지는 시간들](/ko/playlist/as-time-slows)
