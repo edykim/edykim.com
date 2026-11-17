@@ -8,5 +8,6 @@ lang: ko
 url: playlist
 ---
 
-- [일단 들어보고](/ko/playlist/let-me-listen-first)
+- [느려지는 시간들](/ko/playlist/as-time-slows)
 - [ambient 01](/ko/playlist/ambient-01)
+
