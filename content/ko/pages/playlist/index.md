@@ -10,5 +10,5 @@ noInteraction: true
 ---
 
 - [느려지는 시간들](/ko/playlist/as-time-slows)
-- [ambient 01](/ko/playlist/ambient-01)
+- [딩동딩딩](/ko/playlist/ambient-01)
 
