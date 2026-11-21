@@ -152,6 +152,10 @@ img {
     text-decoration-color: #ddd;
 }
 
+.post-title-list a:visited {
+    border-color: #421a8b;
+}
+
 .post-title-list a:hover,
 .post-title-list a:active,
 .post-title-list a:focus {
